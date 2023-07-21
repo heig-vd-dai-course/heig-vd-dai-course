@@ -17,6 +17,11 @@ style: |
         --color-highlight: #f96;
         --color-dimmed: #888;
     }
+    .columns {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
 -->
 
 # DAI 2023-2024 
@@ -24,7 +29,13 @@ style: |
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-Introduction and course organization
+**Introduction and course organization**
+
+![bg right](https://picsum.photos/720?image=3)
+
+<small>Ludovic Delafontaine, Jürgen Ehrensberger, Hadrien Louis and Olivier Liechti with the help of Copilot</small>
+
+<!-- TODO: Add "Find this course at <https://github.com> or using the following QR Code." -->
 
 ## Welcome!
 
@@ -34,48 +45,130 @@ Welcome to the DAI Course 2023-2024!
 
 ![bg opacity:0.2](https://picsum.photos/720?image=3)
 
-## Who are we? - Ludovic
+## Agenda
 
-Ludovic Delafontaine
+- **Background**
+    - Who are we
+    - What do we do at the HEIG-VD and why
+- **Course objectives and organization**
+    - What to expect to learn from this course
+    - Where to find the course material
+    - Communication channels
+    - Evaluation
 
+## Who are we
+
+### Ludovic Delafontaine
+
+**Computer science background**
+
+- 2006: Worms 4 Mayhem (modding)
 - 2011-2015: ETML (CFC + MPTi)
 - 2015-2019: HEIG-VD (BSc)
 - 2020-2023: HEIG-VD (Ra&D)
 - 2022-2023: Artios (own company)
 
-GitLab: [@ludelafo](https://gitlab.com/ludelafo)  
-GitHub: [@ludelafo](https://github.com/ludelafo)
+![bg right:40%](https://picsum.photos/720?image=3)
+
+---
+
+**Expertise**
+
+- Software engineering
+- System administration
+- Cloud computing
+- DevOps/MLOps
+- Best/proven practices (reviewing, testing, CI/CD, workflows, etc.)
+- Always learning!
+
+GitLab: [@ludelafo](https://gitlab.com/ludelafo) | GitHub: [@ludelafo](https://github.com/ludelafo)
 
 ![bg right:40%](https://picsum.photos/720?image=3)
 
-## Who are we? - Hadrien
+---
 
-Hadrien Louis
+### Hadrien Louis
 
 TODO
 
 ![bg right:40%](https://picsum.photos/720?image=3)
 
-## What does GAPS say?
+## What does GAPS say
 
 ![](https://picsum.photos/720?image=3)
 
-## What I want this course to be
+## What to expect to learn from this course?
+
+### Topics
+
+You will learn the following topics during this course:
+
+<div class="columns">
+<div>
+
+- Network programming
+- Application-level protocols
+- Web infrastructures
+
+</div>
+<div>
+
+- Read official documentation
+- Write technical documentation
+- Use Git and GitHub
+
+</div>
+</div>
+
+---
+
+### Technologies
+
+You will learn the following technologies during this course:
+
+<div class="columns">
+<div>
+
+- Git
+- GitHub
+- Markdown
+- Java for input/output communications
+
+</div>
+<div>
+
+- Intellij IDEA
+- Docker & Docker Compose
+- Network utilities (`curl`, `dig`, `nslookup`, etc.)
+- The terminal
+
+</div>
+</div>
+
+## My wishes for this course
+
+### What I want this course to be
 
 - A place to learn
 - A place to experiment
 - A place to share
 - A place to have fun
 - A place where you help each other
+- A place where you do not loose your time (efficient and useful)
 
-## What I don't want this course to be
+---
+
+### What I don't want this course to be
 
 - A place you don't want to come
-- A place you don't feel confortable/safe
+- A place you don't feel comfortable/safe
 - A place where you can't ask questions
 - A place where you can't take anything away
+- If you have a problem with the course, I will do my best to fix it.
 
-## Where to find the course material?
+I will not take presences during this course. If you are done, you are free to go but I would appreciate if you try to help your comrades instead!
+
+## Where to find the course material
 
 **Everything** will be on the GitHub organization created for this course: <https://github.com/HEIG-VD-DAI-Course>.
 
@@ -87,52 +180,56 @@ _PS: I accept pull requests if you spot anything weird!_
 
 ## Communication channels
 
-- GitHub Discussions (you will experiment this in the next practical session)
+Feel free to use any of these communication channels for any kind of questions related to the course:
+
+- GitHub Discussions (you will experiment these very soon)
 - In person
 - Email
     - [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
     - [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
 
-
-
 ## Course sequence
 
-1. Theoretical content (maximum 1 hour)
-    - It is meant to be short, interactive and useful
-    - Quizzes, discussions, etc.
-2. Practical content (minimum 30 minutes)
+1. Theoretical content you acquire on your own
+    - It is meant to be straight to the point and useful
+    - Examples, exercises and links to documentation
+2. Practical content where you do stuff (!)
     - You will be able to experiment the theoretical content
-    - Allow you to prepare the tools for the pratical work session
-3. Pratical work (the time available should be sufficient)
+    - Allow you to prepare the tools for the practical work session
+3. Practical work (the time available should be sufficient)
     - Bigger work to get deeper into the subject
 
 ## Program
 
-| Week  | Theory    | Practice  |
-|-------|-----------|-----------|
-| 1     | Introduction and course organization, Git, GitHub and Markdown | Git, GitHub and Markdown |
+| Week  | Program    |
+|-------|-----------|
+| 1 (23)     | Introduction and course organization, Git, GitHub and Markdown |
 
 ---
 
-| Week  | Theory    | Practice  |
-|-------|-----------|-----------|
-| TODO  | TODO      | TODO      |
+| Week  | Program   |
+|-------|-----------|
+| TODO  | TODO      |
 
 ## Evaluation
 
-## Responsabilities and expectations
+## Responsibilities and expectations
 
-- My responsabilities:
+- My responsibilities:
     - You have acquired the necessary knowledge of this course
     - You are prepared for the professional world
     - You are able to work in a team
     - You are able to work on your own
 
-- Your responsabilities: you are responsible for your own learning. If you have any questions, ask them. If you have any difficulties, let me know. If you have any suggestions, share them.
+- Your responsibilities: you are responsible for your own learning. If you have any questions, ask them. If you have any difficulties, let me know. If you have any suggestions, share them.
 
-## _"A course in English..?"_
+## _"A course in English..? Why This Fantasy?"_
 
-Only the slides will be in English, the course will be in French.
+All the written material will be in English. The speaker will talk in French.
+
+This is meant to prepare you for the future. Our field is mostly made in English so this is a great opportunity to practice your English skills.
+
+Evaluations will be in English as well but you can answer the questions in French if you prefer.
 
 If you have any difficulties with English, please let me know.
 
@@ -143,6 +240,12 @@ You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot, 
 - You must be able to explain what you did and why you did it
 - You must state it when you used external help (tools and sources)
 - You must be able to do the work on your own. These tools come and go ($$$, end of life, etc.), you should not entirely rely on them. 
+
+## _"Linux, macOS or Windows?"_
+
+The HEIG-VD recommends Windows for your studies. This is mostly because other departments heavily use Windows-only products. From my experience, developing on Windows can be more difficult than Linux or macOS.
+
+Linux and macOS are much more supported in the software development world. If you can, I recommend you to try a Linux distribution (Ubuntu, Fedora or Debian) for this course, either baremetal or in Windows Subsystem Linux (WSL). It will be useful in your future to have a bit of experience with it as well.
 
 ## Questions
 
