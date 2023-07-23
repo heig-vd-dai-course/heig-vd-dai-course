@@ -5,53 +5,51 @@ marp: true
 <!--
 theme: gaia
 paginate: true
-headingDivider: 2
+headingDivider: 4
 header: ''
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
-author: Ludovic Delafontaine
-transition: none
+style: |
+    :root {
+        --color-background: #fff;
+        --color-foreground: #333;
+        --color-highlight: #f96;
+        --color-dimmed: #888;
+    }
+    blockquote {
+        font-style: italic; 
+    }
 -->
 
-<style>
-:root {
-    --color-background: #fff;
-    --color-foreground: #333;
-    --color-highlight: #f96;
-    --color-dimmed: #888;
-}
-.columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-}
-blockquote {
-    font-style: italic; 
-}
-</style>
+# **HEIG-VD** - DAI 2023-2024 
 
-# DAI 2023-2024 
+<!--
+_class: lead
+_paginate: false
+_footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot - CC BY-SA 4.0</center>'
+-->
+
+![https://github.com/HEIG-VD-DAI-Course](https://quickchart.io/qr?format=svg&ecLevel=L&size=200&margin=1&text=https://github.com/HEIG-VD-DAI-Course)
+
+<https://github.com/HEIG-VD-DAI-Course>
+
+## Git, GitHub and Markdown
 
 <!-- _class: lead -->
-<!-- _paginate: false -->
 
-Git, GitHub and Markdown
-
-![bg right](https://picsum.photos/720?image=3)
-
-<small>Find this course at <https://github.com> or using the following QR Code.</small>
+![bg opacity:0.1](https://picsum.photos/720?image=3)
 
 ## Agenda
 
-- **Tools presentation**
+- **Theoretical content**
     - [Git](#git)
-    - GitHub
-    - Markdown
+    - [GitHub](#github)
+    - [Markdown](#markdown)
 - **Practical content**
     - Create your own GitHub profile with a special Git repository
 
-![bg right](https://picsum.photos/720?image=3)
+## Theoretical content
 
-## Tools presentation
+<!-- _class: lead -->
 
 ### Git
 
@@ -69,7 +67,7 @@ Git uses **commits** to track changes. A commit is a snapshot of the repository 
 
 ---
 
-Git uses **branches** to track different versions of the repository. The default branch is often called `main` or `master`. Each branch has a name and a pointer to a commit. The pointer is called a **head**. The head of the main branch is called `HEAD`.
+Git uses **branches** to track different versions of the repository. The default branch is often called `main` (the legacy name was `master`). Each branch has a name and a pointer to a commit. The pointer is called a **head**. The head of the main branch is called `HEAD`.
 
 Often, when implementing a new feature, a new branch is created. This is done by creating a new branch from the main branch. The new branch is called a **feature branch**. The main branch is called the **target branch**.
 
@@ -91,9 +89,9 @@ Working collaboratively can lead to **conflicts**. Conflicts happen when two or 
 
 When working on a project, it is important to keep the main branch up to date. This is done by **pulling** the changes from the main branch into the current branch. This is done by merging the main branch into the current branch.
 
----
+Files can be **ignored** by Git. This is done by creating a `.gitignore` file at the root of the repository. This allows to avoid committing files that should not be committed, such as IDE configuration files.
 
-**Summary**
+#### Summary
 
 - Git is a distributed VCS
 - Git uses commits to track changes
@@ -102,34 +100,56 @@ When working on a project, it is important to keep the main branch up to date. T
 - Git can merge, rebase or squash branches/commits
 - Git can detect and resolve conflicts
 
-Git can be sometimes hard to use, but it is a very powerful tool. It is worth spending some time learning it.
+I encourage you to learn how to use Git from the command line, so you can still use it everywhere (even on a server).
+
+#### Common actions
+
+```sh
+# Clone a Git repository
+git clone <url>
+
+# Create a branch and switch to it
+git checkout -b <branch-name>
+
+# Switch to a branch
+git checkout <branch-name>
+
+# Add changes to the staging area
+git add <file>
+```
 
 ---
 
-**Common actions**
+```sh
+# Check Git status
+git status
 
-- Clone a Git repository: `git clone <url>`
-- Create a branch and switch to it: `git checkout -b <branch-name>`
-- Switch to a branch: `git checkout <branch-name>`
-- Add changes to the staging area: `git add <file>`
-- Commit changes: `git commit -m "Commit message"`
-- Push changes to a branch: `git push origin <branch-name>`
-- Pull changes from a branch: `git pull origin <branch-name>`
-- Merge a branch into another: `git merge <branch-name>`
+# Commit changes
+git commit -m "Commit message"
 
----
+# Push changes to a branch
+git push origin <branch-name>
 
-**Alternatives**
+# Pull changes from a branch
+git pull origin <branch-name>
 
-These alternatives are not covered in this course but you might want to check them out:
+# Merge a branch into another
+git merge <branch-name>
+```
+
+#### Alternatives
 
 - [Subversion](https://subversion.apache.org/)
 - [Mercurial](https://www.mercurial-scm.org/)
 - [Bazaar](https://bazaar.canonical.com/en/)
 
-Git is widely used and is the most popular VCS. You might encounter these alternatives in your career but they are rare now.
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
----
+#### Resources
+
+- [Learn Git Branching](https://learngitbranching.js.org/)
+
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
 ### GitHub
 
@@ -165,39 +185,32 @@ Once the pull request is approved, the branch can be **merged** into the target 
 
 By default, GitHub does not delete the branch once it is merged. You might want to enable this by default in your repository settings or delete it manually. It avoids to cumulate out-dated branches in your repository.
 
----
-
-**Summary**
+#### Summary
 
 The whole process would be as follow:
-
-<div class="columns">
-<div>
 
 1. Clone or fork the project
 2. Checkout to a new branch
 3. Make your changes
 4. Commit and push your changes
-
-</div>
-<div>
-
 5. Create the pull request
-6. The maintainer reviews and merges if OK
+6. The maintainers review and merge if OK
 7. You can delete the branch or the fork
-</div>
-</div>
 
----
-
-**Alternatives**
+#### Alternatives
 
 - [GitLab](https://gitlab.com/) - My personal favorite
 - [Bitbucket](https://bitbucket.org/) - My least favorite
 - [Gitea](https://gitea.io/) - Very good self-hosted alternative
 - [Gogs](https://gogs.io/)
 
----
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+
+#### Resources
+
+TODO
+
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
 ### Markdown
 
@@ -217,18 +230,15 @@ It is also possible to use HTML in Markdown files, so it is possible to create m
 
 In fact, the exact current document you are reading right now is written in Markdown.
 
----
-
-**Headings**
+#### Headings
 
 To create headings, use the `#` character. The number of `#` characters determines the level of the heading.
 
-In the following snippets, you can see the Markdown code and the result.
-
-<div class="columns">
-<div>
-
 ```markdown
+# Heading 1
+
+## Heading 2
+
 ### Heading 3
 
 #### Heading 4
@@ -236,103 +246,62 @@ In the following snippets, you can see the Markdown code and the result.
 ##### Heading 5
 ```
 
-</div>
-<div>
+#### Text formatting
 
-### Heading 3
+Text formatting can be done using `*`, `_`, `~`, `` ` `` or `>` characters.
 
-#### Heading 4
+```markdown
+*This is italic* and _this as well_.
 
-##### Heading 5
+**This is bold** and __this as well__.
 
-</div>
-</div>
+This is ~~strikethrough~~.
+
+This is `inline code`.
+
+> This is a quote
+```
 
 ---
-
-**Text formatting**
 
 Code blocks can highlight code syntax for many languages. Horizontal rules can be used to separate sections with `---`.
 
-<div class="columns">
-<div>
-
 ````markdown
-*This is italic* and _this as well_.
-**This is bold** and __this as well__.
-This is ~~strikethrough~~.
-This is `inline code`.
-
 ```java
 System.out.println("Hello World!");
 ```
 
-> This is a quote
+```javascript
+console.log("Hello World!");
+```
+
+```python
+print("Hello World!")
+```
 ````
 
-</div>
-<div>
-
-*This is italic* and _this as well_.
-**This is bold** and __this as well__.
-This is ~~strikethrough~~.
-This is `inline code`.
-
-```java
-System.out.println("Hello World!");
-```
-
-> This is a quote
-
-</div>
-</div>
-
----
-
-**Unordered lists**
+#### Unordered lists
 
 Unordered lists can be created using `-` or `*` characters.
 
-<div class="columns">
-<div>
-
 ```markdown
 List one
 
 - Item 1
 - Item 2
+- Item 3
 
 List two
 
 * Item 1
 * Item 2
+* Item 3
 ```
 
-</div>
-<div>
-
-List one
-
-- Item 1
-- Item 2
-
-List two
-
-* Item 1
-* Item 2
-
-</div>
-</div>
-
----
-
-**Ordered lists**
+#### Ordered lists
 
 Ordered lists can be created using numbers followed by a `.` character. Only the first number matters, the rest can be anything (but it is not recommended for readability).
 
-<div class="columns">
-<div>
-
 ```markdown
 1. Item 1
 2. Item 2
@@ -341,27 +310,10 @@ Ordered lists can be created using numbers followed by a `.` character. Only the
 0. Still item 5
 ```
 
-</div>
-<div>
-
-1. Item 1
-2. Item 2
-3. Item 3
-5. Still item 4
-0. Still item 5
-
-</div>
-</div>
-
----
-
-**Links**
+#### Links
 
 Links can link to local files, headings, or references.
 
-<div class="columns">
-<div>
-
 ```markdown
 [GitHub](https://github.com/)
 
@@ -376,58 +328,20 @@ Links can link to local files, headings, or references.
 [heig-vd]: https://heig-vd.ch
 ```
 
-</div>
-<div>
-
-[GitHub](https://github.com/)
-
-<https://gitlab.com>
-
-[`README.md`](./README.md)
-
-[Jump to "Markdown"](#markdown)
-
-[HEIG-VD][heig-vd]
-
-[heig-vd]: https://heig-vd.ch
-
-</div>
-</div>
-
----
-
-**Images**
+#### Images
 
 Images can be added using the same syntax as links, but with a `!` character in front of the link. The text field will be used as the alt text.
 
-<div class="columns">
-<div>
-
 ```markdown
 ![](https://picsum.photos/720?image=3)
 
 ![This is the alternate text](https://picsum.photos/720?image=3)
 ```
 
-</div>
-<div>
-
-![](https://picsum.photos/720?image=3)
-
-![This is the alternate text](https://picsum.photos/720?image=3)
-
-</div>
-</div>
-
----
-
-**Tables**
+#### Tables
 
 Tables can be created using the `|` character to separate columns and `-` characters to separate the header from the content. The header is optional. The text alignment can be specified using `:` characters.
 
-<div class="columns">
-<div>
-
 ```markdown
 | Header 1 | Header 2 | Header 3 |
 | -------- | :------: | -------: |
@@ -435,28 +349,13 @@ Tables can be created using the `|` character to separate columns and `-` charac
 | Cell 4   | Cell 5   | Cell 6   |
 ```
 
-</div>
-<div>
-
-| Header 1 | Header 2 | Header 3 |
-| -------- | :------: | -------: |
-| Cell 1   | Cell 2   | Cell 3   |
-| Cell 4   | Cell 5   | Cell 6   |
-
-</div>
-</div>
-
----
-
-**HTML**
+#### HTML
 
 HTML can be used in Markdown files. This allows to create more complex documents. It is also possible to use CSS to style the document. This is not covered in this course and I would not recommend it as the goal of Markdown is to be simple.
 
 If you have a look at the source code of this document, you will see that it is written in Markdown and that it uses HTML to create the slides with the help of [Marp](https://marp.app/).
 
----
-
-**Specifications**
+#### Specifications
 
 Markdown is not a standard, but there are many implementations. The most popular one is [CommonMark](https://commonmark.org/). GitHub uses a slightly different version called [GitHub Flavored Markdown](https://github.github.com/gfm/).
 
@@ -465,11 +364,30 @@ Some projects use custom extensions to add more features to Markdown. For exampl
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) uses custom extensions to add more features to Markdown.
 - [Marp](https://marp.app/) uses a custom syntax to manage background images in slides.
 
+#### "Hacky" tips
+
+You can use HTML comments to hide content from the Markdown parser. The same can be achieved using a link-reference.
+
+```markdown
+<!-- This is a comment -->
+
+[This is a comment]: #
+```
+
 ---
 
-**Summary**
+New lines can be added using a backspace between two lines or by using a backslash at the end of a line.
 
-- Markdown is a lightweight markup language
+```markdown
+A line\
+Another line
+
+A line··
+Another line
+```
+
+#### Summary
+
 - Markdown is easy to learn
 - Markdown can be used to create README files
 - Markdown can be used to create documentation
@@ -477,16 +395,24 @@ Some projects use custom extensions to add more features to Markdown. For exampl
 - Markdown can be used to create slides
 - Markdown can be exported to many formats
 
----
-
-**Alternatives**
+#### Alternatives
 
 - [reStructuredText](https://docutils.sourceforge.io/rst.html)
 - [AsciiDoc](https://asciidoc.org/)
 - [Textile](https://textile-lang.com/)
 - [LaTeX](https://www.latex-project.org/)
 
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+
+#### Resources
+
+- [Markdown Guide](https://www.markdownguide.org/)
+
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+
 ## Practical content
+
+<!-- _class: lead -->
 
 ### What you will achieve
 
@@ -494,5 +420,74 @@ Some projects use custom extensions to add more features to Markdown. For exampl
 - Create your profile with a special Git repository and Markdown
 - Make usage of GitHub features
 
-![bg right](https://picsum.photos/720?image=3)
+![bg right vertical](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
+![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
+![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
 
+### Install Git
+
+
+1. Go to <https://git-scm.com/downloads>
+2. Download and install Git
+3. Open a terminal and type `git --version`
+
+
+
+### Create your GitHub account
+
+1. Go to <https://github.com>
+2. Create your account
+3. Verify your email address
+
+### Set up your GitHub account
+
+1. Go to 
+2. Add a SSH key
+3. Add a profile picture
+
+## Conclusion
+
+<!-- _class: lead -->
+
+### What did you do?
+
+
+### What did you learn? (questions)
+
+At this point, you should be able to answer the following questions:
+
+- What is Git?
+- What is GitHub?
+- What is Markdown?
+- What is a repository?
+
+### What did you learn? (answers)
+
+<!--
+style scope: |
+    blockquote {
+        font-style: italic;
+        background-color: var(--color-highlight);
+    }
+-->
+
+> Q: What is Git?
+> A: Git is a distributed version control system.
+
+> Q: What is GitHub?
+> A: GitHub is a Git repository hosting service.
+
+## What will you do next?
+
+## Feedback
+
+Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next session!
+
+- Too much theory / too much practice
+- Too slow / too fast
+- Too easy / too difficult
+- Not enough time / too much time
+- Useful / not useful
+- Other comments
+
+## Sources

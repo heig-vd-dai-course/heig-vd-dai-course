@@ -24,6 +24,9 @@ style: |
     th:first-child {
         width: 15%;
     }
+    h2, h3, h4, h5, h6 {
+        color: #abcdef
+    }
 -->
 
 # **HEIG-VD** - DAI 2023-2024 
@@ -47,7 +50,7 @@ _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of
 ## Agenda
 
 - **Background**
-    - [Who are we](#who-are-we)
+    - [Who are we?](#who-are-we)
     - [What do we do at the HEIG-VD and why](#what-do-we-do-at-the-heig-vd-and-why)
 - **Course objectives and organization**
     - [What to expect to learn from this course](#what-to-expect-to-learn-from-this-course)
@@ -55,7 +58,7 @@ _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of
     - [Communication channels](#communication-channels)
     - [Evaluation](#evaluation)
 
-## Who are we
+## Who are we?
 
 <!-- _class: lead -->
 
@@ -95,7 +98,7 @@ TODO
 
 TODO
 
-## What to expect to learn from this course?
+## What to expect to learn from this course
 
 <!-- _class: lead -->
 
@@ -107,6 +110,7 @@ TODO
 
 You will learn the following topics during this course:
 
+- Inputs/outputs and encoding
 - Network programming
 - Application-level protocols
 - Web infrastructures
@@ -119,7 +123,7 @@ You will learn the following technologies during this course:
 
 - Git and GitHub
 - Markdown
-- Java for input/output communications (filesystem and network)
+- Java
 - Docker & Docker Compose
 - Network utilities (`curl`, `dig`, `nslookup`, etc.)
 - The terminal
@@ -145,7 +149,7 @@ You will learn the following technologies during this course:
 - A place where you can't take anything away
 - If you have a problem with the course, I will do my best to fix it.
 
-I will not take presences during this course. If you are done, you are free to go but I would appreciate if you try to help your comrades instead!
+I will not take presences during this course. If you are done, you are free to go but I would appreciate if you try to help your classmates instead!
 
 ## Where to find the course material
 
