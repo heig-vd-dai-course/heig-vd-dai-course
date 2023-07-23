@@ -5,11 +5,9 @@ marp: true
 <!--
 theme: gaia
 paginate: true
-headingDivider: 2
+headingDivider: 4
 header: ''
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
-author: Ludovic Delafontaine
-transition: none
 style: |
     :root {
         --color-background: #fff;
@@ -17,46 +15,49 @@ style: |
         --color-highlight: #f96;
         --color-dimmed: #888;
     }
-    .columns {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1rem;
+    blockquote {
+        font-style: italic; 
+    }
+    table {
+        width: 100%;
+    }
+    th:first-child {
+        width: 15%;
     }
 -->
 
-# DAI 2023-2024 
+# **HEIG-VD** - DAI 2023-2024 
+
+<!--
+_class: lead
+_paginate: false
+_footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot - CC BY-SA 4.0</center>'
+-->
+
+![https://github.com/HEIG-VD-DAI-Course](https://quickchart.io/qr?format=svg&ecLevel=L&size=200&margin=1&text=https://github.com/HEIG-VD-DAI-Course)
+
+<https://github.com/HEIG-VD-DAI-Course>
+
+## Introduction and course organization
 
 <!-- _class: lead -->
-<!-- _paginate: false -->
 
-**Introduction and course organization**
-
-![bg right](https://picsum.photos/720?image=3)
-
-<small>Ludovic Delafontaine, Jürgen Ehrensberger, Hadrien Louis and Olivier Liechti with the help of Copilot</small>
-
-<!-- TODO: Add "Find this course at <https://github.com> or using the following QR Code." -->
-
-## Welcome!
-
-<!-- _class: lead -->
-
-Welcome to the DAI Course 2023-2024!
-
-![bg opacity:0.2](https://picsum.photos/720?image=3)
+![bg opacity:0.1](https://picsum.photos/720?image=3)
 
 ## Agenda
 
 - **Background**
-    - Who are we
-    - What do we do at the HEIG-VD and why
+    - [Who are we](#who-are-we)
+    - [What do we do at the HEIG-VD and why](#what-do-we-do-at-the-heig-vd-and-why)
 - **Course objectives and organization**
-    - What to expect to learn from this course
-    - Where to find the course material
-    - Communication channels
-    - Evaluation
+    - [What to expect to learn from this course](#what-to-expect-to-learn-from-this-course)
+    - [Where to find the course material](#where-to-find-the-course-material)
+    - [Communication channels](#communication-channels)
+    - [Evaluation](#evaluation)
 
 ## Who are we
+
+<!-- _class: lead -->
 
 ### Ludovic Delafontaine
 
@@ -68,7 +69,7 @@ Welcome to the DAI Course 2023-2024!
 - 2020-2023: HEIG-VD (Ra&D)
 - 2022-2023: Artios (own company)
 
-![bg right:40%](https://picsum.photos/720?image=3)
+![bg right:40%](./images/worms-4-mayhem-pc-boxart.jpg)
 
 ---
 
@@ -81,11 +82,8 @@ Welcome to the DAI Course 2023-2024!
 - Best/proven practices (reviewing, testing, CI/CD, workflows, etc.)
 - Always learning!
 
-GitLab: [@ludelafo](https://gitlab.com/ludelafo) | GitHub: [@ludelafo](https://github.com/ludelafo)
-
-![bg right:40%](https://picsum.photos/720?image=3)
-
----
+GitLab: [@ludelafo](https://gitlab.com/ludelafo)  
+GitHub: [@ludelafo](https://github.com/ludelafo)
 
 ### Hadrien Louis
 
@@ -93,59 +91,42 @@ TODO
 
 ![bg right:40%](https://picsum.photos/720?image=3)
 
-## What does GAPS say
+## What do we do at the HEIG-VD and why
 
-![](https://picsum.photos/720?image=3)
+TODO
 
 ## What to expect to learn from this course?
+
+<!-- _class: lead -->
+
+### What does GAPS say
+
+![](https://picsum.photos/720?image=3)
 
 ### Topics
 
 You will learn the following topics during this course:
 
-<div class="columns">
-<div>
-
 - Network programming
 - Application-level protocols
 - Web infrastructures
-
-</div>
-<div>
-
 - Read official documentation
 - Write technical documentation
-- Use Git and GitHub
-
-</div>
-</div>
-
----
 
 ### Technologies
 
 You will learn the following technologies during this course:
 
-<div class="columns">
-<div>
-
-- Git
-- GitHub
+- Git and GitHub
 - Markdown
-- Java for input/output communications
-
-</div>
-<div>
-
-- Intellij IDEA
+- Java for input/output communications (filesystem and network)
 - Docker & Docker Compose
 - Network utilities (`curl`, `dig`, `nslookup`, etc.)
 - The terminal
 
-</div>
-</div>
-
 ## My wishes for this course
+
+<!-- _class: lead -->
 
 ### What I want this course to be
 
@@ -155,8 +136,6 @@ You will learn the following technologies during this course:
 - A place to have fun
 - A place where you help each other
 - A place where you do not loose your time (efficient and useful)
-
----
 
 ### What I don't want this course to be
 
@@ -172,7 +151,7 @@ I will not take presences during this course. If you are done, you are free to g
 
 **Everything** will be on the GitHub organization created for this course: <https://github.com/HEIG-VD-DAI-Course>.
 
-More specifically, the course material is available in the [`HEIG-VD-DAI-Course`](https://github.com/HEIG-VD-DAI-Course/HEIG-VD-DAI-Course) Git repository. PDFs can be found in the "[Releases](https://github.com/HEIG-VD-DAI-Course/HEIG-VD-DAI-Course/releases)" of this repository.
+More specifically, the course material is available in the [`HEIG-VD-DAI-Course`](https://github.com/HEIG-VD-DAI-Course/HEIG-VD-DAI-Course) Git repository.
 
 No Microsoft Teams, no CyberLearn, no bullshit. I want to keep it simple and efficient for you and me and use real tools that work.
 
@@ -192,26 +171,62 @@ Feel free to use any of these communication channels for any kind of questions r
 
 1. Theoretical content you acquire on your own
     - It is meant to be straight to the point and useful
-    - Examples, exercises and links to documentation
 2. Practical content where you do stuff (!)
     - You will be able to experiment the theoretical content
-    - Allow you to prepare the tools for the practical work session
 3. Practical work (the time available should be sufficient)
     - Bigger work to get deeper into the subject
+4. Feedback and discussion (few minutes - most important to me)
+    - You will be able to give feedback and share your experience
 
-## Program
+## Program - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
 
-| Week  | Program    |
-|-------|-----------|
-| 1 (23)     | Introduction and course organization, Git, GitHub and Markdown |
+| Week | Program    |
+|------|------------|
+| 38 (1)   | Introduction and course organization + Git, GitHub and Markdown - 4 periods      |
+| 39 (2)  | Java and Maven - 4 periods      |
+| 40 (3) | Java input/output communications (filesystem) - 4 periods       |
+| 41 (4)  | Java input/output communications (network) - 4 periods       |
 
 ---
 
-| Week  | Program   |
-|-------|-----------|
-| TODO  | TODO      |
+| Week | Program    |
+|------|------------|
+| 42 (5)  | Java input/output communications (network) - 4 periods       |
+| 43   | Break       |
+| 44 (6)  | TODO       |
+| 45 (7)  | TODO       |
+
+---
+
+| Week | Program    |
+|------|------------|
+| 46 (8) | TODO       |
+| 47 (9)  | TODO       |
+| 48 (10)  | TODO       |
+| 49 (11)  | TODO       |
+
+---
+
+| Week | Program    |
+|------|------------|
+| 50 (12)  | TODO       |
+| 51  (13) | TODO       |
+| 52   | Break       |
+| 1    | Break       |
+
+---
+
+| Week | Program    |
+|------|------------|
+| 2 (14)   | TODO       |
+| 3 (15)  | TODO       |
+| 4 (16)   | TODO       |
+| 5    | Exams preparation       |
+| 6    | Exams       |
 
 ## Evaluation
+
+TODO
 
 ## Responsibilities and expectations
 
