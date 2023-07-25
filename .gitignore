@@ -1,0 +1,25 @@
+
+## Linux
+
+# Temporary files
+*~
+
+## macOS
+
+# Files are created by macOS Finder
+.DS_Store
+
+## Marp
+
+# Outputs
+public
+*.html
+*.pdf
+
+## Windows
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Folder config file
+[Dd]esktop.ini

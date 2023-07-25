@@ -6,7 +6,6 @@ marp: true
 theme: gaia
 paginate: true
 headingDivider: 4
-header: ''
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -14,6 +13,7 @@ style: |
         --color-foreground: #333;
         --color-highlight: #f96;
         --color-dimmed: #888;
+        --color-headings: #7d8ca3;
     }
     blockquote {
         font-style: italic; 
@@ -25,7 +25,7 @@ style: |
         width: 15%;
     }
     h2, h3, h4, h5, h6 {
-        color: #abcdef
+        color: var(--color-headings);
     }
 -->
 
@@ -44,6 +44,8 @@ _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of
 ## Introduction and course organization
 
 <!-- _class: lead -->
+
+[README](https://github.com/HEIG-VD-DAI-Course) | [Slides (Web)]() | [Slides (PDF)]() | [Video (in French)]()
 
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 
@@ -64,26 +66,24 @@ _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of
 
 ### Ludovic Delafontaine
 
-**Computer science background**
+I work at HEIG-VD as an applied research and development engineer since 2020. Here is my background:
 
 - 2006: Worms 4 Mayhem (modding)
 - 2011-2015: ETML (CFC + MPTi)
 - 2015-2019: HEIG-VD (BSc)
-- 2020-2023: HEIG-VD (Ra&D)
-- 2022-2023: Artios (own company)
+- 2020-now: HEIG-VD (aR&D)
+- 2022-now: Artios (own company)
 
 ![bg right:40%](./images/worms-4-mayhem-pc-boxart.jpg)
 
----
-
-**Expertise**
+#### Expertise
 
 - Software engineering
 - System administration
 - Cloud computing
 - DevOps/MLOps
 - Best/proven practices (reviewing, testing, CI/CD, workflows, etc.)
-- Always learning!
+- Startup projects (idea, business model, MVP, etc.)
 
 GitLab: [@ludelafo](https://gitlab.com/ludelafo)  
 GitHub: [@ludelafo](https://github.com/ludelafo)
@@ -157,9 +157,9 @@ I will not take presences during this course. If you are done, you are free to g
 
 More specifically, the course material is available in the [`HEIG-VD-DAI-Course`](https://github.com/HEIG-VD-DAI-Course/HEIG-VD-DAI-Course) Git repository.
 
-No Microsoft Teams, no CyberLearn, no bullshit. I want to keep it simple and efficient for you and me and use real tools that work.
+I will not use Microsoft Teams nor CyberLearn. I want to keep it simple and efficient for you and me. One place to find it all.
 
-_PS: I accept pull requests if you spot anything weird!_
+_PS: I accept pull requests if you spot anything weird! :sparkles:_
 
 ## Communication channels
 

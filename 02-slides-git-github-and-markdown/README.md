@@ -6,7 +6,6 @@ marp: true
 theme: gaia
 paginate: true
 headingDivider: 4
-header: ''
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -14,9 +13,19 @@ style: |
         --color-foreground: #333;
         --color-highlight: #f96;
         --color-dimmed: #888;
+        --color-headings: #7d8ca3;
     }
     blockquote {
         font-style: italic; 
+    }
+    table {
+        width: 100%;
+    }
+    th:first-child {
+        width: 15%;
+    }
+    h2, h3, h4, h5, h6 {
+        color: var(--color-headings);
     }
 -->
 
@@ -35,6 +44,8 @@ _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of
 ## Git, GitHub and Markdown
 
 <!-- _class: lead -->
+
+[README](https://github.com/HEIG-VD-DAI-Course) | [Slides (Web)]() | [Slides (PDF)]() | [Video (in French)]()
 
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 
@@ -382,8 +393,8 @@ New lines can be added using a backspace between two lines or by using a backsla
 A line\
 Another line
 
-A line··
-Another line
+A·line··
+Another·line
 ```
 
 #### Summary
@@ -463,21 +474,17 @@ At this point, you should be able to answer the following questions:
 
 ### What did you learn? (answers)
 
-<!--
-style scope: |
-    blockquote {
-        font-style: italic;
-        background-color: var(--color-highlight);
-    }
--->
-
-> Q: What is Git?
+> Q: What is Git?  
 > A: Git is a distributed version control system.
 
-> Q: What is GitHub?
+> Q: What is GitHub?  
 > A: GitHub is a Git repository hosting service.
 
 ## What will you do next?
+
+In the next session, you will learn the following topics:
+
+- TODO
 
 ## Feedback
 
