@@ -2,7 +2,7 @@ name: Deploy Marp Slides (web and pdf) to GitHub Pages
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: GitHub Pages
   cancel-in-progress: true
 
 on:
@@ -29,36 +29,36 @@ jobs:
       - name: Delete the README.md file at the root of the repository
         run: rm README.md
 
-      - name: Marp Build (web)
+      - name: Build Marp slides (web)
         uses: docker://marpteam/marp-cli:v3.0.2
         env:
           MARP_USER: root:root
         with:
           args: --html --allow-local-files --input-dir .
 
-      - name: Marp Build (pdf)
+      - name: Build Marp slides (pdf)
         uses: docker://marpteam/marp-cli:v3.0.2
         env:
           MARP_USER: root:root
         with:
           args: --html --allow-local-files --input-dir . --jpeg-quality 100 --pdf
 
-      - name: Prepare artifact
+      - name: Prepare files
         run: |
           # Create public directory
           mkdir -p public
 
           # Rename all README.html to index.html
-          find "$PWD" -type f -name "README.html" -exec rename 's/README/index/' '{}' \;
+          find '.' -type f -name "README.html" -exec rename 's/README/index/' '{}' \;
 
           # Rename all README.pdf to the name of their parent directory
-          find "$PWD" -type f -name "README.pdf" -exec sh -c 'mv "$1" "$(dirname "$1")/$(basename "$(dirname "$1")").pdf"' sh {} \;
+          find '.' -type f -name "README.pdf" -exec sh -c 'mv "$1" "$(dirname "$1")/$(basename "$(dirname "$1")").pdf"' sh {} \;
 
           # Delete all README.md files
-          find "$PWD" -type f -name "README.md" -exec rm {} \;
+          find '.' -type f -name "README.md" -exec rm {} \;
 
           # Move all directories containing an index.html to public directory
-          find "$PWD" -type f -name "index.html" -exec sh -c 'mv "$(dirname "$1")" public' sh {} \;
+          find '.' -type f -name "index.html" -exec sh -c 'mv "$(dirname "$1")" public' sh {} \;
 
           # Move to public directory
           cd public
@@ -75,7 +75,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: GitHub Pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages

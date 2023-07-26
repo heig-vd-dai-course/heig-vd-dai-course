@@ -32,6 +32,9 @@ style: |
         color: var(--color-headings);
         font-size: 1.5rem;
     }
+    h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {
+        text-decoration: none;
+    }
 headingDivider: 4
 -->
 
@@ -40,7 +43,7 @@ headingDivider: 4
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/01-slides-introduction-and-course-organization.pdf
 [video]: #
 
-# **HEIG-VD** - DAI 2023-2024 
+# [HEIG-VD](https://heig-vd.ch) - DAI 2023-2024 
 
 <!--
 _class: lead

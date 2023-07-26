@@ -1,0 +1,43 @@
+name: Release Marp Slides (pdf) to GitHub Releases
+
+on:
+  push:
+    tags:
+      - '*'
+
+# Sets permissions of the GITHUB_TOKEN to allow release to GitHub Releases
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install packages
+        run: sudo apt install --yes rename
+
+      - name: Delete the README.md file at the root of the repository
+        run: rm README.md
+
+      - name: Build Marp slides (pdf)
+        uses: docker://marpteam/marp-cli:v3.0.2
+        env:
+          MARP_USER: root:root
+        with:
+          args: --html --allow-local-files --input-dir . --jpeg-quality 100 --pdf
+
+      - name: Prepare files
+        run: |
+          # Rename all README.pdf to the name of their parent directory
+          find '.' -type f -name "README.pdf" -exec sh -c 'mv "$1" "$(dirname "$1")/$(basename "$(dirname "$1")").pdf"' sh {} \;
+
+      - name: Release Marp slides (pdf)
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            **/*.pdf
+          body: |
+            This release contains the PDF version of the slides for the DAI course at HEIG-VD, Switzerland.
