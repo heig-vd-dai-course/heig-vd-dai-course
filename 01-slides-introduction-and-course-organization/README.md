@@ -1,11 +1,11 @@
----
-marp: true
----
-
 <!--
 theme: gaia
+size: 16:9
 paginate: true
-headingDivider: 4
+author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+title: HEIG-VD DAI Course - Introduction and course organization
+description: Introduction and course organization for the DAI course at HEIG-VD, Switzerland
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -27,6 +27,7 @@ style: |
     h2, h3, h4, h5, h6 {
         color: var(--color-headings);
     }
+headingDivider: 4
 -->
 
 # **HEIG-VD** - DAI 2023-2024 
@@ -37,15 +38,17 @@ _paginate: false
 _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot - CC BY-SA 4.0</center>'
 -->
 
-![https://github.com/HEIG-VD-DAI-Course](https://quickchart.io/qr?format=svg&ecLevel=L&size=200&margin=1&text=https://github.com/HEIG-VD-DAI-Course)
+![https://github.com/heig-vd-dai-course](https://quickchart.io/qr?format=svg&ecLevel=L&size=200&margin=1&text=https://github.com/heig-vd-dai-course)
 
-<https://github.com/HEIG-VD-DAI-Course>
+<https://github.com/heig-vd-dai-course>
 
 ## Introduction and course organization
 
 <!-- _class: lead -->
 
-[README](https://github.com/HEIG-VD-DAI-Course) | [Slides (Web)]() | [Slides (PDF)]() | [Video (in French)]()
+[README](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-slides-introduction-and-course-organization/README.md) | [Slides (Web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/) | [Slides (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/01-slides-introduction-and-course-organization.pdf) | [Video (in French)]()
+
+1 period
 
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 
@@ -153,9 +156,9 @@ I will not take presences during this course. If you are done, you are free to g
 
 ## Where to find the course material
 
-**Everything** will be on the GitHub organization created for this course: <https://github.com/HEIG-VD-DAI-Course>.
+**Everything** will be on the GitHub organization created for this course: <https://github.com/heig-vd-dai-course>.
 
-More specifically, the course material is available in the [`HEIG-VD-DAI-Course`](https://github.com/HEIG-VD-DAI-Course/HEIG-VD-DAI-Course) Git repository.
+More specifically, the course material is available in the [`heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course) Git repository.
 
 I will not use Microsoft Teams nor CyberLearn. I want to keep it simple and efficient for you and me. One place to find it all.
 

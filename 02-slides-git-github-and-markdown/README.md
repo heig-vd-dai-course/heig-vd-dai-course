@@ -1,11 +1,11 @@
----
-marp: true
----
-
 <!--
 theme: gaia
+size: 16:9
 paginate: true
-headingDivider: 4
+author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+title: HEIG-VD DAI Course - Git, GitHub and Markdown
+description: Git, GitHub and Markdown for the DAI course at HEIG-VD, Switzerland
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -27,6 +27,7 @@ style: |
     h2, h3, h4, h5, h6 {
         color: var(--color-headings);
     }
+headingDivider: 4
 -->
 
 # **HEIG-VD** - DAI 2023-2024 
@@ -37,15 +38,17 @@ _paginate: false
 _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot - CC BY-SA 4.0</center>'
 -->
 
-![https://github.com/HEIG-VD-DAI-Course](https://quickchart.io/qr?format=svg&ecLevel=L&size=200&margin=1&text=https://github.com/HEIG-VD-DAI-Course)
+![https://github.com/heig-vd-dai-course](https://quickchart.io/qr?format=svg&ecLevel=L&size=200&margin=1&text=https://github.com/heig-vd-dai-course)
 
-<https://github.com/HEIG-VD-DAI-Course>
+<https://github.com/heig-vd-dai-course>
 
 ## Git, GitHub and Markdown
 
 <!-- _class: lead -->
 
-[README](https://github.com/HEIG-VD-DAI-Course) | [Slides (Web)]() | [Slides (PDF)]() | [Video (in French)]()
+[README](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-slides-git-github-and-markdown/README.md) | [Slides (Web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/) | [Slides (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/02-slides-git-github-and-markdown.pdf) | [Video (in French)]()
+
+3 periods
 
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 
