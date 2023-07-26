@@ -6,13 +6,12 @@
 
 ## macOS
 
-# Files are created by macOS Finder
+# Files created by macOS Finder
 .DS_Store
 
 ## Marp
 
 # Outputs
-public
 *.html
 *.pdf
 

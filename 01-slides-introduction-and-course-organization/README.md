@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 <!--
 theme: gaia
 size: 16:9
@@ -26,9 +30,15 @@ style: |
     }
     h2, h3, h4, h5, h6 {
         color: var(--color-headings);
+        font-size: 1.5rem;
     }
 headingDivider: 4
 -->
+
+[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-slides-introduction-and-course-organization/README.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/01-slides-introduction-and-course-organization.pdf
+[video]: #
 
 # **HEIG-VD** - DAI 2023-2024 
 
@@ -46,7 +56,7 @@ _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of
 
 <!-- _class: lead -->
 
-[README](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-slides-introduction-and-course-organization/README.md) | [Slides (Web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/) | [Slides (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/01-slides-introduction-and-course-organization.pdf) | [Video (in French)]()
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
 
 1 period
 
@@ -177,8 +187,8 @@ Feel free to use any of these communication channels for any kind of questions r
 ## Course sequence
 
 1. Theoretical content you acquire on your own
-    - It is meant to be straight to the point and useful
-2. Practical content where you do stuff (!)
+    - A set of READMEs, slides and/or videos for you to read/watch
+2. Practical content where you do stuff (:exploding_head:)
     - You will be able to experiment the theoretical content
 3. Practical work (the time available should be sufficient)
     - Bigger work to get deeper into the subject

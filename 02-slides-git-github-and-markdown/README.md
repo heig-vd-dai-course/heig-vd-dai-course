@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 <!--
 theme: gaia
 size: 16:9
@@ -26,9 +30,15 @@ style: |
     }
     h2, h3, h4, h5, h6 {
         color: var(--color-headings);
+        font-size: 1.5rem;
     }
 headingDivider: 4
 -->
+
+[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-slides-git-github-and-markdown/README.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/02-slides-git-github-and-markdown.pdf
+[video]: #
 
 # **HEIG-VD** - DAI 2023-2024 
 
@@ -46,7 +56,7 @@ _footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of
 
 <!-- _class: lead -->
 
-[README](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-slides-git-github-and-markdown/README.md) | [Slides (Web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/) | [Slides (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/02-slides-git-github-and-markdown.pdf) | [Video (in French)]()
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
 
 3 periods
 
@@ -83,9 +93,19 @@ Git uses **commits** to track changes. A commit is a snapshot of the repository 
 
 Git uses **branches** to track different versions of the repository. The default branch is often called `main` (the legacy name was `master`). Each branch has a name and a pointer to a commit. The pointer is called a **head**. The head of the main branch is called `HEAD`.
 
+Commits can be **tagged** to create a reference to a commit. This is often used to mark a commit as a release.
+
+Commits can be **signed** to prove that the commit was made by a specific person. This is done for security reasons.
+
+---
+
 Often, when implementing a new feature, a new branch is created. This is done by creating a new branch from the main branch. The new branch is called a **feature branch**. The main branch is called the **target branch**.
 
 Once you made all the changes, the modified files are **staged** and a new commit is created. The commit is then **pushed** to the repository.
+
+Changes can be compared to see the **differences** between the staged files and the working directory. This is done by comparing the files with the last commit.
+
+Changes can be **pulled** from the repository into the current branch.
 
 ---
 
@@ -130,6 +150,9 @@ git checkout <branch-name>
 
 # Add changes to the staging area
 git add <file>
+
+# View differences between the working directory and the staging area
+git diff <file>
 ```
 
 ---
@@ -222,7 +245,7 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 #### Resources
 
-TODO
+- [The Basics of GitHub](https://github.com/education/github-starter-course) - A great Git repository to learn the basics of GitHub!
 
 _Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
@@ -367,7 +390,7 @@ Tables can be created using the `|` character to separate columns and `-` charac
 
 HTML can be used in Markdown files. This allows to create more complex documents. It is also possible to use CSS to style the document. This is not covered in this course and I would not recommend it as the goal of Markdown is to be simple.
 
-If you have a look at the source code of this document, you will see that it is written in Markdown and that it uses HTML to create the slides with the help of [Marp](https://marp.app/).
+If you have a look at the source code of this document (the Markdown version on GitHub), you will see that it is written in Markdown and that it uses HTML to create the slides with the help of [Marp](https://marp.app/).
 
 #### Specifications
 
@@ -421,6 +444,7 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 #### Resources
 
 - [Markdown Guide](https://www.markdownguide.org/)
+- [Complete list of GitHub Markdown emoji markup](https://gist.github.com/rxaviers/7360908)
 
 _Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
@@ -438,26 +462,125 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 ![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
 ![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
 
-### Install Git
+### Create a GitHub profile
 
+<!-- _class: lead -->
+
+#### Install Git
+
+Check if your operating system package manager has Git available so you can install it from there (`apt` with Debian/Ubuntu, `brew` for [Brew](https://brew.sh/) or `choco` for [Chocolatey](https://chocolatey.org/) for example)! If not, you can download it and install it manually from the official website.
 
 1. Go to <https://git-scm.com/downloads>
 2. Download and install Git
 3. Open a terminal and type `git --version`
 
+The output should be similar to this: `git version 2.41.0`
 
+#### Create a SSH key
 
-### Create your GitHub account
+In this section, you will create a SSH key to authenticate to GitHub. If you already have one, you can skip this section. You must have `ssh-keygen` installed on your system.
+
+An SSH key is a pair of keys: a public key and a private key. The public key is used to authenticate to a server, and the private key is used to sign the authentication request.
+
+It is required to use the SSH key authentication method to authenticate to GitHub. It is more secure than using a password.
+
+---
+
+1. Open a terminal
+2. Type `ssh-keygen -t ed25519 -C ""`
+3. Press enter to use the default location
+4. Enter a passphrase (optional)
+5. Type `eval "$(ssh-agent -s)"`
+6. Type `ssh-add ~/.ssh/id_ed25519`
+7. Type `cat ~/.ssh/id_ed25519.pub`
+
+:warning: **Never** share your private key with anyone! It must be kept secret and confidential, just like a password.
+
+#### Create your GitHub account
+
+If you do not have a GitHub account yet, you will need to create one.
 
 1. Go to <https://github.com>
 2. Create your account
 3. Verify your email address
 
-### Set up your GitHub account
+#### Set up your GitHub account
+
+In this section, you will set up your GitHub account.
 
 1. Go to 
-2. Add a SSH key
-3. Add a profile picture
+2. Add the public SSH key
+3. Add a profile picture (optional)
+
+#### Create a new repository
+
+In this section, you will create a new special repository to set your GitHub profile. This repository is named `.github`. If you already have it, you can skip this section.
+
+#### Clone the repository locally
+
+
+#### Fill your profile
+
+Fill a new file named `profile/README.md` file. This file will be used by GitHub to set your profile.
+
+#### Commit your changes
+
+Commit your changes and push them to the repository.
+
+#### Push your changes
+
+Push your changes to the repository.
+
+#### Check the results
+
+
+#### Share your profile in GitHub Discussions
+
+This will notify us that you have completed the exercise.
+
+GitHub Discussions - show and tell
+
+#### Summary
+
+
+
+### Add yourself to the class list
+
+<!-- _class: lead -->
+
+#### Fork the repository
+
+#### Clone the repository locally
+
+#### Create a new branch
+
+#### Add yourself to the list
+
+#### Commit your changes
+
+#### Intentionally create a conflict
+
+#### Resolve the conflict
+
+#### Push your changes
+
+#### Create a pull request
+
+#### Wait for review
+
+#### Make changes if needed
+
+#### Check the results
+
+#### Summary
+
+### Go further
+
+This is an optional section. You can do it if you have time left. I encourage you to do it nonetheless to learn more about Git and GitHub!
+
+Go in the GitHub Discussions, check the others profiles and give them a star!
+
+Follow your classmates!
 
 ## Conclusion
 
@@ -491,13 +614,12 @@ In the next session, you will learn the following topics:
 
 ## Feedback
 
-Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next session!
+Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
 
-- Too much theory / too much practice
-- Too slow / too fast
-- Too easy / too difficult
-- Not enough time / too much time
-- Useful / not useful
-- Other comments
+[GitHub Discussions - Git, GitHub and Markdown - Feedback](https://github.com/orgs/heig-vd-dai-course/discussions/1)
+
+We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
+
+You can use reactions to express your opinion on a comment.
 
 ## Sources
