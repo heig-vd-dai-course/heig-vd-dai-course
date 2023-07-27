@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
 title: HEIG-VD DAI Course - Introduction and course organization
 description: Introduction and course organization for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -35,12 +35,15 @@ style: |
     h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {
         text-decoration: none;
     }
+    section:not([class=lead]) > p, blockquote {
+        text-align: justify;
+    }
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-slides-introduction-and-course-organization/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-slides-introduction-and-course-organization/01-slides-introduction-and-course-organization.pdf
+[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/README.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization.pdf
 [video]: #
 
 # [HEIG-VD](https://heig-vd.ch) - DAI 2023-2024 
@@ -198,7 +201,7 @@ Feel free to use any of these communication channels for any kind of questions r
 4. Feedback and discussion (few minutes - most important to me)
     - You will be able to give feedback and share your experience
 
-## Program - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
+## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
 
 | Week | Program    |
 |------|------------|
@@ -260,13 +263,13 @@ TODO
 
 ## _"A course in English..? Why This Fantasy?"_
 
-All the written material will be in English. The speaker will talk in French.
+All the written material will be in English. The teaching staff will speak in French.
 
 This is meant to prepare you for the future. Our field is mostly made in English so this is a great opportunity to practice your English skills.
 
 Evaluations will be in English as well but you can answer the questions in French if you prefer.
 
-If you have any difficulties with English, please let me know.
+If you have any difficulties with English, please let us know.
 
 ## _"What about ChatGPT, Copilot, etc.?"_
 

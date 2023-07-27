@@ -1,4 +1,4 @@
-name: Deploy Marp Slides (web and pdf) to GitHub Pages
+name: Deploy Marp slides (web and pdf) to GitHub Pages
 
 # Allow one concurrent deployment
 concurrency:

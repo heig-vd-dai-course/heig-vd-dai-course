@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
 title: HEIG-VD DAI Course - Git, GitHub and Markdown
 description: Git, GitHub and Markdown for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -35,12 +35,15 @@ style: |
     h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {
         text-decoration: none;
     }
+    section:not([class=lead]) > p, blockquote {
+        text-align: justify;
+    }
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-slides-git-github-and-markdown/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-slides-git-github-and-markdown/02-slides-git-github-and-markdown.pdf
+[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-git-github-and-markdown/README.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/02-git-github-and-markdown.pdf
 [video]: #
 
 # [HEIG-VD](https://heig-vd.ch) - DAI 2023-2024 
@@ -514,6 +517,7 @@ In this section, you will set up your GitHub account.
 1. Go to 
 2. Add the public SSH key
 3. Add a profile picture (optional)
+4. Enable two-factor authentication (optional, but highly recommended)
 
 #### Create a new repository
 

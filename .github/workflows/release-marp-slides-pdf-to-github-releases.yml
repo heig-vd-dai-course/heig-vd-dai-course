@@ -1,4 +1,4 @@
-name: Release Marp Slides (pdf) to GitHub Releases
+name: Release Marp slides (pdf) to GitHub Releases
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
       - name: Release Marp slides (pdf)
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-            **/*.pdf
           body: |
             This release contains the PDF version of the slides for the DAI course at HEIG-VD, Switzerland.
+          files: |
+            **/*.pdf
