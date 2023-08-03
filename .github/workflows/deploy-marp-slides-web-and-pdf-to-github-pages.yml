@@ -26,8 +26,13 @@ jobs:
       - name: Install packages
         run: sudo apt install --yes rename tree
 
-      - name: Delete the README.md file at the root of the repository
-        run: rm README.md
+      - name: Delete the README.md files that should not be published
+        run: |
+          rm README.md
+          rm 05-practical-work-1-a-cli-to-process-files/README.md
+          rm 11-practical-work-2-first-network-application/README.md
+          rm 14-practical-work-3-second-network-application/README.md
+          rm 16-practical-work-4-web-infrastructures/README.md
 
       - name: Build Marp slides (web)
         uses: docker://marpteam/marp-cli:v3.0.2

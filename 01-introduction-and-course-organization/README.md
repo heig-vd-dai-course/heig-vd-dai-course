@@ -28,8 +28,10 @@ style: |
     th:first-child {
         width: 15%;
     }
-    h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6 {
         color: var(--color-headings);
+    }
+    h2, h3, h4, h5, h6 {
         font-size: 1.5rem;
     }
     h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {
@@ -46,29 +48,22 @@ headingDivider: 4
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization.pdf
 [video]: #
 
-# [HEIG-VD](https://heig-vd.ch) - DAI 2023-2024 
+# Introduction and course organization
 
 <!--
 _class: lead
 _paginate: false
-_footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot - CC BY-SA 4.0</center>'
 -->
-
-![https://github.com/heig-vd-dai-course](https://quickchart.io/qr?format=svg&ecLevel=L&size=200&margin=1&text=https://github.com/heig-vd-dai-course)
 
 <https://github.com/heig-vd-dai-course>
 
-## Introduction and course organization
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [HEIG-VD](https://heig-vd.ch)
 
-<!-- _class: lead -->
-
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
-
-1 period
+L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
 
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 
-## Agenda
+## Agenda (1 period)
 
 - **Background**
     - [Who are we?](#who-are-we)
@@ -196,56 +191,16 @@ Feel free to use any of these communication channels for any kind of questions r
     - A set of READMEs, slides and/or videos for you to read/watch
 2. Practical content where you do stuff (:exploding_head:)
     - You will be able to experiment the theoretical content
-3. Practical work (the time available should be sufficient)
+3. Practical work
     - Bigger work to get deeper into the subject
 4. Feedback and discussion (few minutes - most important to me)
     - You will be able to give feedback and share your experience
 
 ## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
 
-| Week | Program    |
-|------|------------|
-| 38 (1)   | Introduction and course organization + Git, GitHub and Markdown - 4 periods      |
-| 39 (2)  | Java and Maven - 4 periods      |
-| 40 (3) | Java input/output communications (filesystem) - 4 periods       |
-| 41 (4)  | Java input/output communications (network) - 4 periods       |
+64 periods are planned for this course.
 
----
-
-| Week | Program    |
-|------|------------|
-| 42 (5)  | Java input/output communications (network) - 4 periods       |
-| 43   | Break       |
-| 44 (6)  | TODO       |
-| 45 (7)  | TODO       |
-
----
-
-| Week | Program    |
-|------|------------|
-| 46 (8) | TODO       |
-| 47 (9)  | TODO       |
-| 48 (10)  | TODO       |
-| 49 (11)  | TODO       |
-
----
-
-| Week | Program    |
-|------|------------|
-| 50 (12)  | TODO       |
-| 51  (13) | TODO       |
-| 52   | Break       |
-| 1    | Break       |
-
----
-
-| Week | Program    |
-|------|------------|
-| 2 (14)   | TODO       |
-| 3 (15)  | TODO       |
-| 4 (16)   | TODO       |
-| 5    | Exams preparation       |
-| 6    | Exams       |
+The course planning is available at <https://github.com/orgs/heig-vd-dai-course/projects>.
 
 ## Evaluation
 
@@ -284,6 +239,12 @@ You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot, 
 The HEIG-VD recommends Windows for your studies. This is mostly because other departments heavily use Windows-only products. From my experience, developing on Windows can be more difficult than Linux or macOS.
 
 Linux and macOS are much more supported in the software development world. If you can, I recommend you to try a Linux distribution (Ubuntu, Fedora or Debian) for this course, either baremetal or in Windows Subsystem Linux (WSL). It will be useful in your future to have a bit of experience with it as well.
+
+## _"I'm a embedded/network/security/data science student, why do I have this course?"_
+
+Network communication is everywhere. You will need to communicate with other devices, servers, etc. They communicate between them as well. This course will give you the necessary knowledge to do so.
+
+It is the basis of any communication between devices. You will need to know how to do it and how it works, even if you are not a software engineer.
 
 ## Questions
 

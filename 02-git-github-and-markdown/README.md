@@ -28,8 +28,10 @@ style: |
     th:first-child {
         width: 15%;
     }
-    h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6 {
         color: var(--color-headings);
+    }
+    h2, h3, h4, h5, h6 {
         font-size: 1.5rem;
     }
     h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {
@@ -46,35 +48,28 @@ headingDivider: 4
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/02-git-github-and-markdown.pdf
 [video]: #
 
-# [HEIG-VD](https://heig-vd.ch) - DAI 2023-2024 
+# Git, GitHub and Markdown
 
 <!--
 _class: lead
 _paginate: false
-_footer: '<center>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot - CC BY-SA 4.0</center>'
 -->
-
-![https://github.com/heig-vd-dai-course](https://quickchart.io/qr?format=svg&ecLevel=L&size=200&margin=1&text=https://github.com/heig-vd-dai-course)
 
 <https://github.com/heig-vd-dai-course>
 
-## Git, GitHub and Markdown
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [HEIG-VD](https://heig-vd.ch)
 
-<!-- _class: lead -->
-
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
-
-3 periods
+L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
 
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 
-## Agenda
+## Agenda (3 periods)
 
-- **Theoretical content**
+- **Theoretical content** (1 period)
     - [Git](#git)
     - [GitHub](#github)
     - [Markdown](#markdown)
-- **Practical content**
+- **Practical content** (2 periods)
     - Create your own GitHub profile with a special Git repository
 
 ## Theoretical content
@@ -630,3 +625,4 @@ We are interested to see if the session was too theoretical / too practical, too
 You can use reactions to express your opinion on a comment.
 
 ## Sources
+
