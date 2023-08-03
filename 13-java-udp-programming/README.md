@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
-title: HEIG-VD DAI Course - Java UDP Programming
-description: Java UDP Programming for the DAI course at HEIG-VD, Switzerland
+title: HEIG-VD DAI Course - Java UDP programming
+description: Java UDP programming for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-udp-programming/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |

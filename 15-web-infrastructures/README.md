@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
-title: HEIG-VD DAI Course - Web Infrastructures
-description: Web Infrastructures for the DAI course at HEIG-VD, Switzerland
+title: HEIG-VD DAI Course - Web infrastructures
+description: Web infrastructures for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
@@ -48,7 +48,7 @@ headingDivider: 4
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/15-web-infrastructures.pdf
 [video]: #
 
-# Web Infrastructures
+# Web infrastructures
 
 <!--
 _class: lead

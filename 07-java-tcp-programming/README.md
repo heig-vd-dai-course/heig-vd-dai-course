@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
-title: HEIG-VD DAI Course - Java TCP Programming
-description: Java TCP Programming for the DAI course at HEIG-VD, Switzerland
+title: HEIG-VD DAI Course - Java TCP programming
+description: Java TCP programming for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-java-tcp-programming/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
@@ -48,7 +48,7 @@ headingDivider: 4
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-java-tcp-programming/07-java-tcp-programming.pdf
 [video]: #
 
-# Java TCP Programming
+# Java TCP programming
 
 <!--
 _class: lead
