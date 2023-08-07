@@ -57,9 +57,9 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [HEIG-VD](https://heig-vd.ch)
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
 
-L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+<small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
 
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 
@@ -101,6 +101,10 @@ I work at HEIG-VD as an applied research and development engineer since 2020. He
 
 GitLab: [@ludelafo](https://gitlab.com/ludelafo)  
 GitHub: [@ludelafo](https://github.com/ludelafo)
+
+### Juergen Ehrensberger
+
+TODO
 
 ### Hadrien Louis
 
@@ -173,7 +177,7 @@ More specifically, the course material is available in the [`heig-vd-dai-course`
 
 I will not use Microsoft Teams nor CyberLearn. I want to keep it simple and efficient for you and me. One place to find it all.
 
-_PS: I accept pull requests if you spot anything weird! :sparkles:_
+_PS: I accept issues and pull requests if you spot anything weird! :slightly_smiling_face:_
 
 ## Communication channels
 
@@ -183,24 +187,30 @@ Feel free to use any of these communication channels for any kind of questions r
 - In person
 - Email
     - [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
+    - [juergen.ehrensberger@heig-vd.ch](mailto:juergen.ehrensberger@heig-vd.ch)
     - [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
+
+## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
+
+64 periods are planned for this course, divided in 4 main chapters:
+
+- Chapter 1 - A CLI to process files (15 periods)
+- Chapter 2 - First network application (18 periods)
+- Chapter 3 - Second network application (16 periods)
+- Chapter 4 - Web infrastructures (12 periods)
+
+The entire course planning for the semester is available at <https://github.com/orgs/heig-vd-dai-course/projects>.
 
 ## Course sequence
 
-1. Theoretical content you acquire on your own
-    - A set of READMEs, slides and/or videos for you to read/watch
+1. Theoretical content you acquire on your own, at your own pace
+    - A set of slides/READMEs or videos for you to read/watch
 2. Practical content where you do stuff (:exploding_head:)
     - You will be able to experiment the theoretical content
 3. Practical work
     - Bigger work to get deeper into the subject
 4. Feedback and discussion (few minutes - most important to me)
     - You will be able to give feedback and share your experience
-
-## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
-
-64 periods are planned for this course.
-
-The course planning is available at <https://github.com/orgs/heig-vd-dai-course/projects>.
 
 ## Evaluation
 

@@ -57,9 +57,9 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [HEIG-VD](https://heig-vd.ch)
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
 
-L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+<small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
 
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 

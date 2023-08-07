@@ -21,7 +21,7 @@ Multiple groups can choose the same processing and you can share your methodolog
 
 You will work in groups of two students. You can choose your partner. If you do not have a partner, we will assign you one.
 
-## Grades
+## Evaluation grid
 
 - 0 point - The work is not done
 - 0.1 point - The work is insufficient
@@ -34,7 +34,7 @@ Maximum grade: 30 points * 0.2 = 6
 | 1     | Git, GitHub and Markdown  | The repository has all members and teaching staff as reporters | 0.2 |
 | 2     | Git, GitHub and Markdown  | The repository is managed using issues and pull requests | 0.2 |
 | 3     | Git, GitHub and Markdown  | The commits are signed | 0.2 |
-| 4     | Git, GitHub and Markdown  | The pull requests and commits messages are descriptive | 0.2 |
+| 4     | Git, GitHub and Markdown  | The issues, pull requests and commits messages are descriptive | 0.2 |
 | 5     | Git, GitHub and Markdown  | The entire team contributes to the project and can explain it | 0.2 |
 | 6     | Git, GitHub and Markdown  | The repository contains a gitignore file to ignore unwanted files | 0.2 |
 | 7     | Git, GitHub and Markdown  | The repository contains tags to the two versions | 0.2 |
@@ -58,8 +58,8 @@ Maximum grade: 30 points * 0.2 = 6
 | 25    | Java IOs                  | The CLI displays the execution time | 0.2 |
 | 26    | Presentation              | The presentation is clear and well prepared | 0.2 |
 | 27    | Presentation              | The presentation presents the CLI application | 0.2 |
-| 28    | Presentation              | The presentation presents the benchmark methodology | 0.2 |
-| 29    | Presentation              | The presentation presents the results | 0.2 |
+| 28    | Presentation              | A demo of the CLI application is made | 0.2 |
+| 29    | Presentation              | The presentation presents the benchmark methodology and the results | 0.2 |
 | 30    | Presentation              | Everyone talks during the presentation  | 0.2 |
 
 ## Constraints

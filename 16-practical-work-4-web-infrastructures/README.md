@@ -2,7 +2,7 @@
 
 <https://github.com/heig-vd-dai-course>
 
-L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+<small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
 
 ## Objectives
 
