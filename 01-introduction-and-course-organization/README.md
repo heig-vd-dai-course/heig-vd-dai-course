@@ -205,7 +205,7 @@ You will learn the following technologies during this course:
 - A place you don't feel comfortable/safe
 - A place where you can't ask questions
 - A place where you can't take anything away
-- If you have a problem with the course, we will do my best to fix it.
+- If you have a problem with the course, we will do our best to fix it.
 
 We will not take presences during this course. If you are done, you are free to go but we would appreciate if you try to help your classmates instead!
 
@@ -266,11 +266,11 @@ You can change groups between practical works. You will have access to the gradi
 
 You can be asked to answer questions regarding the theoretical content as well as the practical content of the slides/READMEs/videos during the practical work review or the evaluations. Both aspects are complementary and important.
 
-We will try my best to give you your grades and feedback as quickly as possible so you can improve for the next work.
+We will try our best to give you your grades and feedback as quickly as possible so you can improve for the next work.
 
 We can be flexible on the deadlines if you have a good reason. Please let us know as soon as possible if you have any difficulties.
 
-If you have trouble with your group, please let us know as soon as possible. we will do my best to help you.
+If you have trouble with your group, please let us know as soon as possible. We will do our best to help you.
 
 ## Responsibilities and expectations
 
@@ -293,7 +293,7 @@ If you have any difficulties with English, please let us know.
 
 ## _"What about ChatGPT, Copilot, etc.?"_
 
-You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot, etc.), even during evaluations. My statement is that you will be able to use these in the real world, so better learn how to use them now. However, they are here to help you, not to do the work for you:
+You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot, etc.), even during evaluations. Our statement is that you will be able to use these in the real world, so better learn how to use them now. However, they are here to help you, not to do the work for you:
 
 - You must be able to explain what you did and why you did it
 - You must state it when you used external help (tools and sources)
@@ -301,7 +301,7 @@ You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot, 
 
 ## _"Linux, macOS or Windows?"_
 
-The HEIG-VD recommends Windows for your studies. This is mostly because other departments heavily rely on Windows-only products. From my experience, developing on Windows can be more difficult than Linux or macOS.
+The HEIG-VD recommends Windows for your studies. This is mostly because other departments heavily rely on Windows-only products. From our experience, developing on Windows can be more difficult than Linux or macOS.
 
 Linux and macOS are much more supported in the software development world. If you can, we recommend you to try a Linux distribution (Ubuntu or Debian) for this course, either baremetal or in Windows Subsystem for Linux (WSL). It will be useful in your future to have a bit of experience with it as well.
 

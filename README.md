@@ -73,4 +73,4 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 ## Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+Contributions are welcome! Please read the [`CONTRIBUTING.md`](./CONTRIBUTING.md) files for details.
