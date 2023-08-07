@@ -1,6 +1,6 @@
-# HEIG-VD DAI Course
+# HEIG-VD DAI Course [![License](https://img.shields.io/github/license/heig-vd-dai-course/heig-vd-dai-course)](./LICENSE.md)
 
-The main repository for the DAI course (course material and discussions) at HEIG-VD, Switzerland.
+The main repository for the DAI course (course material and discussions) at [HEIG-VD](https://heig-vd.ch), Switzerland.
 
 ## Getting started
 
@@ -66,3 +66,11 @@ GitHub Teams are available at <https://github.com/orgs/heig-vd-dai-course/teams>
 - Teaching staff (teachers and assistants)
 - Students (all students)
 - Old members (people who have completed the course)
+
+## License
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](./LICENSE.md).
+
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details.

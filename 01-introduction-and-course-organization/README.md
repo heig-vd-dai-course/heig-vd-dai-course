@@ -120,33 +120,49 @@ TODO
 
 <!-- _class: lead -->
 
-### What does GAPS say
+### What does GAPS say - [Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
 
-Taken from the "[Fiche d'unité d'enseignement](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)" of the course :
-
-> **Programmation réseau**
+> **Connaissances préalables recommandées**
 >
->   - être capable de concevoir une application client-serveur ;
->   - être capable d'implémenter un client et un serveur en utilisant la Socket API dans différents langages ;
+> L'étudiant-e doit connaître et savoir utiliser les notions suivantes :
+> 
+> - Programmation (Java, C) ;
+> - Programmation orientée objet ; (?)
+> - TCP/IP.
+>
+> Les unités d'enseignement PRG2, RXI et POO (?) permettent d'acquerir ces connaissances.
+
 
 ---
 
-> **Protocole HTTP**
+> **Objectifs**
 >
->   - connaître les concepts principaux du protocole ;
->   - être capable de concevoir et réaliser une infrastructure HTTP avec un reverse proxy et plusieurs serveurs ;
->   - être capable d'implémenter le protocole en utilisant la Socket API ;
+> A l'issue de cette unité d'enseignement, l'étudiant-e sera capable de :
+>
+> Programmation réseau
+>
+> - être capable de concevoir une application client-serveur ;
+> - être capable d'implémenter un client et un serveur en utilisant l'API
+  Socket dans différents langages ;
 
 ---
 
-> **Protocoles de messagerie**
+> Protocole HTTP
 >
->   - connaître les principaux protocoles relatifs à la messagerie électronique ;
->   - être capable d'implémenter un client de messagerie simple ;
+> - connaître les concepts principaux du protocole ;
+> - être capable de concevoir et réaliser une infrastructure HTTP avec un reverse proxy et plusieurs serveurs ;
+> - être capable d'implémenter le protocole en utilisant l'API Socket ;
 
-> **Protocoles de transfert de fichiers et d'accès à distance**
+---
+
+> Protocoles de messagerie
 >
->   - connaître les protocoles de transfert de fichiers et d'accès à distance, ainsi que leurs principales utilisations (y compris tunneling/forwarding).
+> - connaître les principaux protocoles relatifs à la messagerie électronique ;
+> - être capable d'implémenter un client de messagerie simple ;
+
+> Protocoles de transfert de fichiers et d'accès à distance
+>
+> - connaître les protocoles de transfert de fichiers et d'accès à distance, ainsi que leurs principales utilisations (y compris tunneling/forwarding).
 
 ### Topics
 
