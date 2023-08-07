@@ -68,6 +68,16 @@ Maximum grade: 30 points * 0.2 = 6
 - The CLI must be built using Maven
 - The CLI must be tested using JUnit
 
+## Submission
+
+The deadline for the practical work can be visualized in the planning of the course at <https://github.com/orgs/heig-vd-dai-course/projects>.
+
+You must create a new GitHub Discussion at <https://github.com/orgs/heig-vd-dai-course/discussions> with the following information:
+
+- **Title**: DAI 2023-2024 - Practical work 1 - @member1 and @member2
+- **Category**: Show and tell
+- **Description**: The link to your repository as well as the latest commit hash of your work before submission
+
 ## Resources
 
 Everything is presented in the following sessions:
