@@ -61,16 +61,18 @@ _paginate: false
 
 <small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
 
-![bg opacity:0.1](https://picsum.photos/720?image=3)
+![bg opacity:0.1](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&w=720&q=80)
 
-## Agenda (3 periods)
+## Agenda
 
-- **Theoretical content** (1 period)
+- **Theoretical content**
     - [Git](#git)
     - [GitHub](#github)
     - [Markdown](#markdown)
-- **Practical content** (2 periods)
-    - Create your own GitHub profile with a special Git repository
+- **Practical content**
+    - [Configure your GitHub account professionally](#configure-your-github-account-professionally)
+    - [Create your own GitHub profile README](#create-your-own-github-profile-readme)
+    - [Add yourself to the list of students in the GitHub organization](#add-yourself-to-the-list-of-students-in-the-github-organization)
 
 ## Theoretical content
 
@@ -455,15 +457,15 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 ### What you will achieve
 
-- Create and set up your GitHub account
-- Create your profile with a special Git repository and Markdown
-- Make usage of GitHub features
+- [Configure your GitHub account professionally](#configure-your-github-account-professionally)
+- [Create your own GitHub profile README](#create-your-own-github-profile-readme)
+- [Add yourself to the list of students in the GitHub organization](#add-yourself-to-the-list-of-students-in-the-github-organization)
 
 ![bg right vertical](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
 ![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
 ![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
 
-### Create a GitHub profile
+### Configure your GitHub account professionally
 
 <!-- _class: lead -->
 
@@ -495,7 +497,7 @@ It is required to use the SSH key authentication method to authenticate to GitHu
 6. Type `ssh-add ~/.ssh/id_ed25519`
 7. Type `cat ~/.ssh/id_ed25519.pub`
 
-:warning: **Never** share your private key with anyone! It must be kept secret and confidential, just like a password.
+:warning: **Never share your private key with anyone!** It must be kept secret and confidential, just like a password.
 
 #### Create your GitHub account
 
@@ -513,6 +515,11 @@ In this section, you will set up your GitHub account.
 2. Add the public SSH key
 3. Add a profile picture (optional)
 4. Enable two-factor authentication (optional, but highly recommended)
+
+
+### Create your own GitHub profile README
+
+<!-- _class: lead -->
 
 #### Create a new repository
 
@@ -545,8 +552,7 @@ GitHub Discussions - show and tell
 #### Summary
 
 
-
-### Add yourself to the class list
+### Add yourself to the list of students in the GitHub organization
 
 <!-- _class: lead -->
 
@@ -580,9 +586,9 @@ GitHub Discussions - show and tell
 
 This is an optional section. You can do it if you have time left. I encourage you to do it nonetheless to learn more about Git and GitHub!
 
-Go in the GitHub Discussions, check the others profiles and give them a star!
-
-Follow your classmates!
+- Go in the GitHub Discussions, check the others profiles and give them a star!
+- Follow your classmates!
+- Follow other GitHub users! Can you think of an open source project you like? Follow these projects and/or maintainers!
 
 ## Conclusion
 
@@ -626,3 +632,4 @@ You can use reactions to express your opinion on a comment.
 
 ## Sources
 
+- Illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)

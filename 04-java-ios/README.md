@@ -64,3 +64,6 @@ _paginate: false
 ![bg opacity:0.1](https://picsum.photos/720?image=3)
 
 ## Agenda
+
+
+## _Why is this important for network programming?_

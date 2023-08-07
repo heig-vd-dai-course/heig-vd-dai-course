@@ -8,7 +8,7 @@ In this practical work, you will create a CLI to process files. The CLI will tak
 
 You will create two versions of the CLI. The first version will not use buffers. The second version will use buffers. You will compare the two versions.
 
-You will define what the CLI will do. You can choose to copy the input file to the output file, to convert the input file to uppercase, to convert the input file to lowercase, to convert the input file to a specific encoding, etc.
+You will define what the CLI will do. You can choose to copy the input file to the output file, to convert the input file to uppercase, to convert the input file to lowercase, to convert the input file to a specific encoding, etc. If you do not have any idea, come to see us and we can give you some ideas.
 
 Multiple groups can choose the same processing and you can share your methodology but please do not copy/paste code from other groups.
 
@@ -21,7 +21,7 @@ Multiple groups can choose the same processing and you can share your methodolog
 
 You will work in groups of two students. You can choose your partner. If you do not have a partner, we will assign you one.
 
-## Evaluation grid
+## Grading criteria
 
 - 0 point - The work is not done
 - 0.1 point - The work is insufficient
@@ -80,7 +80,7 @@ Everything is presented in the following sessions:
 
 Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
 
-[GitHub Discussions - Git, GitHub and Markdown - Feedback](https://github.com/orgs/heig-vd-dai-course/discussions/1)
+[GitHub Discussions - Practical work 1 - Feedback](https://github.com/orgs/heig-vd-dai-course/discussions/1)
 
 We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
 
