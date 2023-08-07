@@ -37,22 +37,23 @@ The `(+ 2)` periods are reserved for the practical work reviews.
 8. Docker and Docker Compose (2 periods) - [README](./08-docker-and-docker-compose/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-docker-and-docker-compose/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-docker-and-docker-compose/08-docker-and-docker-compose.pdf) | [Video (in French)]()
 9. SMTP and telnet (1 period) - [README](./09-smtp-and-telnet/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-smtp-and-telnet/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-smtp-and-telnet/09-smtp-and-telnet.pdf) | [Video (in French)]()
 10. HTTP and cURL (1 period) - [README](./10-http-and-curl/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/10-http-and-curl.pdf) | [Video (in French)]()
-11. Practical work 2 - First network application (2 + 2 + 2 (+ 2) periods) - [README](./11-practical-work-2-first-network-application/README.md)
-12. Evaluation 2 (2 periods) - [README](./12-evaluation-2/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-2/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-2/12-evaluation-2.pdf) | [Video (in French)]()
+11. SSH and SCP (1 period) - [README](./10-ssh-and-scp/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-ssh-and-scp/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-ssh-and-scp/11-ssh-and-scp.pdf) | [Video (in French)]()
+12. Practical work 2 - First network application (1 + 2 + 2 (+ 2) periods) - [README](./12-practical-work-2-first-network-application/README.md)
+13. Evaluation 2 (2 periods) - [README](./13-evaluation-2/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-evaluation-2/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-evaluation-2/13-evaluation-2.pdf) | [Video (in French)]()
 
 ### Chapter 3 - Second network application (16 periods)
 
-13. Java UDP programming (2 + 2 periods) - [README](./13-java-udp-programming/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-udp-programming/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-udp-programming/13-java-udp-programming.pdf) | [Video (in French)]()
-14. Practical work 3 - Second network application (2 + 2 + 2 + 2 + 2 (+ 2) periods) - [README](./14-practical-work-3-second-network-application/README.md)
+14. Java UDP programming (2 + 2 periods) - [README](./14-java-udp-programming/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-udp-programming/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-udp-programming/14-java-udp-programming.pdf) | [Video (in French)]()
+15. Practical work 3 - Second network application (2 + 2 + 2 + 2 + 2 (+ 2) periods) - [README](./15-practical-work-3-second-network-application/README.md)
 
 ### Chapter 4 - Web infrastructures (12 periods)
 
-15. Web infrastructures (2 periods) - [README](./15-web-infrastructures/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/15-web-infrastructures.pdf) | [Video (in French)]()
-16. Practical work 4 - Web Infrastructures (2 + 2 + 2 + 2 (+ 2) periods) - [README](./16-practical-work-4-web-infrastructures/README.md)
+16. Web infrastructures (2 periods) - [README](./16-web-infrastructures/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-web-infrastructures/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-web-infrastructures/15-web-infrastructures.pdf) | [Video (in French)]()
+17. Practical work 4 - Web Infrastructures (2 + 2 + 2 + 2 (+ 2) periods) - [README](./17-practical-work-4-web-infrastructures/README.md)
 
 ### Conclusion (2 periods)
 
-17. Semester review and exam preparation (2 periods) - [README](./17-semester-review-and-exam-preparation/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-semester-review-and-exam-preparation/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-semester-review-and-exam-preparation/17-semester-review-and-exam-preparation.pdf) | [Video (in French)]()
+18. Semester review and exam preparation (2 periods) - [README](./18-semester-review-and-exam-preparation/README.md) | [Slides (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-semester-review-and-exam-preparation/) | [Slides (pdf)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-semester-review-and-exam-preparation/18-semester-review-and-exam-preparation.pdf) | [Video (in French)]()
 
 ## GitHub Discussions
 

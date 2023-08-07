@@ -154,7 +154,7 @@ You will learn the following topics during this course:
 
 - Inputs/outputs and encoding
 - Network programming (TCP and UDP)
-- Application-level protocols (HTTP and SMTP)
+- Application-level protocols (SMTP, HTTP and SSH)
 - Web infrastructures (reverse proxy, load balancer, sticky sessions)
 - How to read and write technical documentation
 - An introduction to unit testing and dependencies management
@@ -170,11 +170,11 @@ You will learn the following technologies during this course:
 - Network utilities (`curl`, `dig`, `nslookup`, etc.)
 - The terminal :heart:
 
-## My wishes for this course
+## Our wishes for this course
 
 <!-- _class: lead -->
 
-### What I want this course to be
+### What we want this course to be
 
 - A place to learn
 - A place to experiment
@@ -183,15 +183,15 @@ You will learn the following technologies during this course:
 - A place where you help each other
 - A place where you do not loose your time (efficient and useful)
 
-### What I don't want this course to be
+### What we don't want this course to be
 
 - A place you don't want to come
 - A place you don't feel comfortable/safe
 - A place where you can't ask questions
 - A place where you can't take anything away
-- If you have a problem with the course, I will do my best to fix it.
+- If you have a problem with the course, we will do my best to fix it.
 
-I will not take presences during this course. If you are done, you are free to go but I would appreciate if you try to help your classmates instead!
+We will not take presences during this course. If you are done, you are free to go but we would appreciate if you try to help your classmates instead!
 
 ## Where to find the course material
 
@@ -199,9 +199,9 @@ I will not take presences during this course. If you are done, you are free to g
 
 More specifically, the course material is available in the [`heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course) Git repository.
 
-I will not use Microsoft Teams nor CyberLearn. I want to keep it simple and efficient for you, and for us. One place to find it all.
+We will not use Microsoft Teams nor CyberLearn. We want to keep it simple and efficient for you, and for us. One place to find it all.
 
-_PS: I accept issues and pull requests if you spot anything weird! :slightly_smiling_face:_
+_PS: We accept issues and pull requests if you spot anything weird! :slightly_smiling_face:_
 
 ## Communication channels
 
@@ -250,11 +250,11 @@ You can change groups between practical works. You will have access to the gradi
 
 You can be asked to answer questions regarding the theoretical content as well as the practical content of the slides/READMEs/videos during the practical work review or the evaluations. Both aspects are complementary and important.
 
-I will try my best to give you your grades and feedback as quickly as possible so you can improve for the next work.
+We will try my best to give you your grades and feedback as quickly as possible so you can improve for the next work.
 
-I can be flexible on the deadlines if you have a good reason. Please let us know as soon as possible if you have any difficulties.
+We can be flexible on the deadlines if you have a good reason. Please let us know as soon as possible if you have any difficulties.
 
-If you have trouble with your group, please let us know as soon as possible. I will do my best to help you.
+If you have trouble with your group, please let us know as soon as possible. we will do my best to help you.
 
 ## Responsibilities and expectations
 
@@ -287,7 +287,7 @@ You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot, 
 
 The HEIG-VD recommends Windows for your studies. This is mostly because other departments heavily rely on Windows-only products. From my experience, developing on Windows can be more difficult than Linux or macOS.
 
-Linux and macOS are much more supported in the software development world. If you can, I recommend you to try a Linux distribution (Ubuntu or Debian) for this course, either baremetal or in Windows Subsystem for Linux (WSL). It will be useful in your future to have a bit of experience with it as well.
+Linux and macOS are much more supported in the software development world. If you can, we recommend you to try a Linux distribution (Ubuntu or Debian) for this course, either baremetal or in Windows Subsystem for Linux (WSL). It will be useful in your future to have a bit of experience with it as well.
 
 ## _"I'm a embedded/network/security/data science engineer, why do I have this course?"_
 
