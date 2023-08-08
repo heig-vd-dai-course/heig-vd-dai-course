@@ -47,6 +47,7 @@ headingDivider: 4
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization.pdf
 [video]: #
+[feedback]: #
 
 # Introduction and course organization
 
@@ -57,11 +58,11 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&w=720&q=80)
+![bg opacity:0.1](https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&h=720&q=80)
 
 ## Agenda
 
@@ -320,6 +321,16 @@ Do you have any questions?
 ## Resources
 
 - [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/) - Use version 2 of WSL.
+
+## Feedback
+
+Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
+
+[GitHub Discussions - Introduction and course organization - Feedback][feedback]
+
+We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
+
+You can use reactions to express your opinion on a comment.
 
 ## Sources
 

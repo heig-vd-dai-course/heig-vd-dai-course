@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
 title: HEIG-VD DAI Course - Evaluation 1
 description: Evaluation 1 for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-evaluation-1/
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-1/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -43,10 +43,11 @@ style: |
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-evaluation-1/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-evaluation-1/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-evaluation-1/06-evaluation-1.pdf
+[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-evaluation-1/README.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-1/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-1/12-evaluation-1.pdf
 [video]: #
+[feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Evaluation 1
 
@@ -57,10 +58,58 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
 
-![bg opacity:0.1](https://picsum.photos/720?image=3)
+![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
 
 ## Agenda
+
+**What to expect**
+
+- [Content of the evaluation](#content-of-the-evaluation)
+
+**How to revise**
+
+- [Previous exams](#previous-exams)
+
+**Questions**
+
+## What to expect
+
+<!-- _class: lead -->
+
+### Content of the evaluation
+
+## How to revise
+
+<!-- _class: lead -->
+
+### Previous evaluations
+
+All previous evaluations are available in the [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-evaluation-1/archives) folder of the course repository.
+
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
+## Resources
+
+- TODO
+
+## Feedback
+
+Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
+
+[GitHub Discussions - Evaluation 1 - Feedback][feedback]
+
+We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
+
+You can use reactions to express your opinion on a comment.
+
+## Sources
+
+- Illustration by []() on [Unsplash]()

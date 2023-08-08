@@ -47,6 +47,7 @@ headingDivider: 4
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-java-tcp-programming/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-java-tcp-programming/07-java-tcp-programming.pdf
 [video]: #
+[feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Java TCP programming
 
@@ -57,10 +58,62 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
 
-![bg opacity:0.1](https://picsum.photos/720?image=3)
+![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
 
 ## Agenda
+
+- **Theoretical content**
+    - TODO
+- **Practical content**
+    - TODO
+
+## Theoretical content
+
+<!-- _class: lead -->
+
+## Practical content
+
+<!-- _class: lead -->
+
+## Conclusion
+
+<!-- _class: lead -->
+
+### What did you do?
+
+TODO
+
+### What did you learn? (questions)
+
+At this point, you should be able to answer the following questions:
+
+TODO
+
+### What did you learn? (answers)
+
+> Q: TODO    
+> A: TODO
+
+## What will you do next?
+
+In the next session, you will learn the following topics:
+
+- TODO
+
+## Feedback
+
+Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
+
+[GitHub Discussions - Java TCP programming - Feedback][feedback]
+
+We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
+
+You can use reactions to express your opinion on a comment.
+
+## Sources
+
+- Illustration by []() on [Unsplash]()

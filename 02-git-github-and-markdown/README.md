@@ -47,6 +47,7 @@ headingDivider: 4
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/02-git-github-and-markdown.pdf
 [video]: #
+[feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Git, GitHub and Markdown
 
@@ -57,11 +58,11 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video]
+[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&w=720&q=80)
+![bg opacity:0.1](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720&q=80)
 
 ## Agenda
 
@@ -596,6 +597,7 @@ This is an optional section. You can do it if you have time left. I encourage yo
 
 ### What did you do?
 
+TODO
 
 ### What did you learn? (questions)
 
@@ -624,7 +626,7 @@ In the next session, you will learn the following topics:
 
 Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
 
-[GitHub Discussions - Git, GitHub and Markdown - Feedback](https://github.com/orgs/heig-vd-dai-course/discussions/1)
+[GitHub Discussions - Git, GitHub and Markdown - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
 

@@ -1,5 +1,7 @@
 # Practical work 1 - A CLI to process files
 
+[feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+
 <https://github.com/heig-vd-dai-course>
 
 L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
@@ -90,7 +92,7 @@ Everything is presented in the following sessions:
 
 Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
 
-[GitHub Discussions - Practical work 1 - Feedback](https://github.com/orgs/heig-vd-dai-course/discussions/1)
+[GitHub Discussions - Practical work 1 - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
 
