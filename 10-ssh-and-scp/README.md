@@ -67,7 +67,9 @@ _paginate: false
 ## Agenda
 
 - **Theoretical content**
-    - TODO
+    - A quick reminder about security: public key cryptography
+    - SSH
+    - SCP
 - **Practical content**
     - TODO
 

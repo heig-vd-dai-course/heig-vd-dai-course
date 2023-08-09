@@ -32,9 +32,13 @@ jobs:
           rm LICENSE.md
           rm README.md
           rm 05-practical-work-1-a-cli-to-process-files/README.md
-          rm 12-practical-work-2-first-network-application/README.md
-          rm 15-practical-work-3-second-network-application/README.md
+          rm --recursive 06-evaluation-1/archives
+          rm 11-practical-work-2-first-network-application/README.md
+          rm --recursive 12-evaluation-1/archives
+          rm 14-practical-work-3-second-network-application/README.md
           rm 17-practical-work-4-web-infrastructures/README.md
+          rm --recursive 18-semester-review-and-exam-preparation/archives
+          rm --recursive 99-material-for-the-teaching-staff
 
       - name: Build Marp slides (web)
         uses: docker://marpteam/marp-cli:v3.0.2

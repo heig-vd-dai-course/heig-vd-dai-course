@@ -76,6 +76,8 @@ _paginate: false
 
 **Questions**
 
+- [Do you have any questions?](#questions)
+
 ## What to expect
 
 <!-- _class: lead -->

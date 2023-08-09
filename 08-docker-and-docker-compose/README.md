@@ -67,9 +67,20 @@ _paginate: false
 ## Agenda
 
 - **Theoretical content**
-    - TODO
+    - Traditional installation of software vs. containerization
+    - OCI, images, containers and registries
+    - Dockerfile specification (with examples)
+    - Docker Compose specification (with examples)
+    - Tips and tricks
+
+---
+
 - **Practical content**
-    - TODO
+    - Install Docker (and Docker Compose)
+    - Run a container with Docker
+    - Run a container with Docker Compose
+    - Write a Dockerfile, build and run an image with Docker
+    - Build and run the same image with Docker Compose
 
 ## Theoretical content
 

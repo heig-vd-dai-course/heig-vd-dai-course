@@ -47,10 +47,10 @@ Maximum grade: 30 points * 0.2 = 6
 | 12    | Git, GitHub and Markdown  | The README explains the differences between the not Buffer version and the buffer version with links to their respective tag | 0.2 |
 | 13    | Git, GitHub and Markdown  | The README explains the benchmark methodology between the two versions | 0.2 |
 | 14    | Git, GitHub and Markdown  | The README displays the benchmarks | 0.2 |
-| 15    | Java, Maven and Junit     | The code is well structured | 0.2 |
-| 16    | Java, Maven and Junit     | The code is well documented | 0.2 |
-| 17    | Java, Maven and Junit     | The code is well tested (at least one meaningful test must be present) | 0.2 |
-| 18    | Java, Maven and Junit     | The CLI displays a help message on how to use the CLI | 0.2 |
+| 15    | Java, IntelliJ and Maven     | The code is well structured | 0.2 |
+| 16    | Java, IntelliJ and Maven     | The code is well documented | 0.2 |
+| 17    | Java, IntelliJ and Maven     | The code is built with Maven | 0.2 |
+| 18    | Java, IntelliJ and Maven     | The CLI displays a help message on how to use the CLI | 0.2 |
 | 19    | Java IOs                  | The CLI takes an input file and an output file as arguments | 0.2 |
 | 20    | Java IOs                  | The CLI takes the input file encoding and the output file encoding as arguments | 0.2 |
 | 21    | Java IOs                  | The CLI displays an error on invalid/missing inputs | 0.2 |
@@ -68,7 +68,6 @@ Maximum grade: 30 points * 0.2 = 6
 
 - The CLI must be written in Java
 - The CLI must be built using Maven
-- The CLI must be tested using JUnit
 
 ## Submission
 
@@ -85,7 +84,7 @@ You must create a new GitHub Discussion at <https://github.com/orgs/heig-vd-dai-
 Everything is presented in the following sessions:
 
 - [Git, GitHub and Markdown](../02-git-github-and-markdown/README.md)
-- [Java, Maven and JUnit](../03-java-maven-and-junit/README.md)
+- [Java, IntelliJ and Maven](../03-java-intellij-and-maven/README.md)
 - [Java IOs](../04-java-ios/README.md)
 
 ## Feedback

@@ -51,6 +51,11 @@ headingDivider: 4
 
 # Java IOs
 
+<!--
+_class: lead
+_paginate: false
+-->
+
 <https://github.com/heig-vd-dai-course>
 
 [README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
@@ -62,9 +67,13 @@ headingDivider: 4
 ## Agenda
 
 - **Theoretical content**
-    - TODO
+    - Streams of data
+    - Binary vs. text streams
+    - Encoding and character sets
+    - Performance and buffering
+    - Dealing with errors
 - **Practical content**
-    - TODO
+    - Reading and writing files
 
 ## _Why is this important for network programming?_
 

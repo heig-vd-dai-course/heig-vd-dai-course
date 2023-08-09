@@ -67,9 +67,13 @@ _paginate: false
 ## Agenda
 
 - **Theoretical content**
-    - TODO
+    - A quick reminder about networking: TCP
+    - What is an application protocol?
+    - The Socket API in Java
+    - Handling multiple clients with concurrency
 - **Practical content**
-    - TODO
+    - Single-threaded TCP server
+    - Multi-threaded TCP server
 
 ## Theoretical content
 

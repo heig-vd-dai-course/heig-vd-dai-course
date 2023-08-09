@@ -121,18 +121,25 @@ TODO
 
 <!-- _class: lead -->
 
-### What does GAPS say - [Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
+### What does GAPS say
+
+[Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
+
+[Descriptif de module](https://gaps.heig-vd.ch/consultation/fiches/mv/mv.php?id=1905)
+
+3 ECTS credits = 90 hours of work
+
+---
 
 > **Connaissances préalables recommandées**
 >
 > L'étudiant-e doit connaître et savoir utiliser les notions suivantes :
 > 
 > - Programmation (Java, C) ;
-> - Programmation orientée objet ; (?)
+> - Programmation orientée objet ;
 > - TCP/IP.
 >
-> Les unités d'enseignement PRG2, RXI et POO (?) permettent d'acquerir ces connaissances.
-
+> Les unités d'enseignement PRG2, RXI et POO permettent d'acquerir ces connaissances.
 
 ---
 
@@ -171,10 +178,10 @@ You will learn the following topics during this course:
 
 - Inputs/outputs and encoding
 - Network programming (TCP and UDP)
-- Application-level protocols (SMTP, HTTP and SSH)
+- Application-level protocols (SMTP, SSH and HTTP)
 - Web infrastructures (reverse proxy, load balancer, sticky sessions)
 - How to read and write technical documentation
-- An introduction to unit testing and dependencies management
+- An introduction to dependencies management
 
 ### Technologies
 
@@ -208,7 +215,7 @@ You will learn the following technologies during this course:
 - A place where you can't take anything away
 - If you have a problem with the course, we will do our best to fix it.
 
-We will not take presences during this course. If you are done, you are free to go but we would appreciate if you try to help your classmates instead!
+We will take presences during this course but if you are done, you are free to go. However, we would appreciate if you try to help your classmates instead!
 
 ## Where to find the course material
 

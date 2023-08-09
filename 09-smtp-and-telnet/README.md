@@ -67,9 +67,18 @@ _paginate: false
 ## Agenda
 
 - **Theoretical content**
-    - TODO
+    - A quick reminder about networking: IP and DNS
+    - Electronic messaging protocols: SMTP, POP3 and IMAP
+    - DNS records related to email
+    - dig and nslookup
+    - The SMTP protocol
+    - Telnet
+
+---
+
 - **Practical content**
-    - TODO
+    - Send an email to an SMTP server in a Docker container with Telnet
+    - Send an email to an SMTP server in a Docker container with Java
 
 ## Theoretical content
 
