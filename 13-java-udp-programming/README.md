@@ -43,7 +43,7 @@ style: |
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming/README.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-udp-programming/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-udp-programming/13-java-udp-programming.pdf
 [video]: #
@@ -58,7 +58,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] | [PDF][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -66,20 +66,16 @@ _paginate: false
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
 
-## Agenda
+## Table of contents
 
-- **Theoretical content**
+- **[Theoretical content](#theoretical-content)**
     - Differences between TCP and UDP
     - UDP datagrams
     - Unicast, multicast and broadcast
     - Messaging patterns
     - Service discovery protocols
     - UDP in Java
-
----
-
-- **Practical content**
-    - TODO
+- **[Practical content](#practical-content)**
 
 ## Theoretical content
 
@@ -88,6 +84,8 @@ _paginate: false
 ## Practical content
 
 <!-- _class: lead -->
+
+You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 

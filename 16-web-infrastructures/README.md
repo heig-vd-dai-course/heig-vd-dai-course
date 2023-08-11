@@ -43,7 +43,7 @@ style: |
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-web-infrastructures/README.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-web-infrastructures/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/15-web-infrastructures.pdf
 [video]: #
@@ -58,7 +58,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] | [PDF][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -66,9 +66,9 @@ _paginate: false
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
 
-## Agenda
+## Table of contents
 
-- **Theoretical content**
+- **[Theoretical content](#theoretical-content)**
     - System scalability
         - Definition
         - Why and when?
@@ -88,8 +88,7 @@ _paginate: false
         - Hashing
     - Content delivery
     - HTTP and scaling
-
-- **Practical content**
+- **[Practical content](#practical-content)**
     - TODO
 
 ## Theoretical content
@@ -99,6 +98,8 @@ _paginate: false
 ## Practical content
 
 <!-- _class: lead -->
+
+You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-web-infrastructures/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 

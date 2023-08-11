@@ -43,7 +43,7 @@ style: |
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-semester-review-and-exam-preparation/README.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-semester-review-and-exam-preparation/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-semester-review-and-exam-preparation/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-semester-review-and-exam-preparation/17-semester-review-and-exam-preparation.pdf
 [video]: #
@@ -58,7 +58,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] | [PDF][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 

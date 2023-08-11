@@ -43,7 +43,7 @@ style: |
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/README.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization.pdf
 [video]: #
@@ -58,7 +58,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] | [PDF][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -237,17 +237,16 @@ Feel free to use any of these communication channels for any kind of questions r
 - In person
 - Email
     - [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
-    - [juergen.ehrensberger@heig-vd.ch](mailto:juergen.ehrensberger@heig-vd.ch)
     - [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
 
 ## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
 
-64 periods are planned for this course, divided in 4 main chapters:
+64 periods are planned for this course, divided in 4 main parts:
 
-- Chapter 1 - A CLI to process files (15 periods)
-- Chapter 2 - First network application (18 periods)
-- Chapter 3 - Second network application (16 periods)
-- Chapter 4 - Web infrastructures (12 periods)
+- Part 1 - A CLI to process files (15 periods)
+- Part 2 - First network application (18 periods)
+- Part 3 - Second network application (16 periods)
+- Part 4 - Web infrastructures (12 periods)
 
 The entire course planning for the semester is available at <https://github.com/orgs/heig-vd-dai-course/projects>.
 

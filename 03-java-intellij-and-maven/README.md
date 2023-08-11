@@ -43,7 +43,7 @@ style: |
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-java-intellij-and-maven/README.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-java-intellij-and-maven/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-java-intellij-and-maven/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-java-intellij-and-maven/03-java-intellij-and-maven.pdf
 [video]: #
@@ -58,19 +58,19 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] | [PDF][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
 
-## Agenda
+## Table of contents
 
-- **Theoretical content**
+- **[Theoretical content](#theoretical-content)**
     - [Java](#java)
     - [IntelliJ](#intellij)
     - [Maven](#maven)
-- **Practical content**
+- **[Practical content](#practical-content)**
     - [Install Java](#install-java)
     - [Create a Java project with IntelliJ and build it with Maven](#build-a-java-project-with-maven)
     - [Ignore IntelliJ files with Git](#ignore-intellij-files-with-git)
@@ -82,6 +82,8 @@ _paginate: false
 ## Practical content
 
 <!-- _class: lead -->
+
+You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-java-intellij-and-maven/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 

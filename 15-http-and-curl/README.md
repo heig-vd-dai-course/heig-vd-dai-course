@@ -43,7 +43,7 @@ style: |
 headingDivider: 4
 -->
 
-[readme]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-http-and-curl/README.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-http-and-curl/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/
 [pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/10-http-and-curl.pdf
 [video]: #
@@ -58,7 +58,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] | [PDF][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -86,14 +86,17 @@ _paginate: false
         - cURL
     - HTTP in Java
 
-## Agenda
+## Table of contents
 
-- **Theoretical content**
+- **[Theoretical content](#theoretical-content)**
     - The history of HTTP (and HTML)
     - The HTTP protocol
     - Interact with HTTP
     - HTTP in Java
-- **Practical content**
+- **[Practical content](#practical-content)**
+
+---
+
     - Use cURL to interact with HTTP
     - Use Java to interact with HTTP
 
@@ -104,6 +107,8 @@ _paginate: false
 ## Practical content
 
 <!-- _class: lead -->
+
+You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-http-and-curl/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 
