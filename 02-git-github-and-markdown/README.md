@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+author: L. Delafontaine and H. Louis, with the help of Copilot
 title: HEIG-VD DAI Course - Git, GitHub and Markdown
 description: Git, GitHub and Markdown for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/
@@ -60,7 +60,9 @@ _paginate: false
 
 [README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
-<small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
+<small>L. Delafontaine and H. Louis, with the help of Copilot</small>
+
+<small>Based on the original course by O. Liechti and J. Ehrensberger</small>
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720&q=80)
 
@@ -456,6 +458,10 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 <!-- _class: lead -->
 
+If viewing the web of PDF version of the slides, you can find the practical content for this session on GitHub [here](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-git-github-and-markdown/README.md#practical-content).
+
+<!--
+
 ### What you will achieve
 
 - [Configure your GitHub account professionally](#configure-your-github-account-professionally)
@@ -467,8 +473,6 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 ![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
 
 ### Configure your GitHub account professionally
-
-<!-- _class: lead -->
 
 #### Install Git
 
@@ -487,8 +491,6 @@ In this section, you will create a SSH key to authenticate to GitHub. If you alr
 An SSH key is a pair of keys: a public key and a private key. The public key is used to authenticate to a server, and the private key is used to sign the authentication request.
 
 It is required to use the SSH key authentication method to authenticate to GitHub. It is more secure than using a password.
-
----
 
 1. Open a terminal
 2. Type `ssh-keygen -t ed25519 -C ""`
@@ -519,8 +521,6 @@ In this section, you will set up your GitHub account.
 
 
 ### Create your own GitHub profile README
-
-<!-- _class: lead -->
 
 #### Create a new repository
 
@@ -555,8 +555,6 @@ GitHub Discussions - show and tell
 
 ### Add yourself to the list of students in the GitHub organization
 
-<!-- _class: lead -->
-
 #### Fork the repository
 
 #### Clone the repository locally
@@ -590,6 +588,8 @@ This is an optional section. You can do it if you have time left. I encourage yo
 - Go in the GitHub Discussions, check the others profiles and give them a star!
 - Follow your classmates!
 - Follow other GitHub users! Can you think of an open source project you like? Follow these projects and/or maintainers!
+
+-->
 
 ## Conclusion
 

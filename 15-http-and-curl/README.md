@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+author: L. Delafontaine and H. Louis, with the help of Copilot
 title: HEIG-VD DAI Course - HTTP and cURL
 description: HTTP and cURL for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/
@@ -60,16 +60,42 @@ _paginate: false
 
 [README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
-<small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
+<small>L. Delafontaine and H. Louis, with the help of Copilot</small>
+
+<small>Based on the original course by O. Liechti and J. Ehrensberger</small>
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
+
+
+    - The history of HTTP (and HTML)
+        - HTTP versions
+    - The HTTP protocol
+        - HTTP methods
+        - HTTP status codes
+        - HTTP headers
+            - Content negotiation
+        - HTTP Body, Query parameters, URL encoding
+        - HTTP caching
+        - HTTP sessions (stateful vs. stateless)
+        - HTTP cookies
+        - 
+    - Interact with HTTP
+        - The browser
+        - Postman
+        - Insomnia
+        - cURL
+    - HTTP in Java
 
 ## Agenda
 
 - **Theoretical content**
-    - TODO
+    - The history of HTTP (and HTML)
+    - The HTTP protocol
+    - Interact with HTTP
+    - HTTP in Java
 - **Practical content**
-    - TODO
+    - Use cURL to interact with HTTP
+    - Use Java to interact with HTTP
 
 ## Theoretical content
 

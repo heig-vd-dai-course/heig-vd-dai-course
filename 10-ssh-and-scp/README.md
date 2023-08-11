@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+author: L. Delafontaine and H. Louis, with the help of Copilot
 title: HEIG-VD DAI Course - SSH and SCP
 description: SSH and SCP for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-ssh-and-scp/
@@ -60,18 +60,20 @@ _paginate: false
 
 [README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
-<small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
+<small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
 
 ## Agenda
 
 - **Theoretical content**
-    - A quick reminder about security: public key cryptography
+    - A quick reminder about security cryptography
     - SSH
     - SCP
 - **Practical content**
-    - TODO
+    - Access a remote server with SSH
+    - Access a remote server with SSH without a password
+    - Copy files to a remote server with SCP
 
 ## Theoretical content
 

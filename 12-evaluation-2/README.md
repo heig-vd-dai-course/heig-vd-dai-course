@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+author: L. Delafontaine and H. Louis, with the help of Copilot
 title: HEIG-VD DAI Course - Evaluation 2
 description: Evaluation 2 for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-2/
@@ -60,7 +60,7 @@ _paginate: false
 
 [README][readme] | [Slides (web)][web] | [Slides (pdf)][pdf] | [Video (in French)][video] | [Feedback][feedback]
 
-<small>L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot</small>
+<small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
 

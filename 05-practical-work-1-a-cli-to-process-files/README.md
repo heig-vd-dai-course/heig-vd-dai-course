@@ -4,7 +4,7 @@
 
 <https://github.com/heig-vd-dai-course>
 
-L. Delafontaine, J. Ehrensberger and H. Louis with the help of Copilot
+L. Delafontaine and H. Louis, with the help of Copilot
 
 In this practical work, you will create a CLI to process files. The CLI will take an input file and an output file as arguments. It will also take the input file encoding and the output file encoding as arguments. The CLI will process the input file and write the result in the output file. It will display a message on success and a message on failure. It will also display the execution time.
 
