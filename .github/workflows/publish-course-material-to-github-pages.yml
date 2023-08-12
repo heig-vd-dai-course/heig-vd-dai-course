@@ -17,78 +17,42 @@ permissions:
   id-token: write
 
 jobs:
-  build-theoretical-content-with-marp:
+  build-course-material:
     runs-on: ubuntu-latest
-    container:
-      image: docker://marpteam/marp-cli:v3.0.2
-      options: --entrypoint=sh
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Convert theoretical content Markdown files
-        run: |
-          # HTML
-          find . -type f -name "README.md" -mindepth 2 -maxdepth 2 -exec sh -c 'node /home/marp/.cli/marp-cli.js --html --allow-local-files --output "${1%.md}.html" "$1"' sh {} \;
-          
-          # PDF
-          find . -type f -name "README.md" -mindepth 2 -maxdepth 2 -exec sh -c 'node /home/marp/.cli/marp-cli.js --html --allow-local-files --jpeg-quality 100 --pdf --output "${1%.md}.pdf" "$1"' sh {} \;
-
-      - name: Prepare files
-        run: |
-          # Rename all HTML files to index.html
-          find . -type f -name "*.html" -exec sh -c 'mv "$1" index.html"' sh {} \;
-
-          # Rename all PDF files to the name of their parent directory
-          find . -type f -name "*.pdf" -exec sh -c 'mv "$1" "$(dirname "$1")/$(basename "$(dirname "$1")").pdf"' sh {} \;
-
-      - uses: actions/upload-artifact@v3
+      - name: Build theoretical content with Marp
+        uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          name: theoretical-content
-          path: |
-            /**/*.html
-            /**/*.pdf
+          entrypoint: sh
+          args: build-theoretical-content.sh
 
-  build-practical-content-with-pandoc:
-    runs-on: ubuntu-latest
-    container:
-      image: docker://pandoc/latex:2.9
-      options: --entrypoint=sh
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Convert practical content Markdown files
-        run: |
-          # PDF
-          find . -type f -name "PRACTICAL_CONTENT.md" -mindepth 2 -maxdepth 2 -exec sh -c 'pandoc pandoc.yaml --variable geometry:margin=2cm --variable fontsize:12pt --variable papersize:a4 --variable lang:en --output "${1%.md}.pdf" "$1"' sh {} \;
-
-      - name: Prepare files
-        run: |
-          # Rename all PDF files to the name of their parent directory with a '-practical-content' suffix
-          find . -type f -name "*.pdf" -exec sh -c 'mv "$1" "$(dirname "$1")/$(basename "$(dirname "$1")")-practical-content.pdf"' sh {} \;
-
-      - uses: actions/upload-artifact@v3
+      - name: Build practical content with Pandoc
+        uses: docker://pandoc/latex:2.9
         with:
-          name: practical-content
+          entrypoint: sh
+          args: build-practical-content.sh
+
+      - name: Upload files
+        uses: actions/upload-artifact@v3
+        with:
+          name: course-material
           path: |
-            /**/*.pdf
+            **/*.html
+            **/*.pdf
+          if-no-files-found: error
+          retention-days: 1
 
   prepare-files-for-github-pages:
     runs-on: ubuntu-latest
-    needs:
-      - build-theoretical-content-with-marp
-      - build-practical-content-with-pandoc
+    needs: build-course-material
     steps:
-      - name: Download theoretical content
+      - name: Download course-material
         uses: actions/download-artifact@v3
         with:
-          name: theoretical-content
-
-      - name: Download practical content
-        uses: actions/download-artifact@v3
-        with:
-          name: practical-content
+          name: course-material
 
       - name: Install packages
         run: sudo apt install --yes tree
@@ -102,7 +66,7 @@ jobs:
         with:
           path: .
 
-  deploy:
+  publish-files-to-github-pages:
     needs: prepare-files-for-github-pages
     runs-on: ubuntu-latest
     environment:
