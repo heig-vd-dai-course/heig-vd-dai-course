@@ -95,7 +95,7 @@ The `(+ 2)` periods are reserved for the practical work reviews.
     - [Feedback][feedback-10]
 11. **Practical work 2 - First network application**
     - Time in class: 2 + 2 + 2 (+ 2) periods
-    - Material: [Markdown](./11-practical-work-2-first-network-application/README.md)
+    - Material: [Markdown](./11-practical-work-2-first-network-application/README.md) | [PDF]()
     - [Feedback][feedback-11]
 12. **Evaluation 2**
     - Time in class: 2 periods
@@ -111,7 +111,7 @@ The `(+ 2)` periods are reserved for the practical work reviews.
     - [Feedback][feedback-13]
 14. **Practical work 3 - Second network application**
     - Time in class: 2 + 2 + 2 + 2 + 2 (+ 2) periods
-    - Material: [Markdown](./14-practical-work-3-second-network-application/README.md)
+    - Material: [Markdown](./14-practical-work-3-second-network-application/README.md) | [PDF]()
     - [Feedback][feedback-14]
 
 ### Part 4 - Web infrastructures (12 periods)
@@ -128,7 +128,7 @@ The `(+ 2)` periods are reserved for the practical work reviews.
     - [Feedback][feedback-16]
 17. **Practical work 4 - Web Infrastructures**
     - Time in class: 2 + 2 + 2 (+ 2) periods
-    - Theoretical content: [Markdown](./17-practical-work-4-web-infrastructures/README.md)
+    - Theoretical content: [Markdown](./17-practical-work-4-web-infrastructures/README.md) | [PDF]()
     - [Feedback][feedback-17]
 
 ### Conclusion (2 periods)

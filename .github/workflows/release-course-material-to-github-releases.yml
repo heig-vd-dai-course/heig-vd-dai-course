@@ -1,4 +1,4 @@
-name: Release Marp slides (pdf) to GitHub Releases
+name: Release course material to GitHub Releases
 
 on:
   push:
