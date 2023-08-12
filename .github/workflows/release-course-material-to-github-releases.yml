@@ -10,45 +10,28 @@ permissions:
   contents: write
 
 jobs:
-  build-and-release:
+  build-and-release-course-material:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install packages
-        run: sudo apt install --yes rename
-
-      - name: Delete the Markdown files that should not be published
-        run: |
-          rm CONTRIBUTING.md
-          rm LICENSE.md
-          rm README.md
-          rm 05-practical-work-1-a-cli-to-process-files/README.md
-          rm --recursive 06-evaluation-1/archives
-          rm 11-practical-work-2-first-network-application/README.md
-          rm --recursive 12-evaluation-2/archives
-          rm 14-practical-work-3-second-network-application/README.md
-          rm 17-practical-work-4-web-infrastructures/README.md
-          rm --recursive 18-semester-review-and-exam-preparation/archives
-          rm --recursive 99-material-for-the-teaching-staff
-
-      - name: Build Marp slides (pdf)
+      - name: Build theoretical content with Marp
         uses: docker://marpteam/marp-cli:v3.0.2
-        env:
-          MARP_USER: root:root
         with:
-          args: --html --allow-local-files --input-dir . --jpeg-quality 100 --pdf
+          entrypoint: sh
+          args: build-theoretical-content.sh
 
-      - name: Prepare files
-        run: |
-          # Rename all README.pdf to the name of their parent directory
-          find '.' -type f -name "README.pdf" -exec sh -c 'mv "$1" "$(dirname "$1")/$(basename "$(dirname "$1")").pdf"' sh {} \;
+      - name: Build practical content with Pandoc
+        uses: docker://pandoc/latex:2.9
+        with:
+          entrypoint: sh
+          args: build-practical-content.sh
 
-      - name: Release Marp slides (pdf)
+      - name: Release course material to GitHub Releases
         uses: softprops/action-gh-release@v1
         with:
           body: |
-            This release contains the PDF version of the slides for the DAI course at HEIG-VD, Switzerland.
+            This release contains the course material for the DAI course at [HEIG-VD](https://heig-vd.ch), Switzerland.
           files: |
             **/*.pdf
