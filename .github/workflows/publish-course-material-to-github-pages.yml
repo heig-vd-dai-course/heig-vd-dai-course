@@ -45,7 +45,10 @@ jobs:
           name: course-material
           path: |
             **/*.html
+            **/*.jpg
+            **/*.jpeg
             **/*.pdf
+            **/*.png
           if-no-files-found: error
           retention-days: 1
 
