@@ -1,5 +1,5 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-practical-work-2/PRACTICAL_WORK.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-practical-work-2/11-practical-work-2-practical-work.pdf
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-practical-work-2/README.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-practical-work-2/11-practical-work-2.pdf
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Practical work 2 - First network application

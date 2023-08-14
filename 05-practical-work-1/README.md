@@ -1,5 +1,5 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-practical-work-1/PRACTICAL_WORK.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-practical-work-1/05-practical-work-1-practical-work.pdf
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-practical-work-1/README.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-practical-work-1/05-practical-work-1.pdf
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Practical work 1 - A CLI to process files
@@ -37,35 +37,35 @@ Maximum grade: 30 points * 0.2 = 6
 
 | #     | Category                  | Criteria | Points |
 |-------|---------------------------|----------|-------:|
-| 1     | Git, GitHub and Markdown  | The repository has all members and teaching staff as reporters | 0.2 |
-| 2     | Git, GitHub and Markdown  | The repository is managed using issues and pull requests | 0.2 |
-| 3     | Git, GitHub and Markdown  | The commits are signed | 0.2 |
-| 4     | Git, GitHub and Markdown  | The issues, pull requests and commits messages are descriptive | 0.2 |
-| 5     | Git, GitHub and Markdown  | The entire team contributes to the project and can explain it | 0.2 |
-| 6     | Git, GitHub and Markdown  | The repository contains a gitignore file to ignore unwanted files | 0.2 |
-| 7     | Git, GitHub and Markdown  | The repository contains tags to the two versions | 0.2 |
-| 8     | Git, GitHub and Markdown  | The README is well written and structured and what the CLI is for | 0.2 |
-| 9     | Git, GitHub and Markdown  | The README explains how to build the CLI | 0.2 |
-| 10    | Git, GitHub and Markdown  | The README explains how to use the CLI | 0.2 |
-| 11    | Git, GitHub and Markdown  | The README explains how to run the tests | 0.2 |
-| 12    | Git, GitHub and Markdown  | The README explains the differences between the not Buffer version and the buffer version with links to their respective tag | 0.2 |
-| 13    | Git, GitHub and Markdown  | The README explains the benchmark methodology between the two versions | 0.2 |
-| 14    | Git, GitHub and Markdown  | The README displays the benchmarks | 0.2 |
-| 15    | Java, IntelliJ and Maven     | The code is well structured | 0.2 |
-| 16    | Java, IntelliJ and Maven     | The code is well documented | 0.2 |
-| 17    | Java, IntelliJ and Maven     | The code is built with Maven | 0.2 |
-| 18    | Java, IntelliJ and Maven     | The CLI displays a help message on how to use the CLI | 0.2 |
-| 19    | Java IOs                  | The CLI takes an input file and an output file as arguments | 0.2 |
-| 20    | Java IOs                  | The CLI takes the input file encoding and the output file encoding as arguments | 0.2 |
-| 21    | Java IOs                  | The CLI displays an error on invalid/missing inputs | 0.2 |
-| 22    | Java IOs                  | The CLI processes the input file and writes the result in the output file | 0.2 |
+| 1     | Git, GitHub<br>and Markdown  | The repository has all members<br>and teaching staff as reporters | 0.2 |
+| 2     | Git, GitHub<br>and Markdown  | The repository is managed using<br>issues and pull requests | 0.2 |
+| 3     | Git, GitHub<br>and Markdown  | The commits are signed | 0.2 |
+| 4     | Git, GitHub<br>and Markdown  | The issues, pull requests and commits<br>messages are descriptive | 0.2 |
+| 5     | Git, GitHub<br>and Markdown  | The entire team contributes to the<br>project and can explain it | 0.2 |
+| 6     | Git, GitHub<br>and Markdown  | The repository contains a gitignore<br>file to ignore unwanted files | 0.2 |
+| 7     | Git, GitHub<br>and Markdown  | The repository contains tags to the<br>two versions | 0.2 |
+| 8     | Git, GitHub<br>and Markdown  | The README is well written and<br>structured and what the CLI is for | 0.2 |
+| 9     | Git, GitHub<br>and Markdown  | The README explains how to build<br>the CLI | 0.2 |
+| 10    | Git, GitHub<br>and Markdown  | The README explains how to use<br>the CLI | 0.2 |
+| 11    | Git, GitHub<br>and Markdown  | The README explains how to run<br>the tests | 0.2 |
+| 12    | Git, GitHub<br>and Markdown  | The README explains the differences<br>between the not Buffer version and the buffer version with links to their respective tag | 0.2 |
+| 13    | Git, GitHub<br>and Markdown  | The README explains the benchmark<br>methodology between the two versions | 0.2 |
+| 14    | Git, GitHub<br>and Markdown  | The README displays the benchmarks | 0.2 |
+| 15    | Java, IntelliJ<br>and Maven     | The code is well structured | 0.2 |
+| 16    | Java, IntelliJ<br>and Maven     | The code is well documented | 0.2 |
+| 17    | Java, IntelliJ<br>and Maven     | The code is built with Maven | 0.2 |
+| 18    | Java, IntelliJ<br>and Maven     | The CLI displays a help message<br>on how to use the CLI | 0.2 |
+| 19    | Java IOs                  | The CLI takes an input file and an<br>output file as arguments | 0.2 |
+| 20    | Java IOs                  | The CLI takes the input file encoding<br>and the output file encoding as arguments | 0.2 |
+| 21    | Java IOs                  | The CLI displays an error on<br>invalid/missing inputs | 0.2 |
+| 22    | Java IOs                  | The CLI processes the input file and<br>writes the result in the output file | 0.2 |
 | 24    | Java IOs                  | The CLI displays a message on failure | 0.2 |
 | 23    | Java IOs                  | The CLI displays a message on success | 0.2 |
 | 25    | Java IOs                  | The CLI displays the execution time | 0.2 |
-| 26    | Presentation              | The presentation is clear and well prepared | 0.2 |
-| 27    | Presentation              | The presentation presents the CLI application | 0.2 |
+| 26    | Presentation              | The presentation is clear and well<br>prepared | 0.2 |
+| 27    | Presentation              | The presentation presents the CLI<br>application | 0.2 |
 | 28    | Presentation              | A demo of the CLI application is made | 0.2 |
-| 29    | Presentation              | The presentation presents the benchmark methodology and the results | 0.2 |
+| 29    | Presentation              | The presentation presents the benchmark<br>methodology and the results | 0.2 |
 | 30    | Presentation              | Everyone talks during the presentation  | 0.2 |
 
 ## Constraints
@@ -87,8 +87,8 @@ You must create a new GitHub Discussion at <https://github.com/orgs/heig-vd-dai-
 
 Everything is presented in the following sessions:
 
-- [Git, GitHub and Markdown](../05-practical-work-1/README.md)
-- [Java, IntelliJ and Maven](../03-java-intellij-and-maven/README.md)
+- [Git, GitHub<br>and Markdown](../05-practical-work-1/README.md)
+- [Java, IntelliJ<br>and Maven](../03-java-intellij-and-maven/README.md)
 - [Java IOs](../04-java-ios/README.md)
 
 ## Feedback
