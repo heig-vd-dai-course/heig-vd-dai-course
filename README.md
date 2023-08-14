@@ -64,7 +64,7 @@ The `(+ 2)` periods are reserved for the practical work reviews.
     - [Feedback][feedback-04]
 5. **Practical work 1 - A CLI to process files**
     - Time in class: 2 + 2 (+ 2) periods
-    - Material: [Markdown](./05-practical-work-1/README.md)<!-- | [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-practical-work-1/05-practical-work-1.pdf) -->
+    - Material: [Markdown](./05-practical-work-1/README.md) | [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-practical-work-1/05-practical-work-1.pdf)
     - [Feedback][feedback-05]
 6. **Evaluation 1**
     - Time in class: 2 periods
@@ -95,7 +95,7 @@ The `(+ 2)` periods are reserved for the practical work reviews.
     - [Feedback][feedback-10]
 11. **Practical work 2 - First network application**
     - Time in class: 2 + 2 + 2 (+ 2) periods
-    - Material: [Markdown](./11-practical-work-2/README.md)<!-- | [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-practical-work-2/11-practical-work-2.pdf) -->
+    - Material: [Markdown](./11-practical-work-2/README.md) | [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-practical-work-2/11-practical-work-2.pdf)
     - [Feedback][feedback-11]
 12. **Evaluation 2**
     - Time in class: 2 periods
@@ -111,7 +111,7 @@ The `(+ 2)` periods are reserved for the practical work reviews.
     - [Feedback][feedback-13]
 14. **Practical work 3 - Second network application**
     - Time in class: 2 + 2 + 2 + 2 + 2 (+ 2) periods
-    - Material: [Markdown](./14-practical-work-3/README.md)<!-- | [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-practical-work-3/14-practical-work-3.pdf) -->
+    - Material: [Markdown](./14-practical-work-3/README.md) | [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-practical-work-3/14-practical-work-3.pdf)
     - [Feedback][feedback-14]
 
 ### Part 4 - Web infrastructures (12 periods)
@@ -128,7 +128,7 @@ The `(+ 2)` periods are reserved for the practical work reviews.
     - [Feedback][feedback-16]
 17. **Practical work 4 - Web Infrastructures**
     - Time in class: 2 + 2 + 2 (+ 2) periods
-    - Theoretical content: [Markdown](./17-practical-work-4/README.md)<!-- | [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-practical-work-4/17-practical-work-4.pdf) -->
+    - Theoretical content: [Markdown](./17-practical-work-4/README.md) | [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-practical-work-4/17-practical-work-4.pdf)
     - [Feedback][feedback-17]
 
 ### Conclusion (2 periods)
