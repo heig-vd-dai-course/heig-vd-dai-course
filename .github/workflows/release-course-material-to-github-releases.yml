@@ -16,17 +16,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Delete files that should not be released
+        run: |
+          rm --recursive 99-material-for-the-teaching-staff
+
       - name: Build theoretical content with Marp
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
           entrypoint: sh
-          args: build-theoretical-content.sh
+          args: .github/build-theoretical-content.sh
 
       - name: Build practical content with Pandoc
         uses: docker://pandoc/latex:2.9
         with:
           entrypoint: sh
-          args: build-practical-content.sh
+          args: .github/build-practical-content.sh
 
       - name: Release course material to GitHub Releases
         uses: softprops/action-gh-release@v1
