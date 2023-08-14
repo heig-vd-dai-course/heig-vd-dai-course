@@ -1,5 +1,5 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-git-github-and-markdown/PRACTICAL_WORK.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/02-git-github-and-markdown-practical-work.pdf
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-git-github-and-markdown/PRACTICAL_CONTENT.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/02-git-github-and-markdown-practical-content.pdf
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Git, GitHub and Markdown - Practical content

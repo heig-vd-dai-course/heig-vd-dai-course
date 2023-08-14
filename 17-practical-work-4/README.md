@@ -6,7 +6,7 @@
 
 <https://github.com/heig-vd-dai-course>
 
-<!-- [Markdown][markdown] | [PDF][pdf] | -->[Feedback][feedback]
+[Feedback][feedback]
 
 L. Delafontaine and H. Louis, with the help of Copilot
 
