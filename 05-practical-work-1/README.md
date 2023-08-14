@@ -1,8 +1,12 @@
-# Practical work 1 - A CLI to process files
-
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-practical-work-1/PRACTICAL_WORK.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-practical-work-1/05-practical-work-1-practical-work.pdf
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
+# Practical work 1 - A CLI to process files
+
 <https://github.com/heig-vd-dai-course>
+
+[Markdown][markdown] | [PDF][pdf] | [Feedback][feedback]
 
 L. Delafontaine and H. Louis, with the help of Copilot
 
@@ -83,7 +87,7 @@ You must create a new GitHub Discussion at <https://github.com/orgs/heig-vd-dai-
 
 Everything is presented in the following sessions:
 
-- [Git, GitHub and Markdown](../02-git-github-and-markdown/README.md)
+- [Git, GitHub and Markdown](../05-practical-work-1/README.md)
 - [Java, IntelliJ and Maven](../03-java-intellij-and-maven/README.md)
 - [Java IOs](../04-java-ios/README.md)
 

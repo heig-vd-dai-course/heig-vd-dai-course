@@ -1,5 +1,11 @@
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/08-docker-and-docker-compose/PRACTICAL_WORK.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-docker-and-docker-compose/08-docker-and-docker-compose-practical-work.pdf
+[feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+
 # Docker and Docker Compose - Practical content
 
 <https://github.com/heig-vd-dai-course>
+
+[Markdown][markdown] | [PDF][pdf] | [Feedback][feedback]
 
 L. Delafontaine and H. Louis, with the help of Copilot
