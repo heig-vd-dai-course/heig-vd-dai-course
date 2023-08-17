@@ -1,5 +1,5 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-practical-work-4/README.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-practical-work-4/17-practical-work-4.pdf
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/18-practical-work-4/README.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-practical-work-4/18-practical-work-4.pdf
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Practical work 4 - Web infrastructures

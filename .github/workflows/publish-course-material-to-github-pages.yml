@@ -49,6 +49,7 @@ jobs:
             **/*.jpeg
             **/*.pdf
             **/*.png
+            **/*.svg
           if-no-files-found: error
           retention-days: 1
 

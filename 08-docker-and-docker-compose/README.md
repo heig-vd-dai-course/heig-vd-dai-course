@@ -67,7 +67,7 @@ _paginate: false
 ## Table of contents
 
 - **[Theoretical content](#theoretical-content)**
-    - Traditional installation of software vs. containerization
+    - Installation of software: traditional vs. containerization
     - OCI, images, containers and registries
     - Dockerfile specification (with examples)
     - Docker Compose specification (with examples)

@@ -7,9 +7,9 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of Copilot
-title: HEIG-VD DAI Course - Semester review and exam preparation
-description: Semester review and exam preparation for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-semester-review-and-exam-preparation/
+title: HEIG-VD DAI Course - Evaluation 4
+description: Evaluation 4 for the DAI course at HEIG-VD, Switzerland
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-evaluation-4/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -43,13 +43,13 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-semester-review-and-exam-preparation/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-semester-review-and-exam-preparation/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-semester-review-and-exam-preparation/17-semester-review-and-exam-preparation.pdf
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/19-evaluation-4/README.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-evaluation-4/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-evaluation-4/19-evaluation-4.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
-# Semester review and exam preparation
+# Evaluation 4
 
 <!--
 _class: lead
@@ -88,9 +88,9 @@ _paginate: false
 
 <!-- _class: lead -->
 
-### Previous exams
+### Previous evaluations
 
-All previous exams are available in the [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/18-semester-review-and-exam-preparation/archives) folder of the course repository.
+All previous evaluations are available in the [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-evaluation-2/archives) folder of the course repository.
 
 ## Questions
 
@@ -106,7 +106,7 @@ Do you have any questions?
 
 Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
 
-[GitHub Discussions - Semester review and exam preparation - Feedback][feedback]
+[GitHub Discussions - Evaluation 4 - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
 
@@ -114,4 +114,4 @@ You can use reactions to express your opinion on a comment.
 
 ## Sources
 
-- Illustration by [NASA](https://unsplash.com/@nasa) on [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
+- Illustration by []() on [Unsplash]()

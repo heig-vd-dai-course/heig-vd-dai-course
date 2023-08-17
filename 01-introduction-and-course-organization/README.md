@@ -105,10 +105,6 @@ I work at HEIG-VD as an applied research and development engineer since 2020. He
 GitLab: [@ludelafo](https://gitlab.com/ludelafo)  
 GitHub: [@ludelafo](https://github.com/ludelafo)
 
-### Juergen Ehrensberger
-
-TODO
-
 ### Hadrien Louis
 
 TODO
@@ -117,7 +113,23 @@ TODO
 
 ## What do we do at the HEIG-VD and why
 
-TODO
+![bg w:100%](./images/what-do-we-do.svg)
+
+---
+
+Multiple startups were created at the HEIG-VD:
+
+- [BoxUp SNC](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik/communaute-entrepreneurs/boxup-snc) - Solution de partage de matériel de sport et de loisir par application mobile.
+- [Buildigo SA](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik/communaute-entrepreneurs/buildigo-sa) - Trouvez des artisans de confiance proches de chez vous
+- [Lambda Health System SA](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik/communaute-entrepreneurs/lambda-health-system) - Dispositif de rééducation des membres inférieurs.
+- [strong.codes](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik/communaute-entrepreneurs/strong-codes) - Protection contre le "reverse-engineering" logiciel.
+- ...
+
+---
+
+<!-- _class: lead -->
+
+You can start your own company at the HEIG-VD! The team at [LA FABRiꓘ](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik) is very helpful and nice, feel free to contact them!
 
 ## What to expect to learn from this course
 
@@ -125,11 +137,12 @@ TODO
 
 ### What does GAPS say
 
-[Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
-
-[Descriptif de module](https://gaps.heig-vd.ch/consultation/fiches/mv/mv.php?id=1905)
-
-3 ECTS credits = 90 hours of work
+- [Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
+- [Descriptif de module](https://gaps.heig-vd.ch/consultation/fiches/mv/mv.php?id=1905)
+- [Programme de formation](https://gaps.heig-vd.ch/consultation/teachingplans/)
+- 3 ECTS credits = 90 hours of work
+    - 48 hours in class
+    - 42 outside of the class - We try our best to ensure you do not have to work that much outside of the class
 
 ---
 
@@ -149,7 +162,7 @@ TODO
 >
 > A l'issue de cette unité d'enseignement, l'étudiant-e sera capable de :
 >
-> Programmation réseau
+> **Programmation réseau**
 >
 > - être capable de concevoir une application client-serveur ;
 > - être capable d'implémenter un client et un serveur en utilisant l'API
@@ -157,7 +170,7 @@ TODO
 
 ---
 
-> Protocole HTTP
+> **Protocole HTTP**
 >
 > - connaître les concepts principaux du protocole ;
 > - être capable de concevoir et réaliser une infrastructure HTTP avec un reverse proxy et plusieurs serveurs ;
@@ -165,12 +178,12 @@ TODO
 
 ---
 
-> Protocoles de messagerie
+> **Protocoles de messagerie**
 >
 > - connaître les principaux protocoles relatifs à la messagerie électronique ;
 > - être capable d'implémenter un client de messagerie simple ;
 
-> Protocoles de transfert de fichiers et d'accès à distance
+> **Protocoles de transfert de fichiers et d'accès à distance**
 >
 > - connaître les protocoles de transfert de fichiers et d'accès à distance, ainsi que leurs principales utilisations (y compris tunneling/forwarding).
 
@@ -252,19 +265,19 @@ The entire course planning for the semester is available at <https://github.com/
 
 ## Course sequence
 
-1. Theoretical content you acquire on your own, at your own pace
-    - A set of slides/READMEs or videos for you to read/watch
-2. Practical content where you do stuff (:exploding_head:)
+1. Theoretical content that is meant to be short and concise
+    - Maximum 30 minutes, quizzes to check your understanding
+2. Practical content where you do stuff
     - You will be able to experiment the theoretical content
 3. Practical work
-    - Bigger work to get deeper into the subject
+    - The theoretical and practical content are meant to help you
 4. Feedback and discussions (few minutes - very important to us)
     - You will be able to give feedback and share your experience
 
 ## Evaluation
 
 - 4 practical works (20%) - done in groups of 2 students
-- 2 evaluations (30%) - done individually
+- 4 evaluations (30%) - done individually
 - 1 exam (50%) - done individually
 
 `final grade = average of evaluation grades * 0.3 + average of practical work grades * 0.2 + average of exam * 0.5`
@@ -273,7 +286,7 @@ You can change groups between practical works. You will have access to the gradi
 
 ---
 
-You can be asked to answer questions regarding the theoretical content as well as the practical content of the slides/READMEs/videos during the practical work review or the evaluations. Both aspects are complementary and important.
+You can be asked to answer questions regarding the theoretical content as well as the practical content during the practical work review or the evaluations. Both aspects are complementary and important.
 
 We will try our best to give you your grades and feedback as quickly as possible so you can improve for the next work.
 
@@ -286,8 +299,8 @@ If you have trouble with your group, please let us know as soon as possible. We 
 - The teaching staff responsibilities:
     - You have acquired the necessary knowledge of this course
     - You are prepared for the professional world
-    - You are able to work in a team
-    - You are able to work on your own
+    - You are able to work on your own, and in a team
+    - Your feedback is taken into account
 - Your responsibilities: you are responsible for your own learning. If you have any questions, ask them. If you have any difficulties, let us know. If you have any suggestions, share them.
 
 ## _"A course in English..? Why This Fantasy?"_
@@ -320,6 +333,14 @@ Network communication is everywhere. You will need to communicate with other dev
 
 This course sets the basis for the rest of your studies. You will need to know how to communicate with other devices, how to send and receive data, how to encode it, etc. This course will give you the necessary knowledge to understand how it works and how to do it.
 
+## _"I have an ARM computer, is this an issue?"_
+
+If you have an ARM computer (Apple silicon M1/M2 for example), some parts of the course might be a bit more tricky. We will try our best to test all our course material but we cannot guarantee that everything will work as expected on the first try.
+
+We might come to you to ask you to test some things for us before the next session that requires it.
+
+If you encounter any issue, please let us know as soon as possible.
+
 ## Questions
 
 <!-- _class: lead -->
@@ -334,7 +355,7 @@ Do you have any questions?
 
 Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
 
-[GitHub Discussions - Introduction and course organization - Feedback][feedback]
+[GitHub Discussions - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
 
@@ -343,3 +364,4 @@ You can use reactions to express your opinion on a comment.
 ## Sources
 
 - Illustration by [NASA](https://unsplash.com/@nasa) on [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
+- Worms 4 Mayhem Boxart by [Team17](https://www.team17.com)

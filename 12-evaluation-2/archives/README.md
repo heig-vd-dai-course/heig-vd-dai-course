@@ -1,3 +1,3 @@
 # Archives
 
-This directory contains the archives of the second evaluations of the course.
+This directory contains the archives of the previous evaluations of the course.

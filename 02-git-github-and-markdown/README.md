@@ -82,11 +82,19 @@ _paginate: false
 
 > [Git](https://git-scm.com/) is a free and open source distributed version control system (VCS) designed to handle everything from small to very large projects with speed and efficiency.
 
-Created by Linus Torvalds in 2005 to manage the Linux kernel source code, Git allows to track changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development.
+![bg right:40% w:75%](https://git-scm.com/images/logos/logomark-orange@2x.png)
 
 ---
 
-Git is a client-server system, where the server is called a **repository** and the clients are called **clones**. The repository is the single source of truth, and the clones are the local copies of the repository.
+Created by Linus Torvalds in 2005 to manage the Linux kernel source code, Git allows to track changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development.
+
+Git is a client-server system, where the server is called a **repository** and the clients are called **clones**.
+
+![bg right:40% w:75%](https://imgs.xkcd.com/comics/git.png)
+
+---
+
+ The repository is the single source of truth, and the clones are the local copies of the repository.
 
 Git is a **distributed** VCS, which means that each clone is a full copy of the repository. This allows to work offline, and to have multiple backups of the repository.
 
@@ -94,15 +102,21 @@ Git uses **commits** to track changes. A commit is a snapshot of the repository 
 
 ---
 
-Git uses **branches** to track different versions of the repository. The default branch is often called `main` (the legacy name was `master`). Each branch has a name and a pointer to a commit. The pointer is called a **head**. The head of the main branch is called `HEAD`.
+Git uses **branches** to track different versions of the repository. The default branch is often called `main` (the legacy name was `master`).
+
+Each branch has a name and a pointer to a commit. The pointer is called a **head**. The head of the main branch is called `HEAD`.
+
+![bg right:40% contain](https://wac-cdn.atlassian.com/dam/jcr:bb02240a-7d85-4f5a-ae7f-c2727b37fc79/01%20Many%20ways%20of%20referring%20to%20a%20commit.svg?cdnVersion=1162)
+
+---
 
 Commits can be **tagged** to create a reference to a commit. This is often used to mark a commit as a release.
 
 Commits can be **signed** to prove that the commit was made by a specific person. This is done for security reasons.
 
----
-
 Often, when implementing a new feature, a new branch is created. This is done by creating a new branch from the main branch. The new branch is called a **feature branch**. The main branch is called the **target branch**.
+
+---
 
 Once you made all the changes, the modified files are **staged** and a new commit is created. The commit is then **pushed** to the repository.
 
@@ -194,6 +208,10 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 ### GitHub
 
 > [GitHub](https://github.com) is a platform and cloud-based service for software development and version control using Git, allowing developers to store and manage their code.
+
+![bg right:40% w:75%](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
+---
 
 GitHub is a web-based Git repository hosting service. It provides all the features of Git, plus some additional features.
 
@@ -373,9 +391,11 @@ Links can link to local files, headings, or references.
 Images can be added using the same syntax as links, but with a `!` character in front of the link. The text field will be used as the alt text.
 
 ```markdown
-![](https://picsum.photos/720?image=3)
+![](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb)
 
-![This is the alternate text](https://picsum.photos/720?image=3)
+![This is the alternate text](./images/my-image.png)
+
+![](./images/my-image.png "")
 ```
 
 #### Tables

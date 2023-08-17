@@ -1,0 +1,6 @@
+@startwbs what-do-we-do
+*[#orange] <&home> HEIG-VD
+**[#lightblue] <&book> Teaching
+**[#lightgreen] <&beaker> (Applied) Research and Development (aR&D)
+** <&wrench> Industry
+@endwbs

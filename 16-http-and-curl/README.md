@@ -108,7 +108,7 @@ _paginate: false
 
 <!-- _class: lead -->
 
-You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-http-and-curl/PRACTICAL_CONTENT.md).
+You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-http-and-curl/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 

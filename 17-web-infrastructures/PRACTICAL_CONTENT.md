@@ -1,5 +1,5 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-web-infrastructures/PRACTICAL_CONTENT.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-web-infrastructures/16-web-infrastructures-practical-work.pdf
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-web-infrastructures/PRACTICAL_CONTENT.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-web-infrastructures/17-web-infrastructures-practical-work.pdf
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Web infrastructures - Practical content

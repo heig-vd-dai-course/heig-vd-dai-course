@@ -99,7 +99,7 @@ _paginate: false
 
 <!-- _class: lead -->
 
-You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-web-infrastructures/PRACTICAL_CONTENT.md).
+You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-web-infrastructures/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 
