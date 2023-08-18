@@ -89,13 +89,26 @@ _paginate: false
     - Content delivery
     - HTTP and scaling
 - **[Practical content](#practical-content)**
-    - TODO
+    - [What will you do?](#what-will-you-do)
+    - [Find the practical content](#find-the-practical-content)
 
 ## Theoretical content
 
 <!-- _class: lead -->
 
 ## Practical content
+
+<!-- _class: lead -->
+
+### What will you do?
+
+- 
+
+![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
+![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
+![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+
+### Find the practical content
 
 <!-- _class: lead -->
 

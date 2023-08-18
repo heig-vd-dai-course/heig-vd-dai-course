@@ -141,8 +141,8 @@ You can start your own company at the HEIG-VD! The team at [LA FABRiꓘ](https:/
 - [Descriptif de module](https://gaps.heig-vd.ch/consultation/fiches/mv/mv.php?id=1905)
 - [Programme de formation](https://gaps.heig-vd.ch/consultation/teachingplans/)
 - 3 ECTS credits = 90 hours of work
-    - 48 hours in class
-    - 42 outside of the class - We try our best to ensure you do not have to work that much outside of the class
+    - 48 hours in class (= 64 periods of 45 minutes)
+    - 42 hours outside of the class - We try our best to ensure you do not have to work that much outside of the class
 
 ---
 
@@ -165,8 +165,7 @@ You can start your own company at the HEIG-VD! The team at [LA FABRiꓘ](https:/
 > **Programmation réseau**
 >
 > - être capable de concevoir une application client-serveur ;
-> - être capable d'implémenter un client et un serveur en utilisant l'API
-  Socket dans différents langages ;
+> - être capable d'implémenter un client et un serveur en utilisant l'API Socket dans différents langages ;
 
 ---
 
@@ -219,8 +218,9 @@ You will learn the following technologies during this course:
 - A place to experiment
 - A place to share
 - A place to have fun
-- A place where you help each other
-- A place where you do not loose your time (efficient and useful)
+- A place were you do not have to remember things by heart - We want you to understand the whys and wherefores and be able to do things
+
+:arrow_right: A place where you do not loose your time (efficient and useful)
 
 ### What we don't want this course to be
 
@@ -228,7 +228,8 @@ You will learn the following technologies during this course:
 - A place you don't feel comfortable/safe
 - A place where you can't ask questions
 - A place where you can't take anything away
-- If you have a problem with the course, we will do our best to fix it.
+
+:arrow_right: If you have a problem with the course, we will do our best to fix it.
 
 We will take presences during this course but if you are done, you are free to go. However, we would appreciate if you try to help your classmates instead!
 
@@ -363,5 +364,5 @@ You can use reactions to express your opinion on a comment.
 
 ## Sources
 
-- Illustration by [NASA](https://unsplash.com/@nasa) on [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
+- Main illustration by [NASA](https://unsplash.com/@nasa) on [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
 - Worms 4 Mayhem Boxart by [Team17](https://www.team17.com)

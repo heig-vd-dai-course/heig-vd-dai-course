@@ -33,7 +33,7 @@ You will work in groups of two students. You can choose your partner. If you do 
 - 0.1 point - The work is insufficient
 - 0.2 point - The work is done
 
-Maximum grade: 30 points * 0.2 = 6
+Maximum grade: 25 points * 0.2 + 1 = 6
 
 ### Category 1 - Git, GitHub and Markdown
 
@@ -46,44 +46,39 @@ Maximum grade: 30 points * 0.2 = 6
 | 5     | The entire team contributes to the project and can explain it | 0.2 |
 | 6     | The repository contains a gitignore file to ignore unwanted files | 0.2 |
 | 7     | The repository contains tags to the two versions | 0.2 |
-| 8     | The README is well written and structured and what the CLI is for | 0.2 |
+| 8     | The README is well structured and explains what the CLI is for | 0.2 |
 | 9     | The README explains how to build the CLI | 0.2 |
 | 10    | The README explains how to use the CLI | 0.2 |
-| 11    | The README explains how to run the tests | 0.2 |
-| 12    | The README explains the differences between the not Buffer version and the buffer version with links to their respective tag | 0.2 |
-| 13    | The README explains the benchmark methodology between the two versions | 0.2 |
-| 14    | The README displays the benchmarks | 0.2 |
 
 ### Category 2 - Java, IntelliJ and Maven
 
 | #     | Criteria | Points |
 |-      |-         |      -:|
-| 15    | The code is well structured | 0.2 |
-| 16    | The code is well documented | 0.2 |
-| 17    | The code is built with Maven | 0.2 |
-| 18    | The CLI displays a help message on how to use the CLI | 0.2 |
+| 11    | The code is well structured | 0.2 |
+| 12    | The code is well documented | 0.2 |
+| 13    | The code is built with Maven and output an executable JAR file | 0.2 |
+| 14    | The CLI displays a help message on how to use the CLI | 0.2 |
 
 ### Category 3 - Java IOs
 
 | #     | Criteria | Points |
 |-      |-         |      -:|
-| 19    | The CLI takes an input file and an output file as arguments | 0.2 |
-| 20    | The CLI takes the input file encoding and the output file encoding as arguments | 0.2 |
-| 21    | The CLI displays an error on invalid/missing inputs | 0.2 |
-| 22    | The CLI processes the input file and writes the result in the output file | 0.2 |
-| 24    | The CLI displays a message on failure | 0.2 |
-| 23    | The CLI displays a message on success | 0.2 |
-| 25    | The CLI displays the execution time | 0.2 |
+| 15    | The CLI takes an input file and an output file as arguments | 0.2 |
+| 16    | The CLI takes the input file encoding and the output file encoding as arguments | 0.2 |
+| 17    | The CLI displays an error on invalid/missing inputs | 0.2 |
+| 18    | The CLI correctly processes the input file and writes the result in the output file | 0.2 |
+| 19    | The CLI displays a message on failure | 0.2 |
+| 20    | The CLI displays a message on success | 0.2 |
 
-### Category 4 - Presentation
+### Category 4 - Presentation and questions
 
 | #     | Criteria | Points |
 |-      |-         |      -:|
-| 26    | The presentation is clear and well prepared | 0.2 |
-| 27    | The presentation presents the CLI application | 0.2 |
-| 28    | A demo of the CLI application is made | 0.2 |
-| 29    | The presentation presents the benchmark methodology and the results | 0.2 |
-| 30    | Everyone talks during the presentation  | 0.2 |
+| 21    | The presentation is clear and well prepared | 0.2 |
+| 22    | Everyone talks during the presentation  | 0.2 |
+| 23    | The presentation presents the CLI application | 0.2 |
+| 24    | A demo of the CLI application is made | 0.2 |
+| 25    | The answers to the questions are correct | 0.2 |
 
 ## Constraints
 

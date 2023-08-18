@@ -73,6 +73,8 @@ _paginate: false
     - [GitHub](#github)
     - [Markdown](#markdown)
 - **[Practical content](#practical-content)**
+    - [What will you do?](#what-will-you-do)
+    - [Find the practical content](#find-the-practical-content)
 
 ## Theoretical content
 
@@ -123,6 +125,8 @@ Once you made all the changes, the modified files are **staged** and a new commi
 Changes can be compared to see the **differences** between the staged files and the working directory. This is done by comparing the files with the last commit.
 
 Changes can be **pulled** from the repository into the current branch.
+
+TODO
 
 ---
 
@@ -201,6 +205,10 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 #### Resources
 
+- [Atlassian Git tutorials - Beginner](https://www.atlassian.com/git/tutorials/what-is-version-control) - Atlassian tutorials are really good!
+- [Atlassian Git tutorials - Getting started](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
+- [Atlassian Git tutorials - Collaborating](https://www.atlassian.com/git/tutorials/syncing)
+- [Atlassian Git tutorials - Advanced Tips](https://www.atlassian.com/git/tutorials/advanced-overview)
 - [Learn Git Branching](https://learngitbranching.js.org/)
 
 _Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
@@ -217,9 +225,9 @@ GitHub is a web-based Git repository hosting service. It provides all the featur
 
 It is the most popular Git repository hosting service, with more than 65 million repositories, a home for many open source projects and a place where many companies host their private repositories.
 
----
-
 GitHub is a **social** platform. It allows to **follow** other users and to **star** repositories. It also allows to **fork** repositories, which means to create a copy of a repository in your own account.
+
+---
 
 GitHub also provides a **wiki** for each repository, a **project board** to manage tasks, an **issue tracker** to report bugs and a **pull request** system to review and merge changes.
 
@@ -227,17 +235,17 @@ Not all these features are needed for all projects, but they are available if ne
 
 Repositories can be owned by a **user** or by an **organization**.
 
----
-
 Contributing to a project hosted on GitHub is done by **forking** the repository, making changes and opening a **pull request** to merge the changes back into the original repository.
+
+---
 
 Forking is only needed if you are not a member of the repository or organization.
 
 Once a branch is ready to be merged into the target branch, it is good practice to open a **pull request** (or a **merge request** on GitLab). A pull request is a request to merge a branch into another. It is a way to discuss the changes before merging them.
 
----
-
 Reviewing a pull request is done by **commenting** on the changes. The reviewer can ask for changes to be made before merging the branch or can approve the changes.
+
+---
 
 Once the pull request is approved, the branch can be **merged** into the target branch.
 
@@ -249,11 +257,10 @@ The whole process would be as follow:
 
 1. Clone or fork the project
 2. Checkout to a new branch
-3. Make your changes
-4. Commit and push your changes
-5. Create the pull request
-6. The maintainers review and merge if OK
-7. You can delete the branch or the fork
+3. Make your changes, commit and push them as often as you want
+4. Create the pull request
+5. The maintainers review and merge if OK
+6. You can delete the branch or the fork
 
 #### Alternatives
 
@@ -388,14 +395,14 @@ Links can link to local files, headings, or references.
 
 #### Images
 
-Images can be added using the same syntax as links, but with a `!` character in front of the link. The text field will be used as the alt text.
+Images can be added using the same syntax as links, but with a `!` character in front of the link. The text field will be used as the alt text for accessibility and SEO. An optional title can be set with `""` characters.
 
 ```markdown
-![](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb)
+![](https://my-website.com/assets/logo.png)
 
-![This is the alternate text](./images/my-image.png)
+![A landscape of the Alps](./images/alps.jpeg)
 
-![](./images/my-image.png "")
+![A schema describing the Git workflow](./images/schema.svg "Git workflow")
 ```
 
 #### Tables
@@ -405,8 +412,8 @@ Tables can be created using the `|` character to separate columns and `-` charac
 ```markdown
 | Header 1 | Header 2 | Header 3 |
 | -------- | :------: | -------: |
-| Cell 1   | Cell 2   | Cell 3   |
-| Cell 4   | Cell 5   | Cell 6   |
+| Cell 1   |  Cell 2  |   Cell 3 |
+| Cell 4   |  Cell 5  |   Cell 6 |
 ```
 
 #### HTML
@@ -448,30 +455,44 @@ Another·line
 
 #### Summary
 
-- Markdown is easy to learn
-- Markdown can be used to create README files
+- Markdown is easy to learn and use
 - Markdown can be used to create documentation
-- Markdown can be used to create simple web pages
 - Markdown can be used to create slides
 - Markdown can be exported to many formats
+    - The theoretical content of this course is exported to Web and PDF with the help of [Marp](https://marp.app/)
+    - The practical content of this course is exported to PDF with the help of [Pandoc](https://pandoc.org/)
 
 #### Alternatives
 
 - [reStructuredText](https://docutils.sourceforge.io/rst.html)
 - [AsciiDoc](https://asciidoc.org/)
 - [Textile](https://textile-lang.com/)
-- [LaTeX](https://www.latex-project.org/)
+- [LaTeX](https://www.latex-project.org/) - You might want to consider this if you need to write a scientific paper and/or your bachelor/master thesis as it is the standard in the scientific community and much more powerful than Markdown.
 
 _Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
 #### Resources
 
 - [Markdown Guide](https://www.markdownguide.org/)
-- [Complete list of GitHub Markdown emoji markup](https://gist.github.com/rxaviers/7360908)
 
 _Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
 ## Practical content
+
+<!-- _class: lead -->
+
+### What will you do?
+
+- Install Git
+- Create and configure your GitHub account
+- Create your own GitHub profile README
+- Add yourself to the list of students in the GitHub organization
+
+![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
+![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
+![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+
+### Find the practical content
 
 <!-- _class: lead -->
 
@@ -481,38 +502,38 @@ You can find the practical content for this session on [GitHub](https://github.c
 
 <!-- _class: lead -->
 
-### What did you do?
+### What did you do and learn?
 
-TODO
+In this session, you installed and configured Git properly. You also created your own GitHub account and profile README for your future social profile as a computer scientist engineer.
 
-### What did you learn? (questions)
+Finally, you added yourself to the list of students in the GitHub organization using the issue, fork and pull request workflow, enabling you to contribute to open source projects in the future.
+
+Git is a valuable tool for collaborative work but we only scratched the surface. Refer to the resources for more useful content.
+
+### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
-- What is Git?
-- What is GitHub?
-- What is Markdown?
-- What is a repository?
-
-### What did you learn? (answers)
-
-> Q: What is Git?  
-> A: Git is a distributed version control system.
-
-> Q: What is GitHub?  
-> A: GitHub is a Git repository hosting service.
+- How does Git work?
+- What is the difference between Git and GitHub?
+- How is Markdown different from Word?
+- What is a repository? What is a clone?
+- What is a tag? What is the difference with a commit?
+- Describe a typical Git workflow.
 
 ## What will you do next?
 
 In the next session, you will learn the following topics:
 
-- TODO
+- Java
+- IntelliJ IDEA
+- Maven
 
 ## Feedback
 
 Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
 
-[GitHub Discussions - Git, GitHub and Markdown - Feedback][feedback]
+[GitHub Discussions - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
 
@@ -520,4 +541,4 @@ You can use reactions to express your opinion on a comment.
 
 ## Sources
 
-- Illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)
+- Main illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)

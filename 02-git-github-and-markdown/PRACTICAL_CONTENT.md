@@ -12,13 +12,12 @@ L. Delafontaine and H. Louis, with the help of Copilot
 
 ## Table of contents
 
-- [Configure your GitHub account professionally](#configure-your-github-account-professionally)
+- [Install Git](#install-git)
+- [Create and your GitHub account](#create-and-configure-your-github-account)
 - [Create your own GitHub profile README](#create-your-own-github-profile-readme)
 - [Add yourself to the list of students in the GitHub organization](#add-yourself-to-the-list-of-students-in-the-github-organization)
 
-## Configure your GitHub account professionally
-
-### Install Git
+## Install Git
 
 Check if your operating system package manager has Git available so you can install it from there (`apt` with Debian/Ubuntu, `brew` for [Brew](https://brew.sh/) or `choco` for [Chocolatey](https://chocolatey.org/) for example)! If not, you can download it and install it manually from the official website.
 
@@ -27,6 +26,16 @@ Check if your operating system package manager has Git available so you can inst
 3. Open a terminal and type `git --version`
 
 The output should be similar to this: `git version 2.41.0`
+
+## Create and configure your GitHub account
+
+### Create your GitHub account
+
+If you do not have a GitHub account yet, you will need to create one.
+
+1. Go to <https://github.com>
+2. Create your account
+3. Verify your email address
 
 ### Create a SSH key
 
@@ -45,14 +54,6 @@ It is required to use the SSH key authentication method to authenticate to GitHu
 7. Type `cat ~/.ssh/id_ed25519.pub`
 
 :warning: **Never share your private key with anyone!** It must be kept secret and confidential, just like a password.
-
-### Create your GitHub account
-
-If you do not have a GitHub account yet, you will need to create one.
-
-1. Go to <https://github.com>
-2. Create your account
-3. Verify your email address
 
 ### Set up your GitHub account
 

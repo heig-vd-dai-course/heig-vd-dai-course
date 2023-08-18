@@ -29,7 +29,12 @@ Do not know where to start? Have a look at the [Introduction and course organiza
 
 ## Course planning and material
 
-64 periods are planned for this course, divided in 4 main parts:
+This course is equivalent to 3 ECTS credits = 90 hours of work.
+
+- 48 hours in class (= 64 periods of 45 minutes)
+- 42 hours outside of the class - We try our best to ensure you do not have to work that much outside of the class
+
+64 periods in class are planned for this course, divided in 4 main parts:
 
 - [Part 1 - A CLI to process files (15 periods)](#part-1---a-cli-to-process-files-15-periods)
 - [Part 2 - First network application (18 periods)](#part-2---first-network-application-18-periods)

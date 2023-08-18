@@ -69,10 +69,11 @@ _paginate: false
 - **[Theoretical content](#theoretical-content)**
     - Installation of software: traditional vs. containerization
     - OCI, images, containers and registries
-    - Dockerfile specification (with examples)
-    - Docker Compose specification (with examples)
+    - Dockerfile and Docker Compose
     - Tips and tricks
 - **[Practical content](#practical-content)**
+    - [What will you do?](#what-will-you-do)
+    - [Find the practical content](#find-the-practical-content)
 
 ---
     - Install Docker (and Docker Compose)
@@ -86,6 +87,18 @@ _paginate: false
 <!-- _class: lead -->
 
 ## Practical content
+
+<!-- _class: lead -->
+
+### What will you do?
+
+- 
+
+![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
+![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
+![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+
+### Find the practical content
 
 <!-- _class: lead -->
 
