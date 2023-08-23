@@ -39,6 +39,7 @@ style: |
     }
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
+        hyphens: auto;
     }
 headingDivider: 4
 -->
@@ -146,6 +147,18 @@ When working on a project, it is important to keep the main branch up to date. T
 
 Files can be **ignored** by Git. This is done by creating a `.gitignore` file at the root of the repository. This allows to avoid committing files that should not be committed, such as IDE configuration files.
 
+---
+
+**Hooks** can be used to run scripts before or after certain actions. For example, a pre-commit hook can be used to run tests before committing changes.
+
+The most important Git Hooks are the following:
+
+- `pre-commit`: run before committing changes
+- `post-commit`: run after committing changes
+- `pre-push`: run before pushing changes
+- `post-push`: run after pushing changes
+- `post-merge`: run after merging changes
+
 #### Summary
 
 - Git is a distributed VCS
@@ -210,6 +223,7 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 - [Atlassian Git tutorials - Collaborating](https://www.atlassian.com/git/tutorials/syncing)
 - [Atlassian Git tutorials - Advanced Tips](https://www.atlassian.com/git/tutorials/advanced-overview)
 - [Learn Git Branching](https://learngitbranching.js.org/)
+- [Git Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 
 _Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 

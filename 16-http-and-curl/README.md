@@ -39,6 +39,7 @@ style: |
     }
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
+        hyphens: auto;
     }
 headingDivider: 4
 -->
@@ -111,6 +112,32 @@ _paginate: false
 ## Practical content
 
 <!-- _class: lead -->
+
+### Title
+
+> Quote
+
+![bg right:40% w:50%](https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg)
+
+---
+
+Content
+
+#### Summary
+
+- TODO
+
+#### Alternatives
+
+- TODO
+
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+
+#### Resources
+
+- TODO
+
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
 ### What will you do?
 

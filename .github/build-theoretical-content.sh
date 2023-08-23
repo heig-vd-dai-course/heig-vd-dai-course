@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 # Convert Markdown files to HTML
-find . -type f ! -path "*practical-work*" -name "README.md" -mindepth 2 -maxdepth 2 -exec sh -c 'node /home/marp/.cli/marp-cli.js --html --allow-local-files --output "${1%.md}.html" "$1"' sh {} \;
+find . -type f ! -path "*practical-work*" -name "README.md" -mindepth 2 -maxdepth 2 -exec sh -c 'node /home/marp/.cli/marp-cli.js --html --output "${1%.md}.html" "$1"' sh {} \;
 
 # Convert Markdown files to PDF
 find . -type f ! -path "*practical-work*" -name "README.md" -mindepth 2 -maxdepth 2 -exec sh -c 'node /home/marp/.cli/marp-cli.js --html --allow-local-files --jpeg-quality 100 --pdf --output "${1%.md}.pdf" "$1"' sh {} \;

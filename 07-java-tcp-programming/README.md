@@ -39,6 +39,7 @@ style: |
     }
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
+        hyphens: auto;
     }
 headingDivider: 4
 -->
@@ -82,6 +83,12 @@ _paginate: false
 ## Theoretical content
 
 <!-- _class: lead -->
+
+### Resources
+
+- TODO
+
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
 
 ## Practical content
 

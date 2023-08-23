@@ -39,6 +39,7 @@ style: |
     }
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
+        hyphens: auto;
     }
 headingDivider: 4
 -->
@@ -75,6 +76,11 @@ _paginate: false
     - Performance and buffering
     - Dealing with errors
 - **[Practical content](#practical-content)**
+    - [What will you do?](#what-will-you-do)
+    - [Find the practical content](#find-the-practical-content)
+
+---
+
     - Reading and writing files
 
 ## _Why is this important for network programming?_
@@ -83,7 +89,25 @@ _paginate: false
 
 <!-- _class: lead -->
 
+### Resources
+
+- TODO
+
+_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+
 ## Practical content
+
+<!-- _class: lead -->
+
+### What will you do?
+
+- 
+
+![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
+![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
+![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+
+### Find the practical content
 
 <!-- _class: lead -->
 
