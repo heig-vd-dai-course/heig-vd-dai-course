@@ -52,6 +52,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization.pdf
 [video]: #
 [feedback]: #
+[illustration]:
+  https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&h=720
 
 # Introduction and course organization
 
@@ -69,7 +71,7 @@ _paginate: false
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger</small>
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&h=720&q=80)
+![bg opacity:0.1][illustration]
 
 ## Agenda
 
@@ -88,7 +90,8 @@ _paginate: false
 
 ### Ludovic Delafontaine
 
-I work at HEIG-VD as an applied research and development engineer since 2020. Here is my background:
+I work at HEIG-VD as an applied research and development engineer since 2020.
+Here is my background:
 
 - 2006: Worms 4 Mayhem (modding)
 - 2011-2015: ETML (CFC + MPTi)

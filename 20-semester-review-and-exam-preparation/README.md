@@ -52,6 +52,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-semester-review-and-exam-preparation/20-semester-review-and-exam-preparation.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[illustration]:
+  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
 # Semester review and exam preparation
 
@@ -67,7 +69,7 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
+![bg opacity:0.1][illustration]
 
 ## Agenda
 
@@ -114,7 +116,7 @@ Do you have any questions?
 Please take a few minutes to give us some feedback about this session. It will
 help us to improve it for the next one!
 
-[GitHub Discussions - Semester review and exam preparation - Feedback][feedback]
+[GitHub Discussions - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too
 slow / too fast, too easy / too difficult, not enough time / too much time,
@@ -124,5 +126,5 @@ You can use reactions to express your opinion on a comment.
 
 ## Sources
 
-- Illustration by [NASA](https://unsplash.com/@nasa) on
+- Main illustration by [NASA](https://unsplash.com/@nasa) on
   [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)

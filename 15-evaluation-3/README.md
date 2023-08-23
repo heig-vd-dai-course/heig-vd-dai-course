@@ -51,6 +51,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-evaluation-3/15-evaluation-3.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[illustration]:
+  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
 # Evaluation 3
 
@@ -66,7 +68,7 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
+![bg opacity:0.1][illustration]
 
 ## Agenda
 
@@ -113,7 +115,7 @@ Do you have any questions?
 Please take a few minutes to give us some feedback about this session. It will
 help us to improve it for the next one!
 
-[GitHub Discussions - Evaluation 3 - Feedback][feedback]
+[GitHub Discussions - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too
 slow / too fast, too easy / too difficult, not enough time / too much time,
@@ -123,4 +125,4 @@ You can use reactions to express your opinion on a comment.
 
 ## Sources
 
-- Illustration by []() on [Unsplash]()
+- Main illustration by []() on [Unsplash]()

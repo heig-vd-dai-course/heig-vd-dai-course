@@ -52,6 +52,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-docker-and-docker-compose/08-docker-and-docker-compose.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[illustration]:
+  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
 # Docker and Docker Compose
 
@@ -67,7 +69,7 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
+![bg opacity:0.1][illustration]
 
 ## Table of contents
 
@@ -143,11 +145,11 @@ You can find the practical content for this session on
 
 <!-- _class: lead -->
 
-### What did you do?
+### What did you do and learn?
 
 TODO
 
-### What did you learn? (questions)
+### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
@@ -169,7 +171,7 @@ In the next session, you will learn the following topics:
 Please take a few minutes to give us some feedback about this session. It will
 help us to improve it for the next one!
 
-[GitHub Discussions - Docker and Docker Compose - Feedback][feedback]
+[GitHub Discussions - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too
 slow / too fast, too easy / too difficult, not enough time / too much time,
@@ -179,4 +181,4 @@ You can use reactions to express your opinion on a comment.
 
 ## Sources
 
-- Illustration by []() on [Unsplash]()
+- Main illustration by []() on [Unsplash]()

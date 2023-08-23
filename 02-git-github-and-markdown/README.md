@@ -52,6 +52,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/02-git-github-and-markdown.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[illustration]:
+  https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
 
 # Git, GitHub and Markdown
 
@@ -69,7 +71,7 @@ _paginate: false
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger</small>
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720&q=80)
+![bg opacity:0.1][illustration]
 
 ## Table of contents
 
@@ -618,16 +620,16 @@ You can find the practical content for this session on
 
 ### What did you do and learn?
 
-In this session, you installed and configured Git properly. You also created
-your own GitHub account and profile README for your future social profile as a
-computer scientist engineer.
+In this session, you have installed and configured Git properly. You have also
+created your own GitHub account and profile README for your future social
+profile as a computer scientist engineer.
 
-Finally, you added yourself to the list of students in the GitHub organization
-using the issue, fork and pull request workflow, enabling you to contribute to
-open source projects in the future.
+Finally, you have added yourself to the list of students in the GitHub
+organization using the issue, fork and pull request workflow, enabling you to
+contribute to open source projects in the future.
 
 Git is a valuable tool for collaborative work but we only scratched the surface.
-Refer to the resources for more useful content.
+Refer to the resources for more useful content!
 
 ### Test your knowledge
 

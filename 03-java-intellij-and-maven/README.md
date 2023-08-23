@@ -52,6 +52,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-java-intellij-and-maven/03-java-intellij-and-maven.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[illustration]:
+  https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
 
 # Java, IntelliJ and Maven
 
@@ -67,7 +69,7 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
+![bg opacity:0.1][illustration]
 
 ## Table of contents
 
@@ -406,33 +408,39 @@ You can find the practical content for this session on
 
 <!-- _class: lead -->
 
-### What did you do?
+### What did you do and learn?
 
-TODO
+In this session, you have installed and configured Java, IntelliJ and Maven. You
+have created a Java project with Maven, added a dependency to a Maven project,
+and built and run a Maven project. You have learned how these tools can help you
+to develop Java applications and share them with other developers.
 
-### What did you learn? (questions)
+Dependencies management is a very important (yet tricky) topic. In the context
+of this course, we will not go any deeper as you will cover in other future
+courses.
+
+### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
-TODO
-
-### What did you learn? (answers)
-
-> Q: TODO  
-> A: TODO
+- How can Java run on all platforms?
+- How can you install and switch between different versions of Java?
+- Why should you ignore some files created by IntelliJ IDEA?
+- What is the purpose of the `pom.xml` file?
+- How can a tool like Maven help you to develop Java applications?
 
 ## What will you do next?
 
 In the next session, you will learn the following topics:
 
-- TODO
+- Java IOs
 
 ## Feedback
 
 Please take a few minutes to give us some feedback about this session. It will
 help us to improve it for the next one!
 
-[GitHub Discussions - Java, IntelliJ and Maven - Feedback][feedback]
+[GitHub Discussions - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too
 slow / too fast, too easy / too difficult, not enough time / too much time,
@@ -442,4 +450,5 @@ You can use reactions to express your opinion on a comment.
 
 ## Sources
 
-- Illustration by []() on [Unsplash]()
+- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
+  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)

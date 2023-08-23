@@ -62,7 +62,7 @@ Everything is presented in the following sessions:
 Please take a few minutes to give us some feedback about this session. It will
 help us to improve it for the next one!
 
-[GitHub Discussions - Practical work 4 - Feedback][feedback]
+[GitHub Discussions - Feedback][feedback]
 
 We are interested to see if the session was too theoretical / too practical, too
 slow / too fast, too easy / too difficult, not enough time / too much time,
