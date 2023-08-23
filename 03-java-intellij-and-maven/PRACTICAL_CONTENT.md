@@ -1,5 +1,7 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-java-intellij-and-maven/PRACTICAL_CONTENT.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-java-intellij-and-maven/03-java-intellij-and-maven-practical-content.pdf
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-java-intellij-and-maven/PRACTICAL_CONTENT.md
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-java-intellij-and-maven/03-java-intellij-and-maven-practical-content.pdf
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Java, IntelliJ and Maven - Practical content

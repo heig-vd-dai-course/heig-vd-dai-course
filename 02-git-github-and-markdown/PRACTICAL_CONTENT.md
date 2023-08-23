@@ -1,5 +1,7 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-git-github-and-markdown/PRACTICAL_CONTENT.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/02-git-github-and-markdown-practical-content.pdf
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-git-github-and-markdown/PRACTICAL_CONTENT.md
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-git-github-and-markdown/02-git-github-and-markdown-practical-content.pdf
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
 # Git, GitHub and Markdown - Practical content
@@ -19,7 +21,11 @@ L. Delafontaine and H. Louis, with the help of Copilot
 
 ## Install Git
 
-Check if your operating system package manager has Git available so you can install it from there (`apt` with Debian/Ubuntu, `brew` for [Brew](https://brew.sh/) or `choco` for [Chocolatey](https://chocolatey.org/) for example)! If not, you can download it and install it manually from the official website.
+Check if your operating system package manager has Git available so you can
+install it from there (`apt` with Debian/Ubuntu, `brew` for
+[Brew](https://brew.sh/) or `choco` for [Chocolatey](https://chocolatey.org/)
+for example)! If not, you can download it and install it manually from the
+official website.
 
 1. Go to <https://git-scm.com/downloads>
 2. Download and install Git
@@ -39,11 +45,16 @@ If you do not have a GitHub account yet, you will need to create one.
 
 ### Create a SSH key
 
-In this section, you will create a SSH key to authenticate to GitHub. If you already have one, you can skip this section. You must have `ssh-keygen` installed on your system.
+In this section, you will create a SSH key to authenticate to GitHub. If you
+already have one, you can skip this section. You must have `ssh-keygen`
+installed on your system.
 
-An SSH key is a pair of keys: a public key and a private key. The public key is used to authenticate to a server, and the private key is used to sign the authentication request.
+An SSH key is a pair of keys: a public key and a private key. The public key is
+used to authenticate to a server, and the private key is used to sign the
+authentication request.
 
-It is required to use the SSH key authentication method to authenticate to GitHub. It is more secure than using a password.
+It is required to use the SSH key authentication method to authenticate to
+GitHub. It is more secure than using a password.
 
 1. Open a terminal
 2. Type `ssh-keygen -t ed25519 -C ""`
@@ -53,30 +64,32 @@ It is required to use the SSH key authentication method to authenticate to GitHu
 6. Type `ssh-add ~/.ssh/id_ed25519`
 7. Type `cat ~/.ssh/id_ed25519.pub`
 
-:warning: **Never share your private key with anyone!** It must be kept secret and confidential, just like a password.
+:warning: **Never share your private key with anyone!** It must be kept secret
+and confidential, just like a password.
 
 ### Set up your GitHub account
 
 In this section, you will set up your GitHub account.
 
-1. Go to 
+1. Go to
 2. Add the public SSH key
 3. Add a profile picture (optional)
 4. Enable two-factor authentication (optional, but highly recommended)
-
 
 ## Create your own GitHub profile README
 
 ### Create a new repository
 
-In this section, you will create a new special repository to set your GitHub profile. This repository is named `.github`. If you already have it, you can skip this section.
+In this section, you will create a new special repository to set your GitHub
+profile. This repository is named `.github`. If you already have it, you can
+skip this section.
 
 ### Clone the repository locally
 
-
 ### Fill your profile
 
-Fill a new file named `profile/README.md` file. This file will be used by GitHub to set your profile.
+Fill a new file named `profile/README.md` file. This file will be used by GitHub
+to set your profile.
 
 ### Commit your changes
 
@@ -88,7 +101,6 @@ Push your changes to the repository.
 
 ### Check the results
 
-
 ### Share your profile in GitHub Discussions
 
 This will notify us that you have completed the exercise.
@@ -96,7 +108,6 @@ This will notify us that you have completed the exercise.
 GitHub Discussions - show and tell
 
 ### Summary
-
 
 ## Add yourself to the list of students in the GitHub organization
 
@@ -128,8 +139,10 @@ GitHub Discussions - show and tell
 
 ## Go further
 
-This is an optional section. You can do it if you have time left. We encourage you to do it nonetheless to learn more about Git and GitHub!
+This is an optional section. You can do it if you have time left. We encourage
+you to do it nonetheless to learn more about Git and GitHub!
 
 - Go in the GitHub Discussions, check the others profiles and give them a star!
 - Follow your classmates!
-- Follow other GitHub users! Can you think of an open source project you like? Follow these projects and/or maintainers!
+- Follow other GitHub users! Can you think of an open source project you like?
+  Follow these projects and/or maintainers!

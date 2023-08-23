@@ -20,7 +20,7 @@ style: |
         --color-headings: #7d8ca3;
     }
     blockquote {
-        font-style: italic; 
+        font-style: italic;
     }
     table {
         width: 100%;
@@ -44,9 +44,12 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-smtp-and-telnet/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-smtp-and-telnet/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-smtp-and-telnet/09-smtp-and-telnet.pdf
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-smtp-and-telnet/README.md
+[web]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-smtp-and-telnet/
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-smtp-and-telnet/09-smtp-and-telnet.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
@@ -59,7 +62,8 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] |
+[PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -70,16 +74,17 @@ _paginate: false
 ## Table of contents
 
 - **[Theoretical content](#theoretical-content)**
-    - A quick reminder about networking: IP and DNS
-    - Electronic messaging protocols: SMTP, POP3 and IMAP
-    - DNS records related to email
-    - The SMTP protocol dig and nslookup
-    - Telnet
+  - A quick reminder about networking: IP and DNS
+  - Electronic messaging protocols: SMTP, POP3 and IMAP
+  - DNS records related to email
+  - The SMTP protocol dig and nslookup
+  - Telnet
 - **[Practical content](#practical-content)**
-    - [What will you do?](#what-will-you-do)
-    - [Find the practical content](#find-the-practical-content)
+  - [What will you do?](#what-will-you-do)
+  - [Find the practical content](#find-the-practical-content)
 
 ---
+
     - Send an email to an SMTP server in a Docker container with Telnet
     - Send an email to an SMTP server in a Docker container with Java
 
@@ -105,13 +110,15 @@ Content
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+_Missing item in the list? Feel free to open a pull request to add it!
+:sparkles:_
 
 #### Resources
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+_Missing item in the list? Feel free to open a pull request to add it!
+:sparkles:_
 
 ## Practical content
 
@@ -119,7 +126,7 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 ### What will you do?
 
-- 
+-
 
 ![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
 ![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
@@ -129,7 +136,8 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 <!-- _class: lead -->
 
-You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-smtp-and-telnet/PRACTICAL_CONTENT.md).
+You can find the practical content for this session on
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-smtp-and-telnet/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 
@@ -147,7 +155,7 @@ TODO
 
 ### What did you learn? (answers)
 
-> Q: TODO    
+> Q: TODO  
 > A: TODO
 
 ## What will you do next?
@@ -158,11 +166,14 @@ In the next session, you will learn the following topics:
 
 ## Feedback
 
-Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
+Please take a few minutes to give us some feedback about this session. It will
+help us to improve it for the next one!
 
 [GitHub Discussions - SMTP and Telnet - Feedback][feedback]
 
-We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
+We are interested to see if the session was too theoretical / too practical, too
+slow / too fast, too easy / too difficult, not enough time / too much time,
+useful / not useful, etc.
 
 You can use reactions to express your opinion on a comment.
 

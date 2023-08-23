@@ -20,7 +20,7 @@ style: |
         --color-headings: #7d8ca3;
     }
     blockquote {
-        font-style: italic; 
+        font-style: italic;
     }
     table {
         width: 100%;
@@ -44,9 +44,12 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-web-infrastructures/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/15-web-infrastructures.pdf
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-web-infrastructures/README.md
+[web]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/15-web-infrastructures.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
@@ -59,7 +62,8 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] |
+[PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -70,28 +74,28 @@ _paginate: false
 ## Table of contents
 
 - **[Theoretical content](#theoretical-content)**
-    - System scalability
-        - Definition
-        - Why and when?
-    - Vertical scaling vs. horizontal scaling
-    - Caching
-        - Client-side caching
-        - Server-side caching
-        - CDN
-        - Expiration and validation
-    - Reverse-proxy and load balancing
-        - Definition
-        - Hardware and software load balancers
-        - Sticky sessions
-        - Round-robin
-        - Least connections
-        - Least response time
-        - Hashing
-    - Content delivery
-    - HTTP and scaling
+  - System scalability
+    - Definition
+    - Why and when?
+  - Vertical scaling vs. horizontal scaling
+  - Caching
+    - Client-side caching
+    - Server-side caching
+    - CDN
+    - Expiration and validation
+  - Reverse-proxy and load balancing
+    - Definition
+    - Hardware and software load balancers
+    - Sticky sessions
+    - Round-robin
+    - Least connections
+    - Least response time
+    - Hashing
+  - Content delivery
+  - HTTP and scaling
 - **[Practical content](#practical-content)**
-    - [What will you do?](#what-will-you-do)
-    - [Find the practical content](#find-the-practical-content)
+  - [What will you do?](#what-will-you-do)
+  - [Find the practical content](#find-the-practical-content)
 
 ## Theoretical content
 
@@ -115,13 +119,15 @@ Content
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+_Missing item in the list? Feel free to open a pull request to add it!
+:sparkles:_
 
 #### Resources
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+_Missing item in the list? Feel free to open a pull request to add it!
+:sparkles:_
 
 ## Practical content
 
@@ -129,7 +135,7 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 ### What will you do?
 
-- 
+-
 
 ![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
 ![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
@@ -139,7 +145,8 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 <!-- _class: lead -->
 
-You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-web-infrastructures/PRACTICAL_CONTENT.md).
+You can find the practical content for this session on
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-web-infrastructures/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 
@@ -157,7 +164,7 @@ TODO
 
 ### What did you learn? (answers)
 
-> Q: TODO    
+> Q: TODO  
 > A: TODO
 
 ## What will you do next?
@@ -168,11 +175,14 @@ In the next session, you will learn the following topics:
 
 ## Feedback
 
-Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
+Please take a few minutes to give us some feedback about this session. It will
+help us to improve it for the next one!
 
 [GitHub Discussions - Web infrastructures - Feedback][feedback]
 
-We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
+We are interested to see if the session was too theoretical / too practical, too
+slow / too fast, too easy / too difficult, not enough time / too much time,
+useful / not useful, etc.
 
 You can use reactions to express your opinion on a comment.
 

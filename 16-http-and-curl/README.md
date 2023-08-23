@@ -20,7 +20,7 @@ style: |
         --color-headings: #7d8ca3;
     }
     blockquote {
-        font-style: italic; 
+        font-style: italic;
     }
     table {
         width: 100%;
@@ -44,9 +44,11 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-http-and-curl/README.md
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-http-and-curl/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/10-http-and-curl.pdf
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/10-http-and-curl.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
@@ -59,14 +61,14 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] |
+[PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger</small>
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720&q=80)
-
 
     - The history of HTTP (and HTML)
         - HTTP versions
@@ -79,7 +81,7 @@ _paginate: false
         - HTTP caching
         - HTTP sessions (stateful vs. stateless)
         - HTTP cookies
-        - 
+        -
     - Interact with HTTP
         - The browser
         - Postman
@@ -90,15 +92,13 @@ _paginate: false
 ## Table of contents
 
 - **[Theoretical content](#theoretical-content)**
-    - The history of HTTP (and HTML)
-    - The HTTP protocol
-    - Interact with HTTP
-    - HTTP in Java
+  - The history of HTTP (and HTML)
+  - The HTTP protocol
+  - Interact with HTTP
+  - HTTP in Java
 - **[Practical content](#practical-content)**
-    - [What will you do?](#what-will-you-do)
-    - [Find the practical content](#find-the-practical-content)
-
-
+  - [What will you do?](#what-will-you-do)
+  - [Find the practical content](#find-the-practical-content)
 
 ---
 
@@ -131,17 +131,19 @@ Content
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+_Missing item in the list? Feel free to open a pull request to add it!
+:sparkles:_
 
 #### Resources
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it! :sparkles:_
+_Missing item in the list? Feel free to open a pull request to add it!
+:sparkles:_
 
 ### What will you do?
 
-- 
+-
 
 ![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
 ![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
@@ -151,7 +153,8 @@ _Missing item in the list? Feel free to open a pull request to add it! :sparkles
 
 <!-- _class: lead -->
 
-You can find the practical content for this session on [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-http-and-curl/PRACTICAL_CONTENT.md).
+You can find the practical content for this session on
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-http-and-curl/PRACTICAL_CONTENT.md).
 
 ## Conclusion
 
@@ -169,7 +172,7 @@ TODO
 
 ### What did you learn? (answers)
 
-> Q: TODO    
+> Q: TODO  
 > A: TODO
 
 ## What will you do next?
@@ -180,11 +183,14 @@ In the next session, you will learn the following topics:
 
 ## Feedback
 
-Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
+Please take a few minutes to give us some feedback about this session. It will
+help us to improve it for the next one!
 
 [GitHub Discussions - HTTP and cURL - Feedback][feedback]
 
-We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
+We are interested to see if the session was too theoretical / too practical, too
+slow / too fast, too easy / too difficult, not enough time / too much time,
+useful / not useful, etc.
 
 You can use reactions to express your opinion on a comment.
 

@@ -20,7 +20,7 @@ style: |
         --color-headings: #7d8ca3;
     }
     blockquote {
-        font-style: italic; 
+        font-style: italic;
     }
     table {
         width: 100%;
@@ -44,9 +44,12 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-semester-review-and-exam-preparation/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-semester-review-and-exam-preparation/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-semester-review-and-exam-preparation/20-semester-review-and-exam-preparation.pdf
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-semester-review-and-exam-preparation/README.md
+[web]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-semester-review-and-exam-preparation/
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-semester-review-and-exam-preparation/20-semester-review-and-exam-preparation.pdf
 [video]: #
 [feedback]: https://github.com/orgs/heig-vd-dai-course/discussions/1
 
@@ -59,7 +62,8 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
+[Markdown][markdown] | [Web][web] |
+[PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -91,7 +95,9 @@ _paginate: false
 
 ### Previous exams
 
-All previous exams are available in the [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/20-semester-review-and-exam-preparation/archives) folder of the course repository.
+All previous exams are available in the
+[`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/20-semester-review-and-exam-preparation/archives)
+folder of the course repository.
 
 ## Questions
 
@@ -105,14 +111,18 @@ Do you have any questions?
 
 ## Feedback
 
-Please take a few minutes to give us some feedback about this session. It will help us to improve it for the next one!
+Please take a few minutes to give us some feedback about this session. It will
+help us to improve it for the next one!
 
 [GitHub Discussions - Semester review and exam preparation - Feedback][feedback]
 
-We are interested to see if the session was too theoretical / too practical, too slow / too fast, too easy / too difficult, not enough time / too much time, useful / not useful, etc.
+We are interested to see if the session was too theoretical / too practical, too
+slow / too fast, too easy / too difficult, not enough time / too much time,
+useful / not useful, etc.
 
 You can use reactions to express your opinion on a comment.
 
 ## Sources
 
-- Illustration by [NASA](https://unsplash.com/@nasa) on [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
+- Illustration by [NASA](https://unsplash.com/@nasa) on
+  [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
