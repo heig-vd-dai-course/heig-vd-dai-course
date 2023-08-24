@@ -85,11 +85,16 @@ _paginate: false
 
 ## Why do you have this course
 
-This course defines the basics of network communication and how all these communications are programmed.
+This course defines the basics of network communication and how all these
+communications are programmed.
 
-It will provide you with the theoretical and practical elements to know how to program network applications, how to interact with them and the different elements to pay attention to.
+It will provide you with the theoretical and practical elements to know how to
+program network applications, how to interact with them and the different
+elements to pay attention to.
 
-Whether you are in security, data science, embedded or networking, you are going to be interacting with elements that communicate over the network. This course will give you a solid grounding in this world.
+Whether you are in security, data science, embedded or networking, you are going
+to be interacting with elements that communicate over the network. This course
+will give you a solid grounding in this world.
 
 ## What to expect to learn from this course
 
@@ -100,9 +105,9 @@ Whether you are in security, data science, embedded or networking, you are going
 - [Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
 - [Descriptif de module](https://gaps.heig-vd.ch/consultation/fiches/mv/mv.php?id=1905)
 - [Programme de formation](https://gaps.heig-vd.ch/consultation/teachingplans/)
-- 3 ECTS credits = 90 hours of work
+- 3 ECTS credits = ~75-90 hours
   - 48 hours in class (= 64 periods of 45 minutes)
-  - 42 hours outside of the class - We try our best to ensure you do not have to
+  - ~27-42 hours outside of the class - We try our best to ensure you do not have to
     work that much outside of the class
 
 ---
@@ -253,10 +258,10 @@ We accept issues and pull requests if you spot anything weird!
 
 The course material is available in several formats:
 
-- **Markdown format**. You can read it directly on GitHub or on your computer with
-  your favorite text editor.
-- **PDF format**. You can download it from GitHub and read it on your computer or
-  print it.
+- **Markdown format**. You can read it directly on GitHub or on your computer
+  with your favorite text editor.
+- **PDF format**. You can download it from GitHub and read it on your computer
+  or print it.
 - **Web format**. You can read it on GitHub or on the course website (only the
   slides are available on the web).
 
@@ -287,8 +292,8 @@ between them. Use the one you prefer!
 :arrow_right: If you have a problem with the course, we will do our best to fix
 it.
 
-We will take presences during this course. If you are done, you are free to
-go. However, we would appreciate if you try to help your classmates instead!
+We will take presences during this course. If you are done, you are free to go.
+However, we would appreciate if you try to help your classmates instead!
 
 ### Responsibilities and expectations
 

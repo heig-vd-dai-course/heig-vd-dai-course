@@ -85,8 +85,8 @@ _paginate: false
 
 ---
 
-  - Encoding and character sets
-    - Reading and writing files
+- Encoding and character sets
+  - Reading and writing files
 
 ## _Why is this important for network programming?_
 
@@ -141,9 +141,12 @@ TODO
 
 ## Was it easy? Was it hard?
 
-Can you let us know what was easy and what was difficult for you during this session?
+Can you let us know what was easy and what was difficult for you during this
+session?
 
-This will help us to improve the course and adapt the content to your needs. If we notice some recurring difficulties, we will add some content to the course to help you.
+This will help us to improve the course and adapt the content to your needs. If
+we notice some recurring difficulties, we will add some content to the course to
+help you.
 
 :arrow_right: [GitHub Discussions][discussions]
 
@@ -157,4 +160,5 @@ In the next session, you will learn the following topics:
 
 ## Sources
 
-- Main illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin) on [Unsplash](https://unsplash.com/photos/4h0HqC3K4-c)
+- Main illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin)
+  on [Unsplash](https://unsplash.com/photos/4h0HqC3K4-c)

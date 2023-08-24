@@ -46,11 +46,13 @@ headingDivider: 4
 
 [markdown]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-conclusion-to-part-4/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-conclusion-to-part-4/
+[web]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-conclusion-to-part-4/
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-conclusion-to-part-4/23-conclusion-to-part-4.pdf
 [video]: #
-[feedback]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
+[feedback]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
 [illustration]:
   https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
@@ -82,7 +84,7 @@ _paginate: false
 
 <!-- _class: lead -->
 
-<!-- 
+<!--
 All previous evaluations are available in the
 [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/archives)
 folder of the course repository.
@@ -96,7 +98,8 @@ Do you have any questions?
 
 ## Feedback
 
-Your feedback helps us know **what what you liked and what you disliked** in your learning experience. **The feedback is anonymous**.
+Your feedback helps us know **what what you liked and what you disliked** in
+your learning experience. **The feedback is anonymous**.
 
 We would be very grateful if you could take a few minutes to fill it. Thank you!
 

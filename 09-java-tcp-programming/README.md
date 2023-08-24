@@ -137,9 +137,12 @@ TODO
 
 ## Was it easy? Was it hard?
 
-Can you let us know what was easy and what was difficult for you during this session?
+Can you let us know what was easy and what was difficult for you during this
+session?
 
-This will help us to improve the course and adapt the content to your needs. If we notice some recurring difficulties, we will add some content to the course to help you.
+This will help us to improve the course and adapt the content to your needs. If
+we notice some recurring difficulties, we will add some content to the course to
+help you.
 
 :arrow_right: [GitHub Discussions][discussions]
 

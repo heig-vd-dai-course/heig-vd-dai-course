@@ -15,17 +15,17 @@ Do not know where to start? Have a look at the
 
 ## Course planning and material
 
-This course is equivalent to 3 ECTS credits = 90 hours of work.
+This course is equivalent to 3 ECTS credits = ~75-90 hours of work.
 
 - 48 hours in class (= 64 periods of 45 minutes)
-- 42 hours outside of the class - We try our best to ensure you do not have to
+- ~27-42 hours outside of the class - We try our best to ensure you do not have to
   work that much outside of the class
 
 64 periods in class are planned for this course, divided in 4 main parts:
 
-- [Part 1 - A CLI to process files (15 periods)](#part-1---a-cli-to-process-files-15-periods)
-- [Part 2 - First network application (18 periods)](#part-2---first-network-application-18-periods)
-- [Part 3 - Second network application (16 periods)](#part-3---second-network-application-16-periods)
+- [Part 1 - Input/output processing (15 periods)](#inputoutput-processing-15-periods)
+- [Part 2 - Network programming with TCP (18 periods)](#network-programming-with-tcp-18-periods)
+- [Part 3 - Network programming with UDP (16 periods)](#part-3---network-programming-with-udp-16-periods)
 - [Part 4 - Web infrastructures (12 periods)](#part-4---web-infrastructures-12-periods)
 
 The entire course planning for the semester is available at
@@ -43,7 +43,7 @@ The entire course planning for the semester is available at
 ### Input/output processing (15 periods)
 
 2. **Introduction to part 1**
-    - Material: [Markdown](./02-introduction-to-part-1/README.md) |
+   - Material: [Markdown](./02-introduction-to-part-1/README.md) |
      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-introduction-to-part-1/)
      |
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-introduction-to-part-1/02-introduction-to-part-1.pdf)<!-- | [Video (in French)]() -->
@@ -58,7 +58,8 @@ The entire course planning for the semester is available at
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-practical-content.pdf)
 4. **Java, IntelliJ IDEA and Maven**
    - Time in class: 1 period
-   - Theoretical content: [Markdown](./04-java-intellij-idea-and-maven/README.md) |
+   - Theoretical content:
+     [Markdown](./04-java-intellij-idea-and-maven/README.md) |
      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/)
      |
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven.pdf)<!-- | [Video (in French)]() -->
@@ -84,13 +85,13 @@ The entire course planning for the semester is available at
      |
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/07-conclusion-to-part-1.pdf)<!-- | [Video (in French)]() -->
    - [Feedback][feedback-1]
-0. **Evaluation 1**
+8. **Evaluation 1**
    - Time in class: 2 periods
 
 ### Network programming with TCP (18 periods)
 
 8. **Introduction to part 2**
-    - Material: [Markdown](./08-introduction-to-part-2/README.md) |
+   - Material: [Markdown](./08-introduction-to-part-2/README.md) |
      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-introduction-to-part-2/)
      |
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-introduction-to-part-2/08-introduction-to-part-2.pdf)<!-- | [Video (in French)]() -->
@@ -105,21 +106,22 @@ The entire course planning for the semester is available at
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-java-tcp-programming/09-java-tcp-programming-practical-content.pdf)
 10. **Docker and Docker Compose**
     - Time in class: 2 periods
-    - Theoretical content: [Markdown](./10-docker-and-docker-compose/README.md) |
-     [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/)
-     |
-     [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose.pdf)<!-- | [Video (in French)]() -->
+    - Theoretical content: [Markdown](./10-docker-and-docker-compose/README.md)
+      |
+      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/)
+      |
+      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose.pdf)<!-- | [Video (in French)]() -->
     - Practical content:
-     [Markdown](./10-docker-and-docker-compose/PRACTICAL_CONTENT.md) |
-     [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose-practical-content.pdf)
+      [Markdown](./10-docker-and-docker-compose/PRACTICAL_CONTENT.md) |
+      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose-practical-content.pdf)
 11. **SMTP and Telnet**
     - Time in class: 1 period
     - Theoretical content: [Markdown](./11-smtp-and-telnet/README.md) |
-     [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/)
-     |
-     [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet.pdf)<!-- | [Video (in French)]() -->
+      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/)
+      |
+      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet.pdf)<!-- | [Video (in French)]() -->
     - Practical content: [Markdown](./11-smtp-and-telnet/PRACTICAL_CONTENT.md) |
-     [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet-practical-content.pdf)
+      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet-practical-content.pdf)
 12. **SSH and SCP**
     - Time in class: 1 period
     - Theoretical content: [Markdown](./12-ssh-and-scp/README.md) |
@@ -139,16 +141,16 @@ The entire course planning for the semester is available at
       |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-conclusion-to-part-2/14-conclusion-to-part-2.pdf)<!-- | [Video (in French)]() -->
     - [Feedback][feedback-2]
-0. **Evaluation 2**
+15. **Evaluation 2**
     - Time in class: 2 periods
 
 ### Part 3 - Network programming with UDP (16 periods)
 
 15. **Introduction to part 3**
     - Material: [Markdown](./15-introduction-to-part-3/README.md) |
-     [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-introduction-to-part-3/)
-     |
-     [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-introduction-to-part-3/15-introduction-to-part-3.pdf)<!-- | [Video (in French)]() -->
+      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-introduction-to-part-3/)
+      |
+      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-introduction-to-part-3/15-introduction-to-part-3.pdf)<!-- | [Video (in French)]() -->
 16. **Java UDP programming**
     - Time in class: 2 + 2 periods
     - Theoretical content: [Markdown](./16-java-udp-programming/README.md) |
@@ -169,16 +171,16 @@ The entire course planning for the semester is available at
       |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-conclusion-to-part-3/18-conclusion-to-part-3.pdf)<!-- | [Video (in French)]() -->
     - [Feedback][feedback-3]
-0. **Evaluation 3**
+19. **Evaluation 3**
     - Time in class: 2 periods
 
 ### Part 4 - Web infrastructures (12 periods)
 
 19. **Introduction to part 3**
     - Material: [Markdown](./19-introduction-to-part-4/README.md) |
-     [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-4/)
-     |
-     [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-4/19-introduction-to-part-4.pdf)<!-- | [Video (in French)]() -->
+      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-4/)
+      |
+      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-4/19-introduction-to-part-4.pdf)<!-- | [Video (in French)]() -->
 20. **HTTP and cURL**
     - Time in class: 2 periods
     - Theoretical content: [Markdown](./20-http-and-curl/README.md) |
@@ -207,7 +209,7 @@ The entire course planning for the semester is available at
       |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-conclusion-to-part-4/23-conclusion-to-part-4.pdf)<!-- | [Video (in French)]() -->
     - [Feedback][feedback-4]
-0. **Evaluation 4**
+24. **Evaluation 4**
     - Time in class: 2 periods
 
 ### Conclusion (2 periods)

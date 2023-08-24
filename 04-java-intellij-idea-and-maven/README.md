@@ -410,10 +410,10 @@ You can find the practical content for this session on
 
 ### What did you do and learn?
 
-In this session, you have installed and configured Java, IntelliJ IDEA and Maven. You
-have created a Java project with Maven, added a dependency to a Maven project,
-and built and run a Maven project. You have learned how these tools can help you
-to develop Java applications and share them with other developers.
+In this session, you have installed and configured Java, IntelliJ IDEA and
+Maven. You have created a Java project with Maven, added a dependency to a Maven
+project, and built and run a Maven project. You have learned how these tools can
+help you to develop Java applications and share them with other developers.
 
 Dependencies management is a very important (yet tricky) topic. In the context
 of this course, we will not go any deeper as you will cover in other future
@@ -431,9 +431,12 @@ At this point, you should be able to answer the following questions:
 
 ## Was it easy? Was it hard?
 
-Can you let us know what was easy and what was difficult for you during this session?
+Can you let us know what was easy and what was difficult for you during this
+session?
 
-This will help us to improve the course and adapt the content to your needs. If we notice some recurring difficulties, we will add some content to the course to help you.
+This will help us to improve the course and adapt the content to your needs. If
+we notice some recurring difficulties, we will add some content to the course to
+help you.
 
 :arrow_right: [GitHub Discussions][discussions]
 
