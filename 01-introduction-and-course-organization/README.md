@@ -51,7 +51,6 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization.pdf
 [video]: #
-[feedback]: #
 [illustration]:
   https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&h=720
 
@@ -65,7 +64,7 @@ _paginate: false
 <https://github.com/heig-vd-dai-course>
 
 [Markdown][markdown] | [Web][web] |
-[PDF][pdf]<!-- | [Video (in French)][video]--> | [Feedback][feedback]
+[PDF][pdf]<!-- | [Video (in French)][video]-->
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -73,77 +72,24 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Agenda
+## Table of contents
 
-- **Background**
-  - [Who are we?](#who-are-we)
-  - [What do we do at the HEIG-VD and why](#what-do-we-do-at-the-heig-vd-and-why)
-- **Course objectives and organization**
-  - [What to expect to learn from this course](#what-to-expect-to-learn-from-this-course)
-  - [Where to find the course material](#where-to-find-the-course-material)
-  - [Communication channels](#communication-channels)
-  - [Evaluation](#evaluation)
+- **[Why do you have this course](#why-do-you-have-this-course)**
+- **[What to expect to learn from this course](#what-to-expect-to-learn-from-this-course)**
+- **[Course planning](#course-planning---calendrier-académique)**
+- **[Course sequence](#course-sequence)**
+- **[Evaluation](#evaluation)**
+- **[Communication channels](#communication-channels)**
+- **[Where to find the course material](#where-to-find-the-course-material)**
+- **[Our wishes for this course](#our-wishes-for-this-course)**
 
-## Who are we?
+## Why do you have this course
 
-<!-- _class: lead -->
+This course defines the basics of network communication and how all these communications are programmed.
 
-### Ludovic Delafontaine
+It will provide you with the theoretical and practical elements to know how to program network applications, how to interact with them and the different elements to pay attention to.
 
-I work at HEIG-VD as an applied research and development engineer since 2020.
-Here is my background:
-
-- 2006: Worms 4 Mayhem (modding)
-- 2011-2015: ETML (CFC + MPTi)
-- 2015-2019: HEIG-VD (BSc)
-- 2020-now: HEIG-VD (aR&D)
-- 2022-now: Artios (own company)
-
-![bg right:40%](./images/worms-4-mayhem-pc-boxart.jpg)
-
-#### Expertise
-
-- Software engineering
-- System administration
-- Cloud computing
-- DevOps/MLOps
-- Best/proven practices (reviewing, testing, CI/CD, workflows, etc.)
-- Startup projects (idea, business model, MVP, etc.)
-
-GitLab: [@ludelafo](https://gitlab.com/ludelafo)  
-GitHub: [@ludelafo](https://github.com/ludelafo)
-
-### Hadrien Louis
-
-TODO
-
-![bg right:40%](https://picsum.photos/720?image=3)
-
-## What do we do at the HEIG-VD and why
-
-![bg w:100%](./images/what-do-we-do.svg)
-
----
-
-Multiple startups were created at the HEIG-VD:
-
-- [BoxUp SNC](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik/communaute-entrepreneurs/boxup-snc) -
-  Solution de partage de matériel de sport et de loisir par application mobile.
-- [Buildigo SA](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik/communaute-entrepreneurs/buildigo-sa) -
-  Trouvez des artisans de confiance proches de chez vous
-- [Lambda Health System SA](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik/communaute-entrepreneurs/lambda-health-system) -
-  Dispositif de rééducation des membres inférieurs.
-- [strong.codes](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik/communaute-entrepreneurs/strong-codes) -
-  Protection contre le "reverse-engineering" logiciel.
-- ...
-
----
-
-<!-- _class: lead -->
-
-You can start your own company at the HEIG-VD! The team at
-[LA FABRiꓘ](https://heig-vd.ch/rad/innovation-entrepreneuriat/la-fabrik) is very
-helpful and nice, feel free to contact them!
+Whether you are in security, data science, embedded or networking, you are going to be interacting with elements that communicate over the network. This course will give you a solid grounding in this world.
 
 ## What to expect to learn from this course
 
@@ -227,67 +173,13 @@ You will learn the following technologies during this course:
 - Network utilities (`curl`, `dig`, `nslookup`, etc.)
 - The terminal :heart:
 
-## Our wishes for this course
-
-<!-- _class: lead -->
-
-### What we want this course to be
-
-- A place to learn
-- A place to experiment
-- A place to share
-- A place to have fun
-- A place were you do not have to remember things by heart - We want you to
-  understand the whys and wherefores and be able to do things
-
-:arrow_right: A place where you do not loose your time (efficient and useful)
-
-### What we don't want this course to be
-
-- A place you don't want to come
-- A place you don't feel comfortable/safe
-- A place where you can't ask questions
-- A place where you can't take anything away
-
-:arrow_right: If you have a problem with the course, we will do our best to fix
-it.
-
-We will take presences during this course but if you are done, you are free to
-go. However, we would appreciate if you try to help your classmates instead!
-
-## Where to find the course material
-
-**Everything** will be on the GitHub organization created for this course:
-<https://github.com/heig-vd-dai-course>.
-
-More specifically, the course material is available in the
-[`heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
-Git repository.
-
-We will not use Microsoft Teams nor CyberLearn. We want to keep it simple and
-efficient for you, and for us. One place to find it all.
-
-_PS: We accept issues and pull requests if you spot anything weird!
-:slightly_smiling_face:_
-
-## Communication channels
-
-Feel free to use any of these communication channels for any kind of questions
-related to the course:
-
-- GitHub Discussions (you will experiment these very soon)
-- In person
-- Email
-  - [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
-  - [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
-
 ## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
 
 64 periods are planned for this course, divided in 4 main parts:
 
-- Part 1 - A CLI to process files (15 periods)
-- Part 2 - First network application (18 periods)
-- Part 3 - Second network application (16 periods)
+- Part 1 - Input/output processing (15 periods)
+- Part 2 - Network programming with TCP (18 periods)
+- Part 3 - Network programming with UDP (16 periods)
 - Part 4 - Web infrastructures (12 periods)
 
 The entire course planning for the semester is available at
@@ -301,7 +193,7 @@ The entire course planning for the semester is available at
    - You will be able to experiment the theoretical content
 3. Practical work
    - The theoretical and practical content are meant to help you
-4. Feedback and discussions (few minutes - very important to us)
+4. Feedback and discussions (very important to us)
    - You will be able to give feedback and share your experience
 
 ## Evaluation
@@ -331,7 +223,74 @@ know as soon as possible if you have any difficulties.
 If you have trouble with your group, please let us know as soon as possible. We
 will do our best to help you.
 
-## Responsibilities and expectations
+## Communication channels
+
+Feel free to use any of these communication channels for any kind of questions
+related to the course:
+
+- GitHub Discussions (you will experiment these very soon)
+- In person
+- Email
+  - [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
+  - [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
+
+## Where to find the course material
+
+**Everything** will be on the GitHub organization created for this course:
+<https://github.com/heig-vd-dai-course>.
+
+More specifically, the course material is available in the
+[`heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+Git repository.
+
+We will not use Microsoft Teams nor CyberLearn. We want to keep it simple and
+efficient for you, and for us. One place to find it all.
+
+We accept issues and pull requests if you spot anything weird!
+:slightly_smiling_face:
+
+---
+
+The course material is available in several formats:
+
+- **Markdown format**. You can read it directly on GitHub or on your computer with
+  your favorite text editor.
+- **PDF format**. You can download it from GitHub and read it on your computer or
+  print it.
+- **Web format**. You can read it on GitHub or on the course website (only the
+  slides are available on the web).
+
+These formats are generated from the same source files. There are no differences
+between them. Use the one you prefer!
+
+## Our wishes for this course
+
+<!-- _class: lead -->
+
+### What we want this course to be
+
+- A place to learn
+- A place to experiment and where it is OK to make mistakes
+- A place to share and discuss
+- A place where you are able to do things and master them
+- A place where you can express your opinion
+
+:arrow_right: A place where you do not loose your time (efficient and useful)
+
+### What we don't want this course to be
+
+- A place you don't want to come
+- A place you don't feel comfortable/safe
+- A place where you can't ask questions
+- A place where you can't take anything away
+
+:arrow_right: If you have a problem with the course, we will do our best to fix
+it.
+
+We will take presences during this course. If you are done, you are free to
+go. However, we would appreciate if you try to help your classmates instead!
+
+### Responsibilities and expectations
 
 - The teaching staff responsibilities:
   - You have acquired the necessary knowledge of this course
@@ -378,16 +337,6 @@ you can, we recommend you to try a Linux distribution (Ubuntu or Debian) for
 this course, either baremetal or in Windows Subsystem for Linux (WSL). It will
 be useful in your future to have a bit of experience with it as well.
 
-## _"I'm a embedded/network/security/data science engineer, why do I have this course?"_
-
-Network communication is everywhere. You will need to communicate with other
-devices, servers, etc. and they communicate between them as well.
-
-This course sets the basis for the rest of your studies. You will need to know
-how to communicate with other devices, how to send and receive data, how to
-encode it, etc. This course will give you the necessary knowledge to understand
-how it works and how to do it.
-
 ## _"I have an ARM computer, is this an issue?"_
 
 If you have an ARM computer (Apple Silicon M1/M2 for example), some parts of the
@@ -410,19 +359,6 @@ Do you have any questions?
 
 - [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/) -
   Use version 2 of WSL.
-
-## Feedback
-
-Please take a few minutes to give us some feedback about this session. It will
-help us to improve it for the next one!
-
-[GitHub Discussions - Feedback][feedback]
-
-We are interested to see if the session was too theoretical / too practical, too
-slow / too fast, too easy / too difficult, not enough time / too much time,
-useful / not useful, etc.
-
-You can use reactions to express your opinion on a comment.
 
 ## Sources
 
