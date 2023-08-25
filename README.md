@@ -1,10 +1,5 @@
 # HEIG-VD DAI Course [![License](https://img.shields.io/github/license/heig-vd-dai-course/heig-vd-dai-course)](./LICENSE.md)
 
-[feedback-1]: #
-[feedback-2]: #
-[feedback-3]: #
-[feedback-4]: #
-
 The main repository for the DAI course (course material and discussions) at
 [HEIG-VD](https://heig-vd.ch), Switzerland.
 
@@ -43,12 +38,13 @@ The entire course planning for the semester is available at
 ### Input/output processing (15 periods)
 
 2. **Introduction to part 1**
+   - Time in class: 1 period
    - Material: [Markdown](./02-introduction-to-part-1/README.md) |
      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-introduction-to-part-1/)
      |
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-introduction-to-part-1/02-introduction-to-part-1.pdf)<!-- | [Video (in French)]() -->
 3. **Git, GitHub and Markdown**
-   - Time in class: 1 + 1 periods
+   - Time in class: 1 period
    - Theoretical content: [Markdown](./03-git-github-and-markdown/README.md) |
      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/)
      |
@@ -84,19 +80,19 @@ The entire course planning for the semester is available at
      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/)
      |
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/07-conclusion-to-part-1.pdf)<!-- | [Video (in French)]() -->
-   - [Feedback][feedback-1]
 8. **Evaluation 1**
    - Time in class: 2 periods
 
 ### Network programming with TCP (18 periods)
 
 8. **Introduction to part 2**
+   - Time in class: 1 period
    - Material: [Markdown](./08-introduction-to-part-2/README.md) |
      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-introduction-to-part-2/)
      |
      [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-introduction-to-part-2/08-introduction-to-part-2.pdf)<!-- | [Video (in French)]() -->
 9. **Java TCP programming**
-   - Time in class: 2 + 2 periods
+   - Time in class: 1 + 2 periods
    - Theoretical content: [Markdown](./09-java-tcp-programming/README.md) |
      [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-java-tcp-programming/)
      |
@@ -140,19 +136,19 @@ The entire course planning for the semester is available at
       [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-conclusion-to-part-2/)
       |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-conclusion-to-part-2/14-conclusion-to-part-2.pdf)<!-- | [Video (in French)]() -->
-    - [Feedback][feedback-2]
 15. **Evaluation 2**
     - Time in class: 2 periods
 
 ### Part 3 - Network programming with UDP (16 periods)
 
 15. **Introduction to part 3**
+    - Time in class: 1 period
     - Material: [Markdown](./15-introduction-to-part-3/README.md) |
       [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-introduction-to-part-3/)
       |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-introduction-to-part-3/15-introduction-to-part-3.pdf)<!-- | [Video (in French)]() -->
 16. **Java UDP programming**
-    - Time in class: 2 + 2 periods
+    - Time in class: 1 + 2 periods
     - Theoretical content: [Markdown](./16-java-udp-programming/README.md) |
       [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-java-udp-programming/)
       |
@@ -161,7 +157,7 @@ The entire course planning for the semester is available at
       [Markdown](./16-java-udp-programming/PRACTICAL_CONTENT.md) |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-java-udp-programming/16-java-udp-programming-practical-content.pdf)
 17. **Practical work 3**
-    - Time in class: 2 + 2 + 2 + 2 (+ 2) periods
+    - Time in class: 2 + 2 + 2 + 2 periods
     - Material: [Markdown](./17-practical-work-3/README.md) |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-practical-work-3/17-practical-work-3.pdf)
 18. **Conclusion to part 3 + practical work review + feedback**
@@ -170,19 +166,19 @@ The entire course planning for the semester is available at
       [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-conclusion-to-part-3/)
       |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-conclusion-to-part-3/18-conclusion-to-part-3.pdf)<!-- | [Video (in French)]() -->
-    - [Feedback][feedback-3]
 19. **Evaluation 3**
     - Time in class: 2 periods
 
 ### Part 4 - Web infrastructures (12 periods)
 
 19. **Introduction to part 3**
+    - Time in class: 1 period
     - Material: [Markdown](./19-introduction-to-part-4/README.md) |
       [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-4/)
       |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-4/19-introduction-to-part-4.pdf)<!-- | [Video (in French)]() -->
 20. **HTTP and cURL**
-    - Time in class: 2 periods
+    - Time in class: 1 period
     - Theoretical content: [Markdown](./20-http-and-curl/README.md) |
       [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/)
       |
@@ -199,7 +195,7 @@ The entire course planning for the semester is available at
       [Markdown](./21-web-infrastructures/PRACTICAL_CONTENT.md) |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-web-infrastructures/21-web-infrastructures-practical-content.pdf)
 22. **Practical work 4**
-    - Time in class: 2 + 2 (+ 2) periods
+    - Time in class: 2 + 2 periods
     - Theoretical content: [Markdown](./22-practical-work-4/README.md) |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-practical-work-4/22-practical-work-4.pdf)
 23. **Conclusion to part 4 + practical work review + feedback**
@@ -208,7 +204,6 @@ The entire course planning for the semester is available at
       [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-conclusion-to-part-4/)
       |
       [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-conclusion-to-part-4/23-conclusion-to-part-4.pdf)<!-- | [Video (in French)]() -->
-    - [Feedback][feedback-4]
 24. **Evaluation 4**
     - Time in class: 2 periods
 
