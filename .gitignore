@@ -1,4 +1,3 @@
-
 ## Linux
 
 # Temporary files
@@ -9,7 +8,7 @@
 # Files created by macOS Finder
 .DS_Store
 
-## Marp
+## Marp and Pandoc
 
 # Outputs
 *.html

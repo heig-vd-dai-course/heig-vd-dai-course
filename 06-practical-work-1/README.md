@@ -2,8 +2,9 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/README.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-practical-work-1/06-practical-work-1.pdf
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
 
-# Practical work 1 - A CLI to process files
+# Practical work 1
 
 <https://github.com/heig-vd-dai-course>
 
@@ -119,14 +120,13 @@ Everything is presented in the following sessions:
 - [Java, IntelliJ IDEA and Maven](../04-java-intellij-idea-and-maven/README.md)
 - [Java IOs](../05-java-ios/README.md)
 
-## Was it easy? Was it hard?
+## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-session?
+chapter?
 
 This will help us to improve the course and adapt the content to your needs. If
-we notice some recurring difficulties, we will add some content to the course to
-help you.
+we notice some difficulties, we will come back to you to help you.
 
 :arrow_right: [GitHub Discussions][discussions]
 

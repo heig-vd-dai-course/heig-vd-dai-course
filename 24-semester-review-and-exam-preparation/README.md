@@ -94,11 +94,13 @@ _paginate: false
 
 <!-- _class: lead -->
 
+<!--
 ### Previous exams
 
 All previous exams are available in the
-[`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/24-semester-review-and-exam-preparation/archives)
+[`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
+-->
 
 ## Questions
 

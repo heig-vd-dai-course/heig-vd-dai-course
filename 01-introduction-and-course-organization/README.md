@@ -107,8 +107,8 @@ will give you a solid grounding in this world.
 - [Programme de formation](https://gaps.heig-vd.ch/consultation/teachingplans/)
 - 3 ECTS credits = ~75-90 hours
   - 48 hours in class (= 64 periods of 45 minutes)
-  - ~27-42 hours outside of the class - We try our best to ensure you do not have to
-    work that much outside of the class
+  - ~27-42 hours outside of the class - We try our best to ensure you do not
+    have to work that much outside of the class
 
 ---
 
@@ -369,4 +369,3 @@ Do you have any questions?
 
 - Main illustration by [NASA](https://unsplash.com/@nasa) on
   [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
-- Worms 4 Mayhem Boxart by [Team17](https://www.team17.com)

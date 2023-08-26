@@ -85,7 +85,7 @@ _paginate: false
 
 <!--
 All previous evaluations are available in the
-[`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/archives)
+[`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
 -->
 

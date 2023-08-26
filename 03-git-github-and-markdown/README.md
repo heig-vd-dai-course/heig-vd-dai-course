@@ -51,7 +51,7 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown.pdf
 [video]: #
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
 [illustration]:
   https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
 
@@ -642,14 +642,13 @@ At this point, you should be able to answer the following questions:
 - What is a tag? What is the difference with a commit?
 - Describe a typical Git workflow.
 
-## Was it easy? Was it hard?
+## Finished? Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-session?
+chapter?
 
 This will help us to improve the course and adapt the content to your needs. If
-we notice some recurring difficulties, we will add some content to the course to
-help you.
+we notice some difficulties, we will come back to you to help you.
 
 :arrow_right: [GitHub Discussions][discussions]
 
