@@ -50,7 +50,7 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-ssh-and-scp/12-ssh-and-scp.pdf
 [video]: #
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 

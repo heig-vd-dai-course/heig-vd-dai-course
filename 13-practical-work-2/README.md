@@ -2,7 +2,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-practical-work-2/README.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-practical-work-2/13-practical-work-2.pdf
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 
 # Practical work 2 - First network application
 

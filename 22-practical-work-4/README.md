@@ -2,7 +2,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-practical-work-4/README.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-practical-work-4/22-practical-work-4.pdf
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/1
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 
 # Practical work 4 - Web infrastructures
 
