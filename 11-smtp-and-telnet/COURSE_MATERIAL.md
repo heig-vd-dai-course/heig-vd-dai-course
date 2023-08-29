@@ -3,7 +3,7 @@
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet-practical-content.pdf
 
-# SMTP and Telnet - Practical content
+# SMTP and Telnet - Course material
 
 <https://github.com/heig-vd-dai-course>
 

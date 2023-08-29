@@ -38,7 +38,7 @@ jobs:
         uses: docker://pandoc/latex:3.1
         with:
           entrypoint: sh
-          args: .github/build-practical-content.sh
+          args: .github/build-course-material-content.sh
 
       - name: Upload files
         uses: actions/upload-artifact@v3

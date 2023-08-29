@@ -5,5 +5,5 @@
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/)
   |
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/20-http-and-curl-presentation.pdf)<!-- | [Video (in French)]() -->
-- Support: [Markdown](./SUPPORT.md) |
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/20-http-and-curl-support.pdf)
+- Course material: [Markdown](./COURSE_MATERIAL.md) |
+  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/20-http-and-curl-course-material.pdf)

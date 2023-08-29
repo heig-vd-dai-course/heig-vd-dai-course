@@ -3,7 +3,7 @@
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-java-udp-programming/16-java-udp-programming-practical-content.pdf
 
-# Java UDP programming - Practical content
+# Java UDP programming - Course material
 
 <https://github.com/heig-vd-dai-course>
 

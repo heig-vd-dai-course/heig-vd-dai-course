@@ -3,7 +3,7 @@
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-web-infrastructures/21-web-infrastructures-practical-work.pdf
 
-# Web infrastructures - Practical content
+# Web infrastructures - Course material
 
 <https://github.com/heig-vd-dai-course>
 

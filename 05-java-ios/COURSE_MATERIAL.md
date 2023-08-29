@@ -3,7 +3,7 @@
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-practical-content.pdf
 
-# Java IOs - Practical content
+# Java IOs - Course material
 
 <https://github.com/heig-vd-dai-course>
 

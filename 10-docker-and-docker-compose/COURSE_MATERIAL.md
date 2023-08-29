@@ -3,7 +3,7 @@
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose-practical-content.pdf
 
-# Docker and Docker Compose - Practical content
+# Docker and Docker Compose - Course material
 
 <https://github.com/heig-vd-dai-course>
 
