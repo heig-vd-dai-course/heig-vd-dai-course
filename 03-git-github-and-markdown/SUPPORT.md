@@ -13,10 +13,36 @@ L. Delafontaine and H. Louis, with the help of Copilot
 
 ## Table of contents
 
+- [Table of contents](#table-of-contents)
 - [Install Git](#install-git)
-- [Create and your GitHub account](#create-and-configure-your-github-account)
+- [Create and configure your GitHub account](#create-and-configure-your-github-account)
+  - [Create your GitHub account](#create-your-github-account)
+  - [Create a SSH key](#create-a-ssh-key)
+  - [Set up your GitHub account](#set-up-your-github-account)
 - [Create your own GitHub profile README](#create-your-own-github-profile-readme)
+  - [Create a new repository](#create-a-new-repository)
+  - [Clone the repository locally](#clone-the-repository-locally)
+  - [Fill your profile](#fill-your-profile)
+  - [Commit your changes](#commit-your-changes)
+  - [Push your changes](#push-your-changes)
+  - [Check the results](#check-the-results)
+  - [Share your profile in GitHub Discussions](#share-your-profile-in-github-discussions)
+  - [Summary](#summary)
 - [Add yourself to the list of students in the GitHub organization](#add-yourself-to-the-list-of-students-in-the-github-organization)
+  - [Fork the repository](#fork-the-repository)
+  - [Clone the repository locally](#clone-the-repository-locally-1)
+  - [Create a new branch](#create-a-new-branch)
+  - [Add yourself to the list](#add-yourself-to-the-list)
+  - [Commit your changes](#commit-your-changes-1)
+  - [Intentionally create a conflict](#intentionally-create-a-conflict)
+  - [Resolve the conflict](#resolve-the-conflict)
+  - [Push your changes](#push-your-changes-1)
+  - [Create a pull request](#create-a-pull-request)
+  - [Wait for review](#wait-for-review)
+  - [Make changes if needed](#make-changes-if-needed)
+  - [Check the results](#check-the-results-1)
+  - [Summary](#summary-1)
+- [Go further](#go-further)
 
 ## Install Git
 

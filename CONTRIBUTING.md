@@ -6,6 +6,7 @@
 - [Visual Studio Code](https://code.visualstudio.com/) must be installed with
   the following extensions:
   - [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
+  - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
   - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 1. Clone or fork the GitHub repository and open it in Visual Studio Code.
