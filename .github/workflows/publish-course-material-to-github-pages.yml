@@ -28,13 +28,13 @@ jobs:
           rm --recursive 00-evaluation-and-exam-archives
           rm --recursive 99-material-for-the-teaching-staff
 
-      - name: Build theoretical content with Marp
+      - name: Build presentation content with Marp
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
           entrypoint: sh
-          args: .github/build-theoretical-content.sh
+          args: .github/build-presentation-content.sh
 
-      - name: Build practical content with Pandoc
+      - name: Build course material content with Pandoc
         uses: docker://pandoc/latex:3.1
         with:
           entrypoint: sh
