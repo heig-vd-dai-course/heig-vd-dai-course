@@ -642,7 +642,7 @@ At this point, you should be able to answer the following questions:
 - What is a tag? What is the difference with a commit?
 - Describe a typical Git workflow.
 
-## Finished? Finished? Was it easy? Was it hard?
+## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
 chapter?

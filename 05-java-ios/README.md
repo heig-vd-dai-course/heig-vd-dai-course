@@ -88,8 +88,6 @@ _paginate: false
 - Encoding and character sets
   - Reading and writing files
 
-## _Why is this important for network programming?_
-
 ## Theoretical content
 
 <!-- _class: lead -->

@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of Copilot
 title: HEIG-VD DAI Course - Web infrastructures
 description: Web infrastructures for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-web-infrastructures/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -45,11 +45,11 @@ headingDivider: 4
 -->
 
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-web-infrastructures/README.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-web-infrastructures/README.md
 [web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-web-infrastructures/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-web-infrastructures/15-web-infrastructures.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-web-infrastructures/21-web-infrastructures.pdf
 [video]: #
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:

@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of Copilot
 title: HEIG-VD DAI Course - HTTP and cURL
 description: HTTP and cURL for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -45,10 +45,10 @@ headingDivider: 4
 -->
 
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-http-and-curl/README.md
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-http-and-curl/README.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-http-and-curl/10-http-and-curl.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/20-http-and-curl.pdf
 [video]: #
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:

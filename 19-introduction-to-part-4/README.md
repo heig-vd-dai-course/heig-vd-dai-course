@@ -7,9 +7,9 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of Copilot
-title: HEIG-VD DAI Course - Introduction to part 4
-description: Introduction to part 4 for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/
+title: 'HEIG-VD DAI Course - Introduction to part 4: Web infrastructures'
+description: 'Introduction to part 4: Web infrastructures for the DAI course at HEIG-VD, Switzerland'
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-4/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -55,7 +55,7 @@ headingDivider: 4
 [illustration]:
   https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
-# Introduction to part 4
+# Introduction to part 4: Web infrastructures
 
 <!--
 _class: lead
