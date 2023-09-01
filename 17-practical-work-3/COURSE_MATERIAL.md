@@ -51,12 +51,6 @@ information:
 - **Description**: The link to your repository as well as the latest commit hash
   of your work before submission
 
-## Resources
-
-Everything is presented in the following sessions:
-
-- TODO
-
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this

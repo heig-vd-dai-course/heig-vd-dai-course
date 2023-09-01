@@ -50,18 +50,18 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 1 - Git, GitHub and Markdown
 
-| #   | Criteria                                                          | Points |
-| --- | ----------------------------------------------------------------- | -----: |
-| 1   | The repository has all members and teaching staff as reporters    |    0.2 |
-| 2   | The repository is managed using issues and pull requests          |    0.2 |
-| 3   | The commits are signed                                            |    0.2 |
-| 4   | The issues, pull requests and commits messages are descriptive    |    0.2 |
-| 5   | The entire team contributes to the project and can explain it     |    0.2 |
-| 6   | The repository contains a gitignore file to ignore unwanted files |    0.2 |
-| 7   | The repository contains tags to the two versions                  |    0.2 |
-| 8   | The README is well structured and explains what the CLI is for    |    0.2 |
-| 9   | The README explains how to build the CLI                          |    0.2 |
-| 10  | The README explains how to use the CLI                            |    0.2 |
+| #   | Criteria                                                                        | Points |
+| --- | ------------------------------------------------------------------------------- | -----: |
+| 1   | The repository contains all members - if private, the teaching staff is invited |    0.2 |
+| 2   | The repository is managed using issues and pull requests                        |    0.2 |
+| 3   | The commits are signed                                                          |    0.2 |
+| 4   | The issues, pull requests and commits messages are descriptive                  |    0.2 |
+| 5   | The entire team contributes to the project and can explain it                   |    0.2 |
+| 6   | The repository contains a gitignore file to ignore unwanted files               |    0.2 |
+| 7   | The README is well structured and explains what the CLI is for                  |    0.2 |
+| 8   | The README explains how to build the CLI                                        |    0.2 |
+| 9   | The README explains how to use the CLI                                          |    0.2 |
+| 10  | The README shows an example of the CLI execution                                |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
@@ -95,13 +95,31 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ## Constraints
 
-- The CLI must be written in Java
+- The CLI must be written in Java, using the Java IO API and Java 17
 - The CLI must be built using Maven
+
+## Remarks
+
+You can use any dependency you want in your Maven project. You must however
+explain why and how you use it in your README.
+
+Here are some examples of dependencies you can use:
+
+- <https://picocli.info/>
+
+Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
+use a simple solution than a complex one.
+
+If your solution is too complex, we might penalize you.
 
 ## Submission
 
-The deadline for the practical work can be visualized in the planning of the
-course at <https://github.com/orgs/heig-vd-dai-course/projects>.
+The planning of the course is available at
+<https://github.com/orgs/heig-vd-dai-course/projects>. The deadline is one day
+before the Practical work review and feedback session at 23:59.
+
+Any commit after the deadline will not be taken into account. Each day of delay
+will result in a penalty of -1 point on the final grade.
 
 You must create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
@@ -111,14 +129,6 @@ information:
 - **Category**: Show and tell
 - **Description**: The link to your repository as well as the latest commit hash
   of your work before submission
-
-## Resources
-
-Everything is presented in the following sessions:
-
-- [Git, GitHub and Markdown](../06-practical-work-1/README.md)
-- [Java, IntelliJ IDEA and Maven](../04-java-intellij-idea-and-maven/README.md)
-- [Java IOs](../05-java-ios/README.md)
 
 ## Finished? Was it easy? Was it hard?
 

@@ -1,5 +1,5 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-web-infrastructures/PRACTICAL_CONTENT.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-web-infrastructures/COURSE_MATERIAL.md#practical-content
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-web-infrastructures/21-web-infrastructures-practical-work.pdf
 

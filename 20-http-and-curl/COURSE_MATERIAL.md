@@ -1,5 +1,5 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-http-and-curl/PRACTICAL_CONTENT.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-http-and-curl/COURSE_MATERIAL.md#practical-content
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-http-and-curl/20-http-and-curl-practical-content.pdf
 

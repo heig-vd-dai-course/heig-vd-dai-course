@@ -44,8 +44,6 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/README.md
 [web]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
 [pdf]:
@@ -63,38 +61,13 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] |
-[PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger</small>
 
 ![bg opacity:0.1][illustration]
-
-## Table of contents
-
-- **[Why do you have this course](#why-do-you-have-this-course)**
-- **[What to expect to learn from this course](#what-to-expect-to-learn-from-this-course)**
-- **[Course planning](#course-planning---calendrier-académique)**
-- **[Course sequence](#course-sequence)**
-- **[Evaluation](#evaluation)**
-- **[Communication channels](#communication-channels)**
-- **[Where to find the course material](#where-to-find-the-course-material)**
-- **[Our wishes for this course](#our-wishes-for-this-course)**
-
-## Why do you have this course
-
-This course defines the basics of network communication and how all these
-communications are programmed.
-
-It will provide you with the theoretical and practical elements to know how to
-program network applications, how to interact with them and the different
-elements to pay attention to.
-
-Whether you are in security, data science, embedded or networking, you are going
-to be interacting with elements that communicate over the network. This course
-will give you a solid grounding in this world.
 
 ## What to expect to learn from this course
 
@@ -175,8 +148,23 @@ You will learn the following technologies during this course:
 - Markdown
 - Java for network programming
 - Docker & Docker Compose
-- Network utilities (`curl`, `dig`, `nslookup`, etc.)
+- Network utilities
 - The terminal :heart:
+
+![bg right:40%](https://images.unsplash.com/photo-1530124566582-a618bc2615dc?fit=crop&h=720)
+
+## Why do you have this course
+
+This course defines the basics of network communication and how all these
+communications are programmed.
+
+It will provide you with the theoretical and practical elements to know how to
+program network applications, how to interact with them and the different
+elements to pay attention to.
+
+Whether you are in security, data science, embedded or networking, you are going
+to be interacting with elements that communicate over the network. This course
+will give you a solid grounding in this world.
 
 ## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
 
@@ -192,14 +180,14 @@ The entire course planning for the semester is available at
 
 ## Course sequence
 
-1. Theoretical content that is meant to be short and concise
-   - Maximum 30 minutes, quizzes to check your understanding
-2. Practical content where you do stuff
+1. Theoretical content that is meant to be short and concise (us)
+   - Sessions of 20 minutes, dynamic and interactive
+2. Practical content where you do stuff (you)
    - You will be able to experiment the theoretical content
-3. Practical work
+3. Practical work (you)
    - The theoretical and practical content are meant to help you
-4. Feedback and discussions (very important to us)
-   - You will be able to give feedback and share your experience
+4. Feedback and discussions (all - very important to us)
+   - You will be able to give feedback and criticize the course
 
 ## Evaluation
 
@@ -209,15 +197,11 @@ The entire course planning for the semester is available at
 
 `final grade = average of evaluation grades * 0.3 + average of practical work grades * 0.2 + average of exam * 0.5`
 
-You can change groups between practical works. You will have access to the
-grading criteria. You will have to present each practical work to the teaching
-staff for a total of 5-10 minutes.
+![bg right:40%](https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?fit=crop&h=720)
 
 ---
 
-You can be asked to answer questions regarding the theoretical content as well
-as the practical content during the practical work review or the evaluations.
-Both aspects are complementary and important.
+You can change groups between practical works.
 
 We will try our best to give you your grades and feedback as quickly as possible
 so you can improve for the next work.
@@ -225,8 +209,7 @@ so you can improve for the next work.
 We can be flexible on the deadlines if you have a good reason. Please let us
 know as soon as possible if you have any difficulties.
 
-If you have trouble with your group, please let us know as soon as possible. We
-will do our best to help you.
+![bg right:40%](https://images.unsplash.com/photo-1532943126512-e2bcf68a488c?fit=crop&h=720)
 
 ## Communication channels
 
@@ -263,7 +246,7 @@ The course material is available in several formats:
 - **PDF format**. You can download it from GitHub and read it on your computer
   or print it.
 - **Web format**. You can read it on GitHub or on the course website (only the
-  slides are available on the web).
+  presentations are available on the web).
 
 These formats are generated from the same source files. There are no differences
 between them. Use the one you prefer!
@@ -279,6 +262,7 @@ between them. Use the one you prefer!
 - A place to share and discuss
 - A place where you are able to do things and master them
 - A place where you can express your opinion
+- It is OK if you are not feeling well. We are here if you need to talk.
 
 :arrow_right: A place where you do not loose your time (efficient and useful)
 
@@ -286,7 +270,7 @@ between them. Use the one you prefer!
 
 - A place you don't want to come
 - A place you don't feel comfortable/safe
-- A place where you can't ask questions
+- A place where you can't ask questions and/or mistakes
 - A place where you can't take anything away
 
 :arrow_right: If you have a problem with the course, we will do our best to fix
@@ -302,29 +286,27 @@ However, we would appreciate if you try to help your classmates instead!
   - You are prepared for the professional world
   - You are able to work on your own, and in a team
   - Your feedback is taken into account
-- Your responsibilities: you are responsible for your own learning. If you have
-  any questions, ask them. If you have any difficulties, let us know. If you
-  have any suggestions, share them.
+- You are responsible for your own learning: if you have any questions, ask
+  them. If you have any difficulties, let us know. If you have any suggestions,
+  share them.
 
-## _"A course in English..? Why This Fantasy?"_
+## _"A course in English..?"_
 
 All the written material will be in English. The teaching staff will speak in
-French.
+French. The evaluations and exam will be in French.
 
-This is meant to prepare you for the future. Our field is mostly made in English
-so this is a great opportunity to practice your English skills.
-
-Evaluations will be in English as well but you can answer the questions in
-French if you prefer.
+Our field is mostly made in English so this is a great opportunity to practice.
 
 If you have any difficulties with English, please let us know.
+
+![bg right:40%](https://images.unsplash.com/photo-1617292797716-ec3000a44093?fit=crop&h=720)
 
 ## _"What about ChatGPT, Copilot, etc.?"_
 
 You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot,
-etc.), even during evaluations. Our statement is that you will be able to use
-these in the real world, so better learn how to use them now. However, they are
-here to help you, not to do the work for you:
+etc.), except during evaluations. You will be able to use these in the real
+world, so better learn how to use them now. However, they are here to help you,
+not to do the work for you:
 
 - You must be able to explain what you did and why you did it
 - You must state it when you used external help (tools and sources)
@@ -333,14 +315,12 @@ here to help you, not to do the work for you:
 
 ## _"Linux, macOS or Windows?"_
 
-The HEIG-VD recommends Windows for your studies. This is mostly because other
-departments heavily rely on Windows-only products. From our experience,
-developing on Windows can be more difficult than Linux or macOS.
-
 Linux and macOS are much more supported in the software development world. If
-you can, we recommend you to try a Linux distribution (Ubuntu or Debian) for
-this course, either baremetal or in Windows Subsystem for Linux (WSL). It will
-be useful in your future to have a bit of experience with it as well.
+you can, we recommend you to try a Linux distribution for this course, either
+baremetal or in Windows Subsystem for Linux (WSL). It is useful to have a bit of
+experience with it as well.
+
+![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
 
 ## _"I have an ARM computer, is this an issue?"_
 
@@ -350,7 +330,7 @@ material but we cannot guarantee that everything will work as expected on the
 first try.
 
 We might come to you to ask you to test some things for us before the next
-session that requires it.
+course that requires it.
 
 If you encounter any issue, please let us know as soon as possible.
 
@@ -362,10 +342,23 @@ Do you have any questions?
 
 ## Resources
 
+_Resources are here to help you. They are not mandatory to read._
+
 - [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/) -
   Use version 2 of WSL.
+
+_Missing item in the list? Feel free to open a pull request to add it!
+:sparkles:_
 
 ## Sources
 
 - Main illustration by [NASA](https://unsplash.com/@nasa) on
   [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
+- Illustration by [Kenny Eliason](https://unsplash.com/@neonbrand) on
+  [Unsplash](https://unsplash.com/photos/60krlMMeWxU)
+- Illustration by [Nguyen Dang Hoang Nhu](https://unsplash.com/@nguyendhn) on
+  [Unsplash](https://unsplash.com/photos/qDgTQOYk6B8)
+- Illustration by [Fer Nando](https://unsplash.com/@fer_nando) on
+  [Unsplash](https://unsplash.com/photos/UMC5sfWci78)
+- Illustration by [Brett Jordan](https://unsplash.com/@brett_jordan) on
+  [Unsplash](https://unsplash.com/photos/2a24_pZeXq8)

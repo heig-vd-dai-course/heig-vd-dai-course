@@ -35,7 +35,7 @@ The entire course planning for the semester is available at
 - [2\. Introduction to part 1 (1 period)](./02-introduction-to-part-1/README.md)
 - [3\. Git, GitHub and Markdown (1 period)](./03-git-github-and-markdown/README.md)
 - [4\. Java, IntelliJ IDEA and Maven (1 period)](./04-java-intellij-idea-and-maven/README.md)
-- [5\. Java IOs (2 periods)](./05-java-ios/README.md)
+- [5\. Java IOs (2 + 2 periods)](./05-java-ios/README.md)
 - [6\. Practical work 1 (2 + 2 periods)](./06-practical-work-1/README.md)
 - [7\. Conclusion to part 1 + practical review + feedback (2 periods)](./07-conclusion-to-part-1/README.md)
 - Evaluation 1 (2 periods)

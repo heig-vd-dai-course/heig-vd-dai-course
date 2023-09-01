@@ -22,8 +22,8 @@
 > le souhait de garder les choses simples et efficaces pour vous et pour moi. Un
 > seul endroit pour tout trouver.
 >
-> Le cours aura lieu les lundis de 13h15 à 14h45 en salle B26 et les mardis de
-> 8h30 à 10h00 en salle J04.
+> Le cours aura lieu les mardis de 13h15 à 14h45 en salle B01a et de 16h35 à
+> 18h05 en salle A05a.
 >
 > Pour les personnes sous Windows, je vous recommande vivement d'installer et
 > configurer Windows Subsystem for Linux (WSL 2) ou GitBash pour suivre ce

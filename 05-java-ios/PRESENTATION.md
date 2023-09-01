@@ -44,8 +44,6 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios.pdf
@@ -63,8 +61,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] |
-[PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -75,7 +72,7 @@ _paginate: false
 ## Table of contents
 
 - **[Theoretical content](#theoretical-content)**
-  - Streams of data
+  - Sources, streams and sinks of data
   - Binary vs. text streams
   - Performance and buffering
   - Dealing with errors
@@ -115,8 +112,8 @@ _Missing item in the list? Feel free to open a pull request to add it!
 
 <!-- _class: lead -->
 
-You can find the practical content for this session on
-[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/PRACTICAL_CONTENT.md).
+You can find the practical content for this chapter on
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content).
 
 ## Conclusion
 
@@ -151,7 +148,7 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next session, you will learn the following topics:
+In the next chapter, you will learn the following topics:
 
 - TODO
 

@@ -44,8 +44,6 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-evaluation-1/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-1/
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-1/12-evaluation-1.pdf
@@ -53,7 +51,7 @@ headingDivider: 4
 [feedback]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1539186607619-df476afe6ff1?fit=crop&h=720
 
 # Introduction to part 1: Input/output processing
 
@@ -64,8 +62,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] |
-[PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -73,18 +70,28 @@ _paginate: false
 
 ## What will you learn?
 
-<!-- _class: lead -->
+- How to use Git (professionally)
+- How to use GitHub (professionally)
+- How to use Markdown
+- How to create a Java project with Maven
+- How to use the Java IO API
+- How to manage different file formats and encodings
+
+![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
 ## What will you accomplish?
 
-<!-- _class: lead -->
+- Have a presence on GitHub
+- Use a professional Git workflow
+- Collaborate with your team on GitHub
+- Create a CLI to process files
+- Display your work and skills on GitHub
 
-## Questions
-
-<!-- _class: lead -->
-
-Do you have any questions?
+![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Martin Adams](https://unsplash.com/@martinadams) on
+  [Unsplash](https://unsplash.com/photos/a_PDPUPuNZ8)
+- Illustratin by [Unseen Studio](https://unsplash.com/@craftedbygc) on [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
+- Illustration by [Jared Erondu](https://unsplash.com/@erondu) on [Unsplash](https://unsplash.com/photos/j4PaE7E2_Ws)

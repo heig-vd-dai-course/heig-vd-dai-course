@@ -1,7 +1,7 @@
 # Java IOs
 
 - Time in class: 2 + 2 periods
-- Presentation [Markdown](./PRESENTATION.md) |
+- Presentation
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/) |
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-presentation.pdf)<!-- | [Video (in French)]() -->
 - Course material: [Markdown](./COURSE_MATERIAL.md) |

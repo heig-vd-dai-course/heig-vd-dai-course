@@ -138,8 +138,8 @@ _Missing item in the list? Feel free to open a pull request to add it!
 
 <!-- _class: lead -->
 
-You can find the practical content for this session on
-[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/PRACTICAL_CONTENT.md).
+You can find the practical content for this chapter on
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content).
 
 ## Conclusion
 
@@ -174,7 +174,7 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next session, you will learn the following topics:
+In the next chapter, you will learn the following topics:
 
 - TODO
 
