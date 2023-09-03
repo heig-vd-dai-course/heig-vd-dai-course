@@ -234,8 +234,7 @@ Git repository.
 We will not use Microsoft Teams nor CyberLearn. We want to keep it simple and
 efficient for you, and for us. One place to find it all.
 
-We accept issues and pull requests if you spot anything weird!
-:slightly_smiling_face:
+We accept issues and pull requests if you spot anything weird! 🙂
 
 ---
 
@@ -348,7 +347,7 @@ _Resources are here to help you. They are not mandatory to read._
   Use version 2 of WSL.
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ## Sources
 

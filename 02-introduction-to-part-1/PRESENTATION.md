@@ -68,6 +68,29 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
+## Do you know what happens when you browse the Web?
+
+<!-- _class: lead -->
+
+## What happens when you browse the Web?
+
+1. You request a resource (a file) from a Web server
+2. The Web server opens the file
+3. The Web server reads the file
+4. The Web server sends the file to you
+5. Your Web browser receive the file
+6. Your Web browser displays the file
+
+The whole process uses **input/output** (IO) operations!
+
+---
+
+<!-- _class: lead -->
+
+For network programming, you need to know how to do IOs.
+
+But for this, you will need some tools and some knowledge.
+
 ## What will you learn?
 
 - How to use Git (professionally)
@@ -93,5 +116,7 @@ _paginate: false
 
 - Main illustration by [Martin Adams](https://unsplash.com/@martinadams) on
   [Unsplash](https://unsplash.com/photos/a_PDPUPuNZ8)
-- Illustratin by [Unseen Studio](https://unsplash.com/@craftedbygc) on [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
-- Illustration by [Jared Erondu](https://unsplash.com/@erondu) on [Unsplash](https://unsplash.com/photos/j4PaE7E2_Ws)
+- Illustratin by [Unseen Studio](https://unsplash.com/@craftedbygc) on
+  [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
+- Illustration by [Jared Erondu](https://unsplash.com/@erondu) on
+  [Unsplash](https://unsplash.com/photos/j4PaE7E2_Ws)

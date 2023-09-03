@@ -58,19 +58,19 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 | 4   | The issues, pull requests and commits messages are descriptive                  |    0.2 |
 | 5   | The entire team contributes to the project and can explain it                   |    0.2 |
 | 6   | The repository contains a gitignore file to ignore unwanted files               |    0.2 |
-| 7   | The README is well structured and explains what the CLI is for                  |    0.2 |
-| 8   | The README explains how to build the CLI                                        |    0.2 |
-| 9   | The README explains how to use the CLI                                          |    0.2 |
-| 10  | The README shows an example of the CLI execution                                |    0.2 |
+| 7   | The repository contains test files to use with the CLI                          |    0.2 |
+| 8   | The README is well structured and explains what the CLI is for                  |    0.2 |
+| 9   | The README explains how to build the CLI                                        |    0.2 |
+| 10  | The README explains how to use the CLI with examples                            |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
-| #   | Criteria                                                       | Points |
-| --- | -------------------------------------------------------------- | -----: |
-| 11  | The code is well structured                                    |    0.2 |
-| 12  | The code is well documented                                    |    0.2 |
-| 13  | The code is built with Maven and output an executable JAR file |    0.2 |
-| 14  | The CLI displays a help message on how to use the CLI          |    0.2 |
+| #   | Criteria                                              | Points |
+| --- | ----------------------------------------------------- | -----: |
+| 11  | The code is well structured                           |    0.2 |
+| 12  | The code is well documented                           |    0.2 |
+| 13  | The code is built and output an executable JAR file   |    0.2 |
+| 14  | The CLI displays a help message on how to use the CLI |    0.2 |
 
 ### Category 3 - Java IOs
 
@@ -95,10 +95,15 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ## Constraints
 
-- The CLI must be written in Java, using the Java IO API and Java 17
+- The CLI must be written in Java, using the Java IO API for Java 17
 - The CLI must be built using Maven
 
 ## Remarks
+
+Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
+use a simple solution than a complex one.
+
+If your solution is too complex, we might penalize you.
 
 You can use any dependency you want in your Maven project. You must however
 explain why and how you use it in your README.
@@ -106,11 +111,6 @@ explain why and how you use it in your README.
 Here are some examples of dependencies you can use:
 
 - <https://picocli.info/>
-
-Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
-use a simple solution than a complex one.
-
-If your solution is too complex, we might penalize you.
 
 ## Submission
 

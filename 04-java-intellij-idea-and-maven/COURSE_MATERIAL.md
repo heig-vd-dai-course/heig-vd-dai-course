@@ -19,6 +19,7 @@ L. Delafontaine and H. Louis, with the help of Copilot
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
+- [Objectives](#objectives)
 - [Java](#java)
   - [Java virtual machine](#java-virtual-machine)
   - [JVM versions](#jvm-versions)
@@ -45,6 +46,18 @@ L. Delafontaine and H. Louis, with the help of Copilot
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
 - [Sources](#sources)
+
+## Objectives
+
+This chapter will help you understand how Java can run on all platforms, how to
+install and switch between different versions of Java, how to use IntelliJ IDEA
+to develop Java applications, how to use Maven to manage dependencies and build
+Java applications.
+
+These skills are essential to develop Java applications in a professional
+environment to share them with other developers.
+
+Let's get started!
 
 ## Java
 
@@ -263,6 +276,8 @@ TODO
 ### Install and configure Java
 
 TODO
+
+QUESTION: Do we use SDKMAN! here? My main concern is WSL/Windows
 
 ### Install and configure IntelliJ IDEA
 

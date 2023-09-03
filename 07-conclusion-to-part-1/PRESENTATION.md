@@ -44,8 +44,6 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-evaluation-1/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-1/
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-1/12-evaluation-1.pdf
@@ -64,8 +62,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] |
-[PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
@@ -89,6 +86,42 @@ All previous evaluations are available in the
 folder of the course repository.
 -->
 
+## Practical work review
+
+The practical work review will start at the end of this presentation.
+
+Please be prepared to present your work.
+
+The order of presentation is random and is stated in the next slides.
+
+Do not worry, it is not an exam, it is just a way for us to see how you
+understood the practical work. 🙂
+
+---
+
+| #   |         Group         |
+| --- | :-------------------: |
+| 1   | @member1 and @member2 |
+| 2   | @member3 and @member4 |
+| 3   | @member5 and @member6 |
+| 4   | @member7 and @member8 |
+| 5   | @member9 and @member10 |
+| 6   | @member11 and @member12 |
+| 7   | @member13 and @member14 |
+| 8   | @member15 and @member16 |
+
+---
+
+| #   |         Group         |
+| --- | :-------------------: |
+| 9   | @member17 and @member18 |
+| 10  | @member19 and @member20 |
+| 11  | @member21 and @member22 |
+| 12  | @member23 and @member24 |
+| 13  | @member25 and @member26 |
+| 14  | @member27 and @member28 |
+| 15  | @member29 and @member30 |
+
 ## Questions
 
 <!-- _class: lead -->
@@ -100,7 +133,8 @@ Do you have any questions?
 Your feedback helps us know **what what you liked and what you disliked** in
 your learning experience. **The feedback is anonymous**.
 
-We would be very grateful if you could take a few minutes to fill it. Thank you!
+We would be very grateful if you could take a few minutes to fill it. **Thank
+you!**
 
 [![bg right w:75%][feedback]][feedback]
 

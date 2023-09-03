@@ -109,14 +109,14 @@ Content
 - TODO
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 #### Resources
 
 - TODO
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ## Practical content
 

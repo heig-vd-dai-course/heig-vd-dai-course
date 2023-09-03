@@ -107,7 +107,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Groovy](https://groovy-lang.org/)
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ### Resources
 
@@ -121,7 +121,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [asdf](https://asdf-vm.com/) - An alternative to SDKMAN!.
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ## IntelliJ IDEA
 
@@ -161,7 +161,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [NetBeans](https://netbeans.apache.org/) if you **really** want to use it
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 #### Resources
 
@@ -170,7 +170,7 @@ _Resources are here to help you. They are not mandatory to read._
 - _None for now_
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ## Maven
 
@@ -211,7 +211,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Bazel](https://bazel.build/)
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ### Resources
 
@@ -221,7 +221,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [Maven Build Lifecycle, Phases, and Goals](https://www.digitalocean.com/community/tutorials/maven-build-lifecycle-phases-goals)
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ## Practical content
 

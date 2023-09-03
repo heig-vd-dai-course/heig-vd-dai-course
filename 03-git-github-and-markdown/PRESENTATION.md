@@ -70,6 +70,8 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
+## Objectives
+
 ## Git
 
 <!-- _class: lead -->
@@ -99,7 +101,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Bazaar](https://bazaar.canonical.com/en/)
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ### Resources
 
@@ -113,7 +115,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [Learn Git Branching](https://learngitbranching.js.org/)
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ## GitHub
 
@@ -141,7 +143,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Gogs](https://gogs.io/)
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ### Resources
 
@@ -151,7 +153,7 @@ _Resources are here to help you. They are not mandatory to read._
   great Git repository to learn the basics of GitHub!
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ## Markdown
 
@@ -180,7 +182,7 @@ _Alternatives are here for general knowledge. No need to learn them._
   Markdown.
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ### Resources
 
@@ -190,7 +192,7 @@ _Resources are here to help you. They are not mandatory to read._
   on Markdown specification
 
 _Missing item in the list? Feel free to open a pull request to add it!
-:sparkles:_
+✨_
 
 ## Practical content
 

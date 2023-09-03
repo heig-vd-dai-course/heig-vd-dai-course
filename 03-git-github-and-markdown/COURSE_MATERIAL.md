@@ -21,6 +21,7 @@ Based on the original course by O. Liechti and J. Ehrensberger
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
+- [Objectives](#objectives)
 - [Git](#git)
   - [Architecture](#architecture)
   - [Commits, hashes and tags](#commits-hashes-and-tags)
@@ -53,6 +54,23 @@ Based on the original course by O. Liechti and J. Ehrensberger
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
 - [Sources](#sources)
+
+## Objectives
+
+This chapter will help you to understand how Git and GitHub work, and how you
+can use Markdown to write documentation.
+
+These skills are essential for the rest of the course, as you will use Git and
+GitHub to submit your practical work and to collaborate with your team.
+
+Documentation is also very important, as any code you write is meant to be used
+by other people. Even if you are the only one working on a project, you will
+need to understand your own code in a few months or years.
+
+They will want to know that is the purpose of your project and how to use it. A
+good documentation is a good publicity for your project.
+
+Let's get started!
 
 ## Git
 
