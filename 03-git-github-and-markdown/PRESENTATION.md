@@ -185,6 +185,7 @@ _Resources are here to help you. They are not mandatory to read._
 
 - [Markdown Guide](https://www.markdownguide.org/) - Examples and explanations
   on Markdown specification
+- [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 

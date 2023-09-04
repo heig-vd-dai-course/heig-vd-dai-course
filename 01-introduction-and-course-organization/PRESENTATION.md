@@ -133,12 +133,13 @@ _paginate: false
 
 You will learn the following topics during this course:
 
-- Inputs/outputs and encoding
-- Network programming (TCP and UDP)
+- Network programming (inputs/outputs, encodings, TCP and UDP)
 - Application-level protocols (SMTP, SSH and HTTP)
 - Web infrastructures (reverse proxy, load balancer, sticky sessions)
 - How to read and write technical documentation
-- An introduction to dependencies management
+
+At the end of the course, you will be able to create applications that can
+communicate over the network!
 
 ### Technologies
 

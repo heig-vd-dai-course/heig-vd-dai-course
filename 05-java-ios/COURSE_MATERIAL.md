@@ -1,7 +1,7 @@
 [markdown]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-practical-content.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-course-material.pdf
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
 [illustration]:
   https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720

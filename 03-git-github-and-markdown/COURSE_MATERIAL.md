@@ -1,7 +1,7 @@
 [markdown]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-practical-content.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-course-material.pdf
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
 [illustration]:
   https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
@@ -31,17 +31,20 @@ Based on the original course by O. Liechti and J. Ehrensberger
   - [Ignore files](#ignore-files)
   - [Summary](#summary)
   - [Cheat sheet](#cheat-sheet)
+  - [Resources](#resources)
 - [GitHub](#github)
   - [Social platform](#social-platform)
   - [Free features and PRO features](#free-features-and-pro-features)
   - [Users and organizations](#users-and-organizations)
   - [Issues, pull requests and merge requests](#issues-pull-requests-and-merge-requests)
   - [Summary](#summary-1)
+  - [Resources](#resources-1)
 - [Markdown](#markdown)
   - [Markdown and output formats](#markdown-and-output-formats)
   - [Syntax](#syntax)
   - [Specifications](#specifications)
   - [Summary](#summary-2)
+  - [Resources](#resources-2)
 - [Practical content](#practical-content)
   - [Install Git](#install-git)
   - [Create and configure your GitHub account](#create-and-configure-your-github-account)
@@ -200,13 +203,24 @@ git pull origin <branch-name>
 git merge <branch-name>
 ```
 
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- [Atlassian Git tutorials - Beginner](https://www.atlassian.com/git/tutorials/what-is-version-control) -
+  Atlassian tutorials are great!
+- [Atlassian Git tutorials - Getting started](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
+- [Atlassian Git tutorials - Collaborating](https://www.atlassian.com/git/tutorials/syncing)
+- [Atlassian Git tutorials - Advanced Tips](https://www.atlassian.com/git/tutorials/advanced-overview)
+- [Learn Git Branching](https://learngitbranching.js.org/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
 ## GitHub
 
 > [GitHub](https://github.com) is a platform and cloud-based service for
 > software development and version control using Git, allowing developers to
 > store and manage their code.
-
-![bg right:40% w:75%](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 
 GitHub is a web-based Git repository hosting service. It provides all the
 features of Git, plus some additional features.
@@ -277,6 +291,15 @@ The whole process would be as follow:
 4. Create the pull request
 5. The maintainers review and merge if OK
 6. You can delete the branch or the fork
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- [The Basics of GitHub](https://github.com/education/github-starter-course) - A
+  great Git repository to learn the basics of GitHub!
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Markdown
 
@@ -478,7 +501,7 @@ Another line
 
 ### Specifications
 
-Markdown is not a standard, but there are many implementations. The most popular
+Markdown is not a standard and there are many implementations. The most popular
 one is [CommonMark](https://commonmark.org/). GitHub uses a slightly different
 version called [GitHub Flavored Markdown](https://github.github.com/gfm/).
 
@@ -500,6 +523,16 @@ example:
     [Marp](https://marp.app/)
   - The course material is exported to PDF with the help of
     [Pandoc](https://pandoc.org/)
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- [Markdown Guide](https://www.markdownguide.org/) - Examples and explanations
+  on Markdown specification
+- [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Practical content
 
@@ -525,7 +558,8 @@ If you do not have a GitHub account yet, you will need to create one.
 Follow the official documentation to create your account:
 <https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account>
 
-> **Note** Do not forget to verify your email address!
+> [!NOTE]  
+> Do not forget to verify your email address!
 
 #### Create a SSH key
 
@@ -548,7 +582,7 @@ GitHub. It is more secure than using a password.
 6. Type `ssh-add ~/.ssh/id_ed25519`
 7. Type `cat ~/.ssh/id_ed25519.pub`
 
-> **Warning** Never share your private key with anyone! It must be kept secret
+> [!WARNING] Never share your private key with anyone! It must be kept secret
 > and confidential, just like a password.
 
 #### Add the public SSH key to your GitHub account

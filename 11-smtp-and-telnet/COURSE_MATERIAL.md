@@ -1,7 +1,7 @@
 [markdown]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet-practical-content.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet-course-material.pdf
 
 # SMTP and Telnet - Course material
 

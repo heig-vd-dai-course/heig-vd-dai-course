@@ -84,7 +84,7 @@ _paginate: false
   - UDP in Java
 - **[Practical content](#practical-content)**
   - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-practical-content)
+  - [Find the practical content](#find-the-course-material)
 
 ## Theoretical content
 
