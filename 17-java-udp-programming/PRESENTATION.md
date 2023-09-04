@@ -7,9 +7,9 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of Copilot
-title: HEIG-VD DAI Course - Docker and Docker Compose
-description: Docker and Docker Compose for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+title: HEIG-VD DAI Course - Java UDP programming
+description: Java UDP programming for the DAI course at HEIG-VD, Switzerland
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-java-udp-programming/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -45,17 +45,17 @@ headingDivider: 4
 -->
 
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/README.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/README.md
 [web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-java-udp-programming/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-java-udp-programming/17-java-udp-programming.pdf
 [video]: #
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
-# Docker and Docker Compose
+# Java UDP programming
 
 <!--
 _class: lead
@@ -69,52 +69,28 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
+<small>Based on the original course by O. Liechti and J. Ehrensberger</small>
+
 ![bg opacity:0.1][illustration]
 
 ## Table of contents
 
 - **[Theoretical content](#theoretical-content)**
-  - Installation of software: traditional vs. containerization
-  - OCI, images, containers and registries
-  - Dockerfile and Docker Compose
-  - Tips and tricks
+  - Differences between TCP and UDP
+  - UDP datagrams
+  - Unicast, multicast and broadcast
+  - Messaging patterns
+  - Service discovery protocols
+  - UDP in Java
 - **[Practical content](#practical-content)**
   - [What will you do?](#what-will-you-do)
   - [Find the practical content](#find-the-practical-content)
-
----
-
-    - Install Docker (and Docker Compose)
-    - Run a container with Docker
-    - Run a container with Docker Compose
-    - Write a Dockerfile, build and run an image with Docker
-    - Build and run the same image with Docker Compose
 
 ## Theoretical content
 
 <!-- _class: lead -->
 
-### Title
-
-> Quote
-
-![bg right:40% w:50%](https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg)
-
----
-
-Content
-
-#### Summary
-
-- TODO
-
-#### Alternatives
-
-- TODO
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-#### Resources
+### Resources
 
 - TODO
 
@@ -137,7 +113,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#practical-content).
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#practical-content).
 
 ## Conclusion
 

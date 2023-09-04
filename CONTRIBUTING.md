@@ -11,7 +11,7 @@
 
 1. Clone or fork the GitHub repository and open it in Visual Studio Code.
 2. Open the Markdown files in Visual Studio Code and press
-   <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to preview the files. If the
+   <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> to preview the files. If the
    Markdown file is a Marp presentation, it will display a preview of the
    slides. If the Markdown file is a README, it will display a preview of the
    README.

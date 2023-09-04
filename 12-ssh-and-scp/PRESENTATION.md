@@ -108,15 +108,13 @@ Content
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 #### Resources
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Practical content
 
@@ -164,7 +162,7 @@ chapter?
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
 
-:arrow_right: [GitHub Discussions][discussions]
+➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
 

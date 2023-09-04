@@ -7,9 +7,9 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of Copilot
-title: HEIG-VD DAI Course - Docker and Docker Compose
-description: Docker and Docker Compose for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+title: HEIG-VD DAI Course - Web infrastructures
+description: Web infrastructures for the DAI course at HEIG-VD, Switzerland
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-web-infrastructures/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -45,17 +45,17 @@ headingDivider: 4
 -->
 
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/README.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/README.md
 [web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-web-infrastructures/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-web-infrastructures/22-web-infrastructures.pdf
 [video]: #
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
-# Docker and Docker Compose
+# Web infrastructures
 
 <!--
 _class: lead
@@ -69,26 +69,35 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
+<small>Based on the original course by O. Liechti and J. Ehrensberger</small>
+
 ![bg opacity:0.1][illustration]
 
 ## Table of contents
 
 - **[Theoretical content](#theoretical-content)**
-  - Installation of software: traditional vs. containerization
-  - OCI, images, containers and registries
-  - Dockerfile and Docker Compose
-  - Tips and tricks
+  - System scalability
+    - Definition
+    - Why and when?
+  - Vertical scaling vs. horizontal scaling
+  - Caching
+    - Client-side caching
+    - Server-side caching
+    - CDN
+    - Expiration and validation
+  - Reverse-proxy and load balancing
+    - Definition
+    - Hardware and software load balancers
+    - Sticky sessions
+    - Round-robin
+    - Least connections
+    - Least response time
+    - Hashing
+  - Content delivery
+  - HTTP and scaling
 - **[Practical content](#practical-content)**
   - [What will you do?](#what-will-you-do)
   - [Find the practical content](#find-the-practical-content)
-
----
-
-    - Install Docker (and Docker Compose)
-    - Run a container with Docker
-    - Run a container with Docker Compose
-    - Write a Dockerfile, build and run an image with Docker
-    - Build and run the same image with Docker Compose
 
 ## Theoretical content
 
@@ -137,7 +146,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#practical-content).
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#practical-content).
 
 ## Conclusion
 

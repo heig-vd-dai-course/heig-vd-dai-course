@@ -28,49 +28,50 @@ The entire course planning for the semester is available at
 
 ### Introduction (1 period)
 
-- [1\. Introduction and course organization (1 period)](./01-introduction-and-course-organization/README.md)
+- [1. Introduction and course organization (1 period)](./01-introduction-and-course-organization/README.md)
 
 ### Input/output processing (15 periods)
 
-- [2\. Introduction to part 1 (1 period)](./02-introduction-to-part-1/README.md)
-- [3\. Git, GitHub and Markdown (1 period)](./03-git-github-and-markdown/README.md)
-- [4\. Java, IntelliJ IDEA and Maven (1 period)](./04-java-intellij-idea-and-maven/README.md)
-- [5\. Java IOs (2 + 2 periods)](./05-java-ios/README.md)
-- [6\. Practical work 1 (2 + 2 periods)](./06-practical-work-1/README.md)
-- [7\. Conclusion to part 1 + practical review + feedback (2 periods)](./07-conclusion-to-part-1/README.md)
+- [2. Introduction to part 1 (1 period)](./02-introduction-to-part-1/README.md)
+- [3. Git, GitHub and Markdown (1 period)](./03-git-github-and-markdown/README.md)
+- [4. Java, IntelliJ IDEA and Maven (1 period)](./04-java-intellij-idea-and-maven/README.md)
+- [5. Java IOs (2 + 2 periods)](./05-java-ios/README.md)
+- [6. Practical work 1 (2 + 2 periods)](./06-practical-work-1/README.md)
+- [7. Conclusion to part 1 + practical review + feedback (2 periods)](./07-conclusion-to-part-1/README.md)
 - Evaluation 1 (2 periods)
 
 ### Network programming with TCP (18 periods)
 
-- [8\. Introduction to part 2 (1 period)](./08-introduction-to-part-2/README.md)
-- [9\. Java TCP programming (1 + 2 periods)](./09-java-tcp-programming/README.md)
-- [10\. Docker and Docker Compose (2 periods)](./10-docker-and-docker-compose/README.md)
-- [11\. SMTP and Telnet (1 period)](./11-smtp-and-telnet/README.md)
-- [12\. SSH and SCP (1 period)](./12-ssh-and-scp/README.md)
-- [13\. Practical work 2 (2 + 2 + 2 periods)](./13-practical-work-2/README.md)
-- [14\. Conclusion to part 2 + practical review + feedback (2 periods)](./14-conclusion-to-part-2/README.md)
+- [8. Introduction to part 2 (1 period)](./08-introduction-to-part-2/README.md)
+- [9. Define an application protocol (1 period)](./09-define-an-application-protocol/README.md)
+- [10. Docker and Docker Compose (2 periods)](./10-docker-and-docker-compose/README.md)
+- [11. SMTP and Telnet (1 period)](./11-smtp-and-telnet/README.md)
+- [12. SSH and SCP (1 period)](./12-ssh-and-scp/README.md)
+- [13. Java TCP programming (2 periods)](./13-java-tcp-programming/README.md)
+- [14. Practical work 2 (2 + 2 + 2 periods)](./14-practical-work-2/README.md)
+- [15. Conclusion to part 2 + practical review + feedback (2 periods)](./15-conclusion-to-part-2/README.md)
 - Evaluation 2 (2 periods)
 
 ### Part 3 - Network programming with UDP (16 periods)
 
-- [15\. Introduction to part 3 (1 period)](./15-introduction-to-part-3/README.md)
-- [16\. Java UDP programming (1 + 2 periods)](./16-java-udp-programming/README.md)
-- [17\. Practical work 3 (2 + 2 + 2 + 2 periods)](./17-practical-work-3/README.md)
-- [18\. Conclusion to part 3 + practical work review + feedback (2 periods)](./18-conclusion-to-part-3/README.md)
+- [16. Introduction to part 3 (1 period)](./16-introduction-to-part-3/README.md)
+- [17. Java UDP programming (1 + 2 periods)](./17-java-udp-programming/README.md)
+- [18. Practical work 3 (2 + 2 + 2 + 2 periods)](./18-practical-work-3/README.md)
+- [19. Conclusion to part 3 + practical work review + feedback (2 periods)](./19-conclusion-to-part-3/README.md)
 - Evaluation 3 (2 periods)
 
 ### Part 4 - Web infrastructures (12 periods)
 
-- [19\. Introduction to part 3 (1 period)](./19-introduction-to-part-4/README.md)
-- [20\. HTTP and cURL (1 period)](./20-http-and-curl/README.md)
-- [21\. Web infrastructures (2 periods)](./21-web-infrastructures/README.md)
-- [22\. Practical work 4 (2 + 2 periods)](./22-practical-work-4/README.md)
-- [23\. Conclusion to part 4 + practical work review + feedback (2 periods)](./23-conclusion-to-part-4/README.md)
+- [20. Introduction to part 3 (1 period)](./20-introduction-to-part-4/README.md)
+- [21. HTTP and cURL (1 period)](./21-http-and-curl/README.md)
+- [22. Web infrastructures (2 periods)](./22-web-infrastructures/README.md)
+- [23. Practical work 4 (2 + 2 periods)](./23-practical-work-4/README.md)
+- [24. Conclusion to part 4 + practical work review + feedback (2 periods)](./24-conclusion-to-part-4/README.md)
 - Evaluation 4 (2 periods)
 
 ### Conclusion (2 periods)
 
-- [24\. Semester review and exam preparation (2 periods)](./24-semester-review-and-exam-preparation/README.md)
+- [25. Semester review and exam preparation (2 periods)](./25-semester-review-and-exam-preparation/README.md)
 
 ## GitHub Discussions
 

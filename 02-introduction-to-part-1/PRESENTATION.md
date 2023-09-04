@@ -116,7 +116,7 @@ But for this, you will need some tools and some knowledge.
 
 - Main illustration by [Martin Adams](https://unsplash.com/@martinadams) on
   [Unsplash](https://unsplash.com/photos/a_PDPUPuNZ8)
-- Illustratin by [Unseen Studio](https://unsplash.com/@craftedbygc) on
+- Illustration by [Unseen Studio](https://unsplash.com/@craftedbygc) on
   [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
 - Illustration by [Jared Erondu](https://unsplash.com/@erondu) on
   [Unsplash](https://unsplash.com/photos/j4PaE7E2_Ws)

@@ -100,8 +100,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Mercurial](https://www.mercurial-scm.org/)
 - [Bazaar](https://bazaar.canonical.com/en/)
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Resources
 
@@ -114,8 +113,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [Atlassian Git tutorials - Advanced Tips](https://www.atlassian.com/git/tutorials/advanced-overview)
 - [Learn Git Branching](https://learngitbranching.js.org/)
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## GitHub
 
@@ -142,8 +140,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Gitea](https://gitea.io/) - Very good self-hosted alternative
 - [Gogs](https://gogs.io/)
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Resources
 
@@ -152,8 +149,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [The Basics of GitHub](https://github.com/education/github-starter-course) - A
   great Git repository to learn the basics of GitHub!
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Markdown
 
@@ -181,8 +177,7 @@ _Alternatives are here for general knowledge. No need to learn them._
   is the standard in the scientific community and much more powerful than
   Markdown.
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Resources
 
@@ -191,8 +186,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [Markdown Guide](https://www.markdownguide.org/) - Examples and explanations
   on Markdown specification
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Practical content
 
@@ -252,7 +246,7 @@ chapter?
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
 
-:arrow_right: [GitHub Discussions][discussions]
+➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
 

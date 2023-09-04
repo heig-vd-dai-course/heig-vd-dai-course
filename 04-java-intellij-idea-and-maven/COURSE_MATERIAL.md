@@ -28,6 +28,7 @@ L. Delafontaine and H. Louis, with the help of Copilot
   - [Summary](#summary)
 - [IntelliJ IDEA](#intellij-idea)
   - [Community Edition and Ultimate Edition](#community-edition-and-ultimate-edition)
+  - [IntelliJ IDEA Toolbox](#intellij-idea-toolbox)
   - [Configuration files and Git](#configuration-files-and-git)
   - [Summary](#summary-1)
 - [Maven](#maven)
@@ -175,6 +176,16 @@ page.
 
 IntelliJ IDEA is available for Windows, macOS and Linux. Feel free to use
 another IDE if you prefer, but we have great experience with IntelliJ IDEA.
+
+### IntelliJ IDEA Toolbox
+
+The **IntelliJ IDEA Toolbox** is a desktop application that allows you to
+**install and manage multiple JetBrains IDEs**.
+
+It is a convenient way to install and update IntelliJ IDEA and other JetBrains
+IDEs in a single place.
+
+Feel free to install the Toolbox if you want to.
 
 ### Configuration files and Git
 
@@ -352,7 +363,7 @@ chapter?
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
 
-:arrow_right: [GitHub Discussions][discussions]
+➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
 

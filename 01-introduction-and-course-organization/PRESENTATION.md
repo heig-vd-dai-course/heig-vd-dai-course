@@ -263,7 +263,7 @@ between them. Use the one you prefer!
 - A place where you can express your opinion
 - It is OK if you are not feeling well. We are here if you need to talk.
 
-:arrow_right: A place where you do not loose your time (efficient and useful)
+➡️ A place where you do not loose your time (efficient and useful)
 
 ### What we don't want this course to be
 
@@ -272,8 +272,7 @@ between them. Use the one you prefer!
 - A place where you can't ask questions and/or mistakes
 - A place where you can't take anything away
 
-:arrow_right: If you have a problem with the course, we will do our best to fix
-it.
+➡️ If you have a problem with the course, we will do our best to fix it.
 
 We will take presences during this course. If you are done, you are free to go.
 However, we would appreciate if you try to help your classmates instead!
@@ -346,8 +345,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/) -
   Use version 2 of WSL.
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 

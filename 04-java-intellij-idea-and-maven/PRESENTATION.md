@@ -106,8 +106,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Scala](https://www.scala-lang.org/)
 - [Groovy](https://groovy-lang.org/)
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Resources
 
@@ -120,8 +119,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [SDKMAN!](https://sdkman.io/) - SDKMAN! is a tool for managing Java versions.
 - [asdf](https://asdf-vm.com/) - An alternative to SDKMAN!.
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## IntelliJ IDEA
 
@@ -160,8 +158,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Eclipse](https://www.eclipse.org/ide/) if you **really** want to use it
 - [NetBeans](https://netbeans.apache.org/) if you **really** want to use it
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 #### Resources
 
@@ -169,8 +166,7 @@ _Resources are here to help you. They are not mandatory to read._
 
 - _None for now_
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Maven
 
@@ -210,8 +206,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Make](https://www.gnu.org/software/make/)
 - [Bazel](https://bazel.build/)
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Resources
 
@@ -220,8 +215,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [Introduction to the Build Lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
 - [Maven Build Lifecycle, Phases, and Goals](https://www.digitalocean.com/community/tutorials/maven-build-lifecycle-phases-goals)
 
-_Missing item in the list? Feel free to open a pull request to add it!
-✨_
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Practical content
 
@@ -276,7 +270,7 @@ chapter?
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
 
-:arrow_right: [GitHub Discussions][discussions]
+➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
 

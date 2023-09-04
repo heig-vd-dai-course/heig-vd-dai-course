@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of Copilot
 title: HEIG-VD DAI Course - Docker and Docker Compose
 description: Docker and Docker Compose for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-define-an-application-protocol/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -45,17 +45,17 @@ headingDivider: 4
 -->
 
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/README.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/README.md
 [web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-define-an-application-protocol/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-define-an-application-protocol/09-define-an-application-protocol.pdf
 [video]: #
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
-# Docker and Docker Compose
+# Define an application protocol
 
 <!--
 _class: lead
@@ -137,7 +137,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#practical-content).
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#practical-content).
 
 ## Conclusion
 

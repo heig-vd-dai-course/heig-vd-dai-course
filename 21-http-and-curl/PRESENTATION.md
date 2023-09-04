@@ -7,9 +7,9 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of Copilot
-title: HEIG-VD DAI Course - Docker and Docker Compose
-description: Docker and Docker Compose for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+title: HEIG-VD DAI Course - HTTP and cURL
+description: HTTP and cURL for the DAI course at HEIG-VD, Switzerland
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -45,17 +45,16 @@ headingDivider: 4
 -->
 
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/README.md
-[web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/README.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/21-http-and-curl.pdf
 [video]: #
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
-# Docker and Docker Compose
+# HTTP and cURL
 
 <!--
 _class: lead
@@ -69,28 +68,50 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
+<small>Based on the original course by O. Liechti and J. Ehrensberger</small>
+
 ![bg opacity:0.1][illustration]
+
+    - The history of HTTP (and HTML)
+        - HTTP versions
+    - The HTTP protocol
+        - HTTP methods
+        - HTTP status codes
+        - HTTP headers
+            - Content negotiation
+        - HTTP Body, Query parameters, URL encoding
+        - HTTP caching
+        - HTTP sessions (stateful vs. stateless)
+        - HTTP cookies
+        -
+    - Interact with HTTP
+        - The browser
+        - Postman
+        - Insomnia
+        - cURL
+    - HTTP in Java
 
 ## Table of contents
 
 - **[Theoretical content](#theoretical-content)**
-  - Installation of software: traditional vs. containerization
-  - OCI, images, containers and registries
-  - Dockerfile and Docker Compose
-  - Tips and tricks
+  - The history of HTTP (and HTML)
+  - The HTTP protocol
+  - Interact with HTTP
+  - HTTP in Java
 - **[Practical content](#practical-content)**
   - [What will you do?](#what-will-you-do)
   - [Find the practical content](#find-the-practical-content)
 
 ---
 
-    - Install Docker (and Docker Compose)
-    - Run a container with Docker
-    - Run a container with Docker Compose
-    - Write a Dockerfile, build and run an image with Docker
-    - Build and run the same image with Docker Compose
+    - Use cURL to interact with HTTP
+    - Use Java to interact with HTTP
 
 ## Theoretical content
+
+<!-- _class: lead -->
+
+## Practical content
 
 <!-- _class: lead -->
 
@@ -120,10 +141,6 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-## Practical content
-
-<!-- _class: lead -->
-
 ### What will you do?
 
 -
@@ -137,7 +154,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#practical-content).
+[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#practical-content).
 
 ## Conclusion
 
