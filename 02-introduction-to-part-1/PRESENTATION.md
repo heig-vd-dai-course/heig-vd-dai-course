@@ -96,7 +96,7 @@ But for this, you will need some tools and some knowledge.
 - How to use Git (professionally)
 - How to use GitHub (professionally)
 - How to use Markdown
-- How to create a Java project with Maven
+- How to create a Java project with Maven and dependencies
 - How to use the Java IO API
 - How to manage different file formats and encodings
 

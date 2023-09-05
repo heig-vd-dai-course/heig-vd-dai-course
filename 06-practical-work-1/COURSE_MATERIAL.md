@@ -12,20 +12,25 @@
 
 L. Delafontaine and H. Louis, with the help of Copilot
 
-In this practical work, you will create a CLI to process files. The CLI will
-take an input file and an output file as arguments. It will also take the input
-file encoding and the output file encoding as arguments. The CLI will process
-the input file and write the result in the output file. It will display a
-message on success and a message on failure. It will also display the execution
-time.
+We use CLI tools every day. For example, we use `git` to manage our code, `mvn`
+to build our projects, `java` to run our programs, etc.
 
-You will create two versions of the CLI. The first version will not use buffers.
-The second version will use buffers. You will compare the two versions.
+In this practical work, you will learn how to create a CLI using
+[picocli](https://picocli.info/). This knowledge will be useful for the next
+practical works and for your future projects where you will need to create a
+CLI.
 
-You will define what the CLI will do. You can choose to copy the input file to
-the output file, to convert the input file to uppercase, to convert the input
-file to lowercase, to convert the input file to a specific encoding, etc. If you
-do not have any idea, come to see us and we can give you some ideas.
+The CLI will take an input file and an output file as arguments. It will also
+take the input file encoding and the output file encoding as optional arguments
+(the default will be UTF-8). The CLI will process the input file and write the
+result in the output file. It will display a message on success and a message on
+failure.
+
+You have the freedom to define what the CLI will do. You can be creative! For
+example, you can choose to copy the input file to the output file, to convert
+the input file to lowercase/uppercase, count the number of `e` in the input
+file, etc. If you do not have any idea, come to see us and we can give you some
+ideas.
 
 Multiple groups can choose the same processing and you can share your
 methodology but please do not copy/paste code from other groups.
@@ -33,12 +38,13 @@ methodology but please do not copy/paste code from other groups.
 ## Objectives
 
 - Create a CLI to process files
-- Learn how to use Java IOs to process files with different encodings
+- Use Java IOs to process files with different encodings
+- Make usage of a Maven dependency
 
 ## Group composition
 
 You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one.
+not have a partner, we will assign you one or you can work alone if you prefer.
 
 ## Grading criteria
 
@@ -50,38 +56,41 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 1 - Git, GitHub and Markdown
 
-| #   | Criteria                                                                        | Points |
-| --- | ------------------------------------------------------------------------------- | -----: |
-| 1   | The repository contains all members - if private, the teaching staff is invited |    0.2 |
-| 2   | The repository is managed using issues and pull requests                        |    0.2 |
-| 3   | The commits are signed                                                          |    0.2 |
-| 4   | The issues, pull requests and commits messages are descriptive                  |    0.2 |
-| 5   | The entire team contributes to the project and can explain it                   |    0.2 |
-| 6   | The repository contains a gitignore file to ignore unwanted files               |    0.2 |
-| 7   | The repository contains test files to use with the CLI                          |    0.2 |
-| 8   | The README is well structured and explains what the CLI is for                  |    0.2 |
-| 9   | The README explains how to build the CLI                                        |    0.2 |
-| 10  | The README explains how to use the CLI with examples                            |    0.2 |
+If your repository is private, you must add us as collaborators to your
+repository!
+
+| #   | Criteria                                                          | Points |
+| --- | ----------------------------------------------------------------- | -----: |
+| 1   | The repository is managed using issues and pull requests          |    0.2 |
+| 2   | The commits are signed                                            |    0.2 |
+| 3   | The issues, pull requests and commits messages are descriptive    |    0.2 |
+| 4   | The entire team contributes to the project and can explain it     |    0.2 |
+| 5   | The repository contains a gitignore file to ignore unwanted files |    0.2 |
+| 6   | The repository contains test files to use with the CLI            |    0.2 |
+| 7   | The README is well structured and explains what the CLI is for    |    0.2 |
+| 8   | The README explains how to build the CLI                          |    0.2 |
+| 9   | The README explains how to use the CLI with examples              |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
-| #   | Criteria                                              | Points |
-| --- | ----------------------------------------------------- | -----: |
-| 11  | The code is well structured                           |    0.2 |
-| 12  | The code is well documented                           |    0.2 |
-| 13  | The code is built and output an executable JAR file   |    0.2 |
-| 14  | The CLI displays a help message on how to use the CLI |    0.2 |
+| #   | Criteria                                                            | Points |
+| --- | ------------------------------------------------------------------- | -----: |
+| 10  | The code is well structured                                         |    0.2 |
+| 11  | The code is well documented                                         |    0.2 |
+| 12  | The code is built and output an executable JAR file                 |    0.2 |
+| 13  | The CLI uses [picocli](https://picocli.info/) as a Maven dependency |    0.2 |
+| 14  | The CLI displays a comprehensive help message on how to use the CLI |    0.2 |
 
 ### Category 3 - Java IOs
 
-| #   | Criteria                                                                            | Points |
-| --- | ----------------------------------------------------------------------------------- | -----: |
-| 15  | The CLI takes an input file and an output file as arguments                         |    0.2 |
-| 16  | The CLI takes the input file encoding and the output file encoding as arguments     |    0.2 |
-| 17  | The CLI displays an error on invalid/missing inputs                                 |    0.2 |
-| 18  | The CLI correctly processes the input file and writes the result in the output file |    0.2 |
-| 19  | The CLI displays a message on failure                                               |    0.2 |
-| 20  | The CLI displays a message on success                                               |    0.2 |
+| #   | Criteria                                                                                 | Points |
+| --- | ---------------------------------------------------------------------------------------- | -----: |
+| 15  | The CLI takes an input file and an output file as arguments                              |    0.2 |
+| 16  | The CLI takes the input file encoding and the output file encoding as optional arguments |    0.2 |
+| 17  | The CLI displays an error on invalid/missing inputs                                      |    0.2 |
+| 18  | The CLI correctly processes the input file and writes the result in the output file      |    0.2 |
+| 19  | The CLI displays a message on failure                                                    |    0.2 |
+| 20  | The CLI displays a message on success                                                    |    0.2 |
 
 ### Category 4 - Presentation and questions
 
@@ -95,7 +104,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ## Constraints
 
-- The CLI must be written in Java, using the Java IO API for Java 17
+- The CLI must be written in Java, compatible with Java 17
 - The CLI must be built using Maven
 
 ## Remarks
@@ -105,12 +114,8 @@ use a simple solution than a complex one.
 
 If your solution is too complex, we might penalize you.
 
-You can use any dependency you want in your Maven project. You must however
-explain why and how you use it in your README.
-
-Here are some examples of dependencies you can use:
-
-- <https://picocli.info/>
+You can use any other dependency you want in your Maven project. You must
+however explain why and how you use it in your README.
 
 ## Submission
 

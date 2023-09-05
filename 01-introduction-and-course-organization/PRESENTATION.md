@@ -181,14 +181,14 @@ The entire course planning for the semester is available at
 
 ## Course sequence
 
-1. Theoretical content that is meant to be short and concise (us)
+1. Theoretical content that is meant to be short and concise (all of us)
    - Sessions of 20 minutes, dynamic and interactive
 2. Practical content where you do stuff (you)
-   - You will be able to experiment the theoretical content
+   - Prepare you for the practical work with official doc and tutorials
 3. Practical work (you)
    - The theoretical and practical content are meant to help you
-4. Feedback and discussions (all - very important to us)
-   - You will be able to give feedback and criticize the course
+4. Feedback and discussions (you - very important to us)
+   - You will be able to give feedback and help us improve the course
 
 ## Evaluation
 
@@ -241,12 +241,13 @@ We accept issues and pull requests if you spot anything weird! 🙂
 
 The course material is available in several formats:
 
-- **Markdown format**. You can read it directly on GitHub or on your computer
-  with your favorite text editor.
+- **Markdown format** (recommended). You can read it directly on GitHub or on
+  your computer with your favorite text editor.
 - **PDF format**. You can download it from GitHub and read it on your computer
-  or print it.
-- **Web format**. You can read it on GitHub or on the course website (only the
-  presentations are available on the web).
+  or print it. We are aware that the generated PDF is not perfect, sorry about
+  that.
+- **Web format**. You can read it on the course website (only the presentations
+  are available on the web).
 
 These formats are generated from the same source files. There are no differences
 between them. Use the one you prefer!

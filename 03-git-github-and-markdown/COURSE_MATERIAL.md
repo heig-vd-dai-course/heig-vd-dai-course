@@ -48,6 +48,8 @@ Based on the original course by O. Liechti and J. Ehrensberger
 - [Practical content](#practical-content)
   - [Install Git](#install-git)
   - [Create and configure your GitHub account](#create-and-configure-your-github-account)
+  - [Enable SSH authentication](#enable-ssh-authentication)
+  - [Sign commits with SSH](#sign-commits-with-ssh)
   - [Create your own profile README](#create-your-own-profile-readme)
   - [Add yourself to the list of students in the GitHub organization](#add-yourself-to-the-list-of-students-in-the-github-organization)
   - [Go further](#go-further)
@@ -538,10 +540,17 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Install Git
 
+Git will be used for the rest of the course to work collaboratively and to
+submit your practical work. It is important to have it installed and configured
+properly.
+
+In this section, you will install Git on your system. If you already have it,
+please check that it is up to date.
+
 #### Install Git
 
 Go to the official website and follow the instructions on how to install Git on
-your system: <https://git-scm.com/downloads>
+your system: <https://git-scm.com/downloads>.
 
 #### Check the installation
 
@@ -549,154 +558,599 @@ Open a terminal and type `git --version`
 
 The output should be similar to this: `git version 2.41.0`
 
+#### Configure Git
+
+Git needs to know your name and email address to be able to label your commits
+properly.
+
+Open a terminal and type the following commands:
+
+```sh
+# Set your name
+git config --global user.name "Your Name"
+
+# Set your email address
+git config --global user.email "Your Email"
+```
+
 ### Create and configure your GitHub account
+
+GitHub is a social platform, home for many open source projects. You will use it
+to publish your work and to collaborate with your team. It is a great visibility
+tool for your (future) career.
+
+In this section, you will create and configure your GitHub account. If you
+already have one, ensure that it is properly configured. Please avoid the use of
+GitHub CLI/Desktop or any other application to manage your repositories to be
+able to use Git everywhere.
 
 #### Create a GitHub account
 
 If you do not have a GitHub account yet, you will need to create one.
 
 Follow the official documentation to create your account:
-<https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account>
+<https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account>.
 
-> [!NOTE]  
-> Do not forget to verify your email address!
-
-#### Create a SSH key
-
-In this section, you will create a SSH key to authenticate to GitHub. If you
-already have one, you can skip this section. You must have `ssh-keygen`
-installed on your system.
-
-An SSH key is a pair of keys: a public key and a private key. The public key is
-used to authenticate to a server, and the private key is used to sign the
-authentication request.
-
-It is required to use the SSH key authentication method to authenticate to
-GitHub. It is more secure than using a password.
-
-1. Open a terminal
-2. Type `ssh-keygen -t ed25519 -C ""`
-3. Press enter to use the default location
-4. Enter a passphrase (optional)
-5. Type `eval "$(ssh-agent -s)"`
-6. Type `ssh-add ~/.ssh/id_ed25519`
-7. Type `cat ~/.ssh/id_ed25519.pub`
-
-> [!WARNING] Never share your private key with anyone! It must be kept secret
-> and confidential, just like a password.
-
-#### Add the public SSH key to your GitHub account
-
-TODO
+> **Note**  
+> Do not forget to
+> [verify your email address](https://docs.github.com/en/get-started/signing-up-for-github/verifying-your-email-address)!
 
 #### Enable two-factor authentication (optional, but highly recommended)
 
-TODO
+Two-factor authentication adds an extra layer of security to your account. It
+will require you to enter a code sent to your phone each time you log in to your
+account.
+
+Follow the official documentation to enable two-factor authentication:
+<https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa>.
 
 #### Enable your PRO account
 
-TODO
+Having a PRO account will allow you to unlock all the features of GitHub and
+other products such as Copilot. As a HEIG-VD student, you can get a PRO account
+for free.
+
+Follow the official documentation to enable your PRO account:
+<https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-students>.
+
+### Enable SSH authentication
+
+SSH is a secure protocol to communicate with a server. It is used to
+authenticate users on GitHub. Using SSH, you will not have to input your
+username and password each time you want to push or pull changes from a
+repository, contrary to HTTPS.
+
+In this section you will enable SSH authentication on your GitHub account.
+
+#### Generate a SSH key
+
+Follow the official documentation to generate a SSH key:
+<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
+
+> **Warning**  
+> Never share your private key with anyone! It must be kept secret and
+> confidential, just like a password.
+
+#### Add the public SSH key to your GitHub account
+
+Follow the official documentation to add the public SSH key to your GitHub
+account:
+<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>
+
+#### Test the configuration
+
+You can try to clone this very repository using SSH:
+
+```sh
+# Clone the course repository using SSH in a directory named "heig-vd-dai-course"
+git clone git@github.com:heig-vd-dai-course/heig-vd-dai-course.git "heig-vd-dai-course"
+```
+
+If you are able to clone the repository, it means that your SSH key is properly
+configured.
+
+The URL of a repository can be found in the **Code** tab of the repository, as
+shown in the following screenshot:
+
+![Screenshot on how to find the SSH URL](./images/heig-vd-dai-course-clone-with-ssh.png)
+
+### Sign commits with SSH
+
+Signing commits is a good practice to prove that you are the author of a commit.
+
+In this section, you will sign all your commits with SSH.
+
+All information about signing commits can be found in the official
+documentation:
+<https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-signature-verification>.
+
+#### Add a new SSH signing key to your GitHub account
+
+Follow the official documentation to add a new SSH signing key to your GitHub
+account:
+<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>.
+
+> **Note**  
+> You can use the same public SSH key as the one used to authenticate yourself.
+> Add the SSH key as a **signing key**.
+
+#### Tell Git to sign commits with SSH
+
+Follow the official documentation to tell Git about your SSH key:
+<https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>.
+
+#### Enable commit signing in your Git configuration
+
+Git can sign commits on demand or automatically. It is more convenient to sign
+commits automatically.
+
+Follow the official documentation to enable commit signing in your Git
+configuration:
+<https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits>.
+
+> **Note**  
+> The documentation mentions GPG. It is not needed if you use SSH. Just follow
+> the instructions and it should work the same.
 
 ### Create your own profile README
 
+The GitHub profile README is a special repository that will be used to set your
+GitHub profile. It is a great way to introduce yourself and to show your
+interests.
+
+This will allow you to create your first repository and to learn how to use Git
+and GitHub when working on your own projects.
+
+An example of a profile README is shown in the following screenshot:
+
+![Screenshot of a profile README](./images/benphelps-github-readme-profile.png)
+
 #### Create a new repository
 
-In this section, you will create a new special repository to set your GitHub
-profile. This repository is named `.github`. If you already have it, you can
-skip this section.
+Follow the official documentation to create a new repository for your profile
+README:
+<https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme>.
 
 #### Clone the repository locally
+
+You could use the GitHub web interface to edit the files, but for the sake of
+learning, you will use Git to clone the repository locally.
+
+Clone the repository locally using SSH:
+
+```sh
+# Clone the repository using SSH
+git clone YOUR_GITHUB_PROFILE_README_SSH_URL
+```
 
 #### Fill your profile
 
-Fill a new file named `profile/README.md` file. This file will be used by GitHub
-to set your profile.
+Fill the `README.md` file with the content you want to show on your profile
+using Markdown.
+
+Feel free to be creative! You can add images, links, tables, etc.
+
+Missing inspiration? There are plenty of generators to help you create your
+profile README!
 
 #### Commit your changes
 
-Commit your changes and push them to the repository.
+Commit your changes and push them to the repository:
+
+```sh
+# Add the staged files to the staging area
+git add README.md
+
+# Commit the changes
+git commit -m "Update profile README"
+```
+
+> **Note**  
+> There is not a clear convention on how to write commit messages. The most
+> important thing is to be consistent. We have found using an infinitive verb
+> followed by a short description of the changes to be a good practice.
 
 #### Push your changes
 
-Push your changes to the repository.
+Push your changes to the repository:
+
+```sh
+# Push the changes to the repository
+git push
+```
+
+> **Note**  
+> You might see sometimes the following command `git push origin main`. This is
+> just a more explicit way to push the changes to the `main` branch of the
+> `origin` remote. `origin` is the default name of the remote when cloning a
+> repository.
 
 #### Check the results
 
-TODO
+Reload your GitHub profile and check the results. You should see your profile
+README!
 
 #### Share your profile in GitHub Discussions
 
-This will notify us that you have completed the exercise.
+Share your profile in the GitHub Discussions of this organization:
+<https://github.com/orgs/heig-vd-dai-course/discussions>.
 
-GitHub Discussions - show and tell
+Create a new discussion with the following information:
+
+- **Title**: DAI 2023-2024 - Check out my GitHub profile! -
+  @YOUR_GITHUB_USERNAME
+- **Category**: Show and tell
+- **Description**: The link to your GitHub profile README!
+
+This will notify us that you have completed the exercise and we will check your
+beautiful profile README!
 
 #### Summary
+
+In this section, you have learned how to create a repository, clone it locally,
+make changes, commit them and push them to the repository.
+
+You have also learned how to share your profile README in the GitHub
+Discussions.
+
+Feel free to update your profile README as you learn new things!
+
+Feel also free to open any GitHub Discussions to ask questions or to share
+interesting content!
+
+The GitHub Discussions are a great way to interact with your peers and to learn
+new things. This is where official announcements will be made. You should
+receive notifications when a new discussion is created and you are mentioned.
 
 ### Add yourself to the list of students in the GitHub organization
 
-TODO
+In this section, you will add yourself to the list of students in the GitHub
+organization README using a workflow we named the Issue, Fork and Pull request
+(PR) workflow. This will allow you to contribute to other projects in the
+future.
+
+#### Create a new issue
+
+Create a new issue in the <https://github.com/heig-vd-dai-course/.github>
+describing what you want to do in the repository:
+
+- **Title**: Add myself (@GITHUB_USERNAME) to the list of students
+- **Description**: I would like to add myself to the list of students in the
+  GitHub organization README.
+
+> **Note**  
+> While totally optional, it is a good to create an issue before starting to
+> work on any new feature. It allows to discuss the feature with the maintainers
+> of the project you want to contribute to. Maybe the maintainers have some
+> ideas on how to implement the feature or maybe the feature is already planned
+> and you can help them!
 
 #### Fork the repository
 
-TODO
+Fork the repository using the **Fork** button in the top right corner of the
+repository page as shown in the following screenshot:
+
+![Screenshot of the .github repository](./images/github-fork.png)
+
+You will be asked to choose where to fork the repository. Choose your own
+account. You can change the name of the repository if you want.
 
 #### Clone the repository locally
 
-TODO
+Forking the repository will create a copy of the repository in your own account.
+
+Clone the repository locally and open it in your favorite IDE.
 
 #### Create a new branch
 
-TODO
+Create a new branch to add yourself to the list of students. Replace the
+`github-username` with your own GitHub username:
+
+```sh
+git checkout -b add-myself-github-username-to-the-list-of-students
+```
+
+> **Note**  
+> As for the commit messages, there is not a clear convention on how to name
+> branches. We have found using an infinitive verb followed by a short
+> description of the changes to be a good practice.
 
 #### Add yourself to the list
 
-TODO
+Add yourself to the list of students in the `profile/README.md` file. Please add
+yourself in alphabetical order (by last name) as mentioned in the HTML comment
+in the README file.
+
+#### Check the staging area
+
+Check the staging area by running the following command:
+
+```sh
+# Check the changes
+git status
+```
+
+This will show you the files that have changed. You should see the
+`profile/README.md` file in the list of modified files.
+
+#### Check the differences
+
+Check the differences between the working directory and the staging area:
+
+```sh
+# Check the differences
+git diff profile/README.md
+```
+
+This will display the differences made inside the file with new lines starting
+with `+` and removed lines starting with `-`.
 
 #### Commit your changes
 
-TODO
+Commit your changes:
+
+```sh
+# Add the staged files to the staging area
+git add profile/README.md
+
+# Commit the changes
+git commit -m "Add myself to the list of students"
+```
 
 #### Intentionally create a conflict
 
-TODO
+In the next section, you will intentionally create a conflict to learn how to
+resolve it.
+
+Change the title of the `.profile/README.md` file to `# This is now my course!`
+and commit the changes:
+
+```sh
+# Add the staged files to the staging area
+git add profile/README.md
+
+# Commit the changes
+git commit -m "Change the title of the README file"
+```
+
+Checkout to a new branch and change the title of the `.profile/README.md` file
+to `# No this is my course, not yours` and commit:
+
+```sh
+# Checkout to a new branch
+git checkout -b change-title-of-readme-file
+
+# Make your changes
+
+# Add the staged files to the staging area
+git add profile/README.md
+
+# Commit the changes
+git commit -m "Change the title of the README file again"
+```
+
+Checkout to the branch you created earlier and try to merge the branch you just
+created:
+
+```sh
+# Checkout to the branch you created earlier
+git checkout add-myself-github-username-to-the-list-of-students
+```
+
+> **Note**  
+> You might notice you did not use the `-b` argument when checking out to the
+> branch you created earlier. This is because the branch already exists. If you
+> try to checkout to a branch that does not exist, you will need to use the `-b`
+> argument.
+
+Merge the branch you just created:
+
+```sh
+# Merge the branch you just created
+git merge change-title-of-readme-file
+```
+
+> **Note**  
+> `git merge` will merge the changes from the branch you are merging into the
+> current branch. In this case, you are merging the changes from the
+> `change-title-of-readme-file` branch into the
+> `add-myself-github-username-to-the-list-of-students`.
+
+You should see the following error:
+
+```text
+Auto-merging profile/README.md
+CONFLICT (content): Merge conflict in profile/README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
 
 #### Resolve the conflict
 
-TODO
+Git was not able to merge the changes automatically. This is called a **merge
+conflict**. This happens when two or more people make changes to the same file
+at the same time.
+
+Open the file in your favorite IDE and you should see the following content:
+
+```markdown
+<<<<<< HEAD
+
+# This is now my course!
+
+======
+
+# No this is my course, not yours
+
+> > > > > > change-title-of-readme-file
+```
+
+The `HEAD` part is the content of the current branch. The
+`change-title-of-readme-file` part is the content of the branch you are trying
+to merge.
+
+Change the content back to its original state:
+
+```markdown
+# This is my course!
+```
+
+Once you are done, add the file to the staging area and commit the changes:
+
+```sh
+# Add the staged files to the staging area
+git add profile/README.md
+
+# Commit the changes
+git commit -m "Resolve the merge conflict"
+```
+
+#### Revert the commits
+
+Check the log to see the history of the repository:
+
+```sh
+# Check the log
+git log
+```
+
+You should see the three commits you made earlier:
+
+TODO: Validate if the output is correct
+
+```text
+commit d281e0d0228b8b82dfca9b50603376759aa4c0b6
+Author: YOUR_NAME <YOUR_EMAIL>
+Date:   DATE
+
+    Resolve the merge conflict
+
+commit 05138df3789d1bbf40763f646c24a5ae9d849a58
+Author: YOUR_NAME <YOUR_EMAIL>
+
+    Change the title of the README file
+
+commit 37d88878ee9ab8ce11b8f8b6cd1945953607812a
+Author: YOUR_NAME <YOUR_EMAIL>
+
+    Add myself to the list of students
+```
+
+To quit the log, press <kbd>q</kbd>.
+
+The commit hashes are unique identifiers for each commit. They will, of course,
+be different on your screen. They are used to identify a commit. They are also
+used to create branches and tags.
+
+As this conflict was intentional, you can revert the commits to get back to the
+original state of the repository before the intentional conflict:
+
+TODO: Validate if the output is correct
+
+```sh
+# Revert the commits
+git revert HEAD~2..HEAD
+```
+
+> **Note**  
+> `HEAD~2..HEAD` is a range of commits. It means from the commit before `HEAD`
+> (the current commit) to `HEAD` (the current commit). TODO: Finish this
 
 #### Push your changes
 
-TODO
+Push your changes to the repository:
+
+```sh
+# Push the changes to the repository
+git push
+```
 
 #### Create a pull request
 
-TODO
+Create a pull request by clicking on the **Compare & pull request** button in
+the repository page as shown in the following screenshot:
+
+TODO: Add the screenshot
+
+![Screenshot of the pull request button](./images/github-pull-request.png)
+
+> **Note**  
+> If the notification does not appear, you can create a pull request by clicking
+> on the **Pull requests** tab and then on the **New pull request** button.
+> Select the branches you want to merge and click on the **Create pull request**
+> button.
+
+The title of the pull request should be filled automatically with the message of
+the last commit. We consider this to be a bad practice. Instead,rename the pull
+request to something meaningful. The title of the issue you created earlier is a
+good candidate as it describes what you want to do.
+
+Opening the pull request will notify the maintainers of the repository that you
+want to merge your changes into the repository. They will be able to review your
+changes and to ask for changes if needed.
+
+> **Note**  
+> If your pull request is not ready yet, you can mark it as a draft by clicking
+> on the **Mark as draft** button. This will inform the maintainers that the
+> pull request is not ready yet and that they should not review it yet. When you
+> are ready, you can mark it as ready by clicking on the **Ready for review**
+> button.
+
+Associate the pull request with the issue you created earlier. This will
+automatically close the issue once the pull request is merged, closing the loop.
 
 #### Wait for review
 
-TODO
+The maintainers will review your pull request and will ask for changes if
+needed.
+
+<details>
+<summary>Notes for the maintainers</summary>
+
+Check the following elements:
+
+- The student is in the list of students
+- The student is in alphabetical order
+- The GitHub profile is mentioned next to the name of the student
+- The issue is linked to the pull request
+
+If they are conflicts because the students are editing the same lines, fix the
+conflict yourself to avoid the students to have to do it so they can focus on
+the content.
+
+</details>
 
 #### Make changes if needed
 
-TODO
+The maintainers might ask for changes. If they do, you will need to make the
+changes locally, commit them and push them to the repository.
 
 #### Check the results
 
-TODO
+Once the pull request is approved and merged, you can check the results on the
+organization README.
 
 #### Summary
 
-TODO
+In this section, you have learned how to open an issue, create an issue, fork a
+repository, clone it locally, create a new branch, make changes, commit them,
+push them to the repository, create a pull request, wait for review, make
+changes if needed and check the results.
+
+There are many ways to contribute to a project. This is just one of them that we
+find easy to understand and to use.
+
+Feel free to contribute to other projects using this workflow!
+
+You are now ready to work professionally with Git and GitHub!
 
 ### Go further
 
-This is an optional section. You can do it if you have time left. We encourage
-you to do it nonetheless to learn more about Git and GitHub!
+This is an optional section. Feel free to skip it if you do not have time.
 
-- Go in the GitHub Discussions, check the others profiles and give them a star!
-- Follow your classmates!
-- Follow other GitHub users! Can you think of an open source project you like?
-  Follow these projects and/or maintainers!
+- Go in the GitHub Discussions, check the others profiles and follow them! You
+  will be able to see their activity on your GitHub feed (what they star, what
+  they do, etc.)!
+- Can you think of an open source project you like? Give them a star on GitHub!
 
 ## Conclusion
 
@@ -710,7 +1164,7 @@ profile as a computer scientist engineer.
 
 Finally, you have added yourself to the list of students in the GitHub
 organization using the issue, fork and pull request workflow, enabling you to
-contribute to open source projects in the future.
+contribute to other projects in the future.
 
 Git is a valuable tool for collaborative work but we only scratched the surface.
 Refer to the resources for more useful content!
