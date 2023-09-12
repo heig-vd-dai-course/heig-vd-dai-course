@@ -1,5 +1,5 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/README.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-practical-work-1/06-practical-work-1.pdf
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5

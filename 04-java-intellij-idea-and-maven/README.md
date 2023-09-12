@@ -1,7 +1,7 @@
 # Java, IntelliJ IDEA and Maven
 
 - Time in class: 1 period
-- Presentation [Markdown](./PRESENTATION.md) |
+- Presentation
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/)
   |
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-presentation.pdf)<!-- | [Video (in French)]() -->

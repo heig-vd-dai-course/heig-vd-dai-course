@@ -177,15 +177,13 @@ page.
 IntelliJ IDEA is available for Windows, macOS and Linux. Feel free to use
 another IDE if you prefer, but we have great experience with IntelliJ IDEA.
 
-### IntelliJ IDEA Toolbox
+### IntelliJ IDEA Toolbox App
 
-The **IntelliJ IDEA Toolbox** is a desktop application that allows you to
+The **IntelliJ IDEA Toolbox App** is a desktop application that allows you to
 **install and manage multiple JetBrains IDEs**.
 
 It is a convenient way to install and update IntelliJ IDEA and other JetBrains
 IDEs in a single place.
-
-Feel free to install the Toolbox if you want to.
 
 ### Configuration files and Git
 
@@ -269,10 +267,6 @@ The standard `pom.xml` file contains the following sections (among others):
 - `name` and `description`: the name and description of the project.
 - `dependencies`: the dependencies of the project.
 
-### Maven commands
-
-TODO
-
 ### Summary
 
 - Maven is a software project management and comprehension tool.
@@ -282,17 +276,55 @@ TODO
 - Maven defines a standard build process for Java projects.
 - The `pom.xml` file contains the configuration of your Maven project.
 
+### Cheat sheet
+
+TODO
+
 ## Practical content
 
 ### Install and configure Java
+
+#### Install Java
 
 TODO
 
 QUESTION: Do we use SDKMAN! here? My main concern is WSL/Windows
 
-### Install and configure IntelliJ IDEA
+#### Check the installation
 
 TODO
+
+### Install and configure IntelliJ IDEA
+
+In this section, you will install and configure IntelliJ IDEA Ultimate Edition.
+
+You can use another IDE if you prefer, but we have great experience with
+IntelliJ IDEA.
+
+#### Enable the IntelliJ student license
+
+Follow the official documentation to enable the IntelliJ student license:
+<https://www.jetbrains.com/community/education/#students>
+
+#### Download and install IntelliJ Toolbox App
+
+Go to the official website and following the instructions on how to install IntelliJ Toolbox App on your system: <https://www.jetbrains.com/toolbox/app>.
+
+#### Enable the student license in IntelliJ Toolbox App
+
+Open IntelliJ Toolbox App and login with your JetBrains account.
+
+> **Note:**  
+> I (Ludovic) am interested if one of you could improve this section with
+> instructions and/or screenshots. I did not do it myself for a long time, maybe
+> it has changed and my memory is not up to date anymore.
+>
+> Feel free to open an issue and a pull request on GitHub if you want to help!
+> Thanks!
+
+#### Install IntelliJ IDEA Ultimate Edition
+
+Install IntelliJ IDEA from the Toolbox App and you should be good to go!
 
 ### Install and configure Maven
 

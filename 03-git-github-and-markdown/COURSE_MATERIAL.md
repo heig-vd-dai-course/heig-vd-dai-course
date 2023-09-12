@@ -46,7 +46,7 @@ Based on the original course by O. Liechti and J. Ehrensberger
   - [Summary](#summary-2)
   - [Resources](#resources-2)
 - [Practical content](#practical-content)
-  - [Install Git](#install-git)
+  - [Install and configure Git](#install-and-configure-git)
   - [Create and configure your GitHub account](#create-and-configure-your-github-account)
   - [Enable SSH authentication](#enable-ssh-authentication)
   - [Sign commits with SSH](#sign-commits-with-ssh)
@@ -65,8 +65,9 @@ Based on the original course by O. Liechti and J. Ehrensberger
 This chapter will help you to understand how Git and GitHub work, and how you
 can use Markdown to write documentation.
 
-These skills are essential for the rest of the course, as you will use Git and
-GitHub to submit your practical work and to collaborate with your team.
+These skills are essential for the rest of the course (and your future!), as you
+will use Git and GitHub to submit your practical work and to collaborate with
+your team.
 
 Documentation is also very important, as any code you write is meant to be used
 by other people. Even if you are the only one working on a project, you will
@@ -85,8 +86,7 @@ Let's get started!
 
 Created by Linus Torvalds in 2005 to manage the Linux kernel source code, Git
 allows to track changes in any set of files, usually used for coordinating work
-among programmers collaboratively developing source code during software
-development.
+among programmers during software development.
 
 ### Architecture
 
@@ -97,8 +97,7 @@ The repository is the single source of truth, and the clones are the local
 copies of the repository.
 
 Git is a **distributed** VCS, which means that each clone is a full copy of the
-repository. This allows to work offline, and to have multiple backups of the
-repository.
+repository. This allows to work offline.
 
 ### Commits, hashes and tags
 
@@ -122,8 +121,7 @@ Each branch has a name and a pointer to a commit. The pointer is called a
 **head**. The head of the main branch is called `HEAD`.
 
 Often, when implementing a new feature, a new branch is created. This is done by
-creating a new branch from the main branch. The new branch is called a **feature
-branch**. The main branch is called the **target branch**.
+creating a new branch from the main branch.
 
 Once you made all the changes, the modified files are **staged** and a new
 commit is created. The commit is then **pushed** to the repository.
@@ -244,7 +242,8 @@ public repositories. To enable them for private repositories, you need to
 upgrade to a **PRO** account, which is not free.
 
 As a HEIG-VD student, you can get a **PRO** account for free with the
-[GitHub Student Developer Pack](https://education.github.com/pack).
+[GitHub Global Campus for students](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-students)
+program.
 
 ### Users and organizations
 
@@ -287,6 +286,7 @@ avoids to cumulate out-dated branches in your repository.
 
 The whole process would be as follow:
 
+0. Open an issue to discuss the feature (optional, but recommended)
 1. Clone or fork the project
 2. Checkout to a new branch
 3. Make your changes, commit and push them as often as you want
@@ -538,7 +538,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Practical content
 
-### Install Git
+### Install and configure Git
 
 Git will be used for the rest of the course to work collaboratively and to
 submit your practical work. It is important to have it installed and configured
@@ -607,7 +607,7 @@ Follow the official documentation to enable two-factor authentication:
 #### Enable your PRO account
 
 Having a PRO account will allow you to unlock all the features of GitHub and
-other products such as Copilot. As a HEIG-VD student, you can get a PRO account
+other products, such as Copilot. As a HEIG-VD student, you can get a PRO account
 for free.
 
 Follow the official documentation to enable your PRO account:
@@ -812,7 +812,7 @@ future.
 #### Create a new issue
 
 Create a new issue in the <https://github.com/heig-vd-dai-course/.github>
-describing what you want to do in the repository:
+repository describing what you want to do:
 
 - **Title**: Add myself (@GITHUB_USERNAME) to the list of students
 - **Description**: I would like to add myself to the list of students in the
@@ -821,11 +821,15 @@ describing what you want to do in the repository:
 > **Note**  
 > While totally optional, it is a good to create an issue before starting to
 > work on any new feature. It allows to discuss the feature with the maintainers
-> of the project you want to contribute to. Maybe the maintainers have some
-> ideas on how to implement the feature or maybe the feature is already planned
-> and you can help them!
+> of the project. Maybe the maintainers have some ideas on how to implement the
+> feature or maybe the feature is already planned and you can help them! This
+> avoids to waste time on a feature that will not be implemented or two people
+> working on the same feature at the same time.
 
 #### Fork the repository
+
+This repository is protected and you will not be able to push changes directly
+to it. You will need to fork the repository and open a pull request.
 
 Fork the repository using the **Fork** button in the top right corner of the
 repository page as shown in the following screenshot:
@@ -902,23 +906,12 @@ git commit -m "Add myself to the list of students"
 In the next section, you will intentionally create a conflict to learn how to
 resolve it.
 
-Change the title of the `.profile/README.md` file to `# This is now my course!`
-and commit the changes:
-
-```sh
-# Add the staged files to the staging area
-git add profile/README.md
-
-# Commit the changes
-git commit -m "Change the title of the README file"
-```
-
 Checkout to a new branch and change the title of the `.profile/README.md` file
-to `# No this is my course, not yours` and commit:
+to `# This change is made on the branch 'this-branch-will-create-a-conflict'` and commit:
 
 ```sh
 # Checkout to a new branch
-git checkout -b change-title-of-readme-file
+git checkout -b this-branch-will-create-a-conflict
 
 # Make your changes
 
@@ -926,7 +919,7 @@ git checkout -b change-title-of-readme-file
 git add profile/README.md
 
 # Commit the changes
-git commit -m "Change the title of the README file again"
+git commit -m "This change was done on branch 'this-branch-will-create-a-conflict'"
 ```
 
 Checkout to the branch you created earlier and try to merge the branch you just
@@ -943,11 +936,22 @@ git checkout add-myself-github-username-to-the-list-of-students
 > try to checkout to a branch that does not exist, you will need to use the `-b`
 > argument.
 
+Change the title of the `.profile/README.md` file to `# This change is made on the branch 'add-myself-github-username-to-the-list-of-students'`
+and commit the changes:
+
+```sh
+# Add the staged files to the staging area
+git add profile/README.md
+
+# Commit the changes
+git commit -m "This change was done on branch 'add-myself-github-username-to-the-list-of-students'"
+```
+
 Merge the branch you just created:
 
 ```sh
 # Merge the branch you just created
-git merge change-title-of-readme-file
+git merge this-branch-will-create-a-conflict
 ```
 
 > **Note**  
@@ -974,24 +978,20 @@ Open the file in your favorite IDE and you should see the following content:
 
 ```markdown
 <<<<<< HEAD
-
-# This is now my course!
-
+# This change is made on the branch 'add-myself-github-username-to-the-list-of-students'
 ======
-
-# No this is my course, not yours
-
-> > > > > > change-title-of-readme-file
+# This change is made on the branch 'this-branch-will-create-a-conflict'
+>>>>>> this-branch-will-create-a-conflict
 ```
 
 The `HEAD` part is the content of the current branch. The
-`change-title-of-readme-file` part is the content of the branch you are trying
+`this-branch-will-create-a-conflict` part is the content of the branch you are trying
 to merge.
 
-Change the content back to its original state:
+Replace the whole content back to its original state:
 
 ```markdown
-# This is my course!
+# HEIG-VD DAI Course
 ```
 
 Once you are done, add the file to the staging area and commit the changes:
@@ -1004,7 +1004,12 @@ git add profile/README.md
 git commit -m "Resolve the merge conflict"
 ```
 
+Congratulations! You have resolved your first merge conflict!
+
 #### Revert the commits
+
+As this conflict was intentional, you can revert the commits to get back to the
+original state of the repository before the intentional conflict.
 
 Check the log to see the history of the repository:
 
@@ -1013,29 +1018,36 @@ Check the log to see the history of the repository:
 git log
 ```
 
-You should see the three commits you made earlier:
-
-TODO: Validate if the output is correct
+You should see the commits you made:
 
 ```text
-commit d281e0d0228b8b82dfca9b50603376759aa4c0b6
-Author: YOUR_NAME <YOUR_EMAIL>
-Date:   DATE
+commit 27fabbdb3b808bf3b32d25e72a388dc60c5bca24 (HEAD -> add-myself-github-username-to-the-list-of-students)
+Merge: 9061c5f eca5084
+Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
+Date:   Tue Sep 12 16:26:38 2023 +0200
 
     Resolve the merge conflict
 
-commit 05138df3789d1bbf40763f646c24a5ae9d849a58
-Author: YOUR_NAME <YOUR_EMAIL>
+commit 9061c5f37e41ea3664e1be4541af66b50444c64b
+Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
+Date:   Tue Sep 12 16:23:57 2023 +0200
 
-    Change the title of the README file
+    This change was done on branch 'add-myself-github-username-to-the-list-of-students'
 
-commit 37d88878ee9ab8ce11b8f8b6cd1945953607812a
-Author: YOUR_NAME <YOUR_EMAIL>
+commit eca508463561e2f426eabec56a0208635c0b938c (this-branch-will-create-a-conflict)
+Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
+Date:   Tue Sep 12 16:21:14 2023 +0200
 
-    Add myself to the list of students
+    This change was done on branch 'this-branch-will-create-a-conflict'
+
+commit 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb (origin/main, main)
+Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
+Date:   Mon Sep 4 14:39:51 2023 +0200
+
+    Add myself to the list of teaching staff
 ```
 
-To quit the log, press <kbd>q</kbd>.
+To quit the log, press `q`.
 
 The commit hashes are unique identifiers for each commit. They will, of course,
 be different on your screen. They are used to identify a commit. They are also
@@ -1044,16 +1056,10 @@ used to create branches and tags.
 As this conflict was intentional, you can revert the commits to get back to the
 original state of the repository before the intentional conflict:
 
-TODO: Validate if the output is correct
-
 ```sh
 # Revert the commits
-git revert HEAD~2..HEAD
+git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 ```
-
-> **Note**  
-> `HEAD~2..HEAD` is a range of commits. It means from the commit before `HEAD`
-> (the current commit) to `HEAD` (the current commit). TODO: Finish this
 
 #### Push your changes
 
@@ -1067,11 +1073,7 @@ git push
 #### Create a pull request
 
 Create a pull request by clicking on the **Compare & pull request** button in
-the repository page as shown in the following screenshot:
-
-TODO: Add the screenshot
-
-![Screenshot of the pull request button](./images/github-pull-request.png)
+your repository page.
 
 > **Note**  
 > If the notification does not appear, you can create a pull request by clicking
@@ -1117,6 +1119,7 @@ If they are conflicts because the students are editing the same lines, fix the
 conflict yourself to avoid the students to have to do it so they can focus on
 the content.
 
+Add the student to the GitHub organization and the right team.
 </details>
 
 #### Make changes if needed
@@ -1129,12 +1132,64 @@ changes locally, commit them and push them to the repository.
 Once the pull request is approved and merged, you can check the results on the
 organization README.
 
+#### Fetch the changes
+
+Fetch the changes to your local repository:
+
+```sh
+# Pull the changes
+git fetch
+```
+
+Fetching will download the changes from the remote repository without the files.
+
+It will display if new branches have been created or if new commits have been
+added to existing branches.
+
+#### Checkout to the main branch
+
+Checkout to the main branch:
+
+```sh
+# Checkout to the main branch
+git checkout main
+```
+
+#### Pull the changes
+
+Pull the changes to your local repository:
+
+```sh
+# Pull the changes
+git pull
+```
+
+Now files will be downloaded to your local repository. Maybe some of your peers
+have added themselves to the list of students!
+
+You are now ready to start the cycle again!
+
+You can optionally delete the branch you created earlier:
+
+```sh
+# Delete the branch
+git branch -d add-myself-github-username-to-the-list-of-students
+```
+
+This will delete the branch locally.
+
+#### Delete the fork (optional)
+
+You can delete the fork you created earlier if you want. This will not delete
+the repository in the organization nor the changes you made.
+
 #### Summary
 
 In this section, you have learned how to open an issue, create an issue, fork a
 repository, clone it locally, create a new branch, make changes, commit them,
 push them to the repository, create a pull request, wait for review, make
-changes if needed and check the results.
+changes if needed and check the results. You have also learned how to fetch and
+pull changes from a remote repository.
 
 There are many ways to contribute to a project. This is just one of them that we
 find easy to understand and to use.

@@ -134,7 +134,7 @@ _paginate: false
 You will learn the following topics during this course:
 
 - Network programming (inputs/outputs, encodings, TCP and UDP)
-- Application-level protocols (SMTP, SSH and HTTP)
+- Application-level protocols (SMTP, SSH, HTTP and your own)
 - Web infrastructures (reverse proxy, load balancer, sticky sessions)
 - How to read and write technical documentation
 
@@ -178,6 +178,13 @@ will give you a solid grounding in this world.
 
 The entire course planning for the semester is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>.
+
+---
+
+Set the **Start date** and the **End date** fields as shown to display the course
+planning correctly.
+
+![bg right:75% contain](images/course-planning.png)
 
 ## Course sequence
 
@@ -304,7 +311,7 @@ If you have any difficulties with English, please let us know.
 ## _"What about ChatGPT, Copilot, etc.?"_
 
 You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot,
-etc.), except during evaluations. You will be able to use these in the real
+etc.), except during evaluations and the exam. You will be able to use these in the real
 world, so better learn how to use them now. However, they are here to help you,
 not to do the work for you:
 

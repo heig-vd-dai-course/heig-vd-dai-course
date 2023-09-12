@@ -1,7 +1,7 @@
 # Java UDP programming
 
 - Time in class: 1 + 2 periods
-- Presentation [Markdown](./PRESENTATION.md) |
+- Presentation
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-java-udp-programming/)
   |
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-java-udp-programming/17-java-udp-programming-presentation.pdf)<!-- | [Video (in French)]() -->

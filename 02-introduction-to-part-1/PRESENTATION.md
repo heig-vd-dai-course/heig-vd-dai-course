@@ -74,11 +74,11 @@ _paginate: false
 
 ## What happens when you browse the Web?
 
-1. You request a resource (a file) from a Web server
+1. You request a resource (e.g. a file) from a Web server
 2. The Web server opens the file
 3. The Web server reads the file
 4. The Web server sends the file to you
-5. Your Web browser receive the file
+5. Your Web browser receives the file
 6. Your Web browser displays the file
 
 The whole process uses **input/output** (IO) operations!

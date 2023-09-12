@@ -44,8 +44,6 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/README.md
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/21-http-and-curl.pdf
@@ -63,8 +61,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] |
-[PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 

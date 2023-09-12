@@ -44,8 +44,6 @@ style: |
 headingDivider: 4
 -->
 
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/README.md
 [web]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-define-an-application-protocol/
 [pdf]:
@@ -64,8 +62,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [Web][web] |
-[PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
 <small>L. Delafontaine and H. Louis, with the help of Copilot</small>
 
