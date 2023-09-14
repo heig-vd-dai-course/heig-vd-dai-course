@@ -81,6 +81,67 @@ _paginate: false
 
 ## Demo
 
+- Compile the project
+
+```bash
+mvn clean package
+````
+- Run the CLI without any arguments
+
+```bash
+java -jar target/cli-example-1.0-SNAPSHOT.jar
+```
+
+##
+
+```bash
+Missing required options: '--input=<inputFile>', '--output=<outputFile>'
+Usage: IoProcessing [-hV] -i=<inputFile> [-ie=<inputEncoding>] -o=<outputFile>
+                    [-oe=<outputEncoding>] [COMMAND]
+Process an input file and return a result.
+  -h, --help                Show this help message and exit.
+  -i, --input=<inputFile>   The input file.
+      -ie, --input-encoding=<inputEncoding>
+                            The input file encoding.
+  -o, --output=<outputFile> The output file.
+      -oe, --output-encoding=<outputEncoding>
+                            The output file encoding.
+  -V, --version             Print version information and exit.
+Commands:
+  uppercase  Converts the input file to uppercase.
+  lowercase  Converts the input file to lowercase.
+```
+
+##
+
+- Run the CLI with the `uppercase` command
+
+```bash
+java -jar target/cli-example-1.0-SNAPSHOT.jar -i input.txt -o output.txt uppercase
+```
+
+- You can also specify the encoding of the input and output files
+
+```bash
+java -jar target/cli-example-1.0-SNAPSHOT.jar \
+    -i input.txt -ie UTF-8 \
+    -o output.txt -oe US-ASCII uppercase
+```
+
+## See the result
+
+```bash
+$> cat input.txt
+Coucou ça va ?
+```
+
+```bash
+$> cat output.txt
+COUCOU ?A VA ?
+```
+
+Why is the `ç` not converted to uppercase ?
+
 ### Find the practical work
 
 <!-- _class: lead -->
