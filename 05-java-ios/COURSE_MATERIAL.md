@@ -240,7 +240,7 @@ It can sometimes be overwhelming to know which IO to use for which use case.
 Here is a simple decision tree to help you choose the right IO for the right use
 case:
 
-TODO
+![Decision tree to choose the right IO for the right use case](./images/decision-tree.svg)
 
 ## Practical content
 
