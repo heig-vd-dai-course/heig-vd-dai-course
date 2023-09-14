@@ -28,14 +28,15 @@ L. Delafontaine and H. Louis, with the help of Copilot
   - [Summary](#summary)
 - [IntelliJ IDEA](#intellij-idea)
   - [Community Edition and Ultimate Edition](#community-edition-and-ultimate-edition)
-  - [IntelliJ IDEA Toolbox](#intellij-idea-toolbox)
+  - [IntelliJ IDEA Toolbox App](#intellij-idea-toolbox-app)
   - [Configuration files and Git](#configuration-files-and-git)
   - [Summary](#summary-1)
 - [Maven](#maven)
+  - [Maven as a single JAR file and Maven wrapper](#maven-as-a-single-jar-file-and-maven-wrapper)
   - [Maven project structure](#maven-project-structure)
   - [`pom.xml` file](#pomxml-file)
-  - [Maven commands](#maven-commands)
   - [Summary](#summary-2)
+  - [Cheat sheet](#cheat-sheet)
 - [Practical content](#practical-content)
   - [Install and configure Java](#install-and-configure-java)
   - [Install and configure IntelliJ IDEA](#install-and-configure-intellij-idea)
@@ -227,6 +228,10 @@ Maven is a **command-line tool**. It can be used using the `mvn` command.
 Maven is also a **build automation tool**. It is used to **compile** your
 application, **run** your unit tests, **package** your application, etc.
 
+### Maven as a single JAR file and Maven wrapper
+
+TODO
+
 ### Maven project structure
 
 Maven defines a **standard directory structure** for Java projects, so that all
@@ -266,6 +271,8 @@ The standard `pom.xml` file contains the following sections (among others):
 - `packaging`: the packaging type of the project.
 - `name` and `description`: the name and description of the project.
 - `dependencies`: the dependencies of the project.
+
+TODO: Use what Juergen said in his course regarding these sections.
 
 ### Summary
 
@@ -308,7 +315,8 @@ Follow the official documentation to enable the IntelliJ student license:
 
 #### Download and install IntelliJ Toolbox App
 
-Go to the official website and following the instructions on how to install IntelliJ Toolbox App on your system: <https://www.jetbrains.com/toolbox/app>.
+Go to the official website and following the instructions on how to install
+IntelliJ Toolbox App on your system: <https://www.jetbrains.com/toolbox/app>.
 
 #### Enable the student license in IntelliJ Toolbox App
 
@@ -329,6 +337,8 @@ Install IntelliJ IDEA from the Toolbox App and you should be good to go!
 ### Install and configure Maven
 
 TODO
+
+Explain that Maven is a standalone tool that can be complicated to install on some platforms. This is why we use the Maven wrapper.
 
 ### Create and run a new Maven project with IntelliJ IDEA
 
@@ -353,6 +363,8 @@ TODO
 #### Run the project from the command line
 
 TODO
+
+#### Update the build section to include the dependencies
 
 #### Initialize Git
 

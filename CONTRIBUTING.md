@@ -10,11 +10,10 @@
   - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 1. Clone or fork the GitHub repository and open it in Visual Studio Code.
-2. Open the Markdown files in Visual Studio Code and press
-   `Ctrl`+`Shift`+`V` to preview the files. If the
-   Markdown file is a Marp presentation, it will display a preview of the
-   slides. If the Markdown file is a README, it will display a preview of the
-   README.
+2. Open the Markdown files in Visual Studio Code and press `Ctrl`+`Shift`+`V` to
+   preview the files. If the Markdown file is a Marp presentation, it will
+   display a preview of the slides. If the Markdown file is a README, it will
+   display a preview of the README.
 3. Edit the Markdown files and commit your changes.
    - Ensure to format the Markdown files with Prettier before committing your
      changes with the help of the

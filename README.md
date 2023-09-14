@@ -6,7 +6,7 @@ The main repository for the DAI course (course material and discussions) at
 ## Getting started
 
 Do not know where to start? Have a look at the
-[Introduction and course organization](./PRESENTATION.md)!
+[Introduction and course organization](./01-introduction-and-course-organization/README.md)!
 
 ## Course planning and material
 
@@ -18,8 +18,8 @@ This course is equivalent to 3 ECTS credits = ~75-90 hours of work.
 
 64 periods in class are planned for this course, divided in 4 main parts:
 
-- [Part 1 - Input/output processing (15 periods)](#inputoutput-processing-15-periods)
-- [Part 2 - Network programming with TCP (18 periods)](#network-programming-with-tcp-18-periods)
+- [Part 1 - Input/output processing (15 periods)](#part-1---inputoutput-processing-15-periods)
+- [Part 2 - Network programming with TCP (18 periods)](#part-2---network-programming-with-tcp-18-periods)
 - [Part 3 - Network programming with UDP (16 periods)](#part-3---network-programming-with-udp-16-periods)
 - [Part 4 - Web infrastructures (12 periods)](#part-4---web-infrastructures-12-periods)
 
@@ -30,7 +30,7 @@ The entire course planning for the semester is available at
 
 - [1. Introduction and course organization (1 period)](./01-introduction-and-course-organization/README.md)
 
-### Input/output processing (15 periods)
+### Part 1 - Input/output processing (15 periods)
 
 - [2. Introduction to part 1 (1 period)](./02-introduction-to-part-1/README.md)
 - [3. Git, GitHub and Markdown (1 period)](./03-git-github-and-markdown/README.md)
@@ -40,7 +40,7 @@ The entire course planning for the semester is available at
 - [7. Conclusion to part 1 + practical review + feedback (2 periods)](./07-conclusion-to-part-1/README.md)
 - Evaluation 1 (2 periods)
 
-### Network programming with TCP (18 periods)
+### Part 2 - Network programming with TCP (18 periods)
 
 - [8. Introduction to part 2 (1 period)](./08-introduction-to-part-2/README.md)
 - [9. Define an application protocol (1 period)](./09-define-an-application-protocol/README.md)

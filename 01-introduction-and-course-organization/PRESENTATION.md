@@ -181,8 +181,8 @@ The entire course planning for the semester is available at
 
 ---
 
-Set the **Start date** and the **End date** fields as shown to display the course
-planning correctly.
+Set the **Start date** and the **End date** fields as shown to display the
+course planning correctly.
 
 ![bg right:75% contain](images/course-planning.png)
 
@@ -311,9 +311,9 @@ If you have any difficulties with English, please let us know.
 ## _"What about ChatGPT, Copilot, etc.?"_
 
 You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot,
-etc.), except during evaluations and the exam. You will be able to use these in the real
-world, so better learn how to use them now. However, they are here to help you,
-not to do the work for you:
+etc.), except during evaluations and the exam. You will be able to use these in
+the real world, so better learn how to use them now. However, they are here to
+help you, not to do the work for you:
 
 - You must be able to explain what you did and why you did it
 - You must state it when you used external help (tools and sources)

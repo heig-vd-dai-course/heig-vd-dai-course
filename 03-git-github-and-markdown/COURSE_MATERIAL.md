@@ -907,7 +907,8 @@ In the next section, you will intentionally create a conflict to learn how to
 resolve it.
 
 Checkout to a new branch and change the title of the `.profile/README.md` file
-to `# This change is made on the branch 'this-branch-will-create-a-conflict'` and commit:
+to `# This change is made on the branch 'this-branch-will-create-a-conflict'`
+and commit:
 
 ```sh
 # Checkout to a new branch
@@ -936,7 +937,8 @@ git checkout add-myself-github-username-to-the-list-of-students
 > try to checkout to a branch that does not exist, you will need to use the `-b`
 > argument.
 
-Change the title of the `.profile/README.md` file to `# This change is made on the branch 'add-myself-github-username-to-the-list-of-students'`
+Change the title of the `.profile/README.md` file to
+`# This change is made on the branch 'add-myself-github-username-to-the-list-of-students'`
 and commit the changes:
 
 ```sh
@@ -974,19 +976,11 @@ Git was not able to merge the changes automatically. This is called a **merge
 conflict**. This happens when two or more people make changes to the same file
 at the same time.
 
-Open the file in your favorite IDE and you should see the following content:
-
-```markdown
-<<<<<< HEAD
-# This change is made on the branch 'add-myself-github-username-to-the-list-of-students'
-======
-# This change is made on the branch 'this-branch-will-create-a-conflict'
->>>>>> this-branch-will-create-a-conflict
-```
+Open the file in your favorite IDE and you should see the conflict.
 
 The `HEAD` part is the content of the current branch. The
-`this-branch-will-create-a-conflict` part is the content of the branch you are trying
-to merge.
+`this-branch-will-create-a-conflict` part is the content of the branch you are
+trying to merge.
 
 Replace the whole content back to its original state:
 
@@ -1060,6 +1054,13 @@ original state of the repository before the intentional conflict:
 # Revert the commits
 git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 ```
+
+> **Warning**  
+> A `git reset --hard` will delete all the changes made since the commit you
+> reset to. Be careful when using it! This is OK in this case as the conflict was
+> intentional and no commits were pushed to the remote repository.
+> If commits were pushed to the remote repository, you would need to use
+> `git revert` instead.
 
 #### Push your changes
 
