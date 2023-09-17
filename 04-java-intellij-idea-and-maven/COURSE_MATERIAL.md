@@ -1,7 +1,8 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md#practical-content
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-course-material.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
 [illustration]:
   https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
@@ -12,7 +13,9 @@
 
 [Markdown][markdown] | [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of Copilot
+L. Delafontaine and H. Louis, with the help of Copilot.
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ![Main illustration][illustration]
 
@@ -382,7 +385,7 @@ TODO
 
 In this chapter, you have installed and configured Java, IntelliJ IDEA and
 Maven. You have created a Java project with Maven, added a dependency to a Maven
-project, and built and run a Maven project. You have learned how these tools can
+project, and built and ran a Maven project. You have learned how these tools can
 help you to develop Java applications and share them with other developers.
 
 Dependencies management is a very important (yet tricky) topic. In the context

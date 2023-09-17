@@ -18,10 +18,18 @@ This course is equivalent to 3 ECTS credits = ~75-90 hours of work.
 
 64 periods in class are planned for this course, divided in 4 main parts:
 
-- [Part 1 - Input/output processing (15 periods)](#part-1---inputoutput-processing-15-periods)
-- [Part 2 - Network programming with TCP (18 periods)](#part-2---network-programming-with-tcp-18-periods)
-- [Part 3 - Network programming with UDP (16 periods)](#part-3---network-programming-with-udp-16-periods)
-- [Part 4 - Web infrastructures (12 periods)](#part-4---web-infrastructures-12-periods)
+- [Getting started](#getting-started)
+- [Course planning and material](#course-planning-and-material)
+  - [Introduction (1 period)](#introduction-1-period)
+  - [Part 1 - Input/output processing (15 periods)](#part-1---inputoutput-processing-15-periods)
+  - [Part 2 - Network programming with TCP (18 periods)](#part-2---network-programming-with-tcp-18-periods)
+  - [Part 3 - Network programming with UDP (16 periods)](#part-3---network-programming-with-udp-16-periods)
+  - [Part 4 - Web infrastructures (12 periods)](#part-4---web-infrastructures-12-periods)
+  - [Conclusion (2 periods)](#conclusion-2-periods)
+- [GitHub Discussions](#github-discussions)
+- [GitHub Teams](#github-teams)
+- [License](#license)
+- [Contributing](#contributing)
 
 The entire course planning for the semester is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>.
@@ -91,7 +99,7 @@ available:
 ## License
 
 This work is licensed under a
-[Creative Commons Attribution-ShareAlike 4.0 International License](./LICENSE.md).
+[Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE.md) license.
 
 ## Contributing
 

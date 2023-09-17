@@ -1,7 +1,8 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-course-material.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
 [illustration]:
   https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
@@ -12,9 +13,11 @@
 
 [Markdown][markdown] | [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of Copilot
+L. Delafontaine and H. Louis, with the help of Copilot.
 
-Based on the original course by O. Liechti and J. Ehrensberger
+Based on the original course by O. Liechti and J. Ehrensberger.
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ![Main illustration][illustration]
 
@@ -203,6 +206,16 @@ git pull origin <branch-name>
 git merge <branch-name>
 ```
 
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [Subversion](https://subversion.apache.org/)
+- [Mercurial](https://www.mercurial-scm.org/)
+- [Bazaar](https://bazaar.canonical.com/en/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
 ### Resources
 
 _Resources are here to help you. They are not mandatory to read._
@@ -293,6 +306,17 @@ The whole process would be as follow:
 4. Create the pull request
 5. The maintainers review and merge if OK
 6. You can delete the branch or the fork
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [GitLab](https://gitlab.com/) - My personal favorite
+- [Bitbucket](https://bitbucket.org/) - My least favorite
+- [Gitea](https://gitea.io/) - Very good self-hosted alternative
+- [Gogs](https://gogs.io/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Resources
 
@@ -525,6 +549,20 @@ example:
     [Marp](https://marp.app/)
   - The course material is exported to PDF with the help of
     [Pandoc](https://pandoc.org/)
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [reStructuredText](https://docutils.sourceforge.io/rst.html)
+- [AsciiDoc](https://asciidoc.org/)
+- [Textile](https://textile-lang.com/)
+- [LaTeX](https://www.latex-project.org/) - You might want to consider this if
+  you need to write a scientific paper and/or your bachelor/master thesis as it
+  is the standard in the scientific community and much more powerful than
+  Markdown.
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Resources
 
@@ -1117,7 +1155,7 @@ Check the following elements:
 - The issue is linked to the pull request
 
 If they are conflicts because the students are editing the same lines, fix the
-conflict yourself to avoid the students to have to do it so they can focus on
+conflict yourself so the students can focus on
 the content.
 
 Add the student to the GitHub organization and the right team.

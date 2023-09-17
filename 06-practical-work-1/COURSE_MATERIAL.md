@@ -2,6 +2,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-practical-work-1/06-practical-work-1.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
 
 # Practical work 1
@@ -10,7 +11,9 @@
 
 [Markdown][markdown] | [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of Copilot
+L. Delafontaine and H. Louis, with the help of Copilot.
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
 
 We use CLI tools every day. For example, we use `git` to manage our code, `mvn`
 to build our projects, `java` to run our programs, etc.

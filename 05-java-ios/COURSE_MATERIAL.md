@@ -1,7 +1,8 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-course-material.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
 [illustration]:
   https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
@@ -12,9 +13,11 @@
 
 [Markdown][markdown] | [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of Copilot
+L. Delafontaine and H. Louis, with the help of Copilot.
 
-Based on the original course by O. Liechti and J. Ehrensberger
+Based on the original course by O. Liechti and J. Ehrensberger.
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ![Main illustration][illustration]
 
@@ -31,6 +34,7 @@ Based on the original course by O. Liechti and J. Ehrensberger
   - [A quick note on little endian vs. big endian](#a-quick-note-on-little-endian-vs-big-endian)
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
 - [The Java IO API](#the-java-io-api)
+- [Open and close a file](#open-and-close-a-file)
 - [Performance and buffering](#performance-and-buffering)
 - [Dealing with errors](#dealing-with-errors)
 - [When to use which IO?](#when-to-use-which-io)
@@ -196,6 +200,17 @@ modern API that is more efficient and more flexible than the Java IO API. It is
 also more complex to use and is meant for more advanced use cases (writing
 scalable servers for example). We will not cover it in this course.
 
+## Open and close a file
+
+When using the Java IO API, you need to open and close a file before and after
+reading or writing data.
+
+If you do not close the file properly, you might lose data or corrupt the file.
+
+In order to avoid the hassle of closing the file properly, you can use the
+`try-with-resources` statement. This statement will automatically close the file
+for you.
+
 ## Performance and buffering
 
 When reading and writing data, data can be read or written byte by byte or using
@@ -209,6 +224,8 @@ a chunk of data at once. This is much faster.
 
 A **buffer** is a temporary storage area **in memory**. It is used to store data
 before it is processed. Is is much faster.
+
+TODO: Flush the buffer
 
 ## Dealing with errors
 

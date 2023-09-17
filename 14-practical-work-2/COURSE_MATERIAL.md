@@ -2,6 +2,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-practical-work-2/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-practical-work-2/14-practical-work-2.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 
 # Practical work 2 - First network application
@@ -10,7 +11,9 @@
 
 [Markdown][markdown] | [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of Copilot
+L. Delafontaine and H. Louis, with the help of Copilot.
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
 
 TODO INTRO
 

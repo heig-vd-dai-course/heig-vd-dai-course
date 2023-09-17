@@ -49,6 +49,7 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven.pdf
 [video]: #
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
 [illustration]:
   https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
@@ -64,7 +65,9 @@ _paginate: false
 
 [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
-<small>L. Delafontaine and H. Louis, with the help of Copilot</small>
+<small>L. Delafontaine and H. Louis, with the help of Copilot.</small>
+
+<small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
 ![bg opacity:0.1][illustration]
 

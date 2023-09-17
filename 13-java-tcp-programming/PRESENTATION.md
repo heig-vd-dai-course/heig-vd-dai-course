@@ -49,6 +49,7 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-tcp-programming/13-java-tcp-programming.pdf
 [video]: #
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
@@ -64,9 +65,11 @@ _paginate: false
 
 [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
-<small>L. Delafontaine and H. Louis, with the help of Copilot</small>
+<small>L. Delafontaine and H. Louis, with the help of Copilot.</small>
 
-<small>Based on the original course by O. Liechti and J. Ehrensberger</small>
+<small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
+
+<small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
 ![bg opacity:0.1][illustration]
 

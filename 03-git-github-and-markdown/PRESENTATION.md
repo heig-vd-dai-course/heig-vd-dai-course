@@ -49,6 +49,7 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown.pdf
 [video]: #
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
 [illustration]:
   https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
@@ -64,9 +65,11 @@ _paginate: false
 
 [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
-<small>L. Delafontaine and H. Louis, with the help of Copilot</small>
+<small>L. Delafontaine and H. Louis, with the help of Copilot.</small>
 
-<small>Based on the original course by O. Liechti and J. Ehrensberger</small>
+<small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
+
+<small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
 ![bg opacity:0.1][illustration]
 
@@ -75,6 +78,8 @@ _paginate: false
 ## Git
 
 <!-- _class: lead -->
+
+More details for this section in the [course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#git).
 
 ### Git
 
@@ -92,32 +97,11 @@ _paginate: false
 
 ### Summary
 
-### Alternatives
-
-_Alternatives are here for general knowledge. No need to learn them._
-
-- [Subversion](https://subversion.apache.org/)
-- [Mercurial](https://www.mercurial-scm.org/)
-- [Bazaar](https://bazaar.canonical.com/en/)
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-### Resources
-
-_Resources are here to help you. They are not mandatory to read._
-
-- [Atlassian Git tutorials - Beginner](https://www.atlassian.com/git/tutorials/what-is-version-control) -
-  Atlassian tutorials are great!
-- [Atlassian Git tutorials - Getting started](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
-- [Atlassian Git tutorials - Collaborating](https://www.atlassian.com/git/tutorials/syncing)
-- [Atlassian Git tutorials - Advanced Tips](https://www.atlassian.com/git/tutorials/advanced-overview)
-- [Learn Git Branching](https://learngitbranching.js.org/)
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
 ## GitHub
 
 <!-- _class: lead -->
+
+More details for this section in the [course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#github).
 
 ### GitHub
 
@@ -131,29 +115,11 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Summary
 
-### Alternatives
-
-_Alternatives are here for general knowledge. No need to learn them._
-
-- [GitLab](https://gitlab.com/) - My personal favorite
-- [Bitbucket](https://bitbucket.org/) - My least favorite
-- [Gitea](https://gitea.io/) - Very good self-hosted alternative
-- [Gogs](https://gogs.io/)
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-### Resources
-
-_Resources are here to help you. They are not mandatory to read._
-
-- [The Basics of GitHub](https://github.com/education/github-starter-course) - A
-  great Git repository to learn the basics of GitHub!
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
 ## Markdown
 
 <!-- _class: lead -->
+
+More details for this section in the [course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#markdown).
 
 ### Markdown
 
@@ -165,44 +131,19 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Summary
 
-### Alternatives
-
-_Alternatives are here for general knowledge. No need to learn them._
-
-- [reStructuredText](https://docutils.sourceforge.io/rst.html)
-- [AsciiDoc](https://asciidoc.org/)
-- [Textile](https://textile-lang.com/)
-- [LaTeX](https://www.latex-project.org/) - You might want to consider this if
-  you need to write a scientific paper and/or your bachelor/master thesis as it
-  is the standard in the scientific community and much more powerful than
-  Markdown.
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-### Resources
-
-_Resources are here to help you. They are not mandatory to read._
-
-- [Markdown Guide](https://www.markdownguide.org/) - Examples and explanations
-  on Markdown specification
-- [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
 ## Practical content
 
 <!-- _class: lead -->
 
 ### What will you do?
 
-- Install Git
+- Install and configure Git
 - Create and configure your GitHub account
 - Create your own GitHub profile README
 - Add yourself to the list of students in the GitHub organization
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+![bg vertical right](./images/benphelps-github-readme-profile.png)
+![bg vertical right opacity:.9](./images/heig-vd-dai-course-github-organization.png)
 
 ### Find the practical content
 
