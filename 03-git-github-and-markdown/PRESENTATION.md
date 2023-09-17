@@ -80,6 +80,8 @@ _paginate: false
 - Emphasize the significance of documentation for code usability and project
   visibility
 
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
 ## Git
 
 <!-- _class: lead -->
@@ -311,6 +313,8 @@ In the next chapter, you will learn the following topics:
 
 - Main illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on
   [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Git logo by [Git](https://git-scm.com/downloads/logos)
 - Git illustrations by [Atlassian](https://www.atlassian.com/) -
   [1](https://www.atlassian.com/git/tutorials/what-is-git),
