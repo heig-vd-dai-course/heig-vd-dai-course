@@ -2,7 +2,8 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-course-material.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
 [illustration]:
   https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
@@ -34,6 +35,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Ignore files](#ignore-files)
   - [Summary](#summary)
   - [Cheat sheet](#cheat-sheet)
+  - [Alternatives](#alternatives)
   - [Resources](#resources)
 - [GitHub](#github)
   - [Social platform](#social-platform)
@@ -41,12 +43,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Users and organizations](#users-and-organizations)
   - [Issues, pull requests and merge requests](#issues-pull-requests-and-merge-requests)
   - [Summary](#summary-1)
+  - [Alternatives](#alternatives-1)
   - [Resources](#resources-1)
 - [Markdown](#markdown)
   - [Markdown and output formats](#markdown-and-output-formats)
   - [Syntax](#syntax)
   - [Specifications](#specifications)
   - [Summary](#summary-2)
+  - [Alternatives](#alternatives-2)
   - [Resources](#resources-2)
 - [Practical content](#practical-content)
   - [Install and configure Git](#install-and-configure-git)
@@ -238,9 +242,9 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 GitHub is a web-based Git repository hosting service. It provides all the
 features of Git, plus some additional features.
 
-It is the most popular Git repository hosting service, with more than 65 million
-repositories, a home for many open source projects and a place where many
-companies host their private repositories.
+It is the most popular Git repository hosting service, with more than 372
+million repositories (January 2023), a home for many open source projects and a
+place where many companies host their private repositories.
 
 ### Social platform
 
@@ -299,9 +303,8 @@ avoids to cumulate out-dated branches in your repository.
 
 The whole process would be as follow:
 
-0. Open an issue to discuss the feature (optional, but recommended)
-1. Clone or fork the project
-2. Checkout to a new branch
+1. Open an issue to discuss the feature (optional, but recommended)
+2. Clone or fork the project and checkout to a new branch
 3. Make your changes, commit and push them as often as you want
 4. Create the pull request
 5. The maintainers review and merge if OK
@@ -571,6 +574,7 @@ _Resources are here to help you. They are not mandatory to read._
 - [Markdown Guide](https://www.markdownguide.org/) - Examples and explanations
   on Markdown specification
 - [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
+- [CommonMark Spec](https://commonmark.org/)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -592,9 +596,13 @@ your system: <https://git-scm.com/downloads>.
 
 #### Check the installation
 
-Open a terminal and type `git --version`
+Open a terminal and type `git --version`.
 
-The output should be similar to this: `git version 2.41.0`
+The output should be similar to this:
+
+```text
+git version 2.41.0
+```
 
 #### Configure Git
 
@@ -690,7 +698,7 @@ configured.
 The URL of a repository can be found in the **Code** tab of the repository, as
 shown in the following screenshot:
 
-![Screenshot on how to find the SSH URL](./images/heig-vd-dai-course-clone-with-ssh.png)
+![Screenshot on how to find the SSH URL](./images/practical-content-test-the-configuration.png)
 
 ### Sign commits with SSH
 
@@ -741,7 +749,7 @@ and GitHub when working on your own projects.
 
 An example of a profile README is shown in the following screenshot:
 
-![Screenshot of a profile README](./images/benphelps-github-readme-profile.png)
+![Screenshot of a profile README](./images/practical-content-create-your-own-profile-readme.png)
 
 #### Create a new repository
 
@@ -872,7 +880,7 @@ to it. You will need to fork the repository and open a pull request.
 Fork the repository using the **Fork** button in the top right corner of the
 repository page as shown in the following screenshot:
 
-![Screenshot of the .github repository](./images/github-fork.png)
+![Screenshot of the .github repository](./images/practical-content-fork-the-repository.png)
 
 You will be asked to choose where to fork the repository. Choose your own
 account. You can change the name of the repository if you want.
@@ -1095,9 +1103,9 @@ git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 
 > **Warning**  
 > A `git reset --hard` will delete all the changes made since the commit you
-> reset to. Be careful when using it! This is OK in this case as the conflict was
-> intentional and no commits were pushed to the remote repository.
-> If commits were pushed to the remote repository, you would need to use
+> reset to. Be careful when using it! This is OK in this case as the conflict
+> was intentional and no commits were pushed to the remote repository. If
+> commits were pushed to the remote repository, you would need to use
 > `git revert` instead.
 
 #### Push your changes
@@ -1155,10 +1163,10 @@ Check the following elements:
 - The issue is linked to the pull request
 
 If they are conflicts because the students are editing the same lines, fix the
-conflict yourself so the students can focus on
-the content.
+conflict yourself so the students can focus on the content.
 
 Add the student to the GitHub organization and the right team.
+
 </details>
 
 #### Make changes if needed

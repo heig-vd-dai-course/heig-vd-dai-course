@@ -2,7 +2,8 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-practical-work-1/06-practical-work-1.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
 
 # Practical work 1
@@ -62,7 +63,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 If your repository is private, you must add us as collaborators to your
 repository!
 
-| #   | Criteria                                                          | Points |
+| #   | Criterion                                                         | Points |
 | --- | ----------------------------------------------------------------- | -----: |
 | 1   | The repository is managed using issues and pull requests          |    0.2 |
 | 2   | The commits are signed                                            |    0.2 |
@@ -76,7 +77,7 @@ repository!
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
-| #   | Criteria                                                            | Points |
+| #   | Criterion                                                           | Points |
 | --- | ------------------------------------------------------------------- | -----: |
 | 10  | The code is well structured                                         |    0.2 |
 | 11  | The code is well documented                                         |    0.2 |
@@ -86,7 +87,7 @@ repository!
 
 ### Category 3 - Java IOs
 
-| #   | Criteria                                                                                 | Points |
+| #   | Criterion                                                                                | Points |
 | --- | ---------------------------------------------------------------------------------------- | -----: |
 | 15  | The CLI takes an input file and an output file as arguments                              |    0.2 |
 | 16  | The CLI takes the input file encoding and the output file encoding as optional arguments |    0.2 |
@@ -97,7 +98,7 @@ repository!
 
 ### Category 4 - Presentation and questions
 
-| #   | Criteria                                      | Points |
+| #   | Criterion                                     | Points |
 | --- | --------------------------------------------- | -----: |
 | 21  | The presentation is clear and well prepared   |    0.2 |
 | 22  | Everyone talks during the presentation        |    0.2 |
@@ -123,8 +124,8 @@ however explain why and how you use it in your README.
 ## Submission
 
 The planning of the course is available at
-<https://github.com/orgs/heig-vd-dai-course/projects>. The deadline is one day
-before the Practical work review and feedback session at 23:59.
+<https://github.com/orgs/heig-vd-dai-course/projects>. The **deadline** is just
+**before the Practical work review and feedback session**.
 
 Any commit after the deadline will not be taken into account. Each day of delay
 will result in a penalty of -1 point on the final grade.
@@ -137,6 +138,18 @@ information:
 - **Category**: Show and tell
 - **Description**: The link to your repository as well as the latest commit hash
   of your work before submission
+
+## Grades and feedback
+
+Grades will be entered into GAPS, followed by an email with the feedback.
+
+The evaluation will use exactly the same grading grid as shown in the course
+material.
+
+Each criterion will be accompanied by a comment explaining the points obtained,
+a general comment on your work and the final grade.
+
+If you have any questions about the evaluation, you can contact us!
 
 ## Finished? Was it easy? Was it hard?
 

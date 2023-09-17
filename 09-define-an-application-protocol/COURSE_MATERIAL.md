@@ -2,7 +2,8 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-application-protocol/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-application-protocol/09-application-protocol-course-material.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 
 # Application protocol - Course material
 

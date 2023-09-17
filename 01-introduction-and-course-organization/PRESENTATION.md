@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of Copilot
+author: L. Delafontaine and H. Louis, with the help of ChatGPT
 title: HEIG-VD DAI Course - Introduction and course organization
 description: Introduction and course organization for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
@@ -49,7 +49,8 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization.pdf
 [video]: #
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [illustration]:
   https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&h=720
 
@@ -64,7 +65,7 @@ _paginate: false
 
 [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
-<small>L. Delafontaine and H. Louis, with the help of Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
 
@@ -187,7 +188,7 @@ The entire course planning for the semester is available at
 Set the **Start date** and the **End date** fields as shown to display the
 course planning correctly.
 
-![bg right:75% contain](images/course-planning.png)
+![bg right contain](images/course-planning.png)
 
 ## Course sequence
 

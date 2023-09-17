@@ -1,0 +1,33 @@
+@startuml GitArchitecture
+
+package "Local Working Directory" {
+  [Working Directory] as workingDir
+  [Staging Area] as stagingArea
+}
+
+package "Local Repository" {
+  [Local Repository] as localRepo
+}
+
+package "Remote Repository" {
+  [Remote Repository] as remoteRepo
+}
+
+package "Git Commands" {
+  [git add] as gitAdd
+  [git commit] as gitCommit
+  [git push] as gitPush
+  [git pull] as gitPull
+}
+
+workingDir -down-> stagingArea
+stagingArea -down-> gitAdd
+stagingArea -down-> gitCommit
+gitAdd -down-> gitCommit
+gitCommit -down-> localRepo
+localRepo -down-> gitPush
+remoteRepo -down-> gitPull
+gitPull -down-> localRepo
+gitPush -up-> remoteRepo
+
+@enduml

@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of Copilot
+author: L. Delafontaine and H. Louis, with the help of ChatGPT
 title: 'HEIG-VD DAI Course - Conclusion to part 1: Input/output processing'
 description: 'Conclusion to part 1: Input/output processing for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/
@@ -48,7 +48,8 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-evaluation-1/12-evaluation-1.pdf
 [video]: #
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [feedback]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
 [illustration]:
@@ -65,7 +66,7 @@ _paginate: false
 
 [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
-<small>L. Delafontaine and H. Louis, with the help of Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 

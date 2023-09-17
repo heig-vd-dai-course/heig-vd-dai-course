@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of Copilot
+author: L. Delafontaine and H. Louis, with the help of ChatGPT
 title: HEIG-VD DAI Course - Practical work 1
 description: Practical work 1 for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-practical-work-1/
@@ -49,7 +49,8 @@ headingDivider: 4
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-practical-work-1/06-practical-work-1.pdf
 [video]: #
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
 [illustration]:
   https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
@@ -65,7 +66,7 @@ _paginate: false
 
 [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
-<small>L. Delafontaine and H. Louis, with the help of Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
@@ -88,14 +89,15 @@ _paginate: false
 
 ```bash
 mvn clean package
-````
+```
+
 - Run the CLI without any arguments
 
 ```bash
-java -jar target/cli-example-1.0-SNAPSHOT.jar
+java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar
 ```
 
-##
+---
 
 ```bash
 Missing required options: '--input=<inputFile>', '--output=<outputFile>'
@@ -115,18 +117,18 @@ Commands:
   lowercase  Converts the input file to lowercase.
 ```
 
-##
+---
 
 - Run the CLI with the `uppercase` command
 
 ```bash
-java -jar target/cli-example-1.0-SNAPSHOT.jar -i input.txt -o output.txt uppercase
+java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar -i input.txt -o output.txt uppercase
 ```
 
 - You can also specify the encoding of the input and output files
 
 ```bash
-java -jar target/cli-example-1.0-SNAPSHOT.jar \
+java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
     -i input.txt -ie UTF-8 \
     -o output.txt -oe US-ASCII uppercase
 ```
@@ -145,12 +147,24 @@ COUCOU ?A VA ?
 
 Why is the `ç` not converted to uppercase ?
 
-### Find the practical work
+## Find the practical work
 
 <!-- _class: lead -->
 
 You can find the practical work for this part on
 [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md).
+
+## Grades and feedback
+
+Grades will be entered into GAPS, followed by an email with the feedback.
+
+The evaluation will use exactly the same grading grid as shown in the course
+material.
+
+Each criterion will be accompanied by a comment explaining the points obtained,
+a general comment on your work and the final grade.
+
+If you have any questions about the evaluation, you can contact us!
 
 ## Finished? Was it easy? Was it hard?
 

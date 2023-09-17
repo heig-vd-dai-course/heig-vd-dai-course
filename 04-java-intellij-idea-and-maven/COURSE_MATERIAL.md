@@ -2,7 +2,8 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-course-material.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
 [illustration]:
   https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
@@ -35,15 +36,15 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Configuration files and Git](#configuration-files-and-git)
   - [Summary](#summary-1)
 - [Maven](#maven)
-  - [Maven as a single JAR file and Maven wrapper](#maven-as-a-single-jar-file-and-maven-wrapper)
   - [Maven project structure](#maven-project-structure)
   - [`pom.xml` file](#pomxml-file)
+  - [Maven "installation" and Maven wrapper](#maven-installation-and-maven-wrapper)
   - [Summary](#summary-2)
   - [Cheat sheet](#cheat-sheet)
 - [Practical content](#practical-content)
-  - [Install and configure Java](#install-and-configure-java)
+  - [Install Java](#install-java)
+  - [Check the installation](#check-the-installation)
   - [Install and configure IntelliJ IDEA](#install-and-configure-intellij-idea)
-  - [Install and configure Maven](#install-and-configure-maven)
   - [Create and run a new Maven project with IntelliJ IDEA](#create-and-run-a-new-maven-project-with-intellij-idea)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -231,10 +232,6 @@ Maven is a **command-line tool**. It can be used using the `mvn` command.
 Maven is also a **build automation tool**. It is used to **compile** your
 application, **run** your unit tests, **package** your application, etc.
 
-### Maven as a single JAR file and Maven wrapper
-
-TODO
-
 ### Maven project structure
 
 Maven defines a **standard directory structure** for Java projects, so that all
@@ -270,12 +267,42 @@ The `pom.xml` file is **shared** between all developers, so that they can
 
 The standard `pom.xml` file contains the following sections (among others):
 
+- `groupId`: the name of the organization that created the project. It defines
+  the **namespace** of the project.
+- `artifactId`: the name of the project.
 - `version`: the version of the project.
 - `packaging`: the packaging type of the project.
 - `name` and `description`: the name and description of the project.
 - `dependencies`: the dependencies of the project.
 
-TODO: Use what Juergen said in his course regarding these sections.
+The `artifactId`, `version` and `packaging` sets the **name of the JAR file**.
+
+### Maven "installation" and Maven wrapper
+
+Maven is distributed as a **single JAR file**. This means that you can use it
+with the `java -jar` command. But it is not very convenient.
+
+Most Linux distributions provide a **package** for Maven, so that you can
+install it using the package manager of your distribution. It will then be
+available in your `PATH` and you will be able to use the `mvn` command anywhere.
+
+The same applies to macOS with the help of [Homebrew](https://brew.sh/).
+
+On Windows, you have to add Maven to your `PATH` manually. This is not very
+convenient either.
+
+This is why Maven projects use a **Maven wrapper**. The Maven wrapper is a
+**script** (a shell script on Linux and macOS and a Batch script on Windows)
+that will download and run Maven for you.
+
+The Maven wrapper defines the **version of Maven** to use, so that all
+developers use the same version of Maven.
+
+The Maven wrapper and its configuration file is **committed** to Git but the
+single JAR file is **ignored** by Git.
+
+A new developer can then **run** the Maven wrapper to **download** the single
+JAR file and **run** Maven.
 
 ### Summary
 
@@ -288,21 +315,56 @@ TODO: Use what Juergen said in his course regarding these sections.
 
 ### Cheat sheet
 
-TODO
+```sh
+# Delete the compiled classes
+mvn clean
+
+# Compile the source code
+mvn compile
+
+# Package the application
+mvn package
+```
+
+Multiple phases can be executed in a single command:
+
+```sh
+# Delete the compiled classes, compile the source code and package the application
+mvn clean compile package
+```
 
 ## Practical content
 
-### Install and configure Java
+### Install Java
 
-#### Install Java
+In this section, you will install Java using the version 17 from Temurin.
 
-TODO
+If you are on Linux or macOS, you can install and use
+[SDKMAN!](https://sdkman.io/) to install and switch between different versions
+of Java.
 
-QUESTION: Do we use SDKMAN! here? My main concern is WSL/Windows
+Then, install Java 17 Temurin:
 
-#### Check the installation
+```sh
+sdk install java 17.0.8-tem
+```
 
-TODO
+If you are on Windows, we recommend to install Java 17 directly on your system,
+without using a version manager even if you are using WSL.
+
+Install Java 17 Temurin from the official website: <https://adoptium.net/>.
+
+### Check the installation
+
+Open a terminal and type `java --version`.
+
+The output should be similar to this:
+
+```text
+openjdk 17.0.8 2023-07-18
+OpenJDK Runtime Environment Temurin-17.0.8+7 (build 17.0.8+7)
+OpenJDK 64-Bit Server VM Temurin-17.0.8+7 (build 17.0.8+7, mixed mode, sharing)
+```
 
 ### Install and configure IntelliJ IDEA
 
@@ -336,12 +398,6 @@ Open IntelliJ Toolbox App and login with your JetBrains account.
 #### Install IntelliJ IDEA Ultimate Edition
 
 Install IntelliJ IDEA from the Toolbox App and you should be good to go!
-
-### Install and configure Maven
-
-TODO
-
-Explain that Maven is a standalone tool that can be complicated to install on some platforms. This is why we use the Maven wrapper.
 
 ### Create and run a new Maven project with IntelliJ IDEA
 
@@ -377,9 +433,31 @@ TODO
 
 TODO
 
-## Conclusion
+#### Create a GitHub repository
 
-<!-- _class: lead -->
+
+#### Push the project to GitHub
+
+
+#### Add a README to the GitHub repository
+
+
+#### Share your project in GitHub Discussions
+
+Share your profile in the GitHub Discussions of this organization:
+<https://github.com/orgs/heig-vd-dai-course/discussions>.
+
+Create a new discussion with the following information:
+
+- **Title**: DAI 2023-2024 - My first IntelliJ + Maven project -
+  @YOUR_GITHUB_USERNAME
+- **Category**: Show and tell
+- **Description**: The link to your GitHub repository
+
+This will notify us that you have completed the exercise and we can check your
+work.
+
+## Conclusion
 
 ### What did you do and learn?
 
@@ -418,7 +496,7 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Java IOs: input/output processing and how to manage problems
+- Java IOs: input/output processing
 
 ## Sources
 

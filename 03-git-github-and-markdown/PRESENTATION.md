@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of Copilot
+author: L. Delafontaine and H. Louis, with the help of ChatGPT
 title: HEIG-VD DAI Course - Git, GitHub and Markdown
 description: Git, GitHub and Markdown for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/
@@ -48,8 +48,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/
 [pdf]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown.pdf
-[video]: #
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
 [illustration]:
   https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
@@ -65,7 +65,7 @@ _paginate: false
 
 [Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
 
-<small>L. Delafontaine and H. Louis, with the help of Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
 
@@ -75,61 +75,193 @@ _paginate: false
 
 ## Objectives
 
+- Understand Git, GitHub, and Markdown
+- Develop crucial collaboration skills
+- Emphasize the significance of documentation for code usability and project
+  visibility
+
 ## Git
 
 <!-- _class: lead -->
 
-More details for this section in the [course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#git).
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#git).
+You can find other resources and alternatives as well.
 
 ### Git
 
+- A version control system (VCS)
+- Created in 2005 by Linus Torvalds
+- Efficiently tracks changes in files
+
+![bg right w:60%](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg)
+
 ### Architecture
+
+- Git operates with a client-server structure
+- Repositories (server) and clones (local copies)
+- Fully distributed VCS for offline work
+
+![bg right w:100%](https://wac-cdn.atlassian.com/dam/jcr:9d51f0ee-5946-4be2-886c-ff040ef8c1a1/03.svg?cdnVersion=1210)
 
 ### Commits, hashes and tags
 
+- Commits represent snapshots of the repository
+- Each commit has a unique, unalterable hash
+- Tags serve as references, often for releases
+- Commit signing enhances security
+
+![bg right w:90%](https://wac-cdn.atlassian.com/dam/jcr:bb02240a-7d85-4f5a-ae7f-c2727b37fc79/01%20Many%20ways%20of%20referring%20to%20a%20commit.svg?cdnVersion=1210)
+
 ### Branches
+
+- Tracks distinct repository versions
+- Default branch is typically named `main`
+- Branches have names and commit pointers (heads)
+
+![bg right w:90%](https://wac-cdn.atlassian.com/dam/jcr:34c86360-8dea-4be4-92f7-6597d4d5bfae/02%20Feature%20branches.svg?cdnVersion=1210)
 
 ### Merging branches
 
+- Collaborative project workflow
+- Three primary merging methods:
+  - Merge
+  - Rebase
+  - Squash
+
+![bg vertical right w:90%](https://wac-cdn.atlassian.com/dam/jcr:4639eeb8-e417-434a-a3f8-a972277fc66a/02%20Merging%20main%20into%20the%20feature%20branh.svg?cdnVersion=1210)
+![bg vertical right w:90%](https://wac-cdn.atlassian.com/dam/jcr:a712e238-6cb9-4c8c-8ef7-1975dca49be3/04%20Squashing%20a%20commit%20with%20an%20interactive%20rebase.svg?cdnVersion=1210)
+
 ### Conflicts
 
-### Ignore files
+- Arise from simultaneous file edits
+- Git detects and requires resolution
+
+![bg right h:80%](https://imgs.xkcd.com/comics/git.png)
+
+### Ignore Files
+
+- `.gitignore` omits specific files
+- Improves repository cleanliness
+
+![bg right contain](images/git-ignore-files.png)
 
 ### Summary
+
+- Git is a distributed VCS
+- Git uses commits to track changes
+- Git uses branches to track different versions of the repository
+- Git can pull changes from a branch into another
+- Git can merge, rebase or squash branches/commits
+- Git can detect and resolve conflicts
+
+We encourage you to learn how to use Git from the command line, so you can still
+use it everywhere (even on a server).
 
 ## GitHub
 
 <!-- _class: lead -->
 
-More details for this section in the [course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#github).
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#github).
+You can find other resources and alternatives as well.
 
 ### GitHub
 
+- Git hosting platform
+- Created in 2008
+- Web-based Git hosting
+- Popular for open source
+
+![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
+
 ### Social platform
+
+- Social interactions: follow, star
+- Forking repositories
+
+![bg right contain](images/github-social-platform.png)
 
 ### Free features and PRO features
 
+- Enhanced features with PRO
+- Free for students
+
+![bg right contain](images/github-free-features-and-pro-features.png)
+
 ### Users and organizations
 
-### Issues, pull requests and merge requests
+- Users or organizations ownership
+- Users can be part of multiple organizations
+
+![bg right contain](images/github-users-and-organizations.png)
+
+### Issues, pull requests, merge requests
+
+- Project management tools
+- Contribution workflow
+- Pull request approval process
+
+![bg right contain](images/github-issues-pull-requests-merge-requests.png)
 
 ### Summary
+
+The whole process would be as follow:
+
+1. Open an issue to discuss the feature (optional, but recommended)
+2. Clone or fork the project and checkout to a new branch
+3. Make your changes, commit and push them as often as you want
+4. Create the pull request
+5. The maintainers review and merge if OK
+6. You can delete the branch or the fork
 
 ## Markdown
 
 <!-- _class: lead -->
 
-More details for this section in the [course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#markdown).
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#markdown).
+You can find other resources and alternatives as well.
 
 ### Markdown
 
-### Mardown and output formats
+- Lightweight markup language
+- Created by John Gruber and Aaron Swartz in 2004
+- Simple and versatile
+
+![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
+
+### Markdown and output formats
+
+- Multiple output formats
+- Supports HTML integration
+- Used in web pages, presentations, documentation
+
+![bg right contain](images/markdown-markdown-and-output-formats.png)
 
 ### Syntax
 
+- Markup language with special characters
+- Discord and Telegram uses Markdown
+- Supports headings, text formatting, code blocks, lists, links, images, and
+  tables
+
+![bg right contain](images/markdown-syntax.png)
+
 ### Specifications
 
+- No single standard
+- CommonMark and GitHub Flavored Markdown
+- Custom extensions for features
+
+![bg right contain](images/markdown-specifications.png)
+
 ### Summary
+
+- Markdown is easy to learn and use
+- Markdown can be used to create documentation
+- Markdown can be used to create slides
+- Markdown can be exported to many formats
 
 ## Practical content
 
@@ -142,8 +274,9 @@ More details for this section in the [course material](https://github.com/heig-v
 - Create your own GitHub profile README
 - Add yourself to the list of students in the GitHub organization
 
-![bg vertical right](./images/benphelps-github-readme-profile.png)
-![bg vertical right opacity:.9](./images/heig-vd-dai-course-github-organization.png)
+![bg vertical right](./images/what-will-you-do-1.png)
+![bg vertical right](./images/what-will-you-do-2.png)
+![bg vertical right](./images/what-will-you-do-3.png)
 
 ### Find the practical content
 
@@ -151,34 +284,6 @@ More details for this section in the [course material](https://github.com/heig-v
 
 You can find the practical content for this chapter on
 [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content).
-
-## Conclusion
-
-<!-- _class: lead -->
-
-### What did you do and learn?
-
-In this chapter, you have installed and configured Git properly. You have also
-created your own GitHub account and profile README for your future social
-profile as a computer scientist engineer.
-
-Finally, you have added yourself to the list of students in the GitHub
-organization using the issue, fork and pull request workflow, enabling you to
-contribute to open source projects in the future.
-
-Git is a valuable tool for collaborative work but we only scratched the surface.
-Refer to the resources for more useful content!
-
-### Test your knowledge
-
-At this point, you should be able to answer the following questions:
-
-- How does Git work?
-- What is the difference between Git and GitHub?
-- How is Markdown different from Word?
-- What is a repository? What is a clone?
-- What is a tag? What is the difference with a commit?
-- Describe a typical Git workflow.
 
 ## Finished? Was it easy? Was it hard?
 
@@ -200,7 +305,18 @@ In the next chapter, you will learn the following topics:
 - IntelliJ IDEA: tips and tricks for a better (collaborative) experience
 - Maven: Java project structure, dependencies and build tool
 
+![bg right:40%](https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720)
+
 ## Sources
 
 - Main illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on
   [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)
+- Git logo by [Git](https://git-scm.com/downloads/logos)
+- Git illustrations by [Atlassian](https://www.atlassian.com/) -
+  [1](https://www.atlassian.com/git/tutorials/what-is-git),
+  [2](https://www.atlassian.com/git/tutorials/refs-and-the-reflog),
+  [3](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow),
+  [4](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+- Git strip by [xkcd](https://xkcd.com/1597/)
+- Illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
+  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
