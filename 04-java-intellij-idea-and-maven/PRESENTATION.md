@@ -73,11 +73,10 @@ _paginate: false
 
 ## Objectives
 
-- Java's platform versatility
-- Install and switch Java versions
+- Learn why Java is a popular programming language
 - Develop Java apps with IntelliJ IDEA and Maven
 - Manage dependencies with Maven
-- Essential skills for professional Java development
+- Develop essential skills for professional Java development
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
