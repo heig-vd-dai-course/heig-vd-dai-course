@@ -47,8 +47,7 @@ headingDivider: 4
 [web]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-conclusion-to-part-2/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-conclusion-to-part-2/15-conclusion-to-part-2.pdf
-[video]: #
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-conclusion-to-part-2/15-conclusion-to-part-2-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [feedback]:
@@ -65,7 +64,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] · [PDF][pdf]
 
 <small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 

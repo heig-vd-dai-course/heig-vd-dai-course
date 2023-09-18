@@ -1,7 +1,7 @@
 [markdown]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-practical-work-2/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-practical-work-2/14-practical-work-2.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-practical-work-2/14-practical-work-2-course-material.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
@@ -10,7 +10,7 @@
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [PDF][pdf]
+[Markdown][markdown] · [PDF][pdf]
 
 L. Delafontaine and H. Louis, with the help of Copilot.
 

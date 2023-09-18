@@ -47,7 +47,7 @@ headingDivider: 4
 [web]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
@@ -63,7 +63,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] · [PDF][pdf]
 
 <small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 

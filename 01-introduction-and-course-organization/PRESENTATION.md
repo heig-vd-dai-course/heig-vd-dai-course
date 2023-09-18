@@ -47,8 +47,7 @@ headingDivider: 4
 [web]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization.pdf
-[video]: #
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [illustration]:
@@ -63,7 +62,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] · [PDF][pdf]
 
 <small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 

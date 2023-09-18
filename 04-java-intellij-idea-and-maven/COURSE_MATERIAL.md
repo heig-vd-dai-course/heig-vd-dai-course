@@ -12,7 +12,7 @@
 
 <https://github.com/heig-vd-dai-course>
 
-[Markdown][markdown] | [PDF][pdf]
+[Markdown][markdown] · [PDF][pdf]
 
 L. Delafontaine and H. Louis, with the help of Copilot.
 

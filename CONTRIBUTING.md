@@ -30,7 +30,8 @@ All window screenshots are taken with the `Screenshop.app` tool from Apple. You
 can open it with the `Command + Shift + 5` shortcut. **Show floating thumbnail**
 is enabled in the options.
 
-All application windows are of the same size (888x888) and are placed on the screen of the Mac Book Pro.
+All application windows are of the same size (888x888) and are placed on the
+screen of the Mac Book Pro.
 
 ### Safari
 

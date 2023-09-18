@@ -47,7 +47,7 @@ headingDivider: 4
 [web]:
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
@@ -63,7 +63,7 @@ _paginate: false
 
 <https://github.com/heig-vd-dai-course>
 
-[Web][web] | [PDF][pdf]<!-- | [Video (in French)][video]-->
+[Web][web] · [PDF][pdf]
 
 <small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 
@@ -125,21 +125,21 @@ You can find other resources and alternatives as well.
 
 - Compile manually with `javac` command
 
-    ```sh
-    javac HelloWorld.java
-    ```
+  ```sh
+  javac HelloWorld.java
+  ```
 
 - Execute with `java` command
 
-    ```sh
-    java HelloWorld
-    ```
+  ```sh
+  java HelloWorld
+  ```
 
 - Modern way: package into JAR files with the help of Maven
 
-    ```sh
-    java -Xmx1024M -Xms1024M -jar minecraft_server.1.20.1.jar nogui
-    ```
+  ```sh
+  java -Xmx1024M -Xms1024M -jar minecraft_server.1.20.1.jar nogui
+  ```
 
 ### Summary
 
@@ -333,5 +333,6 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Java logo by [Java](https://www.java.com/)
 - SDKMAN! logo by [SDKMAN!](https://sdkman.io/)
-- IntelliJ IDEA and Intellij Toolbox logos by [JetBrains](https://www.jetbrains.com/)
+- IntelliJ IDEA and Intellij Toolbox logos by
+  [JetBrains](https://www.jetbrains.com/)
 - Maven logo by [Apache Software Foundation](https://maven.apache.org/)
