@@ -151,10 +151,84 @@ a general comment on your work and the final grade.
 
 If you have any questions about the evaluation, you can contact us!
 
+<details>
+<summary>Grading grid for the teaching staff with comments</summary>
+
+```markdown
+# Practical work 1 - Grading grid for @member1 and @member2
+
+Here are the grades and comments for each criterion for the practical work 1.
+
+## Grading criteria
+
+- 0 point - The work is not done
+- 0.1 point - The work is insufficient
+- 0.2 point - The work is done
+
+Maximum grade: 25 points \* 0.2 + 1 = 6
+
+### Category 1 - Git, GitHub and Markdown
+
+| #   | Criterion                                                         | Points | Number of points obtained | Comment |
+| --- | ----------------------------------------------------------------- | -----: | ------------------------: | ------- |
+| 1   | The repository is managed using issues and pull requests          |    0.2 |                           |         |
+| 2   | The commits are signed                                            |    0.2 |                           |         |
+| 3   | The issues, pull requests and commits messages are descriptive    |    0.2 |                           |         |
+| 4   | The entire team contributes to the project and can explain it     |    0.2 |                           |         |
+| 5   | The repository contains a gitignore file to ignore unwanted files |    0.2 |                           |         |
+| 6   | The repository contains test files to use with the CLI            |    0.2 |                           |         |
+| 7   | The README is well structured and explains what the CLI is for    |    0.2 |                           |         |
+| 8   | The README explains how to build the CLI                          |    0.2 |                           |         |
+| 9   | The README explains how to use the CLI with examples              |    0.2 |                           |         |
+
+### Category 2 - Java, IntelliJ IDEA and Maven
+
+| #   | Criterion                                                           | Points | Number of points obtained | Comment |
+| --- | ------------------------------------------------------------------- | -----: | ------------------------: | ------- |
+| 10  | The code is well structured                                         |    0.2 |                           |         |
+| 11  | The code is well documented                                         |    0.2 |                           |         |
+| 12  | The code is built and output an executable JAR file                 |    0.2 |                           |         |
+| 13  | The CLI uses [picocli](https://picocli.info/) as a Maven dependency |    0.2 |                           |         |
+| 14  | The CLI displays a comprehensive help message on how to use the CLI |    0.2 |                           |         |
+
+### Category 3 - Java IOs
+
+| #   | Criterion                                                                                | Points | Number of points obtained | Comment |
+| --- | ---------------------------------------------------------------------------------------- | -----: | ------------------------: | ------- |
+| 15  | The CLI takes an input file and an output file as arguments                              |    0.2 |                           |         |
+| 16  | The CLI takes the input file encoding and the output file encoding as optional arguments |    0.2 |                           |         |
+| 17  | The CLI displays an error on invalid/missing inputs                                      |    0.2 |                           |         |
+| 18  | The CLI correctly processes the input file and writes the result in the output file      |    0.2 |                           |         |
+| 19  | The CLI displays a message on failure                                                    |    0.2 |                           |         |
+| 20  | The CLI displays a message on success                                                    |    0.2 |                           |         |
+
+### Category 4 - Presentation and questions
+
+| #   | Criterion                                     | Points | Number of points obtained | Comment |
+| --- | --------------------------------------------- | -----: | ------------------------: | ------- |
+| 21  | The presentation is clear and well prepared   |    0.2 |                           |         |
+| 22  | Everyone talks during the presentation        |    0.2 |                           |         |
+| 23  | The presentation presents the CLI application |    0.2 |                           |         |
+| 24  | A demo of the CLI application is made         |    0.2 |                           |         |
+| 25  | The answers to the questions are correct      |    0.2 |                           |         |
+
+## General feedback
+
+- ...
+
+## Final grade
+
+Your final grade is:
+
+Feel free to contact us if you have any questions about the evaluation!
+```
+
+</details>
+
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+practical work?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

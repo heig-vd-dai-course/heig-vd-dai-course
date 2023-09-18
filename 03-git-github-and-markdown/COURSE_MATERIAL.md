@@ -1174,6 +1174,12 @@ Add the student to the GitHub organization and the right team.
 The maintainers might ask for changes. If they do, you will need to make the
 changes locally, commit them and push them to the repository.
 
+#### Accept the invitation
+
+Once the pull request is approved, you will receive an invitation to join the
+GitHub organization. Accept the invitation so you are part of the course and we
+can notify all the students at the same time using GitHub Discussions.
+
 #### Check the results
 
 Once the pull request is approved and merged, you can check the results on the
