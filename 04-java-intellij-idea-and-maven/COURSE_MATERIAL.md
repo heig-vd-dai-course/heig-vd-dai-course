@@ -8,7 +8,7 @@
 [illustration]:
   https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
 
-# Java, IntelliJ and Maven - Course material
+# Java, IntelliJ IDEA and Maven - Course material
 
 <https://github.com/heig-vd-dai-course>
 

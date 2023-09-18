@@ -39,7 +39,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Social platform](#social-platform)
   - [Free features and PRO features](#free-features-and-pro-features)
   - [Users and organizations](#users-and-organizations)
-  - [Issues, pull requests and merge requests](#issues-pull-requests-and-merge-requests)
+  - [Issues, pull requests and forks](#issues-pull-requests-and-forks)
   - [Summary](#summary-1)
   - [Alternatives](#alternatives-1)
   - [Resources](#resources-1)
@@ -1131,9 +1131,14 @@ the last commit. We consider this to be a bad practice. Instead,rename the pull
 request to something meaningful. The title of the issue you created earlier is a
 good candidate as it describes what you want to do.
 
-Opening the pull request will notify the maintainers of the repository that you
-want to merge your changes into the repository. They will be able to review your
-changes and to ask for changes if needed.
+Once the description is filled, click on the **Create pull request** button.
+
+Associate the pull request with the issue you created earlier. This will
+automatically close the issue once the pull request is merged, closing the loop.
+
+You might want to continue to work on the pull request. You can do so by pushing
+new commits to the branch. You can also add a comment to the pull request if you
+want to discuss something with the maintainers.
 
 > **Note**  
 > If your pull request is not ready yet, you can mark it as a draft by clicking
@@ -1142,8 +1147,12 @@ changes and to ask for changes if needed.
 > are ready, you can mark it as ready by clicking on the **Ready for review**
 > button.
 
-Associate the pull request with the issue you created earlier. This will
-automatically close the issue once the pull request is merged, closing the loop.
+Once you are ready, mark the pull request as ready.
+
+Add the
+[`@teaching-staff`](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff)
+team as a reviewer (on the right side of the pull request). This will notify the
+teaching staff that you are ready for review.
 
 #### Wait for review
 
