@@ -7,6 +7,7 @@
 - Send an email to all students to remind them of the course with:
   - A link to this GitHub organization
   - When and where the course will take place
+- Add the evaluations and practical works to [GAPS](https://gaps.heig-vd.ch/)
 
 ### Email sent for the 2023-2024 academic year
 
@@ -45,42 +46,13 @@ Ludovic Delafontaine
 
 - Create Git tags to archive the course material for the given year
   - For the `heig-vd-dai-course` repository - this will create a release with
-    the PDFs of the slides
+    the PDFs of the course (course material and presentations)
   - For the `.github` repository
 - Lock and archive all GitHub Discussions for the given year
 - Lock and archive the planning in the course project for the given year
 - Remove the students from `.github` repository for a clean start next year
-- Move all members of the organization to the `@old-members` team
+- Move all members of the organization to the
+  [`@old-members`](https://github.com/orgs/heig-vd-dai-course/teams/old-members)
+  team
 - Send an email to all students to thank them for their participation with:
   - A link to both Git tags for a future reference
-
-## Tips
-
-### Taking screenshots
-
-All window screenshots are taken with the `Screenshop.app` tool from Apple. You
-can open it with the `Command + Shift + 5` shortcut. **Show floating thumbnail**
-is enabled in the options.
-
-All application windows are of the same size (888x888) and are placed at the
-same position on the screen of the Mac Book Pro.
-
-To set a specific application to a specific size and position, you can use the
-following AppleScript:
-
-```applescript
-set theApp to "Safari"
-set appPosition to {-1445, 98}
-set appSize to {888, 888}
-
-tell application "System Events" to tell application process theApp
-	tell window 1
-		set position to appPosition
-		set size to appSize
-	end tell
-end tell
-```
-
-Screenshots made within the browser are made with Safari. As I (Ludovic) do not
-use Safari as my main browser, it is perfect for screenshots as it does not
-contain any personal information and/or bookmarks and extensions.

@@ -30,17 +30,23 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Java versions and version managers](#java-versions-and-version-managers)
   - [Compiling and running Java programs](#compiling-and-running-java-programs)
   - [Summary](#summary)
+  - [Alternatives](#alternatives)
+  - [Resources](#resources)
 - [IntelliJ IDEA](#intellij-idea)
   - [Community Edition and Ultimate Edition](#community-edition-and-ultimate-edition)
   - [IntelliJ IDEA Toolbox App](#intellij-idea-toolbox-app)
   - [Configuration files and Git](#configuration-files-and-git)
   - [Summary](#summary-1)
+  - [Alternatives](#alternatives-1)
+  - [Resources](#resources-1)
 - [Maven](#maven)
   - [Maven project structure](#maven-project-structure)
   - [`pom.xml` file](#pomxml-file)
   - [Maven Repository](#maven-repository)
   - [Maven "installation" and Maven wrapper](#maven-installation-and-maven-wrapper)
   - [Summary](#summary-2)
+  - [Alternatives](#alternatives-2)
+  - [Resources](#resources-2)
   - [Cheat sheet](#cheat-sheet)
 - [Practical content](#practical-content)
   - [Install Java](#install-java)
@@ -76,13 +82,13 @@ Let's get started!
 Java was created by James Gosling at Sun Microsystems (now part of Oracle
 Corporation) and released in 1995.
 
+Java is a very popular programming language, especially for client-server web
+applications.
+
 ### Java virtual machine
 
 Java is a **compiled** language, meaning that the source code is compiled to
 bytecode, which is then executed by a **Java virtual machine (JVM)**.
-
-Java is a very popular programming language, especially for client-server web
-applications.
 
 Java is intended to be **portable**, meaning that compiled Java code can run on
 all platforms that support Java, without the need for recompilation, thanks to
@@ -119,7 +125,7 @@ it is more convenient to use an **Integrated Development Environment (IDE)**.
 
 ### Compiling and running Java programs
 
-A Java application can be compiled using the `javac` command:
+A (simple) Java application can be compiled using the `javac` command:
 
 ```bash
 javac HelloWorld.java
@@ -143,8 +149,14 @@ a **ZIP file** containing the compiled bytecode and other resources.
 A JAR file can be executed using the `java` command:
 
 ```bash
-java -jar HelloWorld.jar
+java -Xmx1024M -Xms1024M -jar minecraft_server.1.20.1.jar nogui
 ```
+
+The `-Xmx1024M` and `-Xms1024M` options define the **maximum** and **initial**
+memory allocation pool for a Java virtual machine (JVM), respectively.
+
+These options can tweak the performance of the JVM, depending on the
+application.
 
 As many Java applications depend on external libraries, it is common to use a
 **dependency manager** such as **[Maven](https://maven.apache.org/)** or
@@ -159,6 +171,29 @@ As many Java applications depend on external libraries, it is common to use a
 - Java has various versions, each with its own set of features and improvements.
 - Versions managers allow you to install and switch between different versions
   of Java.
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [Kotlin](https://kotlinlang.org/)
+- [Scala](https://www.scala-lang.org/)
+- [Groovy](https://groovy-lang.org/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- [Which Version of JDK Should I Use?](https://whichjdk.com/) - Very useful
+  website to help you choose the right version of Java for your project. TL;DR:
+  Use
+  [Adoptium Eclipse Temurin 17](https://whichjdk.com/#adoptium-eclipse-temurin).
+- [SDKMAN!](https://sdkman.io/) - SDKMAN! is a tool for managing Java versions.
+- [asdf](https://asdf-vm.com/) - An alternative to SDKMAN!.
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## IntelliJ IDEA
 
@@ -218,6 +253,25 @@ correctly.
   containing the project configuration files.
 - Some of these files must be ignored by Git, as they contain local
   configuration that is specific to your computer.
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [Visual Studio Code](https://code.visualstudio.com/) with the
+  [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+- [Eclipse](https://www.eclipse.org/ide/) if you **really** want to use it
+- [NetBeans](https://netbeans.apache.org/) if you **really** want to use it
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- _None for now_
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Maven
 
@@ -337,6 +391,26 @@ A new developer can then **run** the Maven wrapper to **download** and
 - Maven defines a standard directory structure for Java projects.
 - Maven defines a standard build process for Java projects.
 - The `pom.xml` file contains the configuration of your Maven project.
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [Gradle](https://gradle.org/)
+- [Ant](https://ant.apache.org/)
+- [Make](https://www.gnu.org/software/make/)
+- [Bazel](https://bazel.build/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- [Introduction to the Build Lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
+- [Maven Build Lifecycle, Phases, and Goals](https://www.digitalocean.com/community/tutorials/maven-build-lifecycle-phases-goals)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Cheat sheet
 

@@ -18,18 +18,10 @@ This course is equivalent to 3 ECTS credits = ~75-90 hours of work.
 
 64 periods in class are planned for this course, divided in 4 main parts:
 
-- [Getting started](#getting-started)
-- [Course planning and material](#course-planning-and-material)
-  - [Introduction (1 period)](#introduction-1-period)
-  - [Part 1 - Input/output processing (15 periods)](#part-1---inputoutput-processing-15-periods)
-  - [Part 2 - Network programming with TCP (18 periods)](#part-2---network-programming-with-tcp-18-periods)
-  - [Part 3 - Network programming with UDP (16 periods)](#part-3---network-programming-with-udp-16-periods)
-  - [Part 4 - Web infrastructures (12 periods)](#part-4---web-infrastructures-12-periods)
-  - [Conclusion (2 periods)](#conclusion-2-periods)
-- [GitHub Discussions](#github-discussions)
-- [GitHub Teams](#github-teams)
-- [License](#license)
-- [Contributing](#contributing)
+- [Part 1 - Input/output processing (15 periods)](#part-1---inputoutput-processing-15-periods)
+- [Part 2 - Network programming with TCP (18 periods)](#part-2---network-programming-with-tcp-18-periods)
+- [Part 3 - Network programming with UDP (16 periods)](#part-3---network-programming-with-udp-16-periods)
+- [Part 4 - Web infrastructures (12 periods)](#part-4---web-infrastructures-12-periods)
 
 The entire course planning for the semester is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>.
@@ -45,7 +37,7 @@ The entire course planning for the semester is available at
 - [4. Java, IntelliJ IDEA and Maven (1 period)](./04-java-intellij-idea-and-maven/README.md)
 - [5. Java IOs (2 + 2 periods)](./05-java-ios/README.md)
 - [6. Practical work 1 (2 + 2 periods)](./06-practical-work-1/README.md)
-- [7. Conclusion to part 1 + practical review + feedback (2 periods)](./07-conclusion-to-part-1/README.md)
+- [7. Conclusion to part 1 + practical work review + feedback (2 periods)](./07-conclusion-to-part-1/README.md)
 - Evaluation 1 (2 periods)
 
 ### Part 2 - Network programming with TCP (18 periods)
@@ -57,7 +49,7 @@ The entire course planning for the semester is available at
 - [12. SSH and SCP (1 period)](./12-ssh-and-scp/README.md)
 - [13. Java TCP programming (2 periods)](./13-java-tcp-programming/README.md)
 - [14. Practical work 2 (2 + 2 + 2 periods)](./14-practical-work-2/README.md)
-- [15. Conclusion to part 2 + practical review + feedback (2 periods)](./15-conclusion-to-part-2/README.md)
+- [15. Conclusion to part 2 + practical work review + feedback (2 periods)](./15-conclusion-to-part-2/README.md)
 - Evaluation 2 (2 periods)
 
 ### Part 3 - Network programming with UDP (16 periods)

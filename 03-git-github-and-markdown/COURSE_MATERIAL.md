@@ -16,8 +16,6 @@
 
 L. Delafontaine and H. Louis, with the help of Copilot.
 
-Based on the original course by O. Liechti and J. Ehrensberger.
-
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ![Main illustration][illustration]
@@ -270,7 +268,7 @@ An organization can have multiple members, and repositories can be shared
 between members. It is a good practice to create an organization for a project
 that will be worked on by multiple people.
 
-### Issues, pull requests and merge requests
+### Issues, pull requests and forks
 
 GitHub also provides a **wiki** for each repository, a **project board** to
 manage tasks, an **issue tracker** to report bugs and a **pull request** system

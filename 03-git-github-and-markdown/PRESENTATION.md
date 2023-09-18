@@ -67,8 +67,6 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 
-<small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
-
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
 ![bg opacity:0.1][illustration]
@@ -104,7 +102,7 @@ You can find other resources and alternatives as well.
 - Repositories (server) and clones (local copies)
 - Fully distributed VCS for offline work
 
-![bg right w:100%](https://wac-cdn.atlassian.com/dam/jcr:9d51f0ee-5946-4be2-886c-ff040ef8c1a1/03.svg?cdnVersion=1210)
+![bg right contain](https://wac-cdn.atlassian.com/dam/jcr:9d51f0ee-5946-4be2-886c-ff040ef8c1a1/03.svg?cdnVersion=1210)
 
 ### Commits, hashes and tags
 
@@ -146,7 +144,7 @@ You can find other resources and alternatives as well.
 - `.gitignore` omits specific files
 - Improves repository cleanliness
 
-![bg right contain](images/git-ignore-files.png)
+![bg right contain](./images/git-ignore-files.png)
 
 ### Summary
 
@@ -182,29 +180,32 @@ You can find other resources and alternatives as well.
 - Social interactions: follow, star
 - Forking repositories
 
-![bg right contain](images/github-social-platform.png)
+![bg right contain](./images/github-social-platform.png)
 
 ### Free features and PRO features
 
 - Enhanced features with PRO
 - Free for students
 
-![bg right contain](images/github-free-features-and-pro-features.png)
+![bg right contain](./images/github-free-features-and-pro-features.png)
 
 ### Users and organizations
 
 - Users or organizations ownership
 - Users can be part of multiple organizations
 
-![bg right contain](images/github-users-and-organizations.png)
+![bg right contain](./images/github-users-and-organizations.png)
 
-### Issues, pull requests, merge requests
+### Issues, pull requests and forks
 
-- Project management tools
 - Contribution workflow
-- Pull request approval process
+  - Issues
+  - Forks
+  - Pull requests
+- Approval process
+- Project management tools (wiki, planning, etc.)
 
-![bg right contain](images/github-issues-pull-requests-merge-requests.png)
+![bg right contain](./images/github-issues-pull-requests-merge-requests.png)
 
 ### Summary
 
@@ -239,7 +240,7 @@ You can find other resources and alternatives as well.
 - Supports HTML integration
 - Used in web pages, presentations, documentation
 
-![bg right contain](images/markdown-markdown-and-output-formats.png)
+![bg right contain](./images/markdown-markdown-and-output-formats.png)
 
 ### Syntax
 
@@ -248,7 +249,7 @@ You can find other resources and alternatives as well.
 - Supports headings, text formatting, code blocks, lists, links, images, and
   tables
 
-![bg right contain](images/markdown-syntax.png)
+![bg right contain](./images/markdown-syntax.png)
 
 ### Specifications
 
@@ -256,7 +257,7 @@ You can find other resources and alternatives as well.
 - CommonMark and GitHub Flavored Markdown
 - Custom extensions for features
 
-![bg right contain](images/markdown-specifications.png)
+![bg right contain](./images/markdown-specifications.png)
 
 ### Summary
 
@@ -315,7 +316,7 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
-- Git logo by [Git](https://git-scm.com/downloads/logos)
+- Git logo by [Git](https://git-scm.com/)
 - Git illustrations by [Atlassian](https://www.atlassian.com/) -
   [1](https://www.atlassian.com/git/tutorials/what-is-git),
   [2](https://www.atlassian.com/git/tutorials/refs-and-the-reflog),

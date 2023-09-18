@@ -67,8 +67,6 @@ _paginate: false
 
 <small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
 
-<small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
-
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
 ![bg opacity:0.1][illustration]
