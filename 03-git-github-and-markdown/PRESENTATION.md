@@ -275,7 +275,7 @@ You can find other resources and alternatives as well.
 - Install and configure Git
 - Create and configure your GitHub account
 - Create your own GitHub profile README
-- Add yourself to the list of students in the GitHub organization
+- Add yourself to the GitHub organization README
 
 ![bg vertical right](./images/what-will-you-do-1.png)
 ![bg vertical right](./images/what-will-you-do-2.png)

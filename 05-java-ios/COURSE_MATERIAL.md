@@ -36,7 +36,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
 - [The Java IO API](#the-java-io-api)
 - [Performance and buffering](#performance-and-buffering)
-- [`bufferedStream` vs. `byteBuffer`](#bufferedstream-vs-bytebuffer)
 - [Dealing with errors](#dealing-with-errors)
 - [When to use which IO?](#when-to-use-which-io)
 - [Practical content](#practical-content)
@@ -154,6 +153,9 @@ possible characters is limited, hence the 1,112,064 characters limit.
 Other implementations of the Unicode standard exist, such as UTF-16 and UTF-32.
 They are not as common as UTF-8 and are not backward compatible with ASCII.
 
+Java strings for instance uses UTF-16, meaning a character is encoded in 2 bytes
+(in C/C++, a character is encoded in 1 byte).
+
 ### What happens if you ignore the character encoding?
 
 When you open a file, you need to know the character encoding used to encode the
@@ -201,20 +203,20 @@ A **stream** is **a way to read or write data** from or to a source or a sink.
 
 ## The Java IO API
 
-Java his separated in modules. The Java IO API is part of the `java.base` module.
+Java his separated in modules. The Java IO API is part of the `java.base`
+module.
 
 In the `java.base` module, there are two main packages to read and write data:
 
 - `java.io`: the standard Java IO API
 - `java.nio`: the Java NIO API
 
-The `java.io` package is called **Java IO
-API** or the **standard Java IO API**.
+The `java.io` package is called **Java IO API** or the **standard Java IO API**.
 
-The **Java NIO API** was introduced in Java 1.4. It is a more
-modern API that is more efficient and more flexible than the Java IO API. It is
-also more complex to use and is meant for more advanced use cases (writing
-scalable servers for example). We will not cover it in this course.
+The **Java NIO API** was introduced in Java 1.4. It is a more modern API that is
+more efficient and more flexible than the Java IO API. It is also more complex
+to use and is meant for more advanced use cases (writing scalable servers for
+example). We will not cover it in this course.
 
 The documentation of the Java IO API is quite complex. It is not easy to find
 the right class to use for the right use case.
@@ -244,10 +246,6 @@ If the buffer is half full, it must be flushed before it can be filled again.
 TODO: improve the explanation
 
 TODO: Flush the buffer
-
-## `bufferedStream` vs. `byteBuffer`
-
-TODO
 
 ## Dealing with errors
 
@@ -291,6 +289,14 @@ case:
 ![Decision tree to choose the right IO for the right use case](./images/when-to-use-which-io.svg)
 
 ## Practical content
+
+In this practical work, you will learn how to read and write data from and to
+different sources and sinks of data using different types of streams.
+
+You will benchmark the different types of streams to see which one is the most
+efficient for your use case.
+
+You will also generate random data to benchmark the different types of streams.
 
 ### Open a binary file with `TODO: Use right class for byte per byte reading` and benchmark it
 

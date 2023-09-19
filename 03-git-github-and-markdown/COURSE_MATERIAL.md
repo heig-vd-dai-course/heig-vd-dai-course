@@ -1110,6 +1110,39 @@ git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 > commits were pushed to the remote repository, you would need to use
 > `git revert` instead.
 
+#### Get latest changes from `main`
+
+As maintainers might have added new students to the list of students, you will
+need to get the latest changes from the `main` branch.
+
+Checkout to the `main` branch:
+
+```sh
+# Checkout to the main branch
+git checkout main
+```
+
+Pull the changes from the `main` branch:
+
+```sh
+# Pull the changes
+git pull
+```
+
+Checkout to the branch you created earlier:
+
+```sh
+# Checkout to the branch you created earlier
+git checkout add-myself-github-username-to-the-list-of-students
+```
+
+Merge the `main` branch into the branch you created earlier:
+
+```sh
+# Merge the main branch into the branch you created earlier
+git merge main
+```
+
 #### Push your changes
 
 Push your changes to the repository:
@@ -1121,8 +1154,8 @@ git push
 
 #### Create a pull request
 
-Create a pull request by clicking on the **Compare & pull request** button in
-your repository page.
+Create a pull request by clicking on the **Contribute** button in your
+repository page.
 
 > **Note**  
 > If the notification does not appear, you can create a pull request by clicking
@@ -1135,10 +1168,18 @@ the last commit. We consider this to be a bad practice. Instead,rename the pull
 request to something meaningful. The title of the issue you created earlier is a
 good candidate as it describes what you want to do.
 
+> **Warning**  
+> You must allow maintainers to update the pull request. This is needed to
+> resolve conflicts. If you do not allow maintainers to update the pull request,
+> you will need to resolve the conflicts yourself.
+>
+> Check the **Allow edits by maintainers** checkbox.
+
 Once the description is filled, click on the **Create pull request** button.
 
-Associate the pull request with the issue you created earlier. This will
-automatically close the issue once the pull request is merged, closing the loop.
+Associate the pull request with the issue you created earlier from the right
+panel. This will automatically close the issue once the pull request is merged,
+closing the loop. You have to do this manually.
 
 You might want to continue to work on the pull request. You can do so by pushing
 new commits to the branch. You can also add a comment to the pull request if you
@@ -1153,10 +1194,10 @@ want to discuss something with the maintainers.
 
 Once you are ready, mark the pull request as ready.
 
-Add the
-[`@teaching-staff`](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff)
-team as a reviewer (on the right side of the pull request). This will notify the
-teaching staff that you are ready for review.
+Add the teaching staff (you can check the members in the following team
+[`@teaching-staff`](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff))
+as reviewers (on the right side of the pull request). This will notify us that
+you are ready for review.
 
 #### Wait for review
 
