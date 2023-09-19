@@ -1175,11 +1175,12 @@ good candidate as it describes what you want to do.
 >
 > Check the **Allow edits by maintainers** checkbox.
 
-Once the description is filled, click on the **Create pull request** button.
+Fill the description with `#<number of the issue you created earlier>` or
+`Fixes #<number of the issue you created earlier>` or
+`Closes #<number of the issue you created earlier>`. This will automatically
+link the issue to the pull request.
 
-Associate the pull request with the issue you created earlier from the right
-panel. This will automatically close the issue once the pull request is merged,
-closing the loop. You have to do this manually.
+Once the description is filled, click on the **Create pull request** button.
 
 You might want to continue to work on the pull request. You can do so by pushing
 new commits to the branch. You can also add a comment to the pull request if you
@@ -1194,15 +1195,19 @@ want to discuss something with the maintainers.
 
 Once you are ready, mark the pull request as ready.
 
-Add the teaching staff (you can check the members in the following team
-[`@teaching-staff`](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff))
-as reviewers (on the right side of the pull request). This will notify us that
-you are ready for review.
+Add a comment to notify the individual member of the
+`[@teaching-staff](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff)
+team to let them know that your pull request is ready for review. Add a link to
+the issue as well.
 
 #### Wait for review
 
 The maintainers will review your pull request and will ask for changes if
 needed.
+
+The teaching staff will then add you as a member of the GitHub organization and
+will add you to the
+`[@students](https://github.com/orgs/heig-vd-dai-course/teams/students)` team.
 
 <details>
 <summary>Notes for the maintainers</summary>
@@ -1221,16 +1226,16 @@ Add the student to the GitHub organization and the right team.
 
 </details>
 
-#### Make changes if needed
-
-The maintainers might ask for changes. If they do, you will need to make the
-changes locally, commit them and push them to the repository.
-
 #### Accept the invitation
 
 Once the pull request is approved, you will receive an invitation to join the
 GitHub organization. Accept the invitation so you are part of the course and we
 can notify all the students at the same time using GitHub Discussions.
+
+#### Make changes if needed
+
+The maintainers might ask for changes. If they do, you will need to make the
+changes locally, commit them and push them to the repository.
 
 #### Check the results
 
