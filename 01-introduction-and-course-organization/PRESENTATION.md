@@ -69,6 +69,10 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
+## Welcome to the DAI course!
+
+<!-- _class: lead -->
+
 ## What to expect to learn from this course
 
 <!-- _class: lead -->

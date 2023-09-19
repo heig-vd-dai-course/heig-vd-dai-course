@@ -1,0 +1,60 @@
+@startuml java-io-decision-tree
+start
+
+if (Binary or Text?) then (binary)
+  :Binary Input and Output;
+  :**Java IO abstract class**
+
+  InputStream - Read byte stream
+  OutputStream - Write byte stream;
+
+  split
+    :**File read and write**
+
+    FileInputStream
+    FileOutputStream;
+  split again
+    :**Arrays of bytes read and write**
+
+    ByteArrayInputStream
+    ByteArrayOutputStream;
+  end split
+
+  :**Buffering**
+
+  BufferedInputStream(...)
+  BufferedOutputStream(...);
+
+else (text)
+  :Text Input And Output;
+  : **Java IO abstract class**
+
+  Reader - Read characters
+  Writer - Write characters;
+
+  split
+    :**File read and write**
+
+    FileReader
+    FileWriter;
+
+  split again
+    :**Strings read and write**
+
+    StringReader
+    StringWriter;
+  split again
+    :**Arrays of chars read and write**
+
+    CharArrayReader
+    CharArrayWriter;
+  end split
+
+  :**Buffering**
+
+  BufferedReader(...)
+  BufferedWriter(...);
+
+endif
+stop
+@enduml

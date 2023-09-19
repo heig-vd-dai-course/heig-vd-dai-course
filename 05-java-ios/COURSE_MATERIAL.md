@@ -35,19 +35,21 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [A quick note on little endian vs. big endian](#a-quick-note-on-little-endian-vs-big-endian)
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
 - [The Java IO API](#the-java-io-api)
-- [Open and close a file](#open-and-close-a-file)
 - [Performance and buffering](#performance-and-buffering)
+- [`bufferedStream` vs. `byteBuffer`](#bufferedstream-vs-bytebuffer)
 - [Dealing with errors](#dealing-with-errors)
 - [When to use which IO?](#when-to-use-which-io)
 - [Practical content](#practical-content)
-  - [Open a binary file](#open-a-binary-file)
-  - [Write a binary file](#write-a-binary-file)
-  - [Open a text file](#open-a-text-file)
-  - [Write a text file](#write-a-text-file)
-  - [Open a binary file with a buffer](#open-a-binary-file-with-a-buffer)
-  - [Write a binary file with a buffer](#write-a-binary-file-with-a-buffer)
-  - [Open a text file with a buffer](#open-a-text-file-with-a-buffer)
-  - [Write a text file with a buffer](#write-a-text-file-with-a-buffer)
+  - [Open a binary file with `TODO: Use right class for byte per byte reading` and benchmark it](#open-a-binary-file-with-todo-use-right-class-for-byte-per-byte-reading-and-benchmark-it)
+  - [Write a binary file with `TODO: Use right class for byte per byte writing` and benchmark it](#write-a-binary-file-with-todo-use-right-class-for-byte-per-byte-writing-and-benchmark-it)
+  - [Open a binary file with `TODO: Use right class for buffer reading` and benchmark it](#open-a-binary-file-with-todo-use-right-class-for-buffer-reading-and-benchmark-it)
+  - [Write a binary file with `TODO: Use right class for buffer writing` and benchmark it](#write-a-binary-file-with-todo-use-right-class-for-buffer-writing-and-benchmark-it)
+  - [Open a text file with `TODO: Use right class for byte per byte reading` and benchmark it](#open-a-text-file-with-todo-use-right-class-for-byte-per-byte-reading-and-benchmark-it)
+  - [Write a text file with `TODO: Use right class for byte per byte writing` and benchmark it](#write-a-text-file-with-todo-use-right-class-for-byte-per-byte-writing-and-benchmark-it)
+  - [Open a text file with `TODO: Use right class for buffer reading` and benchmark it](#open-a-text-file-with-todo-use-right-class-for-buffer-reading-and-benchmark-it)
+  - [Write a text file with `TODO: Use right class for buffer writing` and benchmark it](#write-a-text-file-with-todo-use-right-class-for-buffer-writing-and-benchmark-it)
+  - [Compare the results](#compare-the-results)
+  - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
@@ -139,19 +141,26 @@ applications.
 UTF-8 is backward compatible with ASCII. This means that if you have a file
 encoded in ASCII, it is also encoded in UTF-8.
 
-<!--
-## Try it yourself!
+| Binary data                                 | Meaning           |
+| ------------------------------------------- | ----------------- |
+| `0xxxxxxx`                                  | 1 byte character  |
+| `110xxxxx` `10xxxxxx`                       | 2 bytes character |
+| `1110xxxx` `10xxxxxx` `10xxxxxx`            | 3 bytes character |
+| `11110xxx` `10xxxxxx` `10xxxxxx` `10xxxxxx` | 4 bytes character |
 
-TODO: Add a "Try out!" section here to clone the required Git repository to execute the following section
--->
+As some bits are used to encode the length of the character, the number of
+possible characters is limited, hence the 1,112,064 characters limit.
+
+Other implementations of the Unicode standard exist, such as UTF-16 and UTF-32.
+They are not as common as UTF-8 and are not backward compatible with ASCII.
 
 ### What happens if you ignore the character encoding?
 
 When you open a file, you need to know the character encoding used to encode the
 file.
 
-The character encoding is not stored in the file. You need to know it in advance
-to be able to read the file correctly.
+The character encoding is not usually stored in the file. You need to know it in
+advance to be able to read the file correctly.
 
 When the character encoding is not known in advance or misinterpreted, it can
 lead to issues like displaying the wrong characters or not being able to display
@@ -192,49 +201,67 @@ A **stream** is **a way to read or write data** from or to a source or a sink.
 
 ## The Java IO API
 
-Java has a very powerful API to read and write data from and to different
-sources and sinks of data using different types of streams called the **Java IO
-API** (also called the standard Java IO API).
+Java his separated in modules. The Java IO API is part of the `java.base` module.
 
-Another API called the **Java NIO API** was introduced in Java 1.4. It is a more
+In the `java.base` module, there are two main packages to read and write data:
+
+- `java.io`: the standard Java IO API
+- `java.nio`: the Java NIO API
+
+The `java.io` package is called **Java IO
+API** or the **standard Java IO API**.
+
+The **Java NIO API** was introduced in Java 1.4. It is a more
 modern API that is more efficient and more flexible than the Java IO API. It is
 also more complex to use and is meant for more advanced use cases (writing
 scalable servers for example). We will not cover it in this course.
 
-## Open and close a file
+The documentation of the Java IO API is quite complex. It is not easy to find
+the right class to use for the right use case.
 
-When using the Java IO API, you need to open and close a file before and after
-reading or writing data.
-
-If you do not close the file properly, you might lose data or corrupt the file.
-
-In order to avoid the hassle of closing the file properly, you can use the
-`try-with-resources` statement. This statement will automatically close the file
-for you.
+You might need to check several classes before finding the right one.
 
 ## Performance and buffering
 
 When reading and writing data, data can be read or written byte by byte or using
 a buffer.
 
-Reading or writing byte by byte is not very efficient as each call is system
-call to the operating system. This is very slow.
+If you don’t use buffered IOs, calling `read()` will issue one system call to
+retrieve one single byte... which is not efficient.
 
-Reading or writing using a buffer is much more efficient as data is processed as
-a chunk of data at once. This is much faster.
+With buffered IOs, calling `read()` will pre-fetch "several" bytes and store it
+in a temporary memory space (i.e. in a buffer).
 
-A **buffer** is a temporary storage area **in memory**. It is used to store data
-before it is processed. Is is much faster.
+"Several" defines the buffer size. Subsequent calls to `read()` will be able to
+fetch bytes directly from the buffer, which is very fast.
+
+When the buffer is empty, a new system call will be issued to fetch more bytes.
+
+If the buffer is full, a new system call will be issued to flush the buffer.
+
+If the buffer is half full, it must be flushed before it can be filled again.
+
+TODO: improve the explanation
 
 TODO: Flush the buffer
 
+## `bufferedStream` vs. `byteBuffer`
+
+TODO
+
 ## Dealing with errors
+
+When using the Java IO API, you need to open and close a file before and after
+reading or writing data.
+
+If you do not close the file properly, you might lose data or corrupt the file.
 
 When accessing a file, many things can go wrong. The file might not exist, the
 file might be corrupted, the file might be locked by another process, etc.
 
 When you open a file, you need to handle these errors. You can do this by
-catching the `IOException` exception. This is done with a `try`/`catch` block.
+catching the `IOException` exception. This is done with a
+`try`/`catch`/`finally` block.
 
 The common exceptions you might encounter are:
 
@@ -242,6 +269,9 @@ The common exceptions you might encounter are:
 - `IOException`: the file cannot be accessed for other reasons
 - `UnsupportedEncodingException`: the file is encoded in an unsupported
   character encoding
+
+You can also use the `try-with-resources` statement to automatically close the
+file for you.
 
 The same applies when you use the network: the network might be down, the
 connection might be lost, etc.
@@ -258,45 +288,49 @@ It can sometimes be overwhelming to know which IO to use for which use case.
 Here is a simple decision tree to help you choose the right IO for the right use
 case:
 
-![Decision tree to choose the right IO for the right use case](./images/decision-tree.svg)
+![Decision tree to choose the right IO for the right use case](./images/when-to-use-which-io.svg)
 
 ## Practical content
 
-### Open a binary file
+### Open a binary file with `TODO: Use right class for byte per byte reading` and benchmark it
 
 TODO
 
-### Write a binary file
+### Write a binary file with `TODO: Use right class for byte per byte writing` and benchmark it
 
 TODO
 
-### Open a text file
+### Open a binary file with `TODO: Use right class for buffer reading` and benchmark it
 
 TODO
 
-### Write a text file
+### Write a binary file with `TODO: Use right class for buffer writing` and benchmark it
 
 TODO
 
-### Open a binary file with a buffer
+### Open a text file with `TODO: Use right class for byte per byte reading` and benchmark it
 
 TODO
 
-### Write a binary file with a buffer
+### Write a text file with `TODO: Use right class for byte per byte writing` and benchmark it
 
 TODO
 
-### Open a text file with a buffer
+### Open a text file with `TODO: Use right class for buffer reading` and benchmark it
 
 TODO
 
-### Write a text file with a buffer
+### Write a text file with `TODO: Use right class for buffer writing` and benchmark it
 
 TODO
+
+### Compare the results
+
+### Go further
+
+- ...
 
 ## Conclusion
-
-<!-- _class: lead -->
 
 ### What did you do and learn?
 

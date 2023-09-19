@@ -901,9 +901,9 @@ The `dependency-reduced-pom.xml` file is a **reduced version** of the `pom.xml`
 file, containing only the dependencies used by the application and not the
 transitive dependencies.
 
-> **Note** > _Why is it so complex to package an application with Java and
-> Maven? Why do we need to use a plugin to include the dependencies in the JAR
-> file?_
+> **Note**  
+> _Why is it so complex to package an application with Java and Maven? Why do we
+> need to use a plugin to include the dependencies in the JAR file?_
 >
 > Java can be used to develop many different types of applications, such as
 > desktop applications, mobile applications, web applications, librairies, etc.
@@ -1056,7 +1056,8 @@ This is an optional section. Feel free to skip it if you do not have time.
   [documentation](http://logback.qos.ch/manual/configuration.html) and try it
   out!
 - Try to clone and run one of your classmates' project shared in GitHub
-  Discussions. Do you have any issues? If yes, can you help them to improve their project?
+  Discussions. Do you have any issues? If yes, can you help them to improve
+  their project?
 
 ## Conclusion
 
