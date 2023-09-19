@@ -1285,8 +1285,9 @@ This will delete the branch locally.
 
 #### Delete the fork (optional)
 
-You can delete the fork you created earlier if you want. This will not delete
-the repository in the organization nor the changes you made.
+You can delete the fork you created earlier if you want. You can go in the
+settings of your repository and **General** > **Danger zone**. This will not
+delete the repository in the organization nor the changes you made.
 
 #### Summary
 
