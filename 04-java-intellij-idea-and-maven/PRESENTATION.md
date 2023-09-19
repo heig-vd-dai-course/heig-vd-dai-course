@@ -39,7 +39,6 @@ style: |
     }
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
-        hyphens: auto;
     }
 headingDivider: 4
 -->

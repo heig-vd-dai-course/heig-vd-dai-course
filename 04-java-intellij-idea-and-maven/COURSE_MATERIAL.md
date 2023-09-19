@@ -335,17 +335,19 @@ The `artifactId`, `version` and `packaging` sets the **name of the JAR file**.
 
 ### Maven lifecycle
 
-Maven defines a **standard build process** for Java projects, called the
-**Maven lifecycle**.
+Maven defines a **standard build process** for Java projects, called the **Maven
+lifecycle**.
 
 The Maven lifecycle is composed of **phases**. Each phase is composed of
 **plugin goals**.
 
-For example, the `compile` phase is composed of the `compiler:compile` plugin goal and the `package` phase is composed of the `jar:jar` and `plugin:addPluginArtifactMetadata` plugin goal, which will generate a JAR
-file.
+For example, the `compile` phase is composed of the `compiler:compile` plugin
+goal and the `package` phase is composed of the `jar:jar` and
+`plugin:addPluginArtifactMetadata` plugin goal, which will generate a JAR file.
 
-More details about the Maven lifecycle can be found in the
-official documentation: <https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html>.
+More details about the Maven lifecycle can be found in the official
+documentation:
+<https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html>.
 
 ### Maven Repository
 

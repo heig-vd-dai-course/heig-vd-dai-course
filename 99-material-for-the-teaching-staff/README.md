@@ -8,7 +8,9 @@
   - A link to this GitHub organization
   - When and where the course will take place
 - Add the evaluations and practical works to [GAPS](https://gaps.heig-vd.ch/)
-- Print the absence sheet ("Feuille de présence") on [GAPS](https://gaps.heig-vd.ch/). Select printable format and print the PDF without the header and footer.
+- Print the absence sheet ("Feuille de présence") on
+  [GAPS](https://gaps.heig-vd.ch/). Select printable format and print the PDF
+  without the header and footer.
 
 ### Email sent for the 2023-2024 academic year
 
