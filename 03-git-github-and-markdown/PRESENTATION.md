@@ -143,6 +143,7 @@ You can find other resources and alternatives as well.
 
 - `.gitignore` omits specific files
 - Improves repository cleanliness
+- Avoid gitignore generators
 
 ![bg right contain](./images/git-ignore-files.png)
 

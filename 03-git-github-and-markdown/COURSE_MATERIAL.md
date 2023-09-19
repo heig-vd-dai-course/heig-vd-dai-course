@@ -162,6 +162,10 @@ Files can be **ignored** by Git. This is done by creating a `.gitignore` file at
 the root of the repository. This allows to avoid committing files that should
 not be committed, such as IDE configuration files.
 
+We encourage you **not** to use gitignore generators (such as <https://gitignore.io/>), as they often add too many
+files to the ignore list. It is better to add files to the ignore list as you
+need it.
+
 ### Summary
 
 - Git is a distributed VCS

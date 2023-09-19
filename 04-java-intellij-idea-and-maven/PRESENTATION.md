@@ -234,6 +234,14 @@ You can find other resources and alternatives as well.
 
 ![bg right contain](./images/maven-pomxml-file.png)
 
+### Maven lifecycle
+
+- Maven defines build process
+- Composed of phases and goals
+- Phases load plugin goals
+
+![bg right contain](./images/maven-maven-lifecycle.png)
+
 ### Maven Repository
 
 - Public repository of Java libraries
@@ -281,31 +289,6 @@ You can find other resources and alternatives as well.
 You can find the practical content for this chapter on
 [GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md#practical-content).
 
-## Conclusion
-
-<!-- _class: lead -->
-
-### What did you do and learn?
-
-In this chapter, you have installed and configured Java, IntelliJ IDEA and
-Maven. You have created a Java project with Maven, added a dependency to a Maven
-project, and built and run a Maven project. You have learned how these tools can
-help you to develop Java applications and share them with other developers.
-
-Dependencies management is a very important (yet tricky) topic. In the context
-of this course, we will not go any deeper as you will cover in other future
-courses.
-
-### Test your knowledge
-
-At this point, you should be able to answer the following questions:
-
-- How can Java run on all platforms?
-- How can you install and switch between different versions of Java?
-- Why should you ignore some files created by IntelliJ IDEA?
-- What is the purpose of the `pom.xml` file?
-- How can a tool like Maven help you to develop Java applications?
-
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
@@ -322,7 +305,7 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Java IOs: input/output processing and how to manage problems
+- Java IOs: input/output processing
 
 ## Sources
 

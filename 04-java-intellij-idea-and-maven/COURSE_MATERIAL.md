@@ -42,6 +42,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Maven](#maven)
   - [Maven project structure](#maven-project-structure)
   - [`pom.xml` file](#pomxml-file)
+  - [Maven lifecycle](#maven-lifecycle)
   - [Maven Repository](#maven-repository)
   - [Maven "installation" and Maven wrapper](#maven-installation-and-maven-wrapper)
   - [Summary](#summary-2)
@@ -331,6 +332,20 @@ The standard `pom.xml` file contains the following sections (among others):
 - `dependencies`: the dependencies of the project.
 
 The `artifactId`, `version` and `packaging` sets the **name of the JAR file**.
+
+### Maven lifecycle
+
+Maven defines a **standard build process** for Java projects, called the
+**Maven lifecycle**.
+
+The Maven lifecycle is composed of **phases**. Each phase is composed of
+**plugin goals**.
+
+For example, the `compile` phase is composed of the `compiler:compile` plugin goal and the `package` phase is composed of the `jar:jar` and `plugin:addPluginArtifactMetadata` plugin goal, which will generate a JAR
+file.
+
+More details about the Maven lifecycle can be found in the
+official documentation: <https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html>.
 
 ### Maven Repository
 
@@ -839,7 +854,7 @@ You can find the latest version of the `maven-shade-plugin` on the Maven
 Repository:
 <https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin>.
 
-This plugin will interfere in the `package` phase of the Maven build process. It
+This plugin will intervene in the `package` phase of the Maven build process. It
 will execute the `shade` goal, which will transform the JAR file to include the
 dependencies.
 
