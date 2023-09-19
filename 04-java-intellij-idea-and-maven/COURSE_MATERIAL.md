@@ -1030,7 +1030,7 @@ git status
 git commit -m "Initial commit"
 
 # Push the project to GitHub
-git push --set-upstream-to origin main
+git push --set-upstream origin main
 ```
 
 The last command will push the `main` branch to the `origin` remote repository
