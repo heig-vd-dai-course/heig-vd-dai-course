@@ -54,6 +54,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Download and run Maven](#download-and-run-maven)
   - [Install and configure IntelliJ IDEA](#install-and-configure-intellij-idea)
   - [Create and run a new Maven project with IntelliJ IDEA](#create-and-run-a-new-maven-project-with-intellij-idea)
+  - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
@@ -1010,6 +1011,15 @@ push the project to GitHub:
 # Add the remote repository
 git remote add origin <URL_TO_YOUR_GITHUB_REPOSITORY>
 
+# Add the files to the staging area
+git add .
+
+# Check that only the required files are added to the staging area
+git status
+
+# Commit the files to the local repository
+git commit -m "Initial commit"
+
 # Push the project to GitHub
 git push --set-upstream-to origin main
 ```
@@ -1034,6 +1044,16 @@ Create a new discussion with the following information:
 
 This will notify us that you have completed the exercise and we can check your
 work.
+
+### Go further
+
+This is an optional section. Feel free to skip it if you do not have time.
+
+- Can you change Logback output by using its configuration file? Check out the
+  [documentation](http://logback.qos.ch/manual/configuration.html) and try it
+  out!
+- Try to clone and run one of your classmates' project shared in GitHub
+  Discussions. Do you have any issues? If yes, can you help them to improve their project?
 
 ## Conclusion
 
