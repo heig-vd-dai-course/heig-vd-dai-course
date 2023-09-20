@@ -811,7 +811,8 @@ git push
 > You might see sometimes the following command `git push origin main`. This is
 > just a more explicit way to push the changes to the `main` branch of the
 > `origin` remote. `origin` is the default name of the remote when cloning a
-> repository.
+> repository. `upstream` is the name of the branch of the base repository when
+> forking a repository.
 
 #### Check the results
 
@@ -1110,23 +1111,23 @@ git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 > commits were pushed to the remote repository, you would need to use
 > `git revert` instead.
 
-#### Get latest changes from `main`
+#### Get latest changes from the upstream `main` branch
 
 As maintainers might have added new students to the list of students, you will
-need to get the latest changes from the `main` branch.
+need to get the latest changes from the upstream `main` branch.
 
-Checkout to the `main` branch:
+Checkout to the local `main` branch:
 
 ```sh
 # Checkout to the main branch
 git checkout main
 ```
 
-Pull the changes from the `main` branch:
+Pull the changes from the upstream `main` branch:
 
 ```sh
 # Pull the changes
-git pull
+git pull upstream main
 ```
 
 Checkout to the branch you created earlier:
@@ -1136,7 +1137,7 @@ Checkout to the branch you created earlier:
 git checkout add-myself-github-username-to-the-list-of-students
 ```
 
-Merge the `main` branch into the branch you created earlier:
+Merge the local `main` branch into the branch you created earlier:
 
 ```sh
 # Merge the main branch into the branch you created earlier
@@ -1198,7 +1199,7 @@ Once you are ready, mark the pull request as ready.
 Add a comment with the usernames of the
 [`@teaching-staff`](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff)
 team to let them know that your pull request is ready for review. Add a link to
-the issue as well.
+the issue as well if you did not link it in the description.
 
 #### Wait for review
 
@@ -1270,11 +1271,11 @@ git checkout main
 
 #### Pull the changes
 
-Pull the changes to your local repository:
+Pull the upstream changes to your local repository:
 
 ```sh
 # Pull the changes
-git pull
+git pull upstream main
 ```
 
 Now files will be downloaded to your local repository. Maybe some of your peers
