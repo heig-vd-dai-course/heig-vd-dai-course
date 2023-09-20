@@ -1234,6 +1234,13 @@ conflict yourself so the students can focus on the content. You can use the
 GitHub web interface. Please be aware that GitHub can take some time to update
 the changes.
 
+If students have submitted their pull request from their `main` branch, review
+it but add the following comment on the pull request:
+
+```text
+You have submitted the PR from the `main` branch of your fork. In the future, please switch to another branch as [mentioned in the practical content](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#create-a-new-branch) so you can always pull changes from the upstream `main` branch (`heig-vd-dai-course:main`) without any conflicts.
+```
+
 Add the student to the GitHub organization and the right team.
 
 </details>
