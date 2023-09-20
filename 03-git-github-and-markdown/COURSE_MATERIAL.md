@@ -606,6 +606,10 @@ The output should be similar to this:
 git version 2.41.0
 ```
 
+> **Warning**  
+> Ensure you have the latest version of Git installed. If you have an older
+> version, you might not be able to use some features mentioned in this course.
+
 #### Configure Git
 
 Git needs to know your name and email address to be able to label your commits
@@ -701,6 +705,10 @@ The URL of a repository can be found in the **Code** tab of the repository, as
 shown in the following screenshot:
 
 ![Screenshot on how to find the SSH URL](./images/practical-content-test-the-configuration.png)
+
+> **Warning**  
+> By default, GitHub will show you the HTTPS URL. You need to click on the
+> **SSH** tab to see the SSH URL.
 
 ### Sign commits with SSH
 
@@ -1240,6 +1248,16 @@ can notify all the students at the same time using GitHub Discussions.
 
 The maintainers might ask for changes. If they do, you will need to make the
 changes locally, commit them and push them to the repository.
+
+> **Note**  
+> If you need to sign all the previous commits you did, you can use `git log`
+> and the following command to sign all the commits after the commit hash
+> mentioned ([source](https://stackoverflow.com/a/54987693)):
+>
+> ```sh
+> # Sign all commits after the commit hash
+> git rebase --exec "git commit --amend --no-edit -n -S" -i <hash of the previous commit>
+> ```
 
 #### Check the results
 

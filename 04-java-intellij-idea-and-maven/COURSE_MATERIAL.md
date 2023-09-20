@@ -829,7 +829,8 @@ Let's fix this.
 
 #### Update the `pom.xml` file to include the dependencies in the JAR file
 
-Update the `pom.xml` file to include the dependencies in the JAR file:
+Update the `pom.xml` file to include the dependencies in the JAR file. You need
+to replace the previous `build` section with the following:
 
 ```xml
 
