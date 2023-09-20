@@ -1195,8 +1195,8 @@ want to discuss something with the maintainers.
 
 Once you are ready, mark the pull request as ready.
 
-Add a comment to notify the individual member of the
-`[@teaching-staff](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff)
+Add a comment with the usernames of the
+[`@teaching-staff`](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff)
 team to let them know that your pull request is ready for review. Add a link to
 the issue as well.
 
@@ -1205,22 +1205,25 @@ the issue as well.
 The maintainers will review your pull request and will ask for changes if
 needed.
 
-The teaching staff will then add you as a member of the GitHub organization and
-will add you to the
-`[@students](https://github.com/orgs/heig-vd-dai-course/teams/students)` team.
+They will then add you as a member of the GitHub organization and will add you
+to the `[@students](https://github.com/orgs/heig-vd-dai-course/teams/students)`
+team.
 
 <details>
-<summary>Notes for the maintainers</summary>
+<summary>Checklist for the maintainers</summary>
 
 Check the following elements:
 
 - The student is in the list of students
 - The student is in alphabetical order
 - The GitHub profile is mentioned next to the name of the student
-- The issue is linked to the pull request
+- The issue is linked to the pull request, if not, link it yourself as the
+  student do not have the rights to do so
 
 If they are conflicts because the students are editing the same lines, fix the
-conflict yourself so the students can focus on the content.
+conflict yourself so the students can focus on the content. You can use the
+GitHub web interface. Please be aware that GitHub can take some time to update
+the changes.
 
 Add the student to the GitHub organization and the right team.
 
@@ -1319,8 +1322,6 @@ This is an optional section. Feel free to skip it if you do not have time.
 - Can you think of an open source project you like? Give them a star on GitHub!
 
 ## Conclusion
-
-<!-- _class: lead -->
 
 ### What did you do and learn?
 
