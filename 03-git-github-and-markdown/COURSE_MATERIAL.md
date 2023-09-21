@@ -319,7 +319,9 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [GitLab](https://gitlab.com/) - My personal favorite
 - [Bitbucket](https://bitbucket.org/) - My least favorite
 - [Gitea](https://gitea.io/) - Very good self-hosted alternative
-- [Forgejo](https://forgejo.org/) - A community owned soft fork of Gitea with upcoming support of [forge federations](https://forgefed.org/) (see more with the [ForgeFriends project](https://forgefriends.org/)).
+- [Forgejo](https://forgejo.org/) - A community owned soft fork of Gitea with
+  upcoming support of [forge federations](https://forgefed.org/) (see more with
+  the [ForgeFriends project](https://forgefriends.org/)).
 - [Gogs](https://gogs.io/)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
@@ -554,7 +556,7 @@ example:
   - The presentations are exported to Web and PDF with the help of
     [Marp](https://marp.app/)
   - The course material is exported to PDF with the help of
-    [Pandoc](https://pandoc.org/)
+    [Pandoc](https://pandoc.org/) and [weasyprint](https://weasyprint.org/)
 
 ### Alternatives
 
