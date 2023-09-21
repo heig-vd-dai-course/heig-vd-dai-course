@@ -850,6 +850,9 @@ to replace the previous `build` section with the following:
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>ch.heigvd.Main</mainClass>
                                 </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
+                                    <resource>MANIFEST.MF</resource>
+                                </transformer>
                             </transformers>
                         </configuration>
                     </execution>
@@ -1041,13 +1044,12 @@ pushed to GitHub.
 
 #### Share your project in GitHub Discussions
 
-Share your profile in the GitHub Discussions of this organization:
+Share your project in the GitHub Discussions of this organization:
 <https://github.com/orgs/heig-vd-dai-course/discussions>.
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2023-2024 - My first IntelliJ + Maven project -
-  @YOUR_GITHUB_USERNAME
+- **Title**: DAI 2023-2024 - My IntelliJ + Maven project - @YOUR_GITHUB_USERNAME
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository
 

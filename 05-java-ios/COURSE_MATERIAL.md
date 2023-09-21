@@ -32,6 +32,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Unicode](#unicode)
   - [UTF-8](#utf-8)
   - [What happens if you ignore the character encoding?](#what-happens-if-you-ignore-the-character-encoding)
+  - [End of line characters](#end-of-line-characters)
   - [A quick note on little endian vs. big endian](#a-quick-note-on-little-endian-vs-big-endian)
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
 - [The Java IO API](#the-java-io-api)
@@ -39,15 +40,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Dealing with errors](#dealing-with-errors)
 - [When to use which IO?](#when-to-use-which-io)
 - [Practical content](#practical-content)
-  - [Open a binary file with `TODO: Use right class for byte per byte reading` and benchmark it](#open-a-binary-file-with-todo-use-right-class-for-byte-per-byte-reading-and-benchmark-it)
-  - [Write a binary file with `TODO: Use right class for byte per byte writing` and benchmark it](#write-a-binary-file-with-todo-use-right-class-for-byte-per-byte-writing-and-benchmark-it)
-  - [Open a binary file with `TODO: Use right class for buffer reading` and benchmark it](#open-a-binary-file-with-todo-use-right-class-for-buffer-reading-and-benchmark-it)
-  - [Write a binary file with `TODO: Use right class for buffer writing` and benchmark it](#write-a-binary-file-with-todo-use-right-class-for-buffer-writing-and-benchmark-it)
-  - [Open a text file with `TODO: Use right class for byte per byte reading` and benchmark it](#open-a-text-file-with-todo-use-right-class-for-byte-per-byte-reading-and-benchmark-it)
-  - [Write a text file with `TODO: Use right class for byte per byte writing` and benchmark it](#write-a-text-file-with-todo-use-right-class-for-byte-per-byte-writing-and-benchmark-it)
-  - [Open a text file with `TODO: Use right class for buffer reading` and benchmark it](#open-a-text-file-with-todo-use-right-class-for-buffer-reading-and-benchmark-it)
-  - [Write a text file with `TODO: Use right class for buffer writing` and benchmark it](#write-a-text-file-with-todo-use-right-class-for-buffer-writing-and-benchmark-it)
-  - [Compare the results](#compare-the-results)
+  - [Introduction](#introduction)
+  - [Implement the practical work](#implement-the-practical-work)
+  - [Compare and share the results](#compare-and-share-the-results)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -172,6 +167,23 @@ A good example is when you open a text file encoded in UTF-8 with a text editor
 that does not support UTF-8. The text editor will try to interpret the file as
 ASCII and will display the wrong characters (`Ã©` instead of `é` for example).
 
+### End of line characters
+
+Another important thing to know when dealing with text files is the **end of
+line character**.
+
+The end of line character is a special character that marks the end of a line.
+
+There are different end of line characters depending on the operating system:
+
+- Unix/Linux/macOS: `'\n'`, called Line feed (`LF`)
+- Windows: `'\r\n'`, called Carriage Return + Line feed (`CR`+`LF`)
+
+When you read a text file line by line, the string you get will **not** contain
+the end of line character(s). Just something to keep in mind.
+
+TODO: Hadrien, do we have to say anything more about this?
+
 ### A quick note on little endian vs. big endian
 
 When working with binary data, you need to know if the data is encoded in
@@ -203,8 +215,8 @@ A **stream** is **a way to read or write data** from or to a source or a sink.
 
 ## The Java IO API
 
-Java his separated in modules. The Java IO API is part of the `java.base`
-module.
+The Java documentation his separated in modules. The Java IO API is part of the
+`java.base` module.
 
 In the `java.base` module, there are two main packages to read and write data:
 
@@ -213,10 +225,10 @@ In the `java.base` module, there are two main packages to read and write data:
 
 The `java.io` package is called **Java IO API** or the **standard Java IO API**.
 
-The **Java NIO API** was introduced in Java 1.4. It is a more modern API that is
-more efficient and more flexible than the Java IO API. It is also more complex
-to use and is meant for more advanced use cases (writing scalable servers for
-example). We will not cover it in this course.
+The **Java NIO API** was introduced in Java 1.4. It is a more modern API that
+can be more efficient and more flexible than the Java IO API in some use-case.
+It is also more complex to use and is meant for more advanced use cases (writing
+scalable servers for example). We will not cover it in this course.
 
 The documentation of the Java IO API is quite complex. It is not easy to find
 the right class to use for the right use case.
@@ -290,51 +302,75 @@ case:
 
 ## Practical content
 
+### Introduction
+
 In this practical work, you will learn how to read and write data from and to
 different sources and sinks of data using different types of streams.
 
+You can create a new GitHub project using the template we have prepared for you.
+When you create a new repository, you can choose to use a template. Select the
+`heig-vd-dai-course/java-ios-practical-work` template as shown in the following
+screenshot:
+
+TODO: Add the screenshot of the template selection in GitHub
+
+### Implement the practical work
+
+Take some time to explore the codebase from template we have prepared for you.
+
 You will benchmark the different types of streams to see which one is the most
-efficient for your use case.
+efficient for your use case:
+
+- Open a binary file for byte per byte reading
+- Write a binary file for byte per byte writing
+- Open a binary file for buffer reading
+- Write a binary file for buffer writing
+- Open a text file for byte per byte reading
+- Write a text file for byte per byte writing
+- Open a text file for buffer reading
+- Write a text file for buffer writing
 
 You will also generate random data to benchmark the different types of streams.
 
-### Open a binary file with `TODO: Use right class for byte per byte reading` and benchmark it
+Use the documentation carefully to find the right classes to use. Use the Java
+documentation to find the right classes to use and how to use them:
+<https://docs.oracle.com/en/java/javase/17/docs/api/index.html>
 
-TODO
+Please be aware that you **always** have to set the encoding when you read or
+write text data. If you do not set the encoding, the default encoding will be
+used, which is not what you want.
 
-### Write a binary file with `TODO: Use right class for byte per byte writing` and benchmark it
+### Compare and share the results
 
-TODO
+Generate different files with different sizes (1KB, 1MB, 10MB, 100MB, 1GB) with
+different encodings (ASCII, UTF-8, UTF-16, UTF-32) if necessary and compare the
+results.
 
-### Open a binary file with `TODO: Use right class for buffer reading` and benchmark it
+Compare the results of the different types of streams. Which one is the most
+efficient for each use case?
 
-TODO
+Share your results in the GitHub Discussions of this organization:
+<https://github.com/orgs/heig-vd-dai-course/discussions>.
 
-### Write a binary file with `TODO: Use right class for buffer writing` and benchmark it
+Create a new discussion with the following information:
 
-TODO
+- **Title**: DAI 2023-2024 - Java IOs benchmarking - @YOUR_GITHUB_USERNAME
+- **Category**: Show and tell
+- **Description**: The link to your GitHub repository, the results of your
+  benchmarking and your conclusions to the following questions:
+  - Which type of stream is the most efficient for each use case?
+  - Why is it more efficient than the other types of streams?
+  - What is the difference between binary data and text data?
+  - What is a character encoding?
+  - Why this methodology is important?
 
-### Open a text file with `TODO: Use right class for byte per byte reading` and benchmark it
-
-TODO
-
-### Write a text file with `TODO: Use right class for byte per byte writing` and benchmark it
-
-TODO
-
-### Open a text file with `TODO: Use right class for buffer reading` and benchmark it
-
-TODO
-
-### Write a text file with `TODO: Use right class for buffer writing` and benchmark it
-
-TODO
-
-### Compare the results
+This will notify us that you have completed the exercise and we can check your
+work.
 
 ### Go further
 
-- ...
+- You can do the same benchmarking with the Java NIO API. How is it different
+  from the Java IO API?
 
 ## Conclusion
 
@@ -358,7 +394,7 @@ At this point, you should be able to answer the following questions:
 - What is a stream?
 - What is the difference between binary data and text data?
 - What is a character encoding?
-- What is UTF-8?
+- What is UTF-8? How is it different from ASCII and Unicode?
 - What happens if you ignore the character encoding?
 - How is a buffer more efficient than reading or writing byte by byte?
 

@@ -52,6 +52,10 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
 [illustration]:
   https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
+[practical-content]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content
+[practical-content-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content
 
 # Git, GitHub and Markdown
 
@@ -286,7 +290,9 @@ You can find other resources and alternatives as well.
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content).
+[GitHub][practical-content].
+
+[![bg right w:75%][practical-content-qr-code]][practical-content]
 
 ## Finished? Was it easy? Was it hard?
 

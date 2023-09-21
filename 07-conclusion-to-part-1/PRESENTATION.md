@@ -50,9 +50,9 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [feedback]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2023-2024-feedback-1-1695300279
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1539186607619-df476afe6ff1?fit=crop&h=720
 
 # Conclusion to part 1: Input/output processing
 
@@ -143,4 +143,5 @@ you!**
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Martin Adams](https://unsplash.com/@martinadams) on
+  [Unsplash](https://unsplash.com/photos/a_PDPUPuNZ8)

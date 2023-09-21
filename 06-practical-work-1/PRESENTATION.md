@@ -52,6 +52,10 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
 [illustration]:
   https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
+[practical-work]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md
+[practical-work-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md
 
 # Practical work 1
 
@@ -149,8 +153,9 @@ Why is the `ç` not converted to uppercase ?
 
 <!-- _class: lead -->
 
-You can find the practical work for this part on
-[GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md).
+You can find the practical work for this part on [GitHub][practical-work].
+
+[![bg right w:75%][practical-work-qr-code]][practical-work]
 
 ## Grades and feedback
 
