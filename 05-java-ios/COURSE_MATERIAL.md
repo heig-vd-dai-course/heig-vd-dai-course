@@ -1,12 +1,8 @@
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
-[pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-course-material.pdf
-[license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-course-material.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
-[illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+[illustration]: https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
 
 # Java IOs - Course material
 
@@ -36,13 +32,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [A quick note on little endian vs. big endian](#a-quick-note-on-little-endian-vs-big-endian)
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
 - [The Java IO API](#the-java-io-api)
-- [Performance and buffering](#performance-and-buffering)
-- [Dealing with errors](#dealing-with-errors)
-- [When to use which IO?](#when-to-use-which-io)
+  - [Performance and buffering](#performance-and-buffering)
+  - [Dealing with errors](#dealing-with-errors)
+  - [When to use which IO?](#when-to-use-which-io)
 - [Practical content](#practical-content)
-  - [Introduction](#introduction)
-  - [Implement the practical work](#implement-the-practical-work)
-  - [Compare and share the results](#compare-and-share-the-results)
+  - [Check and try-out the code examples](#check-and-try-out-the-code-examples)
+  - [Benchmarking the different types of streams](#benchmarking-the-different-types-of-streams)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -180,9 +175,8 @@ There are different end of line characters depending on the operating system:
 - Windows: `'\r\n'`, called Carriage Return + Line feed (`CR`+`LF`)
 
 When you read a text file line by line, the string you get will **not** contain
-the end of line character(s). Just something to keep in mind.
-
-TODO: Hadrien, do we have to say anything more about this?
+the end of line character(s). You have to add it yourself if you want to write
+the string to another file. Just something to keep in mind.
 
 ### A quick note on little endian vs. big endian
 
@@ -198,10 +192,16 @@ little endian and as `0x12 0x34 0x56 0x78` in big endian.
 This is important to know when you read or write binary data. If you read or
 write binary data in the wrong endian, the data will be corrupted.
 
+Java uses big endian by default. You can use little endian by using the
+`ByteBuffer` class. We will not cover this in this course.
+
 ## Sources, streams and sinks of data
 
 Whenever you want to read or write data, you need to have a source of data and a
 sink of data, using a stream to let the data flow from the source to the sink.
+
+This representation is an abstraction of the real world. It is a way to
+represent the flow of data from one place to another.
 
 A **source of data** is **where the data comes from**. It can be a file, a
 network connection, a keyboard, etc. A common term for a source of data is
@@ -235,7 +235,7 @@ the right class to use for the right use case.
 
 You might need to check several classes before finding the right one.
 
-## Performance and buffering
+### Performance and buffering
 
 When reading and writing data, data can be read or written byte by byte or using
 a buffer.
@@ -255,11 +255,13 @@ If the buffer is full, a new system call will be issued to flush the buffer.
 
 If the buffer is half full, it must be flushed before it can be filled again.
 
-TODO: improve the explanation
+Calling `close()` will automatically flush the buffer as well but sometimes you
+want to flush the buffer without closing the file for performance reasons.
 
-TODO: Flush the buffer
+If you want to be sure that all data is written to the file, you need to call
+`flush()` manually. Calling `flush()` will make a system call to write the content of the buffer to the file and empty the buffer.
 
-## Dealing with errors
+### Dealing with errors
 
 When using the Java IO API, you need to open and close a file before and after
 reading or writing data.
@@ -271,7 +273,8 @@ file might be corrupted, the file might be locked by another process, etc.
 
 When you open a file, you need to handle these errors. You can do this by
 catching the `IOException` exception. This is done with a
-`try`/`catch`/`finally` block.
+`try`/`catch`/`finally` block or, more recently, with a `try-with-resources` block. Using the `try-with-resources` block is the preferred way to handle
+errors as it is more concise and less error-prone.
 
 The common exceptions you might encounter are:
 
@@ -280,15 +283,12 @@ The common exceptions you might encounter are:
 - `UnsupportedEncodingException`: the file is encoded in an unsupported
   character encoding
 
-You can also use the `try-with-resources` statement to automatically close the
-file for you.
-
 The same applies when you use the network: the network might be down, the
 connection might be lost, etc.
 
 You will have to manage these errors when you will work with the network.
 
-## When to use which IO?
+### When to use which IO?
 
 The Java IO API is very powerful. It can be used to read and write data from and
 to different sources and sinks of data using different types of streams.
@@ -302,21 +302,40 @@ case:
 
 ## Practical content
 
-### Introduction
+### Check and try-out the code examples
 
-In this practical work, you will learn how to read and write data from and to
+In this section, you will learn how to read and write data from and to
 different sources and sinks of data using different types of streams.
+
+#### Clone the repository
+
+Clone the [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples) repository to get the code examples.
+
+#### Explore and run the code examples
+
+Checkout the `README.md` file to know how to run the code examples.
+
+Take some time to explore the code examples. Run them and see what they do.
+
+### Benchmarking the different types of streams
+
+In this section, you will learn how to read and write data from and to
+different sources and sinks of data using different types of streams.
+
+#### Create and clone the repository
 
 You can create a new GitHub project using the template we have prepared for you.
 When you create a new repository, you can choose to use a template. Select the
-`heig-vd-dai-course/java-ios-practical-work` template as shown in the following
+`heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content` template as shown in the following
 screenshot:
 
-TODO: Add the screenshot of the template selection in GitHub
+![Create the new repository from the template](./images/practical-content-create-and-clone-the-repository.png)
 
-### Implement the practical work
+Clone the repository locally.
 
-Take some time to explore the codebase from template we have prepared for you.
+#### Implement the different types of streams
+
+Take some time to explore the codebase from the template we have prepared for you.
 
 You will benchmark the different types of streams to see which one is the most
 efficient for your use case:
@@ -332,22 +351,21 @@ efficient for your use case:
 
 You will also generate random data to benchmark the different types of streams.
 
-Use the documentation carefully to find the right classes to use. Use the Java
-documentation to find the right classes to use and how to use them:
+Read the course material carefully to find the right classes to use. You can also have a look at the Java
+documentation to find more details on the right classes to use and how to use them:
 <https://docs.oracle.com/en/java/javase/17/docs/api/index.html>
 
 Please be aware that you **always** have to set the encoding when you read or
 write text data. If you do not set the encoding, the default encoding will be
 used, which is not what you want.
 
-### Compare and share the results
+#### Compare the results
 
-Generate different files with different sizes (1KB, 1MB, 10MB, 100MB, 1GB) with
-different encodings (ASCII, UTF-8, UTF-16, UTF-32) if necessary and compare the
-results.
-
-Compare the results of the different types of streams. Which one is the most
+Generate different files with different sizes (1B, 1KB, 1MB, 5MB). Compare the
+results with the execution time of the different types of streams. Which one is the most
 efficient for each use case?
+
+#### Share your results
 
 Share your results in the GitHub Discussions of this organization:
 <https://github.com/orgs/heig-vd-dai-course/discussions>.
@@ -357,12 +375,12 @@ Create a new discussion with the following information:
 - **Title**: DAI 2023-2024 - Java IOs benchmarking - @YOUR_GITHUB_USERNAME
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository, the results of your
-  benchmarking and your conclusions to the following questions:
+  benchmarking in Markdown table and add your conclusions to the following questions:
   - Which type of stream is the most efficient for each use case?
   - Why is it more efficient than the other types of streams?
   - What is the difference between binary data and text data?
   - What is a character encoding?
-  - Why this methodology is important?
+  - Why is this methodology important?
 
 This will notify us that you have completed the exercise and we can check your
 work.
@@ -382,6 +400,9 @@ specifically binary and text data.
 
 You have learned the importance of character encodings and how to handle them
 when reading and writing data.
+
+You have learned how to benchmark the different types of streams to find the
+most efficient one for your use case.
 
 You have also learned how to handle errors to avoid your program to crash.
 

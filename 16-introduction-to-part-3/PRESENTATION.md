@@ -43,14 +43,10 @@ style: |
 headingDivider: 4
 -->
 
-[web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-introduction-to-part-3/
-[pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-introduction-to-part-3/16-introduction-to-part-3-presentation.pdf
-[license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-introduction-to-part-3/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-introduction-to-part-3/16-introduction-to-part-3-presentation.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[illustration]: https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
 # Introduction to part 3: Network programming with UDP
 

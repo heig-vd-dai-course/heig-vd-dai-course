@@ -1,12 +1,8 @@
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md
-[pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-course-material.pdf
-[license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-course-material.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
-[illustration]:
-  https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
+[illustration]: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
 
 # Git, GitHub and Markdown - Course material
 

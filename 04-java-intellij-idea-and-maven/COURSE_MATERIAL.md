@@ -1,12 +1,8 @@
-[markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
-[pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-course-material.pdf
-[license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-course-material.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
-[illustration]:
-  https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
+[illustration]: https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
 
 # Java, IntelliJ IDEA and Maven - Course material
 

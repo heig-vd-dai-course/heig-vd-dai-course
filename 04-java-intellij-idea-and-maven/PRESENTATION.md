@@ -43,19 +43,13 @@ style: |
 headingDivider: 4
 -->
 
-[web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/
-[pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-presentation.pdf
-[license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-presentation.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
-[illustration]:
-  https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
-[practical-content]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md#practical-content
+[illustration]: https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
+[practical-content]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md#practical-content
+[practical-content-qr-code]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md#practical-content
 
 # Java, IntelliJ IDEA and Maven
 
@@ -281,9 +275,7 @@ You can find other resources and alternatives as well.
 - Create and run a new Maven project with IntelliJ IDEA and a Maven dependency
 - Publish your project on GitHub
 
-![bg vertical right](./images/what-will-you-do-1.png)
-![bg vertical right](./images/what-will-you-do-2.png)
-![bg vertical right](./images/what-will-you-do-3.png)
+![bg right contain](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -311,6 +303,11 @@ You can use reactions to express your opinion on a comment!
 In the next chapter, you will learn the following topics:
 
 - Java IOs: input/output processing
+  - How to read and write files?
+  - Why is encoding important?
+  - How to deal with exceptions?
+
+![bg right:40%](https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720)
 
 ## Sources
 
@@ -323,3 +320,5 @@ In the next chapter, you will learn the following topics:
 - IntelliJ IDEA and Intellij Toolbox logos by
   [JetBrains](https://www.jetbrains.com/)
 - Maven logo by [Apache Software Foundation](https://maven.apache.org/)
+- Illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
+  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)

@@ -43,16 +43,11 @@ style: |
 headingDivider: 4
 -->
 
-[web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-conclusion-to-part-2/
-[pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-conclusion-to-part-2/15-conclusion-to-part-2-presentation.pdf
-[license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
-[illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-conclusion-to-part-2/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-conclusion-to-part-2/15-conclusion-to-part-2-presentation.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[feedback]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
+[illustration]: https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
 
 # Conclusion to part 2: Network programming with TCP
 

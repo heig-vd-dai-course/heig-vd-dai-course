@@ -43,19 +43,13 @@ style: |
 headingDivider: 4
 -->
 
-[web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/
-[pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet-presentation.pdf
-[license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/
+[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-smtp-and-telnet/11-smtp-and-telnet-presentation.pdf
+[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
-[illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
-[practical-content]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content
+[illustration]: https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+[practical-content]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content
+[practical-content-qr-code]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content
 
 # SMTP and Telnet
 
@@ -143,25 +137,6 @@ You can find the practical content for this chapter on
 [GitHub][practical-content].
 
 [![bg right w:75%][practical-content-qr-code]][practical-content]
-
-## Conclusion
-
-<!-- _class: lead -->
-
-### What did you do and learn?
-
-TODO
-
-### Test your knowledge
-
-At this point, you should be able to answer the following questions:
-
-TODO
-
-### What did you learn? (answers)
-
-> Q: TODO  
-> A: TODO
 
 ## Finished? Was it easy? Was it hard?
 
