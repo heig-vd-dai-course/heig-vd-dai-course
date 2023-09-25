@@ -43,11 +43,16 @@ style: |
 headingDivider: 4
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/07-conclusion-to-part-1-presentation.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2023-2024-feedback-1-1695300279
-[illustration]: https://images.unsplash.com/photo-1539186607619-df476afe6ff1?fit=crop&h=720
+[web]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/07-conclusion-to-part-1-presentation.pdf
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[feedback]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2023-2024-feedback-1-1695300279
+[illustration]:
+  https://images.unsplash.com/photo-1539186607619-df476afe6ff1?fit=crop&h=720
 
 # Conclusion to part 1: Input/output processing
 

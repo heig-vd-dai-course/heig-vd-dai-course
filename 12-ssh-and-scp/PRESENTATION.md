@@ -44,12 +44,17 @@ headingDivider: 4
 -->
 
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-ssh-and-scp/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-ssh-and-scp/12-ssh-and-scp-presentation.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-ssh-and-scp/12-ssh-and-scp-presentation.pdf
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
-[illustration]: https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
-[practical-content]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/COURSE_MATERIAL.md#practical-content
+[illustration]:
+  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+[practical-content]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/COURSE_MATERIAL.md#practical-content
+[practical-content-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/COURSE_MATERIAL.md#practical-content
 
 # SSH and SCP
 

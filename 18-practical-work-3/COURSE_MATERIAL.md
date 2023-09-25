@@ -1,9 +1,12 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/18-practical-work-3/COURSE_MATERIAL.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-practical-work-3/18-practical-work-3.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/18-practical-work-3/COURSE_MATERIAL.md
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-practical-work-3/18-practical-work-3-course-material.pdf
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 
-# Practical work 3 - Second network application
+# Practical work 3
 
 <https://github.com/heig-vd-dai-course>
 
@@ -13,16 +16,41 @@ L. Delafontaine and H. Louis, with the help of Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-TODO INTRO
+Network applications are everywhere. They are used to communicate, to play
+games, to watch videos, to listen to music, to browse the web, to send emails,
+etc.
+
+In this practical work, you will create a network application that uses the UDP
+protocol.
+
+The network application will be defined by an application protocol, a client and
+a server. The client will send a request to the server and the server will send
+a response to the client.
+
+The application protocol will be defined by you. You can decide to create your
+own little application protocol or you can implement an existing protocol.
+
+Your application must be built around UDP. You can use TCP but it should not be
+the core of your application. The main difference between TCP and UDP is that
+TCP is reliable and UDP is not, having more challenges. UDP is faster than TCP
+because it does not have to wait for acknowledgments. It can be used in
+real-time communication applications and discovery protocols.
+
+Feel free to be creative! For example, you can choose to create a chat
+application, a game, a file transfer application, etc. If you do not have any
+idea, come to see us and we can give you.
 
 ## Objectives
 
-- TODO
+- Define a network application protocol
+- Use Java UDP programming to implement a client and a server application
+- Use Docker and Docker Compose to deploy the client and the server
 
 ## Group composition
 
 You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one.
+not have a partner, we will assign you one or you can work alone if you prefer.
+Working alone will not give you any bonus points.
 
 ## Grading criteria
 
@@ -30,18 +58,73 @@ not have a partner, we will assign you one.
 - 0.1 point - The work is insufficient
 - 0.2 point - The work is done
 
-Maximum grade: 30 points \* 0.2 = 6
+Maximum grade: 25 points \* 0.2 + 1 = 6
 
-TODO
+### Category 1 - Git, GitHub and Markdown
+
+If your repository is private, you must add us as collaborators to your
+repository!
+
+| #   | Criterion                                                        | Points |
+| --- | ---------------------------------------------------------------- | -----: |
+| 1   | The entire team contributes to the project and can explain it    |    0.2 |
+| 2   | The README is well structured and explains what the CLI is for   |    0.2 |
+| 3   | The README explains how to build the CLI                         |    0.2 |
+| 4   | The README explains how to use the CLI with examples and outputs |    0.2 |
+
+### Category 2 - Java, IntelliJ IDEA and Maven
+
+| #   | Criterion                                                  | Points |
+| --- | ---------------------------------------------------------- | -----: |
+| 5   | The codebase has all required files and is well structured |    0.2 |
+| 6   | The codebase is well documented                            |    0.2 |
+
+### Category 3 - Define an application protocol
+
+| #    | Criterion | Points |
+| ---- | --------- | -----: |
+| TODO | TODO      |    0.2 |
+
+### Category 4 - Java UDP programming
+
+| #    | Criterion | Points |
+| ---- | --------- | -----: |
+| TODO | TODO      |    0.2 |
+
+### Category 5 - Docker and Docker Compose
+
+| #    | Criterion | Points |
+| ---- | --------- | -----: |
+| TODO | TODO      |    0.2 |
 
 ## Constraints
 
-- TODO
+- The network application must be written in Java, compatible with Java 17
+- The network application must be built using Maven
+- You must build and release the application using Docker and Docker Compose
+
+## Remarks
+
+Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
+use a simple solution than a complex one.
+
+If your solution is too complex, we might penalize you.
+
+If elements that are supposed to be acquired through the course or previous
+practical works are omitted, forgotten or poorly implemented, we might penalize
+you.
+
+You can use any other dependencies you want in your Maven project. You must
+however explain why and how you use it in your README.
 
 ## Submission
 
-The deadline for the practical work can be visualized in the planning of the
-course at <https://github.com/orgs/heig-vd-dai-course/projects>.
+The planning of the course is available at
+<https://github.com/orgs/heig-vd-dai-course/projects>. The **deadline** is just
+**before the Practical work review and feedback session**.
+
+Any commit after the deadline will not be taken into account. Each day of delay
+will result in a penalty of -1 point on the final grade.
 
 You must create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
@@ -52,10 +135,53 @@ information:
 - **Description**: The link to your repository as well as the latest commit hash
   of your work before submission
 
+## Grades and feedback
+
+Grades will be entered into GAPS, followed by an email with the feedback.
+
+The evaluation will use exactly the same grading grid as shown in the course
+material.
+
+Each criterion will be accompanied by a comment explaining the points obtained,
+a general comment on your work and the final grade.
+
+If you have any questions about the evaluation, you can contact us!
+
+<details>
+<summary>Grading grid for the teaching staff with comments</summary>
+
+```markdown
+# Practical work 3 - Grading grid for @member1 and @member2
+
+Here are the grades and comments for each criterion for the practical work 1.
+
+## Grading criteria
+
+- 0 point - The work is not done
+- 0.1 point - The work is insufficient
+- 0.2 point - The work is done
+
+Maximum grade: 25 points \* 0.2 + 1 = 6
+
+TODO
+
+## General feedback
+
+- ...
+
+## Final grade
+
+Your final grade is:
+
+Feel free to contact us if you have any questions about the evaluation!
+```
+
+</details>
+
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+practical work?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

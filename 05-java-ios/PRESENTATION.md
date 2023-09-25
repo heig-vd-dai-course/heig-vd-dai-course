@@ -44,12 +44,17 @@ headingDivider: 4
 -->
 
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-presentation.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-presentation.pdf
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
-[illustration]: https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
-[practical-content]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content
+[illustration]:
+  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+[practical-content]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content
+[practical-content-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content
 
 # Java IOs
 
@@ -240,9 +245,9 @@ You will start the practical work!
 
 - Main illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin)
   on [Unsplash](https://unsplash.com/photos/4h0HqC3K4-c)
-- Illustration by [T K](https://unsplash.com/@realaxer)
-  on [Unsplash](https://unsplash.com/photos/9AxFJaNySB8)
-- Illustration by [Anna Dudkova](https://unsplash.com/@annadudkova)
-  on [Unsplash](https://unsplash.com/photos/urs_y9NwFcc)
-- Illustration by [Sigmund](https://unsplash.com/@sigmund)
-  on [Unsplash](https://unsplash.com/photos/By-tZImt0Ms)
+- Illustration by [T K](https://unsplash.com/@realaxer) on
+  [Unsplash](https://unsplash.com/photos/9AxFJaNySB8)
+- Illustration by [Anna Dudkova](https://unsplash.com/@annadudkova) on
+  [Unsplash](https://unsplash.com/photos/urs_y9NwFcc)
+- Illustration by [Sigmund](https://unsplash.com/@sigmund) on
+  [Unsplash](https://unsplash.com/photos/By-tZImt0Ms)

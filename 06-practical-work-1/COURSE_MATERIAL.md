@@ -1,6 +1,9 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-practical-work-1/06-practical-work-1-course-material.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/COURSE_MATERIAL.md
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-practical-work-1/06-practical-work-1-course-material.pdf
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
 
 # Practical work 1
@@ -16,10 +19,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 We use CLI tools every day. For example, we use `git` to manage our code, `mvn`
 to build our projects, `java` to run our programs, etc.
 
-In this practical work, you will learn how to create a CLI using
-[picocli](https://picocli.info/). This knowledge will be useful for the next
-practical works and for your future projects where you will need to create a
-CLI.
+In this practical work, you will create a CLI using
+[picocli](https://picocli.info/) to process files.
 
 The CLI will take an input file and an output file as arguments. It will also
 take the input file encoding and the output file encoding as optional arguments
@@ -45,7 +46,8 @@ methodology but please do not copy/paste code from other groups.
 ## Group composition
 
 You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one or you can work alone if you prefer. Working alone will not give you any bonus points.
+not have a partner, we will assign you one or you can work alone if you prefer.
+Working alone will not give you any bonus points.
 
 ## Grading criteria
 
@@ -105,8 +107,8 @@ repository!
 
 ## Constraints
 
-- The CLI must be written in Java, compatible with Java 17
-- The CLI must be built using Maven
+- The CLI application must be written in Java, compatible with Java 17
+- The CLI application must be built using Maven
 
 ## Remarks
 
@@ -115,7 +117,7 @@ use a simple solution than a complex one.
 
 If your solution is too complex, we might penalize you.
 
-You can use any other dependency you want in your Maven project. You must
+You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.
 
 ## Submission

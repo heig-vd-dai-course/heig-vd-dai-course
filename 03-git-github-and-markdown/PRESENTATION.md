@@ -43,13 +43,19 @@ style: |
 headingDivider: 4
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-presentation.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[web]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-presentation.pdf
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
-[illustration]: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
-[practical-content]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content
+[illustration]:
+  https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
+[practical-content]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content
+[practical-content-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#practical-content
 
 # Git, GitHub and Markdown
 

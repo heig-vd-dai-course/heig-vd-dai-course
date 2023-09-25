@@ -1,8 +1,12 @@
-[markdown]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-course-material.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[markdown]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-course-material.pdf
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
-[illustration]: https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+[illustration]:
+  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
 
 # Java IOs - Course material
 
@@ -44,6 +48,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
+- [Resources](#resources)
 - [Sources](#sources)
 
 ## Objectives
@@ -259,7 +264,8 @@ Calling `close()` will automatically flush the buffer as well but sometimes you
 want to flush the buffer without closing the file for performance reasons.
 
 If you want to be sure that all data is written to the file, you need to call
-`flush()` manually. Calling `flush()` will make a system call to write the content of the buffer to the file and empty the buffer.
+`flush()` manually. Calling `flush()` will make a system call to write the
+content of the buffer to the file and empty the buffer.
 
 ### Dealing with errors
 
@@ -273,7 +279,8 @@ file might be corrupted, the file might be locked by another process, etc.
 
 When you open a file, you need to handle these errors. You can do this by
 catching the `IOException` exception. This is done with a
-`try`/`catch`/`finally` block or, more recently, with a `try-with-resources` block. Using the `try-with-resources` block is the preferred way to handle
+`try`/`catch`/`finally` block or, more recently, with a `try-with-resources`
+block. Using the `try-with-resources` block is the preferred way to handle
 errors as it is more concise and less error-prone.
 
 The common exceptions you might encounter are:
@@ -304,12 +311,14 @@ case:
 
 ### Check and try-out the code examples
 
-In this section, you will learn how to read and write data from and to
-different sources and sinks of data using different types of streams.
+In this section, you will learn how to read and write data from and to different
+sources and sinks of data using different types of streams.
 
 #### Clone the repository
 
-Clone the [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples) repository to get the code examples.
+Clone the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository to get the code examples.
 
 #### Explore and run the code examples
 
@@ -319,15 +328,15 @@ Take some time to explore the code examples. Run them and see what they do.
 
 ### Benchmarking the different types of streams
 
-In this section, you will learn how to read and write data from and to
-different sources and sinks of data using different types of streams.
+In this section, you will learn how to read and write data from and to different
+sources and sinks of data using different types of streams.
 
 #### Create and clone the repository
 
 You can create a new GitHub project using the template we have prepared for you.
 When you create a new repository, you can choose to use a template. Select the
-`heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content` template as shown in the following
-screenshot:
+`heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content` template as
+shown in the following screenshot:
 
 ![Create the new repository from the template](./images/practical-content-create-and-clone-the-repository.png)
 
@@ -335,7 +344,8 @@ Clone the repository locally.
 
 #### Implement the different types of streams
 
-Take some time to explore the codebase from the template we have prepared for you.
+Take some time to explore the codebase from the template we have prepared for
+you.
 
 You will benchmark the different types of streams to see which one is the most
 efficient for your use case:
@@ -351,8 +361,9 @@ efficient for your use case:
 
 You will also generate random data to benchmark the different types of streams.
 
-Read the course material carefully to find the right classes to use. You can also have a look at the Java
-documentation to find more details on the right classes to use and how to use them:
+Read the course material carefully to find the right classes to use. You can
+also have a look at the Java documentation to find more details on the right
+classes to use and how to use them:
 <https://docs.oracle.com/en/java/javase/17/docs/api/index.html>
 
 Please be aware that you **always** have to set the encoding when you read or
@@ -362,8 +373,8 @@ used, which is not what you want.
 #### Compare the results
 
 Generate different files with different sizes (1B, 1KB, 1MB, 5MB). Compare the
-results with the execution time of the different types of streams. Which one is the most
-efficient for each use case?
+results with the execution time of the different types of streams. Which one is
+the most efficient for each use case?
 
 #### Share your results
 
@@ -375,7 +386,8 @@ Create a new discussion with the following information:
 - **Title**: DAI 2023-2024 - Java IOs benchmarking - @YOUR_GITHUB_USERNAME
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository, the results of your
-  benchmarking in Markdown table and add your conclusions to the following questions:
+  benchmarking in Markdown table and add your conclusions to the following
+  questions:
   - Which type of stream is the most efficient for each use case?
   - Why is it more efficient than the other types of streams?
   - What is the difference between binary data and text data?
@@ -434,6 +446,14 @@ You can use reactions to express your opinion on a comment!
 ## What will you do next?
 
 You will start the practical work!
+
+## Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- [Informatique au gymnase : apprendre - Les caractères](https://apprendre.modulo-info.ch/rep-info/caracteres.html)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 

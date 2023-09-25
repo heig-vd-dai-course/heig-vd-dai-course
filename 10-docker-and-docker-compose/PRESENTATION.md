@@ -43,13 +43,19 @@ style: |
 headingDivider: 4
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
-[pdf]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose-presentation.pdf
-[license]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[web]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/
+[pdf]:
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-docker-and-docker-compose/10-docker-and-docker-compose-presentation.pdf
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
-[illustration]: https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
-[practical-content]: https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]: https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#practical-content
+[illustration]:
+  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+[practical-content]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#practical-content
+[practical-content-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#practical-content
 
 # Docker and Docker Compose
 
@@ -68,54 +74,12 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Table of contents
+## Objectives
 
-- **[Theoretical content](#theoretical-content)**
-  - Installation of software: traditional vs. containerization
-  - OCI, images, containers and registries
-  - Dockerfile and Docker Compose
-  - Tips and tricks
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
-
----
-
-    - Install Docker (and Docker Compose)
-    - Run a container with Docker
-    - Run a container with Docker Compose
-    - Write a Dockerfile, build and run an image with Docker
-    - Build and run the same image with Docker Compose
-
-## Theoretical content
-
-<!-- _class: lead -->
-
-### Title
-
-> Quote
-
-![bg right:40% w:50%](https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg)
-
----
-
-Content
-
-#### Summary
-
-- TODO
-
-#### Alternatives
-
-- TODO
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-#### Resources
-
-- TODO
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+- Learn the differences between traditional software installation and
+  containerization
+- Learn the basics of Docker
+- Learn the basics of Docker Compose
 
 ## Practical content
 
