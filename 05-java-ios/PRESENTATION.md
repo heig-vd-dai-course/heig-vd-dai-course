@@ -164,7 +164,7 @@ You can find other resources and alternatives as well.
 - Sink: where data goes
 - Stream: for data flow
 
-![bg right](https://images.unsplash.com/photo-1543674892-7d64d45df18b?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1543674892-7d64d45df18b?fit=crop&h=720)
 
 ## The Java IO API
 
@@ -186,17 +186,17 @@ You can find other resources and alternatives as well.
 ### Performance and buffering
 
 - Buffered IO vs. byte-by-byte
-- Buffer improves read/write efficiency
+- Buffer improves read/write efficiency using a memory buffer to store and fetch data
 - Manual flushing with `flush()`
 
-![bg right](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
 
 ### Dealing with errors
 
 - Proper file open/close
 - Handling exceptions with `try-with-resources`
 
-![bg right](https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?fit=crop&h=720)
 
 ### When to use which IO?
 
