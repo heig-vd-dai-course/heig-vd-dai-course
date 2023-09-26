@@ -79,8 +79,7 @@ _paginate: false
 - A CLI to process files
 - Use Java, Maven and [picocli](https://picocli.info/)
 - You can choose what the CLI will do (you can be creative!)
-  - Transform the input file to lowercase/uppercase, count the number of `e` in
-    the input file, ...
+  - Transform the input file to lowercase/uppercase, convert a PNG to JPEG, ...
 - Publish your CLI on GitHub
 
 ![bg right:40%][illustration]

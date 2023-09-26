@@ -30,9 +30,8 @@ failure.
 
 You have the freedom to define what the CLI will do. You can be creative! For
 example, you can choose to copy the input file to the output file, to convert
-the input file to lowercase/uppercase, count the number of `e` in the input
-file, etc. If you do not have any idea, come to see us and we can give you some
-ideas.
+the input file to lowercase/uppercase, convert a PNG to JPEG, etc. If you do not
+have any idea, come to see us and we can give you some ideas.
 
 Multiple groups can choose the same processing and you can share your
 methodology but please do not copy/paste code from other groups.
