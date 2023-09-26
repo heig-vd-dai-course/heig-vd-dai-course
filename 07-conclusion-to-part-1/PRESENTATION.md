@@ -104,6 +104,12 @@ All previous evaluations are available in the
 [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical work review
 
 The practical work review will start at the end of this presentation.
@@ -139,12 +145,6 @@ understood the practical work. 🙂
 | 13  | @member25 and @member26 |
 | 14  | @member27 and @member28 |
 | 15  | @member29 and @member30 |
-
-## Questions
-
-<!-- _class: lead -->
-
-Do you have any questions?
 
 ## Feedback
 
