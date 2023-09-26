@@ -28,17 +28,17 @@ jobs:
           rm --recursive 00-evaluation-and-exam-archives
           rm --recursive 99-material-for-the-teaching-staff
 
-      - name: Build presentation content with Marp
-        uses: docker://marpteam/marp-cli:v3.0.2
-        with:
-          entrypoint: sh
-          args: .github/workflows/build-presentation-content.sh
-
       - name: Build course material content with Pandoc and weasyprint
         uses: docker://pandoc/core:3.1
         with:
           entrypoint: sh
           args: .github/workflows/build-course-material-content.sh
+
+      - name: Build presentation content with Marp
+        uses: docker://marpteam/marp-cli:v3.0.2
+        with:
+          entrypoint: sh
+          args: .github/workflows/build-presentation-content.sh
 
       - name: Upload files
         uses: actions/upload-artifact@v3

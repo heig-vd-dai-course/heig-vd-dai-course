@@ -1126,7 +1126,10 @@ git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 As maintainers might have added new students to the list of students, you will
 need to get the latest changes from the upstream `main` branch.
 
-Checkout to the local `main` branch:
+Follow the official documentation to add the upstream remote:
+<https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork>.
+
+Then, checkout to the local `main` branch:
 
 ```sh
 # Checkout to the main branch
@@ -1153,6 +1156,9 @@ Merge the local `main` branch into the branch you created earlier:
 # Merge the main branch into the branch you created earlier
 git merge main
 ```
+
+More information in the official documentation:
+<https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-branch-from-the-command-line>.
 
 #### Push your changes
 
@@ -1260,6 +1266,9 @@ changes locally, commit them and push them to the repository.
 > ```sh
 > # Sign all commits after the commit hash
 > git rebase --exec "git commit --amend --no-edit -n -S" -i <hash of the previous commit>
+>
+> # Force push the changes
+> git push --force
 > ```
 
 #### Accept the invitation
