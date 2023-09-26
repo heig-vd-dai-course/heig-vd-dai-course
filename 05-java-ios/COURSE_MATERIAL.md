@@ -338,6 +338,9 @@ When you create a new repository, you can choose to use a template. Select the
 `heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content` template as
 shown in the following screenshot:
 
+> **Warning**  
+> Please make sure that the repository owner is your personal GitHub account and not the `heig-vd-dai-course` organization.
+
 ![Create the new repository from the template](./images/practical-content-create-and-clone-the-repository.png)
 
 Clone the repository locally.
