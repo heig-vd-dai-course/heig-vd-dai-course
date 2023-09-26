@@ -32,13 +32,13 @@ jobs:
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
           entrypoint: sh
-          args: .github/build-presentation-content.sh
+          args: .github/workflows/build-presentation-content.sh
 
-      - name: Build course material content with Pandoc
-        uses: docker://pandoc/latex:3.1
+      - name: Build course material content with Pandoc and weasyprint
+        uses: docker://pandoc/minimal:3.1
         with:
           entrypoint: sh
-          args: .github/build-course-material-content.sh
+          args: .github/workflows/build-course-material-content.sh
 
       - name: Upload files
         uses: actions/upload-artifact@v3

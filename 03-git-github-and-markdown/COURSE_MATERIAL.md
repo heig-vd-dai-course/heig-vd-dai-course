@@ -556,7 +556,7 @@ example:
   - The presentations are exported to Web and PDF with the help of
     [Marp](https://marp.app/)
   - The course material is exported to PDF with the help of
-    [Pandoc](https://pandoc.org/)
+    [Pandoc](https://pandoc.org/) and [weasyprint](https://weasyprint.org/)
 
 ### Alternatives
 
