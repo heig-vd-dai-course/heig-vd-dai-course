@@ -837,8 +837,7 @@ Share your profile in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2023-2024 - Check out my GitHub profile! -
-  @YOUR_GITHUB_USERNAME
+- **Title**: DAI 2023-2024 - Check out my GitHub profile! - First name Last name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub profile README!
 
@@ -874,7 +873,7 @@ future.
 Create a new issue in the <https://github.com/heig-vd-dai-course/.github>
 repository describing what you want to do:
 
-- **Title**: Add myself (@GITHUB_USERNAME) to the list of students
+- **Title**: Add myself (First name Last name) to the list of students
 - **Description**: I would like to add myself to the list of students in the
   GitHub organization README.
 
@@ -1248,12 +1247,6 @@ Add the student to the GitHub organization and the right team.
 
 </details>
 
-#### Accept the invitation
-
-Once the pull request is approved, you will receive an invitation to join the
-GitHub organization. Accept the invitation so you are part of the course and we
-can notify all the students at the same time using GitHub Discussions.
-
 #### Make changes if needed
 
 The maintainers might ask for changes. If they do, you will need to make the
@@ -1268,6 +1261,12 @@ changes locally, commit them and push them to the repository.
 > # Sign all commits after the commit hash
 > git rebase --exec "git commit --amend --no-edit -n -S" -i <hash of the previous commit>
 > ```
+
+#### Accept the invitation
+
+Once the pull request is approved, you will receive an invitation to join the
+GitHub organization. Accept the invitation so you are part of the course and we
+can notify all the students at the same time using GitHub Discussions.
 
 #### Check the results
 

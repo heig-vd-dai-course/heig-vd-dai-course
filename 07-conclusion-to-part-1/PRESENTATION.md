@@ -79,15 +79,30 @@ _paginate: false
 
 <!-- _class: lead -->
 
-<!-- ## Evaluation -->
+## Evaluation
 
-<!-- _class: lead -->
+You might be asked questions about the theoretical content, the practical
+content and the practical work.
 
-<!--
+We might ask you to analyze or code a small program to solve a problem, describe
+a schema and/or explain a concept.
+
+All typical questions are at the end of each chapter you studied.
+
+The evaluation will be done on the computer. You will have to be connected to
+the
+[VPN](https://intranet.heig-vd.ch/services/informatique/poste-de-travail/reseau/vpn/Pages/vpn.aspx).
+It is **mandatory**.
+
+---
+
+You can have access to the course material and the Internet. No communication
+between students is allowed. ChatGPT and Copilot are not allowed during the
+evaluation.
+
 All previous evaluations are available in the
 [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
--->
 
 ## Practical work review
 

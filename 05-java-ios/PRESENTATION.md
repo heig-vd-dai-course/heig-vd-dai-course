@@ -186,7 +186,8 @@ You can find other resources and alternatives as well.
 ### Performance and buffering
 
 - Buffered IO vs. byte-by-byte
-- Buffer improves read/write efficiency using a memory buffer to store and fetch data
+- Buffer improves read/write efficiency using a memory buffer to store and fetch
+  data
 - Manual flushing with `flush()`
 
 ![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)

@@ -120,8 +120,9 @@ If your solution is too complex, we might penalize you.
 You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.
 
-You can protect the `main` branch of your repository to prevent any push on it.
-This will force you to use pull requests to merge your work.
+You can protect the `main` branch of your repository to prevent any push on it
+and force signed commits. This will force you to use signed pull requests to
+merge your work.
 
 ## Submission
 

@@ -1049,7 +1049,7 @@ Share your project in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2023-2024 - My IntelliJ + Maven project - @YOUR_GITHUB_USERNAME
+- **Title**: DAI 2023-2024 - My IntelliJ + Maven project - First name Last Name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository
 

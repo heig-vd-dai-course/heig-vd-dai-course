@@ -383,7 +383,7 @@ Share your results in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2023-2024 - Java IOs benchmarking - @YOUR_GITHUB_USERNAME
+- **Title**: DAI 2023-2024 - Java IOs benchmarking - First name Last Name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository, the results of your
   benchmarking in Markdown table and add your conclusions to the following
