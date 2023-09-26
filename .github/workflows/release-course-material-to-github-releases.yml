@@ -28,7 +28,7 @@ jobs:
           args: .github/workflows/build-presentation-content.sh
 
       - name: Build course material content with Pandoc and weasyprint
-        uses: docker://pandoc/minimal:3.1
+        uses: docker://pandoc/core:3.1
         with:
           entrypoint: sh
           args: .github/workflows/build-course-material-content.sh
