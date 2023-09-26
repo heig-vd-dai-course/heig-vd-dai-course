@@ -372,9 +372,9 @@ used, which is not what you want.
 
 #### Compare the results
 
-Generate different files with different sizes (1B, 1KB, 1MB, 5MB). Compare the
-results with the execution time of the different types of streams. Which one is
-the most efficient for each use case?
+Generate different files with different sizes (1B, 1KiB, 1MiB, 5MiB). Compare
+the results with the execution time of the different types of streams. Which one
+is the most efficient for each use case?
 
 #### Share your results
 

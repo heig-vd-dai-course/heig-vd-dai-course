@@ -48,6 +48,10 @@ else (text)
 
     CharArrayReader
     CharArrayWriter;
+  split again
+    :**Text from Binary**
+    InputStreamReader - Convert bytes to chars
+    OutputStreamWriter - Convert chars to bytes;
   end split
 
   :**Buffering**
