@@ -55,6 +55,11 @@ information:
 - **Title**: DAI 2023-2024 - Practical work 1 - First name Last name member 1
   and First name Last name member 2
 - **Category**: Show and tell
+- **Description**: A quick description of what you will achieve during this
+  practical work
+
+The teaching staff might ask you to change the scope of your practical work if
+it is too complex or too simple.
 
 ## Grading criteria
 
