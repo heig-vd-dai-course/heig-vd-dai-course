@@ -48,6 +48,14 @@ You will work in groups of two students. You can choose your partner. If you do
 not have a partner, we will assign you one or you can work alone if you prefer.
 Working alone will not give you any bonus points.
 
+To announce your group, create a new GitHub Discussion at
+<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
+information:
+
+- **Title**: DAI 2023-2024 - Practical work 1 - First name Last name member 1
+  and First name Last name member 2
+- **Category**: Show and tell
+
 ## Grading criteria
 
 - 0 point - The work is not done
@@ -132,12 +140,9 @@ The planning of the course is available at
 Any commit after the deadline will not be taken into account. Each day of delay
 will result in a penalty of -1 point on the final grade.
 
-You must create a new GitHub Discussion at
-<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
+You must update the GitHub Discussion you created previously with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 1 - @member1 and @member2
-- **Category**: Show and tell
 - **Description**: The link to your repository as well as the latest commit hash
   of your work before submission
 
