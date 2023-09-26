@@ -692,9 +692,6 @@ Follow the official documentation to add the public SSH key to your GitHub
 account:
 <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>
 
-> **Warning**  
-> You need to add two keys (authentication key and signing key) on your GitHub account. Both are linked to the same SSH key generated in the previous step.
-
 #### Test the configuration
 
 You can try to clone this very repository using SSH:
