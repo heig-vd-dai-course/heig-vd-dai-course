@@ -14,6 +14,9 @@ find . -type f -name "COURSE_MATERIAL.html" -mindepth 2 -maxdepth 2 -exec sh -c 
 ' sh {} \;
 
 # Rename all PDF files to the name of their parent directory
-find . -type f -name "COURSE_MATERIAL.pdf" -exec sh -c ' \
+find . -type f -name "COURSE_MATERIAL.pdf" -mindepth 2 -maxdepth 2 -exec sh -c ' \
     mv "$1" "$(dirname "$1")/$(basename "$(dirname "$1")")-course-material.pdf" \
 ' sh {} \;
+
+# Delete all HTML files
+find .  -type f -name "COURSE_MATERIAL.html" -mindepth 2 -maxdepth 2 -delete
