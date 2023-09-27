@@ -1129,7 +1129,14 @@ need to get the latest changes from the upstream `main` branch.
 Follow the official documentation to add the upstream remote:
 <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork>.
 
-Then, checkout to the local `main` branch:
+Then, pull the changes from the upstream `main` branch:
+
+```sh
+# Check if changes were made to the upstream branch
+git fetch upstream
+```
+
+Checkout to the local `main` branch:
 
 ```sh
 # Checkout to the main branch
@@ -1139,8 +1146,8 @@ git checkout main
 Pull the changes from the upstream `main` branch:
 
 ```sh
-# Pull the changes
-git pull upstream main
+# Pull the changes from the upstream main branch
+git merge upstream/main
 ```
 
 Checkout to the branch you created earlier:
@@ -1330,9 +1337,12 @@ This will delete the branch locally.
 
 #### Delete the fork (optional)
 
-You can delete the fork you created earlier if you want. You can go in the
-settings of your repository and **General** > **Danger zone**. This will not
-delete the repository in the organization nor the changes you made.
+You can delete the fork you created earlier if you want **after the pull request
+has been merged to the main repository**.
+
+You can go in the settings of your repository and **General** > **Danger zone**.
+This will not delete the repository in the organization nor the changes you
+made.
 
 #### Summary
 

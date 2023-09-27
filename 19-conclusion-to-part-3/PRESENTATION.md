@@ -73,27 +73,70 @@ _paginate: false
 
 ## What have you learned?
 
-<!-- _class: lead -->
+- TODO
+
+![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
 ## What have you accomplished?
 
-<!-- _class: lead -->
+- TODO
 
-<!-- ## Evaluation -->
+![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
 
-<!-- _class: lead -->
+## Evaluation
 
-<!--
+You might be asked questions about the theoretical content, the practical
+content and the practical work.
+
+We might ask you to analyze or code a small program to solve a problem, describe
+a schema and/or explain a concept.
+
+All typical questions are at the end of each chapter you studied.
+
+The evaluation will be done on the computer. You will have to be connected to
+the
+[VPN](https://intranet.heig-vd.ch/services/informatique/poste-de-travail/reseau/vpn/Pages/vpn.aspx).
+It is **mandatory**.
+
+---
+
+You can have access to the course material (theoretical and practical content,
+as well as practical work) and the Internet.
+
+No communication between students is allowed.
+
+ChatGPT, Copilot or any other AI assisted tools are not allowed during the
+evaluation.
+
+Cheating is not allowed. If you are caught cheating, you will get a 1 for the
+evaluation.
+
 All previous evaluations are available in the
 [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
--->
 
 ## Questions
 
 <!-- _class: lead -->
 
 Do you have any questions?
+
+## Practical work review
+
+The practical work review will start at the end of this presentation.
+
+We only have **5 minutes per group**. Please be prepared to present your work.
+
+The order of presentation is random and is stated in the next slides.
+
+Do not worry, it is not an exam, it is just a way for us to see how you
+understood the practical work. 🙂
+
+---
+
+| #   | Group |
+| --- | ----- |
+| 1   | TODO  |
 
 ## Feedback
 
@@ -107,4 +150,9 @@ you!**
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Alina Grubnyak](https://unsplash.com/@alinnnaaaa) on
+  [Unsplash](https://unsplash.com/photos/ZiQkhI7417A)
+- Illustration by [Nils Stahl](https://unsplash.com/@nilsjakob) on
+  [Unsplash](https://unsplash.com/photos/neUbjUnjXNk)
+- Illustration by [Samantha Fortney](https://unsplash.com/@goldencoastgrams) on
+  [Unsplash](https://unsplash.com/photos/OGDyzpsTjyA)

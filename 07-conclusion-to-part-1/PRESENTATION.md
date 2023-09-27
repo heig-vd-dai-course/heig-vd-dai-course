@@ -73,11 +73,22 @@ _paginate: false
 
 ## What have you learned?
 
-<!-- _class: lead -->
+- The basics of Git, GitHub and Markdown
+- The basics of Maven with external dependencies
+- The different types of Java IOs
+- Character encodings, yeah! 🎉
+
+![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
 ## What have you accomplished?
 
-<!-- _class: lead -->
+- You have a presence on GitHub
+- You have built and shared a small CLI application for others to discover and
+  try
+- You can process files for your own needs
+- All of this using the best practices!
+
+![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
 
 ## Evaluation
 
@@ -96,8 +107,15 @@ It is **mandatory**.
 
 ---
 
-You can have access to the course material and the Internet. No communication
-between students is allowed. ChatGPT and Copilot are not allowed during the
+You can have access to the course material (theoretical and practical content,
+as well as practical work) and the Internet.
+
+No communication between students is allowed.
+
+ChatGPT, Copilot or any other AI assisted tools are not allowed during the
+evaluation.
+
+Cheating is not allowed. If you are caught cheating, you will get a 1 for the
 evaluation.
 
 All previous evaluations are available in the
@@ -114,7 +132,7 @@ Do you have any questions?
 
 The practical work review will start at the end of this presentation.
 
-Please be prepared to present your work.
+We only have **5 minutes per group**. Please be prepared to present your work.
 
 The order of presentation is random and is stated in the next slides.
 
@@ -123,22 +141,22 @@ understood the practical work. 🙂
 
 ---
 
-| #   |          Group          |
-| --- | :---------------------: |
-| 1   |  @member1 and @member2  |
-| 2   |  @member3 and @member4  |
-| 3   |  @member5 and @member6  |
-| 4   |  @member7 and @member8  |
-| 5   | @member9 and @member10  |
-| 6   | @member11 and @member12 |
-| 7   | @member13 and @member14 |
-| 8   | @member15 and @member16 |
+| #   | Group                                  |
+| --- | -------------------------------------- |
+| 1   | Alan Sottile and Calvin Graf           |
+| 2   | Lionel Pollien and Arthur Menétrey     |
+| 3   | Thomas Vuilleumier and Sebastian Diaz  |
+| 4   | Olin Bourquin and Kevin Farine         |
+| 5   | Guillaume Trüeb and Gwendal Piemontesi |
+| 6   | Esteban Lopez                          |
+| 7   | Loïc Herman                            |
+| 8   | Alexandre Philibert + Valentin Ricard  |
 
 ---
 
-| #   |          Group          |
-| --- | :---------------------: |
-| 9   | @member17 and @member18 |
+| #   | Group                   |
+| --- | ----------------------- |
+| 9   | Rémy Bleuer             |
 | 10  | @member19 and @member20 |
 | 11  | @member21 and @member22 |
 | 12  | @member23 and @member24 |
@@ -160,3 +178,7 @@ you!**
 
 - Main illustration by [Martin Adams](https://unsplash.com/@martinadams) on
   [Unsplash](https://unsplash.com/photos/a_PDPUPuNZ8)
+- Illustration by [Nils Stahl](https://unsplash.com/@nilsjakob) on
+  [Unsplash](https://unsplash.com/photos/neUbjUnjXNk)
+- Illustration by [Samantha Fortney](https://unsplash.com/@goldencoastgrams) on
+  [Unsplash](https://unsplash.com/photos/OGDyzpsTjyA)

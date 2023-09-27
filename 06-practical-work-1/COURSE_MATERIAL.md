@@ -205,14 +205,14 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 3 - Java IOs
 
-| #   | Criterion                                                                                | Points | Number of points obtained | Comment |
-| --- | ---------------------------------------------------------------------------------------- | -----: | ------------------------: | ------- |
-| 15  | The CLI takes an input file and an output file as arguments                              |    0.2 |                           |         |
-| 16  | The CLI takes the input file encoding and the output file encoding as optional arguments |    0.2 |                           |         |
-| 17  | The CLI displays an error on invalid/missing inputs                                      |    0.2 |                           |         |
-| 18  | The CLI correctly processes the input file and writes the result in the output file      |    0.2 |                           |         |
-| 19  | The CLI displays a message on failure and a message on success with execution time       |    0.2 |                           |         |
-| 20  | The CLI uses all the best practices regarding file processing                            |    0.2 |                           |         |
+| #   | Criterion                                                                                                         | Points | Number of points obtained | Comment |
+| --- | ----------------------------------------------------------------------------------------------------------------- | -----: | ------------------------: | ------- |
+| 15  | The CLI takes an input file and an output file as arguments                                                       |    0.2 |                           |         |
+| 16  | The CLI takes optional arguments for customization (such as the input file encoding and the output file encoding) |    0.2 |                           |         |
+| 17  | The CLI displays an error on invalid/missing inputs                                                               |    0.2 |                           |         |
+| 18  | The CLI correctly processes the input file and writes the result in the output file                               |    0.2 |                           |         |
+| 19  | The CLI displays a message on failure and a message on success with execution time                                |    0.2 |                           |         |
+| 20  | The CLI uses all the best practices regarding file processing                                                     |    0.2 |                           |         |
 
 ### Category 4 - Presentation and questions
 
