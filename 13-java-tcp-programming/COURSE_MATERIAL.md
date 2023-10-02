@@ -27,6 +27,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Practical content](#practical-content)
+  - [Create a SMTP client](#create-a-smtp-client)
+  - [Create a TCP client](#create-a-tcp-client)
+  - [Create a single-threaded TCP server](#create-a-single-threaded-tcp-server)
+  - [Create a multi-threaded TCP server](#create-a-multi-threaded-tcp-server)
+  - [Create an asynchronous TCP server](#create-an-asynchronous-tcp-server)
+  - [Load test your server(s) with Gatling](#load-test-your-servers-with-gatling)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -42,7 +48,21 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Practical content
 
+### Create a SMTP client
+
+### Create a TCP client
+
+### Create a single-threaded TCP server
+
+### Create a multi-threaded TCP server
+
+### Create an asynchronous TCP server
+
+### Load test your server(s) with Gatling
+
 ### Go further
+
+This is an optional section. Feel free to skip it if you do not have time.
 
 - TODO
 

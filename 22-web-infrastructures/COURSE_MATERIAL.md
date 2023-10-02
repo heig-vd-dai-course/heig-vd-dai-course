@@ -27,6 +27,19 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Practical content](#practical-content)
+  - [Install and configure mkcert](#install-and-configure-mkcert)
+  - [Start and configure a whoami container](#start-and-configure-a-whoami-container)
+  - [Add and configure Traefik](#add-and-configure-traefik)
+  - [Access the Traefik dashboard](#access-the-traefik-dashboard)
+  - [Add a second whoami container](#add-a-second-whoami-container)
+  - [Make usage of a reverse proxy with Traefik](#make-usage-of-a-reverse-proxy-with-traefik)
+  - [Make usage of a load balancer with Traefik](#make-usage-of-a-load-balancer-with-traefik)
+  - [Make usage of a health check with Traefik](#make-usage-of-a-health-check-with-traefik)
+  - [Make usage of sticky sessions with Traefik](#make-usage-of-sticky-sessions-with-traefik)
+  - [Make usage of a failover with Traefik](#make-usage-of-a-failover-with-traefik)
+  - [Make usage of a HTTPS/TLS certificate with Traefik and mkcert](#make-usage-of-a-httpstls-certificate-with-traefik-and-mkcert)
+  - [Horizontal scaling with Docker Compose](#horizontal-scaling-with-docker-compose)
+  - [Load testing with Gatling](#load-testing-with-gatling)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -42,15 +55,47 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Practical content
 
+### Install and configure mkcert
+
+Follow the official documentation to install mkcert on your machine:
+<https://github.com/FiloSottile/mkcert>.
+
+Another good resource is the following article:
+<https://web.dev/how-to-use-local-https/>.
+
+### Start and configure a whoami container
+
+### Add and configure Traefik
+
+### Access the Traefik dashboard
+
+### Add a second whoami container
+
+### Make usage of a reverse proxy with Traefik
+
+### Make usage of a load balancer with Traefik
+
+### Make usage of a health check with Traefik
+
+### Make usage of sticky sessions with Traefik
+
+### Make usage of a failover with Traefik
+
+### Make usage of a HTTPS/TLS certificate with Traefik and mkcert
+
+### Horizontal scaling with Docker Compose
+
+### Load testing with Gatling
+
 ### Go further
 
-- TODO
+This is an optional section. Feel free to skip it if you do not have time.
+
+- Are you able to add a basic authentication to the Traefik dashboard?
 
 ## Conclusion
 
 ### What did you do and learn?
-
-TODO
 
 ### Test your knowledge
 

@@ -403,6 +403,8 @@ work.
 
 ### Go further
 
+This is an optional section. Feel free to skip it if you do not have time.
+
 - You can do the same benchmarking with the Java NIO API. How is it different
   from the Java IO API?
 

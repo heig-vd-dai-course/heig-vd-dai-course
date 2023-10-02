@@ -25,6 +25,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Practical content](#practical-content)
+  - [Install and configure the SSH client and SCP](#install-and-configure-the-ssh-client-and-scp)
+  - [Start and configure the SSH server](#start-and-configure-the-ssh-server)
+  - [Connect to the SSH server](#connect-to-the-ssh-server)
+  - [Copy files with SCP](#copy-files-with-scp)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -40,9 +44,29 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Practical content
 
+### Install and configure the SSH client and SCP
+
+### Start and configure the SSH server
+
+### Connect to the SSH server
+
+#### Connect with a password
+
+#### Connect with a key
+
+### Copy files with SCP
+
+#### Copy a file from the local machine to the remote machine
+
+#### Copy a file from the remote machine to the local machine
+
 ### Go further
 
-- TODO
+This is an optional section. Feel free to skip it if you do not have time.
+
+- Are you able to deactivate the password authentication on the SSH server? The
+  key authentication should still work. This is a good practice to avoid brute
+  force attacks.
 
 ## Conclusion
 

@@ -27,6 +27,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Practical content](#practical-content)
+  - [Install and configure telnet](#install-and-configure-telnet)
+  - [Install and configure Mailhog](#install-and-configure-mailhog)
+  - [Send an email with telnet](#send-an-email-with-telnet)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -40,11 +43,30 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - TODO
 
+## SPAM: Banning and blacklisting
+
 ## Practical content
+
+### Install and configure telnet
+
+### Install and configure Mailhog
+
+### Send an email with telnet
+
+#### Start the SMTP server
+
+Start the Mailhog SMTP server
+
+#### Send an email with telnet
 
 ### Go further
 
-- TODO
+This is an optional section. Feel free to skip it if you do not have time.
+
+- Are you able to send an email with a CC recipient?
+- Are you able to send an email with a BCC recipient?
+- Are you able to send an email with HTML content?
+- Are you able to send an email with an attachment?
 
 ## Conclusion
 

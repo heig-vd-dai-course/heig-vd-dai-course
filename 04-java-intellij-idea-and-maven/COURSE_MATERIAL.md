@@ -868,7 +868,6 @@ file.
 You can find the latest version of the `maven-shade-plugin` on the Maven
 Repository:
 <https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin>.
-
 This plugin will intervene in the `package` phase of the Maven build process. It
 will execute the `shade` goal, which will transform the JAR file to include the
 dependencies.
@@ -943,12 +942,10 @@ directories that are specific to IntelliJ IDEA, but also for other IDEs and
 specific configurations.
 
 Many tools exist to generate `.gitignore` files, such as
-<https://gitignore.io/>.
-
-We consider this as **bad practice** as it makes the comprehension of the
-codebase harder (_What am I really using?_). You should **only ignore files that
-are specific to your project**, the tools you are using and the environment you
-are working in.
+<https://gitignore.io/>. We consider these as **bad practice** as it makes the
+comprehension of the codebase harder (_What am I really using?_). You should
+**only ignore files that are specific to your project**, the tools you are using
+and the environment you are working in.
 
 Let's clean the `.gitignore` files.
 

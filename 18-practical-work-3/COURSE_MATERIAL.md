@@ -43,14 +43,28 @@ idea, come to see us and we can give you.
 ## Objectives
 
 - Define a network application protocol
+- Make usage of the UDP protocol
 - Use Java UDP programming to implement a client and a server application
 - Use Docker and Docker Compose to deploy the client and the server
 
 ## Group composition
 
 You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one or you can work alone if you prefer.
-Working alone will not give you any bonus points.
+not have a partner, we will assign you one. In this practical work, you have to
+work with someone else.
+
+To announce your group, create a new GitHub Discussion at
+<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
+information:
+
+- **Title**: DAI 2023-2024 - Practical work 3 - First name Last name member 1
+  and First name Last name member 2
+- **Category**: Show and tell
+- **Description**: A quick description of what you will achieve during this
+  practical work
+
+The teaching staff might ask you to change the scope of your practical work if
+it is too complex or too simple.
 
 ## Grading criteria
 
@@ -65,12 +79,12 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 If your repository is private, you must add us as collaborators to your
 repository!
 
-| #   | Criterion                                                        | Points |
-| --- | ---------------------------------------------------------------- | -----: |
-| 1   | The entire team contributes to the project and can explain it    |    0.2 |
-| 2   | The README is well structured and explains what the CLI is for   |    0.2 |
-| 3   | The README explains how to build the CLI                         |    0.2 |
-| 4   | The README explains how to use the CLI with examples and outputs |    0.2 |
+| #   | Criterion                                                                        | Points |
+| --- | -------------------------------------------------------------------------------- | -----: |
+| 1   | The whole team contributes to the project and can explain it in details          |    0.2 |
+| 2   | The README is well structured and explains what the CLI is for                   |    0.2 |
+| 3   | The README explains how to build and publish the network application with Docker |    0.2 |
+| 4   | The README explains how to use the network application with examples and outputs |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
@@ -81,21 +95,42 @@ repository!
 
 ### Category 3 - Define an application protocol
 
-| #    | Criterion | Points |
-| ---- | --------- | -----: |
-| TODO | TODO      |    0.2 |
+| #   | Criterion                                                                             | Points |
+| --- | ------------------------------------------------------------------------------------- | -----: |
+| 7   | The application protocol defines the port(s) and protocol(s) to use                   |    0.2 |
+| 8   | The application protocol defines who initiates the connection and how                 |    0.2 |
+| 9   | The application protocol defines the available messages with their input(s)/output(s) |    0.2 |
+| 10  | The application protocol defines the success/errors codes and their explanations      |    0.2 |
+| 11  | The application protocol defines the edge-cases when something could go wrong         |    0.2 |
 
-### Category 4 - Java UDP programming
+### Category 4 - Docker and Docker Compose
 
-| #    | Criterion | Points |
-| ---- | --------- | -----: |
-| TODO | TODO      |    0.2 |
+| #   | Criterion                                                              | Points |
+| --- | ---------------------------------------------------------------------- | -----: |
+| 12  | The server and the client are built and published to a Docker registry |    0.2 |
+| 13  | A Docker Compose file allows to run the network application            |    0.2 |
+| 14  | A health check allows to wait for the application to be ready          |    0.2 |
 
-### Category 5 - Docker and Docker Compose
+### Category 5 - Java UDP programming
 
-| #    | Criterion | Points |
-| ---- | --------- | -----: |
-| TODO | TODO      |    0.2 |
+| #   | Criterion                                                                                    | Points |
+| --- | -------------------------------------------------------------------------------------------- | -----: |
+| 15  | The client discovers the server(s) and can connect to them                                   |    0.2 |
+| 16  | The server starts on the defined port and advertises who they are                            |    0.2 |
+| 17  | The client and server correctly process the input/output commands                            |    0.2 |
+| 18  | All clients/servers are informed if the servers/clients close the connection                 |    0.2 |
+| 19  | The application make usage of the UDP protocol and handles all the logic if packets are lost |    0.2 |
+| 20  | The application uses all the best practices regarding network programming                    |    0.2 |
+
+### Category 6 - Presentation and questions
+
+| #   | Criterion                                                                            | Points |
+| --- | ------------------------------------------------------------------------------------ | -----: |
+| 21  | The presentation is clear and well prepared                                          |    0.2 |
+| 22  | Everyone speaks during the presentation, and the presentation lasts the time allowed |    0.2 |
+| 23  | The presentation presents the network application                                    |    0.2 |
+| 24  | A demo of the network application is made                                            |    0.2 |
+| 25  | The answers to the questions are correct                                             |    0.2 |
 
 ## Constraints
 
@@ -108,7 +143,7 @@ repository!
 Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
 use a simple solution than a complex one.
 
-If your solution is too complex, we might penalize you.
+If your implementation is too complex, we might penalize you.
 
 If elements that are supposed to be acquired through the course or previous
 practical works are omitted, forgotten or poorly implemented, we might penalize
@@ -116,6 +151,10 @@ you.
 
 You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.
+
+You can protect the `main` branch of your repository to prevent any push on it
+and force signed commits from team members. This will force all team members to
+use signed pull requests to merge your work.
 
 ## Submission
 
@@ -126,12 +165,9 @@ The planning of the course is available at
 Any commit after the deadline will not be taken into account. Each day of delay
 will result in a penalty of -1 point on the final grade.
 
-You must create a new GitHub Discussion at
-<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
+You must update the GitHub Discussion you created previously with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 3 - @member1 and @member2
-- **Category**: Show and tell
 - **Description**: The link to your repository as well as the latest commit hash
   of your work before submission
 
@@ -151,7 +187,9 @@ If you have any questions about the evaluation, you can contact us!
 <summary>Grading grid for the teaching staff with comments</summary>
 
 ```markdown
-# Practical work 3 - Grading grid for @member1 and @member2
+# Practical work 3 - Grading grid for First name Last name member 1
+
+and First name Last name member 2
 
 Here are the grades and comments for each criterion for the practical work 1.
 

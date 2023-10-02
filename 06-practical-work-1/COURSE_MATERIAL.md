@@ -109,13 +109,13 @@ repository!
 
 ### Category 4 - Presentation and questions
 
-| #   | Criterion                                                                             | Points |
-| --- | ------------------------------------------------------------------------------------- | -----: |
-| 21  | The presentation is clear and well prepared                                           |    0.2 |
-| 22  | Everyone speaks during the presentation, and the presentation lasts the time allowed. |    0.2 |
-| 23  | The presentation presents the CLI application                                         |    0.2 |
-| 24  | A demo of the CLI application is made                                                 |    0.2 |
-| 25  | The answers to the questions are correct                                              |    0.2 |
+| #   | Criterion                                                                            | Points |
+| --- | ------------------------------------------------------------------------------------ | -----: |
+| 21  | The presentation is clear and well prepared                                          |    0.2 |
+| 22  | Everyone speaks during the presentation, and the presentation lasts the time allowed |    0.2 |
+| 23  | The presentation presents the CLI application                                        |    0.2 |
+| 24  | A demo of the CLI application is made                                                |    0.2 |
+| 25  | The answers to the questions are correct                                             |    0.2 |
 
 ## Constraints
 
@@ -127,14 +127,14 @@ repository!
 Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
 use a simple solution than a complex one.
 
-If your solution is too complex, we might penalize you.
+If your implementation is too complex, we might penalize you.
 
 You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.
 
 You can protect the `main` branch of your repository to prevent any push on it
-and force signed commits. This will force you to use signed pull requests to
-merge your work.
+and force signed commits from team members. This will force all team members to
+use signed pull requests to merge your work.
 
 ## Submission
 
@@ -167,7 +167,9 @@ If you have any questions about the evaluation, you can contact us!
 <summary>Grading grid for the teaching staff with comments</summary>
 
 ```markdown
-# Practical work 1 - Grading grid for @member1 and @member2
+# Practical work 1 - Grading grid for First name Last name member 1
+
+and First name Last name member 2
 
 Here are the grades and comments for each criterion for the practical work 1.
 
@@ -216,13 +218,13 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 4 - Presentation and questions
 
-| #   | Criterion                                                                             | Points | Number of points obtained | Comment |
-| --- | ------------------------------------------------------------------------------------- | -----: | ------------------------: | ------- |
-| 21  | The presentation is clear and well prepared                                           |    0.2 |                           |         |
-| 22  | Everyone speaks during the presentation, and the presentation lasts the time allowed. |    0.2 |                           |         |
-| 23  | The presentation presents the CLI application                                         |    0.2 |                           |         |
-| 24  | A demo of the CLI application is made                                                 |    0.2 |                           |         |
-| 25  | The answers to the questions are correct                                              |    0.2 |                           |         |
+| #   | Criterion                                                                            | Points | Number of points obtained | Comment |
+| --- | ------------------------------------------------------------------------------------ | -----: | ------------------------: | ------- |
+| 21  | The presentation is clear and well prepared                                          |    0.2 |                           |         |
+| 22  | Everyone speaks during the presentation, and the presentation lasts the time allowed |    0.2 |                           |         |
+| 23  | The presentation presents the CLI application                                        |    0.2 |                           |         |
+| 24  | A demo of the CLI application is made                                                |    0.2 |                           |         |
+| 25  | The answers to the questions are correct                                             |    0.2 |                           |         |
 
 ## General feedback
 

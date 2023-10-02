@@ -28,6 +28,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [OCI, images, containers and registries](#oci-images-containers-and-registries)
 - [Docker](#docker)
   - [Dockerfile specification](#dockerfile-specification)
+  - [Security considerations](#security-considerations)
   - [Summary](#summary)
   - [Cheatsheet](#cheatsheet)
   - [Alternatives](#alternatives)
@@ -42,6 +43,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Docker Hub](#docker-hub)
   - [Alternatives](#alternatives-3)
 - [Tips and tricks](#tips-and-tricks)
+  - [Health checks](#health-checks)
   - [Free some space](#free-some-space)
   - [Multi-stage builds](#multi-stage-builds)
 - [Practical content](#practical-content)
@@ -51,6 +53,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Write a Dockerfile, build and run an image with Docker](#write-a-dockerfile-build-and-run-an-image-with-docker)
   - [Build and run the same image with Docker Compose](#build-and-run-the-same-image-with-docker-compose)
   - [Publish an image on GitHub Container Registry](#publish-an-image-on-github-container-registry)
+  - [Use the published image with Docker](#use-the-published-image-with-docker)
+  - [Use the published image with Docker Compose](#use-the-published-image-with-docker-compose)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -208,6 +212,25 @@ Most Docker images are based on Linux but others are available as well (Windows
 for instance). It is possible to run Linux containers on Linux, macOS and
 Windows (with the help of the Linux virtual machine).
 
+### Security considerations
+
+A container is isolated from the rest of the computer. It is isolated from other
+containers. It is not isolated from the Docker daemon. The Docker daemon has
+access to the container.
+
+A container is not a virtual machine. It is not a sandbox. It is not a security
+boundary. It is not a security boundary between the container and the Docker
+daemon.
+
+The Docker daemon runs with root privileges. You must be careful when running
+containers. A security vulnerability in a container can lead to a full
+compromise of the host. Always try to run containers with a non-root user.
+
+It is not always possible to run a container with a non-root user. Some
+containers require root privileges to run. Some containers requires access to
+the Docker daemon. This is usually explicitly stated in the documentation of the
+container.
+
 ### Summary
 
 - Docker is a container engine
@@ -361,6 +384,51 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Tips and tricks
 
+### Health checks
+
+Health checks are used to check if a container is healthy. They are used to
+check if the container is ready to accept requests.
+
+Health checks are defined in the Dockerfile. They are defined with the
+`HEALTHCHECK` instruction.
+
+The `HEALTHCHECK` instruction takes the following arguments:
+
+- `--interval`: the interval between two health checks
+- `--timeout`: the timeout of a health check
+- `--start-period`: the time to wait before starting the health checks
+- `--retries`: the number of retries before considering the container unhealthy
+- `CMD`: the command to run to check the health of the container
+
+For example, the following instruction defines a health check that runs every 30
+seconds and that times out after 10 seconds:
+
+```dockerfile
+HEALTHCHECK --interval=30s --timeout=10s \
+  CMD curl -f http://localhost/ || exit 1
+```
+
+If no health check is defined, Docker will use the default health check. The
+default health check is to check if the container is running.
+
+If no health check is defined, the container will be considered healthy as soon
+as it is running. This is not always what you want. You might want to wait for
+the container to be ready to accept requests.
+
+You can define a health check that checks if the container is ready to accept in
+the Docker Compose file. You can use the `healthcheck` option to define a health
+check.
+
+For example, the following option defines a health check that runs every 30
+seconds and that times out after 10 seconds:
+
+```yaml
+healthcheck:
+  test: ["CMD", "curl", "-f", "http://localhost/"]
+  interval: 30s
+  timeout: 10s
+```
+
 ### Free some space
 
 Docker images, containers and volumes can take a lot of space on your computer.
@@ -388,9 +456,16 @@ docker system prune --all --volumes
 
 ### Publish an image on GitHub Container Registry
 
+### Use the published image with Docker
+
+### Use the published image with Docker Compose
+
 ### Go further
 
-- TODO
+This is an optional section. Feel free to skip it if you do not have time.
+
+- Could you use Docker to run the application you have developed in the previous
+  chapter? Add the required files and instructions to your repository!
 
 ## Conclusion
 

@@ -27,6 +27,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Practical content](#practical-content)
+  - [Create an UDP client to find a server and send a file](#create-an-udp-client-to-find-a-server-and-send-a-file)
+  - [Create an UDP server](#create-an-udp-server)
+  - [Create a UDP server with Unicast](#create-a-udp-server-with-unicast)
+  - [Create a UDP server with Multicast](#create-a-udp-server-with-multicast)
+  - [Create a UDP server with Broadcast](#create-a-udp-server-with-broadcast)
+  - [Create a UDP server to discover other servers](#create-a-udp-server-to-discover-other-servers)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -42,7 +48,21 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Practical content
 
+### Create an UDP client to find a server and send a file
+
+### Create an UDP server
+
+### Create a UDP server with Unicast
+
+### Create a UDP server with Multicast
+
+### Create a UDP server with Broadcast
+
+### Create a UDP server to discover other servers
+
 ### Go further
+
+This is an optional section. Feel free to skip it if you do not have time.
 
 - TODO
 

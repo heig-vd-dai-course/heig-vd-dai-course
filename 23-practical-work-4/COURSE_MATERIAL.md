@@ -50,7 +50,21 @@ repository on GitHub.
 ## Group composition
 
 You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one.
+not have a partner, we will assign you one. In this practical work, you have to
+work with someone else.
+
+To announce your group, create a new GitHub Discussion at
+<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
+information:
+
+- **Title**: DAI 2023-2024 - Practical work 4 - First name Last name member 1
+  and First name Last name member 2
+- **Category**: Show and tell
+- **Description**: A quick description of what you will achieve during this
+  practical work
+
+The teaching staff might ask you to change the scope of your practical work if
+it is too complex or too simple.
 
 ## Grading criteria
 
@@ -65,23 +79,56 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 If your repository is private, you must add us as collaborators to your
 repository!
 
-| #   | Criterion                                                        | Points |
-| --- | ---------------------------------------------------------------- | -----: |
-| 1   | The entire team contributes to the project and can explain it    |    0.2 |
-| 2   | The README is well structured and explains what the CLI is for   |    0.2 |
-| 3   | The README explains how to build the CLI                         |    0.2 |
-| 4   | The README explains how to use the CLI with examples and outputs |    0.2 |
+| #   | Criterion                                                                             | Points |
+| --- | ------------------------------------------------------------------------------------- | -----: |
+| 1   | The whole team contributes to the project and can explain it in details               |    0.2 |
+| 2   | The README is well structured and explains what the repository is for and its sources |    0.2 |
+| 3   | The README explains how to install and configure the server                           |    0.2 |
+| 4   | The README explains how deploy and run the web infrastructure                         |    0.2 |
+| 5   | The README explains how to access the applications with a domain name                 |    0.2 |
+| 6   | The repository is cloned using SSH on the server to run the web infrastructure        |    0.2 |
 
 ### Category 2 - Docker and Docker Compose
 
 | #   | Criterion                                                  | Points |
 | --- | ---------------------------------------------------------- | -----: |
-| 5   | The codebase has all required files and is well structured |    0.2 |
-| 6   | The codebase is well documented                            |    0.2 |
+| 7   | The codebase has all required files and is well structured |    0.2 |
+| 8   | The codebase is well documented                            |    0.2 |
+| 9   | Docker is correctly installed on the server                |    0.2 |
+| 10  | Docker Compose is correctly installed on the server        |    0.2 |
+
+### Category 3 - SSH and SCP
+
+| #   | Criterion                                                    | Points |
+| --- | ------------------------------------------------------------ | -----: |
+| 11  | You can access the server without a password using a SSH key |    0.2 |
+
+### Category 4 - Web infrastructures
+
+| #   | Criterion                                                                                                                                                                                                                                   | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 12  | At least two applications are deployed on the server                                                                                                                                                                                        |    0.2 |
+| 13  | The applications are accessible using a domain name with the help of a reverse proxy                                                                                                                                                        |    0.2 |
+| 14  | The domain names are correctly configured in the DNS zone                                                                                                                                                                                   |    0.2 |
+| 15  | The applications use automatic HTTPS/TLS certificate generations with Let's Encrypt                                                                                                                                                         |    0.2 |
+| 16  | The applications must persiste their data                                                                                                                                                                                                   |    0.2 |
+| 17  | The applications must have a health check that Docker or the load balancer can use to notify the user or restart the application if something is wrong                                                                                      |    0.2 |
+| 18  | All applications are protected with an authentication, either using the built-in authentication mechanism of the application or by protecting the application with a authentication portal (Basic Authentication is enough for this course) |    0.2 |
+
+### Category 4 - Presentation and questions
+
+| #   | Criterion                                                                                          | Points |
+| --- | -------------------------------------------------------------------------------------------------- | -----: |
+| 19  | The presentation is clear and well prepared                                                        |    0.2 |
+| 20  | Everyone speaks during the presentation, and the presentation lasts the time allowed               |    0.2 |
+| 21  | The presentation presents the access to the server and how to clone and run the web infrastructure |    0.2 |
+| 22  | The presentation presents the configuration of the DNS zone with its (sub-)domain names            |    0.2 |
+| 23  | The presentation presents the web infrastructure                                                   |    0.2 |
+| 24  | A demo to access the web infrastructure                                                            |    0.2 |
+| 25  | The answers to the questions are correct                                                           |    0.2 |
 
 ## Constraints
 
-- You must deploy at least 2 web applications
 - You must use a reverse proxy with a domain name to access the web applications
 - You must use Docker and Docker Compose to deploy the web applications
 
@@ -90,7 +137,7 @@ repository!
 Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
 use a simple solution than a complex one.
 
-If your solution is too complex, we might penalize you.
+If your implementation is too complex, we might penalize you.
 
 If elements that are supposed to be acquired through the course or previous
 practical works are omitted, forgotten or poorly implemented, we might penalize
@@ -98,6 +145,10 @@ you.
 
 If you have a domain name, you can use it. If you do not have a domain name, we
 can provide you one.
+
+You can protect the `main` branch of your repository to prevent any push on it
+and force signed commits from team members. This will force all team members to
+use signed pull requests to merge your work.
 
 ## Submission
 
@@ -133,7 +184,9 @@ If you have any questions about the evaluation, you can contact us!
 <summary>Grading grid for the teaching staff with comments</summary>
 
 ```markdown
-# Practical work 4 - Grading grid for @member1 and @member2
+# Practical work 4 - Grading grid for First name Last name member 1
+
+and First name Last name member 2
 
 Here are the grades and comments for each criterion for the practical work 1.
 

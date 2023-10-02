@@ -27,6 +27,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Practical content](#practical-content)
+  - [Install and configure cURL](#install-and-configure-curl)
+  - [Install and configure Insomnia](#install-and-configure-insomnia)
+  - [Interact with an API](#interact-with-an-api)
+  - [Use HTTP with Java](#use-http-with-java)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -42,9 +46,30 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Practical content
 
+### Install and configure cURL
+
+### Interact with an API
+
+#### Create a new entity
+
+#### Get a entity
+
+#### Update a entity
+
+#### Delete a entity
+
+#### Authenticate with a token
+
+#### Use a token to access a protected resource
+
+### Use HTTP with Java
+
 ### Go further
 
-- TODO
+This is an optional section. Feel free to skip it if you do not have time.
+
+- Try to use Insomnia instead of cURL to interact with the API!
+- Try to find another API and interact with it!
 
 ## Conclusion
 

@@ -25,6 +25,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Practical content](#practical-content)
+  - [Better understand the SMTP protocol](#better-understand-the-smtp-protocol)
+  - [Better understand the POP3 protocol](#better-understand-the-pop3-protocol)
+  - [Better understand the IMAP protocol](#better-understand-the-imap-protocol)
+  - [Better understand the SSH protocol](#better-understand-the-ssh-protocol)
+  - [Better understand the HTTP protocol](#better-understand-the-http-protocol)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -43,9 +48,72 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Practical content
 
+### Better understand the SMTP protocol
+
+Try to answer the following questions using the
+[official RFC for the SMTP protocol](https://tools.ietf.org/html/rfc5321):
+
+- What is the purpose of the SMTP protocol?
+- On which port does the SMTP protocol work?
+- On which protocol does the SMTP protocol work?
+- Who initiates the connection?
+- What are the available messages?
+
+### Better understand the POP3 protocol
+
+Try to answer the following questions using the
+[official RFC for the POP3 protocol](https://datatracker.ietf.org/doc/html/rfc1939):
+
+- What is the purpose of the POP3 protocol?
+- On which port does the POP3 protocol work?
+- On which protocol does the POP3 protocol work?
+- Who initiates the connection?
+- What are the available messages?
+- What is the difference between POP3 and SMTP?
+
+### Better understand the IMAP protocol
+
+Try to answer the following questions using the
+[official RFC for the IMAP protocol](rfc3501):
+
+- What is the purpose of the IMAP protocol?
+- On which port does the IMAP protocol work?
+- On which protocol does the IMAP protocol work?
+- Who initiates the connection?
+- What are the available messages?
+- What is the difference between POP3, SMTP and IMAP?
+
+### Better understand the SSH protocol
+
+Try to answer the following questions using the
+[official RFC for the SSH protocol](https://tools.ietf.org/html/rfc4253):
+
+- What is the purpose of the SSH protocol?
+- On which port does the SSH protocol work?
+- On which protocol does the SSH protocol work?
+- Who initiates the connection?
+- What are the available messages?
+- How is the version exchange done?
+
+### Better understand the HTTP protocol
+
+Try to answer the following questions using the
+[official RFC for the HTTP/3 protocol](https://datatracker.ietf.org/doc/html/rfc9113):
+
+- What is the purpose of the HTTP protocol?
+- On which port does the HTTP protocol work?
+- On which protocol does the HTTP protocol work? Is there a difference between
+  HTTP/2 and HTTP/3?
+- Who initiates the connection?
+- What are the available messages?
+
 ### Go further
 
-- TODO
+This is an optional section. Feel free to skip it if you do not have time.
+
+- You can check the RFC for the FTP protocol, DNS protocol and the DHCP
+  protocol. Are they similar to the protocols you have seen before? What are the
+  differences?
 
 ## Conclusion
 
