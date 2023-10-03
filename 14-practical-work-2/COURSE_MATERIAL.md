@@ -24,8 +24,8 @@ In this practical work, you will create a network application that uses the TCP
 protocol.
 
 The network application will be defined by an application protocol, a client and
-a server. The client will send a request to the server and the server will send
-a response to the client.
+a server. The client will send some requests to the server and the server will
+send some responses to the client.
 
 The application protocol will be defined by you. You can decide to create your
 own little application protocol or you can implement an existing protocol.
@@ -80,7 +80,7 @@ repository!
 | 1   | The whole team contributes to the project and can explain it in details          |    0.2 |
 | 2   | The README is well structured and explains what the network application is for   |    0.2 |
 | 3   | The README explains how to build the network application                         |    0.2 |
-| 4   | The README explains how to use the network application with examples and outputs |    0.2 |
+| 4   | The README explains how to run the network application with examples and outputs |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
@@ -91,14 +91,14 @@ repository!
 
 ### Category 3 - Define an application protocol
 
-| #   | Criterion                                                                             | Points |
-| --- | ------------------------------------------------------------------------------------- | -----: |
-| 7   | The application protocol defines the port and protocol to use                         |    0.2 |
-| 8   | The application protocol defines who initiates the connection and how                 |    0.2 |
-| 9   | The application protocol defines the available messages with their input(s)/output(s) |    0.2 |
-| 10  | The application protocol defines the success/errors codes and their explanations      |    0.2 |
-| 11  | The application protocol defines the edge-cases when something could go wrong         |    0.2 |
-| 12  | The application protocol gives examples with some implementation snippets             |    0.2 |
+| #   | Criterion                                                                                             | Points |
+| --- | ----------------------------------------------------------------------------------------------------- | -----: |
+| 7   | The application protocol defines the port and protocol to use                                         |    0.2 |
+| 8   | The application protocol defines who initiates the connection and how                                 |    0.2 |
+| 9   | The application protocol defines the available messages with their input(s)/output(s)                 |    0.2 |
+| 10  | The application protocol defines the success/errors codes and their explanations                      |    0.2 |
+| 11  | The application protocol is described using a sequence diagram                                        |    0.2 |
+| 12  | The application protocol defines the edge-cases when something could go wrong with a sequence diagram |    0.2 |
 
 ### Category 4 - Java TCP programming
 
@@ -138,6 +138,9 @@ If your implementation is too complex, we might penalize you.
 If elements that are supposed to be acquired through the course or previous
 practical works are omitted, forgotten or poorly implemented, we might penalize
 you.
+
+You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
+any other tools you want to create your sequence diagrams.
 
 You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.

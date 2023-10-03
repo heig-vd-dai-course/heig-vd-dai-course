@@ -68,7 +68,7 @@ _paginate: false
 
 [Web][web] · [PDF][pdf]
 
-<small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
+<small>L. Delafontaine and H. Louis, with the help of ChatGPT</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 

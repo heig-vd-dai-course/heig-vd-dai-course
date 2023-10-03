@@ -84,7 +84,7 @@ repository!
 | 1   | The whole team contributes to the project and can explain it in details          |    0.2 |
 | 2   | The README is well structured and explains what the CLI is for                   |    0.2 |
 | 3   | The README explains how to build and publish the network application with Docker |    0.2 |
-| 4   | The README explains how to use the network application with examples and outputs |    0.2 |
+| 4   | The README explains how to run the network application with examples and outputs |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
@@ -97,11 +97,11 @@ repository!
 
 | #   | Criterion                                                                             | Points |
 | --- | ------------------------------------------------------------------------------------- | -----: |
-| 7   | The application protocol defines the port(s) and protocol(s) to use                   |    0.2 |
+| 7   | The application protocol defines the port and protocol to use                         |    0.2 |
 | 8   | The application protocol defines who initiates the connection and how                 |    0.2 |
 | 9   | The application protocol defines the available messages with their input(s)/output(s) |    0.2 |
 | 10  | The application protocol defines the success/errors codes and their explanations      |    0.2 |
-| 11  | The application protocol defines the edge-cases when something could go wrong         |    0.2 |
+| 11  | The application protocol is described using a sequence diagram                        |    0.2 |
 
 ### Category 4 - Docker and Docker Compose
 
@@ -113,14 +113,14 @@ repository!
 
 ### Category 5 - Java UDP programming
 
-| #   | Criterion                                                                                    | Points |
-| --- | -------------------------------------------------------------------------------------------- | -----: |
-| 15  | The client discovers the server(s) and can connect to them                                   |    0.2 |
-| 16  | The server starts on the defined port and advertises who they are                            |    0.2 |
-| 17  | The client and server correctly process the input/output commands                            |    0.2 |
-| 18  | All clients/servers are informed if the servers/clients close the connection                 |    0.2 |
-| 19  | The application make usage of the UDP protocol and handles all the logic if packets are lost |    0.2 |
-| 20  | The application uses all the best practices regarding network programming                    |    0.2 |
+| #   | Criterion                                                                    | Points |
+| --- | ---------------------------------------------------------------------------- | -----: |
+| 15  | The client discovers the server(s) and can connect to them                   |    0.2 |
+| 16  | The server starts on the defined port and advertises who it is               |    0.2 |
+| 17  | The client and server correctly process the input/output commands            |    0.2 |
+| 18  | All clients/servers are informed if the servers/clients close the connection |    0.2 |
+| 19  | The application makes usage of the UDP protocol                              |    0.2 |
+| 20  | The application uses all the best practices regarding network programming    |    0.2 |
 
 ### Category 6 - Presentation and questions
 
@@ -136,6 +136,7 @@ repository!
 
 - The network application must be written in Java, compatible with Java 17
 - The network application must be built using Maven
+- The network application can only use the UDP protocol
 - You must build and release the application using Docker and Docker Compose
 
 ## Remarks
@@ -148,6 +149,9 @@ If your implementation is too complex, we might penalize you.
 If elements that are supposed to be acquired through the course or previous
 practical works are omitted, forgotten or poorly implemented, we might penalize
 you.
+
+You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
+any other tools you want to create your sequence diagrams.
 
 You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.

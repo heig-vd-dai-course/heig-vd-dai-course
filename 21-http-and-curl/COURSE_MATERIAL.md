@@ -58,11 +58,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 #### Delete a entity
 
-#### Authenticate with a token
-
-#### Use a token to access a protected resource
-
 ### Use HTTP with Java
+
+Talk about the different version of the HTTP client
 
 ### Go further
 

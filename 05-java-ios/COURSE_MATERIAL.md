@@ -220,8 +220,8 @@ A **stream** is **a way to read or write data** from or to a source or a sink.
 
 ## The Java IO API
 
-The Java documentation is separated in modules. The Java IO API is part of the
-`java.base` module.
+The [Java documentation](https://docs.oracle.com/en/java/javase/17/docs/api/) is
+separated in modules. The Java IO API is part of the `java.base` module.
 
 In the `java.base` module, there are two main packages to read and write data:
 

@@ -24,12 +24,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
+- [What is an application protocol?](#what-is-an-application-protocol)
+- [How to define an application protocol?](#how-to-define-an-application-protocol)
 - [Practical content](#practical-content)
-  - [Better understand the SMTP protocol](#better-understand-the-smtp-protocol)
-  - [Better understand the POP3 protocol](#better-understand-the-pop3-protocol)
-  - [Better understand the IMAP protocol](#better-understand-the-imap-protocol)
-  - [Better understand the SSH protocol](#better-understand-the-ssh-protocol)
-  - [Better understand the HTTP protocol](#better-understand-the-http-protocol)
+  - [Explore the existing application protocols](#explore-the-existing-application-protocols)
+  - [Define your own application protocol](#define-your-own-application-protocol)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -41,6 +40,58 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
+This chapter will help you understand how to define an application protocol.
+
+An application protocol is a protocol that is used to exchange information
+between two applications (usually a between a client and a server). It is
+defined by a set of rules that each party must follow to communicate.
+
+In this chapter, you will learn where to find information about application
+protocols, how to define an application protocol and how to interact with an
+application that uses a well-defined application protocol.
+
+## What is an application protocol?
+
+An application protocol is a document that defines how two applications can
+communicate.
+
+These documents are usually called RFC (Request For Comments) and are available
+on the [IETF website](https://www.ietf.org/), an organization that defines
+standards for the Internet (among others).
+
+An application protocol relies on a transport protocol (TCP or UDP) and a
+network protocol (IP). It comes on top of these protocols and defines how
+applications can communicate.
+
+Multiple revisions of the same protocol can exist. For example, the HTTP
+protocol has multiple revisions (HTTP/1.0, HTTP/1.1, HTTP/2, HTTP/3). Each
+revision is defined by a different RFC and has different features.
+
+## How to define an application protocol?
+
+An application protocol is usually defined by a set of rules that each party
+must follow to communicate.
+
+These rules are usually defined in a RFC. The RFC defines the messages that can
+be exchanged between the client and the server, the format of these messages and
+the order in which they can be exchanged.
+
+For example, the SMTP protocol defines the following messages (among others):
+
+- `HELO`: used to initiate a connection with the server
+- `EHLO`: used to initiate a connection with the server
+- `MAIL`: used to specify the sender of the message
+- `RCPT`: used to specify the recipient of the message
+- `DATA`: used to send the content of the message
+- `RSET`: used to reset the connection
+
+Each message has a specific format. For example, the `MAIL` message has the
+following format:
+
+```
+MAIL FROM:<sender>
+```
+
 - Learn where to find information about application protocols
 - Learn how is defined an application protocol
 - Learn how to define an application protocol
@@ -48,7 +99,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Practical content
 
-### Better understand the SMTP protocol
+### Explore the existing application protocols
+
+#### Better understand the SMTP protocol
 
 Try to answer the following questions using the
 [official RFC for the SMTP protocol](https://tools.ietf.org/html/rfc5321):
@@ -59,7 +112,7 @@ Try to answer the following questions using the
 - Who initiates the connection?
 - What are the available messages?
 
-### Better understand the POP3 protocol
+#### Better understand the POP3 protocol
 
 Try to answer the following questions using the
 [official RFC for the POP3 protocol](https://datatracker.ietf.org/doc/html/rfc1939):
@@ -71,7 +124,7 @@ Try to answer the following questions using the
 - What are the available messages?
 - What is the difference between POP3 and SMTP?
 
-### Better understand the IMAP protocol
+#### Better understand the IMAP protocol
 
 Try to answer the following questions using the
 [official RFC for the IMAP protocol](rfc3501):
@@ -83,7 +136,7 @@ Try to answer the following questions using the
 - What are the available messages?
 - What is the difference between POP3, SMTP and IMAP?
 
-### Better understand the SSH protocol
+#### Better understand the SSH protocol
 
 Try to answer the following questions using the
 [official RFC for the SSH protocol](https://tools.ietf.org/html/rfc4253):
@@ -95,7 +148,7 @@ Try to answer the following questions using the
 - What are the available messages?
 - How is the version exchange done?
 
-### Better understand the HTTP protocol
+#### Better understand the HTTP protocol
 
 Try to answer the following questions using the
 [official RFC for the HTTP/3 protocol](https://datatracker.ietf.org/doc/html/rfc9113):
@@ -106,6 +159,10 @@ Try to answer the following questions using the
   HTTP/2 and HTTP/3?
 - Who initiates the connection?
 - What are the available messages?
+
+### Define your own application protocol
+
+Diagramme de séquence
 
 ### Go further
 
