@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of ChatGPT
-title: HEIG-VD DAI Course - Docker and Docker Compose
-description: Docker and Docker Compose for the DAI course at HEIG-VD, Switzerland
+title: HEIG-VD DAI Course - Define an application protocol
+description: Define an application protocol for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-define-an-application-protocol/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
@@ -75,6 +75,11 @@ _paginate: false
 ![bg opacity:0.1][illustration]
 
 ## Table of contents
+
+- Learn where to find information about application protocols
+- Learn how is defined an application protocol
+- Learn how to define an application protocol
+- Learn how to use an application protocol
 
 - **[Theoretical content](#theoretical-content)**
   - Installation of software: traditional vs. containerization

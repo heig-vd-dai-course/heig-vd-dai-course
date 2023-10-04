@@ -60,6 +60,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
+- [Additional resources](#additional-resources)
 - [Sources](#sources)
 
 ## Objectives
@@ -1105,6 +1106,14 @@ You can use reactions to express your opinion on a comment!
 In the next chapter, you will learn the following topics:
 
 - Java IOs: input/output processing
+
+## Additional resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- _None yet_
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 

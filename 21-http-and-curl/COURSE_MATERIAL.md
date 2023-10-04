@@ -28,7 +28,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [Practical content](#practical-content)
   - [Install and configure cURL](#install-and-configure-curl)
-  - [Install and configure Insomnia](#install-and-configure-insomnia)
   - [Interact with an API](#interact-with-an-api)
   - [Use HTTP with Java](#use-http-with-java)
   - [Go further](#go-further)
@@ -37,7 +36,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
-- [Resources](#resources)
+- [Additional resources](#additional-resources)
 - [Sources](#sources)
 
 ## Objectives
@@ -99,7 +98,7 @@ In the next chapter, you will learn the following topics:
 
 - Java TCP programming
 
-## Resources
+## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
 

@@ -104,9 +104,9 @@ exchanging data the same way as **IOs** operations.
 
 ## What will you learn?
 
-- What is an **application protocol** and how to use it
-- Make use of Docker and Docker Compose to easily run and try out existing
-  applications and protocols
+- What is an **application protocol**
+- Try out existing applications and protocols with the help of **Docker and
+  Docker Compose**
 - How to create a **server** that listens for connections and a **client** that
   connects to a server to **exchange data** between a server and a client
 - Make use of the **TCP** protocol

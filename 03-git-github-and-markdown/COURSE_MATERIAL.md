@@ -63,6 +63,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
+- [Additional resources](#additional-resources)
 - [Sources](#sources)
 
 ## Objectives
@@ -1413,6 +1414,14 @@ In the next chapter, you will learn the following topics:
 - Java: why is Java a popular programming language?
 - IntelliJ IDEA: tips and tricks for a better (collaborative) experience
 - Maven: Java project structure, dependencies and build tool
+
+## Additional resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- _None yet_
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 

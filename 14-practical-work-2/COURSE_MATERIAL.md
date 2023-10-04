@@ -91,14 +91,14 @@ repository!
 
 ### Category 3 - Define an application protocol
 
-| #   | Criterion                                                                                             | Points |
-| --- | ----------------------------------------------------------------------------------------------------- | -----: |
-| 7   | The application protocol defines the port and protocol to use                                         |    0.2 |
-| 8   | The application protocol defines who initiates the connection and how                                 |    0.2 |
-| 9   | The application protocol defines the available messages with their input(s)/output(s)                 |    0.2 |
-| 10  | The application protocol defines the success/errors codes and their explanations                      |    0.2 |
-| 11  | The application protocol is described using a sequence diagram                                        |    0.2 |
-| 12  | The application protocol defines the edge-cases when something could go wrong with a sequence diagram |    0.2 |
+| #   | Criterion                                                                                    | Points |
+| --- | -------------------------------------------------------------------------------------------- | -----: |
+| 7   | The application protocol defines the port and protocol to use                                |    0.2 |
+| 8   | The application protocol defines who initiates the connection and how                        |    0.2 |
+| 9   | The application protocol defines the available messages with their input(s)/output(s)        |    0.2 |
+| 10  | The application protocol defines the success/errors codes and their explanations             |    0.2 |
+| 11  | The application protocol is described using one or multiple diagrams                         |    0.2 |
+| 12  | The application protocol defines the edge-cases when something could go wrong with a diagram |    0.2 |
 
 ### Category 4 - Java TCP programming
 
@@ -140,7 +140,7 @@ practical works are omitted, forgotten or poorly implemented, we might penalize
 you.
 
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
-any other tools you want to create your sequence diagrams.
+any other tools you want to create your diagrams.
 
 You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.

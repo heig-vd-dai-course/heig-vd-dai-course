@@ -75,8 +75,9 @@ _paginate: false
 
 - The basics of Git, GitHub and Markdown
 - The basics of Maven with external dependencies
-- The different types of Java IOs
-- Character encodings, yeah! 🎉
+- The basics of Java and IntelliJ IDEA
+- The different types of Java IOs (Text files + character encodings 🎉 vs.
+  binary files 🤖)
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
@@ -108,8 +109,9 @@ It is **mandatory**.
 ---
 
 You can have access to the course material (theoretical and practical content,
-as well as practical work) and the
+as well as practical work, your own notes) and the
 [official Java documentation](https://docs.oracle.com/en/java/javase/17/docs/api/).
+Other websites are not allowed.
 
 No communication between students is allowed.
 
@@ -119,9 +121,11 @@ evaluation.
 Cheating is not allowed. If you are caught cheating, you will get a 1 for the
 evaluation.
 
+<!--
 All previous evaluations are available in the
 [`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
+-->
 
 ## Questions
 
@@ -131,39 +135,51 @@ Do you have any questions?
 
 ## Practical work review
 
-The practical work review will start at the end of this presentation.
+The practical work review will start at the end of this presentation in the
+**room B38**, at the very end of the corridor next to the door entry.
 
 We only have **5 minutes per group**. Please be prepared to present your work.
+You decide what you want to show us and how you want to present it.
+
+Come 5 minutes before your time slot with your computer.
 
 The order of presentation is random and is stated in the next slides.
 
-Do not worry, it is not an exam, it is just a way for us to see how you
-understood the practical work. 🙂
+---
+
+| #   | Group                                   | Passage |
+| --- | --------------------------------------- | ------- |
+| 1   | Alan Sottile and Calvin Graf            | 13:40   |
+| 2   | Lionel Pollien and Arthur Menétrey      | 13:46   |
+| 3   | Thomas Vuilleumier and Sebastian Diaz   | 13:52   |
+| 4   | Olin Bourquin and Kevin Farine          | 13:58   |
+| 5   | Guillaume Trüeb and Gwendal Piemontesi  | 14:04   |
+| 6   | Esteban Lopez                           | 14:10   |
+| 7   | Loïc Herman                             | 14:16   |
+| 8   | Alexandre Philibert and Valentin Ricard | 14:22   |
 
 ---
 
-| #   | Group                                  |
-| --- | -------------------------------------- |
-| 1   | Alan Sottile and Calvin Graf           |
-| 2   | Lionel Pollien and Arthur Menétrey     |
-| 3   | Thomas Vuilleumier and Sebastian Diaz  |
-| 4   | Olin Bourquin and Kevin Farine         |
-| 5   | Guillaume Trüeb and Gwendal Piemontesi |
-| 6   | Esteban Lopez                          |
-| 7   | Loïc Herman                            |
-| 8   | Alexandre Philibert + Valentin Ricard  |
+| #   | Group                           | Passage |
+| --- | ------------------------------- | ------- |
+| 9   | Rémy Bleuer                     | 14:28   |
+| 10  | Theodros Mulugeta               | 14:34   |
+|     | Break                           |         |
+| 11  | Sarah Jallon                    | 17:00   |
+| 12  | Alexandre Iorio                 | 17:06   |
+| 13  | Colin Jaques                    | 17:12   |
+| 14  | Romain Humair and Lucas Lattion | 17:18   |
+| 15  | Slimani Walid                   | 17:24   |
 
 ---
 
-| #   | Group                   |
-| --- | ----------------------- |
-| 9   | Rémy Bleuer             |
-| 10  | @member19 and @member20 |
-| 11  | @member21 and @member22 |
-| 12  | @member23 and @member24 |
-| 13  | @member25 and @member26 |
-| 14  | @member27 and @member28 |
-| 15  | @member29 and @member30 |
+| #   | Group                                 | Passage |
+| --- | ------------------------------------- | ------- |
+| 17  | Massimo Stefani and Jonas Troeltsch   | 17:36   |
+| 18  | Ahmad Jano                            | 17:42   |
+| 19  | Simon Guggisberg and Jeremiah Steiner | 17:48   |
+| 20  | Sergey Komarov                        | 17:54   |
+| 21  | Pirakas Anthon                        | 18:00   |
 
 ## Feedback
 

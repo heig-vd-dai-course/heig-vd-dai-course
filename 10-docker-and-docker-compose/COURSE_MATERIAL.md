@@ -79,16 +79,14 @@ The installer has written some files on your computer, and it has modified some
 settings. It can be quite difficult to know what the installer has done on your
 computer. It can also be difficult to uninstall the software, because you need
 to know what the installer has done. Even if the installer has an uninstaller,
-it can be difficult to know if the uninstaller has removed everything.
+it could not have removed everything.
 
 The problem arises when you want to install another version of the software or
-on another computer.
-
-If you install the new version, it will overwrite the old version. If you want
-to keep the old version, you need to install the new version in another
-directory. If you want to keep both versions, you need to install the new
-version in another directory, and you need to change the settings to use the new
-version.
+on another computer: if you install the new version, it will overwrite the old
+version. If you want to keep the old version, you need to install the new
+version in another directory. If you want to keep both versions, you need to
+install the new version in another directory, and you need to change the
+application's settings to use the new version. It becomes quite a mess.
 
 If you want to install the software on another computer, you need to manually
 change the settings; it can be difficult to know what to change.
@@ -497,7 +495,7 @@ In the next chapter, you will learn the following topics:
 
 - Java TCP programming
 
-## Resources
+## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
 

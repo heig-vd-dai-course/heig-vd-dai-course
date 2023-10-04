@@ -35,7 +35,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
-- [Resources](#resources)
+- [Additional resources](#additional-resources)
 - [Sources](#sources)
 
 ## Objectives
@@ -98,7 +98,7 @@ In the next chapter, you will learn the following topics:
 
 - Java TCP programming
 
-## Resources
+## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
 
