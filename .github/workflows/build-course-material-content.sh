@@ -1,11 +1,16 @@
 #!/usr/bin/env sh
 
-# Install weasyprint
-apk add --no-cache weasyprint
+# Install required packages
+apk add --no-cache \
+    fontconfig \
+    font-terminus \
+    pandoc-cli \
+    sed \
+    weasyprint
 
 # Convert Markdown files to HTML
 find . -type f -name "COURSE_MATERIAL.md" -mindepth 2 -maxdepth 2 -exec sh -c ' \
-    sed "/\<details\>/,/\<\/details\>/d" "$1" | pandoc --from=gfm --to=html --standalone --output "${1%.md}.html" \
+    sed "/<details>/,/<\/details>/d" "$1" | pandoc --from=gfm --to=html --standalone --output "${1%.md}.html" \
 ' sh {} \;
 
 # Convert HTML files to PDF

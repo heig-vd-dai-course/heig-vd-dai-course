@@ -29,7 +29,7 @@ jobs:
           rm --recursive 99-material-for-the-teaching-staff
 
       - name: Build course material content with Pandoc and weasyprint
-        uses: docker://pandoc/core:3.1
+        uses: docker://alpine:edge
         with:
           entrypoint: sh
           args: .github/workflows/build-course-material-content.sh

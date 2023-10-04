@@ -19,7 +19,6 @@ jobs:
       - name: Delete files that should not be released
         run: |
           rm --recursive 00-evaluation-and-exam-archives
-          rm --recursive 07-*
           rm --recursive 08-*
           rm --recursive 09-*
           rm --recursive 10-*
@@ -41,7 +40,7 @@ jobs:
           rm --recursive 99-material-for-the-teaching-staff
 
       - name: Build course material content with Pandoc and weasyprint
-        uses: docker://pandoc/core:3.1
+        uses: docker://alpine:edge
         with:
           entrypoint: sh
           args: .github/workflows/build-course-material-content.sh
