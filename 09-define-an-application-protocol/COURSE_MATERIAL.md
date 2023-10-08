@@ -27,6 +27,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [What is an application protocol?](#what-is-an-application-protocol)
 - [How is structured an application protocol?](#how-is-structured-an-application-protocol)
 - [How to define an application protocol?](#how-to-define-an-application-protocol)
+- [Reserved ports](#reserved-ports)
+- [A quick note on the Unix philosophy and POSIX](#a-quick-note-on-the-unix-philosophy-and-posix)
 - [Practical content](#practical-content)
   - [Explore the existing application protocols](#explore-the-existing-application-protocols)
   - [Define your own application protocol](#define-your-own-application-protocol)
@@ -166,6 +168,94 @@ deploy the protocol?
 It is also important to keep in mind that a protocol is never perfect. It can
 always be improved. It is important to keep an open mind and to be ready to
 change the protocol if needed.
+
+## Reserved ports
+
+In computer networking, a port is a communication endpoint. At the software
+level, within an operating system, a port is a logical construct that identifies
+a specific process or a type of network service. Ports are identified for each
+protocol and address combination by 16-bit unsigned numbers, commonly known as
+the port number.
+
+Using 16-bit unsigned numbers, the maximum number of ports is 65536. However,
+not all ports can be used by anyone. Some ports are reserved for specific
+protocols.
+
+The first 0 to 1023 ports are called well-known ports. These ports are reserved
+for specific protocols. Using these ports might require special privileges on
+Unix systems.
+
+Here is a list of examples for common well-known ports:
+
+- `20` and `21`: FTP
+- `22`: SSH
+- `23`: Telnet
+- `25`, `465` and `587`: SMTP
+- `53`: DNS
+- `80` and `443`: HTTP/HTTPS
+- `110` and `995`: POP3
+- `123`: NTP
+- `143` and `993`: IMAP
+
+The next 1024 to 49151 ports are called registered ports. Some ports are
+officially registered by the IANA (Internet Assigned Numbers Authority) and some
+are not. They can be used by anyone.
+
+Here is a list of examples for common registered ports:
+
+- `3306`: MySQL
+- `5000–5500`: League of Legends
+- `5432`: PostgreSQL
+- `6379`: Redis
+- `8080`: HTTP alternative port
+- `25565`: Minecraft
+- `27017`: MongoDB
+
+The last 49152 to 65535 ports are called dynamic ports. These ports cannot be
+registered and can be used by anyone. They are usually used for private or
+customized services or for temporary purposes.
+
+Here is a list of examples for common dynamic ports:
+
+- `51820`: WireGuard
+- `64738`: Mumble
+
+Wikipedia has a
+[list of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+that you can use to find the port number of a specific protocol.
+
+## A quick note on the Unix philosophy and POSIX
+
+> The [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy),
+> originated by Ken Thompson, is a set of cultural norms and philosophical
+> approaches to minimalist, modular software development. It is based on the
+> experience of leading developers of the Unix operating system.
+
+The Unix philosophy is a set of rules that defines how Unix programs should be
+designed. It is used to define the Unix operating system and the programs that
+are used on this operating system.
+
+The Unix philosophy can be defined by the following rules, among others:
+
+- Write programs that do one thing and do it well.
+- Write programs to work together.
+- Write programs to handle text streams, because that is a universal interface.
+
+You can inspire yourself from the Unix philosophy to define your own application
+protocol and tools, such as the CLI tool that you created in the previous
+chapter.
+
+> The
+> [Portable Operating System Interface (POSIX)](https://en.wikipedia.org/wiki/POSIX)
+> standard is a family of standards specified by the IEEE Computer Society for
+> maintaining compatibility between operating systems. POSIX defines both the
+> system and user-level application programming interfaces (APIs), along with
+> command line shells and utility interfaces, for software compatibility
+> (portability) with variants of Unix and other operating systems.
+
+Not all programs are/can be POSIX compliant. If you try to comply with the POSIX
+standard, you will be able to run your program on various operating systems
+without any issues.
 
 ## Practical content
 
