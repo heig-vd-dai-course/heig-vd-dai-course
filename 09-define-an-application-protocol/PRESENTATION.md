@@ -51,7 +51,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720
 [practical-content]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#practical-content
 [practical-content-qr-code]:
@@ -74,59 +74,61 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Table of contents
+## Objectives
 
 - Learn where to find information about application protocols
-- Learn how is defined an application protocol
-- Learn how to define an application protocol
-- Learn how to use an application protocol
+- Understand application protocol
+- Define application protocols
+- How to use an application protocol
 
-- **[Theoretical content](#theoretical-content)**
-  - Installation of software: traditional vs. containerization
-  - OCI, images, containers and registries
-  - Dockerfile and Docker Compose
-  - Tips and tricks
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
----
+## What is an application protocol?
 
-    - Install Docker (and Docker Compose)
-    - Run a container with Docker
-    - Run a container with Docker Compose
-    - Write a Dockerfile, build and run an image with Docker
-    - Build and run the same image with Docker Compose
+- Defines application communication
+- RFCs on IETF
+- Relies on transport and network protocols
+- Multiple revisions exist
 
-## Theoretical content
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-<!-- _class: lead -->
+## How is structured an application protocol?
 
-### Title
+- Defined by rules
+- Messages format
+- Order of message exchange using state machine or sequence diagram(s)
+- Edge and error cases defined
 
-> Quote
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-![bg right:40% w:50%](https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg)
+## How to define an application protocol?
 
----
+- Define purpose of protocol
+- Define messages/actions and their format
+- Define messages/actions exchange order
+- Define edge cases
+- Be ready to change
 
-Content
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-#### Summary
+## Reserved ports
 
-- TODO
+- Ports identify processes or services
+- Ports are 16-bit unsigned numbers
+- Well-known ports: 0-1023
+- Registered ports: 1024-49151
+- Dynamic ports: 49152-65535
 
-#### Alternatives
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-- TODO
+## A quick note on the Unix philosophy and POSIX
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+- Unix philosophy: minimalist, modular software
+- Follow Unix philosophy for software design
+- POSIX standard for OS compatibility
+- POSIX defines APIs for portability
 
-#### Resources
-
-- TODO
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## Practical content
 
@@ -134,11 +136,10 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### What will you do?
 
--
+- Explore existing application protocols
+- Define your own application protocol based a use case
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ### Find the practical content
 
@@ -165,8 +166,15 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- TODO
+- Docker and Docker Compose
+
+![bg right:40%](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
+  [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
+  [Unsplash](https://unsplash.com/photos/xewrfLD8emE)

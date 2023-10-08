@@ -6,7 +6,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/95
 [illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+  https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720
 
 # Define an application protocol - Course material
 
@@ -259,7 +259,7 @@ without any issues.
 
 ## Practical content
 
-### Explore the existing application protocols
+### Explore existing application protocols
 
 In this section, you will explore the existing application protocols. This will
 help you to better understand how an application protocol is defined and how to
@@ -452,5 +452,5 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
-- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+- Main illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
+  [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
