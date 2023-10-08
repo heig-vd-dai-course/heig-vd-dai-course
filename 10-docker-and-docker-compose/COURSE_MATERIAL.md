@@ -6,7 +6,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
 [illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+  https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720
 
 # Docker and Docker Compose - Course material
 
@@ -505,5 +505,5 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
-- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+- Main illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
+  [Unsplash](https://unsplash.com/photos/xewrfLD8emE)

@@ -6,7 +6,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
 [illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+  https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
 
 # Java TCP programming - Course material
 
@@ -108,5 +108,5 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
-- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+- Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
+  [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)

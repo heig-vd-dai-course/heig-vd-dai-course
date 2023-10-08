@@ -141,3 +141,5 @@ In the next chapter, you will learn the following topics:
 ## Sources
 
 - Main illustration by []() on [Unsplash]()
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
