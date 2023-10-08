@@ -281,7 +281,8 @@ When you open a file, you need to handle these errors. You can do this by
 catching the `IOException` exception. This is done with a
 `try`/`catch`/`finally` block or, more recently, with a `try-with-resources`
 block. Using the `try-with-resources` block is the preferred way to handle
-errors as it is more concise and less error-prone.
+errors as it is more concise and less error-prone, however, the class must
+implement the `AutoCloseable` interface.
 
 The common exceptions you might encounter are:
 
