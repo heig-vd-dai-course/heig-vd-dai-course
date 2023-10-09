@@ -90,26 +90,25 @@ _paginate: false
 - Relies on transport and network protocols
 - Multiple revisions exist
 
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/what-is-an-application-protocol.png)
 
 ## How is structured an application protocol?
 
 - Defined by rules
 - Messages format
 - Order of message exchange using state machine or sequence diagram(s)
-- Edge and error cases defined
+- Edge and error cases
 
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/how-is-structured-an-application-protocol.png)
 
 ## How to define an application protocol?
 
 - Define purpose of protocol
-- Define messages/actions and their format
-- Define messages/actions exchange order
+- Define messages/actions, their format and exchange order
 - Define edge cases
 - Be ready to change
 
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/how-to-define-an-application-protocol.png)
 
 ## Reserved ports
 
@@ -119,16 +118,14 @@ _paginate: false
 - Registered ports: 1024-49151
 - Dynamic ports: 49152-65535
 
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/reserved-ports.png)
 
 ## A quick note on the Unix philosophy and POSIX
 
 - Unix philosophy: minimalist, modular software
-- Follow Unix philosophy for software design
-- POSIX standard for OS compatibility
-- POSIX defines APIs for portability
+- POSIX defines APIs for portability on multiple operating systems
 
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/a-quick-note-on-the-unix-philosophy-and-posix.png)
 
 ## Practical content
 
@@ -139,7 +136,10 @@ _paginate: false
 - Explore existing application protocols
 - Define your own application protocol based a use case
 
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+Understanding how an application protocol is defined will help you to understand
+how to use them in future chapters!
+
+![bg right:40%](https://images.unsplash.com/photo-1535905557558-afc4877a26fc?fit=crop&h=720)
 
 ### Find the practical content
 
@@ -176,5 +176,7 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Henry Be](https://unsplash.com/@henry_be) on
+  [Unsplash](https://unsplash.com/photos/lc7xcWebECc)
 - Illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
   [Unsplash](https://unsplash.com/photos/xewrfLD8emE)
