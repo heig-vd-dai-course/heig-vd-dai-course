@@ -51,7 +51,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720
 [practical-content]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#practical-content
 [practical-content-qr-code]:
@@ -173,6 +173,6 @@ In the next chapter, you will learn the following topics:
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)

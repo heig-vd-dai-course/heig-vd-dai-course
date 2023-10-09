@@ -50,7 +50,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
 [practical-content]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#practical-content
 [practical-content-qr-code]:
@@ -74,6 +74,8 @@ _paginate: false
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
 ![bg opacity:0.1][illustration]
+
+## Table of contents
 
     - The history of HTTP (and HTML)
         - HTTP versions
@@ -181,6 +183,7 @@ In the next chapter, you will learn the following topics:
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Ashley Knedler](https://unsplash.com/@ashkned) on
+  [Unsplash](https://unsplash.com/photos/KvD36NRFjl4)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)

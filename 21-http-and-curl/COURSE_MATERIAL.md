@@ -6,7 +6,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
 [illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+  https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
 
 # HTTP and cURL - Course material
 
@@ -108,5 +108,5 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
-- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+- Main illustration by [Ashley Knedler](https://unsplash.com/@ashkned) on
+  [Unsplash](https://unsplash.com/photos/KvD36NRFjl4)

@@ -51,7 +51,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720
 [practical-content]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content
 [practical-content-qr-code]:
@@ -164,6 +164,7 @@ In the next chapter, you will learn the following topics:
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska) on
+  [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)

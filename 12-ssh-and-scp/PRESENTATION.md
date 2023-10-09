@@ -50,7 +50,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1506818144585-74b29c980d4b?fit=crop&h=720
 [practical-content]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/COURSE_MATERIAL.md#practical-content
 [practical-content-qr-code]:
@@ -160,6 +160,7 @@ In the next chapter, you will learn the following topics:
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Mathew Schwartz](https://unsplash.com/@cadop) on
+  [Unsplash](https://unsplash.com/photos/sb7RUrRMaC4)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
