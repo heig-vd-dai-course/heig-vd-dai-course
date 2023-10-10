@@ -27,10 +27,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [What is an application protocol?](#what-is-an-application-protocol)
 - [How is structured an application protocol?](#how-is-structured-an-application-protocol)
 - [How to define an application protocol?](#how-to-define-an-application-protocol)
+  - [Section 1 - Overview](#section-1---overview)
+  - [Section 2 - Transport protocol](#section-2---transport-protocol)
+  - [Section 3 - Messages](#section-3---messages)
+  - [Section 4 - Examples](#section-4---examples)
 - [Reserved ports](#reserved-ports)
 - [A quick note on the Unix philosophy and POSIX](#a-quick-note-on-the-unix-philosophy-and-posix)
 - [Practical content](#practical-content)
-  - [Explore the existing application protocols](#explore-the-existing-application-protocols)
+  - [Explore existing application protocols](#explore-existing-application-protocols)
   - [Define your own application protocol](#define-your-own-application-protocol)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -89,7 +93,8 @@ these messages and the order in which they can be exchanged.
 For example, the SMTP protocol defines the following messages (among others):
 
 - `HELO`: used to initiate a connection with the server
-- `EHLO`: used to initiate a connection with the server
+- `EHLO`: used to initiate a connection with the server (extended version of
+  `HELO`)
 - `MAIL`: used to specify the sender of the message
 - `RCPT`: used to specify the recipient of the message
 - `DATA`: used to send the content of the message
@@ -108,15 +113,12 @@ protocol in a future chapter to illustrate this example.
 
 A RFC also defines the order in which messages can be or must be exchanged.
 
-This is done using a state machine or a sequence diagram, depending on the
-nature/complexity of the protocol.
+This is done using a sequence diagram, depending on the nature/complexity of the
+protocol.
 
 A sequence diagram is a diagram that defines the different messages that can be
 exchanged between the client and the server and the order in which they can be
 exchanged.
-
-A state machine is a diagram that defines the different states of the protocol
-and the messages that can be exchanged between these states.
 
 An RFC also defines edge cases and error cases, using the same diagrams. It is
 important to define these cases to avoid any ambiguity and define how the
@@ -127,47 +129,69 @@ protocol should behave in these cases.
 Defining an application protocol is not an easy task. It requires a lot of
 thinking and a lot of testing.
 
-The first step is to define the purpose of the protocol. What is the goal of the
-protocol? What is the problem that it tries to solve?
-
-The second step is to define the messages that can be exchanged between the
-client and the server. What are the messages that the client can send to the
-server? What are the messages that the server can send to the client?
-
-The third step is to define the format of the messages. What is the format of
-the messages? What are the different fields that compose a message? What is the
-format of these fields?
-
-The fourth step is to define the order in which messages can be exchanged. What
-is the order in which messages can be exchanged? What is the order in which
-messages must be exchanged?
-
-The fifth step is to define the state machine or the sequence diagram. What are
-the different states of the protocol? What are the messages that can be
-exchanged between these states?
-
-The sixth step is to define the transport protocol and the network protocol that
-will be used. What is the transport protocol that will be used? What is the
-network protocol that will be used?
-
-The seventh step is to define the security of the protocol. What are the
-security mechanisms that will be used? What are the security mechanisms that
-will be implemented?
-
-The eighth step is to define the implementation of the protocol. How will the
-protocol be implemented? What are the different libraries that can be used to
-implement the protocol?
-
-The ninth step is to define the testing of the protocol. How will the protocol
-be tested? What are the different tests that will be implemented?
-
-The tenth step is to define the deployment of the protocol. How will the
-protocol be deployed? What are the different environments that will be used to
-deploy the protocol?
-
 It is also important to keep in mind that a protocol is never perfect. It can
 always be improved. It is important to keep an open mind and to be ready to
 change the protocol if needed.
+
+The more you think and design your application protocols, the less you will have
+to change them in the future and discover issues.
+
+### Section 1 - Overview
+
+This section defines the purpose of the protocol. What is the goal of the
+protocol? What is the problem that it tries to solve?
+
+> The DAI protocol is meant to transfer files over the network.
+>
+> The DAI protocol is a client-server protocol.
+>
+> The client connects to a server and request a file. The server sends the file
+> or an error message if the file does not exist.
+
+### Section 2 - Transport protocol
+
+> The DAI protocol uses the TCP protocol. The server runs on port 55555.
+>
+> The client has to know the IP address of the server to connect to. It establishes the connection with the server.
+>
+> The server closes the connection when the transfer is done or if an error
+> occurs (e.g. the file was not found).
+
+### Section 3 - Messages
+
+This section defines the messages that can be exchanged between the client and
+the server.
+
+> The client can send the following messages:
+>
+> - `GET <file>`: used to request a file from the server
+>   - `<file>`: the name of the file to request - The filename is an absolute
+>     path to the file (`/data/file.txt`)
+> - `QUIT`: used to close the connection with the server
+>
+> The server can send the following messages:
+>
+> - `OK`: used to notify the client that the connection was successful and the
+>   server is ready to receive commands
+> - `FILE <file>`: used to send the content of the requested file - the
+>   connection is closed after this message
+> - `ERROR <code>`: used to notify the client that an error occurred - the
+>   connection is closed after this message
+>   - `400`: the request was malformed
+>   - `404`: the file was not found
+>
+> All messages are UTF-8 encoded and end with a new line character (`\n`).
+>
+> If the file exists, the server sends the file content as binary data.
+
+### Section 4 - Examples
+
+This section defines examples of messages that can be exchanged between the
+client and the server and the exchange order. It is important to define these
+examples to illustrate the protocol and to help the reader to understand the
+protocol using sequence or state diagrams for example.
+
+![Example of a sequence diagram for the DAI protocol](./images/how-to-define-an-application-protocol-section-4-examples.svg)
 
 ## Reserved ports
 
@@ -362,14 +386,13 @@ Keep in mind the following points:
 
 - What is the purpose of the protocol?
 - On which port(s) does the protocol work?
-- On which protocol(s) does the SSH protocol work?
+- On which protocol(s) does the protocol work?
 - Who initiates the connection?
 - What are the available messages/actions?
 - What is the format of the messages/actions?
 - Are there any edge cases or error cases? What happens in these cases?
 
-You can represent your application protocol using a state machine or a sequence
-diagram.
+You can represent your application protocol using a sequence diagram.
 
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
 any other tools you want to create your diagrams.

@@ -27,8 +27,7 @@ The network application will be defined by an application protocol, a client and
 a server. The client will send some requests to the server and the server will
 send some responses to the client.
 
-The application protocol will be defined by you. You can decide to create your
-own little application protocol or you can implement an existing protocol.
+The application protocol will be defined by you.
 
 Feel free to be creative! For example, you can choose to create a chat
 application, a game, a file transfer application, etc. If you do not have any
@@ -104,9 +103,9 @@ repository!
 
 | #   | Criterion                                                                                           | Points |
 | --- | --------------------------------------------------------------------------------------------------- | -----: |
-| 13  | The client displays an error message with details when the connection has not succeed               |    0.2 |
-| 14  | The server starts on the defined port and accept connections from multiple clients at the same time |    0.2 |
-| 15  | The client can access the server and execute commands to interact with the server                   |    0.2 |
+| 13  | The server starts on the defined port and accept connections from multiple clients at the same time |    0.2 |
+| 14  | The client can access the server and execute commands to interact with the server                   |    0.2 |
+| 15  | The client displays an error message with details when the connection has not succeed               |    0.2 |
 | 16  | Some actions are private (unique to one user), some actions are common (affect all users)           |    0.2 |
 | 17  | No one can manipulate items from another client if it is not authorized                             |    0.2 |
 | 18  | The client and server correctly process the input/output commands                                   |    0.2 |
@@ -127,6 +126,7 @@ repository!
 
 - The network application must be written in Java, compatible with Java 17
 - The network application must be built using Maven
+- Your application must be slightly more complex and different than the ones presented during the course
 
 ## Remarks
 

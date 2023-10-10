@@ -112,7 +112,7 @@ You can find other resources and alternatives as well.
 
 - Defined by rules
 - Messages format
-- Order of message exchange using state machine or sequence diagram(s)
+- Order of message exchange using sequence diagram(s)
 - Edge and error cases
 
 ![bg right contain](./images/how-is-structured-an-application-protocol.png)
@@ -127,12 +127,73 @@ You can find other resources and alternatives as well.
 
 ### How to define an application protocol?
 
-- Define purpose of protocol
-- Define messages/actions, their format and exchange order
-- Define edge cases
-- Be ready to change
+- Lot of work and thinking
+- A protocol is never perfect
+- The more you think and design, the less you will have to change it later
 
 ![bg right contain](./images/how-to-define-an-application-protocol.png)
+
+### Section 1 - Overview
+
+This section defines the purpose of the protocol. What is the goal of the
+protocol? What is the problem that it tries to solve?
+
+> The DAI protocol is meant to transfer files over the network.
+>
+> The DAI protocol is a client-server protocol.
+>
+> The client connects to a server and request a file. The server sends the file
+> or an error message if the file does not exist.
+
+### Section 2 - Transport protocol
+
+This section defines the transport protocol, the port that will be used and who
+initiates and who closes the connection.
+
+> The DAI protocol uses the TCP protocol. The server runs on port 55555.
+>
+> The client has to know the IP address of the server to connect to. It establishes the connection with the server.
+>
+> The server closes the connection when the transfer is done or if an error
+> occurs (e.g. the file was not found).
+
+### Section 3 - Messages
+
+This section defines the messages that can be exchanged between the client and
+the server.
+
+> The client can send the following messages:
+>
+> - `GET <file>`: used to request a file from the server
+>   - `<file>`: the name of the file to request - The filename is an absolute
+>     path to the file (`/data/file.txt`)
+> - `QUIT`: used to close the connection with the server
+
+---
+
+> The server can send the following messages:
+>
+> - `OK`: used to notify the client that the connection was successful and the
+>   server is ready to receive commands
+> - `FILE <file>`: used to send the content of the requested file - the
+>   connection is closed after this message
+> - `ERROR <code>`: used to notify the client that an error occurred - the
+>   connection is closed after this message
+>   - `400`: the request was malformed
+>   - `404`: the file was not found
+
+---
+
+> All messages are UTF-8 encoded and end with a new line character (`\n`).
+>
+> If the file exists, the server sends the file content as binary data.
+
+### Section 4 - Examples
+
+This section defines examples of messages that can be exchanged between the
+client and the server and the exchange order.
+
+![bg right:40% h:90%](./images/how-to-define-an-application-protocol-section-4-examples.svg)
 
 ## Reserved ports
 
