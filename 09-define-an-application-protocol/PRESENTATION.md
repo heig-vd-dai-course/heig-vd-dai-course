@@ -85,6 +85,14 @@ _paginate: false
 
 ## What is an application protocol?
 
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#what-is-an-application-protocol).
+You can find other resources and alternatives as well.
+
+### What is an application protocol?
+
 - Defines application communication
 - RFCs on IETF
 - Relies on transport and network protocols
@@ -93,6 +101,14 @@ _paginate: false
 ![bg right contain](./images/what-is-an-application-protocol.png)
 
 ## How is structured an application protocol?
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#how-is-structured-an-application-protocol).
+You can find other resources and alternatives as well.
+
+### How is structured an application protocol?
 
 - Defined by rules
 - Messages format
@@ -103,6 +119,14 @@ _paginate: false
 
 ## How to define an application protocol?
 
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#how-to-define-an-application-protocol).
+You can find other resources and alternatives as well.
+
+### How to define an application protocol?
+
 - Define purpose of protocol
 - Define messages/actions, their format and exchange order
 - Define edge cases
@@ -111,6 +135,14 @@ _paginate: false
 ![bg right contain](./images/how-to-define-an-application-protocol.png)
 
 ## Reserved ports
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#reserved-ports).
+You can find other resources and alternatives as well.
+
+### Reserved ports
 
 - Ports identify processes or services
 - Ports are 16-bit unsigned numbers
@@ -121,6 +153,14 @@ _paginate: false
 ![bg right contain](./images/reserved-ports.png)
 
 ## A quick note on the Unix philosophy and POSIX
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#a-quick-note-on-the-unix-philosophy-and-posix).
+You can find other resources and alternatives as well.
+
+### A quick note on the Unix philosophy and POSIX
 
 - Unix philosophy: minimalist, modular software
 - POSIX defines APIs for portability on multiple operating systems
