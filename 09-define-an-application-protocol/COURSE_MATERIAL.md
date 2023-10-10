@@ -6,7 +6,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/95
 [illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+  https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720
 
 # Define an application protocol - Course material
 
@@ -27,8 +27,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [What is an application protocol?](#what-is-an-application-protocol)
 - [How is structured an application protocol?](#how-is-structured-an-application-protocol)
 - [How to define an application protocol?](#how-to-define-an-application-protocol)
+  - [Section 1 - Overview](#section-1---overview)
+  - [Section 2 - Transport protocol](#section-2---transport-protocol)
+  - [Section 3 - Messages](#section-3---messages)
+  - [Section 4 - Examples](#section-4---examples)
+- [Reserved ports](#reserved-ports)
+- [A quick note on the Unix philosophy and POSIX](#a-quick-note-on-the-unix-philosophy-and-posix)
 - [Practical content](#practical-content)
-  - [Explore the existing application protocols](#explore-the-existing-application-protocols)
+  - [Explore existing application protocols](#explore-existing-application-protocols)
   - [Define your own application protocol](#define-your-own-application-protocol)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -87,7 +93,8 @@ these messages and the order in which they can be exchanged.
 For example, the SMTP protocol defines the following messages (among others):
 
 - `HELO`: used to initiate a connection with the server
-- `EHLO`: used to initiate a connection with the server
+- `EHLO`: used to initiate a connection with the server (extended version of
+  `HELO`)
 - `MAIL`: used to specify the sender of the message
 - `RCPT`: used to specify the recipient of the message
 - `DATA`: used to send the content of the message
@@ -106,15 +113,12 @@ protocol in a future chapter to illustrate this example.
 
 A RFC also defines the order in which messages can be or must be exchanged.
 
-This is done using a state machine or a sequence diagram, depending on the
-nature/complexity of the protocol.
+This is done using a sequence diagram, depending on the nature/complexity of the
+protocol.
 
 A sequence diagram is a diagram that defines the different messages that can be
 exchanged between the client and the server and the order in which they can be
 exchanged.
-
-A state machine is a diagram that defines the different states of the protocol
-and the messages that can be exchanged between these states.
 
 An RFC also defines edge cases and error cases, using the same diagrams. It is
 important to define these cases to avoid any ambiguity and define how the
@@ -125,51 +129,161 @@ protocol should behave in these cases.
 Defining an application protocol is not an easy task. It requires a lot of
 thinking and a lot of testing.
 
-The first step is to define the purpose of the protocol. What is the goal of the
-protocol? What is the problem that it tries to solve?
-
-The second step is to define the messages that can be exchanged between the
-client and the server. What are the messages that the client can send to the
-server? What are the messages that the server can send to the client?
-
-The third step is to define the format of the messages. What is the format of
-the messages? What are the different fields that compose a message? What is the
-format of these fields?
-
-The fourth step is to define the order in which messages can be exchanged. What
-is the order in which messages can be exchanged? What is the order in which
-messages must be exchanged?
-
-The fifth step is to define the state machine or the sequence diagram. What are
-the different states of the protocol? What are the messages that can be
-exchanged between these states?
-
-The sixth step is to define the transport protocol and the network protocol that
-will be used. What is the transport protocol that will be used? What is the
-network protocol that will be used?
-
-The seventh step is to define the security of the protocol. What are the
-security mechanisms that will be used? What are the security mechanisms that
-will be implemented?
-
-The eighth step is to define the implementation of the protocol. How will the
-protocol be implemented? What are the different libraries that can be used to
-implement the protocol?
-
-The ninth step is to define the testing of the protocol. How will the protocol
-be tested? What are the different tests that will be implemented?
-
-The tenth step is to define the deployment of the protocol. How will the
-protocol be deployed? What are the different environments that will be used to
-deploy the protocol?
-
 It is also important to keep in mind that a protocol is never perfect. It can
 always be improved. It is important to keep an open mind and to be ready to
 change the protocol if needed.
 
+The more you think and design your application protocols, the less you will have
+to change them in the future and discover issues.
+
+### Section 1 - Overview
+
+This section defines the purpose of the protocol. What is the goal of the
+protocol? What is the problem that it tries to solve?
+
+> The DAI protocol is meant to transfer files over the network.
+>
+> The DAI protocol is a client-server protocol.
+>
+> The client connects to a server and request a file. The server sends the file
+> or an error message if the file does not exist.
+
+### Section 2 - Transport protocol
+
+> The DAI protocol uses the TCP protocol. The server runs on port 55555.
+>
+> The client has to know the IP address of the server to connect to. It establishes the connection with the server.
+>
+> The server closes the connection when the transfer is done or if an error
+> occurs (e.g. the file was not found).
+
+### Section 3 - Messages
+
+This section defines the messages that can be exchanged between the client and
+the server.
+
+> The client can send the following messages:
+>
+> - `GET <file>`: used to request a file from the server
+>   - `<file>`: the name of the file to request - The filename is an absolute
+>     path to the file (`/data/file.txt`)
+> - `QUIT`: used to close the connection with the server
+>
+> The server can send the following messages:
+>
+> - `OK`: used to notify the client that the connection was successful and the
+>   server is ready to receive commands
+> - `FILE <file>`: used to send the content of the requested file - the
+>   connection is closed after this message
+> - `ERROR <code>`: used to notify the client that an error occurred - the
+>   connection is closed after this message
+>   - `400`: the request was malformed
+>   - `404`: the file was not found
+>
+> All messages are UTF-8 encoded and end with a new line character (`\n`).
+>
+> If the file exists, the server sends the file content as binary data.
+
+### Section 4 - Examples
+
+This section defines examples of messages that can be exchanged between the
+client and the server and the exchange order. It is important to define these
+examples to illustrate the protocol and to help the reader to understand the
+protocol using sequence or state diagrams for example.
+
+![Example of a sequence diagram for the DAI protocol](./images/how-to-define-an-application-protocol-section-4-examples.svg)
+
+## Reserved ports
+
+In computer networking, a port is a communication endpoint. At the software
+level, within an operating system, a port is a logical construct that identifies
+a specific process or a type of network service. Ports are identified for each
+protocol and address combination by 16-bit unsigned numbers, commonly known as
+the port number.
+
+Using 16-bit unsigned numbers, the maximum number of ports is 65536. However,
+not all ports can be used by anyone. Some ports are reserved for specific
+protocols.
+
+The first 0 to 1023 ports are called well-known ports. These ports are reserved
+for specific protocols. Using these ports might require special privileges on
+Unix systems.
+
+Here is a list of examples for common well-known ports:
+
+- `20` and `21`: FTP
+- `22`: SSH
+- `23`: Telnet
+- `25`, `465` and `587`: SMTP
+- `53`: DNS
+- `80` and `443`: HTTP/HTTPS
+- `110` and `995`: POP3
+- `123`: NTP
+- `143` and `993`: IMAP
+
+The next 1024 to 49151 ports are called registered ports. Some ports are
+officially registered by the IANA (Internet Assigned Numbers Authority) and some
+are not. They can be used by anyone.
+
+Here is a list of examples for common registered ports:
+
+- `3306`: MySQL
+- `5000–5500`: League of Legends
+- `5432`: PostgreSQL
+- `6379`: Redis
+- `8080`: HTTP alternative port
+- `25565`: Minecraft
+- `27017`: MongoDB
+
+The last 49152 to 65535 ports are called dynamic ports. These ports cannot be
+registered and can be used by anyone. They are usually used for private or
+customized services or for temporary purposes.
+
+Here is a list of examples for common dynamic ports:
+
+- `51820`: WireGuard
+- `64738`: Mumble
+
+Wikipedia has a
+[list of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+that you can use to find the port number of a specific protocol.
+
+## A quick note on the Unix philosophy and POSIX
+
+> The [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy),
+> originated by Ken Thompson, is a set of cultural norms and philosophical
+> approaches to minimalist, modular software development. It is based on the
+> experience of leading developers of the Unix operating system.
+
+The Unix philosophy is a set of rules that defines how Unix programs should be
+designed. It is used to define the Unix operating system and the programs that
+are used on this operating system.
+
+The Unix philosophy can be defined by the following rules, among others:
+
+- Write programs that do one thing and do it well.
+- Write programs to work together.
+- Write programs to handle text streams, because that is a universal interface.
+
+You can inspire yourself from the Unix philosophy to define your own application
+protocol and tools, such as the CLI tool that you created in the previous
+chapter.
+
+> The
+> [Portable Operating System Interface (POSIX)](https://en.wikipedia.org/wiki/POSIX)
+> standard is a family of standards specified by the IEEE Computer Society for
+> maintaining compatibility between operating systems. POSIX defines both the
+> system and user-level application programming interfaces (APIs), along with
+> command line shells and utility interfaces, for software compatibility
+> (portability) with variants of Unix and other operating systems.
+
+Not all programs are/can be POSIX compliant. If you try to comply with the POSIX
+standard, you will be able to run your program on various operating systems
+without any issues.
+
 ## Practical content
 
-### Explore the existing application protocols
+### Explore existing application protocols
 
 In this section, you will explore the existing application protocols. This will
 help you to better understand how an application protocol is defined and how to
@@ -272,14 +386,13 @@ Keep in mind the following points:
 
 - What is the purpose of the protocol?
 - On which port(s) does the protocol work?
-- On which protocol(s) does the SSH protocol work?
+- On which protocol(s) does the protocol work?
 - Who initiates the connection?
 - What are the available messages/actions?
 - What is the format of the messages/actions?
 - Are there any edge cases or error cases? What happens in these cases?
 
-You can represent your application protocol using a state machine or a sequence
-diagram.
+You can represent your application protocol using a sequence diagram.
 
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
 any other tools you want to create your diagrams.
@@ -362,5 +475,5 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
-- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+- Main illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
+  [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)

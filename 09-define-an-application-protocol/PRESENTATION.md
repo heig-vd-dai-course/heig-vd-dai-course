@@ -51,7 +51,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720
 [practical-content]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#practical-content
 [practical-content-qr-code]:
@@ -74,59 +74,159 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Table of contents
+## Objectives
 
 - Learn where to find information about application protocols
-- Learn how is defined an application protocol
-- Learn how to define an application protocol
-- Learn how to use an application protocol
+- Understand application protocol
+- Define application protocols
+- How to use an application protocol
 
-- **[Theoretical content](#theoretical-content)**
-  - Installation of software: traditional vs. containerization
-  - OCI, images, containers and registries
-  - Dockerfile and Docker Compose
-  - Tips and tricks
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
----
-
-    - Install Docker (and Docker Compose)
-    - Run a container with Docker
-    - Run a container with Docker Compose
-    - Write a Dockerfile, build and run an image with Docker
-    - Build and run the same image with Docker Compose
-
-## Theoretical content
+## What is an application protocol?
 
 <!-- _class: lead -->
 
-### Title
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#what-is-an-application-protocol).
+You can find other resources and alternatives as well.
 
-> Quote
+### What is an application protocol?
 
-![bg right:40% w:50%](https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg)
+- Defines application communication
+- RFCs on IETF
+- Relies on transport and network protocols
+- Multiple revisions exist
+
+![bg right contain](./images/what-is-an-application-protocol.png)
+
+## How is structured an application protocol?
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#how-is-structured-an-application-protocol).
+You can find other resources and alternatives as well.
+
+### How is structured an application protocol?
+
+- Defined by rules
+- Messages format
+- Order of message exchange using sequence diagram(s)
+- Edge and error cases
+
+![bg right contain](./images/how-is-structured-an-application-protocol.png)
+
+## How to define an application protocol?
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#how-to-define-an-application-protocol).
+You can find other resources and alternatives as well.
+
+### How to define an application protocol?
+
+- Lot of work and thinking
+- A protocol is never perfect
+- The more you think and design, the less you will have to change it later
+
+![bg right contain](./images/how-to-define-an-application-protocol.png)
+
+### Section 1 - Overview
+
+This section defines the purpose of the protocol. What is the goal of the
+protocol? What is the problem that it tries to solve?
+
+> The DAI protocol is meant to transfer files over the network.
+>
+> The DAI protocol is a client-server protocol.
+>
+> The client connects to a server and request a file. The server sends the file
+> or an error message if the file does not exist.
+
+### Section 2 - Transport protocol
+
+This section defines the transport protocol, the port that will be used and who
+initiates and who closes the connection.
+
+> The DAI protocol uses the TCP protocol. The server runs on port 55555.
+>
+> The client has to know the IP address of the server to connect to. It establishes the connection with the server.
+>
+> The server closes the connection when the transfer is done or if an error
+> occurs (e.g. the file was not found).
+
+### Section 3 - Messages
+
+This section defines the messages that can be exchanged between the client and
+the server.
+
+> The client can send the following messages:
+>
+> - `GET <file>`: used to request a file from the server
+>   - `<file>`: the name of the file to request - The filename is an absolute
+>     path to the file (`/data/file.txt`)
+> - `QUIT`: used to close the connection with the server
 
 ---
 
-Content
+> The server can send the following messages:
+>
+> - `OK`: used to notify the client that the connection was successful and the
+>   server is ready to receive commands
+> - `FILE <file>`: used to send the content of the requested file - the
+>   connection is closed after this message
+> - `ERROR <code>`: used to notify the client that an error occurred - the
+>   connection is closed after this message
+>   - `400`: the request was malformed
+>   - `404`: the file was not found
 
-#### Summary
+---
 
-- TODO
+> All messages are UTF-8 encoded and end with a new line character (`\n`).
+>
+> If the file exists, the server sends the file content as binary data.
 
-#### Alternatives
+### Section 4 - Examples
 
-- TODO
+This section defines examples of messages that can be exchanged between the
+client and the server and the exchange order.
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+![bg right:40% h:90%](./images/how-to-define-an-application-protocol-section-4-examples.svg)
 
-#### Resources
+## Reserved ports
 
-- TODO
+<!-- _class: lead -->
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#reserved-ports).
+You can find other resources and alternatives as well.
+
+### Reserved ports
+
+- Ports identify processes or services
+- Ports are 16-bit unsigned numbers
+- Well-known ports: 0-1023
+- Registered ports: 1024-49151
+- Dynamic ports: 49152-65535
+
+![bg right contain](./images/reserved-ports.png)
+
+## A quick note on the Unix philosophy and POSIX
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#a-quick-note-on-the-unix-philosophy-and-posix).
+You can find other resources and alternatives as well.
+
+### A quick note on the Unix philosophy and POSIX
+
+- Unix philosophy: minimalist, modular software
+- POSIX defines APIs for portability on multiple operating systems
+
+![bg right contain](./images/a-quick-note-on-the-unix-philosophy-and-posix.png)
 
 ## Practical content
 
@@ -134,11 +234,13 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### What will you do?
 
--
+- Explore existing application protocols
+- Define your own application protocol based a use case
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+Understanding how an application protocol is defined will help you to understand
+how to use them in future chapters!
+
+![bg right:40%](https://images.unsplash.com/photo-1535905557558-afc4877a26fc?fit=crop&h=720)
 
 ### Find the practical content
 
@@ -165,8 +267,17 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- TODO
+- Docker and Docker Compose
+
+![bg right:40%](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
+  [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Henry Be](https://unsplash.com/@henry_be) on
+  [Unsplash](https://unsplash.com/photos/lc7xcWebECc)
+- Illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
+  [Unsplash](https://unsplash.com/photos/xewrfLD8emE)

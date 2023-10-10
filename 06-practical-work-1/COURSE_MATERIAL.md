@@ -118,6 +118,8 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 - The CLI application must be written in Java, compatible with Java 17
 - The CLI application must be built using Maven
+- Your application must be slightly more complex and different than the ones presented during the course
+
 
 ## Remarks
 
