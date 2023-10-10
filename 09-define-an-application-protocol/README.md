@@ -1,4 +1,4 @@
-# Docker and Docker Compose
+# Define an application protocol
 
 - Time in class: 2 periods
 - Presentation
