@@ -146,7 +146,7 @@ $> cat output.txt
 COUCOU ?A VA ?
 ```
 
-Why is the `ç` not converted to uppercase ?
+Why is the `ç` not converted to uppercase?
 
 ## Find the practical work
 

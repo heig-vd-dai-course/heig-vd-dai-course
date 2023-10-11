@@ -175,6 +175,7 @@ The order of presentation is random and is stated in the next slides.
 
 | #   | Group                                 | Passage |
 | --- | ------------------------------------- | ------- |
+| 16  | Aurélien Richard                      | 17:30   |
 | 17  | Massimo Stefani and Jonas Troeltsch   | 17:36   |
 | 18  | Ahmad Jano                            | 17:42   |
 | 19  | Simon Guggisberg and Jeremiah Steiner | 17:48   |
@@ -186,8 +187,8 @@ The order of presentation is random and is stated in the next slides.
 Your feedback helps us know **what what you liked and what you disliked** in
 your learning experience. **The feedback is anonymous**.
 
-We would be very grateful if you could take a few minutes to fill it. **Thank
-you!**
+We would be very grateful if you could [take a few minutes to fill
+it][feedback]. **Thank you!**
 
 [![bg right w:75%][feedback]][feedback]
 

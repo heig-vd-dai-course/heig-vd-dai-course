@@ -186,7 +186,8 @@ Here is an example of a `.gitignore` file:
 /target/
 ```
 
-More information about gitignore can be found in the official documentation: <https://git-scm.com/docs/gitignore>.
+More information about gitignore can be found in the official documentation:
+<https://git-scm.com/docs/gitignore>.
 
 ### Summary
 
