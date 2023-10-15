@@ -152,7 +152,8 @@ protocol? What is the problem that it tries to solve?
 
 > The DAI protocol uses the TCP protocol. The server runs on port 55555.
 >
-> The client has to know the IP address of the server to connect to. It establishes the connection with the server.
+> The client has to know the IP address of the server to connect to. It
+> establishes the connection with the server.
 >
 > The server closes the connection when the transfer is done or if an error
 > occurs (e.g. the file was not found).
@@ -319,7 +320,7 @@ Try to answer the following questions using the
 #### Better understand the IMAP protocol
 
 Try to answer the following questions using the
-[official RFC for the IMAP protocol](rfc3501):
+[official RFC for the IMAP protocol](https://datatracker.ietf.org/doc/html/rfc3501):
 
 - What is the purpose of the IMAP protocol?
 - On which port does the IMAP protocol work?
@@ -331,7 +332,7 @@ Try to answer the following questions using the
 #### Better understand the SSH protocol
 
 Try to answer the following questions using the
-[official RFC for the SSH protocol](https://tools.ietf.org/html/rfc4253):
+[official RFC for the SSH protocol](https://datatracker.ietf.org/doc/html/rfc4253):
 
 - What is the purpose of the SSH protocol?
 - On which port does the SSH protocol work?
