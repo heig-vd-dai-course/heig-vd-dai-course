@@ -129,7 +129,15 @@ repository!
 
 ## Constraints
 
+<<<<<<< Updated upstream
 - Your web infrastructure must be slightly more complex and different than the ones presented during the course
+=======
+<<<<<<< Updated upstream
+=======
+- Your web infrastructure must be slightly more complex and different than the
+  ones presented during the course
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 - You must use a reverse proxy with a domain name to access the web applications
 - You must use Docker and Docker Compose to deploy the web applications
 

@@ -173,6 +173,17 @@ In the next chapter, you will learn the following topics:
 
 ## Sources
 
+<<<<<<< Updated upstream
 - Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+=======
+<<<<<<< Updated upstream
+- Main illustration by []() on [Unsplash]()
+=======
+- Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
+  [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

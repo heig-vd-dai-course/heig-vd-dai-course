@@ -36,7 +36,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Resources](#resources)
 - [Docker Compose](#docker-compose)
   - [Docker Compose specification](#docker-compose-specification)
+  - [Docker Compose v1 vs. Docker Compose v2](#docker-compose-v1-vs-docker-compose-v2)
   - [Summary](#summary-1)
+  - [Cheatsheet](#cheatsheet-1)
   - [Alternatives](#alternatives-1)
   - [Resources](#resources-1)
 - [Docker Desktop](#docker-desktop)
@@ -44,7 +46,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Docker Hub](#docker-hub)
   - [Alternatives](#alternatives-3)
 - [Tips and tricks](#tips-and-tricks)
-  - [Health checks](#health-checks)
+  - [Healthchecks](#healthchecks)
   - [Free some space](#free-some-space)
   - [Multi-stage builds](#multi-stage-builds)
   - [Multi-architecture builds](#multi-architecture-builds)
@@ -67,8 +69,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-In this chapter, you will learn how to use containerization to install and run
-software on your computer with the help of Docker and Docker Compose.
+In this chapter, you will learn how installation of software can be tedious and
+how containerization can help you with that.
+
+You will learn how to install and run software on your computer with the help of
+Docker and Docker Compose to avoid the need to install the software directly on
+your computer.
 
 This is a fairly long and complete chapter. It will take you some time to
 complete it. Do not hesitate to take breaks. The content of this chapter will be
@@ -285,6 +291,9 @@ docker run --entrypoint /bin/sh <image-name>
 # Start a container and override the command
 docker run <image-name> <command>
 
+# Check the logs of a container
+docker logs <container-id>
+
 # Delete all stopped containers
 docker container prune
 
@@ -325,7 +334,16 @@ database for example).
 ### Docker Compose specification
 
 The Docker Compose specification defines a standard for defining and running
+<<<<<<< Updated upstream
 multi-container Docker applications.
+=======
+<<<<<<< Updated upstream
+multi-container Docker applications. The Docker Compose specification is
+implemented by Docker Compose, but also by other tools.
+=======
+multi-container Docker applications together.
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 The Docker Compose specification defines the following terms (among others):
 
@@ -333,14 +351,69 @@ The Docker Compose specification defines the following terms (among others):
 - Volume: a directory that is shared between the container and the host
 - Network: a network that is shared between containers
 
+<<<<<<< Updated upstream
 TODO
+=======
+<<<<<<< Updated upstream
+=======
+Docker Compose allows to define a multi-container Docker application in a Docker
+Compose file. It is easier to use than plain Docker commands and can be
+versioned with the application.
+>>>>>>> Stashed changes
 
 More information about the Docker Compose specification can be found in the
 official documentation: <https://docs.docker.com/compose/compose-file/>.
 
+<<<<<<< Updated upstream
+=======
+### Docker Compose v1 vs. Docker Compose v2
+
+Please be aware that there are two versions of Docker Compose: Docker Compose v1
+and Docker Compose v2.
+
+Docker Compose v1 is the original version of Docker Compose. It was built with
+Python and is now deprecated. It is still available but it is not recommended to
+use it. The command to use Docker Compose v1 was `docker-compose`.
+
+Docker Compose v2 is the new version of Docker Compose. It is built with Go and
+it is the recommended version to use. The new command to use Docker Compose v2
+is `docker compose`.
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 ### Summary
 
-- TODO
+- Docker Compose allows to define a multi-container Docker application in a
+  Docker Compose file
+- A Docker Compose file can consist of a set of services, volumes and networks
+- A Docker Compose file (`docker-compose.yml`) can be easily shared and
+  versioned with the application
+- Docker Compose v2 is the recommended version to use
+
+### Cheatsheet
+
+```sh
+# Start all services defined in the docker-compose.yml file
+docker compose up
+
+# Start all services defined in the docker-compose.yml file in background
+docker compose up -d
+
+# Display all running services
+docker compose ps
+
+# Stop all services defined in the docker-compose.yml file
+docker compose down
+
+# Check the logs of a service
+docker compose logs <service-name>
+
+# Check the logs of all services defined in the docker-compose.yml file
+docker compose logs
+
+# Follow the logs of a service
+docker compose logs -f <service-name>
+```
 
 ### Alternatives
 
@@ -348,6 +421,8 @@ _Alternatives are here for general knowledge. No need to learn them._
 
 - [Docker Swarm](https://docs.docker.com/engine/swarm/)
 - [Kubernetes](https://kubernetes.io/)
+- [Nomad](https://www.nomadproject.io/)
+- [Rancher](https://rancher.com/)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -404,23 +479,23 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Tips and tricks
 
-### Health checks
+### Healthchecks
 
-Health checks are used to check if a container is healthy. They are used to
-check if the container is ready to accept requests.
+Healthchecks are used to check if a container is healthy. They are used to check
+if the container is ready to accept requests.
 
-Health checks are defined in the Dockerfile. They are defined with the
+Healthchecks are defined in the Dockerfile. They are defined with the
 `HEALTHCHECK` instruction.
 
 The `HEALTHCHECK` instruction takes the following arguments:
 
-- `--interval`: the interval between two health checks
-- `--timeout`: the timeout of a health check
-- `--start-period`: the time to wait before starting the health checks
+- `--interval`: the interval between two healthchecks
+- `--timeout`: the timeout of a healthcheck
+- `--start-period`: the time to wait before starting the healthchecks
 - `--retries`: the number of retries before considering the container unhealthy
 - `CMD`: the command to run to check the health of the container
 
-For example, the following instruction defines a health check that runs every 30
+For example, the following instruction defines a healthcheck that runs every 30
 seconds and that times out after 10 seconds:
 
 ```dockerfile
@@ -428,18 +503,18 @@ HEALTHCHECK --interval=30s --timeout=10s \
   CMD curl -f http://localhost/ || exit 1
 ```
 
-If no health check is defined, Docker will use the default health check. The
-default health check is to check if the container is running.
+If no healthcheck is defined, Docker will use the default healthcheck. The
+default healthcheck is to check if the container is running.
 
-If no health check is defined, the container will be considered healthy as soon
+If no healthcheck is defined, the container will be considered healthy as soon
 as it is running. This is not always what you want. You might want to wait for
 the container to be ready to accept requests.
 
-You can define a health check that checks if the container is ready to accept in
-the Docker Compose file. You can use the `healthcheck` option to define a health
-check.
+You can define a healthcheck that checks if the container is ready to accept in
+the Docker Compose file. You can use the `healthcheck` option to define a
+healthcheck.
 
-For example, the following option defines a health check that runs every 30
+For example, the following option defines a healthcheck that runs every 30
 seconds and that times out after 10 seconds:
 
 ```yaml
@@ -572,6 +647,11 @@ Ensure that the Docker daemon is running if you have any issue.
 
 ### Run a container with Docker
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 In this section, you will run a container with Docker.
 
 #### Run a `hello-world` container with Docker
@@ -780,6 +860,637 @@ been stopped:
 
 You can check that the container has been stopped with the `docker ps` command
 as seen previously.
+<<<<<<< Updated upstream
+=======
+
+### Write a Dockerfile, build and run an image with Docker
+
+In this section, you will write a Dockerfile, build it with a tag and run it
+with Docker.
+
+#### Write, build and run a simple Dockerfile
+
+Create a new directory named `my-custom-dockerfile` and go into it:
+
+```sh
+# Create a new directory
+mkdir my-custom-dockerfile
+```
+
+Create a new file named `Dockerfile` in the `my-custom-dockerfile` directory and
+put the following content in it:
+
+```dockerfile
+# Start from the alpine image
+FROM alpine:3.18
+
+# Set an GREETINGS environment variable
+ENV GREETINGS=Hello
+
+# Set a simple command
+CMD ["/bin/sh", "-c", "echo \"$GREETINGS from my custom Dockerfile!\""]
+```
+
+The `FROM` instruction is used to specify the base image. It is the first
+instruction of the Dockerfile. It is required.
+
+The `ENV` instruction is used to specify an environment variable. It is used to
+specify the value of the `GREETINGS` environment variable. An environment
+variable is available during the build and the run of the container.
+
+The `CMD` instruction is used to specify the command to run when the container
+starts. In this case, it will invoke the shell to run the `echo` command with
+the value of the `GREETINGS` environment variable.
+
+You can now build the image with the following command:
+
+```sh
+# Build the image with the my-custom-dockerfile:v1.0 tag
+docker build \
+  -t my-custom-dockerfile:v1.0 \
+  my-custom-dockerfile
+```
+
+The `-t` option is used to tag the image. It is used to specify the name and the
+tag of the image. The name and the tag are separated by a colon (`:`).
+
+The `my-custom-dockerfile` argument is used to specify the build context. It is
+used to specify the directory that contains the Dockerfile. If you have a
+Dockerfile named `Dockerfile` in the current directory, you can omit this
+argument.
+
+The `v1.0` tag is used to specify the version of the image. It is not required.
+
+The output should be similar to the following:
+
+```text
+docker build -t my-custom-dockerfile:v1.0 my-custom-dockerfile
+[+] Building 0.1s (5/5) FINISHED                                                                                                                                                 docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                                                                             0.1s
+ => => transferring dockerfile: 145B                                                                                                                                                             0.0s
+ => [internal] load .dockerignore                                                                                                                                                                0.1s
+ => => transferring context: 2B                                                                                                                                                                  0.0s
+ => [internal] load metadata for docker.io/library/alpine:3.18                                                                                                                                 0.0s
+ => [1/1] FROM docker.io/library/alpine:3.18                                                                                                                                                   0.0s
+ => exporting to image                                                                                                                                                                           0.0s
+ => => exporting layers                                                                                                                                                                          0.0s
+ => => writing image sha256:1210ca793235e534e370c97ad78fc30603dfff0fd6332460598d43d5a9ba5dd8                                                                                                     0.0s
+ => => naming to docker.io/library/my-custom-dockerfile:v1.0
+```
+
+You can now run the image with the following command:
+
+```sh
+# Run the image with the my-custom-dockerfile:v1.0 tag
+docker run --rm \
+  my-custom-dockerfile:v1.0
+```
+
+The output should be similar to the following:
+
+```text
+Hello from my custom Dockerfile!
+```
+
+Congratulations! You have just ran your first Docker image!
+
+You can change the value of the `GREETINGS` environment variable with the
+following command:
+
+```sh
+# Run the image with the my-custom-dockerfile:v1.0 tag and override the environment variable
+docker run --rm \
+  --env GREETINGS=Hi \
+  my-custom-dockerfile:v1.0
+```
+
+The `--env` option is used to override the value of an environment variable. It
+is used to specify the name and the value of the environment variable. The name
+and the value are separated by an equal sign (`=`).
+
+The output should be similar to the following:
+
+```text
+Hi from my custom Dockerfile!
+```
+
+Environment variables are really useful to configure your application. You can
+use them to configure the database connection for example.
+
+#### Write, build and run a more complex Dockerfile
+
+Update the `Dockerfile` with the following content:
+
+```dockerfile
+# Start from the alpine image
+FROM alpine:3.18
+
+# Install the tree package using the apk package manager
+RUN apk add --no-cache tree
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the current directory to the /app directory in the container
+COPY . .
+
+# Set a volume
+VOLUME /app/data
+
+# Set the entry point
+ENTRYPOINT ["tree", "--dirsfirst"]
+
+# Set the default command
+CMD ["/app"]
+```
+
+The `RUN` instruction is used to run a command in the container. It is used to
+install the `tree` package using the `apk` package manager from Alpine Linux.
+The `--no-cache` option is used to not cache the index locally. It is used to
+reduce the size of the image.
+
+The `WORKDIR` instruction is used to set the working directory of the container
+to `/app`. All the following instructions will be executed in the `/app`
+directory.
+
+The `COPY` instruction is used to copy the content of the current directory to
+the `/app` directory in the container.
+
+The `VOLUME` instruction is used to specify a volume. It is used to specify a
+directory that will be shared between the container and the host. The
+`/app/data` directory will be shared between the container and the host. This is
+only informative and can be omitted.
+
+The `ENTRYPOINT` instruction is used to specify the entry point of the
+container. It is used to specify the command that will be run when the container
+starts.
+
+The `CMD` instruction is used to specify the default command of the container.
+It is used to specify the arguments that will be passed to the entry point.
+
+You can now build the image with the following command:
+
+```sh
+# Build the image with the my-custom-dockerfile:v2.0 tag
+docker build \
+  -t my-custom-dockerfile:v2.0 \
+  my-custom-dockerfile
+```
+
+Run the container with the following command:
+
+```sh
+# Run the image with the my-custom-dockerfile:v2.0 tag
+docker run --rm \
+  my-custom-dockerfile:v2.0
+```
+
+The output should be similar to the following:
+
+```text
+/app
+├── data
+└── Dockerfile
+
+2 directories, 1 file
+```
+
+The `tree` command is used to display the content of a directory. It is not
+available by default in Alpine Linux. It was installed with the `apk` package
+manager.
+
+By default, the `tree` command displays the content of the `/app` directory
+inside the container.
+
+You can run the following command to display the content of the `/app/data`
+directory inside the container:
+
+```sh
+# Run the image with the my-custom-dockerfile:v2.0 tag and override the command
+docker run --rm my-custom-dockerfile:v2.0 /app/data
+```
+
+The output should be similar to the following:
+
+```text
+/app/data
+
+0 directories, 0 files
+```
+
+The command was overridden with the `/app/data` argument. The `tree` command
+displayed the content of the `/app/data` directory instead of the `/app`
+directory.
+
+At the moment, the `/app/data` directory is empty. Let's create a file in the
+`/app/data` directory inside the container:
+
+```sh
+# Run the image with the my-custom-dockerfile:v2.0 tag and override the entrypoint
+docker run --rm --entrypoint /bin/sh my-custom-dockerfile:v2.0 -c "touch /app/data/my-file.txt"
+```
+
+The `--entrypoint` option is used to override the entry point of the container.
+It is used to specify the command that will be run when the container starts,
+replacing the default entry point `tree` command by the `/bin/sh` command.
+
+The `-c` option is used to execute a command with `/bin/sh` in the container. It
+is used to run the `touch /app/data/my-file.txt` command in the container to
+create a file named `my-file.txt` in the `/app/data` directory.
+
+There should be no output this time. You can run the following command to
+display the content of the `/app/data` directory inside the container:
+
+```sh
+# Run the image with the my-custom-dockerfile:v2.0 tag and override the command
+docker run --rm my-custom-dockerfile:v2.0 /app/data
+```
+
+The output should be similar to the following:
+
+```text
+/app/data
+
+0 directories, 0 files
+```
+
+What happened? The `/app/data` directory is empty again!
+
+This is because the container is stateless. All the changes made in the
+container are lost when the container is stopped. When working with containers,
+you should not store any data in the container. You should store the data in a
+volume instead.
+
+Let's run the container again, but this time, let's mount a volume on the
+`/app/data` directory inside the container:
+
+```sh
+# Run the image with the my-custom-dockerfile:v2.0 tag and mount a volume
+docker run --rm -v ./my-custom-dockerfile/my-data:/app/data --entrypoint /bin/sh my-custom-dockerfile:v2.0 -c "touch /app/data/my-file.txt"
+```
+
+The `-v` option is used to mount a volume. It is used to specify a directory on
+the host that will be mounted on the `/app/data` directory inside the container.
+
+The `./my-data` argument is used to specify the directory on the host to mount
+on the `/app/data` directory inside the container. It is a relative path. It is
+relative to the current directory and should be created automatically if it does
+not exist.
+
+The container should have created a file named `my-file.txt` in the `./my-data`
+directory on the host. You can now run the initial command to display the
+content of the `/app/data` directory inside the container that is mapped to the
+`./my-data` directory on the host:
+
+```sh
+# Run the image with the my-custom-dockerfile:v2.0 tag and override the command
+docker run --rm -v ./my-custom-dockerfile/my-data:/app/data my-custom-dockerfile:v2.0 /app/data
+```
+
+The output should be similar to the following:
+
+```text
+/app/data
+└── my-file.txt
+
+1 directory, 1 file
+```
+
+The files are persisted on the host!
+
+Run the container again without overriding the command to display all `/app`
+files inside the container:
+
+```sh
+# Run the image with the my-custom-dockerfile:v2.0 tag
+docker run --rm -v ./my-custom-dockerfile/my-data:/app/data my-custom-dockerfile:v2.0
+```
+
+The output should be similar to the following:
+
+```text
+/app
+├── data
+│   └── my-file.txt
+└── Dockerfile
+
+2 directories, 2 files
+```
+
+All the files are displayed, the `Dockerfile` file from the container and the
+files persisted in the volume.
+
+The `Dockerfile` file will be the same each time the container is run as it was
+copied from the host when it was created. The files persisted in the volume will
+be persisted between each run of the container.
+
+More information about volumes can be found in the official documentation:
+<https://docs.docker.com/storage/volumes/>.
+
+#### Write, build and run an even more complex Dockerfile
+
+We will use [File Browser](https://github.com/filebrowser/filebrowser) in this
+example.
+
+File Browser is a web-based file manager. It is written in Go. It is available
+as a Docker image but we will create our own image to illustrate how to use a
+Dockerfile to install an application.
+
+Update the `Dockerfile` with the following content:
+
+```dockerfile
+# Start from the sigoden/dufs image
+FROM alpine:3.18
+
+# Set File Browser version as an argument
+ARG FILEBROWSER_VERSION=2.25.0-r0
+
+# Install the main filebrowser package from the testing repository
+RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing "filebrowser=$FILEBROWSER_VERSION"
+
+# Install additional packages
+RUN apk add --no-cache curl
+
+# Set the working directory
+WORKDIR /app
+
+# Set volumes
+VOLUME /app/config
+VOLUME /app/data
+
+# Set the exposed ports
+EXPOSE 5000
+
+# Set a healthcheck
+HEALTHCHECK --start-period=2s --interval=5s --timeout=3s \
+    CMD curl -f http://localhost:5000/health || exit 1
+
+# Override the entrypoint
+ENTRYPOINT ["/usr/bin/filebrowser"]
+
+# Set the default command
+CMD ["--address", "0.0.0.0", "--port", "5000", "--database", "/app/config/database.db", "--root", "/app/data"]
+```
+
+The `ARG` instruction is used to specify an argument. An argument is only used
+during the build of the image. It is not used when the container is run.
+
+It can be used to customize the build of the image. It can be used to specify
+the version of the application to install for example.
+
+The `EXPOSE` instruction is used to specify the ports that will be exposed by
+the container. This is only informative and can be omitted.
+
+The `HEALTHCHECK` instruction is used to specify a healthcheck. It is used to
+specify a command that will be run periodically to check if the container is
+healthy.
+
+The `ENTRYPOINT` instruction is used to start the application. The `CMD` are the
+arguments that will be passed to the entry point.
+
+You can now build the image with the following command:
+
+```sh
+# Build the image with the my-custom-dockerfile:v3.0 tag
+docker build \
+  -t my-custom-dockerfile:v3.0 \
+  my-custom-dockerfile
+```
+
+Start the container with the following command:
+
+```sh
+# Run the image with the my-custom-dockerfile:v3.0 tag
+docker run --rm -p 8080:5000 -v ./my-custom-dockerfile/my-data:/app/data -v ./my-custom-dockerfile/my-config:/app/config my-custom-dockerfile:v3.0
+```
+
+The `-p` option is used to publish a container's port(s) to the host. It is used
+to specify the port of the container that will be mapped to the port of the host
+to access the application.
+
+The output should be similar to the following:
+
+```text
+2023/10/09 09:59:25 No config file used
+2023/10/09 09:59:25 Listening on [::]:5000
+```
+
+As you can notice, the application is running inside the container on the
+port 5000. However, we have mapped the port 5000 of the container to the port
+8080 of the host. You can now open your browser and go to
+<http://localhost:8080> to access the application.
+
+The default username is `admin` and the default password is `admin`. You can
+change it in the settings of the application.
+
+You should have access to the previous files created in the `/app/data`
+directory as it is mounted on the `./my-data` directory on the host. If you try
+to create a new file, it should appear in the `./my-data` directory on the host.
+
+The directory `/app/config` contains the database of the application. It is
+mounted on the `./my-config` directory on the host.
+
+You can now stop the container with `CTRL+C`.
+
+Start the container again with the following command:
+
+```sh
+# Run the image with the my-custom-dockerfile:v3.0 tag
+docker run --rm -d -p 8080:5000 -v ./my-custom-dockerfile/my-data:/app/data -v ./my-custom-dockerfile/my-config:/app/config my-custom-dockerfile:v3.0
+```
+
+This will start the container in detached mode.
+
+Check the container health with the following command:
+
+```sh
+# Check the container health
+docker ps
+```
+
+The output should be similar to the following:
+
+```text
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                    PORTS                    NAMES
+67c49b39eb41   my-custom-dockerfile:v3.0   "/usr/bin/filebrowse…"   38 seconds ago   Up 38 seconds (healthy)   0.0.0.0:8080->5000/tcp   interesting_blackburn
+```
+
+The `STATUS` column should display `(healthy)`.
+
+You can stop the container with the `docker stop` command as seen previously.
+
+#### Delete the images
+
+You can delete the images with the following command:
+
+```sh
+# Delete the my-custom-dockerfile:v1.0 image
+docker image rm my-custom-dockerfile:v1.0
+
+# Delete the my-custom-dockerfile:v2.0 image
+docker image rm my-custom-dockerfile:v2.0
+```
+
+You will keep the `my-custom-dockerfile:v3.0` image for the next section.
+
+### Publish an image on GitHub Container Registry
+
+In this section, you will publish an image on GitHub Container Registry.
+
+#### Create a personal access token
+
+You will need a personal access token to publish an image on the GitHub
+Container Registry.
+
+A personal access token is a token that you can use to authenticate to GitHub
+instead of using your password. It is more secure than using your password.
+
+Follow the instructions on the official website to authenticate with a personal
+access token (classic):
+<https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry>.
+
+#### Login to GitHub Container Registry
+
+Run the following command in a terminal to export the personal access token as
+an environment variable:
+
+```sh
+# Export the personal access token as an environment variable
+export GITHUB_CR_PAT=YOUR_TOKEN
+```
+
+Then, login to GitHub Container Registry with the following command, replacing
+`<username>` with your GitHub username:
+
+```sh
+# Login to GitHub Container Registry
+echo $GITHUB_CR_PAT | docker login ghcr.io -u <username> --password-stdin
+```
+
+The output should be similar to the following:
+
+```text
+Login Succeeded
+```
+
+#### Correctly tag the image
+
+The image must be tagged with the following format:
+`ghcr.io/<username>/<image>:<tag>`.
+
+Run the following command to tag the image with the correct format, replacing
+`<username>` with your GitHub username:
+
+```sh
+# Tag the image with the correct format
+docker tag my-custom-dockerfile:v3.0 ghcr.io/<username>/my-custom-dockerfile:v3.0
+```
+
+You can list all the images with the following command:
+
+```sh
+# List all the images
+docker images
+```
+
+The output should be similar to the following:
+
+```text
+REPOSITORY                              TAG           IMAGE ID       CREATED        SIZE
+my-custom-dockerfile                    v3.0          e42e7597d672   3 hours ago    28MB
+ghcr.io/<username>/my-custom-dockerfile   v3.0          e42e7597d672   3 hours ago    28MB
+```
+
+You can delete the `my-custom-dockerfile:v3.0` image with the following command:
+
+```sh
+# Delete the my-custom-dockerfile:v3.0 image
+docker image rm my-custom-dockerfile:v3.0
+```
+
+#### Publish the image on GitHub Container Registry
+
+Now publish the image on GitHub Container Registry with the following command,
+replacing `<username>` with your GitHub username:
+
+```sh
+# Publish the image on GitHub Container Registry
+docker push ghcr.io/<username>/my-custom-dockerfile:v3.0
+```
+
+The output should be similar to the following:
+
+```text
+The push refers to repository [ghcr.io/<username>/my-custom-dockerfile]
+c0b7c5c10b2e: Pushed
+409ef710a552: Pushed
+1f2bcdca11cf: Pushed
+cc2447e1835a: Pushed
+v3.0: digest: sha256:e2df66ffaf748cb32b00d58226f2b89017e99b234e8d9de1fb2bde971f626ce5 size: 1156
+```
+
+You can now go to the GitHub Container Registry page of your repository to check
+that the image has been published, replacing `username` with your GitHub
+username: <https://github.com/username?tab=packages>, as shown in the following
+screenshot:
+
+![GitHub Container Registry](./images/practical-content-publish-the-image-on-the-github-container-registry.png)
+
+As you can notice, the image is private by default. You can change the
+visibility of the image in the settings of the image.
+
+You can keep your images private if you want. Just be aware that you will need
+to authenticate to GitHub Container Registry to pull the image.
+
+You can delete the local image if you want.
+
+Congrats! You have just published your first image on GitHub Container Registry!
+
+### Use the published image with Docker
+
+In this section, you will use the published image with Docker.
+
+#### Pull the image from GitHub Container Registry
+
+Run the following command to pull the image from GitHub Container Registry,
+replacing `<username>` with your GitHub username:
+
+```sh
+# Pull the image from GitHub Container Registry
+docker pull ghcr.io/<username>/my-custom-dockerfile:v3.0
+```
+
+The output should be similar to the following if you have deleted the
+`ghcr.io/<username>/my-custom-dockerfile:v3.0` image locally:
+
+```text
+v3.0: Pulling from <username>/my-custom-dockerfile
+Digest: sha256:e2df66ffaf748cb32b00d58226f2b89017e99b234e8d9de1fb2bde971f626ce5
+Status: Downloaded newer image for ghcr.io/<username>/my-custom-dockerfile:v3.0
+ghcr.io/<username>/my-custom-dockerfile:v3.0
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview ghcr.io/<username>/my-custom-dockerfile:v3.0
+```
+
+#### Run the image with Docker
+
+Running the image with Docker is pretty straightforward. You just need to run
+the following command to run the image with Docker, replacing `<username>` with
+your GitHub username:
+
+```sh
+# Run the image with Docker
+docker run --rm -p 8080:5000 -v ./my-custom-dockerfile/my-data:/app/data -v ./my-custom-dockerfile/my-config:/app/config ghcr.io/<username>/my-custom-dockerfile:v3.0
+```
+
+If you have not deleted the local volumes, you should have access to the
+previous files created with File Browser, just as before, using the image you
+have published on GitHub Container Registry!
+
+>>>>>>> Stashed changes
+### Run a container with Docker Compose
+>>>>>>> Stashed changes
 
 ### Write a Dockerfile, build and run an image with Docker
 
@@ -1366,6 +2077,7 @@ Congrats! You have just published your first image on GitHub Container Registry!
 
 ### Use the published image with Docker
 
+<<<<<<< Updated upstream
 In this section, you will use the published image with Docker.
 
 #### Pull the image from GitHub Container Registry
@@ -1419,6 +2131,11 @@ The Docker Compose file is easier to read and re-use than pure Docker commands.
 The Docker Compose file is named `docker-compose.yml` by default. You can use
 the `-f` option to specify a different file name.
 
+=======
+<<<<<<< Updated upstream
+### Use the published image with Docker Compose
+=======
+>>>>>>> Stashed changes
 #### Write a Docker Compose file
 
 Create a new file named `docker-compose.yml` in the `my-custom-dockerfile`
@@ -1483,7 +2200,11 @@ The output should be similar to the following:
 
 ```text
 NAME                                 IMAGE                                        COMMAND                                                                                                    SERVICE       CREATED         STATUS                   PORTS
+<<<<<<< Updated upstream
 my-custom-dockerfile-filebrowser-1   ghcr.io/ludelafo/my-custom-dockerfile:v3.0   "/usr/bin/filebrowser --address 0.0.0.0 --port 5000 --database /app/config/database.db --root /app/data"   filebrowser   4 minutes ago   Up 4 minutes (healthy)   0.0.0.0:8080->5000/tcp
+=======
+my-custom-dockerfile-filebrowser-1   ghcr.io/<username>/my-custom-dockerfile:v3.0   "/usr/bin/filebrowser --address 0.0.0.0 --port 5000 --database /app/config/database.db --root /app/data"   filebrowser   4 minutes ago   Up 4 minutes (healthy)   0.0.0.0:8080->5000/tcp
+>>>>>>> Stashed changes
 ```
 
 You can check the logs of the service with the following command:
@@ -1556,21 +2277,36 @@ The output should be similar to this:
  => => transferring context: 2B                                                   0.0s
  => [filebrowser internal] load build definition from Dockerfile                  0.0s
  => => transferring dockerfile: 848B                                              0.0s
+<<<<<<< Updated upstream
  => [filebrowser internal] load metadata for docker.io/library/alpine:latest      0.0s
  => [filebrowser 1/4] FROM docker.io/library/alpine:latest                        0.0s
+=======
+ => [filebrowser internal] load metadata for docker.io/library/alpine:3.18      0.0s
+ => [filebrowser 1/4] FROM docker.io/library/alpine:3.18                        0.0s
+>>>>>>> Stashed changes
  => CACHED [filebrowser 2/4] RUN apk add --no-cache --repository=https://dl-cdn.  0.0s
  => CACHED [filebrowser 3/4] RUN apk add --no-cache curl                          0.0s
  => CACHED [filebrowser 4/4] WORKDIR /app                                         0.0s
  => [filebrowser] exporting to image                                              0.0s
  => => exporting layers                                                           0.0s
  => => writing image sha256:7a159529e8f3b5687c77710aeed97d3679216db7bd3a45e9c2bb  0.0s
+<<<<<<< Updated upstream
  => => naming to ghcr.io/ludelafo/my-custom-dockerfile:v3.0                       0.0s
+=======
+ => => naming to ghcr.io/<username>/my-custom-dockerfile:v3.0                       0.0s
+>>>>>>> Stashed changes
 ```
 
 As most layers are already cached, the build is pretty fast.
 
+<<<<<<< Updated upstream
 Try to change the port used in the `Dockerfile` (do not forget to update the health check as well) and run the
 `docker compose build` command again. Do not forget to update the Docker Compose file to map the right port as well.
+=======
+Try to change the port used in the `Dockerfile` (do not forget to update the
+healthcheck's port) and run the `docker compose build` command again. Do not
+forget to update the Docker Compose file to map the right port as well.
+>>>>>>> Stashed changes
 
 #### Run the image with Docker Compose
 
@@ -1593,7 +2329,13 @@ Run the following command to pull the image from GitHub Container Registry:
 docker compose pull
 ```
 
+<<<<<<< Updated upstream
 This will replace the local image you built with the image from GitHub Container Registry.
+=======
+This will replace the local image you built with the image from GitHub Container
+Registry.
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 ### Go further
 

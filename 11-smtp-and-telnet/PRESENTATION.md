@@ -164,7 +164,18 @@ In the next chapter, you will learn the following topics:
 
 ## Sources
 
+<<<<<<< Updated upstream
 - Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska) on
   [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+=======
+<<<<<<< Updated upstream
+- Main illustration by []() on [Unsplash]()
+=======
+- Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
+  on [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

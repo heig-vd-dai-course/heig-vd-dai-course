@@ -106,5 +106,16 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
+<<<<<<< Updated upstream
 - Main illustration by [Possessed Photography](https://unsplash.com/@possessedphotography) on
   [Unsplash](https://unsplash.com/photos/tiNCpHudGrw)
+=======
+<<<<<<< Updated upstream
+- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
+  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+=======
+- Main illustration by
+  [Possessed Photography](https://unsplash.com/@possessedphotography) on
+  [Unsplash](https://unsplash.com/photos/tiNCpHudGrw)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

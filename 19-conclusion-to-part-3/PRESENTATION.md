@@ -143,8 +143,8 @@ understood the practical work. 🙂
 Your feedback helps us know **what what you liked and what you disliked** in
 your learning experience. **The feedback is anonymous**.
 
-We would be very grateful if you could take a few minutes to fill it. **Thank
-you!**
+We would be very grateful if you could [take a few minutes to fill
+it][feedback]. **Thank you!**
 
 [![bg right w:75%][feedback]][feedback]
 

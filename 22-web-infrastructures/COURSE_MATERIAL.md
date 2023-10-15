@@ -131,4 +131,14 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
+<<<<<<< Updated upstream
 - Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
+=======
+<<<<<<< Updated upstream
+- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
+  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+=======
+- Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
+  [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
