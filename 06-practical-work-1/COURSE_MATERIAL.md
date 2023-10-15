@@ -78,7 +78,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 | 3   | The issues, pull requests and commits messages are descriptive          |    0.2 |
 | 4   | The whole team contributes to the project and can explain it in details |    0.2 |
 | 5   | The repository contains a gitignore file to ignore unwanted files       |    0.2 |
-| 6   | The repository contains test files to use with the CLI                  |    0.2 |
+| 6   | The repository contains example files to use with the CLI               |    0.2 |
 | 7   | The README is well structured and explains what the CLI is for          |    0.2 |
 | 8   | The README explains how to build the CLI                                |    0.2 |
 | 9   | The README explains how to use the CLI with examples and outputs        |    0.2 |
@@ -118,9 +118,9 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 - The CLI application must be written in Java, compatible with Java 17
 - The CLI application must be built using Maven
+- You must use one or more of the Java IOs classes seen in the course
 - Your application must be slightly more complex and different than the ones
   presented during the course
-- You must make using of one or more Java IOs classes seen in the course
 
 ## Remarks
 
