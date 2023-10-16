@@ -44,14 +44,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [`pom.xml` file](#pomxml-file)
   - [Maven lifecycle](#maven-lifecycle)
   - [Maven Repository](#maven-repository)
-  - [Maven "installation" and Maven wrapper](#maven-installation-and-maven-wrapper)
+  - [Maven installation and its wrapper](#maven-installation-and-its-wrapper)
   - [Summary](#summary-2)
   - [Alternatives](#alternatives-2)
   - [Resources](#resources-2)
   - [Cheat sheet](#cheat-sheet)
 - [Practical content](#practical-content)
   - [Install Java](#install-java)
-  - [Download and run Maven](#download-and-run-maven)
+  - [Install and run Maven](#install-and-run-maven)
   - [Install and configure IntelliJ IDEA](#install-and-configure-intellij-idea)
   - [Create and run a new Maven project with IntelliJ IDEA](#create-and-run-a-new-maven-project-with-intellij-idea)
   - [Go further](#go-further)
@@ -374,24 +374,41 @@ library to your project:
 </dependency>
 ```
 
-### Maven "installation" and Maven wrapper
+### Maven installation and its wrapper
 
-Maven is distributed as a **single archive**. This means that you have to
-extract it and add it to your `PATH` so it can be used anywhere. This is not
-very convenient.
+The installation of Maven is a bit different than other software you might be
+used to as there is not an installer program to install Maven. Instead, Maven
+comes as a **single archive**, containing the Maven executable file and other
+files that you have to install manually.
 
-Most Linux distributions provide a **package** for Maven, so that you can
-install it using the package manager of your distribution. It will then be
-available in your `PATH` and you will be able to use the `mvn` command anywhere.
+This means that you have to extract the archive and install Maven manually by
+creating a directory on your computer and adding it to your `PATH` so you can
+use its command `mvn` anywhere in your terminal.
 
-The same applies to macOS with the help of [Homebrew](https://brew.sh/).
+If you are on Linux, you can install Maven using your distribution package
+manager. This will install Maven automatically as intended and you will then be
+able to use its command `mvn` anywhere.
 
-On Windows, you have to add Maven to your `PATH` manually. This is not very
-convenient either.
+If you are on macOS, you can install Maven using [Homebrew](https://brew.sh/).
+This will install Maven automatically as intended and you will then be able to
+use its command `mvn` anywhere.
 
-This is why some Maven projects use a **Maven wrapper**. The Maven wrapper is a
+If you are on Windows, you have to create a directory in your `C:\Program Files`
+directory and add it to your `PATH` so you can use its command `mvn` anywhere in
+your terminal.
+
+The Windows installation is not very convenient, as you have to install Maven
+manually and update it manually when a new version is released. These steps are
+prone to errors, hard to manage and inconvenient to update.
+
+This is why some Maven projects use a **Maven wrapper**. A wrapper is a
 **script** (a shell script on Linux and macOS and a Batch script on Windows)
-that will download and run Maven for you.
+that will download and run Maven for you, even if you do not have Maven
+installed on your computer.
+
+These scripts can be committed to any Git repository, shared with your team and
+used on any platform without the need to have Maven installed beforehand. You
+can then use the wrapper script to download and run Maven.
 
 The Maven wrapper defines the **version of Maven** to use, so that all
 developers use the same version of Maven.
@@ -400,7 +417,7 @@ The Maven wrapper and its configuration file are **committed** to Git but the
 Maven executable file is **ignored** by Git.
 
 A new developer can then **run** the Maven wrapper to **download** and
-**execute** Maven.
+**execute** Maven, ensuring that all developers use the same version of Maven.
 
 ### Summary
 
@@ -490,41 +507,39 @@ OpenJDK Runtime Environment Temurin-17.0.8+7 (build 17.0.8+7)
 OpenJDK 64-Bit Server VM Temurin-17.0.8+7 (build 17.0.8+7, mixed mode, sharing)
 ```
 
-### Download and run Maven
+### Install and run Maven
 
-In this section, you will download and run Maven manually. In a future section,
-you will initialize the Maven wrapper using Maven itself.
+In this section, you will install Maven. In a future section, you will
+initialize the Maven wrapper using Maven itself.
 
-#### Download Maven
+#### Install Maven
+
+If you are using Linux (WSL excluded) or macOS, use your package manager to
+install Maven. This will add Maven to your `PATH` so you can use its command
+`mvn` anywhere.
+
+If you are using Windows, you have to install Maven manually.
 
 Download the latest version of Maven from the official website:
 <https://maven.apache.org/download.cgi>. Download the **Binary archive**, not
-the Source archive. Once downloaded, you can extract the archive.
+the Source archive. Once downloaded, extract the archive to a directory of your
+choice, such as `C:\Program Files\apache-maven`.
 
-#### Run Maven
+Then add Maven from the directory you previously created
+(`C:\Program Files\apache-maven` for example) to your `PATH` manually. You can
+follow this tutorial: <https://phoenixnap.com/kb/install-maven-windows>.
 
-Open a terminal and switch to the directory where you extracted the archive.
+> **Note**  
+> I (Ludovic) am interested if one of you could improve this section with
+> instructions and/or screenshots. As I am not using Windows myself, I cannot
+> test it entirely.
+>
+> Feel free to open an issue and a pull request on GitHub if you want to help!
+> Thanks!
 
-If you are using Linux (WSL excluded) or macOS, you can then run Maven with the
-following command:
+#### Check the installation
 
-```sh
-# Switch to the directory where you extracted the archive
-cd ~/Downloads/apache-maven-*
-
-# Run Maven
-./bin/mvn --version
-```
-
-If you are using Windows, you can then run Maven with the following command:
-
-```sh
-# Switch to the directory where you extracted the archive
-cd %USERPROFILE%\Downloads\apache-maven-*
-
-# Run Maven
-.\bin\mvn.cmd --version
-```
+Open a terminal and type `mvn`.
 
 The output should be similar to this:
 
@@ -535,24 +550,6 @@ Java version: 17.0.8, vendor: Eclipse Adoptium, runtime: /Users/ludelafo/.sdkman
 Default locale: en_US, platform encoding: UTF-8
 OS name: "mac os x", version: "13.5.1", arch: "x86_64", family: "mac"
 ```
-
-This means that Maven is correctly running.
-
-#### "Install" Maven by adding it to your `PATH`
-
-If you are using Linux (WSL excluded) or macOS, use your package manager to
-install Maven. This will add Maven to your `PATH` so you can use it anywhere.
-
-If you are using Windows, you can add Maven to your `PATH` manually. You can
-follow this tutorial: <https://phoenixnap.com/kb/install-maven-windows>.
-
-> **Note**  
-> I (Ludovic) am interested if one of you could improve this section with
-> instructions and/or screenshots. As I am not using Windows myself, I cannot
-> test it entirely.
->
-> Feel free to open an issue and a pull request on GitHub if you want to help!
-> Thanks!
 
 ### Install and configure IntelliJ IDEA
 
@@ -606,12 +603,19 @@ The output should be `Hello World!` in the "Run" tab.
 
 #### Initialize the Maven wrapper
 
+The Maven wrapper is a good practice to ensure that all developers use the same
+version of Maven. This allows new developers to run the Maven wrapper to
+download and run Maven, without having to install Maven on their computer first
+(and avoid complex installation steps on Windows).
+
+In order to use the Maven wrapper, you have to initialize it using Maven.
+
 Open a terminal within IntelliJ IDEA. Initialize the Maven wrapper using the
-Maven binary you downloaded previously:
+following command:
 
 ```sh
 # Initialize the Maven wrapper
-~/Downloads/apache-maven-3.9.4/bin/mvn wrapper:wrapper
+mvn wrapper:wrapper
 ```
 
 This will create the Maven wrapper files in your project:
@@ -635,8 +639,8 @@ committed to Git.
 The `maven-wrapper.properties` file contains the configuration of the Maven
 wrapper. This file is committed to Git.
 
-Now, instead of using the Maven binary you downloaded previously, you can use
-the Maven wrapper:
+Now, instead of using the Maven version you installed locally, you can use the
+Maven wrapper that will download and run Maven for you with a specific version.
 
 ```sh
 # Check the Maven version
@@ -644,6 +648,10 @@ the Maven wrapper:
 ```
 
 The output should be similar to the previous execution of Maven.
+
+You have to execute these steps only once per project. Once the Maven wrapper is
+initialized, you can use it to run Maven, as well as all other developers of the
+project.
 
 #### Update the `pom.xml` file to generate a JAR file
 
