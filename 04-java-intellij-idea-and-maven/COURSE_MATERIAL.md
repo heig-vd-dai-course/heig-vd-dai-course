@@ -1106,6 +1106,9 @@ You can use reactions to express your opinion on a comment!
 In the next chapter, you will learn the following topics:
 
 - Java IOs: input/output processing
+  - How to read and write files?
+  - Why is encoding important?
+  - How to deal with exceptions?
 
 ## Additional resources
 

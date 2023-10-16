@@ -94,9 +94,7 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next chapter, you will learn the following topics:
-
-- Java TCP programming
+You will start the practical work!
 
 ## Additional resources
 

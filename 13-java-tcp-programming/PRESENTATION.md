@@ -51,11 +51,11 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
-[practical-content]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md#practical-content
+  https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
+[course-material]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md
+[course-material-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md
 
 # Java TCP programming
 
@@ -116,9 +116,9 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub][practical-content].
+[GitHub][course-material].
 
-[![bg right w:75%][practical-content-qr-code]][practical-content]
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -134,12 +134,13 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next chapter, you will learn the following topics:
+<!-- _class: lead -->
 
-- TODO
+You will start the practical work!
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
+  [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)

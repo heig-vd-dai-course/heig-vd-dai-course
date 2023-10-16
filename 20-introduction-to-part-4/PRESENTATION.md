@@ -50,7 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
 
 # Introduction to part 4: Web infrastructures
 
@@ -71,18 +71,21 @@ _paginate: false
 
 ## What will you learn?
 
-<!-- _class: lead -->
+- TODO
+
+![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
 ## What will you accomplish?
 
-<!-- _class: lead -->
+- TODO
 
-## Questions
-
-<!-- _class: lead -->
-
-Do you have any questions?
+![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 
 ## Sources
 
-- Main illustration by []() on [Unsplash]()
+- Main illustration by [shawnanggg](https://unsplash.com/@shawnanggg) on
+  [Unsplash](https://unsplash.com/photos/vdBE638sszE)
+- Illustration by [Unseen Studio](https://unsplash.com/@craftedbygc) on
+  [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
+- Illustration by [Jared Erondu](https://unsplash.com/@erondu) on
+  [Unsplash](https://unsplash.com/photos/j4PaE7E2_Ws)

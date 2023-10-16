@@ -96,7 +96,10 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Java TCP programming
+- Web infrastructures
+  - How to deploy and maintain web applications on the Internet?
+  - How to scale web applications?
+  - How to secure web applications?
 
 ## Additional resources
 

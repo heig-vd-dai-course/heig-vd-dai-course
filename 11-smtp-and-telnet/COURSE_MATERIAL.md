@@ -97,7 +97,9 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Java TCP programming
+- Experiment with the SSH protocol and SCP with Docker and Docker Compose
+  - How to access remote servers?
+  - Run a SSH server with Docker and copy files from/to a server with SCP
 
 ## Additional resources
 
@@ -109,15 +111,5 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
-<<<<<<< Updated upstream
-- Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska) on
-  [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
-=======
-<<<<<<< Updated upstream
-- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
-=======
 - Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
   on [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
->>>>>>> Stashed changes
->>>>>>> Stashed changes

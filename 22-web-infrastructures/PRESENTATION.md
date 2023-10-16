@@ -52,10 +52,10 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720
-[practical-content]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#practical-content
+[course-material]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md
+[course-material-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md
 
 # Web infrastructures
 
@@ -149,9 +149,9 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub][practical-content].
+[GitHub][course-material].
 
-[![bg right w:75%][practical-content-qr-code]][practical-content]
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -167,23 +167,13 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next chapter, you will learn the following topics:
+<!-- _class: lead -->
 
-- TODO
+You will start the practical work!
 
 ## Sources
 
-<<<<<<< Updated upstream
-- Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
-- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
-  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
-=======
-<<<<<<< Updated upstream
-- Main illustration by []() on [Unsplash]()
-=======
 - Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
   [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
->>>>>>> Stashed changes
->>>>>>> Stashed changes

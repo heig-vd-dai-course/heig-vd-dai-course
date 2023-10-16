@@ -52,7 +52,7 @@ headingDivider: 4
 [feedback]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1631220706319-657942774d02?fit=crop&h=720
 
 # Conclusion to part 3: Network programming with UDP
 
@@ -150,8 +150,8 @@ it][feedback]. **Thank you!**
 
 ## Sources
 
-- Main illustration by [Alina Grubnyak](https://unsplash.com/@alinnnaaaa) on
-  [Unsplash](https://unsplash.com/photos/ZiQkhI7417A)
+- Main illustration by [Allie Reefer](https://unsplash.com/@thepghtraveler) on
+  [Unsplash](https://unsplash.com/photos/rAoQn6kwv64)
 - Illustration by [Nils Stahl](https://unsplash.com/@nilsjakob) on
   [Unsplash](https://unsplash.com/photos/neUbjUnjXNk)
 - Illustration by [Samantha Fortney](https://unsplash.com/@goldencoastgrams) on

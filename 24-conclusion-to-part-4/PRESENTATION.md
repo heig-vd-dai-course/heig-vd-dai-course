@@ -52,7 +52,7 @@ headingDivider: 4
 [feedback]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
 
 # Conclusion to part 4: Web infrastructures
 
@@ -150,8 +150,8 @@ it][feedback]. **Thank you!**
 
 ## Sources
 
-- Main illustration by [Alina Grubnyak](https://unsplash.com/@alinnnaaaa) on
-  [Unsplash](https://unsplash.com/photos/ZiQkhI7417A)
+- Main illustration by [shawnanggg](https://unsplash.com/@shawnanggg) on
+  [Unsplash](https://unsplash.com/photos/vdBE638sszE)
 - Illustration by [Nils Stahl](https://unsplash.com/@nilsjakob) on
   [Unsplash](https://unsplash.com/photos/neUbjUnjXNk)
 - Illustration by [Samantha Fortney](https://unsplash.com/@goldencoastgrams) on

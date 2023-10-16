@@ -136,15 +136,8 @@ repository!
 
 - The network application must be written in Java, compatible with Java 17
 - The network application must be built using Maven
-<<<<<<< Updated upstream
-- Your application must be slightly more complex and different than the ones presented during the course
-=======
-<<<<<<< Updated upstream
-=======
 - Your application must be slightly more complex and different than the ones
   presented during the course
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 - The network application can only use the UDP protocol
 - You must build and release the application using Docker and Docker Compose
 

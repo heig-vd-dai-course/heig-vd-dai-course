@@ -51,10 +51,10 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
 [illustration]:
   https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
-[practical-content]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#practical-content
+[course-material]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
+[course-material-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
 
 # Java IOs
 
@@ -220,9 +220,9 @@ You can find other resources and alternatives as well.
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub][practical-content].
+[GitHub][course-material].
 
-[![bg right w:75%][practical-content-qr-code]][practical-content]
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 

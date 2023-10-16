@@ -52,10 +52,10 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720
-[practical-content]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md#practical-content
+[course-material]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md
+[course-material-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/COURSE_MATERIAL.md
 
 # Define an application protocol
 
@@ -81,19 +81,6 @@ _paginate: false
 - Define application protocols
 - How to use an application protocol
 
-<<<<<<< Updated upstream
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
-=======
-<<<<<<< Updated upstream
-- **[Theoretical content](#theoretical-content)**
-  - Installation of software: traditional vs. containerization
-  - OCI, images, containers and registries
-  - Dockerfile and Docker Compose
-  - Tips and tricks
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
-=======
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## What is an application protocol?
@@ -182,8 +169,6 @@ the server.
 >   - `<file>`: the name of the file to request - The filename is an absolute
 >     path to the file (`/data/file.txt`)
 > - `QUIT`: used to close the connection with the server
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 
 ## What is an application protocol?
 
@@ -254,7 +239,8 @@ initiates and who closes the connection.
 
 > The DAI protocol uses the TCP protocol. The server runs on port 55555.
 >
-> The client has to know the IP address of the server to connect to. It establishes the connection with the server.
+> The client has to know the IP address of the server to connect to. It
+> establishes the connection with the server.
 >
 > The server closes the connection when the transfer is done or if an error
 > occurs (e.g. the file was not found).
@@ -349,9 +335,9 @@ how to use them in future chapters!
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub][practical-content].
+[GitHub][course-material].
 
-[![bg right w:75%][practical-content-qr-code]][practical-content]
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -369,31 +355,22 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Docker and Docker Compose
+- Docker and Docker Compose: how to containerize your applications
+  - What is an image?
+  - What is a container?
+  - How to try out new software without installing it?
 
 ![bg right:40%](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
 
 ## Sources
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-- Main illustration by []() on [Unsplash]()
-=======
->>>>>>> Stashed changes
 - Main illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
   [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [Henry Be](https://unsplash.com/@henry_be) on
   [Unsplash](https://unsplash.com/photos/lc7xcWebECc)
-<<<<<<< Updated upstream
-- Illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
-  [Unsplash](https://unsplash.com/photos/xewrfLD8emE)
-=======
 - Illustration by [Christopher Sardegna](https://unsplash.com/@css) on
   [Unsplash](https://unsplash.com/photos/CMOa3H1SXG0)
 - Illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
   [Unsplash](https://unsplash.com/photos/xewrfLD8emE)
->>>>>>> Stashed changes
->>>>>>> Stashed changes

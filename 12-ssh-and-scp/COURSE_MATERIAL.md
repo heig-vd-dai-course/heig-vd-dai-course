@@ -97,6 +97,10 @@ You can use reactions to express your opinion on a comment!
 In the next chapter, you will learn the following topics:
 
 - Java TCP programming
+  - How to send an email with Java
+  - How to create a TCP server
+  - How to create a TCP client
+  - How to handle multiple clients with concurrency
 
 ## Additional resources
 

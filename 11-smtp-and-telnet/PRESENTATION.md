@@ -52,10 +52,10 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720
-[practical-content]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#practical-content
+[course-material]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md
+[course-material-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md
 
 # SMTP and Telnet
 
@@ -140,9 +140,9 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub][practical-content].
+[GitHub][course-material].
 
-[![bg right w:75%][practical-content-qr-code]][practical-content]
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -160,22 +160,17 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- TODO
+- Experiment with the SSH protocol and SCP with Docker and Docker Compose
+  - How to access remote servers?
+  - Run a SSH server with Docker and copy files from/to a server with SCP
+
+![bg right:40%](https://images.unsplash.com/photo-1506818144585-74b29c980d4b?fit=crop&h=720)
 
 ## Sources
 
-<<<<<<< Updated upstream
-- Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska) on
-  [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
-- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
-  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
-=======
-<<<<<<< Updated upstream
-- Main illustration by []() on [Unsplash]()
-=======
 - Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
   on [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+- Illustration by [Mathew Schwartz](https://unsplash.com/@cadop) on
+  [Unsplash](https://unsplash.com/photos/sb7RUrRMaC4)

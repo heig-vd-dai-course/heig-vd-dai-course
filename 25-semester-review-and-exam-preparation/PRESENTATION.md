@@ -50,7 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [illustration]:
-  https://images.unsplash.com/photo-1484417894907-623942c8ee29?fit=crop&h=720
+  https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720
 
 # Semester review and exam preparation
 
@@ -113,5 +113,5 @@ Do you have any questions?
 
 ## Sources
 
-- Main illustration by [NASA](https://unsplash.com/@nasa) on
-  [Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)
+- Main illustration by [MChe Lee](https://unsplash.com/@mclee) on
+  [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)

@@ -464,7 +464,10 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Docker and Docker Compose
+- Docker and Docker Compose: how to containerize your applications
+  - What is an image?
+  - What is a container?
+  - How to try out new software without installing it?
 
 ## Additional resources
 

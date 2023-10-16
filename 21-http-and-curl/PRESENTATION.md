@@ -51,10 +51,10 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
 [illustration]:
   https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
-[practical-content]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#practical-content
-[practical-content-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#practical-content
+[course-material]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
+[course-material-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
 
 # HTTP and cURL
 
@@ -159,9 +159,9 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 <!-- _class: lead -->
 
 You can find the practical content for this chapter on
-[GitHub][practical-content].
+[GitHub][course-material].
 
-[![bg right w:75%][practical-content-qr-code]][practical-content]
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -179,7 +179,12 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- TODO
+- Web infrastructures
+  - How to deploy and maintain web applications on the Internet?
+  - How to scale web applications?
+  - How to secure web applications?
+
+![bg right:40%](https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720)
 
 ## Sources
 
@@ -187,3 +192,5 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/KvD36NRFjl4)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
+  [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)

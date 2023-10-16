@@ -92,9 +92,7 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next chapter, you will learn the following topics:
-
-- Java TCP programming
+You will start the practical work!
 
 ## Additional resources
 
@@ -106,16 +104,6 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
-<<<<<<< Updated upstream
-- Main illustration by [Possessed Photography](https://unsplash.com/@possessedphotography) on
-  [Unsplash](https://unsplash.com/photos/tiNCpHudGrw)
-=======
-<<<<<<< Updated upstream
-- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
-=======
 - Main illustration by
   [Possessed Photography](https://unsplash.com/@possessedphotography) on
   [Unsplash](https://unsplash.com/photos/tiNCpHudGrw)
->>>>>>> Stashed changes
->>>>>>> Stashed changes
