@@ -85,43 +85,78 @@ Learn software installation challenges and containerization benefits.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-## Installation of software: traditional vs. containerization
+## Installation of software
 
-- Traditional: download installer, easy steps but hard to migrate. Can lead to
-  version issues.
+- Traditional:
+  - Download installer, install and enjoy
+  - Hard to migrate
+  - Version issues
 - Containerization: software in isolated environment
 
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/installation-of-software-traditional-vs-containerization.png)
 
 ## OCI, images, containers, and registries
 
-OCI standard for images and runtimes, implemented by Docker and others.
-
-- Image: read-only template for container creation
 - Container: runnable instance of an image
+- Image: read-only template for container creation
 - Registry: service storing images
 
-Container Image:
-
-- Contains app & dependencies
-- Immutable, create new image to modify
-- Composed of read-only layers
-- Stored in a registry (e.g., Docker Hub)
-- Download/upload to registry
-- Create multiple containers from an image
-- Containers isolated from each other and the computer.
-
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/oci-images-containers-and-registries.png)
 
 ## Docker
 
-![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#docker).
+You can find other resources and alternatives as well.
+
+### Docker
+
+- Created in 2013
+- Container engine
+- Composed of two parts:
+  - Docker daemon (background process)
+  - Docker CLI
+- Can be used to build, run and publish containers
+
+![bg right w:60%](./images/docker.svg)
 
 ### Dockerfile specification
 
+- Build a Docker image
+- Based on an existing image
+- Defines a set of instructions to build the image
+- Written in plain text
+- Each step creates a layer in the image (takes disk space)
+
+![bg right contain](./images/dockerfile-specification.png)
+
 ### Security considerations
 
+- Docker daemon runs as root (= as an admin user), meaning:
+  - It has access to the host filesystem
+  - It has access to the host network
+- The containers have limited access but you still need to be careful
+- It is good practice to run containers as non-root users
+
+![bg right:40%](https://images.unsplash.com/photo-1496368077930-c1e31b4e5b44?fit=crop&h=720)
+
 ### Ignore files
+
+- Same as the `.gitignore` file
+- Named `.dockerignore`
+- Can be used to exclude files from the build context
+
+```dockerignore
+# Ignore target directory
+/target
+
+# Ignore all files with .md extension
+*.md
+```
+
+![bg right contain](../03-git-github-and-markdown/images/git-ignore-files.png)
 
 ### Summary
 
@@ -135,9 +170,38 @@ Container Image:
 
 ## Docker Compose
 
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#docker).
+You can find other resources and alternatives as well.
+
+### Docker Compose
+
+- Can be used to deploy a multi-container application
+- Can be committed with the application
+- Can be used to deploy the application on any Docker host
+- Easy to use
+
+![bg right w:60%](https://github.com/docker/compose/raw/main/logo.png)
+
 ### Docker Compose specification
 
+- Defines the application
+  - Services: containers
+  - Volumes: shared directories
+  - Networks: network communication
+- Written in YAML
+
+![bg right contain](./images/docker-compose-specification.png)
+
 ### Docker Compose v1 vs. Docker Compose v2
+
+- Docker Compose v1 written in Python (`docker-compose`)
+- Docker Compose v2 written in Go (`docker compose`)
+- Docker Compose v1 is deprecated
+
+![bg right contain](./images/docker-compose-v1-vs-v2.png)
 
 ### Summary
 
@@ -150,8 +214,35 @@ Container Image:
 
 ## Docker Desktop
 
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#docker).
+You can find other resources and alternatives as well.
+
+### Docker Desktop
+
+- A tool for macOS and Windows (Linux uses Docker Engine)
+- Runs a virtual machine with Linux
+- Allows to run Docker and Docker Compose commands
+
+
+![bg right contain](./images/docker-desktop.png)
 
 ## Docker Hub and GitHub Container Registry
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#docker).
+You can find other resources and alternatives as well.
+
+### Docker Hub and GitHub Container Registry
+
+- Docker Hub is the official registry, hosting millions of images
+- We will use GitHub Container Registry to keep everything in one place
+
+![bg right contain](./images/docker-hub-and-github-container-registry.png)
 
 ## Practical content
 
@@ -159,11 +250,12 @@ Container Image:
 
 ### What will you do?
 
--
+- Install and configure Docker
+- Install and configure Docker Compose
+- Build, run and publish a container with Docker and Docker Compose
+- Containerize a simple web application
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+![bg right contain](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -202,5 +294,7 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/xewrfLD8emE)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Scott Webb](https://unsplash.com/@scottwebb) on
+  [Unsplash](https://unsplash.com/photos/yekGLpc3vro)
 - Illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska) on
   [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)

@@ -43,7 +43,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Resources](#resources-1)
 - [Docker Desktop](#docker-desktop)
   - [Alternatives](#alternatives-2)
-- [Docker Hub](#docker-hub)
+- [Docker Hub and GitHub Container Registry](#docker-hub-and-github-container-registry)
   - [Alternatives](#alternatives-3)
 - [Tips and tricks](#tips-and-tricks)
   - [Healthchecks](#healthchecks)
@@ -345,6 +345,9 @@ Docker Compose allows to define a multi-container Docker application in a Docker
 Compose file. It is easier to use than plain Docker commands and can be
 versioned with the application.
 
+The format of the Docker Compose file is [YAML](https://yaml.org/). The Docker Compose file is named
+`docker-compose.yml` by convention.
+
 More information about the Docker Compose specification can be found in the
 official documentation: <https://docs.docker.com/compose/compose-file/>.
 
@@ -435,7 +438,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-## Docker Hub
+## Docker Hub and GitHub Container Registry
 
 > [Docker Hub](https://hub.docker.com) is the world's largest library and
 > community for container images.
