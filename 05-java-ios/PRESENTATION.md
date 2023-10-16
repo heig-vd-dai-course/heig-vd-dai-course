@@ -201,7 +201,7 @@ You can find other resources and alternatives as well.
 
 ### When to use which IO?
 
-![bg w:80%](./images/when-to-use-which-io.svg)
+![bg w:80%](./images/when-to-use-which-io.png)
 
 ## Practical content
 
