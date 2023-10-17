@@ -191,6 +191,7 @@ The Dockerfile specification defines the following terms (among others):
 
 - Dockerfile: a text file that contains instructions for building a Docker image
 - Build context: a directory that contains the files needed to build a Docker
+  image
 
 The Dockerfile specification defines a set of instructions. Each instruction
 corresponds to a command that can be run in a shell. The instructions are
@@ -345,8 +346,8 @@ Docker Compose allows to define a multi-container Docker application in a Docker
 Compose file. It is easier to use than plain Docker commands and can be
 versioned with the application.
 
-The format of the Docker Compose file is [YAML](https://yaml.org/). The Docker Compose file is named
-`docker-compose.yml` by convention.
+The format of the Docker Compose file is [YAML](https://yaml.org/). The Docker
+Compose file is named `docker-compose.yml` by convention.
 
 More information about the Docker Compose specification can be found in the
 official documentation: <https://docs.docker.com/compose/compose-file/>.
@@ -493,9 +494,8 @@ If no healthcheck is defined, the container will be considered healthy as soon
 as it is running. This is not always what you want. You might want to wait for
 the container to be ready to accept requests.
 
-You can define a healthcheck that checks if the container is ready to accept in
-the Docker Compose file. You can use the `healthcheck` option to define a
-healthcheck.
+You can define a healthcheck directly in the Docker Compose file with the
+`healthcheck` option. It will then check the health of the container on startup.
 
 For example, the following option defines a healthcheck that runs every 30
 seconds and that times out after 10 seconds:
@@ -853,7 +853,7 @@ put the following content in it:
 
 ```dockerfile
 # Start from the alpine image
-FROM alpine:latest
+FROM alpine:3.18
 
 # Set an GREETINGS environment variable
 ENV GREETINGS=Hello
@@ -863,7 +863,9 @@ CMD ["/bin/sh", "-c", "echo \"$GREETINGS from my custom Dockerfile!\""]
 ```
 
 The `FROM` instruction is used to specify the base image. It is the first
-instruction of the Dockerfile. It is required.
+instruction of the Dockerfile. It is required. It is good practice to specify
+the version of the image instead of `latest`. It will ensure that the image will
+not change unexpectedly.
 
 The `ENV` instruction is used to specify an environment variable. It is used to
 specify the value of the `GREETINGS` environment variable. An environment
@@ -901,8 +903,8 @@ docker build -t my-custom-dockerfile:v1.0 my-custom-dockerfile
  => => transferring dockerfile: 145B                                                                                                                                                             0.0s
  => [internal] load .dockerignore                                                                                                                                                                0.1s
  => => transferring context: 2B                                                                                                                                                                  0.0s
- => [internal] load metadata for docker.io/library/alpine:latest                                                                                                                                 0.0s
- => [1/1] FROM docker.io/library/alpine:latest                                                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/alpine:3.18                                                                                                                                 0.0s
+ => [1/1] FROM docker.io/library/alpine:3.18                                                                                                                                                   0.0s
  => exporting to image                                                                                                                                                                           0.0s
  => => exporting layers                                                                                                                                                                          0.0s
  => => writing image sha256:1210ca793235e534e370c97ad78fc30603dfff0fd6332460598d43d5a9ba5dd8                                                                                                     0.0s
@@ -954,7 +956,7 @@ Update the `Dockerfile` with the following content:
 
 ```dockerfile
 # Start from the alpine image
-FROM alpine:latest
+FROM alpine:3.18
 
 # Install the tree package using the apk package manager
 RUN apk add --no-cache tree
@@ -1085,7 +1087,7 @@ The output should be similar to the following:
 0 directories, 0 files
 ```
 
-What happened? The `/app/data` directory is empty again!
+The `/app/data` directory is empty again! What happened?
 
 This is because the container is stateless. All the changes made in the
 container are lost when the container is stopped. When working with containers,
@@ -1155,6 +1157,9 @@ The `Dockerfile` file will be the same each time the container is run as it was
 copied from the host when it was created. The files persisted in the volume will
 be persisted between each run of the container.
 
+Congratulations! You have just created a Docker image that can persist data
+between each run of the container with the help of volumes!
+
 More information about volumes can be found in the official documentation:
 <https://docs.docker.com/storage/volumes/>.
 
@@ -1171,7 +1176,7 @@ Update the `Dockerfile` with the following content:
 
 ```dockerfile
 # Start from the alpine image
-FROM alpine:latest
+FROM alpine:3.18
 
 # Set File Browser version as an argument
 ARG FILEBROWSER_VERSION=2.25.0-r0
@@ -1209,6 +1214,10 @@ during the build of the image. It is not used when the container is run.
 It can be used to customize the build of the image. It can be used to specify
 the version of the application to install for example.
 
+File Browser is not available in the main repository of Alpine Linux. It is
+available in the testing repository. You can find more information about Alpine
+Linux repositories here: <https://wiki.alpinelinux.org/wiki/Repositories>.
+
 The `EXPOSE` instruction is used to specify the ports that will be exposed by
 the container. This is only informative and can be omitted.
 
@@ -1228,7 +1237,47 @@ docker build \
   my-custom-dockerfile
 ```
 
-Start the container with the following command:
+> **Note**
+>
+> The Docker image does not build with an error similar to this following one?
+>
+> ```text
+> 0.751 ERROR: unable to select packages:
+> 0.754   filebrowser-2.25.0-r1:
+> 0.754     breaks: world[filebrowser=2.25.0-r0]
+> ```
+>
+> It means the version of the `filebrowser` package is not available anymore in
+> the Alpine Linux packages registry.
+>
+> Check the next section to fix it!
+
+You can change the value of the `FILEBROWSER_VERSION` build argument with the
+following command:
+
+```sh
+# Run the image with the my-custom-dockerfile:v3.0 tag and set the build argument
+docker build \
+  -t my-custom-dockerfile:v3.0 \
+  --build-arg FILEBROWSER_VERSION=<a specific version> \
+  my-custom-dockerfile
+```
+
+The `--arg` option is used to override the value of a build argument. It is used
+to specify the name and the value of the build argument. The name and the value
+are separated by an equal sign (`=`).
+
+Build arguments are really useful to configure your building process of your
+application. You can use them to set a specific package version for example.
+
+You can check the latest version of File Browser in the Alpine Linux packages
+registry here:
+<https://pkgs.alpinelinux.org/package/edge/testing/x86_64/filebrowser> and use
+the `--build-arg` option to set the `FILEBROWSER_VERSION` build argument to
+build the image
+
+Once the image is correctly built, start the container with the following
+command:
 
 ```sh
 # Run the image with the my-custom-dockerfile:v3.0 tag
@@ -1252,7 +1301,7 @@ port 5000. However, we have mapped the port 5000 of the container to the port
 <http://localhost:8080> to access the application.
 
 The default username is `admin` and the default password is `admin`. You can
-chage it in the settings of the application.
+change it in the settings of the application.
 
 You should have access to the previous files created in the `/app/data`
 directory as it is mounted on the `./my-data` directory on the host. If you try
@@ -1292,24 +1341,6 @@ You can stop the container with the `docker stop` command as seen previously.
 
 Congrats! You have just embedded an application in a Docker image!
 
-You can change the value of the `FILEBROWSER_VERSION` build argument with the
-following command:
-
-```sh
-# Run the image with the my-custom-dockerfile:v4.0 tag and set the build argument
-docker build \
-  -t my-custom-dockerfile:v4.0 \
-  --build-arg FILEBROWSER_VERSION=<a specific version> \
-  my-custom-dockerfile
-```
-
-The `--arg` option is used to override the value of a build argument. It is used
-to specify the name and the value of the build argument. The name and the value
-are separated by an equal sign (`=`).
-
-Build arguments are really useful to configure your building process of your
-application. You can use them to set a specific package version for example.
-
 #### Delete the images
 
 You can delete the images with the following command:
@@ -1339,6 +1370,11 @@ instead of using your password. It is more secure than using your password.
 Follow the instructions on the official website to authenticate with a personal
 access token (classic):
 <https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry>.
+
+> **Note**  
+> You can find the personal access token in the settings of your GitHub account:
+> **Settings** > **Developer settings** (at the very end of the left side bar) >
+> **Personal access tokens** > **Tokens (classic)**.
 
 #### Login to GitHub Container Registry
 
@@ -1643,8 +1679,8 @@ The output should be similar to this:
  => => transferring context: 2B                                                   0.0s
  => [filebrowser internal] load build definition from Dockerfile                  0.0s
  => => transferring dockerfile: 848B                                              0.0s
- => [filebrowser internal] load metadata for docker.io/library/alpine:latest      0.0s
- => [filebrowser 1/4] FROM docker.io/library/alpine:latest                        0.0s
+ => [filebrowser internal] load metadata for docker.io/library/alpine:3.18      0.0s
+ => [filebrowser 1/4] FROM docker.io/library/alpine:3.18                        0.0s
  => CACHED [filebrowser 2/4] RUN apk add --no-cache --repository=https://dl-cdn.  0.0s
  => CACHED [filebrowser 3/4] RUN apk add --no-cache curl                          0.0s
  => CACHED [filebrowser 4/4] WORKDIR /app                                         0.0s
@@ -1687,8 +1723,8 @@ Registry.
 
 #### Share your Docker Compose application
 
-Create a new Git repository (do not forget the `.gitignore` file with the required files! Which are they?) and push your
-code to it.
+Create a new Git repository (do not forget the `.gitignore` file with the
+required files! Which are they?) and push your code to it.
 
 Share your Docker Compose application in the GitHub Discussions of this
 organization: <https://github.com/orgs/heig-vd-dai-course/discussions>.

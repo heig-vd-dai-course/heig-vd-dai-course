@@ -226,7 +226,6 @@ You can find other resources and alternatives as well.
 - Runs a virtual machine with Linux
 - Allows to run Docker and Docker Compose commands
 
-
 ![bg right contain](./images/docker-desktop.png)
 
 ## Docker Hub and GitHub Container Registry
