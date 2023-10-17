@@ -222,8 +222,8 @@ You can find other resources and alternatives as well.
 
 ### Docker Desktop
 
-- A tool for macOS and Windows (Linux uses Docker Engine)
-- Runs a virtual machine with Linux
+- A tool for macOS and Windows
+- Runs a Linux virtual machine to run Docker
 - Allows to run Docker and Docker Compose commands
 
 ![bg right contain](./images/docker-desktop.png)
@@ -240,6 +240,18 @@ You can find other resources and alternatives as well.
 
 - Docker Hub is the official registry, hosting millions of images
 - We will use GitHub Container Registry to keep everything in one place
+
+![bg right contain](./images/docker-hub-and-github-container-registry.png)
+
+### Tips and tricks
+
+Some tips and tricks are described in the course material (not mandatory to
+read):
+
+- Healthchecks
+- Free some space
+- Multi-stage builds
+- Multi-architecture builds
 
 ![bg right contain](./images/docker-hub-and-github-container-registry.png)
 
@@ -281,9 +293,9 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Experiment with the SMTP protocol and telnet with Docker and Docker Compose
+- Experiment with the SMTP protocol and Telnet with Docker and Docker Compose
   - How to send emails with SMTP? How is structured an email?
-  - Run a SMTP server with Docker and send an email with telnet
+  - Run a SMTP server with Docker and send an email with Telnet
 
 ![bg right:40%](https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720)
 

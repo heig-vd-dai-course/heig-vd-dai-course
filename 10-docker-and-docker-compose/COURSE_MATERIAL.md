@@ -56,7 +56,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Write a Dockerfile, build and run an image with Docker](#write-a-dockerfile-build-and-run-an-image-with-docker)
   - [Publish an image on GitHub Container Registry](#publish-an-image-on-github-container-registry)
   - [Use the published image with Docker](#use-the-published-image-with-docker)
-  - [Run a container with Docker Compose](#run-a-container-with-docker-compose)
   - [Use the published image with Docker Compose](#use-the-published-image-with-docker-compose)
   - [Build and run the application with Docker Compose](#build-and-run-the-application-with-docker-compose)
   - [Go further](#go-further)
@@ -462,6 +461,9 @@ _Alternatives are here for general knowledge. No need to learn them._
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Tips and tricks
+
+These tips and tricks are not mandatory to know. They are here to help you and
+for your general knowledge.
 
 ### Healthchecks
 
@@ -1247,8 +1249,8 @@ docker build \
 > 0.754     breaks: world[filebrowser=2.25.0-r0]
 > ```
 >
-> It means the version of the `filebrowser` package is not available anymore in
-> the Alpine Linux packages registry.
+> It means the `2.25.0-r0` version of the `filebrowser` package is not available
+> anymore in the Alpine Linux packages registry.
 >
 > Check the next section to fix it!
 
@@ -1263,6 +1265,17 @@ docker build \
   my-custom-dockerfile
 ```
 
+> **Note**  
+> For people using an ARM computer (Apple Silicon), you might need to add the
+> `--platform=linux/amd64` parameter to the `build` command as well.
+>
+> The File Browser package is only built for the `amd64` architecture at the
+> moment. You need to specify the `linux/amd64` platform to build the image for
+> the `amd64` architecture.
+>
+> You can find more information about multi-architecture builds in the official
+> documentation: <https://docs.docker.com/build/building/multi-platform/>.
+
 The `--arg` option is used to override the value of a build argument. It is used
 to specify the name and the value of the build argument. The name and the value
 are separated by an equal sign (`=`).
@@ -1271,10 +1284,9 @@ Build arguments are really useful to configure your building process of your
 application. You can use them to set a specific package version for example.
 
 You can check the latest version of File Browser in the Alpine Linux packages
-registry here:
-<https://pkgs.alpinelinux.org/package/edge/testing/x86_64/filebrowser> and use
+registry here: <https://pkgs.alpinelinux.org/packages?name=filebrowser> and use
 the `--build-arg` option to set the `FILEBROWSER_VERSION` build argument to
-build the image
+build the image.
 
 Once the image is correctly built, start the container with the following
 command:
@@ -1516,19 +1528,6 @@ If you have not deleted the local volumes, you should have access to the
 previous files created with File Browser, just as before, using the image you
 have published on GitHub Container Registry!
 
-### Run a container with Docker Compose
-
-In this section, you will run the same container with Docker Compose.
-
-A Docker Compose file is a YAML file that describes the services that make up
-your application. It can be used to run a single container or multiple
-containers.
-
-The Docker Compose file is easier to read and re-use than pure Docker commands.
-
-The Docker Compose file is named `docker-compose.yml` by default. You can use
-the `-f` option to specify a different file name.
-
 ### Use the published image with Docker Compose
 
 In this section, you will run the same container with Docker Compose.
@@ -1552,12 +1551,37 @@ GitHub username:
 services:
   filebrowser:
     image: ghcr.io/<username>/my-custom-dockerfile:v3.0
+    platform: linux/amd64
     ports:
       - "8080:5000"
     volumes:
       - ./my-data:/app/data
       - ./my-config:/app/config
 ```
+
+> **Note**  
+> For people using an ARM computer (Apple Silicon), you might need to add the
+> `platform: linux/amd64` after the image in the `docker-compose.yml` file
+> as well:
+>
+> ```yaml
+> services:
+>   filebrowser:
+>     image: ghcr.io/<username>/my-custom-dockerfile:v3.0
+>     platform: linux/amd64
+>     ports:
+>       - "8080:5000"
+>     volumes:
+>       - ./my-data:/app/data
+>       - ./my-config:/app/config
+> ```
+>
+> The File Browser package is only built for the `amd64` architecture at the
+> moment. You need to specify the `linux/amd64` platform to build the image for
+> the `amd64` architecture.
+>
+> You can find more information about multi-architecture builds in the official
+> documentation: <https://docs.docker.com/build/building/multi-platform/>.
 
 The Docker Compose file is composed of services. Each service is a container.
 
@@ -1636,7 +1660,8 @@ Compose and run it with Docker Compose.
 #### Update the Docker Compose file
 
 Update the `docker-compose.yml` file with the following content, replacing
-`<username>` with your GitHub username:
+`<username>` with your GitHub username and the `<a specific version>` with the
+version of File Browser you want to use:
 
 ```yaml
 services:
@@ -1644,6 +1669,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        FILEBROWSER_VERSION: <a specific version>
     image: ghcr.io/<username>/my-custom-dockerfile:v3.0
     ports:
       - "8080:5000"
@@ -1652,15 +1679,42 @@ services:
       - ./my-config:/app/config
 ```
 
+> **Note**  
+> For people using an ARM computer (Apple Silicon), you might need to add the
+> `platform: linux/amd64` after the image in the `docker-compose.yml` file
+> as well:
+>
+> ```yaml
+> services:
+>   filebrowser:
+>     build:
+>       context: .
+>       dockerfile: Dockerfile
+>       args:
+>         FILEBROWSER_VERSION: <a specific version>
+>     image: ghcr.io/<username>/my-custom-dockerfile:v3.0
+>     platform: linux/amd64
+>     ports:
+>       - "8080:5000"
+>     volumes:
+>       - ./my-data:/app/data
+>       - ./my-config:/app/config
+> ```
+>
+> The File Browser package is only built for the `amd64` architecture at the
+> moment. You need to specify the `linux/amd64` platform to build the image for
+> the `amd64` architecture.
+>
+> You can find more information about multi-architecture builds in the official
+> documentation: <https://docs.docker.com/build/building/multi-platform/>.
+
 The `build` instruction is used to build the image from the Dockerfile. It is
 used to specify the build context and the Dockerfile.
 
 Defining the `image` is optional. If you do not define it, Docker Compose will
 generate a name for you. If you define it, Docker Compose will use it instead.
 
-Please note that the `image` is not the same as the `build` context. The `image`
-is the name of the image that will be built. The `build` context is the
-directory that contains the Dockerfile.
+Please note that, in this context, as you are using both the `build` and `image` keys,  the `image` key will be used to tag the built Docker image. It will not use or fetch any images remotely.
 
 #### Build the image with Docker Compose
 
@@ -1708,6 +1762,17 @@ docker compose up -d
 
 You can now open your browser and go to <http://localhost:8080> to access the
 application.
+
+#### Push the image to GitHub Container Registry
+
+Run the following command to push the image on GitHub Container Registry:
+
+```sh
+# Push the image to GitHub Container Registry
+docker compose push
+```
+
+This will push the newly updated image to GitHub Container Registry.
 
 #### Pull the image from GitHub Container Registry
 
@@ -1790,7 +1855,7 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Use Docker and Docker compose to experiment with the SMTP protocol and telnet
+- Use Docker and Docker compose to experiment with the SMTP protocol and Telnet
 
 ## Additional resources
 
