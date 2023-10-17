@@ -402,10 +402,12 @@ This means that you are connected to the MailHog SMTP server.
 
 #### Send an email
 
-In the Telnet session, run the following commands, replace all `<>` values with your own values:
+In the Telnet session, run the following commands, replace all `<>` values with
+your own values (you must keep the `<` and `>` characters!) and the
+`the-smtp-domain-name.tld` with any domain name you want:
 
 ```text
-EHLO <smtp server dns name>
+EHLO the-smtp-domain-name.tld
 MAIL FROM: <your-email@gmail.com>
 RCPT TO: <recipient@example.com>
 DATA
@@ -436,7 +438,8 @@ simple. However, the email content is not. This is why we use email clients
 instead of Telnet to send emails.
 
 These commands follow the SMTP protocol, just as any other application protocols
-such as the one you created in a previous chapter and the ones you will create in the future.
+such as the one you created in a previous chapter and the ones you will create
+in the future.
 
 To quit the Telnet session, run the following command:
 
@@ -465,13 +468,26 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-TODO
+In this chapter, you have had a refresh about networking with IP adresses and
+DNS records. You have also learned about the SMTP protocol and how to use Telnet
+to send an email to an SMTP server.
+
+Based on the official RFC, you have learned that SMTP is a simple text-based
+protocol to send emails with rather simple commands.
+
+With the help of MailHog and Docker, you have now a way to test your emails with
+a fake SMTP server for all your other applications!
 
 ### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
-- TODO
+- What are the difference between SMTP, POP3 and IMAP?
+- What are the DNS records related to email?
+- What are the security concerns related to email?
+- What is Telnet?
+- What are the SMTP commands to send an email?
+- What is the difference between the SMTP commands and the email content?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -505,7 +521,3 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 - Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
   on [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
-
-```
-
-```

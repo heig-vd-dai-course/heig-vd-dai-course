@@ -1561,8 +1561,8 @@ services:
 
 > **Note**  
 > For people using an ARM computer (Apple Silicon), you might need to add the
-> `platform: linux/amd64` after the image in the `docker-compose.yml` file
-> as well:
+> `platform: linux/amd64` after the image in the `docker-compose.yml` file as
+> well:
 >
 > ```yaml
 > services:
@@ -1681,8 +1681,8 @@ services:
 
 > **Note**  
 > For people using an ARM computer (Apple Silicon), you might need to add the
-> `platform: linux/amd64` after the image in the `docker-compose.yml` file
-> as well:
+> `platform: linux/amd64` after the image in the `docker-compose.yml` file as
+> well:
 >
 > ```yaml
 > services:
@@ -1714,7 +1714,9 @@ used to specify the build context and the Dockerfile.
 Defining the `image` is optional. If you do not define it, Docker Compose will
 generate a name for you. If you define it, Docker Compose will use it instead.
 
-Please note that, in this context, as you are using both the `build` and `image` keys,  the `image` key will be used to tag the built Docker image. It will not use or fetch any images remotely.
+Please note that, in this context, as you are using both the `build` and `image`
+keys, the `image` key will be used to tag the built Docker image. It will not
+use or fetch any images remotely.
 
 #### Build the image with Docker Compose
 
