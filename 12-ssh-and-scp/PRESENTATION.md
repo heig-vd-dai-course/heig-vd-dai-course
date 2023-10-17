@@ -48,7 +48,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-ssh-and-scp/12-ssh-and-scp-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/115
 [illustration]:
   https://images.unsplash.com/photo-1506818144585-74b29c980d4b?fit=crop&h=720
 [course-material]:

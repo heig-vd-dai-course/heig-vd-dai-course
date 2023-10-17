@@ -49,7 +49,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-java-udp-programming/17-java-udp-programming-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/120
 [illustration]:
   https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720
 [course-material]:

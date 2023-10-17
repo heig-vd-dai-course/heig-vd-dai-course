@@ -4,7 +4,7 @@
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-practical-work-2/14-practical-work-2-course-material.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/117
 
 # Practical work 2
 

@@ -48,7 +48,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/21-http-and-curl-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
 [illustration]:
   https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
 [course-material]:

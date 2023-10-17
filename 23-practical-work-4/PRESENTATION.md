@@ -49,7 +49,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-practical-work-4/23-practical-work-4-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
 [illustration]:
   https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
 [practical-work]:

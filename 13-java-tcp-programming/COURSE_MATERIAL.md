@@ -4,7 +4,7 @@
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-tcp-programming/13-java-tcp-programming-course-material.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/116
 [illustration]:
   https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
 

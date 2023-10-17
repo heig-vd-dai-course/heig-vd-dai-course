@@ -4,7 +4,7 @@
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-practical-work-3/18-practical-work-3-course-material.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/118
 
 # Practical work 3
 

@@ -4,7 +4,7 @@
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-web-infrastructures/22-web-infrastructures-practical-work.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/122
 [illustration]:
   https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720
 
