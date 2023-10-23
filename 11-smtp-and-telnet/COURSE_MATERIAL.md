@@ -35,6 +35,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Security concerns and blacklisting](#security-concerns-and-blacklisting)
 - [A focus on the SMTP protocol](#a-focus-on-the-smtp-protocol)
 - [Telnet](#telnet)
+  - [Alternatives](#alternatives)
+  - [Resources](#resources)
 - [Practical content](#practical-content)
   - [Install and configure Telnet](#install-and-configure-telnet)
   - [Start MailHog](#start-mailhog)
@@ -290,6 +292,23 @@ As SMTP, Telnet is very old and is not considered secure. However, it is still
 used to test services such as SMTP locally and/or to configure network devices
 such as routers that you might have to configure during your career. This is why
 we will use it in this course for local testing.
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- Netcat
+- Ncat
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- _None for now_
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Practical content
 

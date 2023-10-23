@@ -35,8 +35,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Asynchronous programming](#asynchronous-programming)
 - [Practical content](#practical-content)
   - [Check and try-out the code examples](#check-and-try-out-the-code-examples)
-  - [Create a TCP client in Java](#create-a-tcp-client-in-java)
-  - [Create a multi-threaded TCP server in Java](#create-a-multi-threaded-tcp-server-in-java)
+  - [Create a complete TCP client/server application in Java](#create-a-complete-tcp-clientserver-application-in-java)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -260,23 +259,96 @@ learn how to run the code examples.
 
 Take some time to explore the code examples. Run them and see what they do.
 
-### Create a TCP client in Java
+### Create a complete TCP client/server application in Java
 
-#### Specs
+In this section, you will create a complete TCP client/server application in Java using the Socket API and a thread pool.
 
-### Create a multi-threaded TCP server in Java
+#### The application protocol
 
-#### Specs
+You will implement a simple application protocol based on the application protocol
+presented in the course.
 
-In this section, you will learn how to create a multi-threaded TCP server in
-Java using the Socket API and a thread pool.
+##### Overview
 
-#### Implement the multi-threaded TCP server
+The DAI protocol is meant to transfer files over the network.
 
-Using the code examples, implement a multi-threaded TCP server with a thread
-pool. You can also have a look at the Java documentation to find more details on
-the classes to use and how to use them:
-<https://docs.oracle.com/en/java/javase/17/docs/api/index.html>.
+The DAI protocol is a client-server protocol.
+
+The client connects to a server and request a file. The server sends the file
+or an error message if the file does not exist.
+
+##### Transport protocol
+
+The DAI protocol uses the TCP protocol. The server runs on port 55555.
+
+The client has to know the IP address of the server to connect to. It
+establishes the connection with the server.
+
+The server closes the connection when the transfer is done or if an error
+occurs (e.g. the file was not found).
+
+##### Messages
+
+The client can send the following messages:
+
+- `GET <file>`: used to request a file from the server
+  - `<file>`: the name of the file to request - The filename is an absolute
+    path to the file (`/data/file.txt`)
+- `QUIT`: used to close the connection with the server
+
+The server can send the following messages:
+
+- `OK`: used to notify the client that the connection was successful and the
+  server is ready to receive commands
+- `FILE <file>`: used to send the content of the requested file - the
+  connection is closed after this message
+- `ERROR <code>`: used to notify the client that an error occurred - the
+  connection is closed after this message
+  - `400`: the request was malformed
+  - `404`: the file was not found
+
+All messages are UTF-8 encoded and end with a new line character (`\n`).
+
+If the file exists, the server sends the file content as binary data.
+
+#### Implement the client
+
+Using the code examples, implement a TCP client that can request a file from a
+server with Maven.
+
+#### Implement the server
+
+Using the code examples, implement a TCP server that can send a file to a
+client with Maven.
+
+#### Test the client/server application
+
+Using your TCP client, request a file from your TCP server.
+
+Try to request a file that does not exist.
+
+Try with multiple clients at the same time. Can they all connect to the server?
+Can they all request a file at the same time? Try and change the number of
+threads in the thread pool (1, 2, 5 and 10 for example).
+
+#### Share your results
+
+Create a new Git repository and push your code to it. Do not forget to add all necessary files to your repository and ignore the files that are not necessary.
+
+Share your results in the GitHub Discussions of this organization:
+<https://github.com/orgs/heig-vd-dai-course/discussions>.
+
+Create a new discussion with the following information:
+
+- **Title**: DAI 2023-2024 - Java TCP benchmarking - First name Last Name
+- **Category**: Show and tell
+- **Description**: The link to your GitHub repository and add your conclusions to the following
+  questions:
+  - Which number of threads is the best? Why?
+  - Why do more threads not necessarily mean better performance?
+
+This will notify us that you have completed the exercise and we can check your
+work.
 
 ### Go further
 

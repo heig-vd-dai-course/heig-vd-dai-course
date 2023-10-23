@@ -174,6 +174,13 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## SCP
 
+SCP is a protocol that allows you to copy files from/to a remote machine. It is
+a replacement for the FTP protocol.
+
+The SCP protocol relies on the SSH protocol to authenticate the client.
+
+SCP is an illustration of the client/server architecture using the SSH protocol.
+
 ### Alternatives
 
 _Alternatives are here for general knowledge. No need to learn them._
@@ -576,7 +583,9 @@ cursor to the public key and pressing the `d` key twice.
 You can check the value of the `comment` field to identify the public key to
 remove or the hash of the public key.
 
-Save the file with `:wq` (write and quit).
+Save the file by typing `:wq` (write and quit).
+
+Congrats! You were able to exit the Vi editor! You will not be trapped forever! 🎉
 
 If you are interested in learning more about the Vi/Vim editor, you can check
 the following resource: <https://github.com/iggredible/Learn-Vim/tree/master>.
