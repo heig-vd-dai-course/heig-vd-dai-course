@@ -413,7 +413,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 _Resources are here to help you. They are not mandatory to read._
 
-- _None yet_
+- _None for now_
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -1101,25 +1101,27 @@ Let's run the container again, but this time, let's mount a volume on the
 
 ```sh
 # Run the image with the my-custom-dockerfile:v2.0 tag and mount a volume
-docker run --rm -v ./my-custom-dockerfile/my-data:/app/data --entrypoint /bin/sh my-custom-dockerfile:v2.0 -c "touch /app/data/my-file.txt"
+docker run --rm -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" --entrypoint /bin/sh my-custom-dockerfile:v2.0 -c "touch /app/data/my-file.txt"
 ```
 
 The `-v` option is used to mount a volume. It is used to specify a directory on
 the host that will be mounted on the `/app/data` directory inside the container.
 
-The `./my-data` argument is used to specify the directory on the host to mount
-on the `/app/data` directory inside the container. It is a relative path. It is
-relative to the current directory and should be created automatically if it does
-not exist.
+`pwd` is used to get the absolute path of the current directory.
 
-The container should have created a file named `my-file.txt` in the `./my-data`
-directory on the host. You can now run the initial command to display the
-content of the `/app/data` directory inside the container that is mapped to the
-`./my-data` directory on the host:
+The `$(pwd)/my-data` argument is used to specify the directory on the host to
+mount on the `/app/data` directory inside the container. It is a relative path.
+It is relative to the current directory and should be created automatically if
+it does not exist.
+
+The container should have created a file named `my-file.txt` in the
+`$(pwd)/my-data` directory on the host. You can now run the initial command to
+display the content of the `/app/data` directory inside the container that is
+mapped to the `$(pwd)/my-data` directory on the host:
 
 ```sh
 # Run the image with the my-custom-dockerfile:v2.0 tag and override the command
-docker run --rm -v ./my-custom-dockerfile/my-data:/app/data my-custom-dockerfile:v2.0 /app/data
+docker run --rm -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" my-custom-dockerfile:v2.0 /app/data
 ```
 
 The output should be similar to the following:
@@ -1138,7 +1140,7 @@ files inside the container:
 
 ```sh
 # Run the image with the my-custom-dockerfile:v2.0 tag
-docker run --rm -v ./my-custom-dockerfile/my-data:/app/data my-custom-dockerfile:v2.0
+docker run --rm -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" my-custom-dockerfile:v2.0
 ```
 
 The output should be similar to the following:
@@ -1293,7 +1295,7 @@ command:
 
 ```sh
 # Run the image with the my-custom-dockerfile:v3.0 tag
-docker run --rm -p 8080:5000 -v ./my-custom-dockerfile/my-data:/app/data -v ./my-custom-dockerfile/my-config:/app/config my-custom-dockerfile:v3.0
+docker run --rm -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" my-custom-dockerfile:v3.0
 ```
 
 The `-p` option is used to publish a container's port(s) to the host. It is used
@@ -1316,11 +1318,12 @@ The default username is `admin` and the default password is `admin`. You can
 change it in the settings of the application.
 
 You should have access to the previous files created in the `/app/data`
-directory as it is mounted on the `./my-data` directory on the host. If you try
-to create a new file, it should appear in the `./my-data` directory on the host.
+directory as it is mounted on the `$(pwd)/my-data` directory on the host. If you
+try to create a new file, it should appear in the `$(pwd)/my-data` directory on
+the host.
 
 The directory `/app/config` contains the database of the application. It is
-mounted on the `./my-config` directory on the host.
+mounted on the `$(pwd)/my-config` directory on the host.
 
 You can now stop the container with `CTRL+C`.
 
@@ -1328,7 +1331,7 @@ Start the container again with the following command:
 
 ```sh
 # Run the image with the my-custom-dockerfile:v3.0 tag
-docker run --rm -d -p 8080:5000 -v ./my-custom-dockerfile/my-data:/app/data -v ./my-custom-dockerfile/my-config:/app/config my-custom-dockerfile:v3.0
+docker run --rm -d -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" my-custom-dockerfile:v3.0
 ```
 
 This will start the container in detached mode.
@@ -1521,7 +1524,7 @@ your GitHub username:
 
 ```sh
 # Run the image with Docker
-docker run --rm -p 8080:5000 -v ./my-custom-dockerfile/my-data:/app/data -v ./my-custom-dockerfile/my-config:/app/config ghcr.io/<username>/my-custom-dockerfile:v3.0
+docker run --rm -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" ghcr.io/<username>/my-custom-dockerfile:v3.0
 ```
 
 If you have not deleted the local volumes, you should have access to the
@@ -1587,6 +1590,9 @@ The Docker Compose file is composed of services. Each service is a container.
 
 It is mostly a translation of the Docker commands you have seen previously. The
 file is more readable than pure Docker commands and is easier to re-use as well.
+
+Please note that the volumes do not need `$(pwd)` as the current directory will
+be extended to the absolute directory automatically by Docker Compose.
 
 A Docker Compose file can easily be shared with your team in a Git repository.
 

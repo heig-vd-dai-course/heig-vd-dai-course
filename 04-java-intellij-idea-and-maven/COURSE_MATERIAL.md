@@ -130,13 +130,13 @@ it is more convenient to use an **Integrated Development Environment (IDE)**.
 
 A (simple) Java application can be compiled using the `javac` command:
 
-```bash
+```sh
 javac HelloWorld.java
 ```
 
 The resulting bytecode can be executed using the `java` command:
 
-```bash
+```sh
 java HelloWorld
 ```
 
@@ -151,7 +151,7 @@ a **ZIP file** containing the compiled bytecode and other resources.
 
 A JAR file can be executed using the `java` command:
 
-```bash
+```sh
 java -Xmx1024M -Xms1024M -jar minecraft_server.1.20.1.jar nogui
 ```
 

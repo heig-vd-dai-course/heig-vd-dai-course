@@ -88,19 +88,19 @@ _paginate: false
 
 - Compile the project
 
-```bash
+```sh
 mvn clean package
 ```
 
 - Run the CLI without any arguments
 
-```bash
+```sh
 java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar
 ```
 
 ---
 
-```bash
+```sh
 Missing required options: '--input=<inputFile>', '--output=<outputFile>'
 Usage: IoProcessing [-hV] -i=<inputFile> [-ie=<inputEncoding>] -o=<outputFile>
                     [-oe=<outputEncoding>] [COMMAND]
@@ -122,13 +122,13 @@ Commands:
 
 - Run the CLI with the `uppercase` command
 
-```bash
+```sh
 java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar -i input.txt -o output.txt uppercase
 ```
 
 - You can also specify the encoding of the input and output files
 
-```bash
+```sh
 java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
     -i input.txt -ie UTF-8 \
     -o output.txt -oe US-ASCII uppercase
@@ -136,12 +136,12 @@ java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
 
 ## See the result
 
-```bash
+```sh
 $> cat input.txt
 Coucou ça va ?
 ```
 
-```bash
+```sh
 $> cat output.txt
 COUCOU ?A VA ?
 ```

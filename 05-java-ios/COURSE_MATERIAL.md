@@ -322,7 +322,8 @@ repository to get the code examples.
 
 #### Explore and run the code examples
 
-Checkout the `README.md` file to know how to run the code examples.
+In the `05-java-ios` directory, checkout the `README.md` file to learn how to
+run the code examples.
 
 Take some time to explore the code examples. Run them and see what they do.
 
@@ -368,7 +369,7 @@ You will also generate random data to benchmark the different types of streams.
 Read the course material carefully to find the right classes to use. You can
 also have a look at the Java documentation to find more details on the right
 classes to use and how to use them:
-<https://docs.oracle.com/en/java/javase/17/docs/api/index.html>
+<https://docs.oracle.com/en/java/javase/17/docs/api/index.html>.
 
 Please be aware that you **always** have to set the encoding when you read or
 write text data. If you do not set the encoding, the default encoding will be

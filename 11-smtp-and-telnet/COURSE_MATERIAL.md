@@ -26,18 +26,18 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
-- [A quick reminder about networking: IP and DNS](#a-quick-reminder-about-networking-ip-and-dns)
+- [A quick reminder about networking](#a-quick-reminder-about-networking)
 - [Electronic messaging protocols: SMTP, POP3 and IMAP](#electronic-messaging-protocols-smtp-pop3-and-imap)
   - [SMTP](#smtp)
   - [POP3](#pop3)
   - [IMAP](#imap)
 - [DNS records related to email](#dns-records-related-to-email)
 - [Security concerns and blacklisting](#security-concerns-and-blacklisting)
-- [Telnet](#telnet)
 - [A focus on the SMTP protocol](#a-focus-on-the-smtp-protocol)
+- [Telnet](#telnet)
 - [Practical content](#practical-content)
   - [Install and configure Telnet](#install-and-configure-telnet)
-  - [Run MailHog](#run-mailhog)
+  - [Start MailHog](#start-mailhog)
   - [Send an email with Telnet](#send-an-email-with-telnet)
   - [Stop MailHog](#stop-mailhog)
   - [Go further](#go-further)
@@ -55,7 +55,7 @@ In this chapter, you will have a refresh about networking and learn about the
 SMTP protocol. You will also learn how to use the Telnet protocol to send an
 email to an SMTP server.
 
-## A quick reminder about networking: IP and DNS
+## A quick reminder about networking
 
 Each computer connected to the Internet has an
 [IP (Internet Protocol) address](https://en.wikipedia.org/wiki/IP_address). This
@@ -73,7 +73,7 @@ domain name `heig-vd.ch` is mapped to the IP address `193.134.223.20`.
 You can check this by running the following command with
 [nslookup](https://en.wikipedia.org/wiki/Nslookup):
 
-```bash
+```sh
 nslookup heig-vd.ch
 ```
 
@@ -110,22 +110,30 @@ as Thunderbird, Gmail or Outlook to use these protocols.
 ### SMTP
 
 SMTP is the protocol used to send emails. It is a simple text-based protocol
-that uses TCP port 25, 465 or 587. It is used by email clients to send emails to
-an email server.
+that uses TCP port 25, 465 or 587. The port 25 is used for unencrypted
+connections, while the ports 465 and 587 are used for encrypted connections. The
+port 587 is the newer and recommended port for encrypted connections.
+
+It is used by email clients to send emails to an email server.
 
 ### POP3
 
 POP3 is a protocol used to retrieve emails. It is a simple text-based protocol
-that uses TCP port 110 or 995. It is used by email clients to retrieve emails
-from an email server.
+that uses TCP port 110 or 995. The port 110 is used for unencrypted connections,
+while the port 995 is used for encrypted connections.
+
+It is used by email clients to retrieve emails from an email server.
 
 ### IMAP
 
 IMAP is a protocol used to retrieve and synchronize emails. It is a more complex
-protocol that uses TCP port 143 or 993. It is used by email clients to
-synchronize emails from and to an email server between the email server and the
-email client. This means that if you read an email on your email client, it will
-be marked as read on the email server, while POP3 does not allow this.
+protocol that uses TCP port 143 or 993. The port 143 is used for unencrypted
+connections, while the port 993 is used for encrypted connections.
+
+It is used by email clients to synchronize emails from and to an email server
+between the email server and the email client. This means that if you read an
+email on your email client, it will be marked as read on the email server, while
+POP3 does not allow this.
 
 ## DNS records related to email
 
@@ -141,17 +149,17 @@ following DNS records:
   `heigvd-ch01b.mail.protection.outlook.com.`.
 - `A`: This record specifies the IP address of a given domain name. For example,
   the `A` record for `heig-vd.ch` is `193.134.223.20`.
-- `SPF` as stated by CloudFlare
+- `TXT`: The `SPF` record, as stated by CloudFlare
   (<https://www.cloudflare.com/en-gb/learning/dns/dns-records/dns-spf-record>),
-  _"SPF records are a type of DNS TXT record commonly used for email
-  authentication. SPF records include a list of IP addresses and domains
-  authorized to send emails from that domain."_. For example, one of the `TXT`
-  record contains these information for `heig-vd.ch`.
+  _"[] are a type of DNS TXT record commonly used for email authentication. SPF
+  records include a list of IP addresses and domains authorized to send emails
+  from that domain."_. For example, one of the `TXT` record contains these
+  information for `heig-vd.ch`.
 
 You can check these records by running the following command with
 [dig](<https://en.wikipedia.org/wiki/Dig_(command)>):
 
-```bash
+```sh
 dig heig-vd.ch any
 ```
 
@@ -204,7 +212,7 @@ information.
 
 Note the `ANSWER SECTION` line. The `A` record the IP mapping the DNS record.
 The `MX` record is the email server that will receive emails for the given
-domain name.
+domain name. One of the `TXT` contains the `SPF` records with `v=spf1 [...]`.
 
 ## Security concerns and blacklisting
 
@@ -238,6 +246,34 @@ emails. This SMTP server is called MailHog and can be run with Docker:
 > address, you could get in trouble. Please use the MailHog SMTP server for your
 > tests to avoid any issues.
 
+## A focus on the SMTP protocol
+
+The SMTP protocol is described in
+[RFC 5321](https://datatracker.ietf.org/doc/html/rfc5321).
+
+It uses the TCP protocol on port 25, 465 or 587. It is a text-based protocol
+with the following commands (among others):
+
+- `HELO` or `EHLO`: Used to identify the sender
+- `MAIL FROM`: Used to specify the sender email address
+- `RCPT TO`: Used to specify the recipient email address
+- `DATA`: Used to specify the email content
+- `QUIT`: Used to close the connection
+
+To send an email, you will need to use the following commands:
+
+```text
+EHLO <sender>
+MAIL FROM: <sender email address>
+RCPT TO: <recipient email address>
+DATA
+<email content>
+.
+QUIT
+```
+
+![Sequence diagram of the SMTP protocol](./images/a-focus-on-the-smtp-protocol.png)
+
 ## Telnet
 
 [Telnet](https://en.wikipedia.org/wiki/Telnet) is a client/server protocol that
@@ -255,35 +291,11 @@ used to test services such as SMTP locally and/or to configure network devices
 such as routers that you might have to configure during your career. This is why
 we will use it in this course for local testing.
 
-## A focus on the SMTP protocol
-
-The SMTP protocol is described in
-[RFC 5321](https://datatracker.ietf.org/doc/html/rfc5321).
-
-It uses the TCP protocol on port 25, 465 or 587. It is a text-based protocol
-with the following commands (among others)):
-
-- `HELO`: Used to identify the sender
-- `MAIL FROM`: Used to specify the sender email address
-- `RCPT TO`: Used to specify the recipient email address
-- `DATA`: Used to specify the email content
-- `QUIT`: Used to close the connection
-
-To send an email with Telnet, you will need to use the following commands:
-
-```text
-EHLO <sender>
-MAIL FROM: <sender email address>
-RCPT TO: <recipient email address>
-DATA
-<email content>
-.
-QUIT
-```
-
 ## Practical content
 
 ### Install and configure Telnet
+
+In this section, you will install and configure Telnet on your operating system.
 
 #### Install Telnet
 
@@ -301,7 +313,8 @@ system. You only need the **client**, not the server:
 
 You can check the installation by running the following command:
 
-```bash
+```sh
+# Check the installation
 telnet
 ```
 
@@ -313,7 +326,7 @@ telnet>
 
 You are now in a Telnet session. You can exit it with the `quit` command.
 
-### Run MailHog
+### Start MailHog
 
 Pull the latest changes from the previously cloned
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
@@ -325,7 +338,8 @@ file.
 
 In the `11-smtp-and-telnet` directory, run the following command:
 
-```bash
+```sh
+# Start MailHog in background
 docker-compose up -d
 ```
 
@@ -350,7 +364,7 @@ This will start the MailHog SMTP server and the MailHog Web interface.
 
 Display and follow the logs of the container with the following command:
 
-```bash
+```sh
 docker compose logs -f
 ```
 
@@ -379,13 +393,15 @@ You can access the MailHog Web interface at <http://localhost:8025>.
 
 ### Send an email with Telnet
 
+In this section, you will send an email with Telnet to the MailHog SMTP server.
+
 #### Connect to the SMTP server
 
 Now that MailHog is running, you can send an email with Telnet.
 
 Open a new terminal and run the following command:
 
-```bash
+```sh
 telnet localhost 1025
 ```
 
@@ -420,7 +436,24 @@ Your email content goes here.
 .
 ```
 
+The SMTP protocol relies on the `MAIL FROM:` and `RCPT TO:` commands to specify
+the sender and recipient email addresses. As SMTP does not require
+authentication, you can specify any email address you want. SMTP will then
+accept the email and send it to the recipient email server, regardless of the
+sender email address. This demonstrates the security issues related to SMTP and
+why it is often used by spammers and mail spoofers to social engineer people as
+the email will be sent from a trusted domain.
+
+In order to spoof an email address, you need to have access to an SMTP server
+and send the email from this SMTP server that you share in your network.
+
+The `From:` and `To:` are used by the email client to display the sender and
+recipient names. They are not related to the SMTP protocol. They are part of the
+email content and helps to display the email content in a human-readable way.
+
 The `.`, on a line by itself, indicates the end of the email content.
+
+In this section, you will install and configure Telnet on your operating system.
 
 The output should be similar to this:
 
@@ -451,9 +484,11 @@ QUIT
 
 To stop MailHog, run the following command:
 
-```bash
+```sh
 docker compose down
 ```
+
+This will stop and remove the MailHog container.
 
 ### Go further
 

@@ -26,13 +26,17 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
+- [TCP](#tcp)
+- [The Socket API](#the-socket-api)
+- [Handling one client at a time](#handling-one-client-at-a-time)
+- [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
+  - [Multi-processing](#multi-processing)
+  - [Multi-threading](#multi-threading)
+  - [Asynchronous programming](#asynchronous-programming)
 - [Practical content](#practical-content)
-  - [Create a SMTP client](#create-a-smtp-client)
-  - [Create a TCP client](#create-a-tcp-client)
-  - [Create a single-threaded TCP server](#create-a-single-threaded-tcp-server)
-  - [Create a multi-threaded TCP server](#create-a-multi-threaded-tcp-server)
-  - [Create an asynchronous TCP server](#create-an-asynchronous-tcp-server)
-  - [Load test your server(s) with Gatling](#load-test-your-servers-with-gatling)
+  - [Check and try-out the code examples](#check-and-try-out-the-code-examples)
+  - [Create a TCP client in Java](#create-a-tcp-client-in-java)
+  - [Create a multi-threaded TCP server in Java](#create-a-multi-threaded-tcp-server-in-java)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -44,23 +48,235 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-- TODO
+As you have seen in previous chapters, applications communicate with each other
+using application protocols.
+
+Some tools are created to interact with these protocols. For example, you can
+use Telnet to interact with the SMTP protocol or SSH to interact with the SSH
+protocol to transfer files.
+
+In this chapter, you will learn how to program your own TCP clients and servers
+in Java.
+
+This will allow you to create your own network applications, such as a chat
+server, a file server, a web server, etc.
+
+## TCP
+
+TCP is a transport protocol. It is used to transfer data between two
+applications.
+
+TCP is a connection-oriented protocol. This means that a connection must be
+established between the two applications before data can be exchanged.
+
+TCP is a reliable protocol. This means that the data sent is guaranteed to be
+received by the other application.
+
+TCP is a stream-oriented protocol. This means that the data is sent as a stream.
+There is no notion of message.
+
+A good analogy is to think of TCP as a phone call. You must first establish a
+connection with the other person before you can talk to them. Once the
+connection is established, you can talk to the other person. The other person
+will hear everything you say.
+
+With the help of port numbers, TCP allows multiple applications to communicate
+with each other on the same machine.
+
+Messages are sent from one application to another using sockets. A socket is
+identified by an IP address and a port number.
+
+In TCP, messages are called segments. A segment is a part of a message. A
+segment is identified by a sequence number.
+
+TCP segments are encapsulated in IP packets, called payloads.
+
+Thanks to the sequence numbers, TCP is able to reassemble the segments in the
+correct order. If a segment is lost, TCP will retransmit it.
+
+## The Socket API
+
+The Socket API is a Java API that allows you to create TCP clients and servers.
+
+It has originally been developed in C in the context of the Unix operating
+system. It has been ported to Java and is now available on many platform and
+languages.
+
+A socket is identified by an IP address and a port number.
+
+A socket can act as a client or as a server:
+
+- A socket accepting connections is called a server socket.
+- A socket initiating a connection is called a client socket.
+
+A socket can be blocking or non-blocking.
+
+A blocking socket will block the thread until the operation is completed. No
+other operation can be performed on the socket while the thread is blocked.
+
+A non-blocking socket will not block the thread. It will return immediately with
+a result. If the operation is not completed, the result will be an error.
+
+## Handling one client at a time
+
+A server can handle one client at a time. It is called single-threaded, or
+single-threaded server.
+
+A single-threaded server is quite simple to implement. It creates a socket to
+listen for incoming connections. When a connection is accepted, it creates a
+socket to communicate with the client. It then reads the data sent by the client
+and sends a response.
+
+The main drawback of a single-threaded server is that it can only handle one
+client at a time. If another client tries to connect, it will have to wait until
+the first client is disconnected.
+
+An analogy is to think of a single-threaded server as a restaurant with only one
+table. If a customer is already sitting at the table, another customer will have
+to wait until the first customer leaves.
+
+A single-threaded server is therefore not suitable for production. It is
+suitable for testing and learning purposes. In order to manage multiple clients,
+a server must handle multiple sockets.
+
+Multiple ways exist to handle multiple sockets at the same time and is called
+concurrency.
+
+## Handling multiple clients with concurrency
+
+Concurrency is the ability of an application to handle multiple clients at the
+same time.
+
+There are multiple ways to handle multiple clients with concurrency (among
+others):
+
+- Multi-processing
+- Multi-threading
+- Asynchronous programming
+
+In this course, we will focus on multi-threading but the other methods are
+equally valid and interesting to learn.
+
+### Multi-processing
+
+Multi-processing is the ability of an application to handle multiple processes
+at the same time.
+
+A process is a program in execution. It is identified by a process ID.
+
+A process has its own memory space. It cannot access the memory space of another
+process.
+
+The main process is the process that is created when the application starts.
+
+It creates other processes to handle multiple clients.
+
+A process is a heavy-weight object. It is quite expensive to create and destroy
+as it is a copy of the main process.
+
+Processes can communicate with each other using inter-process communication
+(IPC) but it is quite complex to implement.
+
+An analogy is to think of a process as restaurant chain with multiple
+restaurant. Each restaurant has one table and can handle one customer. If a
+customer is already sitting at a table of a given restaurant, another customer
+can sit at a table at another restaurant.
+
+### Multi-threading
+
+Multi-threading is the ability of an application to handle multiple threads at
+the same time.
+
+A thread is a sequence of instructions that can be executed independently of the
+main thread.
+
+The main thread is the thread that is created when the application starts.
+
+It creates other threads to handle multiple clients.
+
+Each thread has its own stack and its own program counter.
+
+A thread is therefore quite similar to a process, except that it shares the same
+memory space as the other threads. It is therefore much cheaper to create and
+destroy than a process (but still more expensive than a simple object).
+
+Threads can communicate with each other using shared memory.
+
+Threads are more lightweight than processes but their number is limited by the
+operating system.
+
+In order to manage multiple threads, a thread pool is used. A thread pool is a
+pool of threads that can be reused to handle multiple clients.
+
+If the thread pool is full, the main thread will wait until a thread is
+available.
+
+An analogy is to think of a thread as a restaurant with multiple tables. Each
+table can handle one customer. If a customer is already sitting at a table, the
+customer can sit to another table. If all tables are occupied, the customer will
+have to wait until a table is available.
+
+### Asynchronous programming
+
+Asynchronous programming is the ability of an application to handle multiple
+tasks at the same time, without blocking the main thread.
+
+Using asynchronous programming, the main thread can perform other tasks while
+waiting for a task to complete.
+
+Asynchronous programming is based on the concept of callbacks. A callback is a
+function that is called when a task is completed.
+
+An analogy is to think of asynchronous programming as a food truck without a
+table. Once a customer wants something to eat, the person managing the food
+truck gives the customer a ticket. The customer then waits until the food is
+ready but can do other things in the meantime.
+
+Once the food is ready, the person managing the food truck calls the customer.
+The customer then comes to the food truck to get the food.
+
+Asynchronous programming is quite complex to implement. It is therefore not
+covered in this course.
+
+Node.js is a good example of asynchronous programming.
 
 ## Practical content
 
-### Create a SMTP client
+### Check and try-out the code examples
 
-### Create a TCP client
+In this section, you will learn how to start a client/server application with
+the Socket API.
 
-### Create a single-threaded TCP server
+#### Clone the repository
 
-### Create a multi-threaded TCP server
+Pull the latest changes from the previously cloned
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository or clone it if you have not done it yet.
 
-### Create an asynchronous TCP server
+#### Explore and run the code examples
 
-### Load test your server(s) with Gatling
+In the `13-java-tcp-programming` directory, checkout the `README.md` file to
+learn how to run the code examples.
 
-Do we keep this?
+Take some time to explore the code examples. Run them and see what they do.
+
+### Create a TCP client in Java
+
+#### Specs
+
+### Create a multi-threaded TCP server in Java
+
+#### Specs
+
+In this section, you will learn how to create a multi-threaded TCP server in
+Java using the Socket API and a thread pool.
+
+#### Implement the multi-threaded TCP server
+
+Using the code examples, implement a multi-threaded TCP server with a thread
+pool. You can also have a look at the Java documentation to find more details on
+the classes to use and how to use them:
+<https://docs.oracle.com/en/java/javase/17/docs/api/index.html>.
 
 ### Go further
 

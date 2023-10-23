@@ -1,0 +1,25 @@
+@startuml
+actor Client
+participant "Client Application" as ClientApp
+participant "SMTP Server" as SMTPServer
+database "Mail Server" as MailServer
+Client -> ClientApp: Compose Email
+ClientApp -> ClientApp: Prepare Email
+ClientApp -> SMTPServer: Connect to SMTP Server
+SMTPServer --> SMTPServer: SMTP Handshake
+ClientApp -> SMTPServer: Send EHLO Command
+SMTPServer --> SMTPServer: EHLO Response
+ClientApp -> SMTPServer: Send MAIL FROM Command
+SMTPServer --> SMTPServer: MAIL FROM Response
+ClientApp -> SMTPServer: Send RCPT TO Command
+SMTPServer --> SMTPServer: RCPT TO Response
+ClientApp -> SMTPServer: Send DATA Command
+SMTPServer --> SMTPServer: DATA Response
+ClientApp -> SMTPServer: Send Email Content
+SMTPServer --> SMTPServer: Store Email
+ClientApp -> SMTPServer: Send QUIT Command
+SMTPServer --> SMTPServer: QUIT Response
+ClientApp --> SMTPServer: Disconnect
+SMTPServer --> MailServer: Forward Email
+MailServer --> MailServer: Store Email
+@enduml

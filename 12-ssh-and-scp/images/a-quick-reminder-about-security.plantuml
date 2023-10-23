@@ -1,0 +1,16 @@
+@startuml
+actor User1
+actor User2
+participant "Key Generation" as KeyGen
+participant "Encryption" as Encryption
+participant "Decryption" as Decryption
+User1 -> User2: Secure Message Exchange
+User1 -> KeyGen: Generate Key Pair (User1)
+User2 -> KeyGen: Generate Key Pair (User2)
+User1 -> Encryption: Encrypt Message with Public Key (User2)
+Encryption -> Decryption: Decrypt Message with Private Key (User2)
+Decryption --> User2: Decrypted Message
+User2 -> Encryption: Encrypt Reply with Public Key (User1)
+Encryption -> Decryption: Decrypt Reply with Private Key (User1)
+Decryption --> User1: Decrypted Reply
+@enduml
