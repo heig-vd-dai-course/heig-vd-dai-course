@@ -5,7 +5,7 @@ the course.
 
 ## Evaluations 1
 
-- _None yet_
+- [Evaluation 2023-2024](./EVALUATION_1_2023_2024.md)
 
 ## Evaluations 2
 
