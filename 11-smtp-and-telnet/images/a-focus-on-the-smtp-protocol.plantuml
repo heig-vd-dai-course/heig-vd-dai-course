@@ -1,25 +1,35 @@
 @startuml
-actor Client
-participant "Client Application" as ClientApp
-participant "SMTP Server" as SMTPServer
-database "Mail Server" as MailServer
-Client -> ClientApp: Compose Email
-ClientApp -> ClientApp: Prepare Email
+skinparam sequenceMessageAlign center
+!pragma teoz true
+hide footbox
+
+participant "Sender mail client (MUA) \n e.g. Outlook" as ClientApp
+Database "Sender SMTP Server (MTA) \n e.g. MS Exchange" as SMTPServer
+Database "Recipient SMTP Server (MTA) \n e.g. Gmail" as SMTPServer2
+participant "Recipient mail client (MUA) \n e.g. Thunderbird" as ClientApp2
+
+ClientApp <-[#red]-> SMTPServer: **SMTP**
+& SMTPServer <-[#red]-> SMTPServer2: **SMTP**
+& SMTPServer2 <-[#red]-> ClientApp2: **IMAP / POP3**
+
+...
+
 ClientApp -> SMTPServer: Connect to SMTP Server
-SMTPServer --> SMTPServer: SMTP Handshake
-ClientApp -> SMTPServer: Send EHLO Command
-SMTPServer --> SMTPServer: EHLO Response
-ClientApp -> SMTPServer: Send MAIL FROM Command
-SMTPServer --> SMTPServer: MAIL FROM Response
-ClientApp -> SMTPServer: Send RCPT TO Command
-SMTPServer --> SMTPServer: RCPT TO Response
-ClientApp -> SMTPServer: Send DATA Command
-SMTPServer --> SMTPServer: DATA Response
-ClientApp -> SMTPServer: Send Email Content
-SMTPServer --> SMTPServer: Store Email
-ClientApp -> SMTPServer: Send QUIT Command
-SMTPServer --> SMTPServer: QUIT Response
-ClientApp --> SMTPServer: Disconnect
-SMTPServer --> MailServer: Forward Email
-MailServer --> MailServer: Store Email
+ClientApp -> SMTPServer: EHLO
+ClientApp -> SMTPServer: MAIL FROM
+ClientApp -> SMTPServer: RCPT TO
+ClientApp -> SMTPServer: DATA
+ClientApp -> SMTPServer: QUIT
+
+SMTPServer -> SMTPServer2: Connect to SMTP Server
+SMTPServer -> SMTPServer2: EHLO
+SMTPServer -> SMTPServer2: MAIL FROM
+SMTPServer -> SMTPServer2: RCPT TO
+SMTPServer -> SMTPServer2: DATA
+SMTPServer -> SMTPServer2: QUIT
+
+SMTPServer2 -> SMTPServer2: Store mail
+
+ClientApp2 -> SMTPServer2: Fetch mails
+
 @enduml
