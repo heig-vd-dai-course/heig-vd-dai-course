@@ -282,7 +282,9 @@ catching the `IOException` exception. This is done with a
 `try`/`catch`/`finally` block or, more recently, with a `try-with-resources`
 block. Using the `try-with-resources` block is the preferred way to handle
 errors as it is more concise and less error-prone, however, the class must
-implement the `AutoCloseable` interface.
+implement the
+[`AutoCloseable`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html)
+interface.
 
 The common exceptions you might encounter are:
 
