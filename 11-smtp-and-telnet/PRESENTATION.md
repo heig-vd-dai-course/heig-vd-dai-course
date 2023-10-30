@@ -76,52 +76,172 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Table of contents
+## Objectives
 
-- **[Theoretical content](#theoretical-content)**
-  - A quick reminder about networking: IP and DNS
-  - Electronic messaging protocols: SMTP, POP3 and IMAP
-  - DNS records related to email
-  - The SMTP protocol dig and nslookup
-  - Telnet
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
+- Refresh on networking
+- Learn electronic messaging protocols
+- Focus on the SMTP protocol
+- Learn how to use Telnet to send an email to an SMTP server
 
----
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-    - Send an email to an SMTP server in a Docker container with Telnet
-    - Send an email to an SMTP server in a Docker container with Java
-
-## Theoretical content
+## A quick reminder about networking
 
 <!-- _class: lead -->
 
-### Title
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#a-quick-reminder-about-networking).
+You can find other resources and alternatives as well.
 
-> Quote
+### The Internet Protocol (IP)
 
-![bg right:40% w:50%](https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg)
+- Each computer has a unique IP address
+- IPv4 addresses are limited; NAT routers share IP addresses
+- IPv6 fixes this issue
+- IP addresses are used to route packets
+
+![bg right contain](./images/the-internet-protocol-ip.png)
+
+### The Domain Name System (DNS)
+
+- DNS maps domain names to IP addresses
+- Example: `heig-vd.ch` → `193.134.223.20`
+- dig and nslookup are useful tools to query DNS servers
+
+![bg right contain](./images/the-domain-name-system-dns.png)
+
+### Common DNS records
+
+Records map a domain name to an IP address.
+
+- `NS`: Name Server
+- `CNAME`: Alias
+- `A`: IPv4 address
+- `AAAA`: IPv6 address
+
+![bg right contain](./images/common-dns-records.png)
+
+## Electronic messaging protocols: SMTP, POP3 and IMAP
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#electronic-messaging-protocols-smtp-pop3-and-imap).
+You can find other resources and alternatives as well.
+
+### Electronic messaging protocols: SMTP, POP3 and IMAP
+
+- Email clients are called Mail User Agents (MUA)
+- Email servers are called Mail Transfer Agents (MTA)
+- They use these protocols
+
+![bg right:40% w:90%](https://blog.thunderbird.net/files/2023/05/1024x1024@2x.png)
+
+### SMTP
+
+- SMTP: Simple Mail Transfer Protocol
+- Uses TCP port 25 (unencrypted) or 465 (encrypted)
+- Used to send emails
+
+![bg right contain](./images/smtp.png)
+
+### POP3
+
+- POP3: Post Office Protocol
+- Uses TCP port 110 (unencrypted) or 995 (encrypted)
+- Used to retrieve emails from a server
+
+![bg right contain](./images/pop3.png)
+
+### IMAP
+
+- IMAP: Internet Message Access Protocol
+- Uses TCP port 143 (unencrypted) or 993 (encrypted)
+- Used to retrieve emails from a server
+- Much more powerful than POP3 (synchronization, ...)
+
+![bg right contain](./images/imap.png)
+
+## DNS records related to email
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#dns-records-related-to-email).
+You can find other resources and alternatives as well.
+
+### DNS records related to email
+
+- `MX`: Mail eXchange - Specifies the mail server responsible for a domain name
+- `TXT`: Store any text-based information. Used for `SPF` records, for email
+  authentication
+
+![bg right contain](./images/dns-records-related-to-email.png)
+
+## Security concerns and blacklisting
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#security-concerns-and-blacklisting).
+You can find other resources and alternatives as well.
+
+### Security concerns and blacklisting
+
+- SMTP is old and insecure (spoofing)
+- Hard to maintain
+- Your email server can be blacklisted
+- We will use a mock server to simulate an email server
+
+![bg right:40%](https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?fit=crop&h=720)
+
+## A focus on the SMTP protocol
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#a-focus-on-the-smtp-protocol).
+You can find other resources and alternatives as well.
+
+### A focus on the SMTP protocol
+
+- SMTP is a text-based protocol
+- Commands are sent by the client to the server
+- The server responds with a status code
+- The client can send the next command
+
+![bg right contain](./images/a-focus-on-the-smtp-protocol-1.png)
 
 ---
 
-Content
+- `HELO` /`EHLO`
+- `MAIL FROM`
+- `RCPT TO`
+- `DATA`
+  - `Subject:`
+  - `From:`
+  - `To:`
+  - End by `.`
+- `QUIT`
 
-#### Summary
+![bg right:70% h:80%](./images/a-focus-on-the-smtp-protocol-2.png)
 
-- TODO
+## Telnet
 
-#### Alternatives
+<!-- _class: lead -->
 
-- TODO
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/COURSE_MATERIAL.md#telnet).
+You can find other resources and alternatives as well.
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+### Telnet
 
-#### Resources
+- Telnet is a text-based protocol
+- It is used to connect to a remote server
+- Old and insecure protocol but still useful to test network applications
+- We will use it to connect to an SMTP server
 
-- TODO
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+![bg right contain](./images/telnet.png)
 
 ## Practical content
 
@@ -129,11 +249,11 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### What will you do?
 
--
+- Install and configure Telnet
+- Start a SMTP server with Docker Compose
+- Send an email with Telnet to the SMTP server
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+![bg right contain](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -172,5 +292,7 @@ In the next chapter, you will learn the following topics:
   on [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Nik](https://unsplash.com/@helloimnik) on
+  [Unsplash](https://unsplash.com/photos/brown-eggs-on-white-textile-LUYD2b7MNrg)
 - Illustration by [Mathew Schwartz](https://unsplash.com/@cadop) on
   [Unsplash](https://unsplash.com/photos/sb7RUrRMaC4)

@@ -281,7 +281,7 @@ the server.
 This section defines examples of messages that can be exchanged between the
 client and the server and the exchange order.
 
-![bg right:40% h:90%](./images/how-to-define-an-application-protocol-section-4-examples.svg)
+![bg right:40% h:90%](./images/how-to-define-an-application-protocol-section-4-examples.png)
 
 ## Reserved ports
 

@@ -27,6 +27,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [A quick reminder about networking](#a-quick-reminder-about-networking)
+  - [The Internet Protocol (IP)](#the-internet-protocol-ip)
+  - [The Domain Name System (DNS)](#the-domain-name-system-dns)
+  - [Common DNS records](#common-dns-records)
 - [Electronic messaging protocols: SMTP, POP3 and IMAP](#electronic-messaging-protocols-smtp-pop3-and-imap)
   - [SMTP](#smtp)
   - [POP3](#pop3)
@@ -40,7 +43,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Practical content](#practical-content)
   - [Install and configure Telnet](#install-and-configure-telnet)
   - [Start MailHog](#start-mailhog)
-  - [Send an email with Telnet](#send-an-email-with-telnet)
+  - [Send an email to MailHog with Telnet](#send-an-email-to-mailhog-with-telnet)
   - [Stop MailHog](#stop-mailhog)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -54,10 +57,13 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 ## Objectives
 
 In this chapter, you will have a refresh about networking and learn about the
-SMTP protocol. You will also learn how to use the Telnet protocol to send an
-email to an SMTP server.
+different electronic messaging protocols with a focus on the SMTP protocol. You
+will also learn how to use the Telnet protocol to send an email to an SMTP
+server.
 
 ## A quick reminder about networking
+
+### The Internet Protocol (IP)
 
 Each computer connected to the Internet has an
 [IP (Internet Protocol) address](https://en.wikipedia.org/wiki/IP_address). This
@@ -67,6 +73,8 @@ addresses are limited, there are
 [NAT (Network Address Translation)](https://en.wikipedia.org/wiki/Network_address_translation)
 routers that allow to share a single IP address between multiple computers. This
 is why [IPv6](https://en.wikipedia.org/wiki/IPv6) was created.
+
+### The Domain Name System (DNS)
 
 The [Domain Name System (DNS)](https://en.wikipedia.org/wiki/Domain_Name_System)
 is a system that allows to map a domain name to an IP address. For example, the
@@ -98,16 +106,31 @@ When you send an email, your email client will use the DNS to find the IP
 address of the email server. Then, it will use the IP address to send the email
 to the email server.
 
+### Common DNS records
+
+The DNS holds what are called DNS records. These records are used to map a
+domain name to an IP address. There are many types of DNS records. The most
+common ones are:
+
+- `NS`: This record specifies the name servers for a given domain name.
+- `CNAME`: This record specifies an alias for a given domain name.
+- `A`: This record specifies the IP address of a given domain name (IPv4).
+- `AAAA`: This record specifies the IP address of a given domain name (IPv6).
+
+In this course, you will learn to use a few of these records.
+
 ## Electronic messaging protocols: SMTP, POP3 and IMAP
 
 There are three main protocols used for electronic messaging:
 
-- SMTP
-- POP3
-- IMAP
+- SMTP (Simple Mail Transfer Protocol)
+- POP3 (Post Office Protocol)
+- IMAP (Internet Message Access Protocol)
 
 You could use any email clients (called Mail User Agents (MUA) in the RFCs) such
-as Thunderbird, Gmail or Outlook to use these protocols.
+as Thunderbird, Gmail or Outlook to use these protocols. They will send and
+receive emails from an email server (called Mail Transfer Agent (MTA) in the
+RFCs).
 
 ### SMTP
 
@@ -149,8 +172,8 @@ following DNS records:
 - `MX`: This record specifies the email server that will receive emails for a
   given domain name. For example, the `MX` record for `heig-vd.ch` is
   `heigvd-ch01b.mail.protection.outlook.com.`.
-- `A`: This record specifies the IP address of a given domain name. For example,
-  the `A` record for `heig-vd.ch` is `193.134.223.20`.
+- `A`: This record specifies the IPv4 address of a given domain name. For
+  example, the `A` record for `heig-vd.ch` is `193.134.223.20`.
 - `TXT`: The `SPF` record, as stated by CloudFlare
   (<https://www.cloudflare.com/en-gb/learning/dns/dns-records/dns-spf-record>),
   _"[] are a type of DNS TXT record commonly used for email authentication. SPF
@@ -237,8 +260,10 @@ Maintaining email servers is a complex task that requires a lot of knowledge
 about the protocols and the security issues. This is why many companies use
 third-party email services such as Google or Microsoft 365.
 
-In this course, we will use a simple SMTP server with a Web interface to send
-emails. This SMTP server is called MailHog and can be run with Docker:
+In this course, we will use what is called a mock server. A mock server imitates
+the functionalities of a real server for testing purposes. In this case, we will
+use a simple SMTP server with a Web interface to send and check emails. This
+SMTP server is called MailHog and can be run with Docker:
 <https://github.com/mailhog/MailHog>.
 
 > **Warning**  
@@ -274,7 +299,9 @@ DATA
 QUIT
 ```
 
-![Sequence diagram of the SMTP protocol](./images/a-focus-on-the-smtp-protocol.png)
+The following diagram shows the sequence of commands to send an email:
+
+![Sequence diagram of the SMTP protocol](./images/a-focus-on-the-smtp-protocol-2.png)
 
 ## Telnet
 
@@ -289,9 +316,9 @@ The Telnet protocol is described in
 [RFC 854](https://datatracker.ietf.org/doc/html/rfc854).
 
 As SMTP, Telnet is very old and is not considered secure. However, it is still
-used to test services such as SMTP locally and/or to configure network devices
-such as routers that you might have to configure during your career. This is why
-we will use it in this course for local testing.
+used to test services such as SMTP and/or to configure network devices such as
+routers that you might have to configure during your career. This is why we will
+use it in this course for local testing.
 
 ### Alternatives
 
@@ -410,7 +437,7 @@ The output should be similar to the following:
 
 You can access the MailHog Web interface at <http://localhost:8025>.
 
-### Send an email with Telnet
+### Send an email to MailHog with Telnet
 
 In this section, you will send an email with Telnet to the MailHog SMTP server.
 

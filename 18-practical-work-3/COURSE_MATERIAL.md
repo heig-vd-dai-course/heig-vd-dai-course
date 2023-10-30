@@ -136,6 +136,7 @@ repository!
 
 - The network application must be written in Java, compatible with Java 17
 - The network application must be built using Maven
+- You must use one or more of the Java classes seen in the course
 - Your application must be slightly more complex and different than the ones
   presented during the course
 - The network application can only use the UDP protocol

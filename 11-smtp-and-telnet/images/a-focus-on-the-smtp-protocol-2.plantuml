@@ -1,4 +1,4 @@
-@startuml
+@startuml a-focus-on-the-smtp-protocol
 skinparam sequenceMessageAlign center
 !pragma teoz true
 hide footbox

@@ -1,16 +1,35 @@
-@startuml
-actor User1
-actor User2
-participant "Key Generation" as KeyGen
-participant "Encryption" as Encryption
-participant "Decryption" as Decryption
-User1 -> User2: Secure Message Exchange
-User1 -> KeyGen: Generate Key Pair (User1)
-User2 -> KeyGen: Generate Key Pair (User2)
-User1 -> Encryption: Encrypt Message with Public Key (User2)
-Encryption -> Decryption: Decrypt Message with Private Key (User2)
-Decryption --> User2: Decrypted Message
-User2 -> Encryption: Encrypt Reply with Public Key (User1)
-Encryption -> Decryption: Decrypt Reply with Private Key (User1)
-Decryption --> User1: Decrypted Reply
+@startuml a-quick-reminder-about-security
+skinparam sequenceMessageAlign center
+
+actor "Alice" as alice
+actor "Bob" as bob
+
+note over alice, bob: Key-pair generation
+
+alice -> alice: Generate key pair
+bob -> bob: Generate key pair
+
+...
+
+note over alice, bob: Alice sends a message to Bob so that only Bob can read it.
+
+alice -> bob: Request Bob's public key
+bob --> alice: Get Bob's public key
+
+alice -> alice: Encrypt a message using Bob's public key
+alice -> bob: Send the encrypted message to Bob
+
+bob -> bob: Decrypt the message using Bob's public key
+bob -> bob: Only Bob can read the message sent by Alice
+
+...
+
+note over alice, bob: Bob sends a message publicly.\nEveryone can attest Bob is the author.
+
+bob -> bob: Encrypt a message using Bob's private key
+bob -> alice: Send the encrypted message to Alice
+alice -> bob: Request Bob's public key
+bob --> alice: Get Bob's public key
+alice -> alice: Decrypt the message using Bob's public key
+alice -> alice: Everyone can attest the message was sent by Bob
 @enduml

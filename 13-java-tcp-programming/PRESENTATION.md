@@ -76,28 +76,95 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Table of contents
-
-- **[Theoretical content](#theoretical-content)**
-  - A quick reminder about networking
-  - What is an application protocol?
-  - The Socket API in Java
-  - Handling multiple clients with concurrency
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
-  - Single-threaded TCP server
-  - Multi-threaded TCP server
-
-## Theoretical content
-
-<!-- _class: lead -->
-
-### Resources
+## Objectives
 
 - TODO
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+## TCP
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md#tcp).
+You can find other resources and alternatives as well.
+
+### TCP
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+## The Socket API
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md#the-socket-api).
+You can find other resources and alternatives as well.
+
+### The Socket API
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+### Client/server common functions
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+### Client structure and functions
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+### Server structure and functions
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+## Processing data from streams
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md#processing-data-from-streams).
+You can find other resources and alternatives as well.
+
+### Processing data from streams
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+## Handling one client at a time
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md#handling-one-client-at-a-tim).
+You can find other resources and alternatives as well.
+
+### Handling one client at a time
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+## Handling multiple clients at the same time
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md#handling-multiple-clients-at-the-same-time).
+You can find other resources and alternatives as well.
+
+### Handling multiple clients at the same time
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+### Multi-processing
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+### Multi-threading
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+### Asynchronous programming
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## Practical content
 
@@ -105,11 +172,9 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### What will you do?
 
--
+- TODO
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+![bg right contain](./images/what-will-you-do.png)
 
 ### Find the practical content
 

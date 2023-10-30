@@ -28,13 +28,16 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [TCP](#tcp)
 - [The Socket API](#the-socket-api)
-  - [Common functions](#common-functions)
-  - [Server structure and functions](#server-structure-and-functions)
+  - [Client/server common functions](#clientserver-common-functions)
   - [Client structure and functions](#client-structure-and-functions)
+  - [Server structure and functions](#server-structure-and-functions)
 - [Processing data from streams](#processing-data-from-streams)
-- [Handling multiple clients at the same time](#handling-multiple-clients-at-the-same-time)
-  - [Handling one client at a time](#handling-one-client-at-a-time)
-  - [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
+  - [Variable length data](#variable-length-data)
+- [Handling one client at a time](#handling-one-client-at-a-time)
+- [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
+  - [Multi-processing](#multi-processing)
+  - [Multi-threading](#multi-threading)
+  - [Asynchronous programming](#asynchronous-programming)
 - [Practical content](#practical-content)
   - [Get the required files](#get-the-required-files)
   - [Run the SMTP client in Java](#run-the-smtp-client-in-java)
@@ -119,22 +122,25 @@ A socket can act as a client or as a server:
 - A socket accepting connections is called a server socket.
 - A socket initiating a connection is called a client socket.
 
-A socket can be blocking or non-blocking.
+### Client/server common functions
 
-A blocking socket will block the thread until the operation is completed. No
-other operation can be performed on the socket while the thread is blocked.
+| Operation           | Description                        |
+| ------------------- | ---------------------------------- |
+| `socket()`          | Creates a new socket               |
+| `getInputStream()`  | Gets the input stream of a socket  |
+| `getOutputStream()` | Gets the output stream of a socket |
+| `close()`           | Closes a socket                    |
 
-A non-blocking socket will not block the thread. It will return immediately with
-a result. If the operation is not completed, the result will be an error.
+### Client structure and functions
 
-### Common functions
+1. Create a socket (class `Socket`)
+2. Connect the socket to an IP address and a port number
+3. Read and write data from/to the socket
+4. Flush and close the socket
 
-| Operation  | Description              |
-| ---------- | ------------------------ |
-| `socket()` | Creates a new socket     |
-| `read()`   | Reads data from a socket |
-| `write()`  | Writes data to a socket  |
-| `close()`  | Closes a socket          |
+| Operation   | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| `connect()` | Connects a socket to an IP address and a port number |
 
 ### Server structure and functions
 
@@ -152,17 +158,6 @@ a result. If the operation is not completed, the result will be an error.
 | `bind()`   | Binds a socket to an IP address and a port number |
 | `listen()` | Listens for incoming connections                  |
 | `accept()` | Accepts an incoming connection                    |
-
-### Client structure and functions
-
-1. Create a socket (class `Socket`)
-2. Connect the socket to an IP address and a port number
-3. Read and write data from/to the socket
-4. Flush and close the socket
-
-| Operation   | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| `connect()` | Connects a socket to an IP address and a port number |
 
 ## Processing data from streams
 
@@ -202,15 +197,49 @@ output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
 
 > **Warning**  
 > Do not forget to flush the output stream after writing data to it. Otherwise,
-> the data will not be sent to the other application!
+> the remaining data in the buffer will not be sent to the other application!
 >
 > ```java
 > out.flush();
 > ```
 
-## Handling multiple clients at the same time
+### Variable length data
 
-### Handling one client at a time
+Depending on the application protocol, the data sent can have a variable length.
+
+There are two ways to handle variable length data:
+
+- Use a delimiter
+- Use a fixed length
+
+If the data has a delimiter, you can use a buffered reader to read the data
+until the delimiter is found.
+
+```java
+// End of transmission character
+String EOT = "\u0004";
+
+// Read data until the delimiter is found
+String line;
+while ((line = in.readLine()) != null && !line.equals(EOT)) {
+  System.out.println(
+    "[Client " + CLIENT_ID + "] response from server: " + line
+  );
+}
+```
+
+If the data has a fixed length, you must send the length of the data before
+sending the data itself.
+
+```java
+// Send the length of the data
+out.write("DATA_LENGTH " + data.length() + "\n");
+
+// Send the data
+out.write(data);
+```
+
+## Handling one client at a time
 
 A server can handle one client at a time. It is called single-threaded, or
 single-threaded server.
@@ -235,7 +264,7 @@ a server must handle multiple sockets.
 Multiple ways exist to handle multiple sockets at the same time and is called
 concurrency.
 
-### Handling multiple clients with concurrency
+## Handling multiple clients with concurrency
 
 Concurrency is the ability of an application to handle multiple clients at the
 same time.
@@ -253,7 +282,7 @@ Java has a package for concurrency called
 In this course, we will focus on multi-threading but the other methods are
 equally valid and interesting to learn.
 
-#### Multi-processing
+### Multi-processing
 
 Multi-processing is the ability of an application to handle multiple processes
 at the same time.
@@ -278,7 +307,7 @@ restaurant. Each restaurant has one table and can handle one customer. If a
 customer is already sitting at a table of a given restaurant, another customer
 can sit at a table at another restaurant.
 
-#### Multi-threading
+### Multi-threading
 
 Multi-threading is the ability of an application to handle multiple threads at
 the same time.
@@ -312,7 +341,7 @@ table can handle one customer. If a customer is already sitting at a table, the
 customer can sit to another table. If all tables are occupied, the customer will
 have to wait until a table is available.
 
-#### Asynchronous programming
+### Asynchronous programming
 
 Asynchronous programming is the ability of an application to handle multiple
 tasks at the same time, without blocking the main thread.
@@ -435,9 +464,9 @@ Create a new discussion with the following information:
 This will notify us that you have completed the exercise and we can check your
 work.
 
-You can check the answers in the [Solution](#solution) section, however, **we
-highly recommend you to try to complete the practical content by yourself first
-to learn the most**.
+You can compare your solution with the official one stated in the
+[Solution](#solution) section, however, **we highly recommend you to try to
+complete the practical content by yourself first to learn the most**.
 
 ### Go further
 
@@ -500,6 +529,13 @@ _Resources are here to help you. They are not mandatory to read._
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Solution
+
+You can find the solution to the practical content in the
+[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
+repository.
+
+If you have any questions about the solution, feel free to open an issue to
+discuss it!
 
 ## Sources
 

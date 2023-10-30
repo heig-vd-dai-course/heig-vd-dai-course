@@ -87,6 +87,14 @@ Learn software installation challenges and containerization benefits.
 
 ## Installation of software
 
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#installation-of-software-traditional-vs-containerization).
+You can find other resources and alternatives as well.
+
+### Installation of software
+
 - Traditional:
   - Download installer, install and enjoy
   - Hard to migrate
@@ -96,6 +104,14 @@ Learn software installation challenges and containerization benefits.
 ![bg right contain](./images/installation-of-software-traditional-vs-containerization.png)
 
 ## OCI, images, containers, and registries
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#oci-images-containers-and-registries).
+You can find other resources and alternatives as well.
+
+### OCI, images, containers, and registries
 
 - Container: runnable instance of an image
 - Image: read-only template for container creation

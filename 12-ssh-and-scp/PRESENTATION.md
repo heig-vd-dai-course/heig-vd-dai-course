@@ -73,51 +73,95 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Table of contents
+## Objectives
 
-- **[Theoretical content](#theoretical-content)**
-  - A quick reminder about security cryptography
-  - SSH
-  - SCP
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
+- Refresh on security
+- Learn how to use the SSH protocol to connect to a remote server
+- Learn how to use the SCP protocol to transfer files to a remote server
 
----
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-    - Access a remote server with SSH
-    - Access a remote server with SSH without a password
-    - Copy files to a remote server with SCP
-
-## Theoretical content
+## A quick reminder about security
 
 <!-- _class: lead -->
 
-### Title
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/COURSE_MATERIAL.md#a-quick-reminder-about-security).
+You can find other resources and alternatives as well.
 
-> Quote
+### A quick reminder about security
 
-![bg right:40% w:50%](https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg)
+- A secure protocol ensures the confidentiality of the data exchanged
+- Most secure protocols rely on cryptography
+- Cryptography is based on algorithms and keys
 
----
+![bg right h:90%](./images/a-quick-reminder-about-security.png)
 
-Content
+## SSH
 
-#### Summary
+<!-- _class: lead -->
 
-- TODO
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/COURSE_MATERIAL.md#ssh).
+You can find other resources and alternatives as well.
 
-#### Alternatives
+### SSH
 
-- TODO
+- Secure Shell
+- Uses TCP port 22
+- A protocol to connect to a remote server
+- Can be used to execute commands on a remote server
+- The standard way to connect to a remote server
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+![bg right contain](./images/ssh-1.png)
 
-#### Resources
+### SSH key algorithms
 
-- TODO
+The most common key algorithms are:
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+- RSA
+- DSA
+- ECDSA
+- Ed25519
+
+Ed25519 and ECDSA are the recommended algorithms.
+
+![bg right:40% h:90%](./images/ssh-2.png)
+
+### SSH key fingerprint
+
+- Short version of a public key
+- Used to verify the identity of a public key
+- Can help detect man-in-the-middle attacks
+- Stored in the `~/.ssh/known_hosts` file
+
+![bg right contain](./images/ssh-key-fingerprint.png)
+
+### SSH key generation
+
+- Use the `ssh-keygen` command
+- Choose the key algorithm
+- Generate a private key and a public key
+- Can be done with or without a passphrase
+
+![bg right contain](./images/ssh-key-generation.png)
+
+## SCP
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/COURSE_MATERIAL.md#scp).
+You can find other resources and alternatives as well.
+
+### SCP
+
+- Secure Copy
+- Uses TCP port 22
+- A protocol to transfer files to/from a remote server
+- Can be used to transfer files between two remote servers as well
+
+![bg right:40%](https://images.unsplash.com/photo-1616628188540-925618b98318?fit=crop&h=720)
 
 ## Practical content
 
@@ -125,11 +169,12 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### What will you do?
 
--
+- Install and configure SSH and SCP
+- Start a SSH server with Docker Compose
+- Connect to the SSH server with SSH
+- Transfer a file to the SSH server with SCP
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+![bg right contain](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -170,5 +215,7 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/sb7RUrRMaC4)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Kelly Sikkema](https://unsplash.com/@kellysikkema) on
+  [Unsplash](https://unsplash.com/photos/white-and-black-checkered-board-huT1A8nW_Ho)
 - Illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
   [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)

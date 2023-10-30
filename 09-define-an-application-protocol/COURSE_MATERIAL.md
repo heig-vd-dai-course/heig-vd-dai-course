@@ -192,7 +192,7 @@ client and the server and the exchange order. It is important to define these
 examples to illustrate the protocol and to help the reader to understand the
 protocol using sequence or state diagrams for example.
 
-![Example of a sequence diagram for the DAI protocol](./images/how-to-define-an-application-protocol-section-4-examples.svg)
+![Example of a sequence diagram for the DAI protocol](./images/how-to-define-an-application-protocol-section-4-examples.png)
 
 ## Reserved ports
 
@@ -413,6 +413,10 @@ Create a new discussion with the following information:
 This will notify us that you have completed the exercise and we can check your
 work.
 
+You can compare your solution with the official one stated in the
+[Solution](#solution) section, however, **we highly recommend you to try to
+complete the practical content by yourself first to learn the most**.
+
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
@@ -476,6 +480,15 @@ _Resources are here to help you. They are not mandatory to read._
 - _None yet_
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+## Solution
+
+You can find the solution to the practical content in the
+[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
+repository.
+
+If you have any questions about the solution, feel free to open an issue to
+discuss it!
 
 ## Sources
 

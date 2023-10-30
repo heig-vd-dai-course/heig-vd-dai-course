@@ -52,28 +52,51 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-In this chapter, you will have a refresh about security and learn how to use
+In this chapter, you will have a refresh about security and learn how to use the
 Secure Shell (SSH) protocol to connect to a remote machine. You will also learn
-how to copy files from/to a remote machine with Secure Copy (SCP).
+how to transfer files from/to a remote machine with Secure Copy (SCP).
 
 ## A quick reminder about security
 
 A secure protocol means that the data sent between the client and the server is
-encrypted. It is not possible to read the data without the encryption key.
+encrypted, ensuring the confidentiality and the integrity of the data.
 
-Most secure protocols rely on a key pair to authenticate the client (HTTPS, SSH,
+Most secure protocols rely on cryptography to encrypt the data. The data is
+encrypted with an encryption key.
+
+It is not possible to read the data without the encryption key.
+
+Most secure protocols rely on a key pair to authenticate the client (SSH, GPG
 etc.). The key pair is composed of a public key and a private key.
 
-The client has a private key and the server has the public key. The client sends
-the public key to the server. The server uses the public key to encrypt a
-message and sends it to the client. The client uses the private key to decrypt
+The public key can be shared with anyone. The private key must be kept secret.
+
+If Alice wants to send a message to Bob, Alice encrypts the message with Bob's
+public key. Bob decrypts the message with his private key.
+
+If Bob wants to send a message to Alice, Bob encrypts the message with Alice's
+public key. Alice decrypts the message with their private key.
+
+If Bob wants to prove that she is the author of a message, Bob encrypts the
+message with their private key. Everyone can decrypt the message with Bob's
+public key. If the message can be decrypted, it means that Bob is the author of
 the message.
+
+In the case of SSH and GPG, the public key is used to encrypt the data and the
+private key is used to decrypt the data.
+
+This principle is used to authenticate the client: the client sends the public
+key to the server. The server uses the public key to encrypt a message and sends
+it to the client. The client uses the private key to decrypt the message.
 
 If the client is able to decrypt the message, it means that the client has the
 private key. The client is authenticated.
 
 The private key is a file that must be kept secret. If someone has access to the
 private key, this person can impersonate the client.
+
+The following diagram illustrates the communication between the client and the
+server:
 
 ![Sequence diagram of the public/private keys communication](./images/a-quick-reminder-about-security.png)
 
@@ -82,8 +105,13 @@ private key, this person can impersonate the client.
 SSH is a protocol that allows you to connect to a remote machine. It is a
 replacement for the Telnet protocol.
 
-The SSH protocol is described in
-[RFC 4253](https://datatracker.ietf.org/doc/html/rfc4253).
+The SSH protocol is described in many RFCs:
+
+- [RFC 4250](https://datatracker.ietf.org/doc/html/rfc4250)
+- [RFC 4251](https://datatracker.ietf.org/doc/html/rfc4251)
+- [RFC 4252](https://datatracker.ietf.org/doc/html/rfc4252)
+- [RFC 4253](https://datatracker.ietf.org/doc/html/rfc4253).
+- [RFC 4254](https://datatracker.ietf.org/doc/html/rfc4254)
 
 The SSH protocol uses the TCP protocol on port 22. It uses public/private keys
 to authenticate the client. It is also possible to use a password to
@@ -95,24 +123,7 @@ files from/to a remote machine with SCP.
 SSH is also the name of the software that implements the SSH protocol. It is
 available on most operating systems and is considered as a standard.
 
-![Sequence diagram of the SSH authentication](./images/ssh.png)
-
-### SSH key length
-
-The key length is the number of bits used to generate the key. The longer the
-key, the more secure it is.
-
-The key length is not the only factor that determines the security of the key.
-The algorithm used to generate the key is also important.
-
-The key length is expressed in bits. The most common key lengths are:
-
-- 1024 bits
-- 2048 bits
-- 4096 bits
-
-The most common key length is 2048 bits. It is considered as secure enough for
-most use cases.
+![Sequence diagram of the SSH authentication](./images/ssh-2.png)
 
 ### SSH key algorithms
 
@@ -138,6 +149,9 @@ The fingerprint is used to verify that the public key is the same as the one
 used to connect to the remote machine.
 
 This can help detect man-in-the-middle attacks.
+
+Public keys are stored in the `~/.ssh/known_hosts` file. The file contains the
+fingerprint of the public key and the hostname of the remote machine.
 
 ### SSH key generation
 
