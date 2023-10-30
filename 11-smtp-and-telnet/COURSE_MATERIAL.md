@@ -472,8 +472,6 @@ email content and helps to display the email content in a human-readable way.
 
 The `.`, on a line by itself, indicates the end of the email content.
 
-In this section, you will install and configure Telnet on your operating system.
-
 The output should be similar to this:
 
 ```text

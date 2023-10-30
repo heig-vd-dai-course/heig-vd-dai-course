@@ -156,12 +156,11 @@ simplement utiliser la version de Maven installée localement? Argumentez.
 <summary>Afficher la réponse</summary>
 
 - Les wrappers Maven, tels que Maven Wrapper (mvnw), garantissent que chaque
-  développeur utilise la même version de Maven, éliminant ainsi les problèmes
-  de compatibilité entre les différentes versions de Maven installées
-  localement.
+  développeur utilise la même version de Maven, éliminant ainsi les problèmes de
+  compatibilité entre les différentes versions de Maven installées localement.
 - Ils simplifient le processus d'intégration continue (CI/CD) en garantissant
-  que le projet utilise la version spécifique de Maven requise, sans
-  nécessiter d'installation manuelle.
+  que le projet utilise la version spécifique de Maven requise, sans nécessiter
+  d'installation manuelle.
 
 </details>
 
@@ -399,7 +398,8 @@ public class ReadWriteTextualFile {
 - Spécifier l'encodage de caractères lors de la lecture et de l'écriture de
   données textuelles. (1pt)
 - Utiliser un `try-with-resources` pour fermer automatiquement les ressources ou
-  `try-catch-finally`, un `throws IOException` (mais pas propre du tout) pour fermer les ressources manuellement. (1pt)
+  `try-catch-finally`, un `throws IOException` (mais pas propre du tout) pour
+  fermer les ressources manuellement. (1pt)
 - Utiliser `read()` jusqu'à ce que la valeur retournée soit `-1` et non `0`.
   (1pt)
 
@@ -421,8 +421,9 @@ trouvent des informations telles que:
 2. Les dépendances utilisées par le projet
 3. Les plugins utilisés pour construire le projet
 
-Ce fichier doit être versionné car il contient des informations essentielles sur le projet (ses dépendances, sa
-   structure et son processus de build) qui est partagé avec tous les développeur-euse-s.
+Ce fichier doit être versionné car il contient des informations essentielles sur
+le projet (ses dépendances, sa structure et son processus de build) qui est
+partagé avec tous les développeur-euse-s.
 
 </details>
 
@@ -449,7 +450,8 @@ public class BackupFile {
 ```
 
 > **Note**  
-> Cette question a été supprimée de l'évaluation car elle était trop difficile. Tous les points ont été attribués.
+> Cette question a été supprimée de l'évaluation car elle était trop difficile.
+> Tous les points ont été attribués.
 
 <details>
 <summary>Afficher la réponse</summary>

@@ -28,14 +28,17 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [TCP](#tcp)
 - [The Socket API](#the-socket-api)
-- [Handling one client at a time](#handling-one-client-at-a-time)
-- [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
-  - [Multi-processing](#multi-processing)
-  - [Multi-threading](#multi-threading)
-  - [Asynchronous programming](#asynchronous-programming)
+  - [Common functions](#common-functions)
+  - [Server structure and functions](#server-structure-and-functions)
+  - [Client structure and functions](#client-structure-and-functions)
+- [Processing data from streams](#processing-data-from-streams)
+- [Handling multiple clients at the same time](#handling-multiple-clients-at-the-same-time)
+  - [Handling one client at a time](#handling-one-client-at-a-time)
+  - [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
 - [Practical content](#practical-content)
-  - [Check and try-out the code examples](#check-and-try-out-the-code-examples)
-  - [Create a complete TCP client/server application in Java](#create-a-complete-tcp-clientserver-application-in-java)
+  - [Get the required files](#get-the-required-files)
+  - [Run the SMTP client in Java](#run-the-smtp-client-in-java)
+  - [Run full client/server examples](#run-full-clientserver-examples)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -43,6 +46,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
+- [Solution](#solution)
 - [Sources](#sources)
 
 ## Objectives
@@ -96,10 +100,17 @@ correct order. If a segment is lost, TCP will retransmit it.
 ## The Socket API
 
 The Socket API is a Java API that allows you to create TCP clients and servers.
+It is described in the
+[`java.net` package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/package-summary.html)
+in the
+[`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
 
 It has originally been developed in C in the context of the Unix operating
 system. It has been ported to Java and is now available on many platform and
 languages.
+
+To make it simple, a socket is just like a file that you can open, read from,
+write to and close. To exchange data, sockets on both sides must be connected.
 
 A socket is identified by an IP address and a port number.
 
@@ -116,7 +127,90 @@ other operation can be performed on the socket while the thread is blocked.
 A non-blocking socket will not block the thread. It will return immediately with
 a result. If the operation is not completed, the result will be an error.
 
-## Handling one client at a time
+### Common functions
+
+| Operation  | Description              |
+| ---------- | ------------------------ |
+| `socket()` | Creates a new socket     |
+| `read()`   | Reads data from a socket |
+| `write()`  | Writes data to a socket  |
+| `close()`  | Closes a socket          |
+
+### Server structure and functions
+
+1. Create a socket (class `ServerSocket`)
+2. Bind the socket to an IP address and a port number
+3. Listen for incoming connections
+4. Loop
+   1. Accept an incoming connection - creates a new socket (class `Socket`)
+   2. Read and write data from/to the socket
+   3. Flush and close the socket
+5. Close the socket (`ServerSocket`)
+
+| Operation  | Description                                       |
+| ---------- | ------------------------------------------------- |
+| `bind()`   | Binds a socket to an IP address and a port number |
+| `listen()` | Listens for incoming connections                  |
+| `accept()` | Accepts an incoming connection                    |
+
+### Client structure and functions
+
+1. Create a socket (class `Socket`)
+2. Connect the socket to an IP address and a port number
+3. Read and write data from/to the socket
+4. Flush and close the socket
+
+| Operation   | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| `connect()` | Connects a socket to an IP address and a port number |
+
+## Processing data from streams
+
+Sockets use data streams to send and receive data, just like files.
+
+You get an input stream to read data from a socket and an output stream to write
+data to a socket.
+
+```java
+// Get input stream
+input = socket.getInputStream();
+
+// Get output stream
+output = socket.getOutputStream();
+```
+
+You can then decorate the input and output streams with other streams to
+transform the data.
+
+```java
+// Get input stream as text
+input = new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8);
+
+// Get output stream as text
+output = new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8);
+```
+
+Use buffered streams to improve performance.
+
+```java
+// Get input stream as binary with buffer
+input = new BufferedReader(new InputStreamReader(socket.getInputStream());
+
+// Get output stream as binary with buffer
+output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
+```
+
+> **Warning**  
+> Do not forget to flush the output stream after writing data to it. Otherwise,
+> the data will not be sent to the other application!
+>
+> ```java
+> out.flush();
+> ```
+
+## Handling multiple clients at the same time
+
+### Handling one client at a time
 
 A server can handle one client at a time. It is called single-threaded, or
 single-threaded server.
@@ -141,7 +235,7 @@ a server must handle multiple sockets.
 Multiple ways exist to handle multiple sockets at the same time and is called
 concurrency.
 
-## Handling multiple clients with concurrency
+### Handling multiple clients with concurrency
 
 Concurrency is the ability of an application to handle multiple clients at the
 same time.
@@ -153,10 +247,13 @@ others):
 - Multi-threading
 - Asynchronous programming
 
+Java has a package for concurrency called
+[`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html).
+
 In this course, we will focus on multi-threading but the other methods are
 equally valid and interesting to learn.
 
-### Multi-processing
+#### Multi-processing
 
 Multi-processing is the ability of an application to handle multiple processes
 at the same time.
@@ -181,7 +278,7 @@ restaurant. Each restaurant has one table and can handle one customer. If a
 customer is already sitting at a table of a given restaurant, another customer
 can sit at a table at another restaurant.
 
-### Multi-threading
+#### Multi-threading
 
 Multi-threading is the ability of an application to handle multiple threads at
 the same time.
@@ -215,7 +312,7 @@ table can handle one customer. If a customer is already sitting at a table, the
 customer can sit to another table. If all tables are occupied, the customer will
 have to wait until a table is available.
 
-### Asynchronous programming
+#### Asynchronous programming
 
 Asynchronous programming is the ability of an application to handle multiple
 tasks at the same time, without blocking the main thread.
@@ -237,20 +334,60 @@ The customer then comes to the food truck to get the food.
 Asynchronous programming is quite complex to implement. It is therefore not
 covered in this course.
 
-Node.js is a good example of asynchronous programming.
+[Node.js](https://nodejs.org/) is a good example of asynchronous programming.
 
 ## Practical content
 
-### Check and try-out the code examples
+### Get the required files
 
-In this section, you will learn how to start a client/server application with
-the Socket API.
+In this section, you will retrieve the latest changes from the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository.
 
-#### Clone the repository
+#### Get the latest changes from the code examples
 
 Pull the latest changes from the previously cloned
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
 repository or clone it if you have not done it yet.
+
+#### Explore the code examples
+
+In the `13-java-tcp-programming` directory, checkout the `README.md` file to
+learn how to run the code examples.
+
+Take some time to explore the code examples.
+
+### Run the SMTP client in Java
+
+In this section, you will learn how to send an email with Java.
+
+#### Start MailHog
+
+Just as in the
+[SMTP and Telnet](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-smtp-and-telnet)
+chapter, start MailHog in order to receive the emails sent by the Java code
+examples.
+
+#### Compile and run the SMTP client
+
+In the `13-java-tcp-programming` directory, compile and run the
+`SmtpClientExample` code example.
+
+```sh
+# Compile the example
+javac SmtpClientExample.java
+
+# Run the example
+java SmtpClientExample
+```
+
+The mail has been sent to the MailHog SMTP server. You can check it in the
+MailHog Web interface at <http://localhost:8025>.
+
+Take some time to explore the code example. You should notice the commands are
+the same as the ones used with Telnet but in an automated way!
+
+### Run full client/server examples
 
 #### Explore and run the code examples
 
@@ -259,114 +396,84 @@ learn how to run the code examples.
 
 Take some time to explore the code examples. Run them and see what they do.
 
-### Create a complete TCP client/server application in Java
+> **Note**  
+> Please be aware that the `TcpServerVirtualThreadTextualExample` example must
+> be run with Java 21 or later. It is not mandatory to run this example but you
+> must understand how it works.
+>
+> This example is not compatible with Java 17 but is already available in the
+> code examples repository for future use.
 
-In this section, you will create a complete TCP client/server application in Java using the Socket API and a thread pool.
+#### Answer the following questions
 
-#### The application protocol
+Using the official Java documentation, can you explain the differences between
+the following different implementations? When should you use one or the other
+and why?
 
-You will implement a simple application protocol based on the application protocol
-presented in the course.
+- `TcpServerSimpleTextualExample`
+- `TcpServerSingleThreadTextualExample`
+- `TcpServerMultiThreadTextualExample`
+- `TcpServerCachedThreadPoolTextualExample`
+- `TcpServerFixedThreadPoolTextualExample`
+- `TcpServerVirtualThreadTextualExample`
 
-##### Overview
+Are you able to explain why the `TcpServerSingleThreadTextualExample` does not
+work as expected?
 
-The DAI protocol is meant to transfer files over the network.
-
-The DAI protocol is a client-server protocol.
-
-The client connects to a server and request a file. The server sends the file
-or an error message if the file does not exist.
-
-##### Transport protocol
-
-The DAI protocol uses the TCP protocol. The server runs on port 55555.
-
-The client has to know the IP address of the server to connect to. It
-establishes the connection with the server.
-
-The server closes the connection when the transfer is done or if an error
-occurs (e.g. the file was not found).
-
-##### Messages
-
-The client can send the following messages:
-
-- `GET <file>`: used to request a file from the server
-  - `<file>`: the name of the file to request - The filename is an absolute
-    path to the file (`/data/file.txt`)
-- `QUIT`: used to close the connection with the server
-
-The server can send the following messages:
-
-- `OK`: used to notify the client that the connection was successful and the
-  server is ready to receive commands
-- `FILE <file>`: used to send the content of the requested file - the
-  connection is closed after this message
-- `ERROR <code>`: used to notify the client that an error occurred - the
-  connection is closed after this message
-  - `400`: the request was malformed
-  - `404`: the file was not found
-
-All messages are UTF-8 encoded and end with a new line character (`\n`).
-
-If the file exists, the server sends the file content as binary data.
-
-#### Implement the client
-
-Using the code examples, implement a TCP client that can request a file from a
-server with Maven.
-
-#### Implement the server
-
-Using the code examples, implement a TCP server that can send a file to a
-client with Maven.
-
-#### Test the client/server application
-
-Using your TCP client, request a file from your TCP server.
-
-Try to request a file that does not exist.
-
-Try with multiple clients at the same time. Can they all connect to the server?
-Can they all request a file at the same time? Try and change the number of
-threads in the thread pool (1, 2, 5 and 10 for example).
-
-#### Share your results
-
-Create a new Git repository and push your code to it. Do not forget to add all necessary files to your repository and ignore the files that are not necessary.
+#### Share your findings
 
 Share your results in the GitHub Discussions of this organization:
 <https://github.com/orgs/heig-vd-dai-course/discussions>.
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2023-2024 - Java TCP benchmarking - First name Last Name
+- **Title**: DAI 2023-2024 - Concurrent Java TCP servers - First name Last Name
 - **Category**: Show and tell
-- **Description**: The link to your GitHub repository and add your conclusions to the following
-  questions:
-  - Which number of threads is the best? Why?
-  - Why do more threads not necessarily mean better performance?
+- **Description**: Answer the questions for this section. Add links to the
+  official Java documentation to support your answers.
 
 This will notify us that you have completed the exercise and we can check your
 work.
+
+You can check the answers in the [Solution](#solution) section, however, **we
+highly recommend you to try to complete the practical content by yourself first
+to learn the most**.
 
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- TODO
+- Based from the code examples, are you able to create a complete TCP
+  client/server application in Java that implement the DAI protocol presented in
+  chapter
+  [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09-define-an-application-protocol)?
+  Feel free to create a new repository for this and share it with us in a new
+  discussion on GitHub Discussions!
 
 ## Conclusion
 
 ### What did you do and learn?
 
-TODO
+In this chapter, you have learned how to use the Socket API to create your own
+TCP clients and servers in Java.
+
+You have also learned how to handle multiple clients at the same time using
+concurrency.
+
+You now have all the knowledge to create your TCP network applications. This is
+a big step forward!
+
+You are now able to create your own network applications, such as a chat server,
+a file server, a web server, etc. Congratulations!
 
 ### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
-- TODO
+- What is a socket?
+- What is the difference between a server socket and a client socket?
+- What is the purpose of concurrency?
+- Cite three ways to handle multiple clients with concurrency.
 
 ## Finished? Was it easy? Was it hard?
 
@@ -391,6 +498,8 @@ _Resources are here to help you. They are not mandatory to read._
 - _None yet_
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+## Solution
 
 ## Sources
 

@@ -585,7 +585,8 @@ remove or the hash of the public key.
 
 Save the file by typing `:wq` (write and quit).
 
-Congrats! You were able to exit the Vi editor! You will not be trapped forever! 🎉
+Congrats! You were able to exit the Vi editor! You will not be trapped forever!
+🎉
 
 If you are interested in learning more about the Vi/Vim editor, you can check
 the following resource: <https://github.com/iggredible/Learn-Vim/tree/master>.
