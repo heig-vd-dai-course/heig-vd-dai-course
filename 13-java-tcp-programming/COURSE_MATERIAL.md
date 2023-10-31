@@ -72,16 +72,16 @@ server, a file server, a web server, etc.
 TCP is a transport protocol. It is used to transfer data between two
 applications.
 
-TCP is a connection-oriented protocol: a connection must be
-established between the two applications before data can be exchanged.
+TCP is a connection-oriented protocol: a connection must be established between
+the two applications before data can be exchanged.
 
-TCP is a reliable protocol: data sent is guaranteed to be
-received by the other application.
+TCP is a reliable protocol: data sent is guaranteed to be received by the other
+application.
 
 A good analogy is to think of TCP as a phone call. You must first establish a
 connection with the other person before you can talk to them. Once the
-connection is established, you can talk to the other person and they
-will hear everything you say.
+connection is established, you can talk to the other person and they will hear
+everything you say.
 
 With the help of port numbers, TCP allows multiple applications to communicate
 with each other on the same machine.
@@ -172,8 +172,8 @@ input = socket.getInputStream();
 output = socket.getOutputStream();
 ```
 
-You can then decorate the input and output streams with other streams to
-process the data.
+You can then decorate the input and output streams with other streams to process
+the data.
 
 ```java
 // Get input stream as text
@@ -244,12 +244,10 @@ single-threaded server.
 
 A single-threaded server is quite simple to implement:
 
-1. It creates a socket to
-listen for incoming connections.
-2. When a connection is accepted, it creates a
-socket to communicate with the client.
-3. It then reads the data sent by the client
-and sends a response.
+1. It creates a socket to listen for incoming connections.
+2. When a connection is accepted, it creates a socket to communicate with the
+   client.
+3. It then reads the data sent by the client and sends a response.
 
 The main drawback of a single-threaded server is that it can only handle one
 client at a time. If another client tries to connect, it will have to wait until
@@ -338,7 +336,8 @@ There are two ways to manage threads:
 - Thread pool that limits the number of threads
 
 When discussing the unlimited threads approach, an analogy is to think of a
-restaurant with no tables at all. When a new customer arrives, the restaurant manager adds a new table for the customer. Each table can handle one customer.
+restaurant with no tables at all. When a new customer arrives, the restaurant
+manager adds a new table for the customer. Each table can handle one customer.
 
 Using this approach, the more customers arrive, the more tables are added. This
 approach is not suitable for production as space and resources are limited.
@@ -399,7 +398,8 @@ Take some time to explore the code examples.
 
 ### Send an email using a SMTP client written in Java with the Socket API
 
-In this section, you will learn how to send an email using the SMTP protocol using the Java Socket API.
+In this section, you will learn how to send an email using the SMTP protocol
+using the Java Socket API.
 
 #### Start MailHog
 

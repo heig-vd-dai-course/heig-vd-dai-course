@@ -30,8 +30,8 @@ send some responses to the client.
 The application protocol will be defined by you.
 
 Feel free to be creative! For example, you can choose to create a chat
-application, a chess game, a shopping list, etc. If you do not have any
-idea, come to see us and we can give you.
+application, a chess game, a shopping list, etc. If you do not have any idea,
+come to see us and we can give you.
 
 Multiple groups can choose the same application protocol and you can share your
 methodology but please do not copy/paste code from other groups.
@@ -90,14 +90,14 @@ repository!
 
 ### Category 3 - Define an application protocol
 
-| #   | Criterion                                                                                    | Points |
-| --- | -------------------------------------------------------------------------------------------- | -----: |
-| 7   | The application protocol defines the port and protocol to use                                |    0.2 |
-| 8   | The application protocol defines who initiates the connection and how                        |    0.2 |
-| 9   | The application protocol defines the available messages/actions with their input(s)/output(s)        |    0.2 |
-| 10  | The application protocol defines the success/errors codes and their explanations             |    0.2 |
-| 11  | The application protocol is described using one or multiple diagrams                         |    0.2 |
-| 12  | The application protocol defines the edge-cases when something could go wrong with a diagram |    0.2 |
+| #   | Criterion                                                                                     | Points |
+| --- | --------------------------------------------------------------------------------------------- | -----: |
+| 7   | The application protocol defines the port and protocol to use                                 |    0.2 |
+| 8   | The application protocol defines who initiates the connection and how                         |    0.2 |
+| 9   | The application protocol defines the available messages/actions with their input(s)/output(s) |    0.2 |
+| 10  | The application protocol defines the success/errors codes and their explanations              |    0.2 |
+| 11  | The application protocol is described using one or multiple diagrams                          |    0.2 |
+| 12  | The application protocol defines the edge-cases when something could go wrong with a diagram  |    0.2 |
 
 ### Category 4 - Java TCP programming
 
@@ -182,11 +182,9 @@ If you have any questions about the evaluation, you can contact us!
 <summary>Grading grid for the teaching staff with comments</summary>
 
 ```markdown
-# Practical work 2 - Grading grid for First name Last name member 1
+# Practical work 2 - Grading grid for First name Last name member 1 and First name Last name member 2
 
-and First name Last name member 2
-
-Here are the grades and comments for each criterion for the practical work 1.
+Here are the grades and comments for each criterion for the practical work.
 
 ## Grading criteria
 

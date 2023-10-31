@@ -194,11 +194,9 @@ If you have any questions about the evaluation, you can contact us!
 <summary>Grading grid for the teaching staff with comments</summary>
 
 ```markdown
-# Practical work 3 - Grading grid for First name Last name member 1
+# Practical work 3 - Grading grid for First name Last name member 1 and First name Last name member 2
 
-and First name Last name member 2
-
-Here are the grades and comments for each criterion for the practical work 1.
+Here are the grades and comments for each criterion for the practical work.
 
 ## Grading criteria
 

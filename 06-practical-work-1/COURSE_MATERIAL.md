@@ -170,7 +170,7 @@ If you have any questions about the evaluation, you can contact us!
 
 and First name Last name member 2
 
-Here are the grades and comments for each criterion for the practical work 1.
+Here are the grades and comments for each criterion for the practical work.
 
 ## Grading criteria
 

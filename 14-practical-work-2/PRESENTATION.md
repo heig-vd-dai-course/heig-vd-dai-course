@@ -125,7 +125,7 @@ java -jar target/practical-work-2-demo-1.0-SNAPSHOT.jar client -p 12345
 Output:
 
 ```text
-  _____          _____   _____           _                  _ 
+  _____          _____   _____           _                  _
  |  __ \   /\   |_   _| |  __ \         | |                | |
  | |  | | /  \    | |   | |__) | __ ___ | |_ ___   ___ ___ | |
  | |  | |/ /\ \   | |   |  ___/ '__/ _ \| __/ _ \ / __/ _ \| |
@@ -139,7 +139,7 @@ LS - list available files on server
 GET <file> - get file from server
 QUIT - quit the client
 
-> 
+>
 ```
 
 ---
@@ -215,6 +215,6 @@ You can use reactions to express your opinion on a comment!
 
 ## Sources
 
-- Main illustration by
-  [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex) on
+- Main illustration by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)
+  on
   [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
