@@ -70,10 +70,11 @@ server, a file server, a web server, etc.
 ## TCP
 
 TCP is a transport protocol. It is used to transfer data between two
-applications.
+applications. TCP can only do UniCast: one application can only communicate with
+one other application.
 
 TCP is a connection-oriented protocol: a connection must be established between
-the two applications before data can be exchanged.
+the two applications before data can be exchanged in a bidirectional way.
 
 TCP is a reliable protocol: data sent is guaranteed to be received by the other
 application.
@@ -90,9 +91,6 @@ TCP is a stream-oriented protocol: data is sent as a stream of bytes. The
 application must split the data into segments. Each segment is identified by a
 sequence number.
 
-Segments are sent from one application to another using sockets. A socket is
-identified by an IP address and a port number.
-
 TCP segments are encapsulated in IP packets, called payloads.
 
 Thanks to the sequence numbers, TCP is able to reassemble the segments in the
@@ -107,7 +105,7 @@ in the
 [`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
 
 It has originally been developed in C in the context of the Unix operating
-system. It has been ported to Java and is now available on many platform and
+system by Berkeley University. It has been ported to Java and is now available on many platform and
 languages.
 
 To make it simple, a socket is just like a file that you can open, read from,
@@ -200,6 +198,9 @@ output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
 > ```java
 > out.flush();
 > ```
+>
+> Also, do not forget all the good practices seen in the
+> [Java IOs chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios) (encoding, buffering, etc.). They must be applied here too!
 
 ### Variable length data
 

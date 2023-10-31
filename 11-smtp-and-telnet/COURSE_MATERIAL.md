@@ -386,7 +386,7 @@ In the `11-smtp-and-telnet` directory, run the following command:
 
 ```sh
 # Start MailHog in background
-docker-compose up -d
+docker compose up -d
 ```
 
 The output should be similar to the following:
@@ -466,19 +466,49 @@ This means that you are connected to the MailHog SMTP server.
 
 In the Telnet session, run the following commands, replace all `<>` values with
 your own values (you must keep the `<` and `>` characters!) and the
-`the-smtp-domain-name.tld` with any domain name you want:
+`the-smtp-domain-name.tld` with any domain name you want. Each command should return you a status code:
 
 ```text
 EHLO the-smtp-domain-name.tld
-MAIL FROM: <your-email@gmail.com>
-RCPT TO: <recipient@example.com>
-DATA
-Subject: Your Subject
-From: Your Name <your-email@gmail.com>
-To: Recipient Name <recipient@example.com>
-Content-Type: text/plain; charset="utf-8"
+```
 
+```text
+MAIL FROM: <your-email@gmail.com>
+```
+
+```text
+RCPT TO: <recipient@example.com>
+```
+
+```text
+DATA
+```
+
+```text
+Subject: Your Subject
+```
+
+```text
+From: Your Name <your-email@gmail.com>
+```
+
+```text
+To: Recipient Name <recipient@example.com>
+```
+
+```text
+Content-Type: text/plain; charset="utf-8"
+```
+
+```text
 Your email content goes here.
+
+It can be multiple lines.
+
+A line with a dot (.) by itself indicates the end of the email content.
+```
+
+```text
 .
 ```
 

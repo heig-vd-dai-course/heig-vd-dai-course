@@ -92,6 +92,12 @@ You can find other resources and alternatives as well.
 
 ### TCP
 
+TCP is a transport protocol that is similar to a phone call.
+
+- A connection is established between two parties
+- Data sent is guaranteed to arrive in the same order
+- Data can be sent again
+
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## The Socket API
@@ -104,19 +110,54 @@ You can find other resources and alternatives as well.
 
 ### The Socket API
 
+- Originally developed by Berkeley University
+- Ported to Java and many other languages
+- Provides a simple API to use TCP and UDP
+- A socket is a connection between two parties using a protocol and a port
+
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ### Client/server common functions
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+| Operation           | Description                        |
+| ------------------- | ---------------------------------- |
+| `socket()`          | Creates a new socket               |
+| `getInputStream()`  | Gets the input stream of a socket  |
+| `getOutputStream()` | Gets the output stream of a socket |
+| `close()`           | Closes a socket                    |
 
 ### Client structure and functions
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+1. Create a `Socket`
+2. Connect the socket to an IP address and a port number
+3. Read and write data from/to the socket
+4. Flush and close the socket
+
+| Operation   | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| `connect()` | Connects a socket to an IP address and a port number |
 
 ### Server structure and functions
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+1. Create a `ServerSocket`
+2. Bind the socket to an IP address and a port number
+3. Listen for incoming connections
+4. Loop
+   1. Accept an incoming connection - creates a new `Socket`
+   2. Read and write data from/to the socket
+   3. Flush and close the socket
+5. Close the `ServerSocket`
+
+---
+
+| Operation  | Description                                       |
+| ---------- | ------------------------------------------------- |
+| `bind()`   | Binds a socket to an IP address and a port number |
+| `listen()` | Listens for incoming connections                  |
+| `accept()` | Accepts an incoming connection                    |
+
+To make it simple, a socket is just like a file that you can open, read from,
+write to and close. To exchange data, sockets on both sides must be connected.
 
 ## Processing data from streams
 
@@ -128,11 +169,51 @@ You can find other resources and alternatives as well.
 
 ### Processing data from streams
 
+- Sockets use data streams to send and receive data, just like files
+- Get an input stream to read data from a socket
+- Get an output stream to write data to a socket
+
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ### Variable length data
 
+Data sent can have a variable length. Manage this using one of the two methods:
+
+- Use a delimiter
+- Communicate a fixed length
+
+This must be defined by your application protocol!
+
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+---
+
+Using a delimiter:
+
+```java
+// End of transmission character
+String EOT = "\u0004";
+
+// Read data until the delimiter is found
+String line;
+while ((line = in.readLine()) != null && !line.equals(EOT)) {
+  System.out.println(
+    "[Client " + CLIENT_ID + "] response from server: " + line
+  );
+}
+```
+
+---
+
+Communicating a fixed length:
+
+```java
+// Send the length of the data
+out.write("DATA_LENGTH " + data.length() + "\n");
+
+// Send the data
+out.write(data);
+```
 
 ## Handling one client at a time
 
