@@ -104,7 +104,7 @@ repository!
 | #   | Criterion                                                                                           | Points |
 | --- | --------------------------------------------------------------------------------------------------- | -----: |
 | 13  | The server starts on the defined port and accept connections from multiple clients at the same time |    0.2 |
-| 14  | The client can access the server and execute commands to interact with the server                   |    0.2 |
+| 14  | The client can access the server and execute commands to interact with the server without closing the connection for each action (see [Remarks](#remarks))                   |    0.2 |
 | 15  | The client displays an error message with details when the connection has not succeed               |    0.2 |
 | 16  | Some actions are private (unique to one user), some actions are common (affect all users)           |    0.2 |
 | 17  | No one can manipulate items from another client if it is not authorized                             |    0.2 |
@@ -150,6 +150,9 @@ however explain why and how you use it in your README.
 You can protect the `main` branch of your repository to prevent any push on it
 and force signed commits from team members. This will force all team members to
 use signed pull requests to merge your work.
+
+In order to run multiple commands/actions on the server without closing the
+connection, you can use what is called a [read-eval-print loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop). To make it simple, a REPL is simply a loop that will ask the user to input commands. The loop will then execute the command and display the result. The loop will continue until the user decides to exit the loop.
 
 ## Submission
 

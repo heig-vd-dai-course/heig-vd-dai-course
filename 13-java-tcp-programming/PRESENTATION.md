@@ -198,7 +198,7 @@ String EOT = "\u0004";
 String line;
 while ((line = in.readLine()) != null && !line.equals(EOT)) {
   System.out.println(
-    "[Client " + CLIENT_ID + "] response from server: " + line
+    "[Server " + SERVER_ID + "] received data from client: " + line
   );
 }
 ```
@@ -215,6 +215,17 @@ out.write("DATA_LENGTH " + data.length() + "\n");
 out.write(data);
 ```
 
+```java
+// Read the length of the data
+String[] parts = in.readLine().split(" ");
+int dataLength = Integer.parseInt(parts[1]);
+
+// Read the data
+for (int i = 0; i < dataLength; i++) {
+  System.out.print((char) in.read());
+}
+```
+
 ## Handling one client at a time
 
 <!-- _class: lead -->
@@ -224,6 +235,12 @@ More details for this section in the
 You can find other resources and alternatives as well.
 
 ### Handling one client at a time
+
+1. Create a socket to listen to incoming connections
+2. Create a new socket for the client
+3. Handle the connection
+
+➡️ Simple but only one client at a time. Quite useless...
 
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -237,19 +254,37 @@ You can find other resources and alternatives as well.
 
 ### Handling multiple clients at the same time
 
+Concurrency is the ability to run multiple tasks at the same time.
+
+With concurrency, you can handle multiple clients at the same time.
+
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ### Multi-processing
+
+- Create an entirely new process for each client
+- Heavyweight and slow
+- Not recommended
 
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ### Multi-threading
 
+- Create a new thread for each client
+- More lightweight and faster than multi-processing
+- Recommended with thread pool to limit resource usage
+- Not enough or too many threads can slow down the system
+
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ### Asynchronous programming
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+- Handle multiple clients with a single thread
+- Recommended for high performance applications
+- Out of scope for this course but interesting to know!
+- Node.js is a good example
+
+![bg right:40%](https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?fit=crop&h=720)
 
 ## Practical content
 

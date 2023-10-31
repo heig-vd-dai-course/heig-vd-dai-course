@@ -222,7 +222,7 @@ String EOT = "\u0004";
 String line;
 while ((line = in.readLine()) != null && !line.equals(EOT)) {
   System.out.println(
-    "[Client " + CLIENT_ID + "] response from server: " + line
+    "[Server " + SERVER_ID + "] received data from client: " + line
   );
 }
 ```
@@ -236,6 +236,17 @@ out.write("DATA_LENGTH " + data.length() + "\n");
 
 // Send the data
 out.write(data);
+```
+
+```java
+// Read the length of the data
+String[] parts = in.readLine().split(" ");
+int dataLength = Integer.parseInt(parts[1]);
+
+// Read the data
+for (int i = 0; i < dataLength; i++) {
+  System.out.print((char) in.read());
+}
 ```
 
 ## Handling one client at a time

@@ -1,6 +1,6 @@
 # Practical work 3
 
-- Time in class: 2 + 2 + 2 + 2 periods
+- Time in class: 2 + 2 + 2 periods
 - Presentation
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-practical-work-3/)
   ·

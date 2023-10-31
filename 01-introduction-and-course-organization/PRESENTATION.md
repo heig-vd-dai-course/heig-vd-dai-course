@@ -177,7 +177,7 @@ will give you a solid grounding in this world.
 
 - Part 1 - Input/output processing (15 periods)
 - Part 2 - Network programming with TCP (18 periods)
-- Part 3 - Network programming with UDP (16 periods)
+- Part 3 - Network programming with UDP (14 periods)
 - Part 4 - Web infrastructures (12 periods)
 
 The entire course planning for the semester is available at

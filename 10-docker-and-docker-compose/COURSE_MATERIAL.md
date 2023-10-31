@@ -65,6 +65,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
+- [Solution](#solution)
 - [Sources](#sources)
 
 ## Objectives
