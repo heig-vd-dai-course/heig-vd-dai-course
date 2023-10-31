@@ -105,8 +105,8 @@ in the
 [`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
 
 It has originally been developed in C in the context of the Unix operating
-system by Berkeley University. It has been ported to Java and is now available on many platform and
-languages.
+system by Berkeley University. It has been ported to Java and is now available
+on many platform and languages.
 
 To make it simple, a socket is just like a file that you can open, read from,
 write to and close. To exchange data, sockets on both sides must be connected.
@@ -200,7 +200,8 @@ output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
 > ```
 >
 > Also, do not forget all the good practices seen in the
-> [Java IOs chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios) (encoding, buffering, etc.). They must be applied here too!
+> [Java IOs chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios)
+> (encoding, buffering, etc.). They must be applied here too!
 
 ### Variable length data
 

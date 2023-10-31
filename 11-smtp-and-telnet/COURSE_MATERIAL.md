@@ -466,7 +466,8 @@ This means that you are connected to the MailHog SMTP server.
 
 In the Telnet session, run the following commands, replace all `<>` values with
 your own values (you must keep the `<` and `>` characters!) and the
-`the-smtp-domain-name.tld` with any domain name you want. Each command should return you a status code:
+`the-smtp-domain-name.tld` with any domain name you want. Each command should
+return you a status code:
 
 ```text
 EHLO the-smtp-domain-name.tld

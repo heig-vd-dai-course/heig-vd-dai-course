@@ -375,8 +375,8 @@ Once connected, the users can send text messages to other users.
 The server accepts text messages from the client and sends them to the
 recipient.
 
-The server can only accept text messages from users that are connected. The
-text messages can only be of a certain length (100 characters).
+The server can only accept text messages from users that are connected. The text
+messages can only be of a certain length (100 characters).
 
 #### The exercise
 

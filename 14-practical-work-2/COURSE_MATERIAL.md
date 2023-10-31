@@ -74,12 +74,12 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 If your repository is private, you must add us as collaborators to your
 repository!
 
-| #   | Criterion                                                                        | Points |
-| --- | -------------------------------------------------------------------------------- | -----: |
-| 1   | The whole team contributes to the project and can explain it in details          |    0.2 |
-| 2   | The README is well structured and explains what the network application is for   |    0.2 |
-| 3   | The README explains how to build the network application                         |    0.2 |
-| 4   | The README explains how to run the network application with examples and outputs |    0.2 |
+| #   | Criterion                                                                                                               | Points |
+| --- | ----------------------------------------------------------------------------------------------------------------------- | -----: |
+| 1   | The whole team contributes to the project and can explain it in details                                                 |    0.2 |
+| 2   | The README is well structured and explains what the network application is for with its documented application protocol |    0.2 |
+| 3   | The README explains how to build the network application                                                                |    0.2 |
+| 4   | The README explains how to run the network application with examples and outputs                                        |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
@@ -101,16 +101,16 @@ repository!
 
 ### Category 4 - Java TCP programming
 
-| #   | Criterion                                                                                           | Points |
-| --- | --------------------------------------------------------------------------------------------------- | -----: |
-| 13  | The server starts on the defined port and accept connections from multiple clients at the same time |    0.2 |
-| 14  | The client can access the server and execute commands to interact with the server without closing the connection for each action (see [Remarks](#remarks))                   |    0.2 |
-| 15  | The client displays an error message with details when the connection has not succeed               |    0.2 |
-| 16  | Some actions are private (unique to one user), some actions are common (affect all users)           |    0.2 |
-| 17  | No one can manipulate items from another client if it is not authorized                             |    0.2 |
-| 18  | The client and server correctly process the input/output commands                                   |    0.2 |
-| 19  | The client/server is informed if the server/client closes the connection                            |    0.2 |
-| 20  | The application uses all the best practices regarding network programming                           |    0.2 |
+| #   | Criterion                                                                                                                                                                                                                                                                    | Points |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 13  | The server starts on the defined port (but you must be able to change it if needed) and accept connections from multiple clients at the same time                                                                                                                            |    0.2 |
+| 14  | The client can access the server on a given host (by default, the client tries to connect to the defined port but you must be able to change it if needed) and execute commands to interact with it without closing the connection for each action (see [Remarks](#remarks)) |    0.2 |
+| 15  | The client displays an error message with details when the connection has not succeed                                                                                                                                                                                        |    0.2 |
+| 16  | Some actions are private (unique to one user), some actions are common (affect all users)                                                                                                                                                                                    |    0.2 |
+| 17  | No one can manipulate items from another client if it is not authorized                                                                                                                                                                                                      |    0.2 |
+| 18  | The client and server correctly process the input/output commands                                                                                                                                                                                                            |    0.2 |
+| 19  | The client/server is informed if the server/client closes the connection                                                                                                                                                                                                     |    0.2 |
+| 20  | The application uses all the best practices regarding network programming                                                                                                                                                                                                    |    0.2 |
 
 ### Category 5 - Presentation and questions
 
@@ -152,7 +152,11 @@ and force signed commits from team members. This will force all team members to
 use signed pull requests to merge your work.
 
 In order to run multiple commands/actions on the server without closing the
-connection, you can use what is called a [read-eval-print loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop). To make it simple, a REPL is simply a loop that will ask the user to input commands. The loop will then execute the command and display the result. The loop will continue until the user decides to exit the loop.
+connection, you can use what is called a
+[read-eval-print loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
+To make it simple, a REPL is simply a loop that will ask the user to input
+commands. The loop will then execute the command and display the result. The
+loop will continue until the user decides to exit the loop.
 
 ## Submission
 
