@@ -100,8 +100,9 @@ It is **mandatory**.
 
 ---
 
-You can have access to the course material (theoretical and practical content,
-as well as practical work) and the Internet.
+You can have access to the course material including your own notes and the
+[official Java documentation](https://docs.oracle.com/en/java/javase/17/docs/api/).
+Other websites are not allowed.
 
 No communication between students is allowed.
 

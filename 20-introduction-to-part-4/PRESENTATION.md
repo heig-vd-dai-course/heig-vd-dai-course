@@ -81,6 +81,10 @@ _paginate: false
 
 ![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 
+## Some preparation
+
+I need to know which group you are in.
+
 ## Sources
 
 - Main illustration by [shawnanggg](https://unsplash.com/@shawnanggg) on

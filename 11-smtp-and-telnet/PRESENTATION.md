@@ -135,7 +135,8 @@ You can find other resources and alternatives as well.
 - Email servers are called Mail Transfer Agents (MTA)
 - They use these protocols
 
-![bg right:40% w:90%](https://blog.thunderbird.net/files/2023/05/1024x1024@2x.png)
+![bg right:40% h:90%](https://blog.thunderbird.net/files/2023/05/1024x1024@2x.png)
+![bg vertical right:40% h:70%](https://upload.wikimedia.org/wikipedia/commons/e/ea/Microsoft_Exchange_%282019-present%29.svg)
 
 ### SMTP
 
@@ -188,10 +189,11 @@ You can find other resources and alternatives as well.
 
 ### Security concerns and blacklisting
 
-- SMTP is old and insecure (spoofing)
+- SMTP is old and insecure
+- Easy to spoof and forge emails
 - Hard to maintain
-- Your email server can be blacklisted
-- We will use a mock server to simulate an email server
+- ➡️ Your email server can be used for spam and can be blacklisted
+- ➡️ We will use a mock server to simulate an email server
 
 ![bg right:40%](https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?fit=crop&h=720)
 

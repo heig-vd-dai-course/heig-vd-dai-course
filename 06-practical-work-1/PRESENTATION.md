@@ -100,7 +100,7 @@ java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar
 
 ---
 
-```sh
+```text
 Missing required options: '--input=<inputFile>', '--output=<outputFile>'
 Usage: IoProcessing [-hV] -i=<inputFile> [-ie=<inputEncoding>] -o=<outputFile>
                     [-oe=<outputEncoding>] [COMMAND]

@@ -51,7 +51,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/117
 [illustration]:
-  https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
+  https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720
 [practical-work]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-practical-work-2/COURSE_MATERIAL.md
 [practical-work-qr-code]:
@@ -85,7 +85,90 @@ _paginate: false
 
 ## Demo
 
-TODO
+Compile the project:
+
+```sh
+./mvnw clean package
+```
+
+Run the CLI without any arguments:
+
+```sh
+java -jar target/practical-work-2-demo-1.0-SNAPSHOT.jar
+```
+
+---
+
+```text
+Missing required subcommand
+Usage: DaiFileTransfer [COMMAND]
+A simple file transfer application
+Commands:
+  server  Start a TCP server to serve files
+  client  Start a client to download files from a server
+```
+
+Start the server:
+
+```sh
+java -jar target/practical-work-2-demo-1.0-SNAPSHOT.jar server -p 12345 -t 4
+```
+
+Start the client:
+
+```sh
+java -jar target/practical-work-2-demo-1.0-SNAPSHOT.jar client -p 12345
+```
+
+---
+
+Output:
+
+```text
+  _____          _____   _____           _                  _ 
+ |  __ \   /\   |_   _| |  __ \         | |                | |
+ | |  | | /  \    | |   | |__) | __ ___ | |_ ___   ___ ___ | |
+ | |  | |/ /\ \   | |   |  ___/ '__/ _ \| __/ _ \ / __/ _ \| |
+ | |__| / ____ \ _| |_  | |   | | | (_) | || (_) | (_| (_) | |
+ |_____/_/    \_\_____| |_|   |_|  \___/ \__\___/ \___\___/|_|
+
+You are connected to server on port 12345 with IP address localhost.
+
+Available commands:
+GET <file> - get file from server
+QUIT - quit the client
+
+> 
+```
+
+---
+
+Get one of the available files:
+
+```text
+> GET target/demo.txt
+Downloading file from server...
+File saved to demo.txt
+```
+
+Get a file that does not exist:
+
+```text
+> GET target/not-found.txt
+The specified file was not found on the server.
+```
+
+---
+
+Quit:
+
+```text
+> QUIT
+Bye.
+```
+
+If a client tries to connect to the server when no thread is available, the
+client has to wait to be served.
 
 ## Find the practical work
 
@@ -122,5 +205,5 @@ You can use reactions to express your opinion on a comment!
 ## Sources
 
 - Main illustration by
-  [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) on
-  [Unsplash](https://unsplash.com/photos/ScZwMqoxcls)
+  [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex) on
+  [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
