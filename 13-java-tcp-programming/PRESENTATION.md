@@ -130,6 +130,10 @@ You can find other resources and alternatives as well.
 
 ![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
+### Variable length data
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
 ## Handling one client at a time
 
 <!-- _class: lead -->
@@ -172,9 +176,12 @@ You can find other resources and alternatives as well.
 
 ### What will you do?
 
-- TODO
+- Send an email using a SMTP client written in Java with the Socket API
+- Run full client/server examples and understand how concurrent clients are
+  handled
 
-![bg right contain](./images/what-will-you-do.png)
+![bg right contain](./images/what-will-you-do-server.png)
+![bg right vertical contain](./images/what-will-you-do-client.png)
 
 ### Find the practical content
 

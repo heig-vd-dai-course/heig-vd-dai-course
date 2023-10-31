@@ -40,7 +40,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Asynchronous programming](#asynchronous-programming)
 - [Practical content](#practical-content)
   - [Get the required files](#get-the-required-files)
-  - [Run the SMTP client in Java](#run-the-smtp-client-in-java)
+  - [Send an email using a SMTP client written in Java with the Socket API](#send-an-email-using-a-smtp-client-written-in-java-with-the-socket-api)
   - [Run full client/server examples](#run-full-clientserver-examples)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -58,7 +58,7 @@ As you have seen in previous chapters, applications communicate with each other
 using application protocols.
 
 Some tools are created to interact with these protocols. For example, you can
-use Telnet to interact with the SMTP protocol or SSH to interact with the SSH
+use Telnet to interact with the SMTP protocol or SCP to interact with the SSH
 protocol to transfer files.
 
 In this chapter, you will learn how to program your own TCP clients and servers
@@ -72,28 +72,26 @@ server, a file server, a web server, etc.
 TCP is a transport protocol. It is used to transfer data between two
 applications.
 
-TCP is a connection-oriented protocol. This means that a connection must be
+TCP is a connection-oriented protocol: a connection must be
 established between the two applications before data can be exchanged.
 
-TCP is a reliable protocol. This means that the data sent is guaranteed to be
+TCP is a reliable protocol: data sent is guaranteed to be
 received by the other application.
-
-TCP is a stream-oriented protocol. This means that the data is sent as a stream.
-There is no notion of message.
 
 A good analogy is to think of TCP as a phone call. You must first establish a
 connection with the other person before you can talk to them. Once the
-connection is established, you can talk to the other person. The other person
+connection is established, you can talk to the other person and they
 will hear everything you say.
 
 With the help of port numbers, TCP allows multiple applications to communicate
 with each other on the same machine.
 
-Messages are sent from one application to another using sockets. A socket is
-identified by an IP address and a port number.
+TCP is a stream-oriented protocol: data is sent as a stream of bytes. The
+application must split the data into segments. Each segment is identified by a
+sequence number.
 
-In TCP, messages are called segments. A segment is a part of a message. A
-segment is identified by a sequence number.
+Segments are sent from one application to another using sockets. A socket is
+identified by an IP address and a port number.
 
 TCP segments are encapsulated in IP packets, called payloads.
 
@@ -175,7 +173,7 @@ output = socket.getOutputStream();
 ```
 
 You can then decorate the input and output streams with other streams to
-transform the data.
+process the data.
 
 ```java
 // Get input stream as text
@@ -241,12 +239,16 @@ out.write(data);
 
 ## Handling one client at a time
 
-A server can handle one client at a time. It is called single-threaded, or
+A server that handles one client at a time is called single-threaded, or
 single-threaded server.
 
-A single-threaded server is quite simple to implement. It creates a socket to
-listen for incoming connections. When a connection is accepted, it creates a
-socket to communicate with the client. It then reads the data sent by the client
+A single-threaded server is quite simple to implement:
+
+1. It creates a socket to
+listen for incoming connections.
+2. When a connection is accepted, it creates a
+socket to communicate with the client.
+3. It then reads the data sent by the client
 and sends a response.
 
 The main drawback of a single-threaded server is that it can only handle one
@@ -303,7 +305,7 @@ Processes can communicate with each other using inter-process communication
 (IPC) but it is quite complex to implement.
 
 An analogy is to think of a process as restaurant chain with multiple
-restaurant. Each restaurant has one table and can handle one customer. If a
+restaurant. Each restaurant has only one table and can handle one customer. If a
 customer is already sitting at a table of a given restaurant, another customer
 can sit at a table at another restaurant.
 
@@ -330,16 +332,25 @@ Threads can communicate with each other using shared memory.
 Threads are more lightweight than processes but their number is limited by the
 operating system.
 
-In order to manage multiple threads, a thread pool is used. A thread pool is a
-pool of threads that can be reused to handle multiple clients.
+There are two ways to manage threads:
 
-If the thread pool is full, the main thread will wait until a thread is
-available.
+- Unlimited threads
+- Thread pool that limits the number of threads
 
-An analogy is to think of a thread as a restaurant with multiple tables. Each
-table can handle one customer. If a customer is already sitting at a table, the
-customer can sit to another table. If all tables are occupied, the customer will
-have to wait until a table is available.
+When discussing the unlimited threads approach, an analogy is to think of a
+restaurant with no tables at all. When a new customer arrives, the restaurant manager adds a new table for the customer. Each table can handle one customer.
+
+Using this approach, the more customers arrive, the more tables are added. This
+approach is not suitable for production as space and resources are limited.
+
+When discussing the thread pool approach, an analogy is to think of a restaurant
+with a limited number of tables. When a new customer arrives, the restaurant
+manager checks if a table is available. If a table is available, the customer
+can sit at the table. If no table is available, the customer will have to wait
+until a table is available.
+
+Using this approach, the number of tables is limited. This approach is suitable
+for production as space and resources are managed and limited.
 
 ### Asynchronous programming
 
@@ -352,8 +363,8 @@ waiting for a task to complete.
 Asynchronous programming is based on the concept of callbacks. A callback is a
 function that is called when a task is completed.
 
-An analogy is to think of asynchronous programming as a food truck without a
-table. Once a customer wants something to eat, the person managing the food
+An analogy is to think of asynchronous programming as a food truck without any
+tables. Once a customer wants something to eat, the person managing the food
 truck gives the customer a ticket. The customer then waits until the food is
 ready but can do other things in the meantime.
 
@@ -386,9 +397,9 @@ learn how to run the code examples.
 
 Take some time to explore the code examples.
 
-### Run the SMTP client in Java
+### Send an email using a SMTP client written in Java with the Socket API
 
-In this section, you will learn how to send an email with Java.
+In this section, you will learn how to send an email using the SMTP protocol using the Java Socket API.
 
 #### Start MailHog
 

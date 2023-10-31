@@ -73,13 +73,19 @@ _paginate: false
 
 ## What have you learned?
 
-- TODO
+- How to read and define a protocol
+- The basics of Docker and Docker Compose
+- Network utilities to debug and test network programs (Telnet, dig, nslookup, SSH, SCP, etc.)
+- The basics of network programming with TCP
+- How close the sockets and files are
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
 ## What have you accomplished?
 
-- TODO
+- You have defined your own application protocol
+- You have packaged and shared your own Docker image
+- You have implemented a client/server TCP application in Java; an application that can communicate over the network!
 
 ![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
 

@@ -19,7 +19,7 @@ bob --> alice: Get Bob's public key
 alice -> alice: Encrypt a message using Bob's public key
 alice -> bob: Send the encrypted message to Bob
 
-bob -> bob: Decrypt the message using Bob's public key
+bob -> bob: Decrypt the message using Bob's private key
 bob -> bob: Only Bob can read the message sent by Alice
 
 ...

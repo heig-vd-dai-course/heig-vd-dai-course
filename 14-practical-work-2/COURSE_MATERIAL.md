@@ -30,7 +30,7 @@ send some responses to the client.
 The application protocol will be defined by you.
 
 Feel free to be creative! For example, you can choose to create a chat
-application, a game, a file transfer application, etc. If you do not have any
+application, a chess game, a shopping list, etc. If you do not have any
 idea, come to see us and we can give you.
 
 Multiple groups can choose the same application protocol and you can share your
@@ -94,7 +94,7 @@ repository!
 | --- | -------------------------------------------------------------------------------------------- | -----: |
 | 7   | The application protocol defines the port and protocol to use                                |    0.2 |
 | 8   | The application protocol defines who initiates the connection and how                        |    0.2 |
-| 9   | The application protocol defines the available messages with their input(s)/output(s)        |    0.2 |
+| 9   | The application protocol defines the available messages/actions with their input(s)/output(s)        |    0.2 |
 | 10  | The application protocol defines the success/errors codes and their explanations             |    0.2 |
 | 11  | The application protocol is described using one or multiple diagrams                         |    0.2 |
 | 12  | The application protocol defines the edge-cases when something could go wrong with a diagram |    0.2 |

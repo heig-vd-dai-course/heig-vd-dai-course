@@ -78,8 +78,8 @@ _paginate: false
 
 - A TCP network application with its own application protocol
 - You can choose what the network application will do (you can be creative!)
-  - a chat application, a chess game, a file transfer application, ...
-- Publish your network application on GitHub
+  - a chat application, a chess game, a shopping list application, ...
+- Groups of two students
 
 ![bg right:40%][illustration]
 
@@ -135,6 +135,7 @@ Output:
 You are connected to server on port 12345 with IP address localhost.
 
 Available commands:
+LS - list available files on server
 GET <file> - get file from server
 QUIT - quit the client
 
@@ -143,22 +144,32 @@ QUIT - quit the client
 
 ---
 
+List available files:
+
+```text
+> ls
+Available files on server:
+demo.txt
+my-passwords-in-clear.txt
+rzr-sc2.exe
+```
+
 Get one of the available files:
 
 ```text
-> GET target/demo.txt
+> GET my-passwords-in-clear.txt
 Downloading file from server...
-File saved to demo.txt
+File saved to my-passwords-in-clear.txt
 ```
+
+---
 
 Get a file that does not exist:
 
 ```text
-> GET target/not-found.txt
+> GET not-found.txt
 The specified file was not found on the server.
 ```
-
----
 
 Quit:
 
