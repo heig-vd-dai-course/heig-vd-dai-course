@@ -85,23 +85,109 @@ Learn software installation challenges and containerization benefits.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-## Installation of software
+## Issues with software installation
 
 <!-- _class: lead -->
 
 More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#installation-of-software-traditional-vs-containerization).
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#issues-with-software-installation).
 You can find other resources and alternatives as well.
 
-### Installation of software
+### The problem
 
-- Traditional:
-  - Download installer, install and enjoy
-  - Hard to migrate
-  - Version issues
-- Containerization: software in isolated environment
+- Installing a software is easy
+- However, maintenance is hard:
+  - What to do when a new version is available?
+  - How to keep track of configuration changes?
+  - How to migrate to a new server?
 
-![bg right contain](./images/installation-of-software-traditional-vs-containerization.png)
+![bg right:40%](https://images.unsplash.com/photo-1548783917-a211bcc263cc?fit=crop&h=720)
+
+### A solution
+
+- A solution can be containerization
+- Containerization allows to:
+  - Package software with its dependencies
+  - Run software in an isolated environment
+  - Share software with others
+
+![bg right:40%](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
+
+### An example
+
+- You work as a database administrator
+- You have to maintain multiple database servers
+- Some projects use MySQL 5.7, others MySQL 8.0
+- You must install and maintain multiple versions of MySQL
+- Versions can be incompatible with each other
+- You must keep track of configuration changes
+- Migration to a new server is hard as you have to reinstall each time
+- Your life is miserable and depressing... How to solve this?
+
+---
+
+- Just install a container engine (e.g. Docker) on each server
+- Find official images for MySQL 5.7 and MySQL 8.0 on the registry
+- Start these images as containers - one for each version
+- Want to try a new version? Just start a new container!
+- Each container is isolated from the others so no more conflicts
+- Each container has its own configuration that is easy to track
+- Migration is easier: move the data and start the containers!
+
+Containerization has its own challenges but it can help to solve some issues you
+may have with software installation and maintenance.
+
+## Bare metal, virtualization and containerization
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/COURSE_MATERIAL.md#bare-metal-virtualization-and-containerization).
+You can find other resources and alternatives as well.
+
+### Bare metal, virtualization and containerization
+
+- Bare metal: software runs directly on hardware
+- Virtualization: software runs on a virtual machine
+- Containerization: software runs in a container
+
+![bg right contain](./images/bare-metal-virtualization-and-containerization.png)
+
+### Bare metal
+
+- The traditional way to run software
+- Software runs directly on hardware
+- Software has full access to the hardware
+- Security issues, hard to maintain, hard to migrate
+
+![bg right:40%](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&h=720)
+
+### Virtualization
+
+- Virtualization runs virtual machines
+- A virtual machine is complete operating system
+- A virtual machine is isolated from the host
+- Virtual machines are heavy and use a lot of resources
+
+![bg right w:90%](https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png)
+
+### Containerization
+
+- Containerization starts containers
+- Containers contain all the dependencies to run the software
+- Containers are isolated from each other
+- Containers are lightweight and use the host kernel
+
+![bg right contain](./images/containerization.png)
+
+---
+
+<!-- _class: lead -->
+
+A good resource to better understand the differences between bare metal,
+virtualization and containerization is the following video:
+
+[_"Big Misconceptions about Bare Metal, Virtual Machines, and Containers"_ by ByteByteGo](https://www.youtube.com/watch?v=Jz8Gs4UHTO8)
 
 ## OCI, images, containers, and registries
 
@@ -319,6 +405,10 @@ In the next chapter, you will learn the following topics:
 
 - Main illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
   [Unsplash](https://unsplash.com/photos/xewrfLD8emE)
+- Illustration by [Rafif Prawira](https://unsplash.com/@rafifatmaka) on
+  [Unsplash](https://unsplash.com/photos/aerial-photo-of-maze-race-SgTLuX6t8Yo)
+- Illustration by [Taylor Vick](https://unsplash.com/@tvick) on
+  [Unsplash](https://unsplash.com/photos/cable-network-M5tzZtFCOfs)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [Scott Webb](https://unsplash.com/@scottwebb) on
