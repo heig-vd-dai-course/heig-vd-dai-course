@@ -167,6 +167,28 @@ We encourage you **not** to use gitignore generators (such as
 <https://gitignore.io/>), as they often add too many files to the ignore list.
 It is better to add files to the ignore list as you need it.
 
+We think it is a good practice to ignore all binary files and to only commit
+source files. This allows to keep the repository small and to avoid conflicts.
+
+Files can be ignored by name, by extension or by pattern. The syntax is very
+similar to the one used in the terminal.
+
+Here is an example of a `.gitignore` file:
+
+```gitignore
+# Ignore all text files inside the repository
+*.txt
+
+# Except the input files in the `example` directory
+!examples/**/*_input.txt
+
+# Ignore the `target` directory at the root level of the gitignore file but not the others `target` directories
+/target/
+```
+
+More information about gitignore can be found in the official documentation:
+<https://git-scm.com/docs/gitignore>.
+
 ### Summary
 
 - Git is a distributed VCS

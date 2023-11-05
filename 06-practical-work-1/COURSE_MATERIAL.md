@@ -23,15 +23,16 @@ In this practical work, you will create a CLI using
 [picocli](https://picocli.info/) to process files.
 
 The CLI will take an input file and an output file as arguments. It will also
-take the input file encoding and the output file encoding as optional arguments
-(the default will be UTF-8). The CLI will process the input file and write the
-result in the output file. It will display a message on success and a message on
-failure.
+take optional arguments such as the input file encoding and the output file
+encoding (the default will be UTF-8 for example). The CLI will process the input
+file and write the result in the output file. It will display a message on
+success and a message on failure.
 
 You have the freedom to define what the CLI will do. You can be creative! For
-example, you can choose to copy the input file to the output file, to convert
-the input file to lowercase/uppercase, convert a PNG to JPEG, etc. If you do not
-have any idea, come to see us and we can give you some ideas.
+example, you can choose to transform the the input text file to the output text
+file (uppercase/lowercase/find/replace/count number of words/etc.), to convert a
+PNG to JPEG, add metadata to existing TIFF files, etc. If you do not have any
+idea, come to see us and we can give you some ideas.
 
 Multiple groups can choose the same processing and you can share your
 methodology but please do not copy/paste code from other groups.
@@ -45,8 +46,7 @@ methodology but please do not copy/paste code from other groups.
 ## Group composition
 
 You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one or you can work alone if you prefer.
-Working alone will not give you any bonus points.
+not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
@@ -78,7 +78,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 | 3   | The issues, pull requests and commits messages are descriptive          |    0.2 |
 | 4   | The whole team contributes to the project and can explain it in details |    0.2 |
 | 5   | The repository contains a gitignore file to ignore unwanted files       |    0.2 |
-| 6   | The repository contains test files to use with the CLI                  |    0.2 |
+| 6   | The repository contains example files to use with the CLI               |    0.2 |
 | 7   | The README is well structured and explains what the CLI is for          |    0.2 |
 | 8   | The README explains how to build the CLI                                |    0.2 |
 | 9   | The README explains how to use the CLI with examples and outputs        |    0.2 |
@@ -118,6 +118,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 - The CLI application must be written in Java, compatible with Java 17
 - The CLI application must be built using Maven
+- You must use one or more of the Java classes seen in the course
 - Your application must be slightly more complex and different than the ones
   presented during the course
 

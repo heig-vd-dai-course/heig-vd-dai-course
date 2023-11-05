@@ -246,6 +246,8 @@ You will start the practical work!
 
 - Main illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin)
   on [Unsplash](https://unsplash.com/photos/4h0HqC3K4-c)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [T K](https://unsplash.com/@realaxer) on
   [Unsplash](https://unsplash.com/photos/9AxFJaNySB8)
 - Illustration by [Anna Dudkova](https://unsplash.com/@annadudkova) on
