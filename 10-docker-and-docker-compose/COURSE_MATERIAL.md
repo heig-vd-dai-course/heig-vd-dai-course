@@ -24,7 +24,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
-- [Installation of software: traditional vs. containerization](#installation-of-software-traditional-vs-containerization)
+- [Issues with software installation](#issues-with-software-installation)
+  - [The problem](#the-problem)
+  - [A solution](#a-solution)
+  - [An example](#an-example)
+- [Bare metal, virtualization and containerization](#bare-metal-virtualization-and-containerization)
+  - [Bare metal](#bare-metal)
+  - [Virtualization](#virtualization)
+  - [Containerization](#containerization)
 - [OCI, images, containers and registries](#oci-images-containers-and-registries)
 - [Docker](#docker)
   - [Dockerfile specification](#dockerfile-specification)
@@ -81,7 +88,9 @@ This is a fairly long and complete chapter. It will take you some time to
 complete it. Do not hesitate to take breaks. The content of this chapter will be
 useful for the rest of the course.
 
-## Installation of software: traditional vs. containerization
+## Issues with software installation
+
+### The problem
 
 When you want to install a software on your computer, the traditional way is to
 download an installer, run it and follow the instructions. The installer will
@@ -103,11 +112,15 @@ application's settings to use the new version. It becomes quite a mess.
 If you want to install the software on another computer, you need to manually
 change the settings; it can be difficult to know what to change.
 
-Containerization solves these problems. With containerization, you can install
-the software in a container. The container is a virtual environment that
-contains the software and all its dependencies. The container is isolated from
-the rest of the computer. The container can be run on any computer that has the
-containerization software installed.
+### A solution
+
+Containerization is one of the possible solutions to this problem. It is not the
+only solution, but it is a good one.
+
+With containerization, you can install the software in a container. The
+container is a virtual environment that contains the software and all its
+dependencies. The container is isolated from the rest of the computer and can be
+run on any computer that has the containerization software installed.
 
 Each container is independent from the others. You can run multiple containers
 on the same computer. You can run multiple containers of a software using
@@ -119,6 +132,108 @@ are also faster to create and destroy than virtual machines.
 The containerization software is called a container engine. The most popular
 container engine is Docker. Docker is an implementation of the Open Container
 Initiative (OCI) specification.
+
+### An example
+
+Let's illustrate this with an example. Let's say you are a database engineer in
+a big company. You need to install and maintain databases for all the projects
+your team is working.
+
+Some projects are very old and still use MySQL 5.7.
+
+At the time, you installed MySQL 5.7 in the `/usr/local/mysql` directory on the
+server.
+
+Due to performance issues, you had to change the configuration to improve the
+performance. These changes were done long ago and you do not remember what you
+changed.
+
+Since then, MySQL 8.0 has been released and new projects are based on MySQL 8.0.
+
+Now you need to install MySQL 8.0 on the server. You cannot install it in the
+`/usr/local/mysql` directory, because it would overwrite the old version. You
+need to install it in another directory, for example `/usr/local/mysql-8.0`.
+Managing multiple versions of the same software is difficult.
+
+MySQL 5.7 and MySQL 8.0 run on the same port (3306). You need to change the
+configuration of MySQL 8.0 to run on another port (3307 for example).
+
+Installing MySQL 8.0 might break the configuration of MySQL 5.7. You need to
+ensure that MySQL 5.7 is still working after installing MySQL 8.0 and that
+databases are not corrupted after the installation.
+
+While installing MySQL 8.0, some dependencies must be upgraded and are not
+compatible with MySQL 5.7 anymore. You need to ensure that MySQL 5.7 is still
+working after installing MySQL 8.0.
+
+You might need to make the same changes on another server. You need to remember
+what you changed on the first server and apply the same changes on the second
+server.
+
+All in all, it is quite difficult to install and maintain the software: it is
+prone to errors, difficult to reproduce , difficult to maintain and the headache
+is real.
+
+Containerization can help you with that. You can start some MySQL 5.7 containers
+for the old projects and start some MySQL 8.0 containers for the new projects.
+Each container is isolated from the others.
+
+You can run both containers at the same time, mapping their specific ports to
+different ports on the host easily. If you ever need to migrate the databases to
+another server, you can move the data specific to each container on the new
+server, start the containers again, and you are good to go. You can run the
+containers on any computer that has the containerization software installed.
+
+Containers are software packages that contain everything needed to run an
+application that can easily be shared and run on any computer that has the
+containerization software installed.
+
+Containers are a great way to try new software without having to install it on
+your computer. You can try the software in a container and delete the container
+when you are done. You do not need to worry about what the software has done on
+your computer.
+
+## Bare metal, virtualization and containerization
+
+Bare metal, virtualization and containerization are three different ways to run
+software on a computer (remember, a server is only a computer - the "Cloud" is
+only someone else's computer).
+
+![Differences between bare metal, virtualization and containerization](./images/bare-metal-virtualization-and-containerization.png)
+
+You can find this video in the [Additional resources](#additional-resources)
+section for more information.
+
+### Bare metal
+
+Bare metal is the traditional way to run software on a computer. The software is
+installed directly on the computer. The software has access to all the resources
+of the computer. This is the fastest and most straightforward way to run
+software on a computer.
+
+### Virtualization
+
+Virtualization is another way to run software on a computer. The software is
+installed in a virtual machine. The virtual machine is a virtual computer. The
+virtual machine might have limited access to the resources of the computer. The
+virtual machine is isolated from the rest of the computer. This is a good way to
+run software on a computer when you want to isolate the software from the rest
+of the computer.
+
+Virtualization starts full operating systems. This is quite heavy. It takes time
+to start a virtual machine. It also takes a lot of space on the computer.
+
+### Containerization
+
+Containerization is another way to run software on a computer. The software is
+installed in a container. The container is a virtual environment. The container
+might also have limited access to the resources of the computer. The container
+is isolated from the rest of the computer as well, just like a virtual machine.
+However, a container is not a virtual machine. It is not a full operating
+system. It uses the underlying operating system of the computer and starts only
+the software needed to run the application.
+
+Containerization starts containers. This is much lighter than virtualization.
 
 ## OCI, images, containers and registries
 
@@ -1874,7 +1989,7 @@ In the next chapter, you will learn the following topics:
 
 _Resources are here to help you. They are not mandatory to read._
 
-- _None yet_
+- [_"Big Misconceptions about Bare Metal, Virtual Machines, and Containers"_ by ByteByteGo](https://www.youtube.com/watch?v=Jz8Gs4UHTO8)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
