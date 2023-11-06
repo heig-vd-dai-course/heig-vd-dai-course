@@ -122,7 +122,7 @@ A socket can act as a client or as a server:
 
 The following schema shows the workflow of a client/server application:
 
-![Client/server application workflow](./images/paf.png)
+![Client/server application workflow](./images/client-server-workflow.png)
 
 ### Client/server common methods
 
