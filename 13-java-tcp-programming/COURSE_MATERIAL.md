@@ -58,8 +58,8 @@ As you have seen in previous chapters, applications communicate with each other
 using application protocols.
 
 Some tools are created to interact with these protocols. For example, you can
-use Telnet to interact with the SMTP protocol or SCP to interact with the SSH
-protocol to transfer files.
+use Telnet to interact with the SMTP protocol to send emails or SCP to interact
+with the SSH protocol to transfer files.
 
 In this chapter, you will learn how to program your own TCP clients and servers
 in Java.
@@ -144,7 +144,8 @@ A socket can act as a client or as a server:
 2. Bind the socket to an IP address and a port number
 3. Listen for incoming connections
 4. Loop
-   1. Accept an incoming connection - creates a new socket (class `Socket`)
+   1. Accept an incoming connection - creates a new socket (class `Socket`) on a
+      random port number
    2. Read and write data from/to the socket
    3. Flush and close the socket
 5. Close the socket (`ServerSocket`)

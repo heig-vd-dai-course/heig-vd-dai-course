@@ -78,7 +78,11 @@ _paginate: false
 
 ## Objectives
 
-- TODO
+- Program your own TCP client/server applications in Java with the Socket API
+- Understand how to handle multiple clients at the same time
+- Understand how to process data from streams
+
+Your applications will be able to communicate over the network!
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -92,13 +96,13 @@ You can find other resources and alternatives as well.
 
 ### TCP
 
-TCP is a transport protocol that is similar to a phone call.
+TCP is a transport protocol that is similar to a phone call:
 
-- A connection is established between two parties
-- Data sent is guaranteed to arrive in the same order
-- Data can be sent again
+1. A connection is established between two parties
+2. Data sent is guaranteed to arrive in the same order
+3. Data can be sent again
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?fit=crop&h=720)
 
 ## The Socket API
 
@@ -115,7 +119,8 @@ You can find other resources and alternatives as well.
 - Provides a simple API to use TCP and UDP
 - A socket is a connection between two parties using a protocol and a port
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/the-socket-api-client.png)
+![bg right vertical contain](./images/the-socket-api-server.png)
 
 ### Client/server common functions
 
@@ -143,7 +148,7 @@ You can find other resources and alternatives as well.
 2. Bind the socket to an IP address and a port number
 3. Listen for incoming connections
 4. Loop
-   1. Accept an incoming connection - creates a new `Socket`
+   1. Accept an incoming connection - creates a new `Socket` on a port
    2. Read and write data from/to the socket
    3. Flush and close the socket
 5. Close the `ServerSocket`
@@ -173,7 +178,7 @@ You can find other resources and alternatives as well.
 - Get an input stream to read data from a socket
 - Get an output stream to write data to a socket
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1594728613852-cac78bd0daba?fit=crop&h=720)
 
 ### Variable length data
 
@@ -184,7 +189,7 @@ Data sent can have a variable length. Manage this using one of the two methods:
 
 This must be defined by your application protocol!
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1508188317434-1fd219bb636f?fit=crop&h=720)
 
 ---
 
@@ -240,9 +245,11 @@ You can find other resources and alternatives as well.
 2. Create a new socket for the client
 3. Handle the connection
 
-➡️ Simple but only one client at a time. Quite useless...
+Analogy: a restaurant with one table
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+➡️ Simple but quite useless...
+
+![bg right:40%](https://images.unsplash.com/photo-1513792117172-ef6bc78042c1?fit=crop&h=720)
 
 ## Handling multiple clients at the same time
 
@@ -254,19 +261,25 @@ You can find other resources and alternatives as well.
 
 ### Handling multiple clients at the same time
 
-Concurrency is the ability to run multiple tasks at the same time.
+Handle multiple clients at the same time is called concurrency.
 
-With concurrency, you can handle multiple clients at the same time.
+Concurrency can be achieved with:
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+- Multi-processing
+- Multi-threading
+- Asynchronous programming
+
+![bg right:40%](https://images.unsplash.com/photo-1559329007-40df8a9345d8?fit=crop&h=720)
 
 ### Multi-processing
 
 - Create an entirely new process for each client
 - Heavyweight and slow
 - Not recommended
+- Analogy: a new restaurant for each customer, including the kitchen, waiters,
+  etc.
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1562835155-1fa627c69744?fit=crop&h=720)
 
 ### Multi-threading
 
@@ -274,15 +287,17 @@ With concurrency, you can handle multiple clients at the same time.
 - More lightweight and faster than multi-processing
 - Recommended with thread pool to limit resource usage
 - Not enough or too many threads can slow down the system
+- Analogy: a new or limited number of tables for each customer
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1559674437-65de136f4a05?fit=crop&h=720)
 
 ### Asynchronous programming
 
 - Handle multiple clients with a single thread
-- Recommended for high performance applications
-- Out of scope for this course but interesting to know!
-- Node.js is a good example
+- Very performant!
+- Analogy: a food truck - you get a ticket, wait, get your food and leave
+- Out of scope for this course but interesting to know! Node.js is a good
+  example for this approach
 
 ![bg right:40%](https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?fit=crop&h=720)
 
@@ -332,3 +347,22 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Alexander Andrews](https://unsplash.com/@alex_andrews) on
+  [Unsplash](https://unsplash.com/photos/black-corded-telephone-JYGnB9gTCls)
+- Illustration by [Oleksandra Bardash](https://unsplash.com/@bardashka) on
+  [Unsplash](https://unsplash.com/photos/green-moss-on-rocky-river-9fqMbeny89c)
+- Illustration by [patricia serna](https://unsplash.com/@sernarial) on
+  [Unsplash](https://unsplash.com/photos/assorted-tape-measures-zPZ9vqqDNBA)
+- Illustration by [Elliott Stallion](https://unsplash.com/@eagleboobs) on
+  [Unsplash](https://unsplash.com/photos/white-plastic-bottle-on-brown-wooden-table-near-glass-window-ci7b3Q77n0c)
+- Illustration by [K8](https://unsplash.com/@_k8_) on
+  [Unsplash](https://unsplash.com/photos/people-in-restaurant-sWEpcc0Rm0U)
+- Illustration by [bckfwd](https://unsplash.com/@bckfwd) on
+  [Unsplash](https://unsplash.com/photos/lighted-chandelier-inside-cafe-ifkd981FUdM)
+
+---
+
+- Illustration by [James Elchico](https://unsplash.com/@jdelchico) on
+  [Unsplash](https://unsplash.com/photos/blue-and-brown-padded-chairs-near-table-zB4A-PP49ww)
+- Illustration by [micheile henderson](https://unsplash.com/@micheile) on
+  [Unsplash](https://unsplash.com/photos/woman-selling-inside-store-during-daytime-7NFwwp-vZk8)
