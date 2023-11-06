@@ -28,9 +28,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [TCP](#tcp)
 - [The Socket API](#the-socket-api)
-  - [Client/server common functions](#clientserver-common-functions)
-  - [Client structure and functions](#client-structure-and-functions)
-  - [Server structure and functions](#server-structure-and-functions)
+  - [Client/server common methods](#clientserver-common-methods)
+  - [Client workflow and methods](#client-workflow-and-methods)
+  - [Server structure and methods](#server-structure-and-methods)
 - [Processing data from streams](#processing-data-from-streams)
   - [Variable length data](#variable-length-data)
 - [Handling one client at a time](#handling-one-client-at-a-time)
@@ -118,7 +118,7 @@ A socket can act as a client or as a server:
 - A socket accepting connections is called a server socket.
 - A socket initiating a connection is called a client socket.
 
-### Client/server common functions
+### Client/server common methods
 
 | Operation           | Description                        |
 | ------------------- | ---------------------------------- |
@@ -127,28 +127,36 @@ A socket can act as a client or as a server:
 | `getOutputStream()` | Gets the output stream of a socket |
 | `close()`           | Closes a socket                    |
 
-### Client structure and functions
+### Client workflow and methods
 
-1. Create a socket (class `Socket`)
-2. Connect the socket to an IP address and a port number
-3. Read and write data from/to the socket
-4. Flush and close the socket
+In order to create a client, the following workflow is followed:
+
+> 1. Create a socket (class `Socket`)
+> 2. Connect the socket to an IP address and a port number
+> 3. Read and write data from/to the socket
+> 4. Flush and close the socket
+
+The available methods are the following:
 
 | Operation   | Description                                          |
 | ----------- | ---------------------------------------------------- |
 | `connect()` | Connects a socket to an IP address and a port number |
 
-### Server structure and functions
+### Server structure and methods
 
-1. Create a socket (class `ServerSocket`)
-2. Bind the socket to an IP address and a port number
-3. Listen for incoming connections
-4. Loop
-   1. Accept an incoming connection - creates a new socket (class `Socket`) on a
-      random port number
-   2. Read and write data from/to the socket
-   3. Flush and close the socket
-5. Close the socket (`ServerSocket`)
+In order to create a server, the following workflow is followed:
+
+> 1. Create a socket (class `ServerSocket`)
+> 2. Bind the socket to an IP address and a port number
+> 3. Listen for incoming connections
+> 4. Loop
+>    1. Accept an incoming connection - creates a new socket (class `Socket`) on
+>       a random port number
+>    2. Read and write data from/to the socket
+>    3. Flush and close the socket
+> 5. Close the socket (`ServerSocket`)
+
+The available methods are the following:
 
 | Operation  | Description                                       |
 | ---------- | ------------------------------------------------- |
