@@ -115,8 +115,14 @@ A socket is identified by an IP address and a port number.
 
 A socket can act as a client or as a server:
 
-- A socket accepting connections is called a server socket.
-- A socket initiating a connection is called a client socket.
+- A socket accepting connections is called a server socket (class
+  [`ServerSocket`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/ServerSocket.html)).
+- A socket initiating a connection is called a client socket (class
+  [`Socket`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/Socket.html)).
+
+The following schema shows the workflow of a client/server application:
+
+![Client/server application workflow](./images/paf.png)
 
 ### Client/server common methods
 
