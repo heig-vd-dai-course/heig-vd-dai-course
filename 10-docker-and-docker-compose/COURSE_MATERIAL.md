@@ -1411,7 +1411,7 @@ command:
 
 ```sh
 # Run the image with the my-custom-dockerfile:v3.0 tag
-docker run --rm -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" my-custom-dockerfile:v3.0
+docker run --rm -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" my-custom-dockerfile:v3.0
 ```
 
 The `-p` option is used to publish a container's port(s) to the host. It is used
@@ -1433,13 +1433,13 @@ port 5000. However, we have mapped the port 5000 of the container to the port
 The default username is `admin` and the default password is `admin`. You can
 change it in the settings of the application.
 
+The directory `/app/config` contains the database of the application. It is
+mounted on the `$(pwd)/my-config` directory on the host.
+
 You should have access to the previous files created in the `/app/data`
 directory as it is mounted on the `$(pwd)/my-data` directory on the host. If you
 try to create a new file, it should appear in the `$(pwd)/my-data` directory on
 the host.
-
-The directory `/app/config` contains the database of the application. It is
-mounted on the `$(pwd)/my-config` directory on the host.
 
 You can now stop the container with `CTRL+C`.
 
@@ -1447,7 +1447,7 @@ Start the container again with the following command:
 
 ```sh
 # Run the image with the my-custom-dockerfile:v3.0 tag
-docker run --rm -d -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" my-custom-dockerfile:v3.0
+docker run --rm -d -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" my-custom-dockerfile:v3.0
 ```
 
 This will start the container in detached mode.
@@ -1640,7 +1640,7 @@ your GitHub username:
 
 ```sh
 # Run the image with Docker
-docker run --rm -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" ghcr.io/<username>/my-custom-dockerfile:v3.0
+docker run --rm -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" ghcr.io/<username>/my-custom-dockerfile:v3.0
 ```
 
 If you have not deleted the local volumes, you should have access to the
@@ -1674,8 +1674,8 @@ services:
     ports:
       - "8080:5000"
     volumes:
-      - ./my-data:/app/data
       - ./my-config:/app/config
+      - ./my-data:/app/data
 ```
 
 > **Note**  
@@ -1691,8 +1691,8 @@ services:
 >     ports:
 >       - "8080:5000"
 >     volumes:
->       - ./my-data:/app/data
 >       - ./my-config:/app/config
+>       - ./my-data:/app/data
 > ```
 >
 > The File Browser package is only built for the `amd64` architecture at the
@@ -1797,8 +1797,8 @@ services:
     ports:
       - "8080:5000"
     volumes:
-      - ./my-data:/app/data
       - ./my-config:/app/config
+      - ./my-data:/app/data
 ```
 
 > **Note**  
@@ -1819,8 +1819,8 @@ services:
 >     ports:
 >       - "8080:5000"
 >     volumes:
->       - ./my-data:/app/data
 >       - ./my-config:/app/config
+>       - ./my-data:/app/data
 > ```
 >
 > The File Browser package is only built for the `amd64` architecture at the
