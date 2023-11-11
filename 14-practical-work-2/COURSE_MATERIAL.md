@@ -16,6 +16,26 @@ L. Delafontaine and H. Louis, with the help of Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Objectives](#objectives)
+- [Group composition](#group-composition)
+- [Grading criteria](#grading-criteria)
+  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
+  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
+  - [Category 3 - Define an application protocol](#category-3---define-an-application-protocol)
+  - [Category 4 - Java TCP programming](#category-4---java-tcp-programming)
+  - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
+- [Constraints](#constraints)
+- [Remarks](#remarks)
+- [Submission](#submission)
+- [Grades and feedback](#grades-and-feedback)
+- [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+
+## Introduction
+
 Network applications are everywhere. They are used to communicate, to play
 games, to watch videos, to listen to music, to browse the web, to send emails,
 etc.
@@ -45,8 +65,7 @@ methodology but please do not copy/paste code from other groups.
 ## Group composition
 
 You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one. In this practical work, you have to
-work with someone else.
+not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following

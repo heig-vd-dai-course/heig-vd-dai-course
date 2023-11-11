@@ -153,7 +153,7 @@ initiates and who closes the connection.
 > The DAI protocol uses the TCP protocol. The server runs on port 55555.
 >
 > The client has to know the IP address of the server to connect to. It
-establishes the connection with the server.
+> establishes the connection with the server.
 >
 > The server closes the connection when the transfer is done or if an error
 > occurs (e.g. the file was not found).

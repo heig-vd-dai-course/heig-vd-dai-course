@@ -16,6 +16,25 @@ L. Delafontaine and H. Louis, with the help of Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Objectives](#objectives)
+- [Group composition](#group-composition)
+- [Grading criteria](#grading-criteria)
+  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
+  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
+  - [Category 3 - Java IOs](#category-3---java-ios)
+  - [Category 4 - Presentation and questions](#category-4---presentation-and-questions)
+- [Constraints](#constraints)
+- [Remarks](#remarks)
+- [Submission](#submission)
+- [Grades and feedback](#grades-and-feedback)
+- [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+
+## Introduction
+
 We use CLI tools every day. For example, we use `git` to manage our code, `mvn`
 to build our projects, `java` to run our programs, etc.
 

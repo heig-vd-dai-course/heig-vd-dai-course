@@ -16,6 +16,27 @@ L. Delafontaine and H. Louis, with the help of Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Objectives](#objectives)
+- [Group composition](#group-composition)
+- [Grading criteria](#grading-criteria)
+  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
+  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
+  - [Category 3 - Define an application protocol](#category-3---define-an-application-protocol)
+  - [Category 4 - Docker and Docker Compose](#category-4---docker-and-docker-compose)
+  - [Category 5 - Java UDP programming](#category-5---java-udp-programming)
+  - [Category 6 - Presentation and questions](#category-6---presentation-and-questions)
+- [Constraints](#constraints)
+- [Remarks](#remarks)
+- [Submission](#submission)
+- [Grades and feedback](#grades-and-feedback)
+- [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+
+## Introduction
+
 Network applications are everywhere. They are used to communicate, to play
 games, to watch videos, to listen to music, to browse the web, to send emails,
 etc.
@@ -50,8 +71,7 @@ idea, come to see us and we can give you.
 ## Group composition
 
 You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one. In this practical work, you have to
-work with someone else.
+not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
@@ -79,12 +99,12 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 If your repository is private, you must add us as collaborators to your
 repository!
 
-| #   | Criterion                                                                        | Points |
-| --- | -------------------------------------------------------------------------------- | -----: |
-| 1   | The whole team contributes to the project and can explain it in details          |    0.2 |
-| 2   | The README is well structured and explains what the CLI is for                   |    0.2 |
-| 3   | The README explains how to build and publish the network application with Docker |    0.2 |
-| 4   | The README explains how to run the network application with examples and outputs |    0.2 |
+| #   | Criterion                                                                                                               | Points |
+| --- | ----------------------------------------------------------------------------------------------------------------------- | -----: |
+| 1   | The whole team contributes to the project and can explain it in details                                                 |    0.2 |
+| 2   | The README is well structured and explains what the network application is for with its documented application protocol |    0.2 |
+| 3   | The README explains how to build and publish the network application with Docker                                        |    0.2 |
+| 4   | The README explains how to run the network application with examples and outputs                                        |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
