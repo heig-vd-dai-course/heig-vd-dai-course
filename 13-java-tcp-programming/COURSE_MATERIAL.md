@@ -98,8 +98,8 @@ correct order. If a segment is lost, TCP will retransmit it.
 
 ## The Socket API
 
-The Socket API is a Java API that allows you to create TCP clients and servers.
-It is described in the
+The Socket API is a Java API that allows you to create TCP/UDP clients and
+servers. It is described in the
 [`java.net` package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/package-summary.html)
 in the
 [`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).

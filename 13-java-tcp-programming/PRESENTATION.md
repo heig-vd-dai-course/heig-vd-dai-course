@@ -119,8 +119,12 @@ You can find other resources and alternatives as well.
 - Provides a simple API to use TCP and UDP
 - A socket is a connection between two parties using a protocol and a port
 
-![bg right contain](./images/the-socket-api-client.png)
-![bg right vertical contain](./images/the-socket-api-server.png)
+![bg right h:90%](./images/client-server-workflow.png)
+
+---
+
+![bg contain](./images/the-socket-api-client.png)
+![bg contain](./images/the-socket-api-server.png)
 
 ### Client/server common functions
 

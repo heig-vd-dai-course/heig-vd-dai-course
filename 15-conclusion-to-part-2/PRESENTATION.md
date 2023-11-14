@@ -95,26 +95,27 @@ _paginate: false
 
 In order to validate this part of the course, you will have to pass an
 evaluation. The questions will be in French and you can answer them in French or
-English as you wish.
+English.
 
 The evaluation will be in two parts:
 
 1. A theoretical part (35 minutes)
 2. A practical part (25 minutes)
 
-A break of 5 minutes will be given between the two parts.
+A break of 10 minutes will be given between the two parts.
 
 ---
 
-For both parts, no communication between students is allowed and external help
-from a human is not allowed. You must do the work yourself.
+The following chapters will be evaluated:
 
-Cheating is not allowed. If you are caught cheating, you will get a 1 for the
-evaluation.
+- [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09-define-an-application-protocol)
+- [SMTP and Telnet](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-smtp-and-telnet)
+- [SSH and SCP](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/12-ssh-and-scp)
+- [Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-tcp-programming)
 
-All previous evaluations are available in the
-[`00-evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
-folder of the course repository.
+[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10-docker-and-docker-compose)
+will **not** be evaluated in this evaluation. This chapter will be evaluated
+during the next part once a greater experience of these tools is acquired.
 
 ### Theoretical part
 
@@ -141,28 +142,23 @@ Java documentation, your old practical works, etc.
 The statement will be on paper. You are not allowed to copy it in electronic
 format to feed it to ChatGPT or Copilot.
 
+### Resources
+
+For both parts, no communication between students is allowed and external help
+from a human is not allowed. You must do the work yourself.
+
+Cheating is not allowed. If you are caught cheating, you will get a 1 for the
+evaluation.
+
+All previous evaluations are available in the
+[`00-evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+folder of the course repository.
+
 ## Questions
 
 <!-- _class: lead -->
 
 Do you have any questions?
-
-## Practical work review
-
-The practical work review will start at the end of this presentation.
-
-We only have **5 minutes per group**. Please be prepared to present your work.
-
-The order of presentation is random and is stated in the next slides.
-
-Do not worry, it is not an exam, it is just a way for us to see how you
-understood the practical work. 🙂
-
----
-
-| #   | Group |
-| --- | ----- |
-| 1   | TODO  |
 
 ## Feedback
 

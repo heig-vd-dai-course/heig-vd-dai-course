@@ -213,6 +213,44 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
+## Practical work review
+
+The practical work review will start at the end of this presentation in the
+**room B38**, at the very end of the corridor next to the door entry.
+
+We only have **10 minutes per group** (6 minutes of presentation, 3 minutes of
+questions). Please be prepared to present your work. You decide what you want to
+show us and how you want to present it.
+
+Come 5 minutes before your time slot with your computer.
+
+The order of presentation is random and is stated in the next slides.
+
+---
+
+| #   | Group                                 | Passage |
+| --- | ------------------------------------- | ------- |
+| 1   | Lucas Lattion and Romain Humair       | 13:35   |
+| 2   | Lopez Esteban and Bleuer Rémy         | 13:45   |
+| 3   | Calvin Graf and Alan Sottile          | 13:55   |
+| 4   | Thomas Vuilleumier and Sebastian Diaz | 14:05   |
+| 5   | Alexandre Iorio and Theodros Mulugeta | 14:15   |
+| 6   | Lionel Pollien and Arthur Menétrey    | 14:25   |
+| 7   | Richard Aurélien and Pirakas Anthon   | 14:35   |
+
+---
+
+| #   | Group                                   | Passage |
+| --- | --------------------------------------- | ------- |
+| 9   | Valentin Ricard and Alexandre Philibert | 16:45   |
+| 10  | Komarov Sergey and Ahmad Jano           | 16:55   |
+| 11  | Sarah Jallon and Jonas Troeltsch        | 17:05   |
+| 12  | Piemontesi Gwendal and Trueb Guillaume  | 17:15   |
+| 13  | Loïc Herman and Massimo Stefani?        | 17:25   |
+| 14  | Simon Guggisberg and Jeremiah Steiner?  | 17:35   |
+| 15  | Olin Bourquin and Kevin Farine?         | 17:45   |
+| 16  | Slimani Walid and Colin Jacques?        | 17:55   |
+
 ## Sources
 
 - Main illustration by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)

@@ -1383,17 +1383,6 @@ docker build \
   my-custom-dockerfile
 ```
 
-> **Note**  
-> For people using an ARM computer (Apple Silicon), you might need to add the
-> `--platform=linux/amd64` parameter to the `build` command as well.
->
-> The File Browser package is only built for the `amd64` architecture at the
-> moment. You need to specify the `linux/amd64` platform to build the image for
-> the `amd64` architecture.
->
-> You can find more information about multi-architecture builds in the official
-> documentation: <https://docs.docker.com/build/building/multi-platform/>.
-
 The `--arg` option is used to override the value of a build argument. It is used
 to specify the name and the value of the build argument. The name and the value
 are separated by an equal sign (`=`).
@@ -1405,6 +1394,17 @@ You can check the latest version of File Browser in the Alpine Linux packages
 registry here: <https://pkgs.alpinelinux.org/packages?name=filebrowser> and use
 the `--build-arg` option to set the `FILEBROWSER_VERSION` build argument to
 build the image.
+
+> **Note**  
+> For people using an ARM computer (Apple Silicon), you might need to add the
+> `--platform=linux/amd64` parameter to the `build` command as well.
+>
+> The File Browser package is only built for the `amd64` architecture at the
+> moment. You need to specify the `linux/amd64` platform to build the image for
+> the `amd64` architecture.
+>
+> You can find more information about multi-architecture builds in the official
+> documentation: <https://docs.docker.com/build/building/multi-platform/>.
 
 Once the image is correctly built, start the container with the following
 command:
