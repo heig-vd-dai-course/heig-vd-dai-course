@@ -133,8 +133,8 @@ All typical questions are at the end of each chapter you studied.
 ### Practical part
 
 The evaluation will be done on the computer. You will be asked to create a
-repository from one of our templates on GitHub, clone the repository locally,
-implement a small program, push and share the results with us.
+simple program using vanilla Java (`java` and `javac`). You will then send us
+your code by email (old-school but it the easiest way).
 
 You can use all the tools you want: your own IDE, ChatGPT, Copilot, the official
 Java documentation, your old practical works, etc.
