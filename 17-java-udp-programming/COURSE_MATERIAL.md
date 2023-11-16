@@ -26,9 +26,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
+- [UDP](#udp)
 - [Difference between TCP and UDP](#difference-between-tcp-and-udp)
 - [UDP datagrams](#udp-datagrams)
 - [Reliability](#reliability)
+- [UDP in the Socket API](#udp-in-the-socket-api)
 - [Unicast, broadcast and multicast](#unicast-broadcast-and-multicast)
   - [Unicast](#unicast)
   - [Broadcast](#broadcast)
@@ -37,14 +39,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Fire-and-forget](#fire-and-forget)
   - [Request-response](#request-response)
 - [Service discovery protocols](#service-discovery-protocols)
-- [The Socket API (UDP version)](#the-socket-api-udp-version)
 - [Practical content](#practical-content)
-  - [Create an UDP client to find a server and send a file](#create-an-udp-client-to-find-a-server-and-send-a-file)
-  - [Create an UDP server](#create-an-udp-server)
-  - [Create a UDP server with Unicast](#create-a-udp-server-with-unicast)
-  - [Create a UDP server with Multicast](#create-a-udp-server-with-multicast)
-  - [Create a UDP server with Broadcast](#create-a-udp-server-with-broadcast)
-  - [Create a UDP server to discover other servers](#create-a-udp-server-to-discover-other-servers)
+  - [Run the emitters and receivers example](#run-the-emitters-and-receivers-example)
+  - [Dockerize the emitters and receivers example](#dockerize-the-emitters-and-receivers-example)
+  - [Isolate broadcast emitters and receivers to their own network](#isolate-broadcast-emitters-and-receivers-to-their-own-network)
+  - [Share your project](#share-your-project)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -52,36 +51,75 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
+- [Solution](#solution)
 - [Sources](#sources)
 
 ## Objectives
 
-## Difference between TCP and UDP
+You have seen and experimented with TCP in the previous chapter. You have seen
+that TCP is a connection-oriented protocol. It means that a connection must be
+established before sending data.
+
+In this chapter, you will see and experiment with UDP. UDP is a connectionless
+protocol. It means that a connection does not need to be established before
+sending data.
+
+UDP is mainly used when reliability is not required. It is used for streaming,
+gaming, etc.
+
+UDP is sensibly different from TCP and it is important to understand the
+differences between the two protocols.
+
+## UDP
 
 UDP is a transport layer protocol, like TCP. It is used to send data over the
-network. It is a connectionless protocol, which means that it does not require
-to establish a connection before sending data.
+network. However, there are numerous differences between TCP and UDP.
 
-UDP is a simple protocol. It does not provide any reliability mechanism. It does
-not guarantee that the data will be received by the receiver. It does not
-guarantee that the data will be received in the same order as it was sent.
+UDP is a connectionless protocol, which means that it does not require to
+establish a connection before sending data.
 
-A good analogy is to think of UDP as a postcard. You write a message on multiple
-postcards and send them to someone. You do not know if the postcards will be
-received nor in the same order as they were sent. You do not know if the
-postcard will be received at all.
+UDP does not provide any reliability mechanism. It does not guarantee that the
+data will be received by the receiver at all, nor that the data will be received
+in the same order as it was sent.
+
+A good analogy is to think of UDP as a the postal service with postcards. You
+write multiple postcards and send them to someone. You do not know if the
+postcards will be received nor if they arrive in the same order as they were
+sent. You do not know if the postcards will be received at all if the postal
+service loses them.
+
+Just as with postcards, UDP is used when reliability is not required.
+
+## Difference between TCP and UDP
+
+The following table summarizes the differences between TCP and UDP.
+
+| TCP                           | UDP                                        |
+| ----------------------------- | ------------------------------------------ |
+| Connection-oriented           | Connectionless                             |
+| Reliable                      | Unreliable                                 |
+| Stream protocol               | Datagram protocol                          |
+| Unicast                       | Unicast, broadcast and multicast           |
+| Request-response              | Fire-and-forget, request-response (manual) |
+| -                             | Service discovery protocols                |
+| Used for HTTP, FTP, SSH, etc. | Used for DNS, streaming, gaming, etc.      |
+
+## UDP datagrams
 
 Unlike TCP, UDP is not a stream protocol. It is a datagram protocol. It means
 that UDP sends data in discrete chunks called datagrams.
 
-## UDP datagrams
+Datagrams are like the postcards in the previous analogy. They are sent
+independently from each other. They are not related to each other. They contain
+a destination address, a payload and the sender address. If you need to, you can
+use the sender address to reply to the sender.
 
 UDP datagrams are composed of a header and a payload. The header contains
 information about the datagram, such as the source and destination port. The
 payload contains the data to send.
 
-The payload of a UDP datagram is limited to 65,507 bytes. It is because the
-payload length is encoded on 16 bits in the header.
+The size of the payload is limited to 65,507 bytes. It is because the payload
+length is encoded on 16 bits in the header.
 
 The payload of a UDP datagram can be a notification, a request, a query, a
 response, etc. It is up to the application to define the payload format.
@@ -96,6 +134,8 @@ As UDP does not provide any reliability mechanism, it is up to the application
 to implement it. For example, the application can implement a mechanism to
 acknowledge the reception of a datagram and retransmit it if it was not
 received.
+
+What is offered by TCP has to be implemented by the application with UDP.
 
 In certain cases, reliability is not required. Some applications are tolerant to
 data loss.
@@ -112,16 +152,75 @@ If too many datagrams are lost, the receiver will not be able to reassemble the
 payload and the stream will stop.
 
 As mentioned before, it is up to the application to implement a reliability
-mechanism if required (with a message ID and an acknowledgement for example).
+mechanism if required (with a message ID and an acknowledgement for example,
+just as TCP).
+
+We can illustrate this with the following example:
+
+You have developed a very simple application protocol where clients can send
+`INCREMENT` and `DECREMENT` commands to increment/decrement a counter on the
+server. The counter is shared between all clients.
+
+If the clients send 10 `INCREMENT` commands, the counter should be incremented
+by 10.
+
+In a perfect world, the server would receive 10 `INCREMENT` commands and the
+counter would be incremented by 10.
+
+However, we know one of the datagrams could be lost. If the server receives 9
+`INCREMENT` commands, the counter will be incremented by 9 instead of 10.
+
+Both parties (the client and the server) could implement a reliability mechanism
+to solve this issue.
+
+The server could implement a reliability mechanism to acknowledge the reception
+of a datagram. If a client does not receive an acknowledgement _within a
+specific period_, it should retransmit the datagram.
+
+However, even the acknowledgement could be lost. The client could retransmit the
+datagram multiple times and the server could receive it multiple times.
+
+The server could implement a mechanism to detect duplicate datagrams and ignore
+them. It could also implement a mechanism to detect out-of-order datagrams and
+reorder them.
 
 Handling reliability is quite challenging. In the context of this course,
 reliability is not required. We will focus on the UDP protocol itself and not on
-the reliability mechanism.
+the reliability mechanism(s).
+
+If you are interested, you can have a look at the
+[Automatic Repeat reQuest (ARQ)](https://en.wikipedia.org/wiki/Automatic_repeat_request)
+protocol. It is a mechanism used to detect and retransmit lost datagrams.
+
+## UDP in the Socket API
+
+As seen in the
+[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-tcp-programming)
+chapter, the Socket API is a Java API that allows you to create TCP/UDP clients
+and servers. It is described in the
+[`java.net` package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/package-summary.html)
+in the
+[`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
+
+In the UDP world, the `Socket` class is replaced by the `DatagramSocket` class.
+
+The `DatagramSocket` class is used to create UDP clients and servers. It is used
+to send and receive UDP datagrams.
+
+A datagram is created with the `DatagramPacket` class. It is used to create a
+datagram with a payload and a destination address.
+
+A multicast datagram is created with the `MulticastSocket` class. It is used to
+create a multicast datagram with a payload and a multicast address, allowing
+multiple hosts to receive the datagram.
+
+UDP can be used to create a client-server architecture. However, it is not
+required. It is possible to create a peer-to-peer architecture with UDP.
 
 ## Unicast, broadcast and multicast
 
 Unlike TCP, UDP supports three types of communication: unicast, broadcast and
-multicast.
+multicast (TCP only supports unicast).
 
 ### Unicast
 
@@ -131,6 +230,9 @@ just like TCP.
 
 Think of it as a private conversation between two people.
 
+To send a unicast datagram, the sender must know the IP address of the receiver.
+It is mostly the same as TCP, without all the features provided by TCP.
+
 ### Broadcast
 
 Broadcast is a one-to-all communication. It means that a datagram is sent from
@@ -138,12 +240,98 @@ one host to all hosts on the network.
 
 Think of it as a public announcement.
 
+To send a broadcast datagram, the sender must know the broadcast address. The
+broadcast address is a special address that represents all hosts on the network.
+
+The broadcast address is defined by the subnet mask. The subnet mask is a 32-bit
+number. It is represented as four numbers separated by a dot (e.g.
+`255.255.255.0`). Sometimes, the subnet mask is represented as a single number
+(e.g. `/24` for `255.255.255.0` as 24 bits are set to `1`).
+
+A good example is stated in the following table (source:
+<https://en.wikipedia.org/wiki/Broadcast_address>):
+
+| Network IP address breakdown for `172.16.0.0/12`                                                                                                                                                                                                                                | Binary form                             | Dot-decimal notation |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------- |
+| 1. Network IP Address                                                                                                                                                                                                                                                           | 10101100.0001**0000.00000000.00000000** | 172.16.0.0           |
+| 2. Subnet Mask, or just "Netmask" for short (The `/12` in the IP address in this case means only the left-most 12 bits are 1s, as shown here. This reserves the left 12 bits for the network address (prefix) and the right `32 - 12 = 20` bits for the host address (suffix).) | 11111111.1111**0000.00000000.00000000** | 255.240.0.0          |
+| 3. Bit Complement (Bitwise NOT) of the Subnet Mask                                                                                                                                                                                                                              | 00000000.0000**1111.11111111.11111111** | 0.15.255.255         |
+| 4. Broadcast address (Bitwise OR of 1. Network IP Address and 3. Bit Complement of the Subnet Mask. This makes the broadcast address the _largest possible IP address (and host address, since the host address portion is all 1s) for any given network address._)             | 10101100.0001**1111.11111111.11111111** | 172.31.255.255       |
+
+If you want to send a broadcast to all devices on all network subnets, you can
+use the `255.255.255.255` broadcast address.
+
+You must be aware that there can be restrictions on the use of broadcast. For
+example, broadcast is limited to the local network but can be blocked by a
+firewall and/or a router.
+
 ### Multicast
 
 Multicast is a one-to-many communication. It means that a datagram is sent from
 one host to multiple hosts.
 
 Think of it as a group conversation.
+
+To send a multicast datagram, the sender uses a multicast address. The multicast
+address is a special address that represents a group of hosts on the network.
+Think of it as a radio channel or a Discord channel: everyone on the channel
+will receive the messages sent in a given channel.
+
+Multicast addresses are specific IP addresses in the range from `224.0.0.0` to
+`239.255.255.255` for IPv4 and `f00::/8` for IPv6.
+
+Just as for ports, some multicast addresses are reserved for specific purposes.
+A complete list is available on the
+[IANA website](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml)
+and further described in the
+[RFC 5771](https://datatracker.ietf.org/doc/html/rfc5771).
+
+TODO
+
+As a quick reference, here are some of the most common multicast addresses that
+you can use in your applications. This list was built from the IANA website
+using the _Unassigned_ ranges.
+
+Address ranges non-routable (to be used on a local network)
+([reference](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-1)):
+
+- `224.0.0.3`
+- `224.0.0.26`
+- `224.0.0.69` to `224.0.0.100`
+- `224.0.0.122` to `224.0.0.149`
+- `224.0.0.255`
+
+Address ranges routable (to be used on the Internet)
+([reference 1](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-2),
+[reference 2](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-3),
+[reference 3](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-6),
+[reference 4](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-11)):
+
+- `224.0.1.38`
+- `224.0.1.124`
+- `224.0.1.191` to `224.0.1.255`
+- `224.0.2.0`
+- `224.0.2.20` to `224.0.2.63`
+- `224.0.6.145` to `224.0.6.150`
+- `224.0.6.152` to `224.0.6.191`
+- `224.0.12.136` to `224.0.12.255`
+- `224.0.17.128` to `224.0.17.255`
+- `224.0.20.208` to `224.0.20.255`
+- `224.0.21.128` to `224.0.21.255`
+- `224.0.23.182` to `224.0.23.191`
+- `224.0.246.0` to `224.0.249.255`
+- `224.3.0.64` to `224.3.255.255`
+- `224.4.40.0` to `224.4.47.255`
+- `224.4.64.0` to `224.4.255.255`
+- `233.252.19.0` to `233.255.255.255` (the biggest range - recommended for your
+  applications)
+
+You must be aware that there can be restrictions on the use of multicast. For
+example, even when using routable multicast ranges, the generated traffic can be
+restricted by a firewall and/or a router, inside or outside your network,
+meaning that the datagrams might not be received by the hosts. If you want to
+ensure that your datagrams are received, you must use a tunnel such as a virtual
+private network (VPN) to bypass these restrictions.
 
 ## Messaging patterns
 
@@ -167,20 +355,29 @@ The request-response (sometimes called request-reply) pattern is a two-way
 communication. It means that a datagram is sent from one host to another host
 and a response is expected.
 
-The request-response pattern is used when the sender needs to know if the
+When a creating a datagram, it is possible to specify a port. While not
+mandatory, this port can be used by the receiver to know whom to reply to.
+
+If no port is specified, the operating system will simply assign a random port
+for the out going datagram.
+
+The receiver of the datagram can then extract the sender's IP address and port
+and use them to reply to the sender using unicast.
+
+The request-response pattern can be used when the sender needs to know if the
 datagram was received or not.
 
 Both sides of the communication can send a request and receive a response.
 
 ## Service discovery protocols
 
-With unicast, the sender must know who the receiver is. It means that the sender
-must know the IP address of the receiver.
+With unicast, the sender must know who the receiver is; the sender must know the
+IP address of the receiver.
 
 With broadcast and multicast, the sender does not need to know who the receivers
-are. It means that the sender does not need to know the IP address of the
-receivers. The sender knows that nodes nearby (or those who expressed interest
-in the broadcast) will receive the datagram.
+are; the sender does not need to know the IP address of the receivers. The
+sender knows that nodes nearby (or those who expressed interest in the
+broadcast) will receive the datagram.
 
 Using this property, it is possible to create service discovery protocols.
 
@@ -192,86 +389,362 @@ There are two types of service discovery protocols: passive and active.
 Passive service discovery protocols are based on broadcast or multicast. They
 are used to announce the presence of a service on the network.
 
-Active service discovery protocols are based on unicast. They are used to query
-the network to find a service.
+Active service discovery protocols are also based on broadcast or multicast but
+then switch to unicast. They are used to query the network to find a service.
 
-There are many service discovery protocol mechanisms. The most common are the
+There are many service discovery protocol patterns. The most common are the
 following:
 
-- Advertisement: a service (called a service provider) announces its presence on
-  the network. The service provider sends a broadcast or multicast datagram to
-  announce its presence. The datagram contains information about the service
-  (name, IP address, port, etc.). The datagram is sent periodically to announce
-  that the service is still available.
+- Advertisement - a passive discovery protocol pattern: a service (called a
+  service provider) announces its presence on the network. The service provider
+  sends a broadcast or multicast datagram to announce its presence. The datagram
+  contains information about the service (name, IP address, port, etc.). The
+  datagram is sent periodically to announce that the service is still available.
 
   The clients (called service consumers) listen to the broadcast or multicast
   datagrams to discover the services on the network.
 
   TODO: Add schema
 
-- Query: a client (called a service consumer) queries the network to find a
-  service. The client sends a unicast datagram on the network to request
-  information about a service.
+- Query - an active discovery protocol pattern: a client (called a service
+  consumer) queries the network to find a service. The client sends a unicast
+  datagram on the network to request information about a service.
 
   If a service that provides the requested service (called a service provider)
   is available, it replies with a unicast datagram containing the requested
-  information to connect to the service.
+  information to connect to the service, just as seen with the request-response
+  messaging pattern.
 
   TODO: Add schema
 
-## The Socket API (UDP version)
-
-As seen in the
-[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-tcp-programming)
-chapter, the Socket API is a Java API that allows you to create TCP/UDP clients
-and servers. It is described in the
-[`java.net` package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/package-summary.html)
-in the
-[`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
-
-In the UDP world, the `Socket` class is replaced by the `DatagramSocket` class.
-
-The `DatagramSocket` class is used to create UDP clients and servers. It is used
-to send and receive UDP datagrams.
-
-A datagram is created with the `DatagramPacket` class. It is used to create a
-datagram with a payload and a destination address.
-
-A multicast datagram is created with the `MulticastSocket` class. It is used to
-create a multicast datagram with a payload and a multicast address, allowing
-multiple hosts to receive the datagram.
-
 ## Practical content
 
-### Create an UDP client to find a server and send a file
+### Run the emitters and receivers example
 
-### Create an UDP server
+In this section, you will start an example of emitters and receivers that use
+UDP to communicate.
 
-### Create a UDP server with Unicast
+#### Create and clone the repository
 
-### Create a UDP server with Multicast
+You can create a new GitHub project using the template we have prepared for you.
+When you create a new repository, you can choose to use a template. Select the
+`heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content`
+template as shown in the following screenshot:
 
-### Create a UDP server with Broadcast
+> **Warning**  
+> Please make sure that the repository owner is your personal GitHub account and
+> not the `heig-vd-dai-course` organization.
 
-### Create a UDP server to discover other servers
+![Create the new repository from the template](./images/practical-content-create-and-clone-the-repository.png)
+
+Clone the repository locally.
+
+#### Check the application's help message
+
+Take some time to explore the codebase from the template we have prepared for
+you.
+
+Using Maven, build the application as seen in previous chapters, using the
+provided Maven wrapper.
+
+Run the Java application with the following command:
+
+```sh
+# Run the application
+java -jar java-udp-programming-1.0-SNAPSHOT.jar --help
+```
+
+Take some time to read and understand the help message.
+
+#### Run the emitters
+
+Using the help message, start the following emitters in different terminals:
+
+- A broadcast emitter with the following configuration:
+  - Delay of 5 seconds
+  - Frequency of 30 seconds
+  - Host: TODO
+  - Port: TODO
+- A multicast emitter with the following configuration:
+  - Delay of 10 seconds
+  - Frequency of 15 seconds
+  - Host: TODO
+  - Port: TODO
+- A unicast emitter with the following configuration:
+  - Delay of 0 seconds
+  - Frequency of 5 seconds
+  - Host: TODO
+  - Port: TODO
+
+> **Note**  
+> For the multicast emitter, you must specify a network interface to listen to
+> multicast datagrams. Check the help message to know how to do it.
+
+Once all the emitters are started, you should see that messages are emitted at
+the specified frequency in the terminal.
+
+#### Run the receivers
+
+Using the help message, start the following receivers in different terminals:
+
+- Two broadcast receivers with the following configuration:
+  - Broadcast receiver 1:
+    - Host: TODO
+    - Port: TODO
+  - Broadcast receiver 2:
+    - Host: TODO
+    - Port: TODO
+- Three multicast receivers with the following configuration:
+  - Multicast receiver 1:
+    - Host: TODO
+    - Port: TODO
+  - Multicast receiver 2:
+    - Host: TODO
+    - Port: TODO
+  - Multicast receiver 3:
+    - Host: TODO
+    - Port: TODO
+- Two unicast receivers with the following configuration:
+  - Unicast receiver 1:
+    - Host: TODO
+    - Port: TODO
+  - Unicast receiver 2:
+    - Host: TODO
+    - Port: TODO
+
+> **Note**  
+> For the multicast receivers, you must also specify a network interface to
+> listen to multicast datagrams. Check the help message to know how to do it.
+
+Once all the receivers are started, you should see that messages are received in
+the terminal from the emitter(s).
+
+#### Check the logs of the emitters and receivers
+
+Take some time to read and understand the logs.
+
+What are your conclusions to the following questions?
+
+- What messages do the broadcast receivers receive? Why?
+- What messages do the multicast receivers receive? Why?
+- What messages do the unicast receivers receive? Why?
+
+#### Stop the emitters and receivers
+
+Stop all the emitters and receivers.
+
+### Dockerize the emitters and receivers example
+
+In this section, you will dockerize the emitters and receivers example to run
+them in containers using Docker and Docker Compose.
+
+#### Create the Dockerfile
+
+At the root level of your project, create a `Dockerfile` with the following
+content:
+
+```dockerfile
+TODO
+```
+
+#### Build and run the Docker image
+
+Just as seen in the
+[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10-docker-and-docker-compose)
+chapter, build the image accordingly with the tag `java-udp-programming` and run
+the container with the name `java-udp-programming`.
+
+#### Publish the Docker image
+
+Just as seen in the
+[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10-docker-and-docker-compose)
+chapter, publish your Docker image to the GitHub Container Registry.
+
+#### Create the Docker Compose file
+
+At the root level of your project, create a `docker-compose.yml` file.
+
+Using the examples from the
+[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10-docker-and-docker-compose)
+chapter, add the same containers as mentioned before as services to your Docker
+Compose file:
+
+- A broadcast emitter
+- A multicast emitter
+- A unicast emitter
+- Two broadcast receivers
+- Three multicast receivers
+- Two unicast receivers
+
+Here is a template that can help you:
+
+```yaml
+<name of the service>:
+  image: <name/link of the docker image>
+  command:
+    - <pass command arguments to the entrypoint>
+```
+
+You should know that Docker Compose creates a DNS hostname for each service it
+starts. This means you can access another service using its name.
+
+Example:
+
+```yaml
+unicast-emitter:
+  image: java-udp-programming
+  command:
+    - unicast
+    - --host=unicast-receiver-1
+    - --port=4040
+    - --delay=1000
+    - --frequency=10000
+```
+
+For receivers, you can even add the following line to your service to
+start/depend on another service before it starts:
+
+```yaml
+depends_on:
+  - <name of the service to wait on>
+```
+
+#### Run the Docker Compose file
+
+Just as seen in the Docker and Docker Compose chapter, run the Docker Compose
+file.
+
+When running your Docker Compose, you should be able to see the outputs of the
+emitters and receivers.
+
+To help you filter outputs, you can start only a subset of the services
+specified in your Docker Compose file.
+
+For example, to start only the unicast emitter and receivers, you can use the
+following command:
+
+```sh
+# Start only the unicast emitter and receivers
+docker compose up unicast-emitter unicast-receiver-1 unicast-receiver-2
+```
+
+### Isolate broadcast emitters and receivers to their own network
+
+As you might have noticed, broadcasting will notify all receivers on the
+network.
+
+To isolate the broadcast emitters in their own network, Docker and Docker
+Compose can make usage of networks.
+
+Docker networks can isolate a number of containers to a specific network. A
+network can link multiple containers and containers can be linked to multiple
+networks.
+
+In this section, you will add networks to your Docker Compose file to isolate
+some containers.
+
+#### Define the network
+
+A the root level of the Docker Compose file, define a Docker network with the
+following content:
+
+```yaml
+networks:
+  my-isolated-network:
+    name: my-isolated-network-name
+```
+
+This will create a Docker network. You can check the list of Docker networks
+with the following command:
+
+```sh
+# List Docker networks
+docker network list
+```
+
+You can find the network you just created with the name
+`my-isolated-network-name`.
+
+You should also notice that Docker Compose has created a default network for all
+other containers. This network is named with the name of the current directory
+in which you ran the Docker Compose commands and add `_default` to the current
+directory name.
+
+Docker networks is a topic on its own. We will not go further than this in the
+context of this course. We just want to be able to link/isolate containers
+together so they can communicate between them.
+
+#### Isolate the broadcast emitters and receivers
+
+To isolate the broadcast emitters and receivers, add the following key to the
+`broadcast-emitter`, `broadcast-receiver-1`, `broadcast-receiver-2` containers:
+
+```yaml
+networks:
+  - my-isolated-network
+```
+
+#### Run the network again with the isolated networks
+
+Start all containers again. You should notice that the broadcast emitters do not
+interfere with the other containers, thanks to the isolated network!
+
+### Share your project
+
+Share your project in the GitHub Discussions of this organization:
+<https://github.com/orgs/heig-vd-dai-course/discussions>.
+
+Create a new discussion with the following information:
+
+- **Title**: DAI 2023-2024 - UDP emitters and receivers with Docker Compose -
+  First name Last Name
+- **Category**: Show and tell
+- **Description**: The link to your GitHub repository, answers to all questions
+  asked in this practical content and the following ones:
+  - Which command(s) did you use to build the Docker image?
+  - Which command(s) did you use to run the Docker image?
+  - Which command(s) did you use to publish the Docker image?
+  - Which command(s) did you use to run the Docker Compose file?
+  - Why and how did the network helped for broadcast emitters and receivers?
+
+This will notify us that you have completed the exercise and we can check your
+work.
+
+You can compare your solution with the official one stated in the
+[Solution](#solution) section, however, **we highly recommend you to try to
+complete the practical content by yourself first to learn the most**.
 
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- TODO
+- Are you able to double the number of receivers and emitters but keeping them
+  isolated in their own network?
 
 ## Conclusion
 
 ### What did you do and learn?
 
-TODO
+In this chapter, you have learned how to use the UPD protocol to build different
+kind of network applications and the differences between TCP and UDP.
+
+Using Java and Docker and Docker Compose, you were able to containerize your
+network application to use it anywhere.
+
+Just as with TCP, you have now all the knowledge to build bigger and better
+network applications. We continue our journey toward network application
+programming, understanding and shipment.
 
 ### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
-- TODO
+- What are the differences between UDP and TCP?
+- Why is UDP unreliable? How to mitigate this?
+- What is a datagram? How can a datagram be sent without a server listening?
+- What are the differences between unicast, broadcast and multicast?
+- What are the messaging protocols and their differences?
+- What are the service discovery protocols? How do they compare to each other?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -296,6 +769,15 @@ _Resources are here to help you. They are not mandatory to read._
 - _None yet_
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+## Solution
+
+You can find the solution to the practical content in the
+[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
+repository.
+
+If you have any questions about the solution, feel free to open an issue to
+discuss it!
 
 ## Sources
 
