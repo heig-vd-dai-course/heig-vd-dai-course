@@ -1,0 +1,40 @@
+@startuml advertisement
+skinparam noteTextAlignment center
+
+participant "Server" as server
+participant "Service provider" as provider
+participant "Service consumers" as consumers
+participant "Client 1" as client1
+participant "Client 2" as client2
+
+note over server, provider
+A server (called a service
+provider) announces its
+presence on the network.
+end note
+
+/ note over consumers, client2
+The clients (called service
+consumers) listen the network
+to discover available services
+end note
+
+note over provider
+A service provider
+announces its
+presence
+periodically.
+end note
+
+provider --> provider: <&clock> ... <&clock> ... <&clock> ...
+provider -> consumers : <i>Hello strangers,</i>\n<i>I provide this</i>\n<i>service if interested.</i>
+
+note over client1
+A service consumer
+could manifest its
+interest for a given
+service
+end note
+
+client1 -> provider: <i>Hello.</i>\n<i>I request the use</i>\n<i>of your service.</i>
+@enduml

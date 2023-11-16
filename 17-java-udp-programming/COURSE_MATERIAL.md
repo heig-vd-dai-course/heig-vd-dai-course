@@ -395,7 +395,7 @@ then switch to unicast. They are used to query the network to find a service.
 There are many service discovery protocol patterns. The most common are the
 following:
 
-- Advertisement - a passive discovery protocol pattern: a service (called a
+- Advertisement - a passive discovery protocol pattern: a server (called a
   service provider) announces its presence on the network. The service provider
   sends a broadcast or multicast datagram to announce its presence. The datagram
   contains information about the service (name, IP address, port, etc.). The
@@ -404,7 +404,10 @@ following:
   The clients (called service consumers) listen to the broadcast or multicast
   datagrams to discover the services on the network.
 
-  TODO: Add schema
+  If a service consumer is interested by the service provider announcement, it
+  can manifest its interest.
+
+  ![Service discovery protocols - Advertisement pattern](images/service-discovery-protocols-advertisement.png)
 
 - Query - an active discovery protocol pattern: a client (called a service
   consumer) queries the network to find a service. The client sends a unicast
@@ -415,7 +418,7 @@ following:
   information to connect to the service, just as seen with the request-response
   messaging pattern.
 
-  TODO: Add schema
+  ![Service discovery protocols - Query pattern](images/service-discovery-protocols-query.png)
 
 ## Practical content
 
@@ -470,6 +473,7 @@ Using the help message, start the following emitters in different terminals:
   - Frequency of 15 seconds
   - Host: TODO
   - Port: TODO
+  - Network interface: check the note below
 - A unicast emitter with the following configuration:
   - Delay of 0 seconds
   - Frequency of 5 seconds
@@ -498,12 +502,15 @@ Using the help message, start the following receivers in different terminals:
   - Multicast receiver 1:
     - Host: TODO
     - Port: TODO
+    - Network interface: check the note below
   - Multicast receiver 2:
     - Host: TODO
     - Port: TODO
+    - Network interface: check the note below
   - Multicast receiver 3:
     - Host: TODO
     - Port: TODO
+    - Network interface: check the note below
 - Two unicast receivers with the following configuration:
   - Unicast receiver 1:
     - Host: TODO
@@ -531,7 +538,7 @@ What are your conclusions to the following questions?
 
 #### Stop the emitters and receivers
 
-Stop all the emitters and receivers.
+Stop all the emitters and receivers with `Ctrl` + `C`.
 
 ### Dockerize the emitters and receivers example
 
@@ -544,8 +551,24 @@ At the root level of your project, create a `Dockerfile` with the following
 content:
 
 ```dockerfile
-TODO
+# Start from the Java 17 Temurin image
+FROM eclipse-temurin:17
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the jar file
+COPY target/java-udp-programming-1.0-SNAPSHOT.jar /app/java-udp-programming-1.0-SNAPSHOT.jar
+
+# Set the entrypoint
+ENTRYPOINT ["java", "-jar", "java-udp-programming-1.0-SNAPSHOT.jar"]
+
+# Set the default command
+CMD ["--help"]
 ```
+
+Take some time to understand this Dockerfile. Can you explain each line with
+your own words?
 
 #### Build and run the Docker image
 

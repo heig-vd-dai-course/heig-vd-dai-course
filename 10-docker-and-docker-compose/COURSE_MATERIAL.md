@@ -1441,7 +1441,7 @@ directory as it is mounted on the `$(pwd)/my-data` directory on the host. If you
 try to create a new file, it should appear in the `$(pwd)/my-data` directory on
 the host.
 
-You can now stop the container with `CTRL+C`.
+You can now stop the container with `Ctrl` + `C`.
 
 Start the container again with the following command:
 

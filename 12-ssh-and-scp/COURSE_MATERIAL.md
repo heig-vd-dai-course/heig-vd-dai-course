@@ -26,7 +26,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [A quick reminder about security](#a-quick-reminder-about-security)
 - [SSH](#ssh)
-  - [SSH key length](#ssh-key-length)
   - [SSH key algorithms](#ssh-key-algorithms)
   - [SSH key fingerprint](#ssh-key-fingerprint)
   - [SSH key generation](#ssh-key-generation)
@@ -533,7 +532,7 @@ to stop the SSH server and edit the `openssh-server.env` file.
 This will automatically edit the `./config/ssh_host_keys/sshd_config`
 configuration file.
 
-Stop the SSH server with `Ctrl+C` and edit the `openssh-server.env` file.
+Stop the SSH server with `Ctrl` + `C` and edit the `openssh-server.env` file.
 
 In the `openssh-server.env` file, change the `PASSWORD_ACCESS` variable value
 from `true` to `false`.

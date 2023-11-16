@@ -1,0 +1,28 @@
+@startuml query
+skinparam noteTextAlignment center
+
+participant "Server 2" as server2
+participant "Server 1" as server1
+participant "Service providers" as providers
+participant "Service consumer" as consumer
+participant "Client" as client
+
+note over server2, providers
+Some servers (called service
+providers) listen the network
+to reply to service consumers
+requests/queries.
+end note
+
+/ note over consumer, client
+The client (called service
+consumer) query the network
+for a given service.
+end note
+
+client -> providers: <i>Hello strangers,</i>\n<i>I am looking for</i>\n<i>someone who</i>\n<i>could provide</i>\n<i><b>this</b> service.</i>
+
+server1 -> client: <i>I offer the</i>\n<i>service you</i>\n<i>are looking</i>\n<i>for. You can</i>\n<i>reach me at</i>\n<i>this address.</i>
+
+client -> server1: <i>Hello.</i>\n<i>I request the use</i>\n<i>of your service.</i>
+@enduml
