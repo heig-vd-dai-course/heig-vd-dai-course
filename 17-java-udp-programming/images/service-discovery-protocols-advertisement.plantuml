@@ -1,6 +1,8 @@
 @startuml advertisement
 skinparam noteTextAlignment center
 
+title "Advertisement - A passive discovery protocol pattern"
+
 participant "Server" as server
 participant "Service provider" as provider
 participant "Service consumers" as consumers

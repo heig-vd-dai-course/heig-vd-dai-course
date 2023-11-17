@@ -69,15 +69,56 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
+## _Do you know how does a web server work?_
+
+<!-- _class: lead -->
+
+Do you remember this question from part 2?
+
+## What happens when you browse the Web?
+
+The answer was:
+
+> 1. A process is started on the server
+> 2. This process opens a socket on a specific port
+> 3. The process waits for a connection
+> 4. A client (another process) connects to the server
+> 5. The server and the client exchange data
+> 6. The client or server closes the connection
+
+## Do you know how does streaming work?
+
+<!-- _class: lead -->
+
+## How does streaming work (simplified)
+
+1. A web browser connects to a service (YouTube, Twitch, etc.)
+2. The service (a server) sends data to the client continuously
+3. The client displays the data as it comes
+4. If the bandwidth is bad, the client adapts the quality of the stream
+
+To optimize the bandwidth, the server certainly uses UDP instead of TCP as it is
+more efficient.
+
+UDP is a protocol used in streaming, gaming, VoIP, etc. It is more efficient
+than TCP but less reliable as you will see in this part.
+
 ## What will you learn?
 
-- TODO
+- Learn how to use of the **UDP protocol** to:
+  - **Send** and **receive** data
+  - **Broadcast** messages to **multiple clients**
+  - Find services on the network with **service discovery patterns**
+- How to **Dockerize** a Java application
 
 ![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
 ## What will you accomplish?
 
-- TODO
+- Create a network application using the **UDP** protocol (with its own
+  **application protocol**)
+- **Build** and **share** your application **with Docker and Docker Compose**
+- Again, sharing your work on GitHub (it's becoming a habit!)
 
 ![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 

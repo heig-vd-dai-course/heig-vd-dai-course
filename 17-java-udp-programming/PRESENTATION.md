@@ -26,7 +26,7 @@ style: |
         width: 100%;
     }
     th:first-child {
-        width: 15%;
+        width: 50%;
     }
     h1, h2, h3, h4, h5, h6 {
         color: var(--color-headings);
@@ -78,9 +78,10 @@ _paginate: false
 
 ## Objectives
 
-- Learn the differences between TCP and UDP
+- Learn the differences between TCP and UDP and reliability
 - Learn what an UDP datagram is
 - Learn the different ways to send a UDP datagram to one or multiple clients
+- Learn UDP in the Socket API
 - How UDP can be used for service discovery
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
@@ -107,7 +108,24 @@ You can find other resources and alternatives as well.
 
 ### Differences between TCP and UDP
 
-TODO
+- TCP
+  - Connection-oriented
+  - Reliable
+  - Stream protocol
+  - Unicast
+  - Request-response
+  - Used for FTP, HTTP, SMTP, SSH, etc.
+
+---
+
+- UDP
+  - Connectionless
+  - Unreliable
+  - Datagram protocol
+  - Unicast, broadcast and multicast
+  - Fire-and-forget, request-response (manual)
+  - Service discovery protocols
+  - Used for DNS, streaming, gaming, etc.
 
 ## UDP datagrams
 
@@ -118,6 +136,8 @@ More details for this section in the
 You can find other resources and alternatives as well.
 
 ### UDP datagrams
+
+TODO
 
 ## Reliability
 
@@ -141,9 +161,13 @@ You can find other resources and alternatives as well.
 
 ### UDP in the Socket API
 
-TODO
+- `DatagramSocket` is used to send and receive datagrams
+- A datagram is created with the `DatagramPacket` class
+- A multicast socket is created with the `MulticastSocket` class.
 
-## Unicast, multicast and broadcast
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+## Unicast, broadcast and multicast
 
 <!-- _class: lead -->
 
@@ -151,21 +175,57 @@ More details for this section in the
 [course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#unicast-multicast-and-broadcast).
 You can find other resources and alternatives as well.
 
-### Unicast, multicast and broadcast
+### Unicast, broadcast and multicast
 
 TODO
 
 ### Unicast
 
-TODO
+- One-to-one communication
+- One sender and one receiver
+- To send a datagram, the sender must know:
+  - The IP address of the receiver
+  - The port of the receiver
 
-### Multicast
+Think of it as a private conversation between two people
 
-TODO
+![bg right:40% contain](https://upload.wikimedia.org/wikipedia/commons/7/75/Unicast.svg)
 
 ### Broadcast
 
-TODO
+- One-to-all communication
+- One sender and multiple receivers
+- To send a datagram, the sender must know:
+  - The subnet
+  - The port
+- `255.255.255.255` for all hosts
+
+Think of it as a public announcement.
+
+![bg right:40% contain](https://upload.wikimedia.org/wikipedia/commons/d/dc/Broadcast.svg)
+
+### Multicast
+
+- One-to-many communication
+- One sender and some receivers
+- To send a datagram, the sender must know:
+  - The multicast address (between `239.0.0.0` and `239.255.255.255`)
+  - The port
+
+Think of it as a group conversation.
+
+![bg right:40% contain](https://upload.wikimedia.org/wikipedia/commons/3/30/Multicast.svg)
+
+---
+
+- Just as with broadcast, it can be blocked by routers
+- Multicast is quite guaranteed **not** to work on the public Internet
+- Made for the local network
+- Multicast is a complex topic
+- Not covered in depth in this course
+- The course material contains some resources
+
+![bg right w:90%](./images/multicast-meme.jpg)
 
 ## Messaging patterns
 
@@ -177,15 +237,16 @@ You can find other resources and alternatives as well.
 
 ### Messaging patterns
 
-TODO
+- Fire-and-forget
+  - One-way communication
+  - No response
+  - No guarantee of delivery
+- Request-response
+  - Two-way communication
+  - Response
+  - Guarantee of delivery (manual)
 
-### Fire-and-forget
-
-TODO
-
-### Request-response
-
-TODO
+![bg right:40%](https://images.unsplash.com/photo-1533219057257-4bb9ed5d2cc6?fit=crop&h=720)
 
 ## Service discovery protocols
 
@@ -197,7 +258,21 @@ You can find other resources and alternatives as well.
 
 ### Service discovery protocols
 
-TODO
+- Discover services on the network
+- Two types of protocols
+- Service discovery protocol patterns:
+  - Advertisement (passive)
+  - Query (active)
+
+![bg right:40%](https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?fit=crop&h=720)
+
+---
+
+![bg h:80%](./images/service-discovery-protocols-advertisement.png)
+
+---
+
+![bg h:80%](./images/service-discovery-protocols-query.png)
 
 ## Practical content
 
@@ -209,7 +284,7 @@ TODO
 - Dockerize the emitter/receiver UDP example
 - Isolate some containers in a dedicated Docker network
 
-![bg right contain](./images/what-will-you-do-server.png)
+![bg right contain](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -245,3 +320,7 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/tiNCpHudGrw)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Zuza Gałczyńska](https://unsplash.com/@zgalczynska) on
+  [Unsplash](https://unsplash.com/photos/group-of-people-watching-fireworks-display-c5_eQi4rrjA)
+- Illustration by [Andy Holmes](https://unsplash.com/@andyjh07) on
+  [Unsplash](https://unsplash.com/photos/milky-way-during-night-time-LUpDjlJv4_c)

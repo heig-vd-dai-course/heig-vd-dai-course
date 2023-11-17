@@ -1,6 +1,8 @@
 @startuml query
 skinparam noteTextAlignment center
 
+title "Query - An active discovery protocol pattern"
+
 participant "Server 2" as server2
 participant "Server 1" as server1
 participant "Service providers" as providers

@@ -94,15 +94,15 @@ Just as with postcards, UDP is used when reliability is not required.
 
 The following table summarizes the differences between TCP and UDP.
 
-| TCP                           | UDP                                        |
-| ----------------------------- | ------------------------------------------ |
-| Connection-oriented           | Connectionless                             |
-| Reliable                      | Unreliable                                 |
-| Stream protocol               | Datagram protocol                          |
-| Unicast                       | Unicast, broadcast and multicast           |
-| Request-response              | Fire-and-forget, request-response (manual) |
-| -                             | Service discovery protocols                |
-| Used for HTTP, FTP, SSH, etc. | Used for DNS, streaming, gaming, etc.      |
+| TCP                                 | UDP                                        |
+| ----------------------------------- | ------------------------------------------ |
+| Connection-oriented                 | Connectionless                             |
+| Reliable                            | Unreliable                                 |
+| Stream protocol                     | Datagram protocol                          |
+| Unicast                             | Unicast, broadcast and multicast           |
+| Request-response                    | Fire-and-forget, request-response (manual) |
+| -                                   | Service discovery protocols                |
+| Used for FTP, HTTP, SMTP, SSH, etc. | Used for DNS, streaming, gaming, etc.      |
 
 ## UDP datagrams
 
@@ -210,7 +210,7 @@ to send and receive UDP datagrams.
 A datagram is created with the `DatagramPacket` class. It is used to create a
 datagram with a payload and a destination address.
 
-A multicast datagram is created with the `MulticastSocket` class. It is used to
+A multicast socket is created with the `MulticastSocket` class. It is used to
 create a multicast datagram with a payload and a multicast address, allowing
 multiple hosts to receive the datagram.
 
@@ -224,21 +224,17 @@ multicast (TCP only supports unicast).
 
 ### Unicast
 
-![Unicast communication](https://upload.wikimedia.org/wikipedia/commons/7/75/Unicast.svg)
-
 Unicast is the most common type of communication. It is a one-to-one
 communication. It means that a datagram is sent from one host to another host,
 just like TCP.
 
 Think of it as a private conversation between two people.
 
-To send a unicast datagram, the sender must know the IP address of the receiver.
-It is mostly the same as TCP, without all the features provided by TCP but all
-the performance of UDP.
+To send a unicast datagram, the sender must know the IP address and port of the
+receiver. It is mostly the same as TCP, without all the features provided by TCP
+but all the performance of UDP.
 
 ### Broadcast
-
-![Broadcast communication](https://upload.wikimedia.org/wikipedia/commons/d/dc/Broadcast.svg)
 
 Broadcast is a one-to-all communication. It means that a datagram is sent from
 one host to all hosts on the network.
@@ -273,8 +269,6 @@ use the `255.255.255.255` broadcast address.
 > a firewall and/or a router.
 
 ### Multicast
-
-![Multicast communication](https://upload.wikimedia.org/wikipedia/commons/3/30/Multicast.svg)
 
 Multicast is a one-to-many communication. It means that a datagram is sent from
 one host to multiple hosts.
@@ -324,10 +318,6 @@ can read the following resources:
 - [Internet Group Management Protocol](https://en.wikipedia.org/wiki/Internet_Group_Management_Protocol)
 - [Internet Protocol television](https://en.wikipedia.org/wiki/Internet_Protocol_television)
 
-On a funny note, this is how our journey to better understand multicast went:
-
-![Multicast meme](./images/multicast-meme.jpg)
-
 ## Messaging patterns
 
 As UDP does not provide a connection mechanism, it is up to the application to
@@ -335,16 +325,12 @@ define the messaging pattern (how to send and receive data).
 
 There are two common messaging patterns: fire-and-forget and request-response.
 
-### Fire-and-forget
-
 The fire-and-forget pattern is the simplest messaging pattern. It is a one-way
 communication. It means that a datagram is sent from one host to another host
 without expecting a response.
 
 The fire-and-forget pattern is used when the sender does not need to know if the
 datagram was received or not.
-
-### Request-response
 
 The request-response (sometimes called request-reply) pattern is a two-way
 communication. It means that a datagram is sent from one host to another host
@@ -390,7 +376,7 @@ then switch to unicast. They are used to query the network to find a service.
 There are many service discovery protocol patterns. The most common are the
 following:
 
-- Advertisement - a passive discovery protocol pattern: a server (called a
+- Advertisement - A passive discovery protocol pattern: a server (called a
   service provider) announces its presence on the network. The service provider
   sends a broadcast or multicast datagram to announce its presence. The datagram
   contains information about the service (name, IP address, port, etc.). The
@@ -404,7 +390,7 @@ following:
 
   ![Service discovery protocols - Advertisement pattern](images/service-discovery-protocols-advertisement.png)
 
-- Query - an active discovery protocol pattern: a client (called a service
+- Query - An active discovery protocol pattern: a client (called a service
   consumer) queries the network to find a service. The client sends a unicast
   datagram on the network to request information about a service.
 
