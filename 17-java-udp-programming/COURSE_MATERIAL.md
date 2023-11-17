@@ -27,7 +27,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [UDP](#udp)
-- [Difference between TCP and UDP](#difference-between-tcp-and-udp)
+- [Differences between TCP and UDP](#differences-between-tcp-and-udp)
 - [UDP datagrams](#udp-datagrams)
 - [Reliability](#reliability)
 - [UDP in the Socket API](#udp-in-the-socket-api)
@@ -90,7 +90,7 @@ service loses them.
 
 Just as with postcards, UDP is used when reliability is not required.
 
-## Difference between TCP and UDP
+## Differences between TCP and UDP
 
 The following table summarizes the differences between TCP and UDP.
 
@@ -224,6 +224,8 @@ multicast (TCP only supports unicast).
 
 ### Unicast
 
+![Unicast communication](https://upload.wikimedia.org/wikipedia/commons/7/75/Unicast.svg)
+
 Unicast is the most common type of communication. It is a one-to-one
 communication. It means that a datagram is sent from one host to another host,
 just like TCP.
@@ -231,9 +233,12 @@ just like TCP.
 Think of it as a private conversation between two people.
 
 To send a unicast datagram, the sender must know the IP address of the receiver.
-It is mostly the same as TCP, without all the features provided by TCP.
+It is mostly the same as TCP, without all the features provided by TCP but all
+the performance of UDP.
 
 ### Broadcast
+
+![Broadcast communication](https://upload.wikimedia.org/wikipedia/commons/d/dc/Broadcast.svg)
 
 Broadcast is a one-to-all communication. It means that a datagram is sent from
 one host to all hosts on the network.
@@ -241,7 +246,8 @@ one host to all hosts on the network.
 Think of it as a public announcement.
 
 To send a broadcast datagram, the sender must know the broadcast address. The
-broadcast address is a special address that represents all hosts on the network.
+broadcast address is a special address that represents all hosts on the network
+and/or all hosts of a specific subnet.
 
 The broadcast address is defined by the subnet mask. The subnet mask is a 32-bit
 number. It is represented as four numbers separated by a dot (e.g.
@@ -261,11 +267,14 @@ A good example is stated in the following table (source:
 If you want to send a broadcast to all devices on all network subnets, you can
 use the `255.255.255.255` broadcast address.
 
-You must be aware that there can be restrictions on the use of broadcast. For
-example, broadcast is limited to the local network but can be blocked by a
-firewall and/or a router.
+> **Warning**  
+> You must be aware that there can be restrictions on the use of broadcast. For
+> example, broadcast is limited to the local network but can still be blocked by
+> a firewall and/or a router.
 
 ### Multicast
+
+![Multicast communication](https://upload.wikimedia.org/wikipedia/commons/3/30/Multicast.svg)
 
 Multicast is a one-to-many communication. It means that a datagram is sent from
 one host to multiple hosts.
@@ -286,52 +295,38 @@ A complete list is available on the
 and further described in the
 [RFC 5771](https://datatracker.ietf.org/doc/html/rfc5771).
 
-TODO
+For local networks, the multicast range is from the **Administratively Scoped
+Bloc** of the RFC. More details are available in the
+[RFC 2365](https://datatracker.ietf.org/doc/html/rfc2365).
 
-As a quick reference, here are some of the most common multicast addresses that
-you can use in your applications. This list was built from the IANA website
-using the _Unassigned_ ranges.
+Any multicast addresses in the range `239.0.0.0` to `239.255.255.255` can be
+used for your own applications.
 
-Address ranges non-routable (to be used on a local network)
-([reference](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-1)):
+Just as for broadcast, the sender must know the multicast address to send a
+datagram to a multicast group. Just as for broadcast as well, there can be
+restrictions on the use of multicast.
 
-- `224.0.0.3`
-- `224.0.0.26`
-- `224.0.0.69` to `224.0.0.100`
-- `224.0.0.122` to `224.0.0.149`
-- `224.0.0.255`
+Multicast is quite guaranteed **not** to work on the public Internet. It is only
+guaranteed to work on a local network. If you need to use multicast between
+multiple networks, you must use a tunnel such as a virtual private network (VPN)
+to bypass this restriction.
 
-Address ranges routable (to be used on the Internet)
-([reference 1](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-2),
-[reference 2](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-3),
-[reference 3](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-6),
-[reference 4](https://www.iana.org/assignments/multicast-addresses/multicast-addresses.xhtml#multicast-addresses-11)):
+Multicast is presented in this course because it is an important concept in
+service discovery protocols. However, you must be aware that it is quite not
+possible to use multicast on the public Internet, thus it greatly limits its
+usage.
 
-- `224.0.1.38`
-- `224.0.1.124`
-- `224.0.1.191` to `224.0.1.255`
-- `224.0.2.0`
-- `224.0.2.20` to `224.0.2.63`
-- `224.0.6.145` to `224.0.6.150`
-- `224.0.6.152` to `224.0.6.191`
-- `224.0.12.136` to `224.0.12.255`
-- `224.0.17.128` to `224.0.17.255`
-- `224.0.20.208` to `224.0.20.255`
-- `224.0.21.128` to `224.0.21.255`
-- `224.0.23.182` to `224.0.23.191`
-- `224.0.246.0` to `224.0.249.255`
-- `224.3.0.64` to `224.3.255.255`
-- `224.4.40.0` to `224.4.47.255`
-- `224.4.64.0` to `224.4.255.255`
-- `233.252.19.0` to `233.255.255.255` (the biggest range - recommended for your
-  applications)
+Also, Multicast is a complex topic. It is not covered in depth in this course.
+For a deeper understanding of possible usages of multicast on the Internet, you
+can read the following resources:
 
-You must be aware that there can be restrictions on the use of multicast. For
-example, even when using routable multicast ranges, the generated traffic can be
-restricted by a firewall and/or a router, inside or outside your network,
-meaning that the datagrams might not be received by the hosts. If you want to
-ensure that your datagrams are received, you must use a tunnel such as a virtual
-private network (VPN) to bypass these restrictions.
+- [IP multicast](https://en.wikipedia.org/wiki/IP_multicast)
+- [Internet Group Management Protocol](https://en.wikipedia.org/wiki/Internet_Group_Management_Protocol)
+- [Internet Protocol television](https://en.wikipedia.org/wiki/Internet_Protocol_television)
+
+On a funny note, this is how our journey to better understand multicast went:
+
+![Multicast meme](./images/multicast-meme.jpg)
 
 ## Messaging patterns
 
@@ -420,6 +415,8 @@ following:
 
   ![Service discovery protocols - Query pattern](images/service-discovery-protocols-query.png)
 
+These patterns can still be used with other protocols such as TCP.
+
 ## Practical content
 
 ### Run the emitters and receivers example
@@ -459,72 +456,69 @@ java -jar java-udp-programming-1.0-SNAPSHOT.jar --help
 
 Take some time to read and understand the help message.
 
-#### Run the emitters
+#### Run the unicast emitter and receiver
 
-Using the help message, start the following emitters in different terminals:
+Using the help message, start the following applications in different terminals:
+
+- A unicast emitter with the following configuration:
+  - Delay: 0 seconds
+  - Frequency: 5 seconds
+  - Host: `127.0.0.1` or `localhost`
+  - Port: `9876`
+- A unicast receiver with the following configuration:
+  - Port: `9876`
+
+Once the emitter is started, you should see that messages are emitted at the
+specified frequency in the terminal.
+
+The receiver should receive the messages and print them in the terminal.
+
+Do not stop the emitter and receiver yet.
+
+#### Run the broadcast emitter and receivers
+
+Using the help message, start the following applications in different terminals:
 
 - A broadcast emitter with the following configuration:
-  - Delay of 5 seconds
-  - Frequency of 30 seconds
-  - Host: TODO
-  - Port: TODO
+  - Delay: 5 seconds
+  - Frequency: 30 seconds
+  - Host: `255.255.255.255`
+  - Port: `9877`
+- A broadcast receiver with the following configuration:
+  - Port: `9877`
+
+Once the emitter is started, you should see that messages are emitted at the
+specified frequency in the terminal.
+
+The receiver should receive the messages and print them in the terminal.
+
+Do not stop the emitter and receiver yet.
+
+#### Run the multicast emitter and receivers
+
+Using the help message, start the following applications in different terminals:
+
 - A multicast emitter with the following configuration:
-  - Delay of 10 seconds
-  - Frequency of 15 seconds
-  - Host: TODO
-  - Port: TODO
+  - Delay: 10 seconds
+  - Frequency: 15 seconds
+  - Host: `239.1.1.1`
+  - Port: `9878`
   - Network interface: check the note below
-- A unicast emitter with the following configuration:
-  - Delay of 0 seconds
-  - Frequency of 5 seconds
-  - Host: TODO
-  - Port: TODO
+- A multicast receiver with the following configuration:
+  - Host: `239.1.1.1`
+  - Port: `9878`
+  - Network interface: check the note below
 
 > **Note**  
 > For the multicast emitter, you must specify a network interface to listen to
 > multicast datagrams. Check the help message to know how to do it.
 
-Once all the emitters are started, you should see that messages are emitted at
-the specified frequency in the terminal.
+Once the emitter is started, you should see that messages are emitted at the
+specified frequency in the terminal.
 
-#### Run the receivers
+The receiver should receive the messages and print them in the terminal.
 
-Using the help message, start the following receivers in different terminals:
-
-- Two broadcast receivers with the following configuration:
-  - Broadcast receiver 1:
-    - Host: TODO
-    - Port: TODO
-  - Broadcast receiver 2:
-    - Host: TODO
-    - Port: TODO
-- Three multicast receivers with the following configuration:
-  - Multicast receiver 1:
-    - Host: TODO
-    - Port: TODO
-    - Network interface: check the note below
-  - Multicast receiver 2:
-    - Host: TODO
-    - Port: TODO
-    - Network interface: check the note below
-  - Multicast receiver 3:
-    - Host: TODO
-    - Port: TODO
-    - Network interface: check the note below
-- Two unicast receivers with the following configuration:
-  - Unicast receiver 1:
-    - Host: TODO
-    - Port: TODO
-  - Unicast receiver 2:
-    - Host: TODO
-    - Port: TODO
-
-> **Note**  
-> For the multicast receivers, you must also specify a network interface to
-> listen to multicast datagrams. Check the help message to know how to do it.
-
-Once all the receivers are started, you should see that messages are received in
-the terminal from the emitter(s).
+Do not stop the emitter and receiver yet.
 
 #### Check the logs of the emitters and receivers
 
@@ -532,9 +526,9 @@ Take some time to read and understand the logs.
 
 What are your conclusions to the following questions?
 
-- What messages do the broadcast receivers receive? Why?
-- What messages do the multicast receivers receive? Why?
-- What messages do the unicast receivers receive? Why?
+- What messages do the broadcast receiver receive? Why?
+- What messages do the multicast receiver receive? Why?
+- What messages do the unicast receiver receive? Why?
 
 #### Stop the emitters and receivers
 
@@ -592,12 +586,45 @@ Using the examples from the
 chapter, add the same containers as mentioned before as services to your Docker
 Compose file:
 
-- A broadcast emitter
-- A multicast emitter
-- A unicast emitter
-- Two broadcast receivers
-- Three multicast receivers
-- Two unicast receivers
+- A unicast emitter with the following configuration:
+  - Delay: 0 seconds
+  - Frequency: 5 seconds
+  - Host: `unicast-receiver-1`
+  - Port: `9876`
+- A broadcast emitter with the following configuration:
+  - Delay: 5 seconds
+  - Frequency: 30 seconds
+  - Host: `255.255.255.255`
+  - Port: `9876`
+- A multicast emitter with the following configuration:
+  - Delay: 10 seconds
+  - Frequency: 15 seconds
+  - Host: `239.1.1.1`
+  - Port: `9876`
+  - Network interface: `eth0` (the default network interface of the container)
+- Two unicast receivers with the following configuration:
+  - Unicast receiver 1:
+    - Port: `9876`
+  - Unicast receiver 2:
+    - Port: `9876`
+- Two broadcast receivers with the following configuration:
+  - Broadcast receiver 1:
+    - Port: `9876`
+  - Broadcast receiver 2:
+    - Port: `9876`
+- Three multicast receivers with the following configuration:
+  - Multicast receiver 1:
+    - Host: `239.1.1.1`
+    - Port: `9876`
+    - Network interface: `eth0` (the default network interface of the container)
+  - Multicast receiver 2:
+    - Host: `239.1.1.1`
+    - Port: `9876`
+    - Network interface: `eth0` (the default network interface of the container)
+  - Multicast receiver 3:
+    - Host: `239.1.1.2`
+    - Port: `9876`
+    - Network interface: `eth0` (the default network interface of the container)
 
 Here is a template that can help you:
 
@@ -637,19 +664,31 @@ depends_on:
 Just as seen in the Docker and Docker Compose chapter, run the Docker Compose
 file.
 
-When running your Docker Compose, you should be able to see the outputs of the
-emitters and receivers.
+When running your Docker Compose, you should be able to see the outputs of all
+the emitters and receivers.
 
-To help you filter outputs, you can start only a subset of the services
-specified in your Docker Compose file.
+#### Check the logs of the emitters and receivers
 
-For example, to start only the unicast emitter and receivers, you can use the
-following command:
+Take some time to read and understand the logs.
 
-```sh
-# Start only the unicast emitter and receivers
-docker compose up unicast-emitter unicast-receiver-1 unicast-receiver-2
-```
+What are your conclusions to the following questions?
+
+- What messages do the broadcast receivers receive? Why?
+- What messages do the multicast receivers receive? Why?
+- What messages do the unicast receivers receive? Why?
+- What are the differences between the outputs of the emitters and receivers
+  when running them with Docker Compose and when running them manually?
+
+> **Note**  
+> To help you filter and understand the outputs, you can start only a subset of
+> the services specified in your Docker Compose file if you want to. For
+> example, to start only the unicast emitter and receivers, you can use the
+> following command:
+>
+> ```sh
+> # Start only the unicast emitter and receivers
+> docker compose up unicast-emitter unicast-receiver-1 unicast-receiver-2
+> ```
 
 ### Isolate broadcast emitters and receivers to their own network
 
@@ -707,6 +746,8 @@ networks:
   - my-isolated-network
 ```
 
+As networks is an array, you can add multiple networks to a container if needed.
+
 #### Run the network again with the isolated networks
 
 Start all containers again. You should notice that the broadcast emitters do not
@@ -728,7 +769,7 @@ Create a new discussion with the following information:
   - Which command(s) did you use to run the Docker image?
   - Which command(s) did you use to publish the Docker image?
   - Which command(s) did you use to run the Docker Compose file?
-  - Why and how did the network helped for broadcast emitters and receivers?
+  - How and why did the network helped for broadcast emitters and receivers?
 
 This will notify us that you have completed the exercise and we can check your
 work.

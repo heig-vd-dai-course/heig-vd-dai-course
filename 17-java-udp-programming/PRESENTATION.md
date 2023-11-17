@@ -76,28 +76,128 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Table of contents
+## Objectives
 
-- **[Theoretical content](#theoretical-content)**
-  - Differences between TCP and UDP
-  - UDP datagrams
-  - Unicast, multicast and broadcast
-  - Messaging patterns
-  - Service discovery protocols
-  - UDP in Java
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
+- Learn the differences between TCP and UDP
+- Learn what an UDP datagram is
+- Learn the different ways to send a UDP datagram to one or multiple clients
+- How UDP can be used for service discovery
 
-## Theoretical content
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+## UDP
 
 <!-- _class: lead -->
 
-### Resources
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#udp).
+You can find other resources and alternatives as well.
 
-- TODO
+### UDP
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+TODO
+
+## Differences between TCP and UDP
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#differences-between-tcp-and-udp).
+You can find other resources and alternatives as well.
+
+### Differences between TCP and UDP
+
+TODO
+
+## UDP datagrams
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#udp-datagrams).
+You can find other resources and alternatives as well.
+
+### UDP datagrams
+
+## Reliability
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#reliability).
+You can find other resources and alternatives as well.
+
+### Reliability
+
+TODO
+
+## UDP in the Socket API
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#udp-in-the-socket-api).
+You can find other resources and alternatives as well.
+
+### UDP in the Socket API
+
+TODO
+
+## Unicast, multicast and broadcast
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#unicast-multicast-and-broadcast).
+You can find other resources and alternatives as well.
+
+### Unicast, multicast and broadcast
+
+TODO
+
+### Unicast
+
+TODO
+
+### Multicast
+
+TODO
+
+### Broadcast
+
+TODO
+
+## Messaging patterns
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#messaging-patterns).
+You can find other resources and alternatives as well.
+
+### Messaging patterns
+
+TODO
+
+### Fire-and-forget
+
+TODO
+
+### Request-response
+
+TODO
+
+## Service discovery protocols
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/COURSE_MATERIAL.md#service-discovery-protocols).
+You can find other resources and alternatives as well.
+
+### Service discovery protocols
+
+TODO
 
 ## Practical content
 
@@ -105,11 +205,11 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### What will you do?
 
--
+- Run a complete emitter/receiver UDP example in Java
+- Dockerize the emitter/receiver UDP example
+- Isolate some containers in a dedicated Docker network
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+![bg right contain](./images/what-will-you-do-server.png)
 
 ### Find the practical content
 
