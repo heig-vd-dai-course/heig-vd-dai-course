@@ -36,8 +36,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Broadcast](#broadcast)
   - [Multicast](#multicast)
 - [Messaging patterns](#messaging-patterns)
-  - [Fire-and-forget](#fire-and-forget)
-  - [Request-response](#request-response)
 - [Service discovery protocols](#service-discovery-protocols)
 - [Practical content](#practical-content)
   - [Run the emitters and receivers example](#run-the-emitters-and-receivers-example)
@@ -82,7 +80,7 @@ UDP does not provide any reliability mechanism. It does not guarantee that the
 data will be received by the receiver at all, nor that the data will be received
 in the same order as it was sent.
 
-A good analogy is to think of UDP as a the postal service with postcards. You
+A good analogy is to think of UDP as the postal service with postcards. You
 write multiple postcards and send them to someone. You do not know if the
 postcards will be received nor if they arrive in the same order as they were
 sent. You do not know if the postcards will be received at all if the postal
@@ -253,12 +251,12 @@ number. It is represented as four numbers separated by a dot (e.g.
 A good example is stated in the following table (source:
 <https://en.wikipedia.org/wiki/Broadcast_address>):
 
-| Network IP address breakdown for `172.16.0.0/12`                                                                                                                                                                                                                                | Binary form                             | Dot-decimal notation |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------- |
-| 1. Network IP Address                                                                                                                                                                                                                                                           | 10101100.0001**0000.00000000.00000000** | 172.16.0.0           |
-| 2. Subnet Mask, or just "Netmask" for short (The `/12` in the IP address in this case means only the left-most 12 bits are 1s, as shown here. This reserves the left 12 bits for the network address (prefix) and the right `32 - 12 = 20` bits for the host address (suffix).) | 11111111.1111**0000.00000000.00000000** | 255.240.0.0          |
-| 3. Bit Complement (Bitwise NOT) of the Subnet Mask                                                                                                                                                                                                                              | 00000000.0000**1111.11111111.11111111** | 0.15.255.255         |
-| 4. Broadcast address (Bitwise OR of 1. Network IP Address and 3. Bit Complement of the Subnet Mask. This makes the broadcast address the _largest possible IP address (and host address, since the host address portion is all 1s) for any given network address._)             | 10101100.0001**1111.11111111.11111111** | 172.31.255.255       |
+| Network IP address breakdown for `172.16.0.0/12`                                                                                                                                                                                                                                  | Binary form                             | Dot-decimal notation |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | -------------------- |
+| 1. Network IP Address                                                                                                                                                                                                                                                             | 10101100.0001**0000.00000000.00000000** | 172.16.0.0           |
+| 2. Subnet Mask, or just "Netmask" for short (The `/12` in the IP address in this case means only the left-most 12 bits are `1`s, as shown here. This reserves the left 12 bits for the network address (prefix) and the right `32 - 12 = 20` bits for the host address (suffix).) | 11111111.1111**0000.00000000.00000000** | 255.240.0.0          |
+| 3. Bit Complement (Bitwise NOT) of the Subnet Mask                                                                                                                                                                                                                                | 00000000.0000**1111.11111111.11111111** | 0.15.255.255         |
+| 4. Broadcast address (Bitwise OR of _Network IP Address_ and _Bit Complement of the Subnet Mask_. This makes the broadcast address the _largest possible IP address (and host address, since the host address portion is all `1`s) for any given network address._)               | 10101100.0001**1111.11111111.11111111** | 172.31.255.255       |
 
 If you want to send a broadcast to all devices on all network subnets, you can
 use the `255.255.255.255` broadcast address.
@@ -336,8 +334,8 @@ The request-response (sometimes called request-reply) pattern is a two-way
 communication. It means that a datagram is sent from one host to another host
 and a response is expected.
 
-When a creating a datagram, it is possible to specify a port. While not
-mandatory, this port can be used by the receiver to know whom to reply to.
+When creating a datagram, it is possible to specify a port. While not mandatory,
+this port can be used by the receiver to know whom to reply to.
 
 If no port is specified, the operating system will simply assign a random port
 for the out going datagram.
@@ -454,6 +452,8 @@ Using the help message, start the following applications in different terminals:
 - A unicast receiver with the following configuration:
   - Port: `9876`
 
+What are the commands to start the unicast emitter and receiver?
+
 Once the emitter is started, you should see that messages are emitted at the
 specified frequency in the terminal.
 
@@ -472,6 +472,8 @@ Using the help message, start the following applications in different terminals:
   - Port: `9877`
 - A broadcast receiver with the following configuration:
   - Port: `9877`
+
+What are the commands to start the broadcast emitter and receiver?
 
 Once the emitter is started, you should see that messages are emitted at the
 specified frequency in the terminal.
@@ -499,6 +501,8 @@ Using the help message, start the following applications in different terminals:
 > For the multicast emitter, you must specify a network interface to listen to
 > multicast datagrams. Check the help message to know how to do it.
 
+What are the commands to start the multicast emitter and receiver?
+
 Once the emitter is started, you should see that messages are emitted at the
 specified frequency in the terminal.
 
@@ -512,9 +516,9 @@ Take some time to read and understand the logs.
 
 What are your conclusions to the following questions?
 
-- What messages do the broadcast receiver receive? Why?
-- What messages do the multicast receiver receive? Why?
-- What messages do the unicast receiver receive? Why?
+- What messages do the unicast receiver receives? Why?
+- What messages do the broadcast receiver receives? Why?
+- What messages do the multicast receiver receives? Why?
 
 #### Stop the emitters and receivers
 
@@ -557,11 +561,17 @@ Just as seen in the
 chapter, build the image accordingly with the tag `java-udp-programming` and run
 the container with the name `java-udp-programming`.
 
+Which command(s) did you use to build the Docker image?
+
+Which command(s) did you use to run the Docker image?
+
 #### Publish the Docker image
 
 Just as seen in the
 [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10-docker-and-docker-compose)
 chapter, publish your Docker image to the GitHub Container Registry.
+
+Which command(s) did you use to publish the Docker image?
 
 #### Create the Docker Compose file
 
@@ -653,15 +663,17 @@ file.
 When running your Docker Compose, you should be able to see the outputs of all
 the emitters and receivers.
 
+Which command(s) did you use to run the Docker Compose file?
+
 #### Check the logs of the emitters and receivers
 
 Take some time to read and understand the logs.
 
 What are your conclusions to the following questions?
 
+- What messages do the unicast receivers receive? Why?
 - What messages do the broadcast receivers receive? Why?
 - What messages do the multicast receivers receive? Why?
-- What messages do the unicast receivers receive? Why?
 - What are the differences between the outputs of the emitters and receivers
   when running them with Docker Compose and when running them manually?
 
@@ -693,7 +705,7 @@ some containers.
 
 #### Define the network
 
-A the root level of the Docker Compose file, define a Docker network with the
+At the root level of the Docker Compose file, define a Docker network with the
 following content:
 
 ```yaml
@@ -739,6 +751,8 @@ As networks is an array, you can add multiple networks to a container if needed.
 Start all containers again. You should notice that the broadcast emitters do not
 interfere with the other containers, thanks to the isolated network!
 
+How and why did the network helped for the broadcast emitters and receivers?
+
 ### Share your project
 
 Share your project in the GitHub Discussions of this organization:
@@ -750,12 +764,7 @@ Create a new discussion with the following information:
   First name Last Name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository, answers to all questions
-  asked in this practical content and the following ones:
-  - Which command(s) did you use to build the Docker image?
-  - Which command(s) did you use to run the Docker image?
-  - Which command(s) did you use to publish the Docker image?
-  - Which command(s) did you use to run the Docker Compose file?
-  - How and why did the network helped for broadcast emitters and receivers?
+  asked in this practical content.
 
 This will notify us that you have completed the exercise and we can check your
 work.

@@ -96,7 +96,13 @@ You can find other resources and alternatives as well.
 
 ### UDP
 
-TODO
+- A transport layer protocol just like TCP
+- Connectionless protocol - does not require to establish a connection before
+  sending data
+- Unreliable protocol - does not guarantee delivery but is fast
+- Analogy: sending postcards through the postal service
+
+![bg right:40%](https://images.unsplash.com/photo-1607057937337-e1a1c4e869d9?fit=crop&h=720)
 
 ## Differences between TCP and UDP
 
@@ -137,7 +143,12 @@ You can find other resources and alternatives as well.
 
 ### UDP datagrams
 
-TODO
+- Datagrams = discrete chunks of data (packets) sent over the network
+- Sent individually and independently
+- Contain a header (source and destination ports, length, checksum, etc.) and a
+  payload (data)
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## Reliability
 
@@ -149,7 +160,12 @@ You can find other resources and alternatives as well.
 
 ### Reliability
 
-TODO
+- UDP is unreliable
+- The application must implement its own reliability mechanism
+- In some cases, reliability is not needed (e.g. streaming)
+- Handling reliability is complex - not covered in this course
+
+![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## UDP in the Socket API
 
@@ -177,7 +193,11 @@ You can find other resources and alternatives as well.
 
 ### Unicast, broadcast and multicast
 
-TODO
+- Unicast, broadcast and multicast are ways to send data over the network
+- TCP is unicast only
+- UDP can be unicast, broadcast or multicast
+
+![bg right:40%](https://images.unsplash.com/photo-1542783863-dbe5c9693402?fit=crop&h=720)
 
 ### Unicast
 
@@ -320,6 +340,10 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/tiNCpHudGrw)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Becky Phan](https://unsplash.com/@beckyphan) on
+  [Unsplash](https://unsplash.com/photos/white-and-brown-wooden-photo-frame-qWsVgxgo1-E)
+- Illustration by [Sam Dan Truong](https://unsplash.com/@sam_truong) on
+  [Unsplash](https://unsplash.com/photos/grey-metal-tower-during-daytime-ctngce7sr_Y)
 - Illustration by [Zuza Gałczyńska](https://unsplash.com/@zgalczynska) on
   [Unsplash](https://unsplash.com/photos/group-of-people-watching-fireworks-display-c5_eQi4rrjA)
 - Illustration by [Andy Holmes](https://unsplash.com/@andyjh07) on
