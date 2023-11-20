@@ -24,11 +24,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Group composition](#group-composition)
 - [Grading criteria](#grading-criteria)
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
-  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
-  - [Category 3 - Define an application protocol](#category-3---define-an-application-protocol)
-  - [Category 4 - Docker and Docker Compose](#category-4---docker-and-docker-compose)
-  - [Category 5 - Java UDP programming](#category-5---java-udp-programming)
-  - [Category 6 - Presentation and questions](#category-6---presentation-and-questions)
+  - [Category 2 - Define an application protocol](#category-2---define-an-application-protocol)
+  - [Category 3 - Docker and Docker Compose](#category-3---docker-and-docker-compose)
+  - [Category 4 - Java UDP programming](#category-4---java-udp-programming)
+  - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
 - [Constraints](#constraints)
 - [Remarks](#remarks)
 - [Submission](#submission)
@@ -37,36 +36,34 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Introduction
 
-Network applications are everywhere. They are used to communicate, to play
-games, to watch videos, to listen to music, to browse the web, to send emails,
-etc.
+Streaming and notifications are everywhere: streaming is used to stream music,
+videos, game states, etc. and notifications are used to send emails, messages,
+etc. to a user or a group of users.
+
+These classes of network applications are mostly based on the UDP protocol.
 
 In this practical work, you will create a network application that uses the UDP
 protocol.
 
-The network application will be defined by an application protocol, a client and
-a server. The client will send a request to the server and the server will send
-a response to the client.
+The network application will be defined by an application protocol, some
+emitters and some receivers using a mix of unicast, broadcast and multicast
+communications.
 
 The application protocol will be defined by you. You can decide to create your
 own little application protocol or you can implement an existing protocol.
 
-Your application must be built around UDP. You can use TCP but it should not be
-the core of your application. The main difference between TCP and UDP is that
-TCP is reliable and UDP is not, having more challenges. UDP is faster than TCP
-because it does not have to wait for acknowledgments. It can be used in
-real-time communication applications and discovery protocols.
+Your application must be built around UDP.
 
-Feel free to be creative! For example, you can choose to create a chat
-application, a game, a file transfer application, etc. If you do not have any
-idea, come to see us and we can give you.
+Feel free to be creative! For example, you can choose to create a sophisticated
+chat application, a game of cooperation, a streaming application, the simulation
+of an Internet of Things (IoT) network, etc.
 
 ## Objectives
 
 - Define a network application protocol
 - Make usage of the UDP protocol
-- Use Java UDP programming to implement a client and a server application
-- Use Docker and Docker Compose to deploy the client and the server
+- Use Java UDP programming to implement the network application
+- Use Docker and Docker Compose to deploy the network application
 
 ## Group composition
 
@@ -86,6 +83,9 @@ information:
 The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
+**Please do it a soon as possible, even if you do not have a clear idea yet as
+it will help us to plan the practical work review and feedback session.**
+
 ## Grading criteria
 
 - 0 point - The work is not done
@@ -101,48 +101,43 @@ repository!
 
 | #   | Criterion                                                                                                               | Points |
 | --- | ----------------------------------------------------------------------------------------------------------------------- | -----: |
-| 1   | The whole team contributes to the project and can explain it in details                                                 |    0.2 |
-| 2   | The README is well structured and explains what the network application is for with its documented application protocol |    0.2 |
-| 3   | The README explains how to build and publish the network application with Docker                                        |    0.2 |
-| 4   | The README explains how to run the network application with examples and outputs                                        |    0.2 |
+| 1   | The README is well structured and explains what the network application is for with its documented application protocol |    0.2 |
+| 2   | The README explains how to build and publish the network application with Docker                                        |    0.2 |
+| 3   | The README explains how to run the network application with examples and outputs                                        |    0.2 |
 
-### Category 2 - Java, IntelliJ IDEA and Maven
+### Category 2 - Define an application protocol
 
-| #   | Criterion                                                  | Points |
-| --- | ---------------------------------------------------------- | -----: |
-| 5   | The codebase has all required files and is well structured |    0.2 |
-| 6   | The codebase is well documented                            |    0.2 |
+| #   | Criterion                                                                                     | Points |
+| --- | --------------------------------------------------------------------------------------------- | -----: |
+| 4   | The application protocol defines the port and protocol to use                                 |    0.2 |
+| 5   | The application protocol defines who initiates the connection and how                         |    0.2 |
+| 6   | The application protocol defines the available messages/actions with their input(s)/output(s) |    0.2 |
+| 7   | The application protocol defines the success/error codes and their explanations               |    0.2 |
+| 8   | The application protocol is described using one or multiple diagrams                          |    0.2 |
+| 9   | The application protocol defines the edge-cases when something could go wrong with a diagram  |    0.2 |
 
-### Category 3 - Define an application protocol
+### Category 3 - Docker and Docker Compose
 
-| #   | Criterion                                                                             | Points |
-| --- | ------------------------------------------------------------------------------------- | -----: |
-| 7   | The application protocol defines the port and protocol to use                         |    0.2 |
-| 8   | The application protocol defines who initiates the connection and how                 |    0.2 |
-| 9   | The application protocol defines the available messages with their input(s)/output(s) |    0.2 |
-| 10  | The application protocol defines the success/errors codes and their explanations      |    0.2 |
-| 11  | The application protocol is described using a sequence diagram                        |    0.2 |
+| #   | Criterion                                                                                  | Points |
+| --- | ------------------------------------------------------------------------------------------ | -----: |
+| 10  | One or multiple Dockerfiles allow to build the network application                         |    0.2 |
+| 11  | The network application is published to a Docker registry (e.g. GitHub Container Registry) |    0.2 |
+| 12  | One or multiple Docker Compose files allow to run the network application                  |    0.2 |
 
-### Category 4 - Docker and Docker Compose
+### Category 4 - Java UDP programming
 
-| #   | Criterion                                                              | Points |
-| --- | ---------------------------------------------------------------------- | -----: |
-| 12  | The server and the client are built and published to a Docker registry |    0.2 |
-| 13  | A Docker Compose file allows to run the network application            |    0.2 |
-| 14  | A health check allows to wait for the application to be ready          |    0.2 |
+| #   | Criterion                                                                                                                                                      | Points |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 13  | The network application starts on the defined port (but you must be able to change it if needed) and accept connections from multiple clients at the same time |    0.2 |
+| 14  | Some actions are private (unique to one user), some actions are common (affect all users)                                                                      |    0.2 |
+| 15  | No one can manipulate items from another client if it is not authorized                                                                                        |    0.2 |
+| 16  | The client and server correctly process the input/output commands                                                                                              |    0.2 |
+| 17  | The network application makes usage of at the fire-and-forget messaging pattern                                                                                |    0.2 |
+| 18  | The network application makes usage of at the request-response messaging pattern                                                                               |    0.2 |
+| 19  | The network application makes usage of at least two multicast addresses                                                                                        |    0.2 |
+| 20  | A client can interact with the network application through unicast                                                                                             |    0.2 |
 
-### Category 5 - Java UDP programming
-
-| #   | Criterion                                                                    | Points |
-| --- | ---------------------------------------------------------------------------- | -----: |
-| 15  | The client discovers the server(s) and can connect to them                   |    0.2 |
-| 16  | The server starts on the defined port and advertises who it is               |    0.2 |
-| 17  | The client and server correctly process the input/output commands            |    0.2 |
-| 18  | All clients/servers are informed if the servers/clients close the connection |    0.2 |
-| 19  | The application makes usage of the UDP protocol                              |    0.2 |
-| 20  | The application uses all the best practices regarding network programming    |    0.2 |
-
-### Category 6 - Presentation and questions
+### Category 5 - Presentation and questions
 
 | #   | Criterion                                                                            | Points |
 | --- | ------------------------------------------------------------------------------------ | -----: |
@@ -160,7 +155,7 @@ repository!
 - Your application must be slightly more complex and different than the ones
   presented during the course
 - The network application can only use the UDP protocol
-- You must build and release the application using Docker and Docker Compose
+- You must build and publish the application using Docker and Docker Compose
 
 ## Remarks
 
@@ -187,7 +182,7 @@ use signed pull requests to merge your work.
 
 The planning of the course is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>. The **deadline** is just
-**before the Practical work review and feedback session**.
+**before the Practical work review session**.
 
 Any commit after the deadline will not be taken into account. Each day of delay
 will result in a penalty of -1 point on the final grade.

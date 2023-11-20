@@ -148,7 +148,7 @@ You can find other resources and alternatives as well.
 - Contain a header (source and destination ports, length, checksum, etc.) and a
   payload (data)
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/udp-datagrams.png)
 
 ## Reliability
 
@@ -160,12 +160,12 @@ You can find other resources and alternatives as well.
 
 ### Reliability
 
-- UDP is unreliable
+- UDP is unreliable (no guarantee of delivery, no guarantee of order)
 - The application must implement its own reliability mechanism
 - In some cases, reliability is not needed (e.g. streaming)
 - Handling reliability is complex - not covered in this course
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1582782657732-e7d7c08dcadd?fit=crop&h=720)
 
 ## UDP in the Socket API
 
@@ -181,7 +181,7 @@ You can find other resources and alternatives as well.
 - A datagram is created with the `DatagramPacket` class
 - A multicast socket is created with the `MulticastSocket` class.
 
-![bg right contain](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+![bg right contain](./images/datagram-socket.png)
 
 ## Unicast, broadcast and multicast
 
@@ -342,6 +342,8 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [Becky Phan](https://unsplash.com/@beckyphan) on
   [Unsplash](https://unsplash.com/photos/white-and-brown-wooden-photo-frame-qWsVgxgo1-E)
+- Illustration by [Jackson Simmer](https://unsplash.com/@simmerdownjpg) on
+  [Unsplash](https://unsplash.com/photos/blue-green-and-red-plastic-clothes-pin-Vqg809B-SrE)
 - Illustration by [Sam Dan Truong](https://unsplash.com/@sam_truong) on
   [Unsplash](https://unsplash.com/photos/grey-metal-tower-during-daytime-ctngce7sr_Y)
 - Illustration by [Zuza Gałczyńska](https://unsplash.com/@zgalczynska) on

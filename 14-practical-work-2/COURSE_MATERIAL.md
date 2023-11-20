@@ -80,6 +80,9 @@ information:
 The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
+**Please do it a soon as possible, even if you do not have a clear idea yet as
+it will help us to plan the practical work review and feedback session.**
+
 ## Grading criteria
 
 - 0 point - The work is not done
@@ -114,7 +117,7 @@ repository!
 | 7   | The application protocol defines the port and protocol to use                                 |    0.2 |
 | 8   | The application protocol defines who initiates the connection and how                         |    0.2 |
 | 9   | The application protocol defines the available messages/actions with their input(s)/output(s) |    0.2 |
-| 10  | The application protocol defines the success/errors codes and their explanations              |    0.2 |
+| 10  | The application protocol defines the success/error codes and their explanations               |    0.2 |
 | 11  | The application protocol is described using one or multiple diagrams                          |    0.2 |
 | 12  | The application protocol defines the edge-cases when something could go wrong with a diagram  |    0.2 |
 
@@ -181,7 +184,7 @@ loop will continue until the user decides to exit the loop.
 
 The planning of the course is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>. The **deadline** is just
-**before the Practical work review and feedback session**.
+**before the Practical work review session**.
 
 Any commit after the deadline will not be taken into account. Each day of delay
 will result in a penalty of -1 point on the final grade.

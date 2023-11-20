@@ -338,6 +338,9 @@ information:
 The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
+**Please do it a soon as possible, even if you do not have a clear idea yet as
+it will help us to plan the practical work review and feedback session.**
+
 ## Grading criteria
 
 - 0 point - The work is not done
@@ -439,7 +442,7 @@ use signed pull requests to merge your work.
 
 The planning of the course is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>. The **deadline** is just
-**before the Practical work review and feedback session**.
+**before the Practical work review session**.
 
 Any commit after the deadline will not be taken into account. Each day of delay
 will result in a penalty of -1 point on the final grade.
