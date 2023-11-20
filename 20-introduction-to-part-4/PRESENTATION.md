@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of ChatGPT
-title: 'HEIG-VD DAI Course - Introduction to part 4: Web infrastructures'
-description: 'Introduction to part 4: Web infrastructures for the DAI course at HEIG-VD, Switzerland'
+title: 'HEIG-VD DAI Course - Introduction to part 4: Network programming with HTTP'
+description: 'Introduction to part 4: Network programming with HTTP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-introduction-to-part-4/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
@@ -52,7 +52,7 @@ headingDivider: 4
 [illustration]:
   https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
 
-# Introduction to part 4: Web infrastructures
+# Introduction to part 4: Network programming with HTTP
 
 <!--
 _class: lead

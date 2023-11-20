@@ -49,7 +49,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-conclusion-to-part-1/07-conclusion-to-part-1-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]:
+[feedback]: https://framaforms.org/dai-2023-2024-feedback-1-1695300279
+[feedback-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2023-2024-feedback-1-1695300279
 [illustration]:
   https://images.unsplash.com/photo-1539186607619-df476afe6ff1?fit=crop&h=720
@@ -187,7 +188,7 @@ your learning experience. **The feedback is anonymous**.
 We would be very grateful if you could [take a few minutes to fill
 it][feedback]. **Thank you!**
 
-[![bg right w:75%][feedback]][feedback]
+[![bg right w:75%][feedback-qr-code]][feedback]
 
 ## Sources
 

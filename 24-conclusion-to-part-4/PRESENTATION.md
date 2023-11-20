@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of ChatGPT
-title: 'HEIG-VD DAI Course - Conclusion to part 4: Web infrastructures'
-description: 'Conclusion to part 4: Web infrastructures for the DAI course at HEIG-VD, Switzerland'
+title: 'HEIG-VD DAI Course - Conclusion to part 4: Network programming with HTTP'
+description: 'Conclusion to part 4: Network programming with HTTP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/24-conclusion-to-part-4/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
@@ -49,12 +49,13 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/24-conclusion-to-part-4/24-conclusion-to-part-4-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course
+[feedback]: https://framaforms.org/dai-2023-2024-feedback-4-1700494751
+[feedback-qr-code]:
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2023-2024-feedback-4-1700494751
 [illustration]:
   https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
 
-# Conclusion to part 4: Web infrastructures
+# Conclusion to part 4: Network programming with HTTP
 
 <!--
 _class: lead
@@ -147,7 +148,7 @@ your learning experience. **The feedback is anonymous**.
 We would be very grateful if you could [take a few minutes to fill
 it][feedback]. **Thank you!**
 
-[![bg right w:75%][feedback]][feedback]
+[![bg right w:75%][feedback-qr-code]][feedback]
 
 ## Sources
 

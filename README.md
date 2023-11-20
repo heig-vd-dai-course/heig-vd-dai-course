@@ -21,7 +21,7 @@ This course is equivalent to 3 ECTS credits = ~75-90 hours of work.
 - [Part 1 - Input/output processing (15 periods)](#part-1---inputoutput-processing-15-periods)
 - [Part 2 - Network programming with TCP (18 periods)](#part-2---network-programming-with-tcp-18-periods)
 - [Part 3 - Network programming with UDP (14 periods)](#part-3---network-programming-with-udp-14-periods)
-- [Part 4 - Web infrastructures (14 periods)](#part-4---web-infrastructures-14-periods)
+- [Part 4 - Network programming with HTTP (14 periods)](#part-4---network-programming-with-http-14-periods)
 
 The entire course planning for the semester is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>.
@@ -60,7 +60,7 @@ The entire course planning for the semester is available at
 - [19. Conclusion to part 3 + practical work review + feedback (2 periods)](./19-conclusion-to-part-3/README.md)
 - Evaluation 3 (2 periods)
 
-### Part 4 - Web infrastructures (14 periods)
+### Part 4 - Network programming with HTTP (14 periods)
 
 - [20. Introduction to part 3 (1 period)](./20-introduction-to-part-4/README.md)
 - [21. HTTP and cURL (1 period)](./21-http-and-curl/README.md)
