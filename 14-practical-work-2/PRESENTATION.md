@@ -242,14 +242,14 @@ The order of presentation is random and is stated in the next slides.
 
 | #   | Group                                   | Passage |
 | --- | --------------------------------------- | ------- |
-| 9   | Valentin Ricard and Alexandre Philibert | 16:45   |
-| 10  | Komarov Sergey and Ahmad Jano           | 16:55   |
-| 11  | Sarah Jallon and Jonas Troeltsch        | 17:05   |
-| 12  | Piemontesi Gwendal and Trueb Guillaume  | 17:15   |
-| 13  | Loïc Herman and Massimo Stefani?        | 17:25   |
-| 14  | Simon Guggisberg and Jeremiah Steiner?  | 17:35   |
-| 15  | Olin Bourquin and Kevin Farine?         | 17:45   |
-| 16  | Slimani Walid and Colin Jacques?        | 17:55   |
+| 8   | Valentin Ricard and Alexandre Philibert | 16:45   |
+| 9   | Komarov Sergey and Ahmad Jano           | 16:55   |
+| 10  | Sarah Jallon and Jonas Troeltsch        | 17:05   |
+| 11  | Piemontesi Gwendal and Trueb Guillaume  | 17:15   |
+| 12  | Loïc Herman and Massimo Stefani         | 17:25   |
+| 13  | Simon Guggisberg and Jeremiah Steiner   | 17:35   |
+| 14  | Olin Bourquin and Kevin Farine          | 17:45   |
+| 15  | Slimani Walid and Colin Jacques         | 17:55   |
 
 ## Sources
 
