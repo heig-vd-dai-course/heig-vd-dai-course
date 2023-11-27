@@ -64,10 +64,136 @@ of an Internet of Things (IoT) network, etc.
 - Use Java UDP programming to implement the network application
 - Use Docker and Docker Compose to run the network application
 
+## Guidelines
+
+In order for this practical work to be successful, you might need to investigate
+the following topics.
+
+It really depends on the type of application you want to create and some
+elements mentioned here might not be relevant for your application.
+
+### Concurrency with UDP
+
+To handle multiple clients at the same time, you will need to use concurrency,
+as seen in the
+[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-tcp-programming)
+chapter.
+
+Using the same example we shared in the practical content of the
+[Java UDP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/17-java-udp-programming),
+you can use the following code to handle multiple clients at the same time:
+
+```java
+package ch.heigvd.receivers;
+
+import picocli.CommandLine.Command;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.nio.charset.StandardCharsets;
+
+@Command(
+        name = "unicast-receiver",
+        description = "Start an UDP unicast receiver"
+)
+public class UnicastReceiver extends AbstractReceiver {
+    @Override
+    public Integer call() {
+        try (DatagramSocket socket = new DatagramSocket(parent.getPort())) {
+            String myself = InetAddress.getLocalHost().getHostAddress() + ":" + parent.getPort();
+            System.out.println("Unicast receiver started (" + myself + ")");
+
+            byte[] receiveData = new byte[1024];
+
+            while (true) {
+                DatagramPacket packet = new DatagramPacket(
+                        receiveData,
+                        receiveData.length
+                );
+
+                socket.receive(packet);
+
+                String message = new String(
+                        packet.getData(),
+                        packet.getOffset(),
+                        packet.getLength(),
+                        StandardCharsets.UTF_8
+                );
+
+                System.out.println("Unicast receiver (" + myself + ") received message: " + message);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 1;
+        }
+    }
+}
+```
+
+### Concurrent Collections
+
+Java provides a set of concurrent collections that can be used to share data
+between threads.
+
+Using these data structures, you can avoid using `synchronized` blocks or
+methods. It is more efficient and easier to use.
+
+You can find all the concurrent collections in the
+[`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html)
+package.
+
+Some useful collections are:
+
+- `ConcurrentHashMap`
+- `CopyOnWriteArrayList`
+- `CopyOnWriteArraySet`
+- `ConcurrentLinkedDeque`
+- `ConcurrentLinkedQueue`
+
+### Run multiple tasks in parallel
+
+If you want to run multiple (different) tasks in parallel, you can use the
+following snippet in you code.
+
+As seen in the TCP chapter, you can use
+`ExecutorService executorService = Executors.newFixedThreadPool(2);` to create a
+pool of $n$ threads, one for each task to run in parallel. Then you can use the
+`submit` method and give as parameter the method to run.
+
+For more details regarding the `submit` method, see the
+[official Java documentation here](<https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html#submit(java.lang.Runnable)>)
+
+```java
+public Integer call() {
+  ExecutorService executorService = Executors.newFixedThreadPool(2); // The number of threads in the pool must be the same as the number of tasks you want to run in parallel
+
+  try {
+      executorService.submit(this::worker1); // Start the first task
+      executorService.submit(this::worker2); // Start the second task
+  } catch (Exception e) {
+      e.printStackTrace();
+      return 1;
+  } finally {
+      executorService.shutdown();
+  }
+
+  return 0;
+}
+
+public Integer worker1() {
+  // ...
+}
+
+public Integer worker2() {
+  // ...
+}
+```
+
 ## Group composition
 
-You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one.
+You will work in groups between two and three students. You can choose your
+partner. If you do not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
