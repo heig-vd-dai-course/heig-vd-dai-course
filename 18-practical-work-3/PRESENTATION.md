@@ -76,11 +76,12 @@ _paginate: false
 
 ## Practical work 3
 
-- An UDP network application with its own application protocol
+- An UDP network application
 - You can choose what the network application will do
-  - a sophisticated chat application, a game of cooperation, the simulation
-of an IoT network, ...
+  - a sophisticated chat application, a game of cooperation, the simulation of
+    an IoT network, ...
 - Share your application on GitHub with Docker and Docker Compose
+- Between 2 and 3 people per group
 
 ![bg right:40%][illustration]
 
@@ -234,9 +235,25 @@ Please enter the measures you want to get
 The client will then display the average of the measures received from the
 weather station.
 
-## Implementation details and tips
+## Tips for the practical work
 
-TODO: Add the schema
+The next slides present the implementation details and some tips to manage
+concurrency.
+
+You can find mode details in the practical course material on
+[GitHub][practical-work].
+
+This is not a concurrency course! We will not penalize you if you do not use
+concurrency perfectly in your application.
+
+However, we think it is a good opportunity to learn about concurrency and we
+will be happy to help you if you want to use it.
+
+---
+
+![bg h:80%](./images/practical-work-3-architecture.png)
+
+---
 
 ### Concurrency
 
@@ -294,16 +311,18 @@ The order of presentation is random and is stated in the next slides.
 ---
 
 <!-- -->
-**Please state your group on GitHub Discussions as soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
+
+**Please state your group on GitHub Discussions as soon as possible, even if you
+do not have a clear idea yet as it will help us to plan the practical work
+review.**
+
 <!-- -->
 
-| #   | Group                                 | Passage |
-| --- | ------------------------------------- | ------- |
-| 1   | TBD                                  | TBD   |
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TBD     |
 
 ## Sources
 
-- Main illustration by
-  [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
+- Main illustration by [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
   [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)

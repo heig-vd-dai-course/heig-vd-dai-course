@@ -21,6 +21,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
+- [Tips for the practical work](#tips-for-the-practical-work)
+  - [Concurrency with UDP](#concurrency-with-udp)
+  - [Concurrent collections](#concurrent-collections)
+  - [Run multiple tasks in parallel](#run-multiple-tasks-in-parallel)
 - [Group composition](#group-composition)
 - [Grading criteria](#grading-criteria)
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
@@ -64,17 +68,185 @@ of an Internet of Things (IoT) network, etc.
 - Use Java UDP programming to implement the network application
 - Use Docker and Docker Compose to run the network application
 
+## Tips for the practical work
+
+In order for this practical work to be successful, you might need to the following tips to help you.
+
+The type of application you want to create will determine if you need those tips or not. Some
+elements mentioned here might not be relevant for your application so feel free to ignore them.
+
+### Concurrency with UDP
+
+To handle multiple clients at the same time, you will need to use concurrency,
+as seen in the
+[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-tcp-programming)
+chapter.
+
+Using the same example we shared in the practical content of the
+[Java UDP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/17-java-udp-programming),
+you can use the following code to handle multiple clients at the same time:
+
+```java
+package ch.heigvd.receivers;
+
+import picocli.CommandLine.Command;
+
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+@Command(
+        name = "unicast-receiver",
+        description = "Start an UDP unicast receiver"
+)
+public class UnicastReceiver extends AbstractReceiver {
+
+    // This is new - could be passed as a parameter with picocli
+    private static final int NUMBER_OF_THREADS = 1;
+
+    @Override
+    public Integer call() {
+        // This is new - we define an executor service
+        ExecutorService executor = null;
+
+        try (DatagramSocket socket = new DatagramSocket(parent.getPort())) {
+            // This is new - the executor service has a pool of threads
+            executor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
+
+            String myself = InetAddress.getLocalHost().getHostAddress() + ":" + parent.getPort();
+            System.out.println("Unicast receiver started (" + myself + ")");
+
+            byte[] receiveData = new byte[1024];
+
+            while (true) {
+                DatagramPacket packet = new DatagramPacket(
+                        receiveData,
+                        receiveData.length
+                );
+
+                socket.receive(packet);
+
+                // This is new - we submit a new task to the executor service
+                executor.submit(new ClientHandler(packet, myself));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 1;
+        }
+    }
+
+    // This is new - we define a new class to handle the client
+    static class ClientHandler implements Runnable {
+
+        private final DatagramPacket packet;
+        private final String myself;
+
+        public ClientHandler(DatagramPacket packet, String myself) {
+            this.packet = packet;
+            this.myself = myself;
+        }
+
+        @Override
+        public void run() {
+            String message = new String(
+                    packet.getData(),
+                    packet.getOffset(),
+                    packet.getLength(),
+                    StandardCharsets.UTF_8
+            );
+
+            System.out.println("Unicast receiver (" + myself + ") received message: " + message);
+
+            System.out.println("Going to sleep for 10 seconds...");
+
+            // Sleep for a while to simulate a long-running task
+            try {
+                Thread.sleep(10000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println("End of sleep");
+        }
+    }
+}
+```
+
+### Concurrent collections
+
+Java provides a set of concurrent collections that can be used to manage data shared
+between threads.
+
+Using these data structures, you can avoid using `synchronized` blocks or
+methods. It is more efficient and easier to use.
+
+You can find all the concurrent collections in the
+[`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html)
+package.
+
+Some useful collections are:
+
+- `ConcurrentHashMap`
+- `CopyOnWriteArrayList`
+- `CopyOnWriteArraySet`
+- `ConcurrentLinkedDeque`
+- `ConcurrentLinkedQueue`
+
+### Run multiple tasks in parallel
+
+If you want to run multiple (different) tasks in parallel, you can use the
+following snippet in your code.
+
+As seen in the [Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-tcp-programming)
+chapter, you can use
+`ExecutorService executorService = Executors.newFixedThreadPool(2);` to create a
+pool of $n$ threads, one for each task to run in parallel. Then you can use the
+`submit` method and give as parameter the method to run.
+
+For more details regarding the `submit` method, check the
+official Java documentation: <https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html#submit(java.util.concurrent.Callable)>.
+
+Here is a simple example to run two tasks in parallel:
+
+```java
+public Integer call() {
+  ExecutorService executorService = Executors.newFixedThreadPool(2); // The number of threads in the pool must be the same as the number of tasks you want to run in parallel
+
+  try {
+      executorService.submit(this::worker1); // Start the first task
+      executorService.submit(this::worker2); // Start the second task
+  } catch (Exception e) {
+      e.printStackTrace();
+      return 1;
+  } finally {
+      executorService.shutdown();
+  }
+
+  return 0;
+}
+
+public Integer worker1() {
+  // ...
+}
+
+public Integer worker2() {
+  // ...
+}
+```
+
 ## Group composition
 
-You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one.
+You will work in groups between two and three students. You can choose your
+partner. If you do not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 3 - First name Last name member 1
-  and First name Last name member 2
+- **Title**: DAI 2023-2024 - Practical work 3 - First name Last name member 1, First name Last name member 2 and First name Last name member 3
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
