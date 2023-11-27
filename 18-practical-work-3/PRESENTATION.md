@@ -237,31 +237,41 @@ weather station.
 
 ## Implementation details, concurrency and tips
 
-The next slides present the implementation details and some tips to manage
-concurrency.
+The next slides present the implementation details and some tips to manage concurrency.
 
-You can find mode details in the practical course material on
-[GitHub][practical-work].
-
-This is not a concurrency course! We will not penalize you if you do not use
-concurrency perfectly in your application.
-
-However, we think it is a good opportunity to learn about concurrency and we
-will be happy to help you if you want to use it.
+You can find mode details in the practical course material on [GitHub][practical-work].
 
 ---
 
 ![bg h:80%](./images/practical-work-3-architecture.png)
 
----
-
 ### Concurrency
 
-TODO: Add details about concurrency (problem and solution)
+In this practical work, you will be facing concurrency issues. Concurrency happens when two or more threads access the same shared data at the same time (read and write).
 
-This is not a concurrency course! We will not penalize you if you do not use
-concurrency in your application. However, we think it is a good opportunity to
-learn about concurrency and we will be happy to help you if you want to use it.
+This is not a concurrency course! We will not penalize you if you do not use concurrency in your application. 
+
+However, we think it is a good opportunity to learn about concurrency and we will be happy to help you if you want to use it.
+
+
+#### Concurrent Collections
+
+- To avoid concurrency issues, Java provides a set of **concurrent collections** that can be used to share data between threads.
+- These collections are **thread-safe**, which means that they can be accessed by multiple threads at the same time.
+- You can find all the concurrent collections in the ``java.util.concurrent package``.
+- Other solutions exist to manage concurrency (Futures, Mutex, Semaphores, ...). This will be covered in the PCO course.
+
+#### Concurrent Collections
+
+Some useful collections are:
+
+- ``ConcurrentHashMap``
+- ``CopyOnWriteArrayList``
+- ``CopyOnWriteArraySet``
+- ``ConcurrentLinkedDeque``
+- ``ConcurrentLinkedQueue``
+
+Theses collections might be useful for your practical work.
 
 ## Find the practical work
 
