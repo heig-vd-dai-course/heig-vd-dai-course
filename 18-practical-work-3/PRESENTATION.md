@@ -87,6 +87,14 @@ _paginate: false
 
 ## Demo
 
+<!-- _class: lead -->
+
+---
+
+![bg h:80%](./images/practical-work-3-architecture.png)
+
+---
+
 Compile the project:
 
 ```sh
@@ -235,7 +243,7 @@ Please enter the measures you want to get
 The client will then display the average of the measures received from the
 weather station.
 
-## Implementation details, concurrency and tips
+## Tips for the practical work
 
 The next slides present the implementation details and some tips to manage concurrency.
 
@@ -243,35 +251,42 @@ You can find mode details in the practical course material on [GitHub][practical
 
 ---
 
-![bg h:80%](./images/practical-work-3-architecture.png)
-
-### Concurrency
-
 In this practical work, you will be facing concurrency issues. Concurrency happens when two or more threads access the same shared data at the same time (read and write).
 
-This is not a concurrency course! We will not penalize you if you do not use concurrency in your application. 
+This is not a concurrency course! We will not penalize you if you do not use concurrency perfectly in your application. 
 
 However, we think it is a good opportunity to learn about concurrency and we will be happy to help you if you want to use it.
 
+### Concurrency with UDP
 
-#### Concurrent Collections
+<!-- _class: lead -->
+
+You can find code snippets in the practical course material on [GitHub][practical-work].
+
+### Concurrent collections
 
 - To avoid concurrency issues, Java provides a set of **concurrent collections** that can be used to share data between threads.
 - These collections are **thread-safe**, which means that they can be accessed by multiple threads at the same time.
-- You can find all the concurrent collections in the ``java.util.concurrent package``.
+- You can find all the concurrent collections in the [`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html) package.
 - Other solutions exist to manage concurrency (Futures, Mutex, Semaphores, ...). This will be covered in the PCO course.
 
-#### Concurrent Collections
+---
 
 Some useful collections are:
 
-- ``ConcurrentHashMap``
-- ``CopyOnWriteArrayList``
-- ``CopyOnWriteArraySet``
-- ``ConcurrentLinkedDeque``
-- ``ConcurrentLinkedQueue``
+- `ConcurrentHashMap`
+- `CopyOnWriteArrayList`
+- `CopyOnWriteArraySet`
+- `ConcurrentLinkedDeque`
+- `ConcurrentLinkedQueue`
 
-Theses collections might be useful for your practical work.
+These collections might be useful for your practical work.
+
+### Run multiple tasks in parallel
+
+<!-- _class: lead -->
+
+You can find code snippets in the practical course material on [GitHub][practical-work].
 
 ## Find the practical work
 
