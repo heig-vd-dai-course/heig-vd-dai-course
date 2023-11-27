@@ -245,30 +245,42 @@ weather station.
 
 ## Tips for the practical work
 
-The next slides present the implementation details and some tips to manage concurrency.
+The next slides present the implementation details and some tips to manage
+concurrency.
 
-You can find mode details in the practical course material on [GitHub][practical-work].
+You can find mode details in the practical course material on
+[GitHub][practical-work].
 
 ---
 
-In this practical work, you will be facing concurrency issues. Concurrency happens when two or more threads access the same shared data at the same time (read and write).
+In this practical work, you will be facing concurrency issues. Concurrency
+happens when two or more threads access the same shared data at the same time
+(read and write).
 
-This is not a concurrency course! We will not penalize you if you do not use concurrency perfectly in your application. 
+This is not a concurrency course! We will not penalize you if you do not use
+concurrency perfectly in your application.
 
-However, we think it is a good opportunity to learn about concurrency and we will be happy to help you if you want to use it.
+However, we think it is a good opportunity to learn about concurrency and we
+will be happy to help you if you want to use it.
 
 ### Concurrency with UDP
 
 <!-- _class: lead -->
 
-You can find code snippets in the practical course material on [GitHub][practical-work].
+You can find code snippets in the practical course material on
+[GitHub][practical-work].
 
 ### Concurrent collections
 
-- To avoid concurrency issues, Java provides a set of **concurrent collections** that can be used to share data between threads.
-- These collections are **thread-safe**, which means that they can be accessed by multiple threads at the same time.
-- You can find all the concurrent collections in the [`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html) package.
-- Other solutions exist to manage concurrency (Futures, Mutex, Semaphores, ...). This will be covered in the PCO course.
+- To avoid concurrency issues, Java provides a set of **concurrent collections**
+  that can be used to share data between threads.
+- These collections are **thread-safe**, which means that they can be accessed
+  by multiple threads at the same time.
+- You can find all the concurrent collections in the
+  [`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html)
+  package.
+- Other solutions exist to manage concurrency (Futures, Mutex, Semaphores, ...).
+  This will be covered in the PCO course.
 
 ---
 
@@ -282,11 +294,14 @@ Some useful collections are:
 
 These collections might be useful for your practical work.
 
+![bg right contain](./images/concurrent-collections.png)
+
 ### Run multiple tasks in parallel
 
 <!-- _class: lead -->
 
-You can find code snippets in the practical course material on [GitHub][practical-work].
+You can find code snippets in the practical course material on
+[GitHub][practical-work].
 
 ## Find the practical work
 
