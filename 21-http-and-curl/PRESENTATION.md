@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of ChatGPT
-title: HEIG-VD DAI Course - HTTP and cURL
-description: HTTP and cURL for the DAI course at HEIG-VD, Switzerland
+title: HEIG-VD DAI Course - HTTP and curl
+description: HTTP and curl for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
@@ -56,7 +56,7 @@ headingDivider: 4
 [course-material-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
 
-# HTTP and cURL
+# HTTP and curl
 
 <!--
 _class: lead
@@ -93,7 +93,7 @@ _paginate: false
         - The browser
         - Postman
         - Insomnia
-        - cURL
+        - curl
     - HTTP in Java
 
 ## Table of contents
@@ -109,7 +109,7 @@ _paginate: false
 
 ---
 
-    - Use cURL to interact with HTTP
+    - Use curl to interact with HTTP
     - Use Java to interact with HTTP
 
 ## Theoretical content

@@ -81,7 +81,7 @@ The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
 **Please do it a soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review and feedback session.**
+it will help us to plan the practical work review.**
 
 ## Grading criteria
 
@@ -208,7 +208,7 @@ a general comment on your work and the final grade.
 If you have any questions about the evaluation, you can contact us!
 
 <details>
-<summary>Grading grid for the teaching staff with comments</summary>
+<summary>Grading grid template for the teaching staff</summary>
 
 ```markdown
 # Practical work 2 - Grading grid for First name Last name member 1 and First name Last name member 2
@@ -222,8 +222,6 @@ Here are the grades and comments for each criterion for the practical work.
 - 0.2 point - The work is done
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
-
-TODO
 
 ## General feedback
 

@@ -81,7 +81,7 @@ The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
 **Please do it a soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review and feedback session.**
+it will help us to plan the practical work review.**
 
 ## Grading criteria
 
@@ -186,7 +186,7 @@ a general comment on your work and the final grade.
 If you have any questions about the evaluation, you can contact us!
 
 <details>
-<summary>Grading grid for the teaching staff with comments</summary>
+<summary>Grading grid template for the teaching staff</summary>
 
 ```markdown
 # Practical work 1 - Grading grid for First name Last name member 1
@@ -202,51 +202,6 @@ Here are the grades and comments for each criterion for the practical work.
 - 0.2 point - The work is done
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
-
-### Category 1 - Git, GitHub and Markdown
-
-| #   | Criterion                                                               | Points | Number of points obtained | Comment |
-| --- | ----------------------------------------------------------------------- | -----: | ------------------------: | ------- |
-| 1   | The repository is managed using issues and pull requests                |    0.2 |                           |         |
-| 2   | The commits are signed                                                  |    0.2 |                           |         |
-| 3   | The issues, pull requests and commits messages are descriptive          |    0.2 |                           |         |
-| 4   | The whole team contributes to the project and can explain it in details |    0.2 |                           |         |
-| 5   | The repository contains a gitignore file to ignore unwanted files       |    0.2 |                           |         |
-| 6   | The repository contains test files to use with the CLI                  |    0.2 |                           |         |
-| 7   | The README is well structured and explains what the CLI is for          |    0.2 |                           |         |
-| 8   | The README explains how to build the CLI                                |    0.2 |                           |         |
-| 9   | The README explains how to use the CLI with examples and outputs        |    0.2 |                           |         |
-
-### Category 2 - Java, IntelliJ IDEA and Maven
-
-| #   | Criterion                                                           | Points | Number of points obtained | Comment |
-| --- | ------------------------------------------------------------------- | -----: | ------------------------: | ------- |
-| 10  | The codebase has all required files and is well structured          |    0.2 |                           |         |
-| 11  | The codebase is well documented                                     |    0.2 |                           |         |
-| 12  | The codebase is built and output an executable JAR file             |    0.2 |                           |         |
-| 13  | The CLI uses [picocli](https://picocli.info/) as a Maven dependency |    0.2 |                           |         |
-| 14  | The CLI displays a comprehensive help message on how to use the CLI |    0.2 |                           |         |
-
-### Category 3 - Java IOs
-
-| #   | Criterion                                                                                                         | Points | Number of points obtained | Comment |
-| --- | ----------------------------------------------------------------------------------------------------------------- | -----: | ------------------------: | ------- |
-| 15  | The CLI takes an input file and an output file as arguments                                                       |    0.2 |                           |         |
-| 16  | The CLI takes optional arguments for customization (such as the input file encoding and the output file encoding) |    0.2 |                           |         |
-| 17  | The CLI displays an error on invalid/missing inputs                                                               |    0.2 |                           |         |
-| 18  | The CLI correctly processes the input file and writes the result in the output file                               |    0.2 |                           |         |
-| 19  | The CLI displays a message on failure and a message on success with execution time                                |    0.2 |                           |         |
-| 20  | The CLI uses all the best practices regarding file processing                                                     |    0.2 |                           |         |
-
-### Category 4 - Presentation and questions
-
-| #   | Criterion                                                                            | Points | Number of points obtained | Comment |
-| --- | ------------------------------------------------------------------------------------ | -----: | ------------------------: | ------- |
-| 21  | The presentation is clear and well prepared                                          |    0.2 |                           |         |
-| 22  | Everyone speaks during the presentation, and the presentation lasts the time allowed |    0.2 |                           |         |
-| 23  | The presentation presents the CLI application                                        |    0.2 |                           |         |
-| 24  | A demo of the CLI application is made                                                |    0.2 |                           |         |
-| 25  | The answers to the questions are correct                                             |    0.2 |                           |         |
 
 ## General feedback
 

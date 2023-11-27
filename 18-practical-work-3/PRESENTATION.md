@@ -51,7 +51,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/118
 [illustration]:
-  https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
+  https://images.unsplash.com/photo-1636357582639-27620e21d7c5?fit=crop&h=720
 [practical-work]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/18-practical-work-3/COURSE_MATERIAL.md
 [practical-work-qr-code]:
@@ -77,15 +77,161 @@ _paginate: false
 ## Practical work 3
 
 - An UDP network application with its own application protocol
-- You can choose what the network application will do (you can be creative!)
-  - a chat application, a chess game, a file transfer application, ...
-- Publish your network application on GitHub
+- You can choose what the network application will do
+  - a sophisticated chat application, a game of cooperation, the simulation
+of an IoT network, ...
+- Share your application on GitHub with Docker and Docker Compose
 
 ![bg right:40%][illustration]
 
 ## Demo
 
-TODO
+Compile the project:
+
+```sh
+./mvnw clean package
+```
+
+Run the CLI without any arguments:
+
+```sh
+java -jar target/practical-work-3-demo-1.0-SNAPSHOT.jar
+```
+
+---
+
+```text
+Missing required subcommand
+Usage: practical-work-3-demo-1.0-SNAPSHOT.jar [-hV] [COMMAND]
+DAI Weather Station
+  -h, --help      Show this help message and exit.
+  -V, --version   Print version information and exit.
+Commands:
+  thermometer-emitter      Emits temperature values.
+  pressure-emitter         Emits pressure values.
+  humidity-emitter         Emits humidity values.
+  weather-station          Start an UDP multicast receiver.
+  weather-client           Start an UDP weather client.
+  list-network-interfaces  List all available network interfaces.
+```
+
+---
+
+Start the weather station:
+
+```sh
+java -jar target/practical-work-3-demo-1.0-SNAPSHOT.jar weather-station \
+  -i eth0 \
+  --port 9876 \
+  --server-port 1234
+```
+
+Output:
+
+```text
+Multicast receiver started (10.11.12.25:9876)
+Unicast receiver started (10.11.12.25:1234)
+```
+
+---
+
+Start the emitters:
+
+```sh
+java -jar target/practical-work-3-demo-1.0-SNAPSHOT.jar thermometer-emitter \
+  --delay=0 \
+  --frequency 10000 \
+  -i eth0 \
+  -p 9876
+
+java -jar target/practical-work-3-demo-1.0-SNAPSHOT.jar pressure-emitter \
+  --delay=0 \
+  --frequency 10000 \
+  -i eth0 \
+  -p 9876
+```
+
+---
+
+Output:
+
+```text
+Emitter of type thermometer started (10.11.12.25:9876).
+Multicasting measure : 30.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 23.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 28.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 19.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 15.0 to 239.0.0.1:9876 on interface en0
+```
+
+```text
+Emitter of type pressure started (10.11.12.25:9876).
+Multicasting measure : 982.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 1027.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 970.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 996.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 982.0 to 239.0.0.2:9876 on interface en0
+```
+
+---
+
+Start the weather client:
+
+```sh
+java -jar practical-work-3-demo-1.0-SNAPSHOT.jar weather-client
+```
+
+Output:
+
+```text
+Welcome to the weather client!
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+>
+```
+
+You can then select the measures you want to get.
+
+---
+
+```text
+> 1
+List all measures (1) or only the average? (2)
+> 1
+----------------------------------------
+Received measures: [30.0, 23.0, 28.0, 19.0, 15.0]
+----------------------------------------
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+>
+```
+
+The client will then display all the measures received from the weather station.
+
+---
+
+```text
+> 3
+List all measures (1) or only the average? (2)
+> 2
+----------------------------------------
+Received average: 991.11
+----------------------------------------
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+```
+
+The client will then display the average of the measures received from the
+weather station.
 
 ## Find the practical work
 
@@ -119,8 +265,32 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
+## Practical work review
+
+The practical work review will start at the end of this presentation in the
+**room B38**, at the very end of the corridor next to the door entry.
+
+We only have **10 minutes per group** (6 minutes of presentation, 3 minutes of
+questions). Please be prepared to present your work. You decide what you want to
+show us and how you want to present it.
+
+Come 5 minutes before your time slot with your computer.
+
+The order of presentation is random and is stated in the next slides.
+
+---
+
+<!-- -->
+**Please state your group on GitHub Discussions as soon as possible, even if you do not have a clear idea yet as
+it will help us to plan the practical work review.**
+<!-- -->
+
+| #   | Group                                 | Passage |
+| --- | ------------------------------------- | ------- |
+| 1   | TBD                                  | TBD   |
+
 ## Sources
 
 - Main illustration by
-  [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) on
-  [Unsplash](https://unsplash.com/photos/ScZwMqoxcls)
+  [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
+  [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)

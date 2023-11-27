@@ -8,7 +8,7 @@
 [illustration]:
   https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
 
-# HTTP and cURL - Course material
+# HTTP and curl - Course material
 
 <https://github.com/heig-vd-dai-course>
 
@@ -26,8 +26,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
+- [Install and configure curl](#install-and-configure-curl)
+  - [Install curl](#install-curl)
 - [HTTP](#http)
-- [HTTP versions](#http-versions)
   - [HTTP/0.9](#http09)
   - [HTTP/1.0](#http10)
   - [HTTP/1.1](#http11)
@@ -37,19 +38,20 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Structure of a HTTP request](#structure-of-a-http-request)
   - [Structure of a HTTP response](#structure-of-a-http-response)
   - [HTTP methods](#http-methods)
+  - [HTTP Body, Path and Query parameters, URL encoding](#http-body-path-and-query-parameters-url-encoding)
   - [HTTP status codes](#http-status-codes)
   - [HTTP headers](#http-headers)
-  - [HTTP Body, Query parameters, URL encoding](#http-body-query-parameters-url-encoding)
+  - [Content negotiation](#content-negotiation)
   - [HTTP caching](#http-caching)
   - [HTTP sessions (stateful vs. stateless)](#http-sessions-stateful-vs-stateless)
   - [HTTP cookies](#http-cookies)
 - [Interact with HTTP](#interact-with-http)
   - [The browser](#the-browser)
   - [Specialized tools (Postman, Insomnia, etc)](#specialized-tools-postman-insomnia-etc)
-  - [Command line tools (cURL, etc)](#command-line-tools-curl-etc)
+  - [Command line tools (curl, etc)](#command-line-tools-curl-etc)
 - [HTTP in Java](#http-in-java)
 - [Practical content](#practical-content)
-  - [Install and configure cURL](#install-and-configure-curl)
+  - [Install and configure curl](#install-and-configure-curl-1)
   - [Interact with an API](#interact-with-an-api)
   - [Use HTTP with Java](#use-http-with-java)
   - [Go further](#go-further)
@@ -81,13 +83,66 @@ In this final part, you will learn how to use the HTTP protocol to build network
 applications using all the features offered by this protocol.
 
 This will allow you to build more complex network applications, built on top of
-a solid foundation (HTTP).
+a solid foundation: HTTP.
+
+As HTTP offers many features and is a very complex protocol, this chapter will
+be a mixed between theory and practice to introduce you to the most important
+concepts.
+
+## Start and configure curl
+
+In this section, you will start [curl](https://curl.se/) using its official
+Docker image available on Docker Hub: <https://github.com/curl/curl-container>.
+
+### Start curl
+
+To start curl, run the following command:
+
+```sh
+# Pull the Docker image
+docker pull curlimages/curl:latest
+
+# Start the Docker image
+docker run --rm curlimages/curl:latest
+```
+
+The output should be similar to the following:
+
+```text
+Unable to find image 'curlimages/curl:latest' locally
+latest: Pulling from curlimages/curl
+96526aa774ef: Already exists
+b3ed3d59459c: Pull complete
+4f4fb700ef54: Pull complete
+Digest: sha256:4a3396ae573c44932d06ba33f8696db4429c419da87cbdc82965ee96a37dd0af
+Status: Downloaded newer image for curlimages/curl:latest
+curl: try 'curl --help' or 'curl --manual' for more information
+```
+
+Now start the container overwriting the default entrypoint to access the
+container:
+
+```sh
+# Start the Docker image
+docker run --rm -it --entrypoint /bin/sh curlimages/curl:latest
+```
+
+The output should be similar to the following:
+
+```text
+~ $
+```
+
+You are now in the container. You should be able to use `curl` inside the
+container for the following sections. To exit the container, type `exit` and
+press `Enter`.
+
+##
 
 ## HTTP
 
 Hyper Text Transfer Protocol (HTTP) is a protocol used to transfer data over the
-Web. It is a client-server protocol. It is based on the request-response
-paradigm.
+Web. It is a client-server protocol based on the request-response pattern.
 
 HTTP was initiated by Tim Berners-Lee at CERN in 1989. It was first used in 1990
 to transfer Hypertext Markup Language (HTML) documents.
@@ -105,14 +160,12 @@ HTTP uses the TCP port 80 by default.
 
 HTTPS is a secure version of HTTP. It uses the TCP port 443 by default.
 
-## HTTP versions
-
 There are several versions of HTTP. The most used are HTTP/1.1, HTTP/2 and
 HTTP/3.
 
 Each version of HTTP saw the introduction of many features over the years.
 
-The most important versions are:
+The different versions are:
 
 - HTTP/0.9 (1989)
 - HTTP/1.0 (1996)
@@ -235,14 +288,14 @@ A HTTP request is structured as follows:
 An example of a HTTP request:
 
 ```text
-GET / HTTP/1.1
-Host: gaps.heig-vd.ch
+GET / HTTP/2
+Host: github.com
 User-Agent: curl/8.1.2
 Accept: */*
 ```
 
-In this example, we request the resource `/` from the server `gaps.heig-vd.ch`
-using the HTTP method `GET`.
+In this example, we request the resource `/` from the server `github.com` using
+the HTTP method `GET`.
 
 The user agent is `curl/8.1.2`, a command line tool used to interact with HTTP
 servers that you will use later in this chapter.
@@ -263,32 +316,23 @@ HTTP/<HTTP version> <HTTP status code> <HTTP status message>
 An example of a HTTP response:
 
 ```text
-HTTP/1.1 200 OK
-Date: Mon, 20 Nov 2023 15:00:11 GMT
-Server: Apache
-Last-Modified: Thu, 23 Feb 2023 15:00:12 GMT
-ETag: "17df-5f55f450264dd"
-Accept-Ranges: bytes
-Content-Length: 6111
-Vary: Accept-Encoding
-X-Content-Type-Options: nosniff
-X-Frame-Options: sameorigin
-Content-Type: text/html; charset=ISO-8859-1
+HTTP/2 200
+server: GitHub.com
+date: Tue, 21 Nov 2023 08:00:24 GMT
+content-type: text/html; charset=utf-8
+set-cookie: _gh_sess=CaveC7OgYR%2BQQtcN%2F9uZvaLfNZ3EUdc0%2BY%2B04ZnCet6%2BIdEMLo%2FevjS%2FL9IEU1A8mY7wKgAAOJ0brPGNx49joJYKTanlhMzV89SsYiSZaigPo3dCW%2BAT1OH2x8U6fL5DxbJuzDAaGgXRC5EZI%2F4h9VzYlbtBLwbYzBUTDZUwH5BEkWZEal64fnUidxSYIaGXDrIF0H0B27EphGTGx6kBvZH%2FheCDly5SD75c6JbwI2G0btGatHY2C%2FKQ8w3kFj6xwpE2l%2FVGsAZCRkrGrwyAug%3D%3D--kAh%2FKUJYXFDmqmR0--qAuo%2B7YrFaOKV1xkIakB%2Bg%3D%3D; Path=/; HttpOnly; Secure; SameSite=Lax
+set-cookie: _octo=GH1.1.103194379.1700553633; Path=/; Domain=github.com; Expires=Thu, 21 Nov 2024 08:00:33 GMT; Secure; SameSite=Lax
+set-cookie: logged_in=no; Path=/; Domain=github.com; Expires=Thu, 21 Nov 2024 08:00:33 GMT; HttpOnly; Secure; SameSite=Lax
+x-github-request-id: AB3F:291E:81A46DF6:834CD16E:655C63A1
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-
-<head>
-  <title>GAPS/SACHEM</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <LINK rel="stylesheet" href="style.css" type="text/css">
-  <link rel="shortcut icon" href="/img/favicon.ico" />
-</head>
-
-<body>
-  [...]
-</body>
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    [...]
+  </head>
+  <body>
+    [...]
+  </body>
 </html>
 ```
 
@@ -296,10 +340,10 @@ In this example, the server responds with the resource `/` using the HTTP status
 code `200` (OK).
 
 The `Content-Type` header tells the client that the content is HTML with the
-charset `ISO-8859-1`.
+charset `UTF-8`.
 
-The `Content-Length` header tells the client that the content is 6111 bytes
-long.
+The `Set-Cookie` headers are used to set cookies on the client. Cookies are used
+to store information on the client.
 
 Other headers are used to tell the client how to interpret the content but are
 not mandatory and some are out of the scope of this course.
@@ -323,16 +367,16 @@ accessed using the HTTP methods `GET`, `POST`, `PATCH` and `DELETE`:
 
 - `GET /api/users` - Get all users
 - `POST /api/users` - Create a new user
-- `PATCH /api/users/{user-id}` - Partially update user with id `{user-id}`
-- `DELETE /api/users/{user-id}` - Delete user with id `{user-id}`
+- `PATCH /api/users/{user-id}` - Partially update user with ID `{user-id}`
+- `DELETE /api/users/{user-id}` - Delete user with ID `{user-id}`
+
+### HTTP Body, Path and Query parameters, URL encoding
 
 ### HTTP status codes
 
 ### HTTP headers
 
-#### Content negotiation
-
-### HTTP Body, Query parameters, URL encoding
+### Content negotiation
 
 ### HTTP caching
 
@@ -346,13 +390,13 @@ accessed using the HTTP methods `GET`, `POST`, `PATCH` and `DELETE`:
 
 ### Specialized tools (Postman, Insomnia, etc)
 
-### Command line tools (cURL, etc)
+### Command line tools (curl, etc)
 
 ## HTTP in Java
 
 ## Practical content
 
-### Install and configure cURL
+### Install and configure curl
 
 ### Interact with an API
 
@@ -372,7 +416,7 @@ Talk about the different version of the HTTP client
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- Try to use Insomnia instead of cURL to interact with the API!
+- Try to use Insomnia instead of curl to interact with the API!
 - Try to find another API and interact with it!
 
 ## Conclusion

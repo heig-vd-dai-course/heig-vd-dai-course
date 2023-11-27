@@ -31,7 +31,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
   - [Category 2 - Docker and Docker Compose](#category-2---docker-and-docker-compose)
   - [Category 3 - SSH and SCP](#category-3---ssh-and-scp)
-  - [Category 4 - HTTP and cURL](#category-4---http-and-curl)
+  - [Category 4 - HTTP and curl](#category-4---http-and-curl)
   - [Category 5 - Web infrastructures](#category-5---web-infrastructures)
   - [Category 6 - Presentation and questions](#category-6---presentation-and-questions)
 - [Constraints](#constraints)
@@ -54,7 +54,7 @@ and will be deployed on a virtual machine and accessible from the Internet using
 a domain name.
 
 You can interact with the web application using your web browser and/or a
-command line tool such as cURL or you can develop your own application client.
+command line tool such as curl or you can develop your own application client.
 
 The API will be defined by you.
 
@@ -339,7 +339,7 @@ The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
 **Please do it a soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review and feedback session.**
+it will help us to plan the practical work review.**
 
 ## Grading criteria
 
@@ -379,12 +379,12 @@ repository!
 | 11  | You can access the server without a password using a SSH key                |    0.2 |
 | 12  | The repository is cloned using SSH on the server to run the web application |    0.2 |
 
-### Category 4 - HTTP and cURL
+### Category 4 - HTTP and curl
 
 | #   | Criterion                                                                                                            | Points |
 | --- | -------------------------------------------------------------------------------------------------------------------- | -----: |
 | 13  | The web application makes usage of at least the following HTTP verbs: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`      |    0.2 |
-| 14  | The web application can be used using a web browser, a command line tool such as cURL or a custom application client |    0.2 |
+| 14  | The web application can be used using a web browser, a command line tool such as curl or a custom application client |    0.2 |
 
 ### Category 5 - Web infrastructures
 
@@ -404,7 +404,7 @@ repository!
 | 21  | The presentation presents the access to the server and how to clone and run the web application                    |    0.2 |
 | 22  | The presentation presents the configuration of the DNS zone with its (sub)domain names                             |    0.2 |
 | 23  | The presentation presents the web application                                                                      |    0.2 |
-| 24  | A demo of the web application is made using the deployed version of the application (with cURL and/or the browser) |    0.2 |
+| 24  | A demo of the web application is made using the deployed version of the application (with curl and/or the browser) |    0.2 |
 | 25  | The answers to the questions are correct                                                                           |    0.2 |
 
 ## Constraints
@@ -469,7 +469,7 @@ a general comment on your work and the final grade.
 If you have any questions about the evaluation, you can contact us!
 
 <details>
-<summary>Grading grid for the teaching staff with comments</summary>
+<summary>Grading grid template for the teaching staff</summary>
 
 ```markdown
 # Practical work 4 - Grading grid for First name Last name member 1 and First name Last name member 2
@@ -483,8 +483,6 @@ Here are the grades and comments for each criterion for the practical work.
 - 0.2 point - The work is done
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
-
-TODO
 
 ## General feedback
 

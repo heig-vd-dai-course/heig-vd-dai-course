@@ -123,23 +123,6 @@ folder of the course repository.
 
 Do you have any questions?
 
-## Practical work review
-
-The practical work review will start at the end of this presentation.
-
-We only have **5 minutes per group**. Please be prepared to present your work.
-
-The order of presentation is random and is stated in the next slides.
-
-Do not worry, it is not an exam, it is just a way for us to see how you
-understood the practical work. 🙂
-
----
-
-| #   | Group |
-| --- | ----- |
-| 1   | TODO  |
-
 ## Feedback
 
 Your feedback helps us know **what what you liked and what you disliked** in

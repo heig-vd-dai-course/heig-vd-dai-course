@@ -180,6 +180,60 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
+## Practical work review
+
+The practical work review will start at the end of this presentation in the
+**room B38**, at the very end of the corridor next to the door entry.
+
+We only have **5 minutes per group**. Please be prepared to present your work.
+You decide what you want to show us and how you want to present it.
+
+Come 5 minutes before your time slot with your computer.
+
+The order of presentation is random and is stated in the next slides.
+
+---
+
+<!--
+**Please state your group on GitHub Discussions as soon as possible, even if you do not have a clear idea yet as
+it will help us to plan the practical work review.**
+-->
+
+| #   | Group                                   | Passage |
+| --- | --------------------------------------- | ------- |
+| 1   | Alan Sottile and Calvin Graf            | 13:40   |
+| 2   | Lionel Pollien and Arthur Menétrey      | 13:46   |
+| 3   | Thomas Vuilleumier and Sebastian Diaz   | 13:52   |
+| 4   | Olin Bourquin and Kevin Farine          | 13:58   |
+| 5   | Guillaume Trüeb and Gwendal Piemontesi  | 14:04   |
+| 6   | Esteban Lopez                           | 14:10   |
+| 7   | Loïc Herman                             | 14:16   |
+| 8   | Alexandre Philibert and Valentin Ricard | 14:22   |
+
+---
+
+| #   | Group                           | Passage |
+| --- | ------------------------------- | ------- |
+| 9   | Rémy Bleuer                     | 14:28   |
+| 10  | Theodros Mulugeta               | 14:34   |
+|     | Break                           |         |
+| 11  | Sarah Jallon                    | 17:00   |
+| 12  | Alexandre Iorio                 | 17:06   |
+| 13  | Colin Jaques                    | 17:12   |
+| 14  | Romain Humair and Lucas Lattion | 17:18   |
+| 15  | Slimani Walid                   | 17:24   |
+
+---
+
+| #   | Group                                 | Passage |
+| --- | ------------------------------------- | ------- |
+| 16  | Aurélien Richard                      | 17:30   |
+| 17  | Massimo Stefani and Jonas Troeltsch   | 17:36   |
+| 18  | Ahmad Jano                            | 17:42   |
+| 19  | Simon Guggisberg and Jeremiah Steiner | 17:48   |
+| 20  | Sergey Komarov                        | 17:54   |
+| 21  | Pirakas Anthon                        | 18:00   |
+
 ## Sources
 
 - Main illustration by
