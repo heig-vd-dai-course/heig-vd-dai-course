@@ -228,10 +228,23 @@ Please enter the measures you want to get
 2. Humidity
 3. Pressure
 4. Quit
+> 4
 ```
 
 The client will then display the average of the measures received from the
 weather station.
+
+## Implementation details and tips
+
+TODO: Add the schema
+
+### Concurrency
+
+TODO: Add details about concurrency (problem and solution)
+
+This is not a concurrency course! We will not penalize you if you do not use
+concurrency in your application. However, we think it is a good opportunity to
+learn about concurrency and we will be happy to help you if you want to use it.
 
 ## Find the practical work
 
