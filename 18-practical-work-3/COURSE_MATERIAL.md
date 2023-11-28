@@ -222,6 +222,8 @@ public Integer call() {
   try {
       executorService.submit(this::worker1); // Start the first task
       executorService.submit(this::worker2); // Start the second task
+
+      executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS); // Wait for termination
   } catch (Exception e) {
       e.printStackTrace();
       return 1;
@@ -243,8 +245,8 @@ public Integer worker2() {
 
 ## Group composition
 
-You will work in groups between two and three students. You can choose your
-partner. If you do not have a partner, we will assign you one.
+As this practical work is more complex than the previous ones, you can work in groups between two and three students. You can choose your
+partners. If you do not have a partner or a group, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following

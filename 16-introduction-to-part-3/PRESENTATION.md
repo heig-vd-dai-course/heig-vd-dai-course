@@ -90,7 +90,7 @@ The answer was:
 
 <!-- _class: lead -->
 
-## How does streaming work (simplified)
+## How does streaming work (simplified)?
 
 1. A web browser connects to a service (YouTube, Twitch, etc.)
 2. The service (a server) sends data to the client continuously

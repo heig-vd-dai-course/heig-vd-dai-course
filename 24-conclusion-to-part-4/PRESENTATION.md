@@ -74,47 +74,84 @@ _paginate: false
 
 ## What have you learned?
 
-- TODO
+- How and why HTTP can be used to build web applications
+  - Methods, status codes, headers, etc.
+- How HTTP features can be used to build web infrastructures
+  - Reverse proxies, load balancers, etc.
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
 ## What have you accomplished?
 
-- TODO
+- You have acquired and set up a server on the HEIG-VD network
+- You have created a simple (REST) API to deploy on your server
+- You have acquired and configured a domain name to use for yourself
+- You have deployed your API on your server
 
 ![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
 
+## You have closed the loop
+
+<!-- _class: lead -->
+
+With this final part, you have closed the loop of the course. You can be proud of
+yourself!
+
 ## Evaluation
 
-You might be asked questions about the theoretical content, the practical
-content and the practical work.
+In order to validate this part of the course, you will have to pass an
+evaluation. The questions will be in French and you can answer them in French or
+English.
 
-We might ask you to analyze or code a small program to solve a problem, describe
-a schema and/or explain a concept.
+The evaluation will be in two parts:
 
-All typical questions are at the end of each chapter you studied.
+1. A theoretical part (35 minutes)
+2. A practical part (25 minutes)
 
-The evaluation will be done on the computer. You will have to be connected to
-the
-[VPN](https://intranet.heig-vd.ch/services/informatique/poste-de-travail/reseau/vpn/Pages/vpn.aspx).
-It is **mandatory**.
+A break of 10 minutes will be given between the two parts.
 
 ---
 
-You can have access to the course material including your own notes and the
-[official Java documentation](https://docs.oracle.com/en/java/javase/17/docs/api/).
-Other websites are not allowed.
+The following chapters will be evaluated:
 
-No communication between students is allowed.
+- [HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/21-http-and-curl)
+- [Web infrastructure](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/22-web-infrastructures)
 
-ChatGPT, Copilot or any other AI assisted tools are not allowed during the
-evaluation.
+### Theoretical part
+
+The evaluation will be done on paper. You might be asked questions about the
+theoretical content, the practical content and elements seen in the practical
+work.
+
+You can only have access to your own notes in paper format. Your notes must fit
+on one sheet of paper (recto). They can contain anything useful to you:
+definitions, schemas, code snippets, etc. You will be able to use them during
+the exam at the end of the semester.
+
+All typical questions are at the end of each chapter you studied.
+
+### Practical part
+
+The evaluation will be done on the computer. You will be asked to create a
+simple program using vanilla Java (`java` and `javac`). You will then send us
+your code by email (old-school but it the easiest way).
+
+You can use all the tools you want: your own IDE, ChatGPT, Copilot, the official
+Java documentation, your old practical works, etc.
+
+The statement will be on paper. You are not allowed to copy it in electronic
+format to feed it to ChatGPT or Copilot.
+
+### Resources
+
+For both parts, no communication between students is allowed and external help
+from a human is not allowed. You must do the work yourself.
 
 Cheating is not allowed. If you are caught cheating, you will get a 1 for the
 evaluation.
 
 All previous evaluations are available in the
-[`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+[`evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
 
 ## Questions

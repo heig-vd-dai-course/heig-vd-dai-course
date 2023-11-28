@@ -21,7 +21,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
-- [Guidelines](#guidelines)
+- [Tips for the practical work](#tips-for-the-practical-work)
   - [Obtain a virtual machine](#obtain-a-virtual-machine)
   - [Install and configure the virtual machine](#install-and-configure-the-virtual-machine)
   - [Obtain a domain name](#obtain-a-domain-name)
@@ -80,7 +80,7 @@ methodology but please do not copy/paste code from other groups.
 - Deploy the web applications on the virtual machine
 - Access the web applications with a web browser and a domain name
 
-## Guidelines
+## Tips for the practical work
 
 In order for this practical work to be successful, you must follow the following
 steps:
@@ -317,20 +317,25 @@ directory.
 >
 > They are not required for this practical work.
 
+If you are able to access the Traefik dashboard and the whoami application from
+the Internet, you have successfully configured Traefik to use HTTPS with a
+domain name.
+
+You are then ready to start the practical work!
+
 ## Group composition
 
-As the ned of the semester is approaching, we know you have a lot of work to do
+As the end of the semester is approaching, we know you have a lot of work to do
 for other courses.
 
-This is why you can work in groups between two and four students. You can choose
+As this practical work is more complex than the previous ones, you can work in groups between two and four students. You can choose
 your partners. If you do not have a partner or a group, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 4 - First name Last name member 1
-  and First name Last name member 2
+- **Title**: DAI 2023-2024 - Practical work 4 - First name Last name member 1, First name Last name member 2, First name Last name member 3 and First name Last name member 4
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work

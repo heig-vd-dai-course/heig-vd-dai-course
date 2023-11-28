@@ -69,21 +69,55 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
+## _Do you know how does streaming work?_
+
+<!-- _class: lead -->
+
+Do you remember this question from part 3?
+
+## How does streaming work (simplified)?
+
+The answer was:
+
+> 1. A web browser connects to a service (YouTube, Twitch, etc.)
+> 2. The service (a server) sends data to the client continuously
+> 3. The client displays the data as it comes
+> 4. If the bandwidth is bad, the client adapts the quality of the stream
+
+## Up until now, you have mostly worked with low-level protocols such as TCP and UDP
+
+<!-- _class: lead -->
+
+These protocols are the foundation of the Internet and network communications.
+
+Today, you will learn about a higher-level protocol: HTTP.
+
 ## What will you learn?
 
-- TODO
+- Learn **how** and **why HTTP is used widely** to **build web applications**
+- Learn how to use **HTTP in Java to build simple (REST) APIs**
+- Learn how to **set up web infrastructure** to host web applications:
+  - **Reverse proxy**
+  - **Load balancer**
 
 ![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
 ## What will you accomplish?
 
-- TODO
+- Build a **simple (REST) API** in Java
+- **Acquire**, **install** and **set up a server**
+- **Acquire** a (free) **domain name**
+- **Deploy** a web application on the server with a **reverse proxy**
+- **Access** the web application from the **Internet**
 
 ![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 
-## Some preparation
+## Closing the loop
 
-I need to know which group you are in.
+<!-- _class: lead -->
+
+This part will be the last one of the course. This is the last step to close
+the loop (from code to production).
 
 ## Sources
 

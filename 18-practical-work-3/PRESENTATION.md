@@ -77,11 +77,10 @@ _paginate: false
 ## Practical work 3
 
 - An UDP network application
-- You can choose what the network application will do
-  - a sophisticated chat application, a game of cooperation, the simulation of
-    an IoT network, ...
+- You can choose what the network application will do (a sophisticated chat application, a game of cooperation, the simulation of
+    an IoT network, ...)
 - Share your application on GitHub with Docker and Docker Compose
-- Between 2 and 3 people per group
+- Groups between 2 and 3 students
 
 ![bg right:40%][illustration]
 
@@ -248,7 +247,7 @@ weather station.
 The next slides present the implementation details and some tips to manage
 concurrency.
 
-You can find mode details in the practical course material on
+You can find more details in the practical course material on
 [GitHub][practical-work].
 
 ---
@@ -267,7 +266,7 @@ will be happy to help you if you want to use it.
 
 <!-- _class: lead -->
 
-You can find code snippets in the practical course material on
+You can find more details in the practical course material on
 [GitHub][practical-work].
 
 ### Concurrent collections
@@ -300,7 +299,7 @@ These collections might be useful for your practical work.
 
 <!-- _class: lead -->
 
-You can find code snippets in the practical course material on
+You can find more details in the practical course material on
 [GitHub][practical-work].
 
 ## Find the practical work
