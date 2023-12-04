@@ -5,11 +5,11 @@ the course.
 
 ## Evaluations 1
 
-- [Evaluation 2023-2024](./EVALUATION_1_2023_2024.md)
+- [Evaluation 1 - 2023-2024](./EVALUATION_1_2023_2024.md)
 
 ## Evaluations 2
 
-- _None yet_
+- [Evaluation 2 - 2023-2024](./EVALUATION_2_2023_2024.md)
 
 ## Evaluations 3
 
