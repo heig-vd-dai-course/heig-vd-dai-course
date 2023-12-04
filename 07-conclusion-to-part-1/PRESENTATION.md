@@ -122,7 +122,7 @@ Cheating is not allowed. If you are caught cheating, you will get a 1 for the
 evaluation.
 
 All previous evaluations are available in the
-[`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+[`evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
 
 ## Questions

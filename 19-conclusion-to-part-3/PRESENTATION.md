@@ -74,47 +74,79 @@ _paginate: false
 
 ## What have you learned?
 
-- TODO
+- Network programming with UDP with all its elements:
+  - reliability
+  - unicast, broadcast and multicast
+  - messaging patterns
+  - service discovery protocols
+- The differences between TCP and UDP
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
 ## What have you accomplished?
 
-- TODO
+- You have implemented an UDP application in Java with some concurrency patterns (for some)
+- You have defined your own application protocol (again, yeah!)
+- Deeper usage of Docker and Docker Compose to build, share and run your network application
 
 ![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
 
 ## Evaluation
 
-You might be asked questions about the theoretical content, the practical
-content and the practical work.
+In order to validate this part of the course, you will have to pass an
+evaluation. The questions will be in French and you can answer them in French or
+English.
 
-We might ask you to analyze or code a small program to solve a problem, describe
-a schema and/or explain a concept.
+The evaluation will be in two parts:
 
-All typical questions are at the end of each chapter you studied.
+1. A theoretical part (35 minutes)
+2. A practical part (25 minutes)
 
-The evaluation will be done on the computer. You will have to be connected to
-the
-[VPN](https://intranet.heig-vd.ch/services/informatique/poste-de-travail/reseau/vpn/Pages/vpn.aspx).
-It is **mandatory**.
+A break of 10 minutes will be given between the two parts.
 
 ---
 
-You can have access to the course material including your own notes and the
-[official Java documentation](https://docs.oracle.com/en/java/javase/17/docs/api/).
-Other websites are not allowed.
+The following chapters will be evaluated:
 
-No communication between students is allowed.
+- [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09-define-an-application-protocol)
+- [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10-docker-and-docker-compose)
+- [Java UDP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/17-java-udp-programming)
 
-ChatGPT, Copilot or any other AI assisted tools are not allowed during the
-evaluation.
+### Theoretical part
+
+The evaluation will be done on paper. You might be asked questions about the
+theoretical content, the practical content and elements seen in the practical
+work.
+
+You can only have access to your own notes in paper format. Your notes must fit
+on one sheet of paper (recto). They can contain anything useful to you:
+definitions, schemas, code snippets, etc. You will be able to use them during
+the exam at the end of the semester.
+
+All typical questions are at the end of each chapter you studied.
+
+### Practical part
+
+The evaluation will be done on the computer. You will be asked to create a
+simple program using vanilla Java (`java` and `javac`). You will then send us
+your code by email (old-school but it the easiest way).
+
+You can use all the tools you want: your own IDE, ChatGPT, Copilot, the official
+Java documentation, your old practical works, etc.
+
+The statement will be on paper. You are not allowed to copy it in electronic
+format to feed it to ChatGPT or Copilot.
+
+### Resources
+
+For both parts, no communication between students is allowed and external help
+from a human is not allowed. You must do the work yourself.
 
 Cheating is not allowed. If you are caught cheating, you will get a 1 for the
 evaluation.
 
 All previous evaluations are available in the
-[`archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+[`evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 folder of the course repository.
 
 ## Questions

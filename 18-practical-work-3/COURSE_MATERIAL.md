@@ -70,10 +70,12 @@ of an Internet of Things (IoT) network, etc.
 
 ## Tips for the practical work
 
-In order for this practical work to be successful, you might need to the following tips to help you.
+In order for this practical work to be successful, you might need to the
+following tips to help you.
 
-The type of application you want to create will determine if you need those tips or not. Some
-elements mentioned here might not be relevant for your application so feel free to ignore them.
+The type of application you want to create will determine if you need those tips
+or not. Some elements mentioned here might not be relevant for your application
+so feel free to ignore them.
 
 ### Concurrency with UDP
 
@@ -177,8 +179,8 @@ public class UnicastReceiver extends AbstractReceiver {
 
 ### Concurrent collections
 
-Java provides a set of concurrent collections that can be used to manage data shared
-between threads.
+Java provides a set of concurrent collections that can be used to manage data
+shared between threads.
 
 Using these data structures, you can avoid using `synchronized` blocks or
 methods. It is more efficient and easier to use.
@@ -200,14 +202,16 @@ Some useful collections are:
 If you want to run multiple (different) tasks in parallel, you can use the
 following snippet in your code.
 
-As seen in the [Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-tcp-programming)
+As seen in the
+[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-tcp-programming)
 chapter, you can use
 `ExecutorService executorService = Executors.newFixedThreadPool(2);` to create a
 pool of $n$ threads, one for each task to run in parallel. Then you can use the
 `submit` method and give as parameter the method to run.
 
-For more details regarding the `submit` method, check the
-official Java documentation: <https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html#submit(java.util.concurrent.Callable)>.
+For more details regarding the `submit` method, check the official Java
+documentation:
+<https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html#submit(java.util.concurrent.Callable)>.
 
 Here is a simple example to run two tasks in parallel:
 
@@ -218,6 +222,8 @@ public Integer call() {
   try {
       executorService.submit(this::worker1); // Start the first task
       executorService.submit(this::worker2); // Start the second task
+
+      executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS); // Wait for termination
   } catch (Exception e) {
       e.printStackTrace();
       return 1;
@@ -239,14 +245,15 @@ public Integer worker2() {
 
 ## Group composition
 
-You will work in groups between two and three students. You can choose your
-partner. If you do not have a partner, we will assign you one.
+As this practical work is more complex than the previous ones, you can work in groups between two and three students. You can choose your
+partners. If you do not have a partner or a group, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 3 - First name Last name member 1, First name Last name member 2 and First name Last name member 3
+- **Title**: DAI 2023-2024 - Practical work 3 - First name Last name member 1,
+  First name Last name member 2 and First name Last name member 3
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
