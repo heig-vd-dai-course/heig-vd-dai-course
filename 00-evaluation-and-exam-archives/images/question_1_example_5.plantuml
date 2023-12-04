@@ -1,0 +1,4 @@
+@startuml
+client -> server: INVALID_COMMAND
+server -> client: INVALID_COMMAND
+@enduml

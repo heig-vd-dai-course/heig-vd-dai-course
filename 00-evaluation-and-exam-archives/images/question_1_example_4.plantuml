@@ -1,0 +1,4 @@
+@startuml
+client -> server: ORDER product_name quantity
+server -> client: OK
+@enduml

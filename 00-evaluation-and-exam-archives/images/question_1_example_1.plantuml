@@ -1,0 +1,4 @@
+@startuml
+client -> server: VIEW_CATEGORIES
+server -> client: CATEGORIES <category_name_1> <category_name_2> <category_name_3> ...
+@enduml

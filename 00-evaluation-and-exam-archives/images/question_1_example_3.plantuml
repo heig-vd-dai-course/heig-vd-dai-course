@@ -1,0 +1,4 @@
+@startuml
+client -> server: VIEW_PRODUCT product_name
+server -> client: PRODUCT <product_name> <product_description> <product_category> <product_price> <product_quantity>
+@enduml

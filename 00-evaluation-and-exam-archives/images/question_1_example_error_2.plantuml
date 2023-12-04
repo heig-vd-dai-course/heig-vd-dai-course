@@ -1,0 +1,4 @@
+@startuml
+client -> server: VIEW_PRODUCT product_name
+server -> client: ERROR 1
+@enduml
