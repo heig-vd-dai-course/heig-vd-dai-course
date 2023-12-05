@@ -591,7 +591,7 @@ Try the other methods using curl:
 
 ```sh
 # Send a POST request to the server
-curl -v -X POST http://host.docker.internal:8080
+curl -v -X POST "http://host.docker.internal:8080"
 
 # Send a PATCH request to the server
 curl -v -X PATCH http://host.docker.internal:8080
