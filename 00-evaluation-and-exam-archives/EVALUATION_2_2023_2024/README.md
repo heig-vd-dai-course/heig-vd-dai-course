@@ -57,8 +57,8 @@ visualiser et de commander des produits en ligne.
 
 ## Section 2 - Protocole de transport (2 points)
 
-Le protocole Achat'instant utilise le protocole TCP (0.5 point) pour assurer le transport
-des données. Le serveur s'exécute sur le port 6343 (0.5 point).
+Le protocole Achat'instant utilise le protocole TCP (0.5 point) pour assurer le
+transport des données. Le serveur s'exécute sur le port 6343 (0.5 point).
 
 La connexion initiale doit se faire par le client (0.5 point).
 
@@ -66,13 +66,15 @@ Une fois la connexion établie, le client peut envoyer une commande au serveur.
 
 Si la commande est valide, le serveur exécute la commande et envoie une réponse
 au client. Si la commande n'est pas valide, le serveur envoie un message
-d'erreur au client. Le client peut décider de couper la connexion à tout moment. Ceci engendre la
-fermeture de la connexion côté serveur de façon automatique. (0.5 point)
+d'erreur au client. Le client peut décider de couper la connexion à tout moment.
+Ceci engendre la fermeture de la connexion côté serveur de façon automatique.
+(0.5 point)
 
 ## Section 3 - Messages (11 points)
 
-Les messages envoyés par le client et le serveur sont des messages textes (0.5 point) encodés en UTF-8 (0.5 point). Les
-messages envoyés par le client sont sous la forme suivante :
+Les messages envoyés par le client et le serveur sont des messages textes (0.5
+point) encodés en UTF-8 (0.5 point). Les messages envoyés par le client sont
+sous la forme suivante :
 
 ### Visualiser les catégories
 
@@ -85,7 +87,8 @@ VIEW_CATEGORIES
 #### Réponse (1 points)
 
 - `CATEGORIES <category_name_1> <category_name_2> <category_name_3> ...`: la
-  liste des catégories disponibles. Les catégories sont séparées par des espaces.
+  liste des catégories disponibles. Les catégories sont séparées par des
+  espaces.
 
 ### Visualiser les produits
 
@@ -209,9 +212,9 @@ IMAP.
 <details>
 <summary>Afficher la réponse</summary>
 
-Le protocole SMTP est utilisé pour envoyer des courriels (1 point). Le protocole POP3 est
-utilisé pour récupérer des courriels (1 point). Le protocole IMAP est utilisé pour
-synchroniser des courriels entre plusieurs appareils (1 point).
+Le protocole SMTP est utilisé pour envoyer des courriels (1 point). Le protocole
+POP3 est utilisé pour récupérer des courriels (1 point). Le protocole IMAP est
+utilisé pour synchroniser des courriels entre plusieurs appareils (1 point).
 
 </details>
 
@@ -226,18 +229,19 @@ Répondez avec vos propres mots.
 <details>
 <summary>Afficher la réponse</summary>
 
-On peut se connecter à un serveur distant avec le protocole SSH (1 point). Pour se
-connecter sans devoir entrer un mot de passe à chaque fois, il faut utiliser une
-paire de clés SSH. (1 point)
+On peut se connecter à un serveur distant avec le protocole SSH (1 point). Pour
+se connecter sans devoir entrer un mot de passe à chaque fois, il faut utiliser
+une paire de clés SSH. (1 point)
 
 En générant une paire de clés SSH, on obtient une clé privée et une clé
-publique. La clé privée doit être gardée secrète (1 point) et la clé publique peut être
-partagée avec d'autres personnes (1 point).
+publique. La clé privée doit être gardée secrète (1 point) et la clé publique
+peut être partagée avec d'autres personnes (1 point).
 
 La clé publique doit être ajoutée sur le serveur distant dans le fichier
-`~/.ssh/authorized_keys`. (1 point) Lorsque l'on se connecte au serveur distant, le
-serveur va vérifier si la clé publique utilisée pour la connexion se trouve dans
-le fichier `~/.ssh/authorized_keys`. Si c'est le cas, la connexion est acceptée.
+`~/.ssh/authorized_keys`. (1 point) Lorsque l'on se connecte au serveur distant,
+le serveur va vérifier si la clé publique utilisée pour la connexion se trouve
+dans le fichier `~/.ssh/authorized_keys`. Si c'est le cas, la connexion est
+acceptée.
 
 </details>
 
@@ -260,10 +264,12 @@ Affirmations sur les sockets, vrai au faux ?
 
 - Un socket est un point de communication entre deux machines
 - Un socket client est un socket qui écoute sur un port
-- Si un service tourne sur le port 80, il est possible démarrer un socket server sur ce même port
+- Si un service tourne sur le port 80, il est possible démarrer un socket server
+  sur ce même port
 - Les sockets gèrent la concurrence par défaut
 - Un socket client est identifié uniquement par un port
-- Lors de la création d'un socket, il est toujours nécessaire de définir l'encodage avec lequel les données seront envoyées et reçues
+- Lors de la création d'un socket, il est toujours nécessaire de définir
+  l'encodage avec lequel les données seront envoyées et reçues
 
 <details>
 <summary>Afficher la réponse</summary>

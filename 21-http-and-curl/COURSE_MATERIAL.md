@@ -460,6 +460,7 @@ categories:
 
   - `101` - Switching Protocols (the server switches to a different protocol)
   - `102` - Processing (the server is processing the request)
+
 - `2xx` - Successful responses
 
   The most common successful responses are:
@@ -480,14 +481,14 @@ categories:
   - `304` - Not Modified (the resource has not been modified since the last
     request)
 
-- `4xx` - Client error responses
-  The most common client error responses are:
+- `4xx` - Client error responses The most common client error responses are:
 
   - `400` - Bad Request (the request is malformed)
   - `401` - Unauthorized (the request requires authentication)
   - `403` - Forbidden (the request is forbidden)
   - `404` - Not Found (the resource does not exist)
-  - `405` - Method Not Allowed (the HTTP method is not allowed for this resource)
+  - `405` - Method Not Allowed (the HTTP method is not allowed for this
+    resource)
   - `409` - Conflict (the request could not be processed because of a conflict)
   - `410` - Gone (the resource is no longer available and has been removed)
   - `429` - Too Many Requests (the client has sent too many requests in a given
@@ -497,16 +498,16 @@ categories:
 
   The most common server error responses are:
 
-  - `500` - Internal Server Error (the server encountered an unexpected condition
-    that prevented it from fulfilling the request)
+  - `500` - Internal Server Error (the server encountered an unexpected
+    condition that prevented it from fulfilling the request)
   - `501` - Not Implemented (the server does not support the functionality
     required to fulfill the request)
-  - `502` - Bad Gateway (the server received an invalid response from an upstream
-    server)
+  - `502` - Bad Gateway (the server received an invalid response from an
+    upstream server)
   - `503` - Service Unavailable (the server is currently unable to handle the
     request due to a temporary overload or scheduled maintenance)
-  - `504` - Gateway Timeout (the server did not receive a timely response from an
-    upstream server)
+  - `504` - Gateway Timeout (the server did not receive a timely response from
+    an upstream server)
 
 The default status code is `200` (OK). This means that you can omit the status
 code.
@@ -568,12 +569,12 @@ The output should be similar to the following:
 > Host: localhost:8080
 > User-Agent: curl/8.1.2
 > Accept: */*
-> 
+>
 < HTTP/1.1 200 OK
 < Date: Mon, 04 Dec 2023 14:44:01 GMT
 < Content-Type: text/plain
 < Content-Length: 78
-< 
+<
 * Connection #0 to host localhost left intact
 Hello, World from a GET request method with a `HttpStatus.OK` response status!
 ```
@@ -624,7 +625,7 @@ with some query parameters:
     app.get("/query-parameters-demo", ctx -> {
       String firstName = ctx.queryParam("firstName");
       String lastName = ctx.queryParam("lastName");
-      
+
       if (firstName == null || lastName == null) {
         ctx.status(HttpStatus.BAD_REQUEST);
         return;
@@ -652,7 +653,6 @@ Let's try to send a `GET` request to the server using curl:
 curl http://host.docker.internal:8080/query-parameters-demo?firstName=John&lastName=Doe
 ```
 
-
 #### HTTP body
 
 A HTTP request can contain a body. The body is used to send data to the server.
@@ -661,12 +661,12 @@ A HTTP response can also contain a body. The body is used to send data to the
 client.
 
 The body is optional. It is not mandatory to send a body with a request or a
-response. The body is not limited to text. It can contain any type of data (text, images,
-videos, etc.) and can be of any size, encoded in any format.
+response. The body is not limited to text. It can contain any type of data
+(text, images, videos, etc.) and can be of any size, encoded in any format.
 
 Let's update the `Main.java` file to demonstrate this:
 
-```java
+````java
 
 
 
@@ -716,7 +716,7 @@ A HTTP request is structured as follows:
 <HTTP headers>
 <Empty line if there is a body>
 <HTTP body (optional)>
-```
+````
 
 An example of a HTTP request:
 
