@@ -95,7 +95,7 @@ Today, you will learn about a higher-level protocol: HTTP.
 ## What will you learn?
 
 - Learn **how** and **why HTTP is used widely** to **build web applications**
-- Learn how to use **HTTP in Java to build simple (REST) APIs**
+- Learn how to use **HTTP in Java** to build simple (**CRUD** or **REST**) APIs
 - Learn how to **set up web infrastructure** to host web applications:
   - **Reverse proxy**
   - **Load balancer**
@@ -104,7 +104,7 @@ Today, you will learn about a higher-level protocol: HTTP.
 
 ## What will you accomplish?
 
-- Build a **simple (REST) API** in Java
+- Build **a simple API** in Java
 - **Acquire**, **install** and **set up a server**
 - **Acquire** a (free) **domain name**
 - **Deploy** a web application on the server with a **reverse proxy**
@@ -116,8 +116,8 @@ Today, you will learn about a higher-level protocol: HTTP.
 
 <!-- _class: lead -->
 
-This part will be the last one of the course. This is the last step to close
-the loop (from code to production).
+This part will be the last one of the course. This is the last step to close the
+loop (from code to production).
 
 ## Sources
 

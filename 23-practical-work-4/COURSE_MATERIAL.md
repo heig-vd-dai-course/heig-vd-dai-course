@@ -328,14 +328,17 @@ You are then ready to start the practical work!
 As the end of the semester is approaching, we know you have a lot of work to do
 for other courses.
 
-As this practical work is more complex than the previous ones, you can work in groups between two and four students. You can choose
-your partners. If you do not have a partner or a group, we will assign you one.
+As this practical work is more complex than the previous ones, you can work in
+groups between two and four students. You can choose your partners. If you do
+not have a partner or a group, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 4 - First name Last name member 1, First name Last name member 2, First name Last name member 3 and First name Last name member 4
+- **Title**: DAI 2023-2024 - Practical work 4 - First name Last name member 1,
+  First name Last name member 2, First name Last name member 3 and First name
+  Last name member 4
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work

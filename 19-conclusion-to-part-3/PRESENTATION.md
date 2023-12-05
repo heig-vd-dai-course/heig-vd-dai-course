@@ -85,9 +85,11 @@ _paginate: false
 
 ## What have you accomplished?
 
-- You have implemented an UDP application in Java with some concurrency patterns (for some)
+- You have implemented an UDP application in Java with some concurrency patterns
+  (for some)
 - You have defined your own application protocol (again, yeah!)
-- Deeper usage of Docker and Docker Compose to build, share and run your network application
+- Deeper usage of Docker and Docker Compose to build, share and run your network
+  application
 
 ![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
 

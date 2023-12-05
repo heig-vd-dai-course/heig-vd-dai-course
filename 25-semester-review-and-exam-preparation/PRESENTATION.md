@@ -102,7 +102,7 @@ Let's have a look back on what **you** did during this semester.
 ---
 
 > You will learn the following technologies during this course:
-> 
+>
 > - Git and GitHub
 > - Markdown
 > - Java for network programming
@@ -156,21 +156,21 @@ Do you have any questions?
 
 ### Closing remarks
 
-You can be proud of yourself! You all did a great job! 
+You can be proud of yourself! You all did a great job!
 
 This course is now over, but we hope you enjoyed it and learned a lot.
 
 This course is part of a larger curriculum, and we hope you will be able to
 apply what you learned in the next courses.
 
-This course is only the start of what you can learn about network programming and web
-development. We hope you will continue to learn about these
-topics in the future.
+This course is only the start of what you can learn about network programming
+and web development. We hope you will continue to learn about these topics in
+the future.
 
 ### How to stay up to date? Tips and resources
 
-Staying up to date is a challenge in the IT world. Here are some resources to help
-you with content related to this course:
+Staying up to date is a challenge in the IT world. Here are some resources to
+help you with content related to this course:
 
 - <https://news.ycombinator.com/>
 - <https://www.reddit.com/r/homelab/>
@@ -180,12 +180,14 @@ you with content related to this course:
 
 ### With great power comes great responsibility
 
-You have gained significant knowledge during this
-course. Use this knowledge wisely. My personal closing remarks are the following:
+You have gained significant knowledge during this course. Use this knowledge
+wisely. My personal closing remarks are the following:
 
 - **Always stay critical!** Don't believe everything you read or hear!
-- **Always ask yourself questions!** _Why?_ _How?_ _What?_ _Am I doing the right thing for the right cause?_ _Do I listen to myself?_
-- **Always do what is good for you!** Health, relationships, friends are more important than work! You are more important than work!
+- **Always ask yourself questions!** _Why?_ _How?_ _What?_ _Am I doing the right
+  thing for the right cause?_ _Do I listen to myself?_
+- **Always do what is good for you!** Health, relationships, friends are more
+  important than work! You are more important than work!
 - **Always trust yourself and your guts!** Do what you think is right!
 
 ### Thank you, good luck, and farewell!

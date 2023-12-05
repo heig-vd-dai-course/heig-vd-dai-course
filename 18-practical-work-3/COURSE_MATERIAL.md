@@ -245,8 +245,9 @@ public Integer worker2() {
 
 ## Group composition
 
-As this practical work is more complex than the previous ones, you can work in groups between two and three students. You can choose your
-partners. If you do not have a partner or a group, we will assign you one.
+As this practical work is more complex than the previous ones, you can work in
+groups between two and three students. You can choose your partners. If you do
+not have a partner or a group, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following

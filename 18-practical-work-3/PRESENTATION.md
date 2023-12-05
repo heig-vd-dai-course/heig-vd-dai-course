@@ -77,8 +77,8 @@ _paginate: false
 ## Practical work 3
 
 - An UDP network application
-- You can choose what the network application will do (a sophisticated chat application, a game of cooperation, the simulation of
-    an IoT network, ...)
+- You can choose what the network application will do (a sophisticated chat
+  application, a game of cooperation, the simulation of an IoT network, ...)
 - Share your application on GitHub with Docker and Docker Compose
 - Groups between 2 and 3 students
 

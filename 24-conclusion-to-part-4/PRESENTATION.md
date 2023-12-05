@@ -94,8 +94,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-With this final part, you have closed the loop of the course. You can be proud of
-yourself!
+With this final part, you have closed the loop of the course. You can be proud
+of yourself!
 
 ## Evaluation
 
