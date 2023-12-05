@@ -27,8 +27,7 @@ ligne. L'entreprise a décidé de créer un nouveau service de commandes en lign
 pour sa clientèle.
 
 Le service permet à la clientèle de visualiser et de commander des produits en
-ligne. Les clients peuvent également signaler des problèmes liés aux produits
-envers le service clientèle.
+ligne.
 
 Les produits sont identifiés par un nom, une description, une catégorie, un prix
 et une quantité en stock.
@@ -54,8 +53,7 @@ et un qui engendre une erreur) uniquement.
 ## Section 1 - Aperçu (1 point)
 
 Le protocole Achat'instant est un protocole applicatif qui permet à un client de
-visualiser et de commander des produits en ligne. Les clients peuvent également
-signaler des problèmes liés aux produits au service client.
+visualiser et de commander des produits en ligne.
 
 ## Section 2 - Protocole de transport (2 points)
 
