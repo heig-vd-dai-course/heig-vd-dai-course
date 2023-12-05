@@ -1,0 +1,30 @@
+---
+name: Java UDP programming quiz
+description: This is a quiz about Java UDP programming.
+tags:
+  - java
+  - udp
+  - network programming
+questions:
+  - title: Why is UDP a connectionless protocol?
+    possibleAnswers:
+      - Because UDP does not require a connection to be established between the sender and the receiver before sending data.
+      - Because UDP does not require a connection to a network before sending data.
+    correctAnswer:
+      index: 0
+      explanation: |
+        UDP is a connectionless protocol because it does not require a connection to be established between the sender and the receiver before sending data: just as postal cards, datagrams are sent, without know if they will be received or not.
+  - title: What are the mechanisms that UDP provides to ensure that the data is received by the receiver?
+    possibleAnswers:
+      - None is provided by UDP, it must be implemented by the application.
+      - UDP provides a mechanism to ensure that the data is received by the receiver.
+    correctAnswer:
+      index: 0
+      explanation: |
+        UDP does not provide any reliability mechanism to ensure that the data is received by the receiver.
+
+        It is the responsibility of the application to implement the reliability mechanism.
+
+        For example, the application can implement a mechanism to acknowledge the reception of a datagram using the request-reply pattern.
+
+        The fire-and-forget pattern is a typical example of an unreliable mechanism.

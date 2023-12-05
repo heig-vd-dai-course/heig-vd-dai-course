@@ -1,0 +1,38 @@
+---
+name: Docker and Docker Compose quiz
+description: This is a quiz about Docker and Docker Compose.
+tags:
+  - docker
+  - docker compose
+questions:
+  - title: What is a Docker image?
+    possibleAnswers:
+      - A Docker image is a file that contains a set of instructions to create a container.
+      - A Docker image is a file that contains a set of instructions to create a virtual machine.
+    correctAnswer:
+      index: 0
+      explanation: |
+        A Docker image is a file that contains a set of instructions to create a container.
+
+        A Docker image is created from a `Dockerfile`.
+
+        From a Docker image is created a container.
+  - title: What is a Docker container?
+    possibleAnswers:
+      - A Docker container is a Docker image that is hosted on a container registry.
+      - A Docker container is an instance of a Docker image.
+    correctAnswer:
+      index: 1
+      explanation: |
+        A Docker container is an instance of a Docker image.
+
+        A Docker image is a file that contains a set of instructions to create a container.
+  - title: What is the main purpose of Docker Compose?
+    possibleAnswers:
+      - Docker Compose is a tool that allows to create Docker images.
+      - Docker Compose allows to create networks and volumes.
+      - Docker Compose allows to define and run multi-container Docker applications.
+    correctAnswer:
+      index: 2
+      explanation: |
+        Docker Compose allows to define and run multi-container Docker applications.

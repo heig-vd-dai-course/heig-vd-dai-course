@@ -1,0 +1,34 @@
+---
+name: Define an application protocol quiz
+description: This is a quiz about Define an application protocol.
+tags:
+  - application protocol
+questions:
+  - title: What purpose has an application protocol?
+    possibleAnswers:
+      - Define the set of rules that governs the communication between two or more systems.
+      - A huge document that is super hard to read and understand.
+    correctAnswer:
+      index: 0
+      explanation: |
+        Define the set of rules that governs the communication between two or more systems.
+
+        Usually defined in a Request For Comments (RFC) document, application protocols are hard to read and understand.
+
+        However, they are the only way to ensure that two systems can communicate with each other in a documented and predictable way.
+  - title: What structure does an application protocol have?
+    possibleAnswers:
+      - A header, a footer, and a body that define a document that can be read on Word
+      - A context (overview), the transport protocol(s), the messages exchanged between the systems, and some examples
+    correctAnswer:
+      index: 1
+      explanation: |
+        A context (overview), the transport protocol(s), the messages exchanged between the systems, and some examples
+
+        The context (overview) explains the purpose of the application protocol.
+
+        The transport protocol(s) define the protocol(s) used to transport the messages between the systems and how communication is established between the systems.
+
+        The messages exchanged between the systems define the structure of the messages exchanged between the systems.
+
+        The examples show how the messages are exchanged between the systems.
