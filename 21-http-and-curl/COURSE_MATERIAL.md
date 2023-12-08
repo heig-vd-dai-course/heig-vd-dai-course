@@ -28,12 +28,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [Disclaimer](#disclaimer)
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
-  - [Start and configure curl](#start-and-configure-curl)
-  - [Create and configure a new IntelliJ IDEA project](#create-and-configure-a-new-intellij-idea-project)
-  - [Add Javalin to the project](#add-javalin-to-the-project)
-  - [Update the `Main.java` file](#update-the-mainjava-file)
-  - [Explore and understand the code](#explore-and-understand-the-code)
+  - [curl](#curl)
+  - [Javalin](#javalin)
 - [HTTP](#http)
+  - [HTTP versions](#http-versions)
   - [HTTP resources](#http-resources)
   - [URL encoding](#url-encoding)
   - [HTTP request methods](#http-request-methods)
@@ -43,26 +41,21 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [HTTP headers](#http-headers)
   - [HTTP content negotiation](#http-content-negotiation)
   - [HTTP sessions (stateless vs. stateful)](#http-sessions-stateless-vs-stateful)
-  - [HTTP sessions using a query parameter](#http-sessions-using-a-query-parameter)
-  - [HTTP sessions using cookies](#http-sessions-using-cookies)
 - [API design](#api-design)
-  - [CRUD APIs](#crud-apis)
+  - [Simple APIs with CRUD operations](#simple-apis-with-crud-operations)
   - [REST APIs](#rest-apis)
-  - [API example](#api-example)
+  - [Simple API with CRUD operations example](#simple-api-with-crud-operations-example)
   - [How to document an API](#how-to-document-an-api)
   - [How to secure an API](#how-to-secure-an-api)
-- [HTTP versions](#http-versions)
-  - [HTTP/0.9](#http09)
-  - [HTTP/1.0](#http10)
-  - [HTTP/1.1](#http11)
-  - [HTTP/2](#http2)
-  - [HTTP/3](#http3)
+- [Share your project](#share-your-project)
+- [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
+- [Solution](#solution)
 - [Sources](#sources)
 
 ## Objectives
@@ -124,10 +117,17 @@ will see them details in future courses), we will not use them.
 
 ## Prepare and setup your environment
 
-### Start and configure curl
+### curl
 
 In this section, you will start [curl](https://curl.se/) using its official
 Docker image available on Docker Hub: <https://github.com/curl/curl-container>.
+
+curl is a command line tool used to transfer data over the Web. It supports
+numerous protocols including HTTP, HTTPS, FTP, FTPS, SFTP, etc.
+
+curl is a very powerful tool. It is used by developers to test their APIs.
+
+#### Start and configure curl
 
 To start curl, run the following command:
 
@@ -170,19 +170,35 @@ You are now in the container. You should be able to use `curl` inside the
 container for the following sections. To exit the container, type `exit` and
 press `Enter`.
 
-### Create and configure a new IntelliJ IDEA project
+#### Alternatives
 
-In this section, you will create a new IntelliJ IDEA project to experiment with
-HTTP in the next sections.
+_Alternatives are here for general knowledge. No need to learn them._
 
-Create a new IntelliJ IDEA project as seen in previous chapters with Maven.
+- [Insomnia](https://insomnia.rest/)
+- [Postman](https://www.postman.com/)
 
-### Add Javalin to the project
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-In this section, you will add [Javalin](https://javalin.io/) to the project.
+#### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- _None yet_
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Javalin
+
+In this section, you will create a new Maven project and add [Javalin](https://javalin.io/) to the project.
 
 Javalin is a lightweight web framework for Java and Kotlin. It is built on top
 of [Jetty](https://eclipse.dev/jetty/).
+
+#### Create and configure a new IntelliJ IDEA project
+
+Create a new IntelliJ IDEA project as seen in previous chapters with Maven.
+
+#### Add Javalin to the project
 
 Add the latest **stable** version of Javalin available in the Maven repository:
 <https://mvnrepository.com/artifact/io.javalin/javalin> to the `pom.xml` file as
@@ -197,7 +213,7 @@ seen in previous chapters:
 </dependency>
 ```
 
-### Update the `Main.java` file
+#### Update the `Main.java` file
 
 Update the `Main.java` file with the following code:
 
@@ -242,7 +258,7 @@ The output should be the same as in the browser.
 This file will be our starting point for the next sections. In future sections,
 we will refer to this file as `Main.java`.
 
-### Explore and understand the code
+#### Explore and understand the code
 
 Let's take a look at the code.
 
@@ -278,6 +294,23 @@ to worry about concurrency in this chapter as Javalin will handle it for you.
 You now have a basic HTTP server running on your computer. It is time to learn
 more about HTTP!
 
+#### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [Quarkus](https://quarkus.io/)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+#### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- [Javalin documentation](https://javalin.io/documentation)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
 ## HTTP
 
 Hyper Text Transfer Protocol (HTTP) is a protocol used to transfer data over the
@@ -303,6 +336,72 @@ Built on top of TCP (until HTTP/2.0) and UDP (since HTTP/3.0), HTTP offers
 numerous features that make it a very powerful protocol.
 
 Servers typically listen on the TCP port 80 for HTTP and 443 for HTTPS.
+
+### HTTP versions
+
+There are several versions of HTTP. The most used are HTTP/1.1, HTTP/2 and
+HTTP/3.
+
+Each version of HTTP saw the introduction of many features over the years.
+
+The different versions are:
+
+- HTTP/0.9 (1989)
+- HTTP/1.0 (1996)
+- HTTP/1.1 (1997)
+- HTTP/2 (2015)
+- HTTP/3 (2022)
+
+Most features are retro-compatible. This means that a client using HTTP/1.1 can
+communicate with a server using HTTP/2.
+
+As of today, HTTP/1.1 and HTTP/2 are still the most used versions of HTTP.
+
+#### HTTP/0.9
+
+The first version of HTTP was HTTP/0.9 in 1989. It was a very simple protocol
+only meant to transfer HTML documents.
+
+#### HTTP/1.0
+
+HTTP/1.0 was released in 1996. It introduced many features that are still used
+today (among others):
+
+- HTTP headers
+- HTTP status codes
+- HTTP methods
+- Documents other than HTML (images, videos, etc.) are supported
+
+#### HTTP/1.1
+
+HTTP/1.1 was released in 1997, an improved and faster version of HTTP/1.0. It
+introduced many features that are still used today (among others):
+
+- Persistent connections - The connection between the client and the server is
+  kept alive after the response is sent. This allows the client to send multiple
+  requests over the same connection. Which is more efficient.
+- Additional cache control features
+- Content negotiation - The client can ask for a specific version of a resource
+  (HTML, CSS, etc.)
+- Thanks to the `Host` header, it is possible to host multiple websites on the
+  same server
+
+#### HTTP/2
+
+HTTP/2 was released in 2015. The biggest change is the use of a binary protocol
+instead of a text protocol. This makes it more efficient.
+
+As no much new features were introduced, HTTP/2 was quickly adopted by the
+industry.
+
+#### HTTP/3
+
+HTTP/3 is the latest version of HTTP. It was released in 2022. It is based on
+the QUIC protocol instead of TCP. QUIC is based on the UDP protocol, making it
+more efficient.
+
+The main point of HTTP/3 is to make the Web faster and more secure, using a more
+efficient protocol based on UDP.
 
 ### HTTP resources
 
@@ -952,7 +1051,7 @@ data to the server such as filters, search terms, etc.
 An example of some query parameters is the following:
 
 ```text
-/users/view?firstName=John&lastName=Doe
+/users?firstName=John&lastName=Doe
 ```
 
 In this example, the query parameters are `firstName` and `lastName`. The server
@@ -1351,7 +1450,7 @@ to implement HTTP sessions. Here are two of them:
 - Using a query parameter
 - Using cookies
 
-### HTTP sessions using a query parameter
+#### HTTP sessions using a query parameter
 
 Using the previous example, the server can use a query parameter to keep track
 of the state of the client:
@@ -1378,7 +1477,7 @@ This is a very simple way to implement HTTP sessions. It is not very secure as
 the token is sent in clear text in the URL. This means that anyone can see the
 token and use it to access the profile page.
 
-### HTTP sessions using cookies
+#### HTTP sessions using cookies
 
 In a very similar way as the previous example, the server can use cookies to
 keep track of the state of the client.
@@ -1505,9 +1604,13 @@ machines to parse and generate.
 JSON is the standard format used by most APIs. It is not mandatory to use JSON
 but it is recommended.
 
-Two of the most common patterns are the CRUD API and the REST API.
+Javalin allows the serialization and deserialization of JSON. This means that
+you can transform a Java Object to JSON and vice versa.
 
-### CRUD APIs
+### Simple APIs with CRUD operations
+
+Designing an API is not a trivial task. Most of the time, APIs are designed
+around the CRUD pattern.
 
 CRUD stands for Create, Read, Update and Delete. It is a pattern that is used to
 design APIs.
@@ -1526,7 +1629,8 @@ design APIs.
 
 REST stands for
 [Representational State Transfer](https://en.wikipedia.org/wiki/REST). It is a
-pattern that is used to design APIs.
+pattern that is used to design APIs but has to follow strict rules and are more
+complex to design than simple CRUD APIs.
 
 The REST pattern is based on the six following principles:
 
@@ -1548,15 +1652,14 @@ The REST pattern is based on the six following principles:
 6. Code on demand (optional): responses may include executable code to customize
    functionality of the client
 
-The REST pattern is more complex than the CRUD pattern. It is very useful to
-design APIs. All REST APIs are APIs but not all APIs are REST APIs.
+All REST APIs are APIs but not all APIs are REST APIs.
 
-In the context of this course, you will use the CRUD pattern to design your
-APIs. TODO: Validate this?
+In the context of this course, you will use the simple API with CRUD operations
+pattern to design your APIs. TODO: Validate this?
 
-### API example
+### Simple API with CRUD operations example
 
-Let's design a CRUD API for a user resource.
+Let's design a simple CRUD API for a user resource.
 
 We will architecture the application using the
 [Domain Driven Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design)
@@ -1621,15 +1724,7 @@ public class User {
     public String password;
 
     public User() {
-        // Empty constructor for deserialization
-    }
-
-    public User(Integer id, String firstName, String lastName, String email, String password) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
+        // Empty constructor for serialisation/deserialization
     }
 }
 ```
@@ -1642,8 +1737,10 @@ This class represents a user. It has the following properties:
 - `email` - The email address of the user
 - `password` - The password of the user
 
-It has two constructors to allow the serialization and deserialization
-(transform the Java Object to JSON and vice versa) of the user.
+It has one constructor to allow the serialization and deserialization of the
+user. In a production application, you would certainly make all fields private
+and use getters and setters. For the sake of simplicity, we will use public
+fields.
 
 Now, let's create a new class `UsersController.java` in the same directory:
 
@@ -1681,12 +1778,18 @@ public class UsersController {
             }
         }
 
-        newUser.id = userId.getAndIncrement();
+        User user = new User();
 
-        users.put(newUser.id, newUser);
+        user.id = userId.getAndIncrement();
+        user.firstName = newUser.firstName;
+        user.lastName = newUser.lastName;
+        user.email = newUser.email;
+        user.password = newUser.password;
+
+        users.put(user.id, user);
 
         ctx.status(HttpStatus.CREATED);
-        ctx.json(newUser);
+        ctx.json(user);
     }
 
     public void getOne(Context ctx) {
@@ -1725,16 +1828,23 @@ public class UsersController {
                 .check(userId -> users.get(userId) != null, "User not found")
                 .getOrThrow(message -> new NotFoundResponse());
 
-        User updatedUser = ctx.bodyValidator(User.class)
+        User updateUser = ctx.bodyValidator(User.class)
                 .check(obj -> obj.firstName != null, "Missing first name")
                 .check(obj -> obj.lastName != null, "Missing last name")
                 .check(obj -> obj.email != null, "Missing email")
                 .check(obj -> obj.password != null, "Missing password")
                 .getOrThrow(message -> new BadRequestResponse());
 
-        users.put(id, updatedUser);
+        User user = users.get(id);
 
-        ctx.json(updatedUser);
+        user.firstName = updateUser.firstName;
+        user.lastName = updateUser.lastName;
+        user.email = updateUser.email;
+        user.password = updateUser.password;
+
+        users.put(id, user);
+
+        ctx.json(user);
     }
 
     public void deleteUser(Context ctx) {
@@ -1761,14 +1871,19 @@ It has the following methods:
 - `deleteUser` - Delete a user
 
 Using a bit more advanced features of Javalin, we can validate the request body
-and the path parameters to ensure that the request is valid.
+and the path parameters to ensure that the request is valid with the help of the
+`bodyValidator` and `pathParamAsClass` methods.
+
+These methods will check if the request body and the path parameters are valid
+and automatically deserialize the request body and the path parameters to the
+specified class.
 
 If not, we can throw an exception that will be handled by Javalin and will
 respond with the appropriate status code.
 
 The `createUser` method will respond with a `201` (Created) status code if
 successful. However, the method will respond with a `409` (Conflict) status code
-if the user already exists.
+if the user already exists by their email address.
 
 Now let's implement the auth domain. Start by creating a new directory
 `src/main/java/ch/heigvd/auth` and a new file `AuthController.java`:
@@ -1798,7 +1913,7 @@ public class AuthController {
         for (User user : users.values()) {
             if (user.email.equals(loginUser.email) && user.password.equals(loginUser.password)) {
                 ctx.cookie("user", user.id.toString());
-                ctx.json(user);
+                ctx.status(HttpStatus.NO_CONTENT);
                 return;
             }
         }
@@ -1843,7 +1958,7 @@ user is not logged in. If logged in, the method will respond with a `200` (OK)
 status code and the user.
 
 The final step is to update the `Main.java` file to define the endpoints/routes
-that will be used by the API using the same controller we have just created:
+that will be used by the API using the same controllers we have just created:
 
 ```java
 package ch.heigvd;
@@ -1943,109 +2058,449 @@ Date: Fri, 08 Dec 2023 10:48:58 GMT
 Content-Type: application/json
 Content-Length: 194
 
-[{"id":0,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"},{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe2@example.com","password":"secret"}]
+[{"id":0,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"},{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}]
 ```
 
-Let's try to get the user we have just created (the same can be done in the
-browser):
+Let's get the user we have just created (the same can be done in the browser):
 
 ```sh
 curl -i http://host.docker.internal:8080/users/0
 ```
 
-TODO: Finish this
-
 Let's try to update the user using curl:
 
 ```sh
-curl -X PATCH -H "Content-Type: application/json" -d '{"firstName":"Jane"}' http://host.docker.internal:8080/users/1
+curl -i -X PUT -H "Content-Type: application/json" -d '{"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}' http://host.docker.internal:8080/users/0
 ```
+
+The output should be similar to the following:
+
+```text
+HTTP/1.1 200 OK
+Date: Fri, 08 Dec 2023 12:19:13 GMT
+Content-Type: application/json
+Content-Length: 95
+
+{"id":0,"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}
+```
+
+The user has been successfully updated with ID `0` and a status code `200`.
+
+Let's try to login the user using curl:
+
+```sh
+curl -i -X POST -H "Content-Type: application/json" -d '{"email":"jane.doe@example.com","password":"secret"}' http://host.docker.internal:8080/login
+```
+
+The output should be similar to the following:
+
+```text
+HTTP/1.1 200 OK
+Date: Fri, 08 Dec 2023 12:21:06 GMT
+Content-Type: text/plain
+Set-Cookie: user=0; Path=/
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Length: 0
+
+```
+
+You can notice the `Set-Cookie` header in the response headers. This means that
+the server has set a cookie with the name `user` and the value `0`.
+
+Let's use the cookie to get the current user:
+
+```sh
+curl -i --cookie user=0 http://host.docker.internal:8080/profile
+```
+
+The `--cookie` option allows to send a cookie with the request. A browser does
+this automatically.
+
+The output should be similar to the following:
+
+```text
+HTTP/1.1 200 OK
+Date: Fri, 08 Dec 2023 12:23:21 GMT
+Content-Type: application/json
+Content-Length: 95
+
+{"id":0,"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}
+```
+
+Let's try to get the current user without the cookie:
+
+```sh
+curl -i http://host.docker.internal:8080/profile
+```
+
+The output should be similar to the following:
+
+```text
+HTTP/1.1 401 Unauthorized
+Date: Fri, 08 Dec 2023 12:23:49 GMT
+Content-Type: text/plain
+Content-Length: 12
+
+Unauthorized
+```
+
+As the cookie is missing, the server responds with a `401` (Unauthorized) status
+code.
+
+Let's try to logout the user using curl:
+
+```sh
+curl -i -X POST http://host.docker.internal:8080/logout
+```
+
+The output should be similar to the following:
+
+```text
+HTTP/1.1 204 No Content
+Date: Fri, 08 Dec 2023 12:24:42 GMT
+Content-Type: text/plain
+Set-Cookie: user=; Path=/; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+
+```
+
+You can notice the server `204` (No Content) status code and the `Set-Cookie`
+header.
+
+The header has an empty value for the cookie `user`. This means that the server
+asks the client to remove the cookie with the name `user`.
+
+Other information about the cookie is also present in the `Set-Cookie` header to
+ensure the cookie is invalidated.
+
+Let's try to delete the user using curl:
+
+```sh
+curl -i -X DELETE http://host.docker.internal:8080/users/0
+```
+
+The output should be similar to the following:
+
+```text
+HTTP/1.1 204 No Content
+Date: Fri, 08 Dec 2023 12:27:43 GMT
+Content-Type: text/plain
+
+```
+
+The user has been successfully deleted with ID `0` and a status code `204` (No
+Content).
 
 ### How to document an API
 
-TODO
+As seen in the
+[Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09-define-an-application-protocol)
+chapter, it is important to document a protocol to allow other developers to
+understand how to use it.
+
+Documenting an API is thus very important as well: as an API exposes the
+features of an application to the outside world, it is important to document it
+properly for other developers to understand how to use it.
+
+There are many ways to document an API. The most common way is one of the
+following:
+
+- Using the [OpenAPI Specification](https://www.openapis.org/)
+- Describe the API using a simple text file
+
+OpenAPI is a very useful and powerful specification to document an API. It is,
+however, a bit complex to use in the context of this course with the time
+allowed (you can check the [Go further](#go-further) section if you want to
+implement if yourself).
+
+Let's use a simple text file to document the API we have just created.
+
+As HTTP is way more structured than other protocols, it is easy to document an
+API using a simple text file.
+
+Let's create a new file `API.md` at the root of the project:
+
+```markdown
+# Users API
+
+The users API allows to manage users.
+
+Users are able to login and logout. They can also access their profile to
+validate their information using a cookie.
+
+## Endpoints
+
+### Create a new user
+
+- `POST /users`
+
+Create a new user.
+
+#### Request
+
+The request body must contain a JSON object with the following properties:
+
+- `firstName` - The first name of the user
+- `lastName` - The last name of the user
+- `email` - The email address of the user
+- `password` - The password of the user
+
+#### Response
+
+The response body contains a JSON object with the following properties:
+
+- `id` - The unique identifier of the user
+- `firstName` - The first name of the user
+- `lastName` - The last name of the user
+- `email` - The email address of the user
+- `password` - The password of the user
+
+#### Status codes
+
+- `201` (Created) - The user has been successfully created
+- `400` (Bad Request) - The request body is invalid
+- `409` (Conflict) - The user already exists
+
+### Get many users
+
+- `GET /users`
+
+Get many users.
+
+#### Request
+
+The request can contain the following query parameters:
+
+- `firstName` - The first name of the user
+- `lastName` - The last name of the user
+
+#### Response
+
+The response body contains a JSON array with the following properties:
+
+- `id` - The unique identifier of the user
+- `firstName` - The first name of the user
+- `lastName` - The last name of the user
+- `email` - The email address of the user
+- `password` - The password of the user
+
+#### Status codes
+
+- `200` (OK) - The users have been successfully retrieved
+
+### Get one user
+
+- `GET /users/{id}`
+
+Get one user by its ID.
+
+#### Request
+
+The request path must contain the ID of the user.
+
+#### Response
+
+The response body contains a JSON object with the following properties:
+
+- `id` - The unique identifier of the user
+- `firstName` - The first name of the user
+- `lastName` - The last name of the user
+- `email` - The email address of the user
+- `password` - The password of the user
+
+#### Status codes
+
+- `200` (OK) - The user has been successfully retrieved
+- `404` (Not Found) - The user does not exist
+
+### Update a user
+
+- `PUT /users/{id}`
+
+Update a user by its ID.
+
+#### Request
+
+The request path must contain the ID of the user.
+
+The request body must contain a JSON object with the following properties:
+
+- `firstName` - The first name of the user
+- `lastName` - The last name of the user
+- `email` - The email address of the user
+- `password` - The password of the user
+
+#### Response
+
+The response body contains a JSON object with the following properties:
+
+- `id` - The unique identifier of the user
+- `firstName` - The first name of the user
+- `lastName` - The last name of the user
+- `email` - The email address of the user
+- `password` - The password of the user
+
+#### Status codes
+
+- `200` (OK) - The user has been successfully updated
+- `400` (Bad Request) - The request body is invalid
+- `404` (Not Found) - The user does not exist
+
+### Delete a user
+
+- `DELETE /users/{id}`
+
+Delete a user by its ID.
+
+#### Request
+
+The request path must contain the ID of the user.
+
+#### Response
+
+The response body is empty.
+
+#### Status codes
+
+- `204` (No Content) - The user has been successfully deleted
+- `404` (Not Found) - The user does not exist
+
+### Login
+
+- `POST /login`
+
+Login a user.
+
+#### Request
+
+The request body must contain a JSON object with the following properties:
+
+- `email` - The email address of the user
+- `password` - The password of the user
+
+#### Response
+
+The response body is empty. A `user` cookie is set with the ID of the user.
+
+#### Status codes
+
+- `204` (No Content) - The user has been successfully logged in
+- `400` (Bad Request) - The request body is invalid
+- `401` (Unauthorized) - The user does not exist or the password is incorrect
+
+### Logout
+
+- `POST /logout`
+
+Logout a user.
+
+#### Request
+
+The request body is empty.
+
+#### Response
+
+The response body is empty. The `user` cookie is removed.
+
+#### Status codes
+
+- `204` (No Content) - The user has been successfully logged out
+
+### Profile
+
+- `GET /profile`
+
+Get the current user (the user that is logged in).
+
+#### Request
+
+The request body is empty.
+
+#### Response
+
+The response body contains a JSON object with the following properties:
+
+- `id` - The unique identifier of the user
+- `firstName` - The first name of the user
+- `lastName` - The last name of the user
+- `email` - The email address of the user
+- `password` - The password of the user
+
+#### Status codes
+
+- `200` (OK) - The user has been successfully retrieved
+- `401` (Unauthorized) - The user is not logged in
+```
 
 ### How to secure an API
 
-TODO
+You might have noticed that the API we have just created is not very secure.
 
-## HTTP versions
+Securing an API is not an easy task and is out of the scope of this course (you
+can check the [Go further](#go-further) section if you want to implement if
+yourself). You will learn how to secure a web application in future courses.
 
-There are several versions of HTTP. The most used are HTTP/1.1, HTTP/2 and
-HTTP/3.
+In the context of this course, it is not important that the API is secure. It is
+more important to understand how to design and develop an API.
 
-Each version of HTTP saw the introduction of many features over the years.
+## Share your project
 
-The different versions are:
+Create a new Git repository and push your code to it. Do not forget all the
+files you have created or modified during this chapter and the best practices
+you have learned.
 
-- HTTP/0.9 (1989)
-- HTTP/1.0 (1996)
-- HTTP/1.1 (1997)
-- HTTP/2 (2015)
-- HTTP/3 (2022)
+Share your project in the GitHub Discussions of this organization:
+<https://github.com/orgs/heig-vd-dai-course/discussions>.
 
-Most features are retro-compatible. This means that a client using HTTP/1.1 can
-communicate with a server using HTTP/2.
+Create a new discussion with the following information:
 
-As of today, HTTP/1.1 and HTTP/2 are still the most used versions of HTTP.
+- **Title**: DAI 2023-2024 - Users API - First name Last Name
+- **Category**: Show and tell
+- **Description**: The link to your GitHub repository.
 
-### HTTP/0.9
+This will notify us that you have completed the exercise and we can check your
+work.
 
-The first version of HTTP was HTTP/0.9 in 1989. It was a very simple protocol
-only meant to transfer HTML documents.
+You can compare your solution with the official one stated in the
+[Solution](#solution) section, however, **we highly recommend you to try to
+complete the practical content by yourself first to learn the most**.
 
-### HTTP/1.0
+## Go further
 
-HTTP/1.0 was released in 1996. It introduced many features that are still used
-today (among others):
+This is an optional section. Feel free to skip it if you do not have time.
 
-- HTTP headers
-- HTTP status codes
-- HTTP methods
-- Documents other than HTML (images, videos, etc.) are supported
-
-### HTTP/1.1
-
-HTTP/1.1 was released in 1997, an improved and faster version of HTTP/1.0. It
-introduced many features that are still used today (among others):
-
-- Persistent connections - The connection between the client and the server is
-  kept alive after the response is sent. This allows the client to send multiple
-  requests over the same connection. Which is more efficient.
-- Additional cache control features
-- Content negotiation - The client can ask for a specific version of a resource
-  (HTML, CSS, etc.)
-- Thanks to the `Host` header, it is possible to host multiple websites on the
-  same server
-
-### HTTP/2
-
-HTTP/2 was released in 2015. The biggest change is the use of a binary protocol
-instead of a text protocol. This makes it more efficient.
-
-As no much new features were introduced, HTTP/2 was quickly adopted by the
-industry.
-
-### HTTP/3
-
-HTTP/3 is the latest version of HTTP. It was released in 2022. It is based on
-the QUIC protocol instead of TCP. QUIC is based on the UDP protocol, making it
-more efficient.
-
-The main point of HTTP/3 is to make the Web faster and more secure, using a more
-efficient protocol based on UDP.
+- Are you able to document the API you have just created using the OpenAPI
+  Specification? You can use the official documentation to help you:
+  <https://javalin.io/tutorials/openapi-example>.
+- Are you able to secure the API you have just created? You can use the official
+  documentation to help you: <https://javalin.io/tutorials/auth-example>.
 
 ## Conclusion
 
 ### What did you do and learn?
 
-TODO
+In this chapter, you have learned about the extended features of HTTP.
+
+You have learned how endpoints/routes are defined with their methods and status
+codes.
+
+You have learned how to send and get data to/from the server and about content
+negotiation.
+
+Using cookies, you have learned how to keep track of the state of the client.
+
+And finally, you have learned how to design and develop APIs with the HTTP
+protocol.
 
 ### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
-- TODO
+- What are HTTP methods?
+- What are HTTP status codes? How are they classified?
+- What is content negotiation?
+- What are cookies? How are they used?
+- What is an API? How to design and develop an API?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -2064,9 +2519,8 @@ You can use reactions to express your opinion on a comment!
 In the next chapter, you will learn the following topics:
 
 - Web infrastructures
-  - How to deploy and maintain web applications on the Internet?
+  - How to run and maintain web applications on the Internet?
   - How to scale web applications?
-  - How to secure web applications?
 
 ## Additional resources
 
@@ -2076,11 +2530,16 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
+## Solution
+
+You can find the solution to the practical content in the
+[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
+repository.
+
+If you have any questions about the solution, feel free to open an issue to
+discuss it!
+
 ## Sources
 
 - Main illustration by [Ashley Knedler](https://unsplash.com/@ashkned) on
   [Unsplash](https://unsplash.com/photos/KvD36NRFjl4)
-
-```
-
-```

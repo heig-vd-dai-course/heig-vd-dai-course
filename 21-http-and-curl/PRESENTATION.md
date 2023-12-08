@@ -75,84 +75,129 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Table of contents
+## Objectives
 
-    - The history of HTTP (and HTML)
-        - HTTP versions
-    - The HTTP protocol
-        - HTTP methods
-        - HTTP status codes
-        - HTTP headers
-            - Content negotiation
-        - HTTP Body, Query parameters, URL encoding
-        - HTTP caching
-        - HTTP sessions (stateful vs. stateless)
-        - HTTP cookies
-        -
-    - Interact with HTTP
-        - The browser
-        - Postman
-        - Insomnia
-        - curl
-    - HTTP in Java
+TODO
 
-## Table of contents
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-- **[Theoretical content](#theoretical-content)**
-  - The history of HTTP (and HTML)
-  - The HTTP protocol
-  - Interact with HTTP
-  - HTTP in Java
-- **[Practical content](#practical-content)**
-  - [What will you do?](#what-will-you-do)
-  - [Find the practical content](#find-the-course-material)
-
----
-
-    - Use curl to interact with HTTP
-    - Use Java to interact with HTTP
-
-## Theoretical content
+## Disclaimer
 
 <!-- _class: lead -->
+
+More details for this section in the
+[course material](TODO).
+You can find other resources and alternatives as well.
+
+### Disclaimer
+
+TODO
+
+## Prepare and setup your environment
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](TODO).
+You can find other resources and alternatives as well.
+
+### curl
+
+TODO
+
+### Javalin
+
+TODO
+
+## HTTP
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](TODO).
+You can find other resources and alternatives as well.
+
+### HTTP
+
+TODO
+
+### HTTP versions
+
+TODO
+
+### HTTP resources
+
+TODO
+
+### URL encoding
+
+TODO
+
+### HTTP request methods
+
+TODO
+
+### HTTP request and response format
+
+TODO
+
+### HTTP response status codes
+
+TODO
+
+### HTTP path parameters, query parameters and headers
+
+TODO
+
+### HTTP headers
+
+TODO
+
+### HTTP content negotiation
+
+TODO
+
+### HTTP sessions (stateless vs. stateful)
+
+TODO
+
+## APIs design
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](TODO).
+You can find other resources and alternatives as well.
+
+### APIs design
+
+TODO
+
+### Simple APIs with CRUD operations
+
+TODO
+
+### REST APIs
+
+TODO
+
+### How to document an API
+
+TODO
+
+### How to secure an API
+
+TODO
 
 ## Practical content
 
 <!-- _class: lead -->
 
-### Title
-
-> Quote
-
-![bg right:40% w:50%](https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg)
-
----
-
-Content
-
-#### Summary
-
-- TODO
-
-#### Alternatives
-
-- TODO
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-#### Resources
-
-- TODO
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
 ### What will you do?
 
 -
 
-![bg vertical right](https://fakeimg.pl/800x600/0288d1/fff/?text=A)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=B)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=C)
+![bg right contain](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -180,7 +225,7 @@ You can use reactions to express your opinion on a comment!
 In the next chapter, you will learn the following topics:
 
 - Web infrastructures
-  - How to deploy and maintain web applications on the Internet?
+  - How to run and maintain web applications on the Internet?
   - How to scale web applications?
   - How to secure web applications?
 
