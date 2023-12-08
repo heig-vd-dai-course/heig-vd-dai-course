@@ -69,21 +69,6 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## _Do you know how does streaming work?_
-
-<!-- _class: lead -->
-
-Do you remember this question from part 3?
-
-## How does streaming work (simplified)?
-
-The answer was:
-
-> 1. A web browser connects to a service (YouTube, Twitch, etc.)
-> 2. The service (a server) sends data to the client continuously
-> 3. The client displays the data as it comes
-> 4. If the bandwidth is bad, the client adapts the quality of the stream
-
 ## Up until now, you have mostly worked with low-level protocols such as TCP and UDP
 
 <!-- _class: lead -->
@@ -104,7 +89,7 @@ Today, you will learn about a higher-level protocol: HTTP.
 
 ## What will you accomplish?
 
-- Build **a simple API** in Java
+- Build **a simple web API** in Java
 - **Acquire**, **install** and **set up a server**
 - **Acquire** a (free) **domain name**
 - **Deploy** a web application on the server with a **reverse proxy**
