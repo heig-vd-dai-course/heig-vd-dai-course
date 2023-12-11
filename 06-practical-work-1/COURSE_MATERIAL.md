@@ -160,9 +160,9 @@ use signed pull requests to merge your work.
 
 ## Submission
 
-The planning of the course is available at
-<https://github.com/orgs/heig-vd-dai-course/projects>. The **deadline** is just
-**before the Practical work review session**.
+Your work is due on the **day of the presentations** (the _"Practical work
+review"_ sessions in the official planning available at
+<https://github.com/orgs/heig-vd-dai-course/projects>) at **13:15**.
 
 Any commit after the deadline will not be taken into account. Each day of delay
 will result in a penalty of -1 point on the final grade.

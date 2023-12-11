@@ -75,10 +75,10 @@ _paginate: false
 ## What have you learned?
 
 - Network programming with UDP with all its elements:
-  - reliability
-  - unicast, broadcast and multicast
-  - messaging patterns
-  - service discovery protocols
+  - Reliability
+  - Unicast, broadcast and multicast
+  - Messaging patterns
+  - Service discovery protocols
 - The differences between TCP and UDP
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)

@@ -1,4 +1,4 @@
-# Conclusion to part 4 + practical work review + feedback
+# Conclusion to part 4
 
 - Time in class: 2 periods
 - Presentation:

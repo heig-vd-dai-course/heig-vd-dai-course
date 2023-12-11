@@ -80,7 +80,7 @@ Today, you will learn about a higher-level protocol: HTTP.
 ## What will you learn?
 
 - Learn **how** and **why HTTP is used widely** to **build web applications**
-- Learn how to use **HTTP in Java** to build simple (**CRUD** or **REST**) APIs
+- Learn how to use **HTTP in Java** to build simple (CRUD) **APIs**
 - Learn how to **set up web infrastructure** to host web applications:
   - **Reverse proxy**
   - **Load balancer**
