@@ -1806,7 +1806,7 @@ public class UsersController {
         this.users = users;
     }
 
-    public void createUser(Context ctx) {
+    public void create(Context ctx) {
         User newUser = ctx.bodyValidator(User.class)
                 .check(obj -> obj.firstName != null, "Missing first name")
                 .check(obj -> obj.lastName != null, "Missing last name")
@@ -1865,7 +1865,7 @@ public class UsersController {
         ctx.json(users);
     }
 
-    public void updateUser(Context ctx) {
+    public void update(Context ctx) {
         Integer id = ctx.pathParamAsClass("id", Integer.class)
                 .check(userId -> users.get(userId) != null, "User not found")
                 .getOrThrow(message -> new NotFoundResponse());
@@ -1889,7 +1889,7 @@ public class UsersController {
         ctx.json(user);
     }
 
-    public void deleteUser(Context ctx) {
+    public void delete(Context ctx) {
         Integer id = ctx.pathParamAsClass("id", Integer.class)
                 .check(userId -> users.get(userId) != null, "User not found")
                 .getOrThrow(message -> new NotFoundResponse());
@@ -1906,11 +1906,11 @@ This class represents the controller of the users resource. It has a
 
 It has the following methods:
 
-- `createUser` - Create a new user
+- `create` - Create a new user
 - `getOne` - Get one user by its ID
 - `getMany` - Get many users that you can filter by first name and/or last name
-- `updateUser` - Update a user
-- `deleteUser` - Delete a user
+- `update` - Update a user
+- `delete` - Delete a user
 
 Using a bit more advanced features of Javalin, we can validate the request body
 and the path parameters to ensure that the request is valid with the help of the
@@ -2032,11 +2032,11 @@ public class Main {
     app.get("/profile", authController::profile);
 
     // Users routes
-    app.post("/users", usersController::createUser);
+    app.post("/users", usersController::create);
     app.get("/users", usersController::getMany);
     app.get("/users/{id}", usersController::getOne);
-    app.put("/users/{id}", usersController::updateUser);
-    app.delete("/users/{id}", usersController::deleteUser);
+    app.put("/users/{id}", usersController::update);
+    app.delete("/users/{id}", usersController::delete);
 
     app.start(PORT);
   }
