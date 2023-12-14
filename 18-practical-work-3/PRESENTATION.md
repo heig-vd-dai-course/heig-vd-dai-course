@@ -331,20 +331,21 @@ review.**
 | 2   | Ahmad Jano and Sergey Komarov?          | 13:55   |
 | 3   | Alexandre Philibert and Valentin Ricard | 14:05   |
 | 4   | Sebastian Diaz and Thomas Vuilleumier   | 14:15   |
-| 5   | Alexandre Piveteau and Romain Silvestri | 14:25   |
+| 5   | Colin Jaques and Walid Slimani?         | 14:25   |
 | 6   | Lionel Pollien and Arthur Menétrey      | 14:35   |
 
 ---
 
 | #   | Group                                              | Passage |
 | --- | -------------------------------------------------- | ------- |
-| 7   | Alan Sottile and Calvin Graf                       | 16:55   |
-| 8   | Alexandre Iorio and Theodros Mulugeta              | 17:05   |
-| 9   | Richard Aurélien and Pirakas Anthon                | 17:15   |
-| 10  | Olin Bourquin, Kevin Farine and Simon Guggisberg   | 17:25   |
-| 11  | Jonas Troeltsch, Sarah Jallon and Jeremiah Steiner | 17:35   |
-| 12  | Lucas Lattion and Romain Humair                    | 17:45   |
-| 13  | Lopez Esteban and Bleuer Rémy                      | 17:55   |
+| 7   | Gwendal Piemontesi and Guillaume Trueb             | 16:45   |
+| 8   | Alan Sottile and Calvin Graf                       | 16:55   |
+| 9   | Alexandre Iorio and Theodros Mulugeta              | 17:05   |
+| 10  | Richard Aurélien and Pirakas Anthon                | 17:15   |
+| 11  | Olin Bourquin, Kevin Farine and Simon Guggisberg   | 17:25   |
+| 12  | Jonas Troeltsch, Sarah Jallon and Jeremiah Steiner | 17:35   |
+| 13  | Lucas Lattion and Romain Humair                    | 17:45   |
+| 14  | Lopez Esteban and Bleuer Rémy                      | 17:55   |
 
 ## Find the practical work
 
