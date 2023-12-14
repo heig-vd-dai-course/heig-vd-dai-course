@@ -148,41 +148,9 @@ COUCOU ?A VA ?
 
 Why is the `ç` not converted to uppercase?
 
-## Find the practical work
-
-<!-- _class: lead -->
-
-You can find the practical work for this part on [GitHub][practical-work].
-
-[![bg right w:75%][practical-work-qr-code]][practical-work]
-
-## Grades and feedback
-
-Grades will be entered into GAPS, followed by an email with the feedback.
-
-The evaluation will use exactly the same grading grid as shown in the course
-material.
-
-Each criterion will be accompanied by a comment explaining the points obtained,
-a general comment on your work and the final grade.
-
-If you have any questions about the evaluation, you can contact us!
-
-## Finished? Was it easy? Was it hard?
-
-Can you let us know what was easy and what was difficult for you during this
-practical work?
-
-This will help us to improve the course and adapt the content to your needs. If
-we notice some difficulties, we will come back to you to help you.
-
-➡️ [GitHub Discussions][discussions]
-
-You can use reactions to express your opinion on a comment!
-
 ## Practical work review
 
-The practical work review will start at the end of this presentation in the
+The practical work review will take place on **Tuesday 10.10.2023** in the
 **room B38**, at the very end of the corridor next to the door entry.
 
 We only have **5 minutes per group**. Please be prepared to present your work.
@@ -233,6 +201,38 @@ it will help us to plan the practical work review.**
 | 19  | Simon Guggisberg and Jeremiah Steiner | 17:48   |
 | 20  | Sergey Komarov                        | 17:54   |
 | 21  | Pirakas Anthon                        | 18:00   |
+
+## Find the practical work
+
+<!-- _class: lead -->
+
+You can find the practical work for this part on [GitHub][practical-work].
+
+[![bg right w:75%][practical-work-qr-code]][practical-work]
+
+## Grades and feedback
+
+Grades will be entered into GAPS, followed by an email with the feedback.
+
+The evaluation will use exactly the same grading grid as shown in the course
+material.
+
+Each criterion will be accompanied by a comment explaining the points obtained,
+a general comment on your work and the final grade.
+
+If you have any questions about the evaluation, you can contact us!
+
+## Finished? Was it easy? Was it hard?
+
+Can you let us know what was easy and what was difficult for you during this
+practical work?
+
+This will help us to improve the course and adapt the content to your needs. If
+we notice some difficulties, we will come back to you to help you.
+
+➡️ [GitHub Discussions][discussions]
+
+You can use reactions to express your opinion on a comment!
 
 ## Sources
 

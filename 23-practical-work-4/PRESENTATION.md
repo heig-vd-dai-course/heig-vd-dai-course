@@ -89,6 +89,33 @@ _paginate: false
 
 Would my own NAS with Docker and Docker Compose be a good example?
 
+## Practical work review
+
+The practical work review will take place on **Tuesday 23.01.2023** in the
+**room B38**, at the very end of the corridor next to the door entry.
+
+We only have **10 minutes per group** (6 minutes of presentation, 3 minutes of
+questions). Please be prepared to present your work. You decide what you want to
+show us and how you want to present it.
+
+Come 5 minutes before your time slot with your computer.
+
+The order of presentation is random and is stated in the next slides.
+
+---
+
+<!-- -->
+
+**Please state your group on GitHub Discussions as soon as possible, even if you
+do not have a clear idea yet as it will help us to plan the practical work
+review.**
+
+<!-- -->
+
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TBD     |
+
 ## Find the practical work
 
 <!-- _class: lead -->
@@ -120,33 +147,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## Practical work review
-
-The practical work review will start at the end of this presentation in the
-**room B38**, at the very end of the corridor next to the door entry.
-
-We only have **10 minutes per group** (6 minutes of presentation, 3 minutes of
-questions). Please be prepared to present your work. You decide what you want to
-show us and how you want to present it.
-
-Come 5 minutes before your time slot with your computer.
-
-The order of presentation is random and is stated in the next slides.
-
----
-
-<!-- -->
-
-**Please state your group on GitHub Discussions as soon as possible, even if you
-do not have a clear idea yet as it will help us to plan the practical work
-review.**
-
-<!-- -->
-
-| #   | Group | Passage |
-| --- | ----- | ------- |
-| 1   | TBD   | TBD     |
 
 ## Sources
 
