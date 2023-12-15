@@ -197,8 +197,9 @@ The order of presentation is random and is stated in the next slides.
 ---
 
 <!--
-**Please state your group on GitHub Discussions as soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
+**Please state your group on GitHub Discussions as soon as possible, even if you
+do not have a clear idea yet as it will help us to plan the practical work
+review.**
 -->
 
 | #   | Group                                 | Passage |

@@ -21,11 +21,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
+- [Group composition](#group-composition)
 - [Tips for the practical work](#tips-for-the-practical-work)
   - [Concurrency with UDP](#concurrency-with-udp)
   - [Concurrent collections](#concurrent-collections)
   - [Run multiple tasks in parallel](#run-multiple-tasks-in-parallel)
-- [Group composition](#group-composition)
 - [Grading criteria](#grading-criteria)
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
   - [Category 2 - Define an application protocol](#category-2---define-an-application-protocol)
@@ -67,6 +67,28 @@ of an Internet of Things (IoT) network, etc.
 - Make usage of the UDP protocol
 - Use Java UDP programming to implement the network application
 - Use Docker and Docker Compose to run the network application
+
+## Group composition
+
+As this practical work is more complex than the previous ones, you can work in
+groups between two and three students. You can choose your partners. If you do
+not have a partner or a group, we will assign you one.
+
+To announce your group, create a new GitHub Discussion at
+<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
+information:
+
+- **Title**: DAI 2023-2024 - Practical work 3 - First name Last name member 1,
+  First name Last name member 2 and First name Last name member 3
+- **Category**: Show and tell
+- **Description**: A quick description of what you will achieve during this
+  practical work
+
+The teaching staff might ask you to change the scope of your practical work if
+it is too complex or too simple.
+
+**Please do it a soon as possible, even if you do not have a clear idea yet as
+it will help us to plan the practical work review.**
 
 ## Tips for the practical work
 
@@ -242,28 +264,6 @@ public Integer worker2() {
   // ...
 }
 ```
-
-## Group composition
-
-As this practical work is more complex than the previous ones, you can work in
-groups between two and three students. You can choose your partners. If you do
-not have a partner or a group, we will assign you one.
-
-To announce your group, create a new GitHub Discussion at
-<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
-information:
-
-- **Title**: DAI 2023-2024 - Practical work 3 - First name Last name member 1,
-  First name Last name member 2 and First name Last name member 3
-- **Category**: Show and tell
-- **Description**: A quick description of what you will achieve during this
-  practical work
-
-The teaching staff might ask you to change the scope of your practical work if
-it is too complex or too simple.
-
-**Please do it a soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
 
 ## Grading criteria
 

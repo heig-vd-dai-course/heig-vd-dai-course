@@ -80,6 +80,32 @@ methodology but please do not copy/paste code from other groups.
 - Deploy the web applications on the virtual machine
 - Access the web applications with a web browser and a domain name
 
+## Group composition
+
+As the end of the semester is approaching, we know you have a lot of work to do
+for other courses.
+
+As this practical work is more complex than the previous ones, you can work in
+groups between two and four students. You can choose your partners. If you do
+not have a partner or a group, we will assign you one.
+
+To announce your group, create a new GitHub Discussion at
+<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
+information:
+
+- **Title**: DAI 2023-2024 - Practical work 4 - First name Last name member 1,
+  First name Last name member 2, First name Last name member 3 and First name
+  Last name member 4
+- **Category**: Show and tell
+- **Description**: A quick description of what you will achieve during this
+  practical work
+
+The teaching staff might ask you to change the scope of your practical work if
+it is too complex or too simple.
+
+**Please do it a soon as possible, even if you do not have a clear idea yet as
+it will help us to plan the practical work review.**
+
 ## Tips for the practical work
 
 In order for this practical work to be successful, you must follow the following
@@ -321,33 +347,7 @@ If you are able to access the Traefik dashboard and the whoami application from
 the Internet, you have successfully configured Traefik to use HTTPS with a
 domain name.
 
-You are then ready to start the practical work!
-
-## Group composition
-
-As the end of the semester is approaching, we know you have a lot of work to do
-for other courses.
-
-As this practical work is more complex than the previous ones, you can work in
-groups between two and four students. You can choose your partners. If you do
-not have a partner or a group, we will assign you one.
-
-To announce your group, create a new GitHub Discussion at
-<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
-information:
-
-- **Title**: DAI 2023-2024 - Practical work 4 - First name Last name member 1,
-  First name Last name member 2, First name Last name member 3 and First name
-  Last name member 4
-- **Category**: Show and tell
-- **Description**: A quick description of what you will achieve during this
-  practical work
-
-The teaching staff might ask you to change the scope of your practical work if
-it is too complex or too simple.
-
-**Please do it a soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
+You now have all the required elements for the practical work!
 
 ## Grading criteria
 
@@ -370,7 +370,7 @@ repository!
 | 4   | The README explains how to deploy, run and access the web application                                                               |    0.2 |
 | 5   | The README explains how to configure the DNS zone to access your web application                                                    |    0.2 |
 | 6   | The README explains how to build and publish the web application with Docker                                                        |    0.2 |
-| 7   | The README explains how to interact with the web application with examples and outputs                                              |    0.2 |
+| 7   | The README explains how to interact with the web application with examples and outputs using curl                                   |    0.2 |
 
 ### Category 2 - Docker and Docker Compose
 
