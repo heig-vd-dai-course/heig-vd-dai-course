@@ -21,12 +21,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
-- [Tips for the practical work](#tips-for-the-practical-work)
+- [Group composition](#group-composition)
+- [Guidelines](#guidelines)
   - [Obtain a virtual machine](#obtain-a-virtual-machine)
   - [Install and configure the virtual machine](#install-and-configure-the-virtual-machine)
   - [Obtain a domain name](#obtain-a-domain-name)
   - [Run the secure Traefik and whoami examples](#run-the-secure-traefik-and-whoami-examples)
-- [Group composition](#group-composition)
 - [Grading criteria](#grading-criteria)
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
   - [Category 2 - Docker and Docker Compose](#category-2---docker-and-docker-compose)
@@ -77,8 +77,8 @@ methodology but please do not copy/paste code from other groups.
 - Install Docker and Docker Compose on the virtual machine
 - Define some Docker Compose files to run the web application with a reverse
   proxy (Traefik)
-- Deploy the web applications on the virtual machine
-- Access the web applications with a web browser and a domain name
+- Deploy the simple CRUD API on the virtual machine
+- Access the CRUD API from a domain name
 
 ## Group composition
 
@@ -106,7 +106,7 @@ it is too complex or too simple.
 **Please do it a soon as possible, even if you do not have a clear idea yet as
 it will help us to plan the practical work review.**
 
-## Tips for the practical work
+## Guidelines
 
 In order for this practical work to be successful, you must follow the following
 steps:
@@ -377,7 +377,7 @@ repository!
 | #   | Criterion                                                             | Points |
 | --- | --------------------------------------------------------------------- | -----: |
 | 8   | Docker and Docker Compose are correctly installed on the server       |    0.2 |
-| 9   | The Docker applications are split into multiple directories           |    0.2 |
+| 9   | The Docker applications (Traefik + API) are split into multiple directories           |    0.2 |
 | 10  | The web application runs with Docker and Docker Compose on the server |    0.2 |
 
 ### Category 3 - SSH and SCP

@@ -51,7 +51,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
 [illustration]:
-  https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
+  https://images.unsplash.com/photo-1572901334602-f40b66a0c71c?fit=crop&h=720
 [practical-work]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-practical-work-4/COURSE_MATERIAL.md
 [practical-work-qr-code]:
@@ -76,26 +76,232 @@ _paginate: false
 
 ## Practical work 4
 
-- Get, access and configure a virtual machine to deploy web applications with
-  Docker and Docker Compose
-- Choose which web applications you want to deploy and access them with your own
-  domain name
-- Enter the game of self-hosting
-- Publish your Docker Compose stack on GitHub
+- Get a virtual machine on our cloud
+- Access the virtual machine (SSH)
+- Install Docker and Docker Compose
+- Develop a simple CRUD API
+- Deploy the applications (reverse proxy + CRUD API)
+- Access the applications from a (free) domain name
+
+![bg right:40%][illustration]
+
+---
+
+- A CRUD API to manage resources
+- You can choose what the CRUD API does/manages:
+  - Music
+  - Books
+  - Video games
+  - A todo list
+  - Groceries
+  - ...
+- **Groups of 4 students**
 
 ![bg right:40%][illustration]
 
 ## Demo
 
-Would my own NAS with Docker and Docker Compose be a good example?
+<!-- _class: lead -->
+
+The API for the demonstration is accessible at  
+<https://heig-vd-dai-course.dedyn.io>.
+
+---
+
+Locally - Compile the project:
+
+```sh
+./mvnw clean package
+```
+
+Locally - Build the Docker image with Docker Compose:
+
+```sh
+docker compose build
+```
+
+Locally - Publish the Docker image to the container registry:
+
+```sh
+docker compose push
+```
+
+---
+
+On the server - Pull the Docker image from the container registry:
+
+```sh
+docker compose pull
+```
+
+On the server - Start Traefik (the reverse proxy):
+
+```sh
+docker compose -f traefik/docker-compose.yml up -d
+```
+
+On the server - Start the CRUD API:
+
+```sh
+docker compose -f api/docker-compose.yml up -d
+```
+
+---
+
+Create a few drinks:
+
+```sh
+# Hot wine
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Hot wine","description":"Hot wine with spices","price":3.0}' \
+  https://heig-vd-dai-course.dedyn.io/drinks
+
+# Christmas tea
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Christmas tea","description":"Warm tea","price":2.0}' \
+  https://heig-vd-dai-course.dedyn.io/drinks
+```
+
+---
+
+Get the list of drinks:
+
+```sh
+curl https://heig-vd-dai-course.dedyn.io/drinks
+```
+
+Output:
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Hot wine",
+    "description": "Hot wine with spices",
+    "price": 3.0
+  },
+  // All the other drinks
+]
+```
+
+---
+
+Filter the drinks with a price equal to 2.0 CHF:
+
+```sh
+curl https://heig-vd-dai-course.dedyn.io/drinks?price=2.0
+```
+
+Output:
+
+```json
+[
+  {
+    "id": 2,
+    "name": "Christmas tea",
+    "description": "Warm tea",
+    "price": 2.0
+  }
+]
+```
+
+---
+
+Get a specific drink:
+
+```sh
+curl https://heig-vd-dai-course.dedyn.io/drinks/1
+```
+
+Output:
+
+```json
+{
+  "id": 1,
+  "name": "Hot wine",
+  "description": "Hot wine with spices",
+  "price": 3.0
+}
+```
+
+---
+
+Update a drink:
+
+```sh
+curl -X PUT \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Hot wine","description":"Nice hot wine","price":3.0}' \
+  https://heig-vd-dai-course.dedyn.io/drinks/1
+```
+
+Output:
+
+```json
+{
+  "id": 1,
+  "name": "Hot wine",
+  "description": "Nice hot wine",
+  "price": 3.0
+}
+```
+
+---
+
+Delete a drink:
+
+```sh
+curl -X DELETE -i https://heig-vd-dai-course.dedyn.io/drinks/1
+```
+
+Output:
+
+```text
+HTTP/2 204
+content-type: text/plain
+date: Sat, 16 Dec 2023 13:31:56 GMT
+
+```
+
+No content as we return a `204` (No Content) status code!
+
+---
+
+Adding another drink with the same name:
+
+```sh
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Christmas tea","description":"Another tea","price":2.0}' \
+  https://heig-vd-dai-course.dedyn.io/drinks
+```
+
+Output:
+
+```text
+Conflict
+```
+
+Leads to a `409` (Conflict) status code as we want to keep the names unique.
+
+## Guidelines
+
+**This is important, please read carefully!**
+
+- State your group on GitHub Discussions before the end of the day!
+- Define someone in your group as the responsible
+- **Write to the IT department** to get a virtual machine as soon as possible (**before the end of the day**!)
+  - Use the template email provided in the course material.
+  - Put the teaching staff in CC.
 
 ## Practical work review
 
 The practical work review will take place on **Tuesday 23.01.2023** in the
 **room B38**, at the very end of the corridor next to the door entry.
 
-We only have **10 minutes per group** (6 minutes of presentation, 3 minutes of
-questions). Please be prepared to present your work. You decide what you want to
+We only have **10 minutes per group** (10 minutes of presentation, no time for questions). Please be prepared to present your work. You decide what you want to
 show us and how you want to present it.
 
 Come 5 minutes before your time slot with your computer.
@@ -149,5 +355,5 @@ You can use reactions to express your opinion on a comment!
 ## Sources
 
 - Main illustration by
-  [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) on
-  [Unsplash](https://unsplash.com/photos/ScZwMqoxcls)
+  [Lāsma Artmane](https://unsplash.com/@lasmaa) on
+  [Unsplash](https://unsplash.com/photos/lighted-christmas-tree-surrounded-by-houses-5X8N9A2ruHM)
