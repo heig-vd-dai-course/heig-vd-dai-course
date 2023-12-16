@@ -115,8 +115,10 @@ steps:
 2. [Install and configure the virtual machine](#install-and-configure-the-virtual-machine)
 3. [Obtain a domain name](#obtain-a-domain-name)
 4. [Run the secure Traefik and whoami examples](#run-the-secure-traefik-and-whoami-examples)
+5. Develop the web application
 
-Steps 1, 3 can be done in parallel before steps 2 and 4.
+Steps 1, 3 can be done in parallel before steps 2 and 4. Step 5 can be started
+right away.
 
 ### Obtain a virtual machine
 
@@ -271,7 +273,7 @@ configuration (useful when you are not on your own computer).
 > This step will fail, it is normal. You will have to fix it in the next step.
 
 Start the `whoami-on-ports-80-and-443` example available in the
-[`22-web-infrastructures`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main/22-web-infrastructures)
+[`23-practical-work-4`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main/23-practical-work-4)
 directory.
 
 This should start two whoami containers on ports `80` and `443` on the virtual
@@ -334,7 +336,7 @@ future as well.
 ### Run the secure Traefik and whoami examples
 
 Start the `traefik-secure` and `whoami-with-traefik-secure` examples in the
-[`22-web-infrastructures`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main/22-web-infrastructures)
+[`23-practical-work-4`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main/23-practical-work-4)
 directory.
 
 > **Note**  
@@ -347,7 +349,8 @@ If you are able to access the Traefik dashboard and the whoami application from
 the Internet, you have successfully configured Traefik to use HTTPS with a
 domain name.
 
-You now have all the required elements for the practical work!
+You now have all the required elements to deploy and run your web application on
+the Internet!
 
 ## Grading criteria
 
@@ -374,11 +377,11 @@ repository!
 
 ### Category 2 - Docker and Docker Compose
 
-| #   | Criterion                                                             | Points |
-| --- | --------------------------------------------------------------------- | -----: |
-| 8   | Docker and Docker Compose are correctly installed on the server       |    0.2 |
-| 9   | The Docker applications (Traefik + API) are split into multiple directories           |    0.2 |
-| 10  | The web application runs with Docker and Docker Compose on the server |    0.2 |
+| #   | Criterion                                                                   | Points |
+| --- | --------------------------------------------------------------------------- | -----: |
+| 8   | Docker and Docker Compose are correctly installed on the server             |    0.2 |
+| 9   | The Docker applications (Traefik + API) are split into multiple directories |    0.2 |
+| 10  | The web application runs with Docker and Docker Compose on the server       |    0.2 |
 
 ### Category 3 - SSH and SCP
 

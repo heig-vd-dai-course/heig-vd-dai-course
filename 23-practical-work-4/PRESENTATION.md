@@ -181,7 +181,7 @@ Output:
     "name": "Hot wine",
     "description": "Hot wine with spices",
     "price": 3.0
-  },
+  }
   // All the other drinks
 ]
 ```
@@ -292,7 +292,8 @@ Leads to a `409` (Conflict) status code as we want to keep the names unique.
 
 - State your group on GitHub Discussions before the end of the day!
 - Define someone in your group as the responsible
-- **Write to the IT department** to get a virtual machine as soon as possible (**before the end of the day**!)
+- **Write to the IT department** to get a virtual machine as soon as possible
+  (**before the end of the day**!)
   - Use the template email provided in the course material.
   - Put the teaching staff in CC.
 
@@ -301,7 +302,8 @@ Leads to a `409` (Conflict) status code as we want to keep the names unique.
 The practical work review will take place on **Tuesday 23.01.2023** in the
 **room B38**, at the very end of the corridor next to the door entry.
 
-We only have **10 minutes per group** (10 minutes of presentation, no time for questions). Please be prepared to present your work. You decide what you want to
+We only have **10 minutes per group** (10 minutes of presentation, no time for
+questions). Please be prepared to present your work. You decide what you want to
 show us and how you want to present it.
 
 Come 5 minutes before your time slot with your computer.
@@ -311,9 +313,11 @@ The order of presentation is random and is stated in the next slides.
 ---
 
 <!-- -->
+
 **Please state your group on GitHub Discussions as soon as possible, even if you
 do not have a clear idea yet as it will help us to plan the practical work
 review.**
+
 <!-- -->
 
 | #   | Group | Passage |
@@ -354,6 +358,5 @@ You can use reactions to express your opinion on a comment!
 
 ## Sources
 
-- Main illustration by
-  [Lāsma Artmane](https://unsplash.com/@lasmaa) on
+- Main illustration by [Lāsma Artmane](https://unsplash.com/@lasmaa) on
   [Unsplash](https://unsplash.com/photos/lighted-christmas-tree-surrounded-by-houses-5X8N9A2ruHM)

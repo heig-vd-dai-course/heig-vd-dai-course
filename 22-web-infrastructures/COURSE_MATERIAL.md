@@ -26,6 +26,28 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
+- [Prepare and setup your environment](#prepare-and-setup-your-environment)
+  - [Access your `hosts` file](#access-your-hosts-file)
+  - [Traefik](#traefik)
+- [Web infrastructures: definition](#web-infrastructures-definition)
+- [System scalability](#system-scalability)
+  - [Vertical scaling](#vertical-scaling)
+  - [Horizontal scaling](#horizontal-scaling)
+- [HTTP features](#http-features)
+  - [Simplicity / statelessness](#simplicity--statelessness)
+  - [Scalability](#scalability)
+  - [Reliability](#reliability)
+  - [The `Host` header](#the-host-header)
+- [Caching](#caching)
+  - [Client-side caching](#client-side-caching)
+  - [Server-side caching](#server-side-caching)
+  - [CDN](#cdn)
+  - [Expiration and validation](#expiration-and-validation)
+- [Reverse-proxy](#reverse-proxy)
+- [Load balancing](#load-balancing)
+  - [Sticky sessions](#sticky-sessions)
+  - [Round-robin](#round-robin)
+  - [Other metrics](#other-metrics)
 - [Practical content](#practical-content)
   - [Install and configure mkcert](#install-and-configure-mkcert)
   - [Start and configure a whoami container](#start-and-configure-a-whoami-container)
@@ -52,6 +74,105 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 ## Objectives
 
 - TODO
+
+## Prepare and setup your environment
+
+### Access your `hosts` file
+
+In this section, you will need to access your `hosts` file.
+
+The host file is a computer file used by an operating system to map hostnames to
+IP addresses. The hosts file is a plain text file and is conventionally named
+`hosts`. The hosts file can be used as an alternative to (or in conjunction
+with) DNS.
+
+On Unix-like operating systems (Linux and macOS), the hosts file is located at
+`/etc/hosts`.
+
+On Windows, the hosts file is located at
+`%SystemRoot%\system32\drivers\etc\hosts`.
+
+Ensure you can access your `hosts` file and edit it for the next steps.
+
+### Traefik
+
+In this section, you will need to install and configure
+[Traefik](https://traefik.io/traefik/) using its official Docker image available
+on Docker Hub: <https://hub.docker.com/_/traefik>.
+
+Traefik is an open-source Edge Router that makes publishing your services a fun
+and easy experience. It receives requests on behalf of your system and finds out
+which components are responsible for handling them.
+
+Traefik is full of features and can be used as a reverse proxy, a load balancer,
+a Kubernetes ingress controller, and much more.
+
+We will go into more details about Traefik in the next sections.
+
+Run the `traefik-insecure` example from the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository.
+
+You should be able to access the Traefik dashboard at
+<http://traefik.localhost>.
+
+#### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [Caddy](https://caddyserver.com/)
+- [Nginx](https://www.nginx.com/)
+- [HAProxy](https://www.haproxy.org/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+## Web infrastructures: definition
+
+## System scalability
+
+### Vertical scaling
+
+### Horizontal scaling
+
+## HTTP features
+
+### Simplicity / statelessness
+
+HTTP servers don’t have to store information
+
+### Scalability
+
+Several identical servers can handle requests without coordination
+
+### Reliability
+
+After a server failure, another server can easily take over the work
+
+### The `Host` header
+
+## Caching
+
+### Client-side caching
+
+### Server-side caching
+
+### CDN
+
+### Expiration and validation
+
+## Reverse-proxy
+
+## Load balancing
+
+### Sticky sessions
+
+### Round-robin
+
+### Other metrics
+
+- Least connections
+- Least response time
+- Hashing
 
 ## Practical content
 

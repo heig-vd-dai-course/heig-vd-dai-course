@@ -150,13 +150,14 @@ folder of the course repository.
 
 Do you have any questions?
 
-## Closing remarks
+## Conclusion
 
 <!-- _class: lead -->
 
-### Closing remarks
+### Conclusion
 
-You can be proud of yourself! You all did a great job!
+You can be proud of yourself! You all did a great job! We (Hadrien and I) had a
+blast following your progress during this semester.
 
 This course is now over, but we hope you enjoyed it and learned a lot.
 
@@ -167,7 +168,7 @@ This course is only the start of what you can learn about network programming
 and web development. We hope you will continue to learn about these topics in
 the future.
 
-### How to stay up to date? Tips and resources
+### How to stay up to date?
 
 Staying up to date is a challenge in the IT world. Here are some resources to
 help you with content related to this course:
@@ -178,17 +179,28 @@ help you with content related to this course:
 - <https://www.reddit.com/r/selfhosted/>
 - <https://github.com/awesome-selfhosted/awesome-selfhosted>
 
-### With great power comes great responsibility
+### Well, what now?
 
 You have gained significant knowledge during this course. Use this knowledge
-wisely. My personal closing remarks are the following:
+wisely. With great power comes great responsibility. You can now:
 
-- **Always stay critical!** Don't believe everything you read or hear!
-- **Always ask yourself questions!** _Why?_ _How?_ _What?_ _Am I doing the right
+- Go deeper in the web development world
+- Enter the game of self-hosting
+- Interact with the open-source community
+
+Thrive to learn more, and do not hesitate to share your knowledge with others.
+
+### Closing remarks
+
+My personal closing remarks are the following:
+
+- **Always stay critical**! Don't believe everything you read or hear!
+- **Always ask yourself questions**! _Why?_ _How?_ _What?_ _Am I doing the right
   thing for the right cause?_ _Do I listen to myself?_
-- **Always do what is good for you!** Health, relationships, friends are more
+- **Always do what is good for you**! Health, relationships, friends are more
   important than work! You are more important than work!
-- **Always trust yourself and your guts!** Do what you think is right!
+- **Always trust yourself and your guts**! Do what you think is right!
+- **Help others, be kind**: cooperation is better than competition!
 
 ### Thank you, good luck, and farewell!
 
