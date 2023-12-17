@@ -58,7 +58,19 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-- TODO
+In this chapter, you will learn how to build a web infrastructure.
+
+You will learn how to use a reverse proxy and a load balancer to scale your
+system.
+
+Thanks to HTTP features, the reverse proxy will be able to serve multiple
+domains on the same IP address.
+
+You will also learn how to use caching to improve the performance of your
+system.
+
+Finally, you will learn how to monitor your system and how to calculate the
+number of servers needed to handle a certain amount of requests.
 
 ## Prepare and setup your environment
 
