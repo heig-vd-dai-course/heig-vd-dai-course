@@ -2553,6 +2553,21 @@ The response body contains a JSON object with the following properties:
 - `401` (Unauthorized) - The user is not logged in
 ```
 
+### How to persist data
+
+In the previous example, we have used a `ConcurrentHashMap` to store the users.
+
+In a production application, you would certainly use a database to store the
+users (PostgreSQL, MySQL, MongoDB, etc.).
+
+While it would be possible to use a database with Javalin, it is out of the
+scope of this course. You can check the [Go further](#go-further) section if you
+want to implement if yourself.
+
+As already mentioned, Javalin is perfect to create prototypes and proof of
+concepts but we would recommend you to use a web framework such as Quarkus or
+Spring Boot to create a production application.
+
 ### How to secure an API
 
 You might have noticed that the API we have just created is not very secure: we
@@ -2600,6 +2615,9 @@ This is an optional section. Feel free to skip it if you do not have time.
   <https://javalin.io/tutorials/openapi-example>.
 - Are you able to secure the API you have just created? You can use the official
   documentation to help you: <https://javalin.io/tutorials/auth-example>.
+- Are you able to persist the data in a database? You can use the official
+  documentation to help you:
+  <https://javalin.io/tutorials/jetty-session-handling>.
 
 ## Conclusion
 

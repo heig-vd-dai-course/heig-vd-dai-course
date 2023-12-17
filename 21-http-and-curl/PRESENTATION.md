@@ -126,7 +126,7 @@ resources and alternatives as well.
 
 - A lightweight web framework for Java and Kotlin
 - Easy to learn and use: perfect for learning purposes
-- Production ready but not as powerful as Spring Boot or Quarkus
+- Production ready but not as powerful as Quarkus or Spring Boot
 
 ![bg right w:80%](https://javalin.io/img/logo.svg)
 
@@ -526,6 +526,14 @@ CRUD APIs. We mention REST APIs for completeness.
 
 ![bg right:40%](https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720)
 
+### How to persist data
+
+- In the course material, we store data in memory
+- Data can be (and should be!) stored in a database
+- Out of scope for this course but you can find resources in the course material
+
+![bg right:40%](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720)
+
 ### How to secure an API
 
 - Not all APIs are public
@@ -603,6 +611,8 @@ In the next chapter, you will learn the following topics:
 
 ---
 
+- Illustration by [Jan Antonin Kolar](https://unsplash.com/@jankolar) on
+  [Unsplash](https://unsplash.com/photos/brown-wooden-drawer-lRoX0shwjUQ)
 - Illustration by [Amol Tyagi](https://unsplash.com/@amoltyagi2) on
   [Unsplash](https://unsplash.com/photos/silver-skeleton-key-on-black-surface-0juktkOTkpU)
 - Illustration by [Nicolas Picard](https://unsplash.com/@artnok) on

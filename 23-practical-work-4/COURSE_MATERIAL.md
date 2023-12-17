@@ -335,6 +335,11 @@ future as well.
 
 ### Run the secure Traefik and whoami examples
 
+> **Note**  
+> You might need to finish the
+> [Web infrastructures](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/22-web-infrastructures)
+> chapter before this step.
+
 Start the `traefik-secure` and `whoami-with-traefik-secure` examples in the
 [`23-practical-work-4`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main/23-practical-work-4)
 directory.
