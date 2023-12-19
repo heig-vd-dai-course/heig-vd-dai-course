@@ -1,0 +1,9 @@
+@startuml
+client -> server : VIEW_NOTIFICATIONS
+server -> client : NOTIFICATIONS 123 124 125
+...
+client -> server : VIEW_NOTIFICATION 123
+server -> client : NOTIFICATION 123 MA-1 MECHANICAL 2023-12-05
+...
+client -> server : EMIT_NOTIFICATION MA-2 MECHANICAL 2023-12-06
+@enduml

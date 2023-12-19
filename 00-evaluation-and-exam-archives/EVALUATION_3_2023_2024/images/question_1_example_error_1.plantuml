@@ -1,0 +1,10 @@
+@startuml
+client -> server: VIEW_NOTIFICATIONS
+server -> client: NOTIFICATIONS 123 124 125
+client -> server: VIEW_NOTIFICATION 333
+server -> client: ERROR 1
+...
+client -> server : DISPLAY_MESSAGES
+server -> client : INVALID_COMMAND
+
+@enduml

@@ -76,7 +76,7 @@ number of servers needed to handle a certain amount of requests.
 
 ### Access your `hosts` file
 
-In this section, you will need to access your `hosts` file.
+In this section, you will access your `hosts` file.
 
 The host file is a computer file used by an operating system to map hostnames to
 IP addresses. The hosts file is a plain text file and is conventionally named
