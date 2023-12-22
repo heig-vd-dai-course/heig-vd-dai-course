@@ -64,8 +64,8 @@ l'état des machines en tout temps.
 Le récepteur s'exécute sur l'adresse multicast 239.0.0.1 sur le port 6343 et
 utilise le protocole UDP pour recevoir les notifications. Il s'exécute aussi sur
 le port 6344 pour recevoir les requêtes des personnes qui gèrent les machines en
-unicast en utilisant le protocole de transport UDP (1 point pour la mention du/des
-protocole(s), 1 point pour la mention du/des port(s)).
+unicast en utilisant le protocole de transport UDP (1 point pour la mention
+du/des protocole(s), 1 point pour la mention du/des port(s)).
 
 UDP est adapté car il permet de recevoir des messages sans connexion préalable
 et si un message est perdu, une nouvelle notification future sera envoyée à

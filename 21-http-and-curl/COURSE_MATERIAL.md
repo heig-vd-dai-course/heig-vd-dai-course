@@ -46,6 +46,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [REST APIs](#rest-apis)
   - [Simple API with CRUD operations example](#simple-api-with-crud-operations-example)
   - [How to document an API](#how-to-document-an-api)
+  - [How to persist data](#how-to-persist-data)
   - [How to secure an API](#how-to-secure-an-api)
 - [Share your project](#share-your-project)
 - [Go further](#go-further)
@@ -198,7 +199,9 @@ of [Jetty](https://eclipse.dev/jetty/).
 
 #### Create and configure a new IntelliJ IDEA project
 
-Create a new IntelliJ IDEA project as seen in previous chapters with Maven.
+Create a new IntelliJ IDEA project as seen in the
+[Java, IntelliJ IDEA and Maven](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04-java-intellij-idea-and-maven)
+chapter.
 
 #### Add Javalin to the project
 

@@ -66,12 +66,12 @@ The entire course planning for the semester is available at
 - [21. HTTP and curl (1 period)](./21-http-and-curl/README.md)
 - [22. Web infrastructures (2 periods)](./22-web-infrastructures/README.md)
 - [23. Practical work 4 (2 + 2 + 2 periods)](./23-practical-work-4/README.md)
-- [24. Conclusion to part 4 + practical work review (2 periods)](./24-conclusion-to-part-4/README.md)
+- [24. Conclusion to part 4 + practical work review (2 periods)](./25-conclusion-to-part-4/README.md)
 - Evaluation 4 (2 periods)
 
 ### Conclusion (2 periods)
 
-- [25. Semester review and exam preparation (2 periods)](./25-semester-review-and-exam-preparation/README.md)
+- [25. Semester review and exam preparation (2 periods)](./26-semester-review-and-exam-preparation/README.md)
 
 ## GitHub Discussions
 
