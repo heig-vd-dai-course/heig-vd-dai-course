@@ -412,7 +412,7 @@ UDP to communicate.
 
 You can create a new GitHub project using the template we have prepared for you.
 When you create a new repository, you can choose to use a template. Select the
-`heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content`
+`heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template`
 template as shown in the following screenshot:
 
 > **Warning**  

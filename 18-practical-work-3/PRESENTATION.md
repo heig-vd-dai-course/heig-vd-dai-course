@@ -331,12 +331,13 @@ review.**
 | 4   | Sebastian Diaz and Thomas Vuilleumier   | 14:15   |
 | 5   | Colin Jaques and Walid Slimani?         | 14:25   |
 | 6   | Lionel Pollien and Arthur Menétrey      | 14:35   |
+|     | Break                                   |         |
+| 7   | Gwendal Piemontesi and Guillaume Trueb  | 16:45   |
 
 ---
 
 | #   | Group                                              | Passage |
 | --- | -------------------------------------------------- | ------- |
-| 7   | Gwendal Piemontesi and Guillaume Trueb             | 16:45   |
 | 8   | Alan Sottile and Calvin Graf                       | 16:55   |
 | 9   | Alexandre Iorio and Theodros Mulugeta              | 17:05   |
 | 10  | Richard Aurélien and Pirakas Anthon                | 17:15   |

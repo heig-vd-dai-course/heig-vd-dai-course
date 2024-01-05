@@ -521,8 +521,8 @@ To send data to the server, you will have to encode the data using the
 [URL encoding (officially known as percent-encoding)](https://en.wikipedia.org/wiki/Percent-encoding)
 format.
 
-URL encoding replaces unsafe ASCII characters with a "%" followed by two
-hexadecimal digits. URLs cannot contain spaces. Spaces are replaced by "%20".
+URL encoding replaces unsafe ASCII characters with a `%` followed by two
+hexadecimal digits. URLs cannot contain spaces. Spaces are replaced by `%20`.
 
 For example, the string `Hello world` will be encoded as `Hello%20world`.
 
@@ -1585,6 +1585,9 @@ It is part of the HTTP protocol and is meant to store data on the client side. A
 cookie is identified by a name and a value and is sent in the `Set-Cookie`
 header.
 
+The MDN Web Docs has a very good documentation on cookies:
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies>.
+
 The server can use cookies to keep track of the state of the client:
 
 1. Once a user is logged in, the server generates a random token and stores it
@@ -1609,11 +1612,11 @@ app.get("/cookie-demo", ctx -> {
   String cookie = ctx.cookie("cookie");
 
   if (cookie == null) {
-    ctx.cookie("cookie", "Hello, world!");
+    ctx.cookie("cookie", "cookie-demo");
 
     ctx.result("You just called `/cookie-demo` without a cookie. A cookie is now set!");
   } else {
-    ctx.result("You just called `/cookie-demo` with cookie '" + cookie + "'!");
+    ctx.result("You just called `/cookie-demo` with a cookie. Its value is '" + cookie + "'!");
   }
 });
 ```
@@ -1637,13 +1640,12 @@ The first time you access the page, you should see the following:
 You just called `/cookie-demo` without a cookie. A cookie is now set!
 ```
 
-The server has set a cookie with the name `cookie` and the value
-`Hello, world!`.
+The server has set a cookie with the name `cookie` and the value `cookie-demo`.
 
 Now, refresh the page. You should see the following:
 
 ```text
-You just called `/cookie-demo` with cookie 'Hello, world!'!
+You just called `/cookie-demo` with a cookie. Its value is 'cookie-demo'!
 ```
 
 The browser has sent the cookie with the name `cookie` and the value to the
@@ -1659,8 +1661,11 @@ You can access the cookies in your browser using the developer tools:
 Try to update the value of the cookie and refresh the page. You should see the
 new value of the cookie.
 
-If you update the value of the cookie to something else than `Hello, world!`,
-the server will display its new value.
+If you update the value of the cookie to something else than `cookie-demo`, the
+server will display its new value. Just be aware that some characters are not
+allowed in cookies. See the MDN Web Docs documentation on cookies for more
+information:
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#cookie-namecookie-value>.
 
 Cookies are very useful to keep track of the state of the client. They are
 automatically sent by the browser with each request. There is no need to do
