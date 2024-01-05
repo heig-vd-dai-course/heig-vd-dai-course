@@ -1,0 +1,44 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+title "Where to cache?"
+
+rectangle "Clients LAN" as clientLan {
+
+    actor "Client" as client
+
+    note top of client
+        Private cache
+        (your browser)
+    end note
+
+    rectangle "Forward proxy" as forwardProxy {
+        client -- (Exit the LAN)
+    }
+
+    note top of forwardProxy
+        Shared cache
+        (your company)
+    end note
+}
+
+cloud "Internet" as internet {
+    (Exit the LAN) -- internet
+}
+
+rectangle "Servers LAN" as serverLan {
+
+    actor "Server" as server
+
+    rectangle "Reverse proxy" as reverseProxy {
+        internet -- (Enter the LAN)
+        (Enter the LAN) -- server
+    }
+
+    note top of reverseProxy
+        Shared cache
+        (server side)
+    end note
+}
+@enduml

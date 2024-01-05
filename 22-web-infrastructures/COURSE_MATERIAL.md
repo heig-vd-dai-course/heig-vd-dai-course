@@ -42,10 +42,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Calculate the number of servers needed](#calculate-the-number-of-servers-needed)
 - [Load balancing](#load-balancing)
 - [Caching](#caching)
-  - [Client-side caching](#client-side-caching)
-  - [Server-side caching](#server-side-caching)
+  - [Managing cache with HTTP](#managing-cache-with-http)
   - [CDN](#cdn)
-  - [Expiration and validation](#expiration-and-validation)
   - [Where to cache?](#where-to-cache)
 - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -626,41 +624,115 @@ Caching is the process of storing data in a cache. A cache is a temporary
 storage component area where data is stored so that future requests for that
 data can be served faster.
 
-Caching can be done on the client-side or on the server-side.
+Caching can be used to improve the performance of a system by serving cached
+data instead of processing a request again. Caching significantly improves the
+performance of a system because it avoids processing the same request multiple
+times.
 
-There are many HTTP headers that can be used to control caching:
+This has several advantages:
+
+- The client will receive the response faster, especially when the client itself
+  (browser) has cached the response.
+- The server does not need to process the request (parse the request, query the
+  database, compose the response, etc).
+- The network does not have to carry the messages along the entire path between
+  client and server.
+
+It however introduces some complexity because it is difficult to know when to
+invalidate a cache. If a cache is not invalidated, it can serve stale data.
+
+Caching can be done on the client-side or on the server-side:
+
+- **Client-side caching**: once a client has received a response from a server,
+  it can store the response in a cache. The next time the client needs the same
+  resource, it can use the cached response instead of sending a new request to
+  the server.
+- **Server-side caching**: the server stores data in a cache with the help of a
+  reverse proxy. The next time the server needs the same resource, it can use
+  the cached response instead of processing the request again.
+
+### Managing cache with HTTP
+
+Managing cache is challenging because it is difficult to know when to invalidate
+a cache. If a cache is not invalidated, it can serve stale data.
+
+There are two main caching models:
+
+- **Expiration model**: the cache is invalidated after a certain amount of time.
+- **Validation model**: the cache is invalidated when the data is modified.
+
+Expiration and validation are two mechanisms that can be used to control
+caching.
+
+Expiration is the process of specifying how long a response can be cached.
+
+Validation is the process of checking if a cached response is still valid.
+
+In both models, the `Cache-Control` header can be used to tweak the caching
+behavior.
+
+Much more details about caching with HTTP can be found on MDN Web Docs:
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching>.
+
+#### Expiration model
+
+The expiration model is the simplest caching model.
+
+The cache is invalidated after a certain amount of time. The cache can be
+invalidated after a certain amount of time because the data is not expected to
+change.
+
+The expiration model can be used to cache static content (e.g. images, videos,
+etc.) or to cache responses from servers to improve the performance of the
+system.
+
+With HTTP, the expiration model can be implemented with the following headers:
 
 - `Cache-Control`: specifies directives for caching mechanisms in both requests
   and responses.
 - `Expires`: gives the date/time after which the response is considered stale.
+
+#### Validation model
+
+The validation model is more complex than the expiration model.
+
+The cache is invalidated when the data is modified. The cache can be invalidated
+when the data is modified because the data is expected to change.
+
+The validation model can be used to cache responses from servers to improve the
+performance of the system.
+
+The main idea of the validation model is:
+
+1. Send a request to the server to check if the data has changed.
+2. If the data has not changed, the server can return a `304 Not Modified`
+   response to the client.
+3. If the data has changed, the server can return a `200 OK` response to the
+   client with the new data.
+
+The request to check if the data has changed is called a **conditional
+request**.
+
+With HTTP, the validation model can be implemented with the following headers:
+
+- `Cache-Control`: specifies directives for caching mechanisms in both requests
+  and responses.
 - `Last-Modified`: indicates the date and time at which the origin server
-  believes the resource was last modified.
-- `ETag`: provides the current entity tag for the selected representation.
-- `If-Modified-Since`: allows a 304 Not Modified to be returned if content is
-  unchanged.
-- `If-None-Match`: allows a 304 Not Modified to be returned if content is
-  unchanged.
-
-### Client-side caching
-
-Once a client has received a response from a server, it can store the response
-in a cache. The next time the client needs the same resource, it can use the
-cached response instead of sending a new request to the server.
-
-The client can use the `Cache-Control` header to specify how long the response
-can be cached.
-
-### Server-side caching
-
-A server can cache responses from other servers. This is called a **reverse
-proxy cache**.
-
-A reverse proxy cache can be used to serve static content (e.g. images, videos,
-etc.) or to cache responses from servers to improve the performance of the
-system.
-
-A reverse proxy cache can use the `Cache-Control` header to specify how long the
-response can be cached.
+  believes the selected representation was last modified.
+- `ETag`: provides the current entity tag for the selected representation. Think
+  of it like a version number for the resource.
+- `If-Modified-Since`: allows a `304 Not Modified` to be returned if content is
+  unchanged since the time specified in this field (= the value of the
+  `Last-Modified` header).
+- `If-Unmodified-Since`: allows a `412 Precondition Failed` to be returned if
+  content is changed since the time specified in this field (= the value of the
+  `Last-Modified` header).
+- `If-Match`: allows a `304 Not Modified` to be returned if content is unchanged
+  for the entity specified (`ETag`) by this field (= the value of the `ETag`
+  header).
+- `If-None-Match`: allows a `304 Not Modified` to be returned if content is
+  unchanged for the entity specified (`ETag`) by this field (= the value of the
+  `ETag` header).
 
 ### CDN
 
@@ -673,21 +745,17 @@ centers.
 A CDN can be used to improve the performance of a system by serving static
 content to clients from the closest server.
 
-### Expiration and validation
-
-Expiration and validation are two mechanisms that can be used to control
-caching.
-
-Expiration is the process of specifying how long a response can be cached.
-
-Validation is the process of checking if a cached response is still valid.
-
 ### Where to cache?
 
 Caching can be done on the client-side, on the server-side, or on a CDN.
 
-The best would be to cache on all three sides to ensure the best performance but
-it is not always possible or faisable.
+Private caches are caches that are only used by one client. Public caches are
+caches that are used by multiple clients.
+
+![Where to cache](./images/where-to-cache.png)
+
+The best would be to cache at each level of the system to ensure the best
+performance but it is not always possible or faisable.
 
 ## Go further
 
@@ -720,7 +788,7 @@ to scale:
   coordination: the client can send a request to any server, and the server can
   handle the request.
 - **Reliability**: After a server failure, another server can easily take over
-  the work.
+  the work (if the server is stateless).
 
 ### Test your knowledge
 
@@ -731,7 +799,7 @@ At this point, you should be able to answer the following questions:
   same IP address?
 - What is the difference between vertical and horizontal scaling?
 - What is the difference between a CDN and a reverse proxy cache?
-- What is the difference between expiration and validation?
+- What is the difference between expiration and validation caching models?
 
 ## Finished? Was it easy? Was it hard?
 
