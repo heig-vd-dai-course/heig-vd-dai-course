@@ -47,8 +47,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [CDN](#cdn)
   - [Expiration and validation](#expiration-and-validation)
   - [Where to cache?](#where-to-cache)
-- [Uptime and availability](#uptime-and-availability)
-  - [Go further](#go-further)
+- [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
@@ -690,63 +689,7 @@ Caching can be done on the client-side, on the server-side, or on a CDN.
 The best would be to cache on all three sides to ensure the best performance but
 it is not always possible or faisable.
 
-## Uptime and availability
-
-Uptime is the amount of time a system is available and operational.
-
-Availability is the probability that a system will work as expected at a given
-point in time.
-
-A system can be unavailable for many reasons:
-
-- Hardware failure
-- Software failure
-- Network failure
-- Human error
-- etc.
-
-A system can be unavailable for a short period of time (e.g. a few seconds) or
-for a long period of time (e.g. a few hours).
-
-To calculate the availability of a system, you can use the following formula:
-
-```text
-availability = uptime / (uptime + downtime)
-```
-
-For example, if a system was down for 25 minutes in a year, the availability of
-the system would be:
-
-```text
-availability = 525600 / (525600 + 25)
-availability = 525600 / 525625
-availability = 0.999952
-```
-
-The availability of the system would be 99.9952%.
-
-Some companies offer a Service Level Agreement (SLA) to their customers. An SLA
-is a commitment between a service provider and a client. The SLA specifies the
-level of service expected from the service provider.
-
-The most common downtimes allowed in an SLA are:
-
-- 99.9% (8.76 hours per year)
-- 99.99% (52.56 minutes per year)
-- 99.999% (5.26 minutes per year)
-- 99.9999% (31.5 seconds per year)
-
-For example, a company can offer an SLA of 99.9% availability. This means that
-the company guarantees that the system will be unavailable for the following
-maximum number of minutes per year:
-
-```text
-downtime = 525600 * (1 - 0.999)
-downtime = 525600 * 0.001
-downtime = 525.6
-```
-
-### Go further
+## Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
