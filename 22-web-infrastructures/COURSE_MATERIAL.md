@@ -30,9 +30,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Access your `hosts` file](#access-your-hosts-file)
   - [Traefik](#traefik)
   - [whoami](#whoami)
-- [Definition](#definition)
+- [Functional and non-functional requirements](#functional-and-non-functional-requirements)
+- [Web infrastructure definition](#web-infrastructure-definition)
 - [The `Host` header](#the-host-header)
-- [Reverse-proxy](#reverse-proxy)
+- [Forward proxy and reverse proxy](#forward-proxy-and-reverse-proxy)
 - [System scalability](#system-scalability)
   - [Vertical scaling](#vertical-scaling)
   - [Horizontal scaling](#horizontal-scaling)
@@ -145,11 +146,57 @@ _Alternatives are here for general knowledge. No need to learn them._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-## Definition
+## Functional and non-functional requirements
+
+Functional requirements are the features that a system must have to satisfy the
+needs of its users. It is the "what" of a system.
+
+Some examples of functional requirements:
+
+- **User management**: Users must be able to register, login, logout, etc.
+- **Product management**: Users must be able to create, read, update, delete
+  products, etc.
+- **Order management**: Users must be able to create, read, update, delete
+  orders, etc.
+- **Payment management**: Users must be able to pay for their orders, etc.
+
+In order to provide the features that a system must have, the system must
+respect some constraints. These constraints are called non-functional
+requirements.
+
+Some examples of non-functional requirements:
+
+- **Response time**: Time required between a request and the presentation of the
+  result (most important for the end user)
+- **Throughput**: Number of requests handled per time interval (most important
+  for the service provider)
+- **Scalability**: Property of a system to handle a varying amount of work.
+  Ideally we want linear scalability: 2x more server for 2x more users
+- **Availability**: Percentage of time that the system provides a satisfactory
+  service
+- **Maintainability**: Ease with which the system can be managed and evolved
+- **Security**: Confidentiality, integrity, availability, authentication,
+  authorization, etc.
+- ...and many, many more: <http://en.wikipedia.org/wiki/Ilities>
+
+Functional and non-functional requirements are used to define the scope of a
+system and they strongly depend on/influence the architecture of a system.
+
+It is important to define the functional and non-functional requirements of a
+system before starting to design it.
+
+Implementing all requirements is not always possible. Some requirements can be
+in conflict with each other. For example, increasing the security of a system
+can decrease its performance.
+
+It is always a trade-off between the requirements.
+
+## Web infrastructure definition
 
 Web infrastructures are the software and hardware resources that are used to
 support the deployment of web applications, web services, and websites on the
-Internet.
+Internet that respect the functional and non-functional requirements of the
+system.
 
 Web infrastructures are composed of several components:
 
@@ -185,61 +232,82 @@ with the help of a reverse proxy.
 Before the `Host` header, a server could only handle one domain per IP address.
 The following diagram shows how it worked:
 
-```plantuml
-@startuml
-actor client
-participant "DNS server" as dns
-participant "www.example.com\n93.184.216.34" as web_server_1
-participant "www.google.com\n172.217.168.4" as web_server_2
-
-client -> dns: : IP for www.example.com?
-dns -> client: IP for www.example.com is 93.184.216.34
-client -> web_server_1: GET / HTTP/1.1
-```
+![HTTP without the Host header](./images/http-without-the-host-header.png)
 
 The following PlantUML diagram shows how the `Host` header works:
 
-```plantuml
-@startuml
-actor client
-participant "DNS server" as dns
-participant "Reverse proxy\n185.144.38.57" as reverse_proxy
-participant "www.example.com" as web_server_1
-participant "www.google.com" as web_server_2
-
-client -> dns: : IP for www.example.com?
-dns -> client: IP for www.example.com is 185.144.38.57
-client -> reverse_proxy: GET / HTTP/1.1 Host: www.example.com
-reverse_proxy -> web_server_1: GET / HTTP/1.1 Host: www.example.com
-web_server_1 -> reverse_proxy: HTTP 200 OK
-reverse_proxy -> client: HTTP 200 OK
-```
+![HTTP with the Host header](./images/http-with-the-host-header.png)
 
 The reverse proxy receives the request from the client and forwards it to the
 web server. The web server receives the request and sends a response to the
 reverse proxy. The reverse proxy receives the response and forwards it to the
 client.
 
-## Reverse-proxy
+## Forward proxy and reverse proxy
 
-As described in the previous diagram, a reverse proxy is a proxy server that
-retrieves resources on behalf of a client from one or more servers. These
-resources are then returned to the client as though they originated from the
-proxy server itself.
+Forward and reverse proxies are two different types of proxies.
+
+A proxy is a component that acts as an intermediary for requests from clients
+seeking resources from other servers.
+
+As described in
+[Forward Proxy vs. Reverse Proxy: The Difference Explained](https://www.strongdm.com/blog/difference-between-proxy-and-reverse-proxy)
+article:
+
+A forward proxy...
+
+> ...also known as a proxy server, operates between clients and external
+> systems, regulating traffic, masking client IP addresses, and enforcing
+> security policies.
+
+It acts as an intermediary for requests from clients seeking resources from
+other servers. A forward proxy is a proxy configured to handle requests from a
+group of clients to any other server.
+
+Forward proxies are often used in corporate environments to enforce security
+policies (e.g. block access to certain websites, etc.) and resides in the LAN
+network.
+
+![Forward proxy](./images/forward-proxy.png)
+
+A reverse proxy...
+
+> ...is positioned between clients and servers, acting as a protective barrier
+> for servers by accepting client requests, forwarding them to the appropriate
+> server, and returning the results to the client.
+
+It acts as an intermediary for requests from clients seeking resources from
+other servers. A reverse proxy is a proxy configured to handle requests from any
+client to a group of servers.
+
+Reverse proxies are often used in web infrastructures to serve multiple domains
+on the same IP address and to scale.
+
+![Reverse proxy](./images/reverse-proxy.png)
+
+Reverse proxies are used in web infrastructures to serve multiple domains on the
+same IP address and to scale.
 
 A reverse proxy is a component that sits in front of one or more servers. It
 receives requests from clients and forwards them to the servers. It also
-receives responses from the servers and forwards them to the clients.
+receives responses from the servers and forwards them back to the clients.
 
 A reverse proxy can be used to:
 
-- **Load balance** requests between multiple servers
-- **Cache** responses from servers
-- **Encrypt** and **decrypt** traffic between clients and servers
-- **Protect** servers from attacks (e.g. DDoS, SQL injection, etc.)
-- **Serve static content** (e.g. images, videos, etc.)
-- **Serve multiple domains** on the same IP address
-- etc.
+- **Load balance**: Reverse proxy can receive all traffic and distribute the
+  requests on a cluster of several identical Web server instances
+- **Cache**: Reverse proxy can keep in cache responses from servers for a
+  certain amount of time - if the same request is received again, the reverse
+  proxy can return the cached response instead of forwarding the request to the
+  server
+- **Encrypt** and **decrypt** traffic: Reverse proxy manages secure HTTPS
+  connections with clients and unsecure HTTP connections with servers
+- **Protect** servers from attacks (e.g. DDoS, SQL injection, etc.): By
+  filtering requests, reverse proxy can protect servers from attacks
+- **Serve static content** (e.g. images, videos, etc.): Reverse proxy can serve
+  static content from a cache
+- **Serve multiple domains** on the same IP address: Reverse proxy can use the
+  `Host` header to forward requests to the correct server
 
 A reverse proxy is a very powerful component that can be used to build a web
 infrastructure.
@@ -412,8 +480,9 @@ There are two types of scalability:
 
 - **Vertical scaling**: adding more resources (CPU/RAM/Disk) to an existing
   server. This is also called **scaling up**.
-- **Horizontal scaling**: adding more servers to an existing system. This is
-  also called **scaling out**.
+- **Horizontal scaling**: adding more servers to an existing system. Then, use
+  load-balancing to distribute the work between the servers. This is also called
+  **scaling out**.
 
 Some variations of these two main types of scalability exist, such as elastic
 scaling (adding or removing resources (CPU/RAM/Disk) on the fly). However, we
@@ -510,6 +579,7 @@ more efficient.
 
 Thanks to the reverse proxy and the `Host` header, a load balancer can be used
 to distribute requests between multiple servers to achieve horizontal scaling.
+This is only possible thanks to the fact that HTTP is a stateless protocol.
 
 In order to distribute requests between multiple servers, a load balancer must
 know the servers it can forward requests to. This is called a **pool** of
@@ -520,12 +590,15 @@ strategies:
 
 - **Round-robin**: the load balancer forwards requests to each server in the
   pool in turn.
+- **Sticky sessions**: the load balancer forwards requests from the same client
+  to the same server with the help of a cookie.
 - **Least connections**: the load balancer forwards requests to the server with
   the least number of active connections.
 - **Least response time**: the load balancer forwards requests to the server
+  with the least response time.
 - **Hashing**: the load balancer forwards requests to the server based on a hash
   of the request (e.g. the IP address of the client, the URL of the request,
-  etc.)
+  etc.).
 
 Run the `whoami-with-traefik-host-rule-and-sticky-sessions` example from the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
@@ -541,7 +614,8 @@ In the first example, the load balancer uses the round-robin strategy to
 distribute requests between the three whoami instances.
 
 In the second example, the load balancer uses the sticky-session strategy to
-always forward requests from the same client to the same whoami instance.
+always forward requests from the same client to the same whoami instance with
+the help of a cookie.
 
 The sticky-session strategy is useful when you want to keep the state of a
 client on the same server: if a client is making an order on your website, you
@@ -683,8 +757,13 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have learned about how to build a web infrastructure using
-a reverse proxy and a load balancer.
+In this chapter, you have learned about functional and non-functional
+requirements, what a web infrastructure is and what components it is composed
+of, what a reverse proxy and a load balancer are and how they can be used to
+build a web infrastructure.
+
+Thanks to the `Host` header, you have learned how a reverse proxy can serve
+multiple domains on the same IP address.
 
 Thanks to the following features of HTTP, you were able to make use of them to
 build a web infrastructure to serve multiple domains on the same IP address and
@@ -696,9 +775,9 @@ to scale:
   handle the request.
 - **Scalability**: Several identical servers can handle requests without
   coordination: the client can send a request to any server, and the server can
-  handle the request
+  handle the request.
 - **Reliability**: After a server failure, another server can easily take over
-  the work
+  the work.
 
 ### Test your knowledge
 

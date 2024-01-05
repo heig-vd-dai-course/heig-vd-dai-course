@@ -1,0 +1,19 @@
+@startuml
+
+title "HTTP without the Host header"
+
+actor client
+participant "DNS server\n9.9.9.9" as dns
+participant "www.example.com\n93.184.216.34" as web_server_1
+participant "www.github.com\n140.82.121.3" as web_server_2
+
+client -> dns: IP for www.example.com?
+dns -> client: IP for www.example.com is 93.184.216.34
+client -> web_server_1: GET / HTTP/1.1
+
+...
+
+client -> dns: IP for www.github.com?
+dns -> client: IP for www.github.com is 140.82.121.3
+client -> web_server_2: GET / HTTP/1.1
+@enduml
