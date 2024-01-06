@@ -449,7 +449,7 @@ public class BackupFile {
 }
 ```
 
-> **Note**  
+> [!NOTE]  
 > Cette question a été supprimée de l'évaluation car elle était trop difficile.
 > Tous les points ont été attribués.
 

@@ -266,7 +266,7 @@ use a simple SMTP server with a Web interface to send and check emails. This
 SMTP server is called MailHog and can be run with Docker:
 <https://github.com/mailhog/MailHog>.
 
-> **Warning**  
+> [!CAUTION]  
 > Considering these security flaws, please be aware that spoofing an email
 > address is really not that hard. However, the HEIG-VD has a strict policy
 > regarding the use of its email addresses. If you are caught spoofing an email

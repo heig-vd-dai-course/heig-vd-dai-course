@@ -632,7 +632,7 @@ The output should be similar to this:
 git version 2.41.0
 ```
 
-> **Warning**  
+> [!WARNING]  
 > Ensure you have the latest version of Git installed. If you have an older
 > version, you might not be able to use some features mentioned in this course.
 
@@ -669,7 +669,7 @@ If you do not have a GitHub account yet, you will need to create one.
 Follow the official documentation to create your account:
 <https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account>.
 
-> **Note**  
+> [!IMPORTANT]  
 > Do not forget to
 > [verify your email address](https://docs.github.com/en/get-started/signing-up-for-github/verifying-your-email-address)!
 
@@ -705,7 +705,7 @@ In this section you will enable SSH authentication on your GitHub account.
 Follow the official documentation to generate a SSH key:
 <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
 
-> **Warning**  
+> [!CAUTION]  
 > Never share your private key with anyone! It must be kept secret and
 > confidential, just like a password.
 
@@ -732,7 +732,7 @@ shown in the following screenshot:
 
 ![Screenshot on how to find the SSH URL](./images/practical-content-test-the-configuration.png)
 
-> **Warning**  
+> [!IMPORTANT]  
 > By default, GitHub will show you the HTTPS URL. You need to click on the
 > **SSH** tab to see the SSH URL.
 
@@ -752,7 +752,7 @@ Follow the official documentation to add a new SSH signing key to your GitHub
 account:
 <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>.
 
-> **Note**  
+> [!TIP]  
 > You can use the same public SSH key as the one used to authenticate yourself.
 > Add the SSH key as a **signing key**.
 
@@ -770,7 +770,7 @@ Follow the official documentation to enable commit signing in your Git
 configuration:
 <https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits>.
 
-> **Note**  
+> [!NOTE]  
 > The documentation mentions GPG. It is not needed if you use SSH. Just follow
 > the instructions and it should work the same.
 
@@ -827,7 +827,7 @@ git add README.md
 git commit -m "Update profile README"
 ```
 
-> **Note**  
+> [!TIP]  
 > There is not a clear convention on how to write commit messages. The most
 > important thing is to be consistent. We have found using an infinitive verb
 > followed by a short description of the changes to be a good practice.
@@ -841,7 +841,7 @@ Push your changes to the repository:
 git push
 ```
 
-> **Note**  
+> [!NOTE]  
 > You might see sometimes the following command `git push origin main`. This is
 > just a more explicit way to push the changes to the `main` branch of the
 > `origin` remote. `origin` is the default name of the remote when cloning a
@@ -900,7 +900,7 @@ repository describing what you want to do:
 - **Description**: I would like to add myself to the list of students in the
   GitHub organization README.
 
-> **Note**  
+> [!TIP]  
 > While totally optional, it is a good to create an issue before starting to
 > work on any new feature. It allows to discuss the feature with the maintainers
 > of the project. Maybe the maintainers have some ideas on how to implement the
@@ -936,7 +936,7 @@ Create a new branch to add yourself to the list of students. Replace the
 git checkout -b add-myself-github-username-to-the-list-of-students
 ```
 
-> **Note**  
+> [!TIP]  
 > As for the commit messages, there is not a clear convention on how to name
 > branches. We have found using an infinitive verb followed by a short
 > description of the changes to be a good practice.
@@ -1013,7 +1013,7 @@ created:
 git checkout add-myself-github-username-to-the-list-of-students
 ```
 
-> **Note**  
+> [!NOTE]  
 > You might notice you did not use the `-b` argument when checking out to the
 > branch you created earlier. This is because the branch already exists. If you
 > try to checkout to a branch that does not exist, you will need to use the `-b`
@@ -1038,7 +1038,7 @@ Merge the branch you just created:
 git merge this-branch-will-create-a-conflict
 ```
 
-> **Note**  
+> [!NOTE]  
 > `git merge` will merge the changes from the branch you are merging into the
 > current branch. In this case, you are merging the changes from the
 > `change-title-of-readme-file` branch into the
@@ -1137,7 +1137,7 @@ original state of the repository before the intentional conflict:
 git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 ```
 
-> **Warning**  
+> [!WARNING]  
 > A `git reset --hard` will delete all the changes made since the commit you
 > reset to. Be careful when using it! This is OK in this case as the conflict
 > was intentional and no commits were pushed to the remote repository. If
@@ -1204,7 +1204,7 @@ git push
 Create a pull request by clicking on the **Contribute** button in your
 repository page.
 
-> **Note**  
+> [!TIP]  
 > If the notification does not appear, you can create a pull request by clicking
 > on the **Pull requests** tab and then on the **New pull request** button.
 > Select the branches you want to merge and click on the **Create pull request**
@@ -1215,7 +1215,7 @@ the last commit. We consider this to be a bad practice. Instead,rename the pull
 request to something meaningful. The title of the issue you created earlier is a
 good candidate as it describes what you want to do.
 
-> **Warning**  
+> [!IMPORTANT]  
 > You must allow maintainers to update the pull request. This is needed to
 > resolve conflicts. If you do not allow maintainers to update the pull request,
 > you will need to resolve the conflicts yourself.
@@ -1233,7 +1233,7 @@ You might want to continue to work on the pull request. You can do so by pushing
 new commits to the branch. You can also add a comment to the pull request if you
 want to discuss something with the maintainers.
 
-> **Note**  
+> [!TIP]  
 > If your pull request is not ready yet, you can mark it as a draft by clicking
 > on the **Mark as draft** button. This will inform the maintainers that the
 > pull request is not ready yet and that they should not review it yet. When you
@@ -1288,7 +1288,7 @@ Add the student to the GitHub organization and the right team.
 The maintainers might ask for changes. If they do, you will need to make the
 changes locally, commit them and push them to the repository.
 
-> **Note**  
+> [!TIP]  
 > If you need to sign all the previous commits you did, you can use `git log`
 > and the following command to sign all the commits after the commit hash
 > mentioned ([source](https://stackoverflow.com/a/54987693)):

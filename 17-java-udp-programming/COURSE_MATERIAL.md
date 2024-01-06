@@ -257,7 +257,7 @@ A good example is stated in the following table (source:
 If you want to send a broadcast to all devices on all network subnets, you can
 use the `255.255.255.255` broadcast address.
 
-> **Warning**  
+> [!IMPORTANT]  
 > You must be aware that there can be restrictions on the use of broadcast. For
 > example, broadcast is limited to the local network but can still be blocked by
 > a firewall and/or a router.
@@ -411,7 +411,7 @@ When you create a new repository, you can choose to use a template. Select the
 `heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template`
 template as shown in the following screenshot:
 
-> **Warning**  
+> [!WARNING]  
 > Please make sure that the repository owner is your personal GitHub account and
 > not the `heig-vd-dai-course` organization.
 
@@ -493,7 +493,7 @@ Using the help message, start the following applications in different terminals:
   - Port: `9878`
   - Network interface: check the note below
 
-> **Note**  
+> [!IMPORTANT]]  
 > For the multicast emitter, you must specify a network interface to listen to
 > multicast datagrams. Check the help message to know how to do it.
 
@@ -673,7 +673,7 @@ What are your conclusions to the following questions?
 - What are the differences between the outputs of the emitters and receivers
   when running them with Docker Compose and when running them manually?
 
-> **Note**  
+> [!TIP]  
 > To help you filter and understand the outputs, you can start only a subset of
 > the services specified in your Docker Compose file if you want to. For
 > example, to start only the unicast emitter and receivers, you can use the
