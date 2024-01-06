@@ -206,7 +206,7 @@ input = new BufferedReader(new InputStreamReader(socket.getInputStream());
 output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
 ```
 
-> **Warning**  
+> [!WARNING]  
 > Do not forget to flush the output stream after writing data to it. Otherwise,
 > the remaining data in the buffer will not be sent to the other application!
 >
@@ -464,7 +464,7 @@ learn how to run the code examples.
 
 Take some time to explore the code examples. Run them and see what they do.
 
-> **Note**  
+> [!NOTE]  
 > Please be aware that the `TcpServerVirtualThreadTextualExample` example must
 > be run with Java 21 or later. It is not mandatory to run this example but you
 > must understand how it works.

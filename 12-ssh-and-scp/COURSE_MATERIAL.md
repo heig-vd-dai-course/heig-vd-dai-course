@@ -556,7 +556,7 @@ Generate a second key pair with the `ssh-keygen` command called
 
 Transfer the public key to the SSH server with the `ssh-copy-id` command.
 
-> **Note**  
+> [!TIP]  
 > The `ssh-copy-id` must use the previous private key to connect to the SSH
 > server in order to add the new public key to the `authorized_keys` file.
 >

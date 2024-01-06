@@ -695,7 +695,7 @@ In this section, you will install Docker and Docker Compose on your computer.
 
 #### Install Docker and Docker Compose on Linux
 
-> **Note**  
+> [!NOTE]  
 > While it is possible to install Docker Desktop on Linux, we would not
 > recommend it. It is better to install Docker Engine and Docker Compose
 > directly on your system to avoid any overhead.
@@ -844,7 +844,7 @@ Status: Downloaded newer image for alpine:3.18
 Docker will check if the image is available locally. If it is not available
 locally, Docker will download it from the Docker Hub, the default registry.
 
-> **Note**  
+> [!IMPORTANT]  
 > Please be aware that Docker will check if the image is available locally using
 > the name and the tag of _any_ image available locally. If you have a local
 > image named `alpine:3.18` from a Ubuntu container that you have created on
@@ -1395,7 +1395,7 @@ registry here: <https://pkgs.alpinelinux.org/packages?name=filebrowser> and use
 the `--build-arg` option to set the `FILEBROWSER_VERSION` build argument to
 build the image.
 
-> **Note**  
+> [!TIP]  
 > For people using an ARM computer (Apple Silicon), you might need to add the
 > `--platform=linux/amd64` parameter to the `build` command as well.
 >
@@ -1502,7 +1502,7 @@ Follow the instructions on the official website to authenticate with a personal
 access token (classic):
 <https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry>.
 
-> **Note**  
+> [!NOTE]  
 > You can find the personal access token in the settings of your GitHub account:
 > **Settings** > **Developer settings** (at the very end of the left side bar) >
 > **Personal access tokens** > **Tokens (classic)**.
@@ -1678,7 +1678,7 @@ services:
       - ./my-data:/app/data
 ```
 
-> **Note**  
+> [!TIP]  
 > For people using an ARM computer (Apple Silicon), you might need to add the
 > `platform: linux/amd64` after the image in the `docker-compose.yml` file as
 > well:
@@ -1801,7 +1801,7 @@ services:
       - ./my-data:/app/data
 ```
 
-> **Note**  
+> [!TIP]  
 > For people using an ARM computer (Apple Silicon), you might need to add the
 > `platform: linux/amd64` after the image in the `docker-compose.yml` file as
 > well:
