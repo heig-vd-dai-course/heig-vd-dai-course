@@ -5,6 +5,8 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
+[illustration]:
+  https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
 
 # Practical work 1
 
@@ -15,6 +17,8 @@
 L. Delafontaine and H. Louis, with the help of Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
+
+![Main illustration][illustration]
 
 ## Table of contents
 
@@ -227,3 +231,9 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
+
+## Sources
+
+- Main illustration by
+  [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) on
+  [Unsplash](https://unsplash.com/photos/ScZwMqoxcls)

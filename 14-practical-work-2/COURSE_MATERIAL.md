@@ -5,6 +5,8 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/117
+[illustration]:
+  https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720
 
 # Practical work 2
 
@@ -15,6 +17,8 @@
 L. Delafontaine and H. Louis, with the help of Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
+
+![Main illustration][illustration]
 
 ## Table of contents
 
@@ -33,6 +37,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Submission](#submission)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+- [Sources](#sources)
 
 ## Introduction
 
@@ -247,3 +252,9 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
+
+## Sources
+
+- Main illustration by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)
+  on
+  [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)

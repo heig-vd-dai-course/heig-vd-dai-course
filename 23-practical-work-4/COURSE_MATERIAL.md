@@ -5,6 +5,8 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
+[illustration]:
+  https://images.unsplash.com/photo-1572901334602-f40b66a0c71c?fit=crop&h=720
 
 # Practical work 4
 
@@ -15,6 +17,8 @@
 L. Delafontaine and H. Louis, with the help of Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
+
+![Main illustration][illustration]
 
 ## Table of contents
 
@@ -524,3 +528,8 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
+
+## Sources
+
+- Main illustration by [Lāsma Artmane](https://unsplash.com/@lasmaa) on
+  [Unsplash](https://unsplash.com/photos/lighted-christmas-tree-surrounded-by-houses-5X8N9A2ruHM)

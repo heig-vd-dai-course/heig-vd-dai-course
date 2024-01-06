@@ -481,5 +481,5 @@ discuss it!
 
 ## Sources
 
-- Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+- Main illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin) on
+  [Unsplash](https://unsplash.com/photos/audio-mixer-set-4h0HqC3K4-c)

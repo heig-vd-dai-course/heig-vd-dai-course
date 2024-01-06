@@ -5,6 +5,8 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/118
+[illustration]:
+  https://images.unsplash.com/photo-1636357582639-27620e21d7c5?fit=crop&h=720
 
 # Practical work 3
 
@@ -15,6 +17,8 @@
 L. Delafontaine and H. Louis, with the help of Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
+
+![Main illustration][illustration]
 
 ## Table of contents
 
@@ -424,3 +428,8 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
+
+## Sources
+
+- Main illustration by [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
+  [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)

@@ -113,15 +113,25 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-TODO
+0. Set up your Git environment with SSH and signed commits
+1. Open an issue (written with Markdown) to discuss the feature
+2. Clone or fork the project with SSH and checkout to a new branch
+3. Make your changes, commit and push them as often as you want
+4. Resolve conflicts if any
+5. Create or update the pull request and add details if needed
+6. Other members review and approve if everything is OK
+7. The work is merged and you can delete the branch or the fork
 
 #### Elements to improve for next year
 
-TODO
+- For people on Windows, create a document to help set up a proper and working environment (WSL2, Git, Java, Maven, SDKMAN!, etc.)
+- Add more information about SSH and signed commits maybe?
 
 ### Java, IntelliJ IDEA and Maven
 
@@ -130,15 +140,27 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-TODO
+- Java and the JVM
+- Maven as a build tool
+  - `pom.xml` file
+  - Plugins vs. dependencies
+- Sharing code with Git and GitHub
+  - `.gitignore` files
+  - IntelliJ IDEA (and IDEs in general) configuration files
+- Managing multiple versions of Java/dependencies with SDKMAN!
 
 #### Elements to improve for next year
 
-TODO
+- Make usage of picocli with a concret example (introduction to picocli and its documentation) instead of Logback
+- Make usage of [Spotless](https://github.com/diffplug/spotless/tree/main/plugin-maven) to format the code for uniformity
+- For people on Windows, create a document to help set up a proper and working environment (WSL2, Git, Java, Maven, SDKMAN!, etc.)
+- Introduction to unit testing with JUnit5 maybe?
 
 ### Java IOs
 
@@ -147,15 +169,25 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-TODO
+- Java IOs classes and use cases (text files vs. binary files)
+- Those 🤬 charset encodings (Unicode vs. UTF-8, other charsets)
+- Buffering and flushing
+- End of line characters (`\n`, `\r`, `\r\n`, etc.)
+- Dealing with exceptions (try-with-resources, etc.)
+
+You **should always
+specify encodings and end of line characters explicitly** as the defaults are dependent on the platform your code is running on. Marking them explicitly will make your code **portable**.
 
 #### Elements to improve for next year
 
-TODO
+- Add disclaimer about the `PrintWriter` class - it is not recommended to use it
+as it swallows exceptions and does not throw them
 
 ### Practical work 1
 
@@ -164,15 +196,22 @@ _class: lead
 _paginate: false
 -->
 
+[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-practical-work-1/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720)
 
-#### Key points to remember for this chapter
+#### What you were ask to do
 
-TODO
+- A CLI to process files
+- Use Java, Maven and [picocli](https://picocli.info/)
+- You can choose what the CLI will do (you can be creative!)
+- Publish your CLI on GitHub
+
+We have seen some very interesting projects! All of you were very creative! Caesar cipher, image processing, JSON-XML convertor, etc.
 
 #### Elements to improve for next year
 
-TODO
+- Nothing much to improve in my opinion. Do you agree?
 
 ### Define an application protocol
 
@@ -181,15 +220,34 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/09-define-an-application-protocol/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-TODO
+Defining an application protocol is **not an easy task**. There are many ways to do it, and
+there is no "one size fits all" solution. You should always keep in mind the
+following points:
+
+1. Context - What the application protocol is used for?
+2. Transport - What protocol(s) is/are involved? On which port(s)? How are messages/actions encoded? How are messages/actions delimited? How are messages/actions treated? Who initiates/closes the communication? What happens on an unknown message/action/exception?
+
+---
+
+3. Messages/actions - What are the messages/actions? What are the parameters? What are the return values? What are the exceptions? - Always try to describe these **for a given context**, not from each point of view (e.g. "_making an order_" with the input/outputs from the client to the server and the responses instead of "_the client sends these messages and the server replies these messages with these outputs_"). It makes it _way_ easier to understand and to implement.
+4. Example diagrams - What are the examples of messages/actions? What are the examples of exceptions? Illustrate your application protocol with diagrams (UML, sequence, etc.) to make it easier to understand.
 
 #### Elements to improve for next year
 
-TODO
+- Remove the exploration in details of known protocols (SMTP, POP3, IMAP, SSH,, etc.) and
+  focus on the definition of an application protocol
+- Add more examples of application protocols (e.g. a protocol to order a pizza, a protocol to
+  play a game, etc.)
+- Add more examples of diagrams
+
+This was a **very** difficult chapter to teach. I hope you understood the
+importance of defining an application protocol and how to do it. If you can, use an existing protocol instead of defining your own.
 
 ### Docker and Docker Compose
 
@@ -198,15 +256,26 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-docker-and-docker-compose/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-TODO
+- Bare-metal vs. virtualization vs. containerization
+- Docker as a containerization tool
+  - Images
+  - Containers
+  - Registries
+- Docker Compose as a tool to manage multiple containers
+  - Dockerfiles
+  - Docker Compose files
 
 #### Elements to improve for next year
 
-TODO
+- Move this chapter after the Java TCP programming chapter
+- More details on each line of the Dockerfile and Docker Compose file maybe?
+- Use more concrete examples instead of a generic Alpine image with greetings, `tree` command with volumes and File Browser as a web application with ports maybe? It is hard to think of a good example that is not too complex to understand and not too simple to be useless.
 
 ### SMTP and Telnet
 
@@ -215,15 +284,21 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-smtp-and-telnet/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-TODO
+- Differences between SMTP, POP3 and IMAP
+- SMTP security concerns
+- How is an email sent and received from one client to another through multiple SMTP servers
+- Using a SMTP mock server to test your application
 
 #### Elements to improve for next year
 
-TODO
+- Move this chapter after the Java TCP programming chapter
+- Make usage of [ncat](https://nmap.org/ncat/) (part of [nmap](https://nmap.org/)) instead of Telnet - Rename the chapter to "SMTP and ncat"
 
 ### SSH and SCP
 
@@ -232,6 +307,8 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1506818144585-74b29c980d4b?fit=crop&h=720)
 
 #### Key points to remember for this chapter
@@ -239,11 +316,12 @@ _paginate: false
 This chapter will **not** be in the exam! The other classes did not study this
 topic.
 
-TODO
+- SSH keys and how to connect to a remote server
+- SCP and how to copy files to a remote server
 
 #### Elements to improve for next year
 
-TODO
+- Maybe this chapter is too abstract at the time of the semester? Maybe it should be moved to the end of the semester? With the web infrastructures chapter?
 
 ### Java TCP programming
 
@@ -252,15 +330,22 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-TODO
+- TCP as a reliable protocol
+- `Socket` and `ServerSocket` classes
+- Get streams from sockets (deal as with files - buffering, flushing, charsets, end of line characters, exceptions handling, etc.)
 
 #### Elements to improve for next year
 
-TODO
+- Move this chapter right after the Define an application protocol chapter so that the practical work can be done in parallel with the next chapters
+- Add details/examples on variable-length messages/actions (e.g. `readLine()` vs. `read()` with a fixed buffer size)
+- Add a proper introduction to concurrency and its issues
+- Make an example built from scratch to show how to use the `Socket` and `ServerSocket` classes with multiple clients (with `ThreadPool` executor) and then show the examples for other implementations
 
 ### Practical work 2
 
@@ -269,15 +354,21 @@ _class: lead
 _paginate: false
 -->
 
+[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-practical-work-2/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720)
 
-#### Key points to remember for this chapter
+#### What you were ask to do
 
-TODO
+- A TCP network application with its own application protocol
+- You can choose what the CLI will do (you can be creative!)
+- Groups of two students
+
+We have seen some very interesting projects! All of you were very creative! Chat applications, hanging man (poor boy...) games, naval battle games, etc.
 
 #### Elements to improve for next year
 
-TODO
+- Nothing much to improve in my opinion. Do you agree?
 
 ### Java UDP programming
 
@@ -286,15 +377,26 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/17-java-udp-programming/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-TODO
+- Differences between TCP and UDP
+- `DatagramSocket`, `DatagramPacket` and `MulticastSocket` classes
+- Reliability of UDP
+- Unicast, broadcast and multicast
+- Messaging patterns
+- Service discovery protocols
 
 #### Elements to improve for next year
 
-TODO
+- Make an example built from scratch to show how to use the `DatagramSocket`, `DatagramPacket` and `MulticastSocket` classes with multiple clients (with `ThreadPool` executor) and then show the examples for other implementations
+- Add example for the request/response pattern with unicast for the practical work
+
+This was a **very** difficult chapter to teach. I hope you understood the
+main differences between TCP and UDP and how to use UDP.
 
 ### Practical work 3
 
@@ -303,15 +405,22 @@ _class: lead
 _paginate: false
 -->
 
+[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/18-practical-work-3/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1636357582639-27620e21d7c5?fit=crop&h=720)
 
-#### Key points to remember for this chapter
+#### What you were ask to do
 
-TODO
+- An UDP network application
+- You can choose what the CLI will do (you can be creative!)
+- Share your application on GitHub with Docker and Docker Compose
+- Groups between 2 and 3 students
+
+We have seen some very interesting projects! All of you were very creative! Teletext application, multiplayer Pong game, Tower defense game, IoT logging system, etc.
 
 #### Elements to improve for next year
 
-TODO
+- Improve the criteria for the evaluation of the practical work (some are too vague)
 
 ### HTTP and curl
 
@@ -319,6 +428,8 @@ TODO
 _class: lead
 _paginate: false
 -->
+
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/README.md)
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720)
 
@@ -337,6 +448,8 @@ _class: lead
 _paginate: false
 -->
 
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720)
 
 #### Key points to remember for this chapter
@@ -354,11 +467,18 @@ _class: lead
 _paginate: false
 -->
 
+[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-practical-work-4/README.md)
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1572901334602-f40b66a0c71c?fit=crop&h=720)
 
-#### Key points to remember for this chapter
+#### What you were ask to do
 
-TODO
+- A TCP network application with its own application protocol
+- You can choose what the network application will do (you can be creative!)
+  - a chat application, a chess game, a shopping list application, ...
+- Groups of two students
+
+We have seen some very interesting projects! All of you were very creative! Chat applications, hanging man (poor boy...) games, naval battle games, etc.
 
 #### Elements to improve for next year
 
@@ -369,6 +489,14 @@ TODO
 <!-- _class: lead -->
 
 Let's check these _beautiful_ charts!
+
+## Taboo questions
+
+Here are some taboo questions we never take the time to discuss and I would like your opinion on them. There will be no judgement, no grades, no consequences. I just want to understand your point of view.
+
+- Did you find the course too difficult?
+- Did you feel the need to cheat during the semester? Why?
+- Is there anything that you feel was not fair during the semester?
 
 ## Exam preparation
 
@@ -472,3 +600,50 @@ Apero time! 🎉
   [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
 - Illustration by [Kenny Eliason](https://unsplash.com/@neonbrand) on
   [Unsplash](https://unsplash.com/photos/60krlMMeWxU)
+- Illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on
+  [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)
+- Illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
+  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+- Illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin) on
+  [Unsplash](https://unsplash.com/photos/audio-mixer-set-4h0HqC3K4-c)
+- Illustration by
+  [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) on
+  [Unsplash](https://unsplash.com/photos/ScZwMqoxcls)
+- Illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
+  [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
+- Illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
+  [Unsplash](https://unsplash.com/photos/xewrfLD8emE)
+
+---
+
+- Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
+  on [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
+- Main illustration by [Mathew Schwartz](https://unsplash.com/@cadop) on
+  [Unsplash](https://unsplash.com/photos/sb7RUrRMaC4)
+- Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
+  [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
+- Main illustration by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)
+  on
+  [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
+- Main illustration by
+  [Possessed Photography](https://unsplash.com/@possessedphotography) on
+  [Unsplash](https://unsplash.com/photos/tiNCpHudGrw)
+
+
+
+
+
+
+
+
+
+
+- Illustration by [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
+  [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)
+- Illustration by [Lāsma Artmane](https://unsplash.com/@lasmaa) on
+  [Unsplash](https://unsplash.com/photos/lighted-christmas-tree-surrounded-by-houses-5X8N9A2ruHM)
+
+- Main illustration by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)
+  on
+  [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
+
