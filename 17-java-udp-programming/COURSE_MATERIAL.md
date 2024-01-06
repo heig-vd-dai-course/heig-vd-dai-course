@@ -138,16 +138,12 @@ What is offered by TCP has to be implemented by the application with UDP.
 In certain cases, reliability is not required. Some applications are tolerant to
 data loss.
 
-For example, streaming is a perfect use case for UDP. If a datagram is lost, it
-does not matter much: the receiver will receive the next datagram and the stream
-will continue.
+For example, streaming can be a perfect use case for UDP. If a datagram is lost, it does not matter much: the receiver will receive the next datagram and the stream will continue. A good example would be the streaming of a live event on your television: 
 
-If a few datagrams are lost, the receiver might notice it with a few glitches
-(on videos with artifacts such as a Twitch stream if your connection is not good
-for example) but it will not affect the stream.
+- If a few datagrams are lost, the receiver might notice it with a few glitches (video artifacts) but it will not affect the entire stream.
+- If too many datagrams are lost, the receiver will not be able to reassemble the payload and the stream will stop.
 
-If too many datagrams are lost, the receiver will not be able to reassemble the
-payload and the stream will stop.
+Some video services such as [Jitsi](https://jitsi.org/) (an open source Zoom/Google Meet/Teams alternative) can make usage of the UDP protocol with the help of [WebRTC](https://webrtc.org/). However, even these applications might prefer to make usage of the TCP protocol to guarantee the reliability of their services.
 
 As mentioned before, it is up to the application to implement a reliability
 mechanism if required (with a message ID and an acknowledgement for example,
