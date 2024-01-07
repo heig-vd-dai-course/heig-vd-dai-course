@@ -71,7 +71,7 @@ The entire course planning for the semester is available at
 
 ### Conclusion (2 periods)
 
-- [25. Semester review and exam preparation (2 periods)](./26-semester-review-and-exam-preparation/README.md)
+- [26. Semester review and exam preparation (2 periods)](./26-semester-review-and-exam-preparation/README.md)
 
 ## GitHub Discussions
 
