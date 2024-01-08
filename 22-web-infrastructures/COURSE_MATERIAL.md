@@ -84,8 +84,7 @@ with) DNS.
 On Unix-like operating systems (Linux and macOS), the hosts file is located at
 `/etc/hosts`.
 
-On Windows, the hosts file is located at
-`%SystemRoot%\system32\drivers\etc\hosts`.
+On Windows, the hosts file is located at `%WinDir%\System32\Drivers\Etc\Hosts`.
 
 Ensure you can access your `hosts` file and edit it for the next steps.
 
@@ -713,26 +712,46 @@ The main idea of the validation model is:
 The request to check if the data has changed is called a **conditional
 request**.
 
+There are two types of conditional requests:
+
+- **Based on the `Last-Modified` header**: allows a `304 Not Modified` to be
+  returned if content is unchanged since the last time it was modified.
+- **Based on the `ETag` header**: allows a `304 Not Modified` to be returned if
+  content is unchanged for the version/hash of the given entity.
+
+##### Based on the `Last-Modified` header
+
 With HTTP, the validation model can be implemented with the following headers:
 
 - `Cache-Control`: specifies directives for caching mechanisms in both requests
   and responses.
 - `Last-Modified`: indicates the date and time at which the origin server
   believes the selected representation was last modified.
-- `ETag`: provides the current entity tag for the selected representation. Think
-  of it like a version number for the resource.
 - `If-Modified-Since`: allows a `304 Not Modified` to be returned if content is
   unchanged since the time specified in this field (= the value of the
   `Last-Modified` header).
-- `If-Unmodified-Since`: allows a `412 Precondition Failed` to be returned if
-  content is changed since the time specified in this field (= the value of the
-  `Last-Modified` header).
-- `If-Match`: allows a `304 Not Modified` to be returned if content is unchanged
-  for the entity specified (`ETag`) by this field (= the value of the `ETag`
-  header).
+
+The `Last-Modified` header is used to check if the data has changed since the
+last time it was modified.
+
+![Validation based on the Last-Modified header](./images/validation-based-on-the-last-modified-header.png)
+
+##### Based on the `ETag` header
+
+With HTTP, the validation model can be implemented with the following headers:
+
+- `Cache-Control`: specifies directives for caching mechanisms in both requests
+  and responses.
+- `ETag`: provides the current entity tag for the selected representation. Think
+  of it like a version number or a hash for the given resource.
 - `If-None-Match`: allows a `304 Not Modified` to be returned if content is
   unchanged for the entity specified (`ETag`) by this field (= the value of the
   `ETag` header).
+
+The `ETag` header is used to check if the data has changed since the last time
+it was modified.
+
+![Validation based on the ETag header](./images/validation-based-on-the-etag-header.png)
 
 ### CDN
 
