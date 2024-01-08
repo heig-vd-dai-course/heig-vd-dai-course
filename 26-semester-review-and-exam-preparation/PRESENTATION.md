@@ -210,7 +210,7 @@ _paginate: false
 
 - A CLI to process files
 - Use Java, Maven and [picocli](https://picocli.info/)
-- You can choose what the CLI will do (you can be creative!)
+- You can choose what the CLI will do
 - Publish your CLI on GitHub
 
 We have seen some very interesting projects! All of you were very creative!
@@ -393,7 +393,7 @@ _paginate: false
 #### What you were ask to do
 
 - A TCP network application with its own application protocol
-- You can choose what the CLI will do (you can be creative!)
+- You can choose what the network application will do
 - Groups of two students
 
 We have seen some very interesting projects! All of you were very creative! Chat
@@ -448,7 +448,7 @@ _paginate: false
 #### What you were ask to do
 
 - An UDP network application
-- You can choose what the CLI will do (you can be creative!)
+- You can choose what the network application will do
 - Share your application on GitHub with Docker and Docker Compose
 - Groups between 2 and 3 students
 
@@ -536,13 +536,30 @@ _paginate: false
 - Access the applications from a (free) domain name
 - Groups of 4 students
 
-We have seen some very interesting projects! All of you were very creative!
-TODO, etc.
-
 #### Elements to improve for next year
 
 - Nothing much to improve in my opinion. I think it is the perfect practical
   work to close the loop of the course. Do you agree?
+
+### Evaluations
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+![bg opacity:0.1][illustration]
+
+#### Elements to improve for next year
+
+- Most of them were too long (especially the first two)
+- Some questions were too specific
+- Some questions were not understood by the students, missing the point of the
+  question
+  - "_Reading/writing an application protocol is boring_"  
+    Reading/writing an application protocol is not an easy task but it an
+    essential skill to know how to document something that someone else will use
+- It was the most painful point, we will try to improve this!
 
 ### GAPS feedback
 
@@ -553,8 +570,8 @@ Let's check these _beautiful_ charts!
 ## Taboo questions
 
 Here are some taboo questions we never take the time to discuss and I would like
-your opinion on them. There will be no judgement, no grades, no consequences. I
-just want to understand your point of view.
+your opinion on them. There will be no judgement and no consequences. I just
+want to understand your point of view.
 
 - Did you find the course too difficult?
 - Did you feel the need to cheat during the semester?
@@ -587,9 +604,6 @@ The exam will last 1 hour.
 **How to revise?**
 
 All previous evaluations are available in the course repository.
-
-You can find all the evaluations for my course as well as for the evaluations
-done by the other teachers.
 
 ![bg right:40%][illustration]
 
@@ -654,7 +668,7 @@ My personal closing remarks are the following:
 
 <!-- _class: lead -->
 
-Apero time! 🎉
+Apéro time! 🎉
 
 ## Sources
 

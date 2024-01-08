@@ -88,7 +88,7 @@ It is **mandatory**.
 The following chapters will be evaluated:
 
 - [HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/21-http-and-curl)
-- [Web infrastructure](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/22-web-infrastructures)
+- [Web infrastructures](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/22-web-infrastructures)
 
 ---
 

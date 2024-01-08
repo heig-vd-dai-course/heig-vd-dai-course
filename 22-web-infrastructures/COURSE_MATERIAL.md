@@ -34,12 +34,13 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Web infrastructure definition](#web-infrastructure-definition)
 - [The `Host` header](#the-host-header)
 - [Forward proxy and reverse proxy](#forward-proxy-and-reverse-proxy)
+  - [Forward proxy](#forward-proxy)
+  - [Reverse proxy](#reverse-proxy)
 - [System scalability](#system-scalability)
   - [Vertical scaling](#vertical-scaling)
   - [Horizontal scaling](#horizontal-scaling)
   - [When to use scale up or scale out?](#when-to-use-scale-up-or-scale-out)
   - [How to monitor your system?](#how-to-monitor-your-system)
-  - [Calculate the number of servers needed](#calculate-the-number-of-servers-needed)
 - [Load balancing](#load-balancing)
 - [Caching](#caching)
   - [Managing cache with HTTP](#managing-cache-with-http)
@@ -144,6 +145,12 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Functional and non-functional requirements
 
+Functional and non-functional requirements are used to define the scope of a
+system.
+
+It is an abstract representation of the system that will be implemented and that
+can help to define the architecture of the system.
+
 Functional requirements are the features that a system must have to satisfy the
 needs of its users. It is the "what" of a system.
 
@@ -166,14 +173,14 @@ Some examples of non-functional requirements:
   result (most important for the end user)
 - **Throughput**: Number of requests handled per time interval (most important
   for the service provider)
-- **Scalability**: Property of a system to handle a varying amount of work.
-  Ideally we want linear scalability: 2x more server for 2x more users
+- **Scalability**: Property of a system to handle a varying amount of work -
+  ideally we want linear scalability: 2x more server for 2x more users
 - **Availability**: Percentage of time that the system provides a satisfactory
   service
 - **Maintainability**: Ease with which the system can be managed and evolved
 - **Security**: Confidentiality, integrity, availability, authentication,
   authorization, etc.
-- ...and many, many more: <http://en.wikipedia.org/wiki/Ilities>
+- ...and many, many more: <https://en.wikipedia.org/wiki/Non-functional_requirement>
 
 Functional and non-functional requirements are used to define the scope of a
 system and they strongly depend on/influence the architecture of a system.
@@ -246,11 +253,11 @@ Forward and reverse proxies are two different types of proxies.
 A proxy is a component that acts as an intermediary for requests from clients
 seeking resources from other servers.
 
+### Forward proxy
+
 As described in
 [Forward Proxy vs. Reverse Proxy: The Difference Explained](https://www.strongdm.com/blog/difference-between-proxy-and-reverse-proxy)
-article:
-
-A forward proxy...
+article, a forward proxy...
 
 > ...also known as a proxy server, operates between clients and external
 > systems, regulating traffic, masking client IP addresses, and enforcing
@@ -266,7 +273,11 @@ network.
 
 ![Forward proxy](./images/forward-proxy.png)
 
-A reverse proxy...
+### Reverse proxy
+
+As described in
+[Forward Proxy vs. Reverse Proxy: The Difference Explained](https://www.strongdm.com/blog/difference-between-proxy-and-reverse-proxy)
+article, a reverse proxy...
 
 > ...is positioned between clients and servers, acting as a protective barrier
 > for servers by accepting client requests, forwarding them to the appropriate
@@ -489,18 +500,12 @@ system to handle more requests (e.g. a lot of users on your website).
 
 ### Vertical scaling
 
-Vertical scaling is limited by the capacity of the hardware: at a certain point,
-you cannot add more resources to a server.
-
-I (Ludovic) recommend to use vertical scaling as much as possible before
-switching to horizontal scaling. Adding new resources to a server is (usually)
-easy and fast. Horizontal scaling is (much) more complex to setup and maintain
-and can introduce new issues (e.g. network latency, data consistency, etc.). It
-is also more expensive (usually).
+Vertical scaling is limited by the hardware: at a certain point,
+you cannot add more/better resources to a server.
 
 ### Horizontal scaling
 
-Horizontal scaling is limited by the capacity of the software.
+Horizontal scaling is often limited by the software.
 
 Instead of adding more resources to your server, you add more (smaller) servers
 to your system.
@@ -511,7 +516,7 @@ accessing the same backends, etc.), and it is not always possible.
 
 ### When to use scale up or scale out?
 
-Scaling must be determined by the needs of your system. In order to determine
+Scaling must be determined by the non-functional requirements (= needs) of of your system. In order to determine
 the best scaling strategy, you must know the bottlenecks of your system.
 Bottlenecks can only be identified by load testing your system and monitoring it
 to get metrics.
@@ -533,6 +538,12 @@ system:
 Once you know the bottlenecks of your system, you can determine the best scaling
 strategy.
 
+I (Ludovic) recommend to use vertical scaling as much as possible before
+switching to horizontal scaling. Adding new resources to a server is (usually)
+easy and fast. Horizontal scaling is (much) more complex to setup and maintain
+and can introduce new issues (e.g. network latency, data consistency, etc.). It
+is also more expensive (usually).
+
 ### How to monitor your system?
 
 There are a lot of tools to monitor your system. Here are a few examples:
@@ -544,28 +555,6 @@ There are a lot of tools to monitor your system. Here are a few examples:
 
 Monitoring your system is a complex task and is out of the scope of this course.
 You will learn more about monitoring in future courses.
-
-### Calculate the number of servers needed
-
-In order to calculate the number of servers needed to handle a certain amount of
-requests, you can use the following formula:
-
-```text
-number_of_servers_needed = (number_of_requests_per_second * average_response_time) / (number_of_cores * requests_per_second_per_core)
-```
-
-For example, if you have a system that receives 100 requests per second and that
-each request takes 100ms to be processed, and you have a server with 4 cores
-that can handle 100 requests per second per core, you will need 1 server to
-handle the 100 requests per second.
-
-```text
-number_of_servers_needed = (100 * 0.1) / (4 * 100)
-number_of_servers_needed = 0.25
-```
-
-This is called **capacity planning** and uses the
-[Little's law](https://en.wikipedia.org/wiki/Little%27s_law).
 
 ## Load balancing
 
@@ -632,7 +621,7 @@ This has several advantages:
 
 - The client will receive the response faster, especially when the client itself
   (browser) has cached the response.
-- The server does not need to process the request (parse the request, query the
+- The server does not have to process the request (parse the request, query the
   database, compose the response, etc).
 - The network does not have to carry the messages along the entire path between
   client and server.
@@ -657,8 +646,8 @@ a cache. If a cache is not invalidated, it can serve stale data.
 
 There are two main caching models:
 
-- **Expiration model**: the cache is invalidated after a certain amount of time.
-- **Validation model**: the cache is invalidated when the data is modified.
+- **Expiration model**: the cache is valid for a certain amount of time.
+- **Validation model**: the cache is valid until the data is modified.
 
 Expiration and validation are two mechanisms that can be used to control
 caching.
@@ -718,6 +707,8 @@ There are two types of conditional requests:
   returned if content is unchanged since the last time it was modified.
 - **Based on the `ETag` header**: allows a `304 Not Modified` to be returned if
   content is unchanged for the version/hash of the given entity.
+
+Both can be used at the same time to improve the performance of the system.
 
 ##### Based on the `Last-Modified` header
 

@@ -1,0 +1,41 @@
+@startuml
+
+title "Validation based on the ETag header"
+
+participant Client
+participant Server
+
+== Data modified ==
+
+note over Server
+Data has been updated 
+at 23:55:00 on the server 
+either from another client 
+or by itself (e.g. cron job)
+
+The new hash is: 457ae5b8
+end note
+
+Server -> Server
+
+|||
+
+note over Client, Server
+GET /index.html HTTP/1.1
+Host: example.com
+Accept: text/html
+If-None-Match: "33a64df5"
+end note
+Client -> Server: New request (at 23 Feb 2022, 00:15:00)
+
+|||
+
+note over Client, Server
+HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Tue, 23 Feb 2022 00:15:22 GMT
+ETag: "457ae5b8"
+end note
+Server -> Client: The information has changed
+
+@enduml

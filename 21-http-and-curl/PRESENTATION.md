@@ -90,8 +90,9 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the [course material](TODO). You can find other
-resources and alternatives as well.
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#disclaimer).
+You can find other resources and alternatives as well.
 
 ### Disclaimer
 
@@ -108,8 +109,9 @@ resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material](TODO). You can find other
-resources and alternatives as well.
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#prepare-and-setup-your-environment).
+You can find other resources and alternatives as well.
 
 ### curl
 
@@ -134,8 +136,9 @@ resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material](TODO). You can find other
-resources and alternatives as well.
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#http).
+You can find other resources and alternatives as well.
 
 ### HTTP
 
@@ -431,14 +434,15 @@ Advantages: The token is not visible in the URL (more secure).
 
 Disadvantages: A bit more complex to implement.
 
-## APIs design
+## API design
 
 <!-- _class: lead -->
 
-More details for this section in the [course material](TODO). You can find other
-resources and alternatives as well.
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#api-design).
+You can find other resources and alternatives as well.
 
-### APIs design
+### API design
 
 Developing a web application is not easy.
 

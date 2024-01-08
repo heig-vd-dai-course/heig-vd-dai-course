@@ -8,7 +8,7 @@ participant "Reverse proxy\n185.144.38.57" as reverse_proxy
 participant "www.example.com" as web_server_1
 participant "www.github.com" as web_server_2
 
-client -> dns: : IP for www.example.com?
+client -> dns: IP for www.example.com?
 dns -> client: IP for www.example.com is 185.144.38.57
 client -> reverse_proxy: GET / HTTP/1.1 Host: www.example.com
 reverse_proxy -> web_server_1: GET / HTTP/1.1 Host: www.example.com
@@ -17,7 +17,7 @@ reverse_proxy -> client: HTTP 200 OK
 
 ...
 
-client -> dns: : IP for www.github.com?
+client -> dns: IP for www.github.com?
 dns -> client: IP for www.github.com is 185.144.38.57
 client -> reverse_proxy: GET / HTTP/1.1 Host: www.github.com
 reverse_proxy -> web_server_2: GET / HTTP/1.1 Host: www.github.com
