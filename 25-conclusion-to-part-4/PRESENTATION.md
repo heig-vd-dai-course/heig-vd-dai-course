@@ -84,7 +84,7 @@ _paginate: false
 ## What have you accomplished?
 
 - You have acquired and set up a server on the HEIG-VD network
-- You have created a simple (REST) API to deploy on your server
+- You have created a simple (CRUD) API to deploy on your server
 - You have acquired and configured a domain name to use for yourself
 - You have deployed your API on your server
 

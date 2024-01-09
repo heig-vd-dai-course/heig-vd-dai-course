@@ -34,16 +34,17 @@ jobs:
           rm --recursive 13-*
           rm --recursive 14-*
           rm --recursive 15-*
-          # rm --recursive 16-*
-          # rm --recursive 17-*
-          # rm --recursive 18-*
-          # rm --recursive 19-*
-          rm --recursive 20-*
-          rm --recursive 21-*
-          rm --recursive 22-*
-          rm --recursive 23-*
-          rm --recursive 24-*
-          rm --recursive 25-*
+          rm --recursive 16-*
+          rm --recursive 17-*
+          rm --recursive 18-*
+          rm --recursive 19-*
+          # rm --recursive 20-*
+          # rm --recursive 21-*
+          # rm --recursive 22-*
+          # rm --recursive 23-*
+          # rm --recursive 24-*
+          # rm --recursive 25-*
+          rm --recursive 26-*
           rm --recursive 99-material-for-the-teaching-staff
 
       - name: Build course material content with Pandoc and weasyprint
