@@ -587,23 +587,24 @@ What you need to know for the exam
 
 **What to expect?**
 
-A paper exam, with questions about the course content.
+A paper exam that will last 1 hour.
 
-**Allowed resources**
+**Allowed resources?**
 
-Two double-sided sheets (so four single-sided sheets) of personal notes.
+Two double-sided sheets (so four single-sided sheets) of personal notes (digital or hand-written).
 
 ![bg right:40%][illustration]
 
 ---
 
-**Exam duration**
-
-The exam will last 1 hour.
-
 **How to revise?**
 
-All previous evaluations are available in the course repository.
+All previous evaluations are available in the course repository:
+
+- [Evaluation 1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+- [Evaluation 2](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+- [Evaluation 3](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+- [Evaluation 4](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/24-evaluation-4)
 
 ![bg right:40%][illustration]
 
