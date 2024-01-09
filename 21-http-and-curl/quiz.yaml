@@ -74,3 +74,55 @@ questions:
         HTTP is considered a stateless protocol because the server does not store any information about the client between requests.
 
         The server can store information about the client between requests using cookies (recommended) or URL parameters (not recommended).
+  - title: HTTP raw request
+    statement: |
+      You must send a `GET` request to the following URL: `https://example.com/api/v1/users/1234`.
+
+      The endpoint returns JSON data.
+
+      What is the right raw HTTP request?
+
+      1.
+
+      ```text 
+      GET /api/v1/users/1234 HTTP/1.1
+      Host: www.example.com
+      Accept: application/json
+      ```
+  
+      2.
+
+      ```text
+      GET /api/v1/users/1234 HTTP/1.1
+      Host: www.example.com
+      Accept: application/json
+
+      ```
+
+      3.
+
+      ```text
+      GET www.example.com/api/v1/users/1234 HTTP/1.1
+      Accept: application/json
+      ```
+    possibleAnswers:
+      - "1"
+      - "2"
+      - "3"
+    correctAnswer:
+      index: 1
+      explanation: |
+        The correct raw HTTP request is the following:
+
+        ```text
+        GET /api/v1/users/1234 HTTP/1.1
+        Host: www.example.com
+        Accept: application/json
+
+        ```
+
+        The `Host` header will be used to determine the server to which the request is sent.
+
+        The `Accept` header will be used to determine the format of the response.
+
+        The empty line at the end of the request is mandatory.
