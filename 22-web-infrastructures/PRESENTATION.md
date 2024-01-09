@@ -393,10 +393,20 @@ Two main caching models:
 
 - The cache is valid for a certain amount of time
 - If the cache is not expired, the cache is used
-- Uses the `Cache-Control`, `Last-Modified`, `If-Modified-Since` headers
+- Uses the `Cache-Control` and `Expires` headers
 - The cache is invalidated after the expiration time
 
 ![bg right:40%](https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?fit=crop&h=720)
+
+#### Validation model
+
+- The cache is valid until the data is modified
+- If the cache is not expired, the cache is used
+- Two ways to validate the cache:
+  - **Last-Modified**: `Last-Modified` and `If-Modified-Since` headers
+  - **ETag**: `ETag` and `If-None-Match` headers
+
+![bg right:40%](https://images.unsplash.com/photo-1684862030284-6b24307ebd4a?fit=crop&h=720)
 
 ---
 
@@ -409,15 +419,6 @@ Two main caching models:
 ---
 
 ![bg h:80%](./images/validation-based-on-the-last-modified-header-part-3.png)
-
-#### Validation model
-
-- The cache is valid until the data is modified
-- If the cache is not expired, the cache is used
-- Uses the `Cache-Control`, `ETag` and `If-None-Match` headers
-- The cache is invalidated when the data is modified
-
-![bg right:40%](https://images.unsplash.com/photo-1684862030284-6b24307ebd4a?fit=crop&h=720)
 
 ---
 
