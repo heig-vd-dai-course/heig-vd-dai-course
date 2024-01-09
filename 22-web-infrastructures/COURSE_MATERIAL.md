@@ -103,6 +103,11 @@ handling them.
 Traefik is full of features and can be used as a reverse proxy, a load balancer,
 a Kubernetes ingress controller, and much more.
 
+One of the main features of Traefik is to issue and renew
+[Let's Encrypt](https://letsencrypt.org/) (HTTPS) certificates automatically in
+conjuncture with
+[Docker Compose labels](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels).
+
 We will go into more details about Traefik in the next sections.
 
 Run the `traefik-insecure` example from the
@@ -121,6 +126,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 - [Nginx](https://www.nginx.com/)
 - [Apache](https://httpd.apache.org/)
 - [HAProxy](https://www.haproxy.org/)
+- [certbot](https://certbot.eff.org/)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -180,7 +186,8 @@ Some examples of non-functional requirements:
 - **Maintainability**: Ease with which the system can be managed and evolved
 - **Security**: Confidentiality, integrity, availability, authentication,
   authorization, etc.
-- ...and many, many more: <https://en.wikipedia.org/wiki/Non-functional_requirement>
+- ...and many, many more:
+  <https://en.wikipedia.org/wiki/Non-functional_requirement>
 
 Functional and non-functional requirements are used to define the scope of a
 system and they strongly depend on/influence the architecture of a system.
@@ -500,8 +507,8 @@ system to handle more requests (e.g. a lot of users on your website).
 
 ### Vertical scaling
 
-Vertical scaling is limited by the hardware: at a certain point,
-you cannot add more/better resources to a server.
+Vertical scaling is limited by the hardware: at a certain point, you cannot add
+more/better resources to a server.
 
 ### Horizontal scaling
 
@@ -516,10 +523,10 @@ accessing the same backends, etc.), and it is not always possible.
 
 ### When to use scale up or scale out?
 
-Scaling must be determined by the non-functional requirements (= needs) of of your system. In order to determine
-the best scaling strategy, you must know the bottlenecks of your system.
-Bottlenecks can only be identified by load testing your system and monitoring it
-to get metrics.
+Scaling must be determined by the non-functional requirements (= needs) of of
+your system. In order to determine the best scaling strategy, you must know the
+bottlenecks of your system. Bottlenecks can only be identified by load testing
+your system and monitoring it to get metrics.
 
 There are a few metrics that can help you to determine the bottlenecks of your
 system:

@@ -43,6 +43,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Submission](#submission)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+- [Sources](#sources)
 
 ## Introduction
 
@@ -273,8 +274,8 @@ configuration (useful when you are not on your own computer).
 
 #### Try to access the whoami applications from the Internet
 
-> [!NOTE]  
-> This step will fail, it is normal. You will have to fix it in the next step.
+> [!WARNING]  
+> This step might fail, it is normal. You will have to fix it in the next step.
 
 Start the `whoami-on-ports-80-and-443` example available in the
 [`23-practical-work-4`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main/23-practical-work-4)

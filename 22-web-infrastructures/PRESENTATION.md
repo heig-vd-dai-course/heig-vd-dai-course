@@ -109,9 +109,11 @@ computer.
 ### Traefik
 
 - An open source reverse proxy (more on this later)
-- Works well with Docker and Kubernetes
-- Written in Go
-- Easy to use with Docker Compose labels
+- Works well with Docker Compose and Kubernetes
+- Issue and renew [Let's Encrypt](https://letsencrypt.org/) (HTTPS) certificates
+  automatically
+- Easy to use with
+  [Docker Compose labels](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels)
 
 ![bg right h:60%](https://upload.wikimedia.org/wikipedia/commons/1/1b/Traefik.logo.png)
 
@@ -119,7 +121,6 @@ computer.
 
 - A tiny Go webserver that prints os information and HTTP request to output
 - Used to demonstrate the use of HTTP with a reverse proxy and a load balancer
-- Written in Go
 
 ![bg right contain](./images/whoami.png)
 
@@ -162,8 +163,7 @@ Example of non-functional requirements:
 - **Availability**: Percentage of time that the system provides a satisfactory
   service
 - **Maintainability**: How easily the system can be managed
-- **Security**: Confidentiality, authentication,
-  authorization, etc.
+- **Security**: Confidentiality, authentication, authorization, etc.
 - [...and many, many more](https://en.wikipedia.org/wiki/Non-functional_requirement)
 
 ## Web infrastructure definition
@@ -223,8 +223,8 @@ You can find other resources and alternatives as well.
 
 ### Forward proxy and reverse proxy
 
-- Proxies are components that **intercept** requests and responses and **filter/forward/change**
-  them to another component.
+- Proxies are components that **intercept** requests and responses and
+  **filter/forward/change** them to another component.
 - **Forward proxy**: used by a client to access external servers
 - **Reverse proxy**: used by an external server to access internal servers
 
@@ -300,7 +300,8 @@ Limited by the software - your software must be able to run on multiple servers:
 - Determined by the **non-functional requirements** of the system
 - You need metrics to determine when to scale up or scale out to identify
   bottlenecks
-- Once the bottleneck is identified (from monitoring), you can decide to scale up or scale out
+- Once the bottleneck is identified (from monitoring), you can decide to scale
+  up or scale out
 
 ![bg](https://images.unsplash.com/photo-1591840018546-5b65c9fbce1e?fit=crop&h=720)
 ![bg right:40% vertical](https://images.unsplash.com/photo-1491723203629-ac87f78dc19b?fit=crop&h=720)
@@ -330,7 +331,8 @@ Process of **distributing the load** between multiple servers.
 
 This can work thanks to the **stateless** nature of HTTP and the `Host` header.
 
-The load balancer must know the **pool of servers** it can forward the requests to.
+The load balancer must know the **pool of servers** it can forward the requests
+to.
 
 ![bg right:40%](https://images.unsplash.com/photo-1600607384626-5c6fdea6e54c?fit=crop&h=720)
 
@@ -338,23 +340,23 @@ The load balancer must know the **pool of servers** it can forward the requests 
 
 Multiple strategies can be used to distribute the load:
 
-- **Round-robin**: each server in the
-  pool in turn (covered in this course)
+- **Round-robin**: each server in the pool in turn (covered in this course)
 - **Least connections**: least number of active connections
 - **Least response time**: least response time
-- **Hashing**: based on a hash
-  of the request (e.g. the IP address of the client, the URL of the request,
-  etc.)
+- **Hashing**: based on a hash of the request (e.g. the IP address of the
+  client, the URL of the request, etc.)
 
 ![bg right:40%](https://images.unsplash.com/photo-1510380290144-9e40d2438af5?fit=crop&h=720)
 
 ---
 
-An issue with load balancing is **session management**: the load balancer could forward requests from the same
-  client to different servers, loosing their session.
+An issue with load balancing is **session management**: the load balancer could
+forward requests from the same client to different servers, loosing their
+session.
 
 As HTTP is stateless, the load balancer must know how to forward requests from
-the same client to the same server. A solution is **sticky sessions** with the help of a cookie.
+the same client to the same server. A solution is **sticky sessions** with the
+help of a cookie.
 
 ![bg right:40%](https://images.unsplash.com/photo-1651581212768-4b39414c9b27?fit=crop&h=720)
 
@@ -379,8 +381,8 @@ Caching can be done on the **client-side** or **server-side**.
 
 ### Managing cache with HTTP
 
-Managing chache is challenging because it is difficult to know when to invalidate the cache (the data
-can be stale).
+Managing chache is challenging because it is difficult to know when to
+invalidate the cache (the data can be stale).
 
 Two main caching models:
 
@@ -506,7 +508,8 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [Mohammadreza alidoos](https://unsplash.com/@mralidoost) on
   [Unsplash](https://unsplash.com/photos/black-and-silver-laptop-computer-0rUp9vgyEYo)
-- Illustration by [Gaurav Dhwaj Khadka](https://unsplash.com/@gauravdhwajkhadka) on
+- Illustration by [Gaurav Dhwaj Khadka](https://unsplash.com/@gauravdhwajkhadka)
+  on
   [Unsplash](https://unsplash.com/photos/brown-wooden-table-near-window-eRQ5Pk59p9s)
 - Illustration by [Imre Tömösvári](https://unsplash.com/@timester12) on
   [Unsplash](https://unsplash.com/photos/gray-suv-on-road-during-daytime-FbhuN53_330)
