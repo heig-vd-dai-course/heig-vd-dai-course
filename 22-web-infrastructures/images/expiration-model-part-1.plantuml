@@ -1,0 +1,28 @@
+@startuml
+
+title "Expiration"
+
+participant Client
+participant Server
+
+== Initial request at 22 Feb 2022, 22:22:00 ==
+
+note over Client, Server
+GET /index.html HTTP/1.1
+Host: example.com
+Accept: text/html
+end note
+Client -> Server: Request
+
+|||
+
+note over Client, Server
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1024
+Date: Tue, 22 Feb 2022 22:22:22 GMT
+Cache-Control: max-age=3600
+end note
+Server -> Client: Response
+
+@enduml

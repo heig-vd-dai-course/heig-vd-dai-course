@@ -663,15 +663,15 @@ Expiration is the process of specifying how long a response can be cached.
 
 Validation is the process of checking if a cached response is still valid.
 
-In both models, the `Cache-Control` header can be used to tweak the caching
-behavior.
+Both can be used at the same time to improve the performance of the system.
 
 Much more details about caching with HTTP can be found on MDN Web Docs:
 <https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching>.
 
 #### Expiration model
 
-The expiration model is the simplest caching model.
+The expiration model is the simplest caching model. It is described in
+[RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.2).
 
 The cache is invalidated after a certain amount of time. The cache can be
 invalidated after a certain amount of time because the data is not expected to
@@ -681,15 +681,18 @@ The expiration model can be used to cache static content (e.g. images, videos,
 etc.) or to cache responses from servers to improve the performance of the
 system.
 
-With HTTP, the expiration model can be implemented with the following headers:
+The expiration model can be implemented with the following header:
 
-- `Cache-Control`: specifies directives for caching mechanisms in both requests
+- `Cache-Control: max-age=<number of seconds>`: specifies the maximum amount of seconds a resource will
+  be considered fresh.
   and responses.
-- `Expires`: gives the date/time after which the response is considered stale.
+
+![Expiration model](./images/expiration-model.png)
 
 #### Validation model
 
-The validation model is more complex than the expiration model.
+The validation model is more complex than the expiration model. It is described in
+[RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
 
 The cache is invalidated when the data is modified. The cache can be invalidated
 when the data is modified because the data is expected to change.
@@ -715,14 +718,10 @@ There are two types of conditional requests:
 - **Based on the `ETag` header**: allows a `304 Not Modified` to be returned if
   content is unchanged for the version/hash of the given entity.
 
-Both can be used at the same time to improve the performance of the system.
-
 ##### Based on the `Last-Modified` header
 
 With HTTP, the validation model can be implemented with the following headers:
 
-- `Cache-Control`: specifies directives for caching mechanisms in both requests
-  and responses.
 - `Last-Modified`: indicates the date and time at which the origin server
   believes the selected representation was last modified.
 - `If-Modified-Since`: allows a `304 Not Modified` to be returned if content is
@@ -732,14 +731,12 @@ With HTTP, the validation model can be implemented with the following headers:
 The `Last-Modified` header is used to check if the data has changed since the
 last time it was modified.
 
-![Validation based on the Last-Modified header](./images/validation-based-on-the-last-modified-header.png)
+![Validation based on the Last-Modified header](./images/validation-model-based-on-the-last-modified-header.png)
 
 ##### Based on the `ETag` header
 
 With HTTP, the validation model can be implemented with the following headers:
 
-- `Cache-Control`: specifies directives for caching mechanisms in both requests
-  and responses.
 - `ETag`: provides the current entity tag for the selected representation. Think
   of it like a version number or a hash for the given resource.
 - `If-None-Match`: allows a `304 Not Modified` to be returned if content is
@@ -749,7 +746,7 @@ With HTTP, the validation model can be implemented with the following headers:
 The `ETag` header is used to check if the data has changed since the last time
 it was modified.
 
-![Validation based on the ETag header](./images/validation-based-on-the-etag-header.png)
+![Validation based on the ETag header](./images/validation-model-based-on-the-etag-header.png)
 
 ### CDN
 

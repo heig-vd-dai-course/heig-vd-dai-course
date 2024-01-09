@@ -393,10 +393,22 @@ Two main caching models:
 
 - The cache is valid for a certain amount of time
 - If the cache is not expired, the cache is used
-- Uses the `Cache-Control` and `Expires` headers
+- Uses the `Cache-Control: max-age=<secondes>` header
 - The cache is invalidated after the expiration time
 
 ![bg right:40%](https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?fit=crop&h=720)
+
+---
+
+![bg h:80%](./images/expiration-model-part-1.png)
+
+---
+
+![bg h:80%](./images/expiration-model-part-2.png)
+
+---
+
+![bg h:80%](./images/expiration-model-part-3.png)
 
 #### Validation model
 
@@ -410,27 +422,27 @@ Two main caching models:
 
 ---
 
-![bg h:80%](./images/validation-based-on-the-last-modified-header-part-1.png)
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-1.png)
 
 ---
 
-![bg h:80%](./images/validation-based-on-the-last-modified-header-part-2.png)
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-2.png)
 
 ---
 
-![bg h:80%](./images/validation-based-on-the-last-modified-header-part-3.png)
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-3.png)
 
 ---
 
-![bg h:80%](./images/validation-based-on-the-etag-header-part-1.png)
+![bg h:80%](./images/validation-model-based-on-the-etag-header-part-1.png)
 
 ---
 
-![bg h:80%](./images/validation-based-on-the-etag-header-part-2.png)
+![bg h:80%](./images/validation-model-based-on-the-etag-header-part-2.png)
 
 ---
 
-![bg h:80%](./images/validation-based-on-the-etag-header-part-3.png)
+![bg h:80%](./images/validation-model-based-on-the-etag-header-part-3.png)
 
 ### CDN
 
