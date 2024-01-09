@@ -591,7 +591,8 @@ A paper exam that will last 1 hour.
 
 **Allowed resources?**
 
-Two double-sided sheets (so four single-sided sheets) of personal notes (digital or hand-written).
+Two double-sided sheets (so four single-sided sheets) of personal notes (digital
+or hand-written).
 
 ![bg right:40%][illustration]
 

@@ -683,7 +683,7 @@ A HTTP request is structured as follows:
 ```text
 <HTTP method> <URL> HTTP/<HTTP version>
 <HTTP headers>
-<Empty line if there is a body>
+<Empty line>
 <HTTP body (optional)>
 ```
 
@@ -694,7 +694,10 @@ GET / HTTP/1
 Host: gaps.heig-vd.ch
 User-Agent: curl/8.1.2
 Accept: */*
+
 ```
+
+> [!IMPORTANT] Do not forget the empty line!
 
 In this example, we request the resource `/` from the server `gaps.heig-vd.ch`
 using the HTTP method `GET`.
@@ -791,7 +794,7 @@ A HTTP response is structured as follows:
 ```text
 HTTP/<HTTP version> <HTTP status code> <HTTP status message>
 <HTTP headers>
-<Empty line if there is a body>
+<Empty line>
 <HTTP body>
 ```
 
