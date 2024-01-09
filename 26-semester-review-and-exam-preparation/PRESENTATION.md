@@ -567,6 +567,9 @@ _paginate: false
 
 Let's check these _beautiful_ charts!
 
+<small>GAPS feedback are available
+[on the repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/26-semester-review-and-exam-preparation).</small>
+
 ## Taboo questions
 
 Here are some taboo questions we never take the time to discuss and I would like
