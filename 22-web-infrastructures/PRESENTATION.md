@@ -144,7 +144,7 @@ You can find other resources and alternatives as well.
 
 ---
 
-Example of functional requirements:
+Examples of **functional requirements**:
 
 - **User management**: Users must be able to register, login, logout, etc.
 - **Product management**: Users must be able to create, read, update, delete
@@ -155,7 +155,7 @@ Example of functional requirements:
 
 ---
 
-Example of non-functional requirements:
+Examples of **non-functional requirements**:
 
 - **Response time**: Time between a request and a response (end user)
 - **Throughput**: Number of requests/interval (service provider)
