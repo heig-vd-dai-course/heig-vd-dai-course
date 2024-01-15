@@ -2,6 +2,9 @@
 
 ## Before the course
 
+- Review the semester review, the GAPS evaluations and the feedbacks from the
+  students
+- Update the course material and the presentations from the feedbacks
 - Review the slides and the course sequence
 - Create a new planning in the course project
 - Send an email to all students to remind them of the course with:
@@ -58,7 +61,7 @@ Bonjour tout le monde,
 
 J'espère que vous avez passé un bel été et que vous vous sentez prêt-e-s pour cette nouvelle année qui va commencer.
 
-Je serai votre professeur pour le cours Développement d'applications internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver mardi pour la première leçon.
+Je serai votre professeur pour le cours Développement d'Applications Internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver mardi pour la première leçon.
 
 Le cours aura lieu les mardis de 13:15 à 14:45 en salle B01a et de 16:35 à 18:05 en salle A05a.
 

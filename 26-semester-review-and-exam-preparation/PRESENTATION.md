@@ -561,13 +561,13 @@ _paginate: false
     essential skill to know how to document something that someone else will use
 - It was the most painful point, we will try to improve this!
 
-### GAPS feedback
+### GAPS evaluation
 
 <!-- _class: lead -->
 
 Let's check these _beautiful_ charts!
 
-<small>You can find all GAPS feedback
+<small>You can find all GAPS evaluations
 [on the repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/26-semester-review-and-exam-preparation).</small>
 
 #### _"J'ai moins apprécié et je propose..."_

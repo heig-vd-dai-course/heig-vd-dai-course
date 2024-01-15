@@ -1,0 +1,22 @@
+{
+  "name": "HEIG-VD DAI Course Development Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "DavidAnson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot-chat",
+        "jebbs.plantuml",
+        "marp-team.marp-vscode",
+        "ms-vsliveshare.vsliveshare-pack",
+        "redhat.vscode-yaml",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-french"
+        // "yzhang.markdown-all-in-one"
+      ]
+    }
+  }
+}

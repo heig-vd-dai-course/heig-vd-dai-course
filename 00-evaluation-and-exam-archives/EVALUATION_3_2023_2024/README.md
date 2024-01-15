@@ -299,7 +299,7 @@ FROM eclipse-temurin:17
 WORKDIR /app
 
 # Le fichier était copié avec un nom différent (1 point)
-COPY target/hello-world-1.0-SNAPSHOT.jar /app/hello-world-1.0-SNAPSHOT.jar
+COPY hello-world-1.0-SNAPSHOT.jar /app/hello-world-1.0-SNAPSHOT.jar
 
 # L'application s'exécute sur le port 5000 - cette valeur n'est ici qu'à titre
 # informatif/à des fins de documentation et la changer ne change pas le port sur
