@@ -6,12 +6,13 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.language": "en,fr",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "editor.rulers": [80],
   "files.insertFinalNewline": true,
-  "markdown.extension.toc.levels": "2..3",
+  // "markdown.extension.toc.levels": "2..3",
   "markdown.marp.breaks": "off",
   "markdown.marp.enableHtml": true,
   "markdownlint.config": {

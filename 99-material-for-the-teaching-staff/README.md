@@ -2,6 +2,8 @@
 
 ## Before the course
 
+- Follow the [`CONTRIBUTING.md`](../CONTRIBUTING.md) guide to setup your
+  environment
 - Review the semester review, the GAPS evaluations and the feedbacks from the
   students
 - Update the course material and the presentations from the feedbacks

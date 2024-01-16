@@ -1,30 +1,53 @@
-# Contributing to HEIG-VD DAI Course
+# Contributing to the HEIG-VD DAI Course repository
 
+- [Docker](https://www.docker.com/) with its
+  [Docker Compose](https://docs.docker.com/compose/) plugin must be installed.
 - [Git](https://git-scm.com/) must be installed.
-- [Node.js](https://nodejs.org/en/) must be installed in order to run
-  [Prettier](https://prettier.io/).
-- [Visual Studio Code](https://code.visualstudio.com/) must be installed with
-  the following extensions:
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-  - [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
-  - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-  - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-1. Clone or fork the GitHub repository and open it in Visual Studio Code.
-2. Open the Markdown files in Visual Studio Code and press `Ctrl`+`Shift`+`V` to
-   preview the files. If the Markdown file is a Marp presentation, it will
-   display a preview of the slides. If the Markdown file is a README, it will
-   display a preview of the README.
-3. Edit the Markdown files and commit your changes.
+1. Clone or fork the GitHub repository.
+2. Move the `.devcontainer` and `.vscode` folders from the
+   `99-material-for-the-teaching-staff` directory to the root level of the
+   repository.
+3. Open the project in Visual Studio Code.
+4. Visual Studio Code should prompt you to install the recommended extension
+   ([Visual Studio Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)).
+   Install it. Other extensions will be installed automatically when you open
+   the project in a Development Container.
+5. Press `Ctrl`+`Shift`+`P` to open the command palette and run the
+   `Dev Containers: Reopen in Container` command.
+6. Visual Studio Code will build the Docker image and open the project in a
+   container with all the required tools installed (extensions and packages).
+7. Open the Markdown files in Visual Studio Code and press `Ctrl`+`Shift`+`V` to
+   preview the files.
+8. You are now ready to edit the Markdown files and commit your changes.
+
+## Making changes to the Git repository
+
+1. Open an issue describing the changes you want to make.
+2. Clone/fork the GitHub repository.
+3. Create a new branch with the name of the issue you want to fix.
+4. Open the project in a container with the help of Visual Studio Code as
+   described above.
+5. Edit the files and commit your changes.
    - Ensure to format the Markdown files with Prettier before committing your
      changes with the help of the
      `npx prettier **/*.md --write --print-width 80 --prose-wrap always`
      command.
    - Ensure all local images are optimized:
      - PNGs with the help of the `optipng *.png` command.
-     - JPGs with the help of the `jpegoptim *.jpg`
-4. Push and open a pull request.
-5. Wait for the pull request to be reviewed and merged.
+     - JPGs with the help of the `jpegoptim *.jpg` command.
+     - PDFs with the help of the `ps2pdf *.pdf` command.
+6. Push and open a pull request.
+7. Wait for the pull request to be reviewed and merged.
+
+## PlantUML local server
+
+To generate diagrams, you can use the [PlantUML](https://plantuml.com/) local
+server.
+
+A local server is automatically available when using the Development Container
+at the following address: <http://localhost:8080/>.
 
 ## Taking screenshots
 
@@ -51,7 +74,6 @@ tell application "System Events" to tell application process theApp
 		set size to appSize
 	end tell
 end tell
-
 ```
 
 As I (Ludovic) do not use Safari as my main browser, it is perfect for

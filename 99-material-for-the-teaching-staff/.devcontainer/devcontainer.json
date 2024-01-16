@@ -18,5 +18,7 @@
         // "yzhang.markdown-all-in-one"
       ]
     }
-  }
+  },
+	// Execute the post-create.sh script once the container is created
+	"postCreateCommand": "./.devcontainer/post-create.sh"
 }
