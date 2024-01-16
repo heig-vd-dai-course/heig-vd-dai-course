@@ -570,246 +570,78 @@ Let's check these _beautiful_ charts!
 <small>You can find all GAPS evaluations
 [on the repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/26-semester-review-and-exam-preparation).</small>
 
-#### _"J'ai moins apprécié et je propose..."_
+#### _"J'ai moins apprécié et je propose..."_ (Résumé)
 
-> RAS
+**Évaluations**
 
-> Il y a beaucoup trop de rendus/travaux écrits pourquoi ne pas faire des petits
-> tests (15-20 minutes) sur ce que l'on appris. par exemple question que l'on
-> peut nous poser lors d'un entretien d'embauche sans feuille, un test
-> intermédiaire (mini-examen) avec tout et l'examen final.
-
----
-
-> Les premiers tests ont, à mon goût, était un peu trop short au niveau timing.
-> Néanmoins cela s'est déjà amélioré suite à nos retours, merci.
-
-> C'est difficile de savoir quoi réviser pour les tests, ils sont un peu
-> difficile et avec peu de temps. (Le test 3 était plus adapté déjà).
-
-> J'ai trouvé les tests théorique trop spécifique, cela ne m'aurait pas dérangé
-> si j'avais accès à mes notes mais par exemple de demander un protocole entier
-> je ne trouve pas très intéressant, surtout que j'ai passé plusieurs heures sur
-> un exercices pour en faire un propre que je ne peux même pas utiliser aux
-> tests.
+- Difficulté à réviser pour des tests théoriques trop spécifiques.
+- Améliorer la durée des tests.
+- Simplifier et clarifier les évaluations.
+- Réduire le nombre d'évaluations ou de laboratoires.
+- Suggérer des mini-évaluations similaires à des entretiens d'embauche
+  (courtes - 20-30 minutes)
 
 ---
 
-> Les examens semblent parfois plus dur et malheureusement, on a du mal à
-> s'imaginer de la difficulté en se basant uniquement sur la théorie. Il y a
-> tout de même une certain manque de pratique quand il s'agit d'exercices de
-> programmation (pas tout le temps, mais occasionnellement). Le nombre d'examens
-> est un poil trop grand en plus des nombreux laboratoires. peut-être le baisser
-> un tout petit peu soit l'un, soit l'autre.
+**Travaux pratiques**
 
-> Enfin, les évaluations sont longues, et il est parfois difficile de comprendre
-> ce qu'il est attendu.
-
----
-
-> J'ai moins apprécié le nombre de test, 4 c'est trop. 3 aurait été plus
-> judicieux. De plus que vous étiez particulièrement strict sur la correction.
-
-> Il est difficiles de savoir sur quoi on va être évalué exactement.
+- La liberté créative peut être décourageante, surtout si elle ne correspond pas
+  aux critères.
+- Ne voit pas l'intérêt de la partie orale après les labos, trouve les
+  présentations stressantes.
+- La quantité de travail dans les labos est jugée trop importante.
+- Suggère une consigne de base pour tous, avec la possibilité de discuter
+  d'autres sujets.
 
 ---
 
-> J'aime bien la liberté que vous nous donnez pour le choix des TP mais pour
-> certains ça devient un désavantage si l'on voit trop gros. Je pense que c'est
-> mieux de donner une consigne de base pour tout le monde et que si l'on désire
-> partir dans un autre sujet de venir en discuter avec vous.
+**Méthodologie et support de cours**
 
-> je ne comprends pas trop l'intérêt de la partie orale qui suit un labo, les
-> présentations c'est stressant.
+- Besoin d'explications détaillées sur les codes pratiques, sans y consacrer
+  trop de temps.
+- Préférence pour des cours plus concis et guidés, moins de texte pour une
+  assimilation plus efficace.
+- Le temps de travail semble excessif par rapport à la valeur perçue du cours.
+- Manque de préparation pratique malgré la présentation des concepts.
 
-> J'ai moins apprécié le rythme du cours, je ne pense pas avoir de difficulté à
-> comprendre la matière, mais la quantité de travail à fournir dans les labos
-> est trop importante.
+#### _"J'ai particulièrement apprécié..."_ (Résumé)
 
----
+**Évaluations**
 
-> J'ai utilisé `ein tool estimate-hours` et `git-hours` pour sortir une
-> estimation du temps de travail sur les labos:
->
-> - 30h pour le labo1
-> - 50h pour le labo2
-> - 45h pour le labo3
->
-> Ce qui fait déjà 60h/pers. pour les 3 premiers labos. Il reste donc 30h pour
-> les 4 tests, le dernier labo et les practial work pour ne pas dépasser les 90h
-> de la fiche d'unité.
+- Appréciation de la plateforme d'évaluation en ligne pour reproduire des
+  conditions réelles.
+- Soutien à l'idée d'avoir plus de tests, mais sur des sujets moins étendus.
 
-> Peut être trop de pratique (les labos sont gros)
+**Travaux pratiques**
+
+- La possibilité de choisir ses projets est motivante.
 
 ---
 
-> Les consignes de laboratoires sont ouvertes, et donc les choix de ce qui peut
-> être implémenté sont libres. Bien que cela puisse développer notre créativité,
-> l'évaluation est établie sur des critères qui correspondent à l'implémentation
-> présentée en cours. Cela m'a particulièrement démotivé, car toute possibilité
-> de créativité était vraisemblablement mal vue parce que soit trop complexe,
-> soit elle ne correspondait pas aux critères.
+- Apprécie la présentation des labos, mettant en valeur le travail effectué et
+  développant les compétences en présentation.
+- Les labos sont bien appréciés.
+- Les évaluations pratiques, ainsi que leurs présentations, sont bien réalisées.
 
-> La taille des labos, nécessitant beaucoup de temps.
+**Méthodologie et support de cours**
 
----
-
-> Un gros manque d'accompagnement pour la pratique. Quand vous donnez des codes
-> (UDP, Server-client) ce serait intéressant de parcourir ensemble le code et de
-> l'expliquer en détail sans y passer des heures.
-
-> Je pense que j'ai besoin pour assimiler la matière de moins de texte, et
-> d'avoir peut-être des fois des cours un peu plus guidé. J'ai l'impression
-> d'avoir perdu beaucoup de temps à chercher des infos. Néanmoins le cours est
-> très intéressant et mérite sa place dans ce cursus.
+- Soutien de l'idée d'avoir moins de théorie et plus de pratique pour un
+  apprentissage efficace.
+- Apprécie la présence des enseignants et de l'assistant, même en cas de
+  problèmes.
 
 ---
 
-> Aussi, trop peu de temps alloué à chacun des outils. Il serait préférable de
-> réduire la quantité d'information à apprendre, afin de comprendre le
-> fonctionnement interne de chacun des outils (docker mériterait plus de temps
-> pour expliquer son fonctionnement plutot que les détails syntaxiques par
-> exemple). Sachant que certains éléments vont être vu en WEB, il serait
-> possible d'enlever le dernier chapitre sans perdre en qualité.
-
-> Le temps de travail: c'est trop pour ce que vaut ce cours. C'est intéressant,
-> utile, mais il faudrait que ce cours justifie ce temps scolairement, qu'on ait
-> les périodes, etc.
-
----
-
-> Le vide de vraie théorie: on nous présente les concepts, mais on ne nous
-> prépare que peu à vraiment coder les principes qu'on nous apprend. J'ai passé
-> longtemps à tenter de comprendre UDP et les interfaces durant le labo, quand
-> j'aurais dû déjà le savoir du cours.
-
-> Les codes d'exemples sont difficiles à lire. Même dans les versions mieux
-> amenées (HTTP), on ne nous explique jamais le contenu du code, seulement le
-> but
-
-> Le support de cours sur Git j'ai du mal personnellement, et les PDF sont moyen
-> vu que généré automatiquement.
-
-#### _"J'ai particulièrement apprécié..."_
-
-> Les tests sur des plus petites parties de la matière rendent la préparation de
-> ceux-ci plus faciles, mais alors la longueur devrait aussi être adaptée pour
-> mieux équilibrer le travail imputé entre les classes parallèles. Si les tests
-> contiennent moins de matière, ils devraient aussi être plus courts, car
-> évaluer 4 thématiques en 4 fois 1h30 dépasse largement le temps d'évaluation
-> utilisé par les classes parallèles, sans compter que les moyenne de classe
-> diffèrent largement.
-
----
-
-> J'ai bien aimer la plateforme d’évaluation en ligne en tout cas faire un TE
-> comme dans un cas réel.
-
-> avoir plus de tests mais sur moins de sujet est une bonne chose. Avoir peu ou
-> moyennement de théorie avec de la pratique qui suit juste derrière est
-> vraiment top. Les tests sur l'ordi bien également
-
-> Pouvoir faire des projets au choix c'est motivant.
-
-> La présentation des labos qui mettent en valeur le travail effectué et nous
-> entraîne à présenter notre travail.
-
----
-
-> Les labos sont vraiment sympa.
-
-> Les évaluations (et présentation) de la pratique sont bien réalisés.
-
-> La présence des enseignants et de l'assistant même en cas de souci autre.
-> L'explication est claire et précise. Une liberté à choisir notre laboratoire
-> nous permettant d'être créatif. Cours donné sur une plateforme professionnel
-
-> Les supports de cours sont excellent et mis à jour régulièrement est c'est
-> fort apprécié.
-
----
-
-> La structure du cours / des documents du cours (Merci d'utiliser git et du
-> markdown, si seulement tous les cours étaient comme ça...).
-
-> La liberté qu'offre le cours et l'entrain du professeur à améliorer le cours
-> et l'école en passant. J'apprécie aussi qu'on tente des nouvelles approches,
-> avec du matériel de cours neuf, même si cela implique qu'il n'est pas encore
-> complétement formé (encore des fautes, incohérences, erreurs de langage, etc.)
-
-> Le façon de donner le cours est très agréable et très dynamique.
-
----
-
-> Les enseignants nous laissent avancer à notre rythme et nous laisse explorer
-> les sujets que l'on veut dans un cadre définis pour les travaux pratiques et
-> pour les exercices.
-
-> Les explications que vous donnés lors des questions sont excellentes.
-
-> Le fait d'avoir moins de théorie et plus de pratique est une bonne idée.
-
-> La théorie qui n'est pas inutilement longue, pratiquer nous permet de faire le
-> lien entre la théorie et la pratique de manière beaucoup plus efficace que
-> dans les autres modules.
-
----
-
-> L'approche orientée pratique du cours.
-
-> J'ai aimé la pratique de ce cours, la façon d'apprendre.
-
-> J'ai appris beaucoup d'outils intéressant durant ce cours.
-
-> J'aime bien comment le cours est organisé ainsi que la méthode d'enseignement
-> que les enseignants on choisi (notamment quand je compare avec les autres
-> classes ).
-
-> La structure du cours est intéressante, surtout pour ceux qui apprennent bien
-> avec la pratique.
-
----
-
-> L'approche pratique de l'éducation, en nous laissant expérimenter par nous
-> même le fonctionnement de différents outils.
-
-> L'ajout de quiz est vraiment très utile, il faudrait juste qu'il soit beaucoup
-> plus fourni.
-
-> Avoir la structure / planification du cours dès le début.
-
-> La présence n'est pas obligatoire et malgré que la classe peu être vide les
-> enseignants sont toujours disponible par mail.
-
----
-
-> On se sent bien dans votre classe. Vous savez mettre à l'aise et c'est
-> agréable. Vous faites attention à ce qu'aucun élève ne soit oublié et prenne
-> du retard c'est vraiment bien.
-
-> En général : 7,5/10
-
-> L'investissement du prof et de l'assistant dans le cours.
-
-> Le prof et l'assistant sont vraiment bien :)
-
----
-
-> Prof et assistant sont très sympas, aimables et sont très investis dans le
-> cours. On voit qu'ils écoutent les remarques que les étudiants leur font et
-> les prennent en compte presque immédiatement. (Si seulement on pouvait avoir
-> plus de profs comme eux)
-
-> J'ai particulièrement apprécié le cours dans sa globalité, mais surtout
-> l'engagement de Ludovic et Hadrien est top! Il y a encore des points à
-> améliorer mais c'est déjà un grand pas!
-
----
-
-> Aussi, c'est très ouvert aux modifications des élèves, mais ça ne devrait pas
-> être notre devoir, on passe déjà assez de temps sur ces labos. Mais au moins
-> si on a quelque chose qui nous dérange, on peut le corriger, c'est pas un
-> cours immuable, ni un prof inaccessible, inabordable.
+- Excellentes explications fournies lors des questions.
+- Cours dispensé sur une plateforme professionnelle.
+- Appréciation des supports de cours, régulièrement mis à jour.
+- Appréciation d'avoir la structure et la planification du cours dès le début.
+- Appréciation de l'ambiance en classe, du confort ressenti, et de l'attention
+  portée à chacun-e.
+- Appréciation de l'écoute et de la prise en compte immédiate des remarques des
+  étudiant-e-s.
+- Appréciation de la possibilité de corriger des aspects dérangeants, soulignant
+  que le cours n'est pas figé et les enseignants accessibles.
 
 ## Taboo questions
 
