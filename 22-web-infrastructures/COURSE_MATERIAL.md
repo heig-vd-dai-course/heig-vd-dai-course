@@ -683,16 +683,15 @@ system.
 
 The expiration model can be implemented with the following header:
 
-- `Cache-Control: max-age=<number of seconds>`: specifies the maximum amount of seconds a resource will
-  be considered fresh.
-  and responses.
+- `Cache-Control: max-age=<number of seconds>`: specifies the maximum amount of
+  seconds a resource will be considered fresh. and responses.
 
 ![Expiration model](./images/expiration-model.png)
 
 #### Validation model
 
-The validation model is more complex than the expiration model. It is described in
-[RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
+The validation model is more complex than the expiration model. It is described
+in [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
 
 The cache is invalidated when the data is modified. The cache can be invalidated
 when the data is modified because the data is expected to change.

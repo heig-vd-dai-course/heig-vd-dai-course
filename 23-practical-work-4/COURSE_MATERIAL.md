@@ -384,21 +384,21 @@ repository!
 | 5   | The README explains how to configure the DNS zone to access your web application                                                    |    0.2 |
 | 6   | The README explains how to build and publish the web application with Docker                                                        |    0.2 |
 | 7   | The README explains how to interact with the web application with examples and outputs using curl                                   |    0.2 |
-| 8  | The repository is cloned using Git (HTTPS) on the server to run the web application |    0.2 |
+| 8   | The repository is cloned using Git (HTTPS) on the server to run the web application                                                 |    0.2 |
 
 ### Category 2 - Docker and Docker Compose
 
 | #   | Criterion                                                                   | Points |
 | --- | --------------------------------------------------------------------------- | -----: |
 | 9   | Docker and Docker Compose are correctly installed on the server             |    0.2 |
-| 10   | The Docker applications (Traefik + API) are split into multiple directories |    0.2 |
+| 10  | The Docker applications (Traefik + API) are split into multiple directories |    0.2 |
 | 11  | The web application runs with Docker and Docker Compose on the server       |    0.2 |
 
 ### Category 3 - SSH and SCP
 
-| #   | Criterion                                                                   | Points |
-| --- | --------------------------------------------------------------------------- | -----: |
-| 12  | You can access the server without a password using a SSH key                |    0.2 |
+| #   | Criterion                                                    | Points |
+| --- | ------------------------------------------------------------ | -----: |
+| 12  | You can access the server without a password using a SSH key |    0.2 |
 
 ### Category 4 - HTTP and curl
 

@@ -312,17 +312,29 @@ The order of presentation is random and is stated in the next slides.
 
 ---
 
-<!-- -->
+<!--
 
 **Please state your group on GitHub Discussions as soon as possible, even if you
 do not have a clear idea yet as it will help us to plan the practical work
 review.**
 
-<!-- -->
+-->
 
-| #   | Group | Passage |
-| --- | ----- | ------- |
-| 1   | TBD   | TBD     |
+| #   | Group                                                                        | Passage |
+| --- | ---------------------------------------------------------------------------- | ------- |
+| 1   | Alexandre Philibert, Gwendal Piemontesi, Valentin Ricard and Trueb Guillaume | 13h25   |
+| 2   | Thomas Vuilleumier, Sebastian Diaz, Arthur Menétrey and Lionel Pollien       | 13h35   |
+| 3   | Komarov Sergey and Jano Ahmad                                                | 13h45   |
+| 4   | Sarah Jallon, Jonas Troeltsch, Jeremiah Steiner and Simon Guggisberg         | 13h55   |
+| 5   | Pirakas Anthon, Aurélien Richard, Romain Humair and Lucas Lattion            | 14h05   |
+
+---
+
+| #   | Group                                                              | Passage |
+| --- | ------------------------------------------------------------------ | ------- |
+| 6   | Bleuer Rémy, Graf Calvin, Lopez Esteban and Sottile Alan           | 14h15   |
+| 7   | Massimo Stefani, Loïc Herman, Kevin Farine and Olin Bourquin       | 14h25   |
+| 8   | Jaques Colin, Iorio Alexandre, Mulugeta Theodros and Slimani Walid | 14h35   |
 
 ## Find the practical work
 
