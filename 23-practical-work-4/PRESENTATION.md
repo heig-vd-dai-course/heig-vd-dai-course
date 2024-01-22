@@ -300,7 +300,7 @@ Leads to a `409` (Conflict) status code as we want to keep the names unique.
 ## Practical work review
 
 The practical work review will take place on **Tuesday 23.01.2023** in the
-**room B38**, at the very end of the corridor next to the door entry.
+**room B51a**, next to our classroom.
 
 We only have **10 minutes per group** (10 minutes of presentation, no time for
 questions). Please be prepared to present your work. You decide what you want to
