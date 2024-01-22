@@ -77,7 +77,7 @@ _paginate: false
 - How and why HTTP can be used to build web applications
   - Methods, status codes, headers, etc.
 - How HTTP features can be used to build web infrastructures
-  - Reverse proxies, load balancers, etc.
+  - Reverse proxies, load balancers, caching, scalability, etc.
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 

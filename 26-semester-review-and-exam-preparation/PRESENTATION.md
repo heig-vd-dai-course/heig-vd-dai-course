@@ -143,6 +143,9 @@ _paginate: false
 
 [Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/README.md)
 
+**This chapter will not be in the exam!** The other classes did not study this
+topic as deeply as you did.
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720)
 
 #### Key points to remember for this chapter
@@ -163,9 +166,6 @@ _paginate: false
 - Make usage of
   [Spotless](https://github.com/diffplug/spotless/tree/main/plugin-maven) to
   format the code for uniformity
-- For people on Windows, create a document to help set up a proper and working
-  environment (WSL2, Git, Java, Maven, SDKMAN!, etc.)
-- Introduction to unit testing with JUnit5 maybe?
 
 ### Java IOs
 
@@ -334,13 +334,14 @@ _paginate: false
 
 [Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-ssh-and-scp/README.md)
 
+**This chapter will not be in the exam!** The other classes did not study this
+topic.
+
 ![bg opacity:0.1](https://images.unsplash.com/photo-1506818144585-74b29c980d4b?fit=crop&h=720)
 
 #### Key points to remember for this chapter
 
-This chapter will **not** be in the exam! The other classes did not study this
-topic.
-
+- SSH keys and how to clone/sign commits using Git
 - SSH keys and how to connect to a remote server
 - SCP and how to copy files to a remote server
 
@@ -364,9 +365,12 @@ _paginate: false
 #### Key points to remember for this chapter
 
 - TCP as a reliable protocol
-- `Socket` and `ServerSocket` classes
-- Get streams from sockets (deal as with files - buffering, flushing, charsets,
-  end of line characters, exceptions handling, etc.)
+- Write a client and a server that communicate using `Socket` and `ServerSocket`
+  classes
+- Deal with sockets' streams (deal as with files - buffering, flushing,
+  charsets, end of line characters, exceptions handling, etc.)
+- Use an executor (`ThreadPool` is recommended but you should know other
+  executors and their pros and cons) to handle multiple clients
 
 #### Elements to improve for next year
 
@@ -417,7 +421,8 @@ _paginate: false
 #### Key points to remember for this chapter
 
 - Differences between TCP and UDP
-- `DatagramSocket`, `DatagramPacket` and `MulticastSocket` classes
+- Write a client/server (unicast) and or emitter/receiver (multicast) with the
+  `DatagramSocket`, `DatagramPacket` and `MulticastSocket` classes application
 - Reliability of UDP
 - Unicast, broadcast and multicast
 - Messaging patterns
@@ -474,11 +479,11 @@ _paginate: false
 
 #### Key points to remember for this chapter
 
-- HTTP request methods
-- HTTP response status codes
+- HTTP request methods and their response status codes
 - HTTP path parameters, query parameters and body
 - HTTP headers
 - HTTP content negotiation
+- Structure of a HTTP request/response (raw HTTP)
 - HTTP sessions (stateless vs. stateful)
   - Using a query parameter or a cookie
 - API design
@@ -574,12 +579,13 @@ Let's check these _beautiful_ charts!
 
 **Évaluations**
 
-- Difficulté à réviser pour des tests théoriques trop spécifiques.
+- Difficulté à réviser pour des tests théoriques.
 - Améliorer la durée des tests.
-- Simplifier et clarifier les évaluations.
+- Clarifier les évaluations.
 - Réduire le nombre d'évaluations ou de laboratoires.
-- Suggérer des mini-évaluations similaires à des entretiens d'embauche
-  (courtes - 20-30 minutes)
+- Suggestion d'autres formes d'évaluation (mini-évaluations similaires à des
+  entretiens d'embauche, deux évaluations mais avec des évaluations informatives
+  entre les deux, etc.).
 
 ---
 
@@ -590,7 +596,7 @@ Let's check these _beautiful_ charts!
 - Ne voit pas l'intérêt de la partie orale après les labos, trouve les
   présentations stressantes.
 - La quantité de travail dans les labos est jugée trop importante.
-- Suggère une consigne de base pour tous, avec la possibilité de discuter
+- Suggestion d'une consigne de base pour tous, avec la possibilité de discuter
   d'autres sujets.
 
 ---
@@ -680,9 +686,25 @@ Find all examens on [SACHEM](https://sachem.heig-vd.ch/examens/actuel/).
 A paper exam that will test your knowledge on everything we have seen during the
 semester (theoretical content, practical content and practical works).
 
+You will be asked to read/write/understand some code.
+
+You must be ready as there will be no time to lose.
+
+![bg right:40%][illustration]
+
+---
+
 **Allowed resources?**
 
 Two double-sided sheets (so four single-sided sheets) of personal notes.
+
+**What to do during the exam?**
+
+Read the exam carefully.
+
+Always try to write something.
+
+You all have the skills to pass the exam.
 
 ![bg right:40%][illustration]
 
