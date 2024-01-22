@@ -213,8 +213,9 @@ _paginate: false
 - You can choose what the CLI will do
 - Publish your CLI on GitHub
 
-We have seen some very interesting projects! All of you were very creative!
-Caesar cipher, image processing, JSON-XML convertor, etc.
+We have seen some very interesting projects! Caesar cipher, image processing, JSON-XML convertor, etc.
+
+Do not hesitate to share your project and to continue to work on it!
 
 #### Elements to improve for next year
 
@@ -400,8 +401,10 @@ _paginate: false
 - You can choose what the network application will do
 - Groups of two students
 
-We have seen some very interesting projects! All of you were very creative! Chat
+We have seen some very interesting projects! Chat
 applications, hanging man (poor boy...) games, naval battle games, etc.
+
+Do not hesitate to share your project and to continue to work on it!
 
 #### Elements to improve for next year
 
@@ -457,9 +460,10 @@ _paginate: false
 - Share your application on GitHub with Docker and Docker Compose
 - Groups between 2 and 3 students
 
-We have seen some very interesting projects! All of you were very creative!
-Teletext application, multiplayer Pong game, Tower defense game, IoT logging
+We have seen some very interesting projects! Teletext application, multiplayer Pong game, Tower defense game, IoT logging
 system, etc.
+
+Do not hesitate to share your project and to continue to work on it!
 
 #### Elements to improve for next year
 
@@ -540,6 +544,8 @@ _paginate: false
 - Deploy the applications (reverse proxy + CRUD API)
 - Access the applications from a (free) domain name
 - Groups of 4 students
+
+Do not hesitate to share your project and to continue to work on it!
 
 #### Elements to improve for next year
 
