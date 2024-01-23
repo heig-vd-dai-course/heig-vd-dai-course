@@ -213,7 +213,8 @@ _paginate: false
 - You can choose what the CLI will do
 - Publish your CLI on GitHub
 
-We have seen some very interesting projects! Caesar cipher, image processing, JSON-XML convertor, etc.
+We have seen some very interesting projects! Caesar cipher, image processing,
+JSON-XML convertor, etc.
 
 Do not hesitate to share your project and to continue to work on it!
 
@@ -401,8 +402,8 @@ _paginate: false
 - You can choose what the network application will do
 - Groups of two students
 
-We have seen some very interesting projects! Chat
-applications, hanging man (poor boy...) games, naval battle games, etc.
+We have seen some very interesting projects! Chat applications, hanging man
+(poor boy...) games, naval battle games, etc.
 
 Do not hesitate to share your project and to continue to work on it!
 
@@ -460,8 +461,8 @@ _paginate: false
 - Share your application on GitHub with Docker and Docker Compose
 - Groups between 2 and 3 students
 
-We have seen some very interesting projects! Teletext application, multiplayer Pong game, Tower defense game, IoT logging
-system, etc.
+We have seen some very interesting projects! Teletext application, multiplayer
+Pong game, Tower defense game, IoT logging system, etc.
 
 Do not hesitate to share your project and to continue to work on it!
 
@@ -565,12 +566,22 @@ _paginate: false
 
 - Most of them were too long (especially the first two)
 - Some questions were too specific
-- Some questions were not understood by the students, missing the point of the
-  question
-  - "_Reading/writing an application protocol is boring_"  
-    Reading/writing an application protocol is not an easy task but it an
-    essential skill to know how to document something that someone else will use
 - It was the most painful point, we will try to improve this!
+
+### Course materials
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+![bg opacity:0.1][illustration]
+
+#### Elements to improve for next year
+
+- The PDF generation is okayish but not perfect
+- Make a better mix between theoretical and practical content (more like the
+  last two chapters)
 
 ### GAPS evaluation
 
