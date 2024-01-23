@@ -550,7 +550,9 @@ Do not hesitate to share your project and to continue to work on it!
 
 #### Elements to improve for next year
 
-- Nothing much to improve in my opinion. I think it is the perfect practical
+- Make a common project with the BDR course to have a database to manage (and
+  make a more realist application) maybe?
+- Nothing else to improve in my opinion. I think it is the perfect practical
   work to close the loop of the course. Do you agree?
 
 ### Evaluations

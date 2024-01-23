@@ -299,7 +299,7 @@ Leads to a `409` (Conflict) status code as we want to keep the names unique.
 
 ## Practical work review
 
-The practical work review will take place on **Tuesday 23.01.2023** in the
+The practical work review will take place on **Tuesday 23.01.2024** in the
 **room B51a**, next to our classroom.
 
 We only have **10 minutes per group** (10 minutes of presentation, no time for
