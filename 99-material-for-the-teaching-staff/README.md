@@ -13,6 +13,7 @@ the course.
   - [Email sent before the 2023-2024 academic year](#email-sent-before-the-2023-2024-academic-year)
 - [During the course](#during-the-course)
   - [Framaform for the feedback during the course](#framaform-for-the-feedback-during-the-course)
+  - [Mail sent before the exam](#mail-sent-before-the-exam)
 - [After the course](#after-the-course)
   - [Email sent after the 2023-2024 academic year](#email-sent-after-the-2023-2024-academic-year)
 
@@ -197,6 +198,27 @@ Merci pour votre collaboration!
     celui-ci vous a déplu, n'hésitez pas à nous le faire savoir pour qu'on
     puisse faire mieux dans le futur.
 
+### Mail sent before the exam
+
+```text
+[DAI 2023-2024] Préparation à l'examen
+
+Bonjour tout le monde,
+
+Comme discuté en classe, voici les évaluations que les classes parallèles ont eues avec le professeur Juergen Ehrensberger.
+
+Nous avons commencé à préparer l'examen qui sera très similaire aux évaluations que vous avez eues avec moi et celles de Juergen en pièces jointes.
+
+Vous trouverez toutes les informations sur l'examen, les points clés à retenir par chapitre pour l'examen (mais avant tout votre vie future) dans la revue du semestre sur le dépôt Git à l'adresse suivante : https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/26-semester-review-and-exam-preparation.
+
+Nous allons faire notre possible pour corriger vos travaux pratiques au plus vite, afin que vous soyez au clair avec vos moyennes avant les examens mais il se peut que les notes soient inscrites vers la fin de votre semaine de révisions ; nous nous excusons d'avance.
+
+Si vous avez quelconques questions durant la semaine de révisions, n'hésitez pas à nous contacter.
+
+Une bonne soirée et courage pour la fin de semestre/semaine de révisions/examens !
+Ludovic Delafontaine et Hadrien Louis
+```
+
 ## After the course
 
 - Create Git tags to archive the course material for the given year
@@ -225,7 +247,11 @@ Je vais archiver les discussions et le planning du cours DAI pour l'année proch
 
 Si vous souhaitez retrouver l'état du cours tel qu'il était à la fin de celui-ci, vous pouvez vous référer aux tags suivants :
 
-- TODO
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/releases/tag/dai-2023-2024
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions/releases/tag/dai-2023-2024
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content-template/releases/tag/dai-2023-2024
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template/releases/tag/dai-2023-2024
+- https://github.com/heig-vd-dai-course/.github/releases/tag/dai-2023-2024
 
 Vous pourrez ainsi toujours accéder aux versions passées et futures du cours pour retrouver des informations ou des exemples.
 
