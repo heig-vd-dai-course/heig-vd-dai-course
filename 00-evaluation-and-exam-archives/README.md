@@ -13,11 +13,11 @@ the course.
 
 ## Evaluations 3
 
-- _None yet_
+- [Evaluation 3 - 2023-2024](./EVALUATION_3_2023_2024/README.md)
 
 ## Evaluations 4
 
-- _None yet_
+- [Evaluation 4 - 2023-2024](../24-evaluation-4/EVALUATION_4_2023_2024/README.md)
 
 ## Exams
 
