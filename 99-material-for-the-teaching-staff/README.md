@@ -241,26 +241,29 @@ Ludovic Delafontaine et Hadrien Louis
 
 Bonjour tout le monde,
 
-J'espère que vous avez survécu à votre session d'examens et que vous allez pouvoir prendre le temps de vous reposer avant la suite.
+J'espère que vous allez bien et que vous avez pu vous reposer après vos examens.
 
-Je vais archiver les discussions et le planning du cours DAI pour l'année prochaine. Je vais vous déplacer dans l'équipe "Old members" (https://github.com/orgs/heig-vd-dai-course/teams/old-members) afin que vous ne receviez plus de notifications dans le futur. Si vous préférez quitter l'organisation GitHub, cela ne me dérange pas.
+Dès la fin du mois de février, les machines virtuelles que vous avez utilisées pour le dernier travail pratique vont être détruites. Si vous avez des choses à récupérer dessus, vous avez jusqu'à la fin du mois pour le faire. Sachez aussi que vous pouvez reproduire ce genre d'infrastructure chez vous avec simplement un vieil ordinateur/un Raspberry Pi, installer Linux, Docker et Docker Compose dessus et vous pouvez avoir votre propre petit serveur pour héberger vos propres services. Vous êtes des expert-e-s maintenant ! 🙂
+
+En parallèle, je vais archiver les discussions et le planning du cours DAI pour l'année prochaine. Je vais vous déplacer dans l'équipe "Old members" (https://github.com/orgs/heig-vd-dai-course/teams/old-members) afin que vous ne receviez plus de notifications dans le futur. Si vous préférez quitter l'organisation GitHub, cela ne me dérange pas.
 
 Si vous souhaitez retrouver l'état du cours tel qu'il était à la fin de celui-ci, vous pouvez vous référer aux tags suivants :
 
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/releases/tag/dai-2023-2024
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course/releases/tag/dai-2023-2024
 - https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions/releases/tag/dai-2023-2024
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/releases/tag/dai-2023-2024
 - https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content-template/releases/tag/dai-2023-2024
 - https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template/releases/tag/dai-2023-2024
 - https://github.com/heig-vd-dai-course/.github/releases/tag/dai-2023-2024
 
 Vous pourrez ainsi toujours accéder aux versions passées et futures du cours pour retrouver des informations ou des exemples.
 
-Je tenais à sincèrement vous remercier pour votre participation et votre implication au cours. J'ai apprécié vous avoir eu comme étudiant-e-s durant ce cours et je considère avoir beaucoup appris de vous. J'espère que les éléments vu en cours vous seront utiles pour votre futur. Je vous encourage à continuer à vous former et à vous renseigner sur les sujets qui vous intéressent et à rester curieux-ses.
+Si vous avez des questions, des remarques ou des commentaires, n'hésitez pas à me contacter. Je suis toujours joignable, que ce soit pour le cours ou pour autre chose.
 
-Si vous avez des questions, des remarques ou des commentaires (notamment vis à vis de l'examen dont on ne prend que rarement (jamais ?) les retours), n'hésitez pas à me contacter. Je suis toujours joinable, que ce soit pour le cours ou pour autre chose.
+Je tenais à profiter de ce mail pour sincèrement vous remercier pour votre participation et votre implication au cours. J'ai apprécié vous avoir eu comme étudiant-e-s et je considère avoir beaucoup appris de vous. J'espère que les éléments vus en cours vous seront utiles pour votre futur. Je vous encourage à continuer à vous former et à vous renseigner sur les sujets qui vous intéressent et à rester curieux-ses.
 
-Je parle en mon nom et aussi en celui d'Hadrien pour vous souhaiter une bonne continuation dans vos études et dans votre vie professionnelle. Nous vous souhaitons le meilleur pour la suite.
+Je parle en mon nom et aussi en celui d'Hadrien pour vous souhaiter une bonne continuation dans vos études et dans votre vie professionnelle. Nous vous souhaitons le meilleur pour la suite !
 
-Au plaisir de vous recroiser à l'occasion autour d'un café ou d'une bière !
+Au plaisir de vous recroiser à l'occasion autour d'un café ou d'une bière (peut-être au Baleinev ?) !
 Ludovic Delafontaine et Hadrien Louis
 ```

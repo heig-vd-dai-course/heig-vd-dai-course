@@ -19,32 +19,32 @@ jobs:
       - name: Delete files that should not be released
         run: |
           rm --recursive 00-evaluation-and-exam-archives
-          rm --recursive 01-*
-          rm --recursive 02-*
-          rm --recursive 03-*
-          rm --recursive 04-*
-          rm --recursive 05-*
-          rm --recursive 06-*
-          rm --recursive 07-*
-          rm --recursive 08-*
-          rm --recursive 09-*
-          rm --recursive 10-*
-          rm --recursive 11-*
-          rm --recursive 12-*
-          rm --recursive 13-*
-          rm --recursive 14-*
-          rm --recursive 15-*
-          rm --recursive 16-*
-          rm --recursive 17-*
-          rm --recursive 18-*
-          rm --recursive 19-*
+          # rm --recursive 01-*
+          # rm --recursive 02-*
+          # rm --recursive 03-*
+          # rm --recursive 04-*
+          # rm --recursive 05-*
+          # rm --recursive 06-*
+          # rm --recursive 07-*
+          # rm --recursive 08-*
+          # rm --recursive 09-*
+          # rm --recursive 10-*
+          # rm --recursive 11-*
+          # rm --recursive 12-*
+          # rm --recursive 13-*
+          # rm --recursive 14-*
+          # rm --recursive 15-*
+          # rm --recursive 16-*
+          # rm --recursive 17-*
+          # rm --recursive 18-*
+          # rm --recursive 19-*
           # rm --recursive 20-*
           # rm --recursive 21-*
           # rm --recursive 22-*
           # rm --recursive 23-*
           # rm --recursive 24-*
           # rm --recursive 25-*
-          rm --recursive 26-*
+          # rm --recursive 26-*
           rm --recursive 99-material-for-the-teaching-staff
 
       - name: Build course material content with Pandoc and weasyprint
