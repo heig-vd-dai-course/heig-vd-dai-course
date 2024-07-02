@@ -69,7 +69,7 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Welcome to the DAI course!
+## Welcome to the Développement d'applications internet (DAI) course!
 
 <!-- _class: lead -->
 
