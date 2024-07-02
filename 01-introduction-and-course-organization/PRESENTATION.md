@@ -340,9 +340,21 @@ If you are on Windows, follow the guide we created to set up a development
 environment with Windows Subsystem for Linux (WSL):
 [Set up a Windows development environment](TODO).
 
-Having a bit of experience with Linux will be a big plus for you. We expect you
-to use this environment for the entire course and are here to help you if
-needed.
+This guide will help you to set up a Linux environment on your Windows computer
+to be able to follow the course.
+![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
+
+---
+
+If you are on macOS, we recommend you to install Homebrew and use it to install
+the tools we will use during this course.
+
+You can install Homebrew by following the instructions on the
+[Homebrew website](https://brew.sh/).
+
+You can always install Linux on your computer if you want to.
+[Ubuntu](https://ubuntu.com/) or [Debian](https://www.debian.org/) is
+recommended.
 
 ![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
 
