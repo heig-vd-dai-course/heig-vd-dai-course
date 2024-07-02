@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of AI tools
 title: 'HEIG-VD DAI Course - Introduction to part 1: Input/output processing'
 description: 'Introduction to part 1: Input/output processing for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-introduction-to-part-1/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -75,10 +75,10 @@ _paginate: false
 
 ## What happens when you browse the Web?
 
-1. You request a resource (e.g. a file) from a web server
-2. The web server opens the file
-3. The web server reads the file
-4. The web server sends the file to you
+1. You request a resource (e.g. a file) from a Web server
+2. The Web server opens the file
+3. The Web server reads the file
+4. The Web server sends the file to you
 5. Your Web browser receives the file
 6. Your Web browser displays the file
 
@@ -94,12 +94,11 @@ But for this, you will need some tools and some knowledge.
 
 ## What will you learn?
 
-- How to use Git (professionally)
-- How to use GitHub (professionally)
-- How to use Markdown
-- How to create a Java project with Maven and dependencies
-- How to use the Java IO API
-- How to manage different file formats and encodings
+- How to use Git, GitHub and Markdown (professionally)
+- How to create a Java project with Maven and external dependencies
+- How to use the Java IO API to read/write files with different formats and
+  encodings
+- How to run your Java application in a Docker container
 
 ![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
