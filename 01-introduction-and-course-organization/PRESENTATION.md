@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of AI tools
 title: HEIG-VD DAI Course - Introduction and course organization
 description: Introduction and course organization for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -164,21 +164,20 @@ This course defines the basics of network communication and how all these
 communications are programmed.
 
 At the end of the course, you will know how to define, program and deploy
-network applications, how to interact with them and the different elements to
+network applications, how to interact with them, and the different elements to
 pay attention to make robust applications.
 
 Whether you are in software, security, data science, embedded or network, you
-will have to deal with network applications (devices, APIs, etc.). This course
+will have to deal with network applications (APIs, devices, etc.). This course
 will give you a solid grounding in this world.
 
 ## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
 
-64 periods are planned for this course, divided in 4 main parts:
+64 periods are planned for this course, divided in 3 main parts:
 
-- Part 1 - Input/output processing (15 periods)
-- Part 2 - Network programming with TCP (18 periods)
-- Part 3 - Network programming with UDP (14 periods)
-- Part 4 - Network programming with HTTP (14 periods)
+- Part 1 - Input/output processing (18 periods)
+- Part 2 - Network programming with TCP and UDP (24 periods)
+- Part 3 - Network programming with HTTP (20 periods)
 
 The entire course planning for the semester is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>.
@@ -188,12 +187,15 @@ The entire course planning for the semester is available at
 Set the **Start date** and the **End date** fields as shown to display the
 course planning correctly.
 
-![bg right contain](images/course-planning.png)
+**The planning is subject to change**. We will do our best to inform you in
+advance if there are any changes.
+
+![bg right 90%](images/course-planning.png)
 
 ## Course sequence
 
 1. Theoretical content that is meant to be short and concise (all of us)
-   - Sessions of 20 minutes, dynamic and interactive
+   - Sessions of 20-30 minutes, dynamic and interactive
 2. Practical content where you do stuff (you)
    - Prepare you for the practical work with official doc and tutorials
 3. Practical work (you)
@@ -203,11 +205,9 @@ course planning correctly.
 
 ## Evaluation
 
-- 4 practical works (20%) - done in groups of 2 students
-- 4 evaluations (30%) - done individually
+- 3 practical works (20%) - done in groups
+- 3 evaluations (30%) - done individually
 - 1 exam (50%) - done individually
-
-`final grade = average of evaluation grades * 0.3 + average of practical work grades * 0.2 + average of exam * 0.5`
 
 ![bg right:40%](https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?fit=crop&h=720)
 
@@ -282,7 +282,7 @@ between them. Use the one you prefer!
 
 - A place you don't want to come
 - A place you don't feel comfortable/safe
-- A place where you can't ask questions and/or mistakes
+- A place where you can't ask questions and/or do mistakes
 - A place where you can't take anything away
 
 ➡️ If you have a problem with the course, we will do our best to fix it.
@@ -301,7 +301,7 @@ However, we would appreciate if you try to help your classmates instead!
   them. If you have any difficulties, let us know. If you have any suggestions,
   share them.
 
-## _"A course in English..?"_
+## _"Un cours en anglais..?"_
 
 All the written material will be in English. The teaching staff will speak in
 French. The evaluations and exam will be in French.
@@ -314,10 +314,10 @@ If you have any difficulties with English, please let us know.
 
 ## _"What about ChatGPT, Copilot, etc.?"_
 
-You can use all the tools you want (personal notes, Internet, ChatGPT, Copilot,
-etc.), except during evaluations and the exam. You will be able to use these in
-the real world, so better learn how to use them now. However, they are here to
-help you, not to do the work for you:
+**You can use all the tools you want** (personal notes, Internet, AI tools,
+etc.), **except during evaluations and the exam**. You will be able to use these
+in the real world, so better learn how to use them now. However, they are here
+to help you, not to do the work for you:
 
 - You must be able to explain what you did and why you did it
 - You must state it when you used external help (tools and sources)
@@ -326,19 +326,32 @@ help you, not to do the work for you:
 
 ## _"Linux, macOS or Windows?"_
 
-Linux and macOS are much more supported in the software development world. If
-you can, we recommend you to try a Linux distribution for this course, either
-baremetal or in Windows Subsystem for Linux (WSL). It is useful to have a bit of
-experience with it as well.
+The HEIG-VD recommends Windows for your studies. This is mostly because other
+departments heavily rely on Windows-only products.
+
+From our experience, software development on Windows can be more difficult than
+Linux or macOS.
+
+![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
+
+---
+
+If you are on Windows, follow the guide we created to set up a development
+environment with Windows Subsystem for Linux (WSL):
+[Set up a Windows development environment](TODO).
+
+Having a bit of experience with Linux will be a big plus for you. We expect you
+to use this environment for the entire course and are here to help you if
+needed.
 
 ![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
 
 ## _"I have an ARM computer, is this an issue?"_
 
-If you have an ARM computer (Apple Silicon M1/M2 for example), some parts of the
-course might be a bit more tricky. We will try our best to test all our course
-material but we cannot guarantee that everything will work as expected on the
-first try.
+If you have an ARM computer (Apple Silicon M1/M2/M3 for example), some parts of
+the course might be a bit more tricky. We will try our best to test all our
+course material but we cannot guarantee that everything will work as expected on
+the first try.
 
 We might come to you to ask you to test some things for us before the next
 course that requires it.
@@ -350,15 +363,6 @@ If you encounter any issue, please let us know as soon as possible.
 <!-- _class: lead -->
 
 Do you have any questions?
-
-## Resources
-
-_Resources are here to help you. They are not mandatory to read._
-
-- [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/) -
-  Use version 2 of WSL.
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
