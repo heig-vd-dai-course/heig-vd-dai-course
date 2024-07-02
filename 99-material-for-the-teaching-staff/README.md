@@ -107,7 +107,7 @@ not give them the fish, I teach them how to fish.
   environment
 - Review the semester review, the GAPS evaluations and the feedbacks from the
   students in the
-  [`semester-review-and-exam-preparation`](../26-semester-review-and-exam-preparation)
+  [`semester-review-and-exam-preparation`](../27-semester-review-and-exam-preparation)
   directory and the remaining GitHub Issues and Discussions.
 - Update the course material and the presentations from the feedback
 - Review the slides and the course sequence
@@ -198,6 +198,38 @@ Merci pour votre collaboration!
     celui-ci vous a déplu, n'hésitez pas à nous le faire savoir pour qu'on
     puisse faire mieux dans le futur.
 
+### Mail sent for the evaluations
+
+```text
+[DAI 2023-2024] Corrections évaluation N
+
+Bonsoir,
+
+Vous trouverez en pièce jointe la correction de votre évaluation 2. Vous y trouverez des notes annotées que votre lecteur PDF devrait être capable de lire. Nous restons évidemment à disposition en cas de questions.
+
+La note a été saisie dans GAPS également.
+
+Le corrigé officiel est disponible à l'adresse suivante :
+
+Nous vous souhaitons une bonne soirée et à demain,
+Ludovic Delafontaine et Hadrien Louis
+```
+
+### Mail sent for the practical works
+
+```text
+[DAI 2023-2024] Retours sur le travail pratique N
+
+Bonjour,
+
+Vous trouverez en pièce jointe les retours que nous vous avons faits pour le travail pratique.
+
+La note a été saisie dans GAPS également.
+
+Nous vous souhaitons une bonne fin de journée et un bon week-end !
+Ludovic Delafontaine et Hadrien Louis
+```
+
 ### Mail sent before the exam
 
 ```text
@@ -209,7 +241,7 @@ Comme discuté en classe, voici les évaluations que les classes parallèles ont
 
 Nous avons commencé à préparer l'examen qui sera très similaire aux évaluations que vous avez eues avec moi et celles de Juergen en pièces jointes.
 
-Vous trouverez toutes les informations sur l'examen, les points clés à retenir par chapitre pour l'examen (mais avant tout votre vie future) dans la revue du semestre sur le dépôt Git à l'adresse suivante : https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/26-semester-review-and-exam-preparation.
+Vous trouverez toutes les informations sur l'examen, les points clés à retenir par chapitre pour l'examen (mais avant tout votre vie future) dans la revue du semestre sur le dépôt Git à l'adresse suivante : https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/27-semester-review-and-exam-preparation.
 
 Nous allons faire notre possible pour corriger vos travaux pratiques au plus vite, afin que vous soyez au clair avec vos moyennes avant les examens mais il se peut que les notes soient inscrites vers la fin de votre semaine de révisions ; nous nous excusons d'avance.
 

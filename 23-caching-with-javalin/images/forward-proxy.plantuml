@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+title "Forward proxy"
+
+actor "Server 1" as server1
+actor "Server 2" as server2
+actor "Server N" as serverN
+
+rectangle "Clients LAN" as clientLan {
+
+    actor "Client 1" as client1
+    actor "Client 2" as client2
+    actor "Client N" as clientN
+
+    rectangle "Forward proxy" as forwardProxy {
+        client1 -- (Exit the LAN)
+        client2 -- (Exit the LAN)
+        clientN -- (Exit the LAN)
+    }
+}
+
+cloud "Internet" as internet {
+    (Exit the LAN) -- internet
+    internet -- (server1)
+    internet -- (server2)
+    internet -- (serverN)
+}
+@enduml

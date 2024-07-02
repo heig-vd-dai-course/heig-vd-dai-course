@@ -17,7 +17,7 @@ the course.
 
 ## Evaluations 4
 
-- [Evaluation 4 - 2023-2024](../24-evaluation-4/EVALUATION_4_2023_2024/README.md)
+- [Evaluation 4 - 2023-2024](../25-evaluation-3/EVALUATION_4_2023_2024/README.md)
 
 ## Exams
 
