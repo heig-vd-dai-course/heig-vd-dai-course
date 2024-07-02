@@ -1,4 +1,38 @@
+[license]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+
 # Set up a Windows development environment
+
+L. Delafontaine and H. Louis, with the help of Copilot.
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
+
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Update Windows](#update-windows)
+- [Install and configure WSL](#install-and-configure-wsl)
+  - [Install WSL](#install-wsl)
+  - [Update WSL](#update-wsl)
+  - [Install a Linux distribution](#install-a-linux-distribution)
+- [Install and configure Windows Terminal](#install-and-configure-windows-terminal)
+  - [Install Windows Terminal](#install-windows-terminal)
+  - [Configure Windows Terminal](#configure-windows-terminal)
+- [Update Ubuntu](#update-ubuntu)
+- [Install and configure Git](#install-and-configure-git)
+- [Install and configure Java](#install-and-configure-java)
+- [Install and configure IntelliJ IDEA](#install-and-configure-intellij-idea)
+  - [Install IntelliJ IDEA](#install-intellij-idea)
+  - [Configure IntelliJ IDEA](#configure-intellij-idea)
+- [Install and configure Docker and Docker Compose](#install-and-configure-docker-and-docker-compose)
+- [Conclusion](#conclusion)
+- [Tips and tricks](#tips-and-tricks)
+- [Troubleshooting](#troubleshooting)
+  - [Check your Windows build number](#check-your-windows-build-number)
+  - [Enable virtualization](#enable-virtualization)
+  - [Check your Windows features](#check-your-windows-features)
+  - [Check your Windows update](#check-your-windows-update)
 
 ## Introduction
 
@@ -49,7 +83,8 @@ select "Run as administrator" as shown in the following screenshot:
 
 Then, run the following command in the terminal:
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
+>
 > If the following command displays the help message, proceed to the next
 > section.
 
@@ -58,26 +93,49 @@ Then, run the following command in the terminal:
 wsl --install --no-distribution
 ```
 
-![Install WSL](./images/wsl-install.png)
+The output should be similar to this:
 
-Restart your computer when the installation is complete.
+```text
+Installing: Virtual Machine Platform
+Virtual Machine Platform has been installed.
+Installing: Windows Subsystem for Linux
+Windows Subsystem for Linux has been installed.
+Installing: Windows Subsystem for Linux
+Windows Subsystem for Linux has been installed.
+The requested operation is successful. Changes will not be effective until the system is rebooted.
+```
+
+Restart your computer once the installation is complete.
 
 ### Update WSL
 
 WSL can still be in version 1 and must be updated to version 2.
 
 To do so, open PowerShell as an administrator as shown in the previous section
-and run the following commands in the terminal:
+and run the following command in the terminal:
 
 ```powershell
 # Check for WSL updates
-wsl --update
+wsl --update --web-download
+```
 
-# Set WSL version to 2
+If there are updates available, you will be prompted to download and install
+them.
+
+Set the WSL default version to 2 by running the following command in the
+terminal:
+
+```powershell
+# Set WSL default version to 2
 wsl --set-default-version 2
 ```
 
-![Update WSL](./images/wsl-update.png)
+The output should be similar to this:
+
+```text
+For information on key differences with WSL 2 please visit https://aka.ms/wsl2
+The operation completed successfully.
+```
 
 ### Install a Linux distribution
 
@@ -89,7 +147,27 @@ distributions by running the following command in the terminal:
 wsl --list --online
 ```
 
-![List available Linux distributions](./images/wsl-available-linux-distributions.png)
+The output should be similar to this:
+
+```text
+The following is a list of valid distributions that can be installed.
+Install using 'wsl --install -d <Distro>'.
+
+NAME                                   FRIENDLY NAME
+Ubuntu                                 Ubuntu
+Debian                                 Debian GNU/Linux
+kali-linux                             Kali Linux Rolling
+Ubuntu-18.04                           Ubuntu 18.04 LTS
+Ubuntu-20.04                           Ubuntu 20.04 LTS
+Ubuntu-22.04                           Ubuntu 22.04 LTS
+OracleLinux_7_9                        Oracle Linux 7.9
+OracleLinux_8_7                        Oracle Linux 8.7
+OracleLinux_9_1                        Oracle Linux 9.1
+openSUSE-Leap-15.5                     openSUSE Leap 15.5
+SUSE-Linux-Enterprise-Server-15-SP4    SUSE Linux Enterprise Server 15 SP4
+SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 15 SP5
+openSUSE-Tumbleweed                    openSUSE Tumbleweed
+```
 
 You can then install a Linux distribution of your choice from the above list. We
 recommend installing Ubuntu if you are not familiar with Linux as it is a very
@@ -97,16 +175,19 @@ user-friendly distribution and is widely used.
 
 ```powershell
 # Install Ubuntu
-wsl --install Ubuntu
+wsl --install --distribution Ubuntu
 ```
 
 Once the installation is complete, you can set up a username and password for
 the Ubuntu distribution.
 
-While setting up your password, **it is expected that you will not see any
-characters on the screen**. This is a security feature of the terminal. Even
-though you do not see the characters you type (e.g., `p@ssw0rd`), they are still
-being entered. So, make sure to remember them as you will need them later.
+> [!TIP]
+>
+> While setting up your password, **it is expected that you will not see any
+> characters on the screen**. This is a security feature of the terminal. Even
+> though you do not see the characters you type (e.g., `p@ssw0rd`), they are
+> still being entered. So, make sure to remember them as you will need them
+> later.
 
 We recommend using the same username and password as your Windows account for
 simplicity.
@@ -114,7 +195,33 @@ simplicity.
 Once you have set up your username and password, Ubuntu will be started, and you
 will be able to run Linux commands in the terminal.
 
-![Install Ubuntu](./images/wsl-install-ubuntu.png)
+The output should be similar to this:
+
+```text
+Installing: Ubuntu
+Ubuntu has been installed.
+Launching Ubuntu...
+Installing, this may take a few minutes...
+Please create a default UNIX user account. The username does not need to match your Windows username.
+For more information visit: https://aka.ms/wslusers
+Enter new UNIX username: ludelafo
+New password:
+Retype new password:
+passwd: password updated successfully
+Installation successful!
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+This message is shown once a day. To disable it please create the
+/home/ludelafo/.hushlogin file.
+ludelafo@win-10:~$
+```
 
 To exit the Ubuntu terminal, you can run the following command:
 
@@ -134,9 +241,10 @@ Windows has added an entry to the File Explorer sidebar for the Ubuntu
 distribution. You can access your Ubuntu files in the
 `\\wsl$\Ubuntu\home\YOUR_USERNAME` directory.
 
-> [!CAUTION]  
-> We highly recommend to **never manipulate your files from the File Explorer**
-> and to use the Ubuntu terminal instead to avoid permission issues and odd file
+> [!CAUTION]
+>
+> We highly recommend to **never manipulate your files from the File Explorer**.
+> Use the Ubuntu terminal instead to avoid permission issues and odd file
 > behaviors.
 
 ![Access Ubuntu files in File Explorer](./images/wsl-file-browser-ubuntu.png)
@@ -180,8 +288,6 @@ Press **Save** to save the settings.
 
 Close Windows Terminal and open it again. It should now open Ubuntu by default.
 
-![Windows Terminal](./images/windows-terminal.png)
-
 You now have a modern terminal application that supports multiple tabs, multiple
 shells, and many other features.
 
@@ -204,9 +310,11 @@ arrow in the title bar and selecting "Windows PowerShell" while holding the
 
 Before starting the installation of the development environment, make sure that
 your Ubuntu installation is up to date. You can update Ubuntu by running the
-following commands in the terminal:
+following commands in the terminal. You might need to enter your password when
+running the commands:
 
-> [!NOTE]  
+> [!TIP]
+>
 > The `sudo` command is used to run commands with superuser privileges. You will
 > be prompted to enter your password when running a command with `sudo`.
 >
@@ -226,14 +334,10 @@ sudo apt upgrade
 
 Press `y` when prompted to confirm the upgrade.
 
-Your screen should be similar to the following screenshot if there are updates
-available:
-
-![Update Ubuntu](./images/ubuntu-update.png)
-
 ## Install and configure Git
 
-> [!NOTE]  
+> [!NOTE]
+>
 > Follow these instructions when requested in the course. If you are following
 > this guide for the first time, you can skip to the [Conclusion](#conclusion).
 
@@ -243,7 +347,8 @@ primary development environment.
 
 ## Install and configure Java
 
-> [!NOTE]  
+> [!NOTE]
+>
 > Follow these instructions when requested in the course. If you are following
 > this guide for the first time, you can skip to the [Conclusion](#conclusion).
 
@@ -255,7 +360,8 @@ primary development environment.
 
 ### Install IntelliJ IDEA
 
-> [!NOTE]  
+> [!NOTE]
+>
 > Follow these instructions when requested in the course. If you are following
 > this guide for the first time, you can skip to the [Conclusion](#conclusion).
 
@@ -269,7 +375,8 @@ Windows as any other program.
 On order to use IntelliJ IDEA with WSL, you might need to exclude the WSL
 distribution from Windows Defender.
 
-> [!NOTE]  
+> [!NOTE]
+>
 > Why exclude WSL from Windows Defender?
 >
 > WSL is a compatibility layer for running Linux binary executables natively on
@@ -319,9 +426,10 @@ TODO
 
 ## Install and configure Docker and Docker Compose
 
-> [!NOTE] Follow these instructions when requested in the course. If you are
-> following this guide for the first time, you can skip to the
-> [Conclusion](#conclusion).
+> [!NOTE]
+>
+> Follow these instructions when requested in the course. If you are following
+> this guide for the first time, you can skip to the [Conclusion](#conclusion).
 
 Install and configure Docker and Docker Compose as mentioned in the course
 material but use the instructions to install it on Ubuntu as you are now using
@@ -332,6 +440,22 @@ Ubuntu in WSL as your primary development environment.
 From now on, you can use WSL as your primary development environment for the
 rest of the course. We will expect you to use WSL in all the assignments and
 projects.
+
+## Tips and tricks
+
+By default, WSL disk space will grow as you use it but not shrink when space is
+freed. You can automatically shrink the image when files are removed by running
+the following command in a PowerShell terminal:
+
+```powershell
+# Stop the WSL service
+wsl --shutdown
+
+# Optimize the WSL disk space
+wsl --manage Ubuntu --set-sparse true
+```
+
+Based on the following [StackExchange answer](https://superuser.com/a/1612289).
 
 ## Troubleshooting
 
@@ -391,8 +515,4 @@ following command in the terminal:
 ```powershell
 # Check if your Windows installation is up to date
 sconfig
-```
-
-```
-
 ```
