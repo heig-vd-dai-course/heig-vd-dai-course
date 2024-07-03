@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of ChatGPT
+author: L. Delafontaine and H. Louis, with the help of AI tools
 title: HEIG-VD DAI Course - SMTP and Telnet
 description: SMTP and Telnet for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-smtp-and-ncat/
@@ -67,7 +67,7 @@ _paginate: false
 
 [Web][web] · [PDF][pdf]
 
-<small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
+<small>L. Delafontaine and H. Louis, with the help of AI tools.</small>
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
 

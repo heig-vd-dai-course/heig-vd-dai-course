@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of ChatGPT
+author: L. Delafontaine and H. Louis, with the help of AI tools
 title: 'HEIG-VD DAI Course - Introduction to part 4: Network programming with HTTP'
 description: 'Introduction to part 4: Network programming with HTTP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-3/
@@ -63,7 +63,7 @@ _paginate: false
 
 [Web][web] · [PDF][pdf]
 
-<small>L. Delafontaine and H. Louis, with the help of ChatGPT.</small>
+<small>L. Delafontaine and H. Louis, with the help of AI tools.</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
