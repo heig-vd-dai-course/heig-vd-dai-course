@@ -338,10 +338,11 @@ Linux or macOS.
 
 If you are on Windows, follow the guide we created to set up a development
 environment with Windows Subsystem for Linux (WSL):
-[Set up a Windows development environment](TODO).
+[Set up a Windows development environment](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md).
 
 This guide will help you to set up a Linux environment on your Windows computer
-to be able to follow the course.
+to be able to follow the course (and beyond).
+
 ![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
 
 ---
