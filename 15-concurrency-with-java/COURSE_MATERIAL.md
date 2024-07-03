@@ -8,7 +8,7 @@
 [illustration]:
   https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
 
-# Java TCP programming - Course material
+# Concurrency with Java - Course material
 
 <https://github.com/heig-vd-dai-course>
 

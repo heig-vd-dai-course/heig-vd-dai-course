@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of ChatGPT
 title: HEIG-VD DAI Course - HTTP and curl
 description: HTTP and curl for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-ssh-and-scp/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
     :root {
@@ -43,18 +43,18 @@ style: |
 headingDivider: 4
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-ssh-and-scp/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/21-http-and-curl-presentation.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-ssh-and-scp/21-ssh-and-scp-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
 [illustration]:
   https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
 [course-material]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md
 [course-material-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md
 
 # HTTP and curl
 
@@ -91,7 +91,7 @@ _paginate: false
 <!-- _class: lead -->
 
 More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#disclaimer).
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md#disclaimer).
 You can find other resources and alternatives as well.
 
 ### Disclaimer
@@ -110,7 +110,7 @@ You can find other resources and alternatives as well.
 <!-- _class: lead -->
 
 More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#prepare-and-setup-your-environment).
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md#prepare-and-setup-your-environment).
 You can find other resources and alternatives as well.
 
 ### curl
@@ -137,7 +137,7 @@ You can find other resources and alternatives as well.
 <!-- _class: lead -->
 
 More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#http).
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md#http).
 You can find other resources and alternatives as well.
 
 ### HTTP
@@ -439,7 +439,7 @@ Disadvantages: A bit more complex to implement.
 <!-- _class: lead -->
 
 More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md#api-design).
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md#api-design).
 You can find other resources and alternatives as well.
 
 ### API design
@@ -526,7 +526,7 @@ CRUD APIs. We mention REST APIs for completeness.
 - There exist many tools to document APIs such as
   [OpenAPI](https://www.openapis.org/)
 - As these tools are complex, we will use a simple solution: a text file
-  [#Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09-define-an-application-protocol)
+  [#Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
 
 ![bg right:40%](https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720)
 

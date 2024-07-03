@@ -1,0 +1,40 @@
+@startuml
+
+title "Validation based on the Last-Modified header"
+
+participant Client
+participant Server
+
+== Data modified ==
+
+note over of Server
+Data has been updated
+at 23:55:00 on the server
+either from another client
+or by itself (e.g. cron job)
+end note
+
+Server -> Server
+
+|||
+
+note over Client, Server
+GET /index.html HTTP/1.1
+Host: example.com
+Accept: text/html
+If-Modified-Since: Tue, 20 Feb 2022 22:00:00 GMT
+end note
+Client -> Server: New request (at 23 Feb 2022, 00:15:00)
+
+|||
+
+note over Client, Server
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1039
+Date: Tue, 23 Feb 2022 00:15:22 GMT
+Last-Modified: Tue, 22 Feb 2022 23:55:00 GMT
+end note
+Server -> Client: The information has changed
+
+@enduml
