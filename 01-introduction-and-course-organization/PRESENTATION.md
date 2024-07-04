@@ -359,6 +359,17 @@ recommended.
 
 ![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
 
+---
+
+Whatever operating system you are using, **you should read the
+[Considerations for a development environment](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
+guide**.
+
+This guide will help you to set up your development environment in a way that
+will make you more productive and efficient.
+
+![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
+
 ## _"I have an ARM computer, is this an issue?"_
 
 If you have an ARM computer (Apple Silicon M1/M2/M3 for example), some parts of

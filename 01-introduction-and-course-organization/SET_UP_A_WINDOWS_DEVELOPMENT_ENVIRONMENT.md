@@ -21,10 +21,13 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Configure Windows Terminal](#configure-windows-terminal)
 - [Update Ubuntu](#update-ubuntu)
 - [Exclude WSL from Windows Defender](#exclude-wsl-from-windows-defender)
+- [Check the Considerations for a development environment guide](#check-the-considerations-for-a-development-environment-guide)
 - [Validate the installation](#validate-the-installation)
 - [Install and configure your IDE](#install-and-configure-your-ide)
   - [Install and configure IntelliJ IDEA to access WSL](#install-and-configure-intellij-idea-to-access-wsl)
 - [Tips and tricks](#tips-and-tricks)
+  - [Do not manipulate your files from the File Explorer on Windows](#do-not-manipulate-your-files-from-the-file-explorer-on-windows)
+  - [Free up disk space](#free-up-disk-space)
 - [Troubleshooting](#troubleshooting)
   - [Check your Windows build number](#check-your-windows-build-number)
   - [Check for Windows updates](#check-for-windows-updates)
@@ -229,10 +232,51 @@ exit
 WSL is now installed and configured on your Windows machine. You can use it to
 run Linux commands and utilities on Windows.
 
+Here is a summary of the most useful commands to know when you use on Linux:
+
+```sh
+# List files and directories
+ls
+
+# Change directory
+cd <directory>
+
+# Print the working directory
+pwd
+
+# Create a directory
+mkdir <directory>
+
+# Remove a file
+rm <file>
+
+# Remove a directory
+rm -r <directory>
+
+# Copy a file
+cp <source> <destination>
+
+# Copy a directory
+cp -r <source> <destination>
+
+# Move a file
+mv <source> <destination>
+
+# Print the content of a file
+cat <file>
+
+# Print the content of a file with pagination
+less <file>
+```
+
 When you access the Ubuntu terminal, you will be in the home directory of your
-Ubuntu user. You can access your Windows files in the `/mnt` directory. For
-example, you can access your Windows `C:\Users` drive in the `/mnt/c/Users`
-directory.
+Ubuntu user. Your Ubuntu home directory is located in the `/home` directory. The
+`~` symbol represents the home directory of your Ubuntu user.
+
+You can access your Windows files in the `/mnt` directory. For example, you can
+access your Windows `C:\Users` drive in the `/mnt/c/Users` directory, however,
+we do not recommend to manipulate your files from the File Explorer on Windows.
+Check the [Tips and tricks](#tips-and-tricks) section for more information.
 
 Windows has added an entry to the File Explorer sidebar for the Ubuntu
 distribution. You can access your Ubuntu files in the
@@ -240,9 +284,10 @@ distribution. You can access your Ubuntu files in the
 
 > [!CAUTION]
 >
-> We highly recommend to **never manipulate your files from the File Explorer**.
-> Use the Ubuntu terminal instead to avoid permission issues and odd file
-> behaviors.
+> We highly recommend to **never manipulate your files from the File Explorer on
+> Windows**. Use the Ubuntu terminal instead to avoid permission issues and odd
+> file behaviors. See the [Tips and tricks](#tips-and-tricks) section for more
+> information.
 
 ![Access Ubuntu files in File Explorer](./images/wsl-file-browser-ubuntu.png)
 
@@ -329,6 +374,7 @@ running the commands:
 > the package manager.
 >
 > If you are interested to have a package manager for Windows, you can check
+> [WinGet](https://learn.microsoft.com/windows/package-manager/),
 > [Chocolatey](https://chocolatey.org/) or [Scoop](https://scoop.sh/).
 >
 > These package managers are not required for this course but can be useful if
@@ -372,6 +418,13 @@ Add-MpPreference -ExclusionPath '\\wsl$\Ubuntu'
 
 You should do this for each distribution you have installed.
 
+## Check the Considerations for a development environment guide
+
+Before continuing with the installation and configuration of your Integrated
+Development Environment (IDE) and other tools, you should check the
+[Considerations for a development environment](./CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
+guide.
+
 ## Validate the installation
 
 You can use the following checklist to validate the installation:
@@ -384,6 +437,13 @@ You can use the following checklist to validate the installation:
 - [ ] Ubuntu is up to date.
 - [ ] Windows Terminal is installed and configured to open Ubuntu by default.
 - [ ] WSL is excluded from Windows Defender for better performance.
+- [ ] You can run Linux commands in the Ubuntu terminal.
+- [ ] You have checked the [Tips and tricks](#tips-and-tricks) section.
+- [ ] You have checked the
+      [Considerations for a development environment](./CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
+      guide.
+- [ ] You have now a sense of how to manage your personal files in WSL and how
+      they differ from the ones in Windows.
 
 From now on, you can use WSL as your primary development environment for the
 rest of the course. We will expect you to use WSL in all the assignments and
@@ -483,8 +543,10 @@ in the course material.
 
 > [!CAUTION]
 >
-> Always create your projects in your WSL home directory to avoid file
-> permission issues!
+> Always create your projects in your WSL home directory
+> (`\\wsl$\Ubuntu\home\USERNAME`) to avoid permission issues and odd file
+> behaviors. See the [Tips and tricks](#tips-and-tricks) section for more
+> information.
 
 ![Create a new project in IntelliJ IDEA](./images/intellij-idea-new-project.png)
 
@@ -509,6 +571,21 @@ default by following these steps:
    ![Configure IntelliJ IDEA terminal to use WSL](./images/intellij-idea-terminal-settings.png)
 
 ## Tips and tricks
+
+### Do not manipulate your files from the File Explorer on Windows
+
+When you access the Ubuntu terminal, you will be in the home directory of your
+Ubuntu user. You can access your Windows files in the `/mnt` directory.
+
+However, we highly recommend to **never manipulate your files from the File
+Explorer on Windows**. Use the Ubuntu terminal instead to avoid permission
+issues and odd file behaviors.
+
+Check the
+[Considerations for a development environment](./CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
+guide for more details.
+
+### Free up disk space
 
 By default, WSL disk space will grow as you use it but not shrink when space is
 freed. You can automatically shrink the image when files are removed by running
