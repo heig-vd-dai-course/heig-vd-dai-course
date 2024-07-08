@@ -2,7 +2,7 @@
 
 ## Do not store your projets' sources on a cloud provider
 
-We highly recommend to **never store projects' sources your files on
+We highly recommend to **never store your projects' sources your files on
 OneDrive/Google Drive/Dropbox/etc.**. When you start to develop professionally,
 your IDE and tools can generate a large amount of temporary files (cache files,
 logs, compiled files, etc.). These files are often small but numerous and can be
