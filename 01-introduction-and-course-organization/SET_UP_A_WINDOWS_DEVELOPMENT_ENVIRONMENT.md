@@ -109,8 +109,8 @@ Restart your computer once the installation is complete.
 
 WSL can still be in version 1 and must be updated to version 2.
 
-To do so, open PowerShell as an administrator as shown in the previous section
-and run the following command in the terminal:
+To do so, open PowerShell as administrator as shown in the previous section and
+run the following command in the terminal:
 
 ```powershell
 # Check for WSL updates
@@ -343,9 +343,9 @@ unless specified otherwise.
 You can always open a PowerShell terminal by clicking on the down arrow in the
 title bar and selecting "Windows PowerShell".
 
-You can run a PowerShell terminal as an administrator by clicking on the down
-arrow in the title bar and selecting "Windows PowerShell" while holding the
-`Ctrl` key.
+You can run a PowerShell terminal as administrator by clicking on the down arrow
+in the title bar and selecting "Windows PowerShell" while holding the `Ctrl`
+key.
 
 ![Open PowerShell](./images/windows-terminal-open-powershell.png)
 
@@ -406,7 +406,7 @@ This should not expose your system to any security risks as the WSL distribution
 is isolated from the rest of the system.
 
 To exclude the WSL distribution from Windows Defender, you can run the following
-command in a PowerShell terminal as an administrator as seen in the previous
+command in a PowerShell terminal as administrator as seen in the previous
 section:
 
 ```powershell
@@ -513,7 +513,7 @@ access the WSL distribution through the Windows Firewall.
 > another JetBrains IDE, you will need to adapt the instructions accordingly.
 
 Allow IntelliJ IDEA to access the WSL distribution through the Windows Firewall
-by running the following command in a PowerShell terminal as an administrator as
+by running the following command in a PowerShell terminal as administrator as
 seen in the previous section:
 
 ```powershell
@@ -637,7 +637,7 @@ You can check if your Windows installation is up to date by going to
 ### Check your Windows features
 
 You can check if WSL is available on your Windows installation by running the
-following command in a PowerShell terminal as an administrator as seen in the
+following command in a PowerShell terminal as administrator as seen in the
 previous section:
 
 ```powershell
@@ -658,7 +658,7 @@ WSL requires virtualization to be enabled. You can check if virtualization by
 going in your in your BIOS/UEFI settings.
 
 You can restart in the BIOS/UEFI settings by running the following command in a
-PowerShell terminal as an administrator as seen in the previous section:
+PowerShell terminal as administrator as seen in the previous section:
 
 ```powershell
 # Restart in the BIOS/UEFI settings
