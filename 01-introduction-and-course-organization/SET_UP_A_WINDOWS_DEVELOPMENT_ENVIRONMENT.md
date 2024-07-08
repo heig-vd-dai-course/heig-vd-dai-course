@@ -429,20 +429,20 @@ guide.
 
 You can use the following checklist to validate the installation:
 
-- [ ] Windows is up to date.
-- [ ] WSL is installed on your Windows machine.
-- [ ] WSL is up to date.
-- [ ] WSL is set to version 2.
-- [ ] Ubuntu is installed in WSL.
-- [ ] Ubuntu is up to date.
-- [ ] Windows Terminal is installed and configured to open Ubuntu by default.
-- [ ] WSL is excluded from Windows Defender for better performance.
-- [ ] You can run Linux commands in the Ubuntu terminal.
-- [ ] You have checked the [Tips and tricks](#tips-and-tricks) section.
-- [ ] You have checked the
+- [x] Windows is up to date.
+- [x] WSL is installed on your Windows machine.
+- [x] WSL is up to date.
+- [x] WSL is set to version 2.
+- [x] Ubuntu is installed in WSL.
+- [x] Ubuntu is up to date.
+- [x] Windows Terminal is installed and configured to open Ubuntu by default.
+- [x] WSL is excluded from Windows Defender for better performance.
+- [x] You can run Linux commands in the Ubuntu terminal.
+- [x] You have checked the [Tips and tricks](#tips-and-tricks) section.
+- [x] You have checked the
       [Considerations for a development environment](./CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
       guide.
-- [ ] You have now a sense of how to manage your personal files in WSL and how
+- [x] You have now a sense of how to manage your personal files in WSL and how
       they differ from the ones in Windows.
 
 From now on, you can use WSL as your primary development environment for the
@@ -631,22 +631,18 @@ version.
 
 ### Check for Windows updates
 
-You can check if your Windows installation is up to date by running the
-following command in a PowerShell terminal:
-
-```powershell
-# Check if your Windows installation is up to date
-sconfig
-```
+You can check if your Windows installation is up to date by going to
+**Settings > Update & Security > Windows Update**.
 
 ### Check your Windows features
 
 You can check if WSL is available on your Windows installation by running the
-following command in a PowerShell terminal:
+following command in a PowerShell terminal as an administrator as seen in the
+previous section:
 
 ```powershell
 # Check if WSL is available
-dism.exe /online /get-features | Select-String "Microsoft-Windows-Subsystem-Linux"
+dism.exe /online /get-features | Select-String "Microsoft-Windows-Subsystem-Linux" -Context 1
 ```
 
 If WSL is not available, you will need to enable it using the following command:
@@ -658,27 +654,20 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 ### Enable virtualization
 
-WSL requires virtualization to be enabled. You can check if virtualization is
-enabled by running the following command in the terminal:
-
-```powershell
-# Check if virtualization is enabled
-systeminfo | Select-String "Virtualization Enabled in Firmware"
-```
-
-If virtualization is not enabled, you will need to enable it in your BIOS/UEFI
-settings.
+WSL requires virtualization to be enabled. You can check if virtualization by
+going in your in your BIOS/UEFI settings.
 
 You can restart in the BIOS/UEFI settings by running the following command in a
-PowerShell terminal:
+PowerShell terminal as an administrator as seen in the previous section:
 
 ```powershell
 # Restart in the BIOS/UEFI settings
 shutdown /r /fw
 ```
 
-Then, you have to enable virtualization in your BIOS/UEFI settings. The exact
-location of the setting will depend on your motherboard manufacturer.
+Then, you can check if virtualization is enabled in your BIOS/UEFI settings.
+
+The exact location of the setting will depend on your motherboard manufacturer.
 
 You have to look for a setting called "Virtualization", "VT-x", "AMD-V", or
 something similar and enable it.

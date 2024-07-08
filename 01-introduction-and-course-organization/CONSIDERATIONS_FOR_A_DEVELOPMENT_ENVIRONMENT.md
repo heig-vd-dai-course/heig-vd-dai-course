@@ -15,7 +15,7 @@ your IDE and tools can generate a large amount of temporary files (cache files,
 logs, compiled files, etc.). These files are often small but numerous and can be
 generated every time you compile your project. As these cloud services will try
 to keep up to synchronize these files, it can quickly use all your computer's
-resources and can slow down your computer/develoment environment. As Git is
+resources and can slow down your computer/development environment. As Git is
 meant to store your sources (it is meant for this),
 **[use Git to synchronize your sources between your computer and the cloud](#use-git-to-synchronize-your-sources-between-your-computer-and-the-cloud)**.
 
