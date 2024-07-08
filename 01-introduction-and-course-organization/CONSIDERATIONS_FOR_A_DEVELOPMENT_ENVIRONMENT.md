@@ -1,5 +1,12 @@
 # Considerations for a development environment
 
+Here are some considerations to take into account when setting up your
+development environment.
+
+This list is not exhaustive and you may have other preferences. Feel free to
+adapt it to your needs. However, these are some good practices that can help you
+to be more productive and encouter less issues.
+
 ## Do not store your projets' sources on a cloud provider
 
 We highly recommend to **never store your projects' sources your files on
