@@ -1,6 +1,6 @@
 # SMTP and Telnet
 
-- Time in class: 1 period
+- Time in class: 2 periods
 - Presentation
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-smtp-and-ncat/)
   ·

@@ -3,7 +3,7 @@
 
 # Set up a Windows development environment
 
-L. Delafontaine and H. Louis, with the help of Copilot.
+L. Delafontaine and H. Louis, with the help of GitHub Copilot.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 

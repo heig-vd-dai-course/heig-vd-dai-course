@@ -1,6 +1,6 @@
 # Git, GitHub and Markdown
 
-- Time in class: 1 period
+- Time in class: 2 periods
 - Presentation
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/)
   ·

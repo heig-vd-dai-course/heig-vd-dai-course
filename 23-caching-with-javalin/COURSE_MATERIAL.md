@@ -14,7 +14,7 @@
 
 [Markdown][markdown] · [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of Copilot.
+L. Delafontaine and H. Louis, with the help of GitHub Copilot.
 
 Based on the original course by O. Liechti and J. Ehrensberger.
 
