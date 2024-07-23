@@ -131,13 +131,28 @@ We try our best to keep the content as up-to-date as possible. If you find
 something that is not up-to-date, do not hesitate to open a discussion, an
 issue, a pull request to fix it.
 
-If _anything_ is unclear or does not work, do not hesitate to ask questions in
-the GitHub Discussions as described in the
-[Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)! Since
-this is the first chapter, do not hesitate to do so. You are here to learn and
-we are here to help you!
+What you see and do in a current chapter might be used in a future chapter.
 
-Let's get started!
+This is why it is important to follow the steps and to understand what you are
+doing. You must keep the code you write, the documentation you create and the
+builds you make.
+
+What you see is the result of many hours of work to provide you with the best
+content possible. We hope you will enjoy it and learn a lot!
+
+However, if _anything_ is unclear, does not work or needs an improvement, do not
+hesitate to ask questions or give feedback in the GitHub Discussions as
+described in the
+[Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section. Since this is the first chapter, do not hesitate to do so.
+
+The teaching staff considers that there is no stupid question. You are here to
+learn and we are here to help you! Let's work as a team so that you can succeed!
+
+Final note: we try our best to provide you working instructions and right
+information. However, if something is wrong, we might need to update the content
+to fix it. We will inform you but you might need to come back and check the
+updated content. We apologize in advance if this situation happens.
 
 ## Objectives
 
