@@ -1780,7 +1780,7 @@ chapter?
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
 
-> ![INFO]
+> [!NOTE]
 >
 > Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
 > d'améliorations en français ou en anglais.
