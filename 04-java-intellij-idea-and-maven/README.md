@@ -1,6 +1,6 @@
 # Java, IntelliJ IDEA and Maven
 
-- Time in class: 2 period
+- Time in class: 2 periods
 - Presentation
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/)
   ·

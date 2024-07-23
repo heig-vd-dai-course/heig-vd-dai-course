@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: 'HEIG-VD DAI Course - Conclusion to part 4: Network programming with HTTP'
-description: 'Conclusion to part 4: Network programming with HTTP for the DAI course at HEIG-VD, Switzerland'
+title: 'HEIG-VD DAI Course - Conclusion to part 3: Network programming with HTTP'
+description: 'Conclusion to part 3: Network programming with HTTP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/26-conclusion-to-part-3/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
@@ -55,7 +55,7 @@ headingDivider: 4
 [illustration]:
   https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
 
-# Conclusion to part 4: Network programming with HTTP
+# Conclusion to part 3: Network programming with HTTP
 
 <!--
 _class: lead
