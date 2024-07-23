@@ -28,12 +28,10 @@ The entire course planning for the semester is available at
 ### Introduction
 
 - [1. Introduction and course organization](./01-introduction-and-course-organization/README.md)
-  ![](https://img.shields.io/badge/status-ready-green)
 
 ### Part 1 - Input/output processing (18 periods)
 
 - [2. Introduction to part 1](./02-introduction-to-part-1/README.md)
-  ![](https://img.shields.io/badge/status-ready-green)
 - [3. Git, GitHub and Markdown (2 periods)](./03-git-github-and-markdown/README.md)
   (WIP)
 - [4. Java, IntelliJ IDEA and Maven (2 periods)](./04-java-intellij-idea-and-maven/README.md)
