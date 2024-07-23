@@ -1647,6 +1647,19 @@ Once the pull request is approved and merged, you can check the results on the
 organization README. You should see your name in the list of students! You can
 now fetch the changes to your local repository.
 
+#### Change the membership visibility of the organization (optional)
+
+If you want, you can change the visibility of your membership in the GitHub
+organization. You can choose between public and private.
+
+You can do so by going in the settings of the organization and then in the
+**Membership** tab.
+
+This will allow other users to see your membership in the organization. They
+will be able to see your username and the date you joined the organization.
+
+This is totally optional. You can keep your membership private if you want.
+
 #### Fetch the changes
 
 Fetch the changes to your local repository:
