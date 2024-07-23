@@ -22,7 +22,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
-- [Introduction to your first course](#introduction-to-your-first-course)
+- [Introduction to your first chapter](#introduction-to-your-first-chapter)
 - [Objectives](#objectives)
 - [Git](#git)
   - [Architecture](#architecture)
@@ -66,7 +66,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Additional resources](#additional-resources)
 - [Sources](#sources)
 
-## Introduction to your first course
+## Introduction to your first chapter
 
 Welcome to the first chapter of the course!
 
