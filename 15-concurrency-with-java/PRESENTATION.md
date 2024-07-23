@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of AI tools
+author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Concurrency with Java
 description: Concurrency with Java for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-concurrency-with-java/
@@ -68,7 +68,7 @@ _paginate: false
 
 [Web][web] · [PDF][pdf]
 
-<small>L. Delafontaine and H. Louis, with the help of AI tools.</small>
+<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
 

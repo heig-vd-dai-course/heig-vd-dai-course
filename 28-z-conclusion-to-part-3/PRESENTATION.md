@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of AI tools
+author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: 'HEIG-VD DAI Course - Conclusion to part 3: Network programming with UDP'
 description: 'Conclusion to part 3: Network programming with UDP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-conclusion-to-part-3/
@@ -66,7 +66,7 @@ _paginate: false
 
 [Web][web] · [PDF][pdf]
 
-<small>L. Delafontaine and H. Louis, with the help of AI tools.</small>
+<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 

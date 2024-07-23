@@ -6,7 +6,7 @@ marp: true
 theme: gaia
 size: 16:9
 paginate: true
-author: L. Delafontaine and H. Louis, with the help of AI tools
+author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Introduction and course organization
 description: Introduction and course organization for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
@@ -63,7 +63,7 @@ _paginate: false
 
 [Web][web] · [PDF][pdf]
 
-<small>L. Delafontaine and H. Louis, with the help of AI tools.</small>
+<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
@@ -254,14 +254,14 @@ The course material is available in several formats:
 
 - **Markdown format** (recommended). You can read it directly on GitHub or on
   your computer with your favorite text editor.
-- **PDF format**. You can download it from GitHub and read it on your computer
-  or print it. We are aware that the generated PDF is not perfect, sorry about
-  that.
-- **Web format**. You can read it on the course website (only the presentations
-  are available on the web).
+- **PDF format**. We are aware that the generated PDF is not perfect, sorry
+  about that.
 
 These formats are generated from the same source files. There are no differences
 between them. Use the one you prefer!
+
+Chapters marked as _"work in progress (WIP)"_ in the main README file are still
+in review and might change.
 
 ## Our wishes for this course
 
