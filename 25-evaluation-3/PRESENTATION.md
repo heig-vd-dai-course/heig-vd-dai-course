@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of AI tools
-title: 'HEIG-VD DAI Course - Evaluation 4'
-description: 'Evaluation 4 for the DAI course at HEIG-VD, Switzerland'
+title: 'HEIG-VD DAI Course - Evaluation 3'
+description: 'Evaluation 3 for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/25-evaluation-3/
 footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
 style: |
@@ -51,7 +51,7 @@ headingDivider: 4
 [illustration]:
   https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720
 
-# Evaluation 4
+# Evaluation 3
 
 <!--
 _class: lead

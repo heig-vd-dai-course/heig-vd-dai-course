@@ -28,44 +28,71 @@ The entire course planning for the semester is available at
 ### Introduction
 
 - [1. Introduction and course organization](./01-introduction-and-course-organization/README.md)
+  ![](https://img.shields.io/badge/status-ready-green)
 
 ### Part 1 - Input/output processing (18 periods)
 
 - [2. Introduction to part 1](./02-introduction-to-part-1/README.md)
+  ![](https://img.shields.io/badge/status-ready-green)
 - [3. Git, GitHub and Markdown (2 periods)](./03-git-github-and-markdown/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [4. Java, IntelliJ IDEA and Maven (2 periods)](./04-java-intellij-idea-and-maven/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [5. Java IOs (2 periods)](./05-java-ios/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [6. Docker and Docker Compose (2 periods)](./06-docker-and-docker-compose/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [7. Practical work 1 (8 periods)](./07-practical-work-1/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [8. Evaluation 1 (2 periods)](./08-evaluation-1/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [9. Conclusions to part 1](./09-conclusion-to-part-1/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 
 ### Part 2 - Network programming with TCP and UDP (24 periods)
 
 - [10. Introduction to part 2](./10-introduction-to-part-2/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [11. Define an application protocol (2 periods)](./11-define-an-application-protocol/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [12. SMTP and ncat (2 periods)](./12-smtp-and-ncat/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [13. Java TCP programming (2 periods)](./13-java-tcp-programming/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [14. Java UDP programming (2 periods)](./14-java-udp-programming/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [15. Concurrency with Java (2 periods)](./15-concurrency-with-java/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [16. Practical work 2 (12 periods)](./16-practical-work-2/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [17. Evaluation 2 (2 periods)](./17-evaluation-2/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [18. Conclusion to part 2](./18-conclusion-to-part-2/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 
 ### Part 3 - Network programming with HTTP (20 periods)
 
 - [19. Introduction to part 3](./19-introduction-to-part-3/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [20. SSH and SCP (2 periods)](./20-ssh-and-scp/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [21. HTTP and curl (2 periods)](./21-ssh-and-scp/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [22. Web infrastructures (2 periods)](./22-web-infrastructures/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [23. Caching with Javalin (2 periods)](./23-caching-with-javalin/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [24. Practical work 3 (10 periods)](./24-practical-work-3/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [25. Evaluation 3 (2 periods)](./25-evaluation-3/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 - [26. Conclusion to part 3](./26-conclusion-to-part-3/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 
 ### Conclusion (2 periods)
 
 - [27. Semester review and exam preparation (2 periods)](./27-semester-review-and-exam-preparation/README.md)
+  ![](https://img.shields.io/badge/status-wip-yellow)
 
 ## GitHub Discussions
 
