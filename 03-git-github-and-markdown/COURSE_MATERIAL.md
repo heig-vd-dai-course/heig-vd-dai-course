@@ -154,6 +154,8 @@ information. However, if something is wrong, we might need to update the content
 to fix it. We will inform you but you might need to come back and check the
 updated content. We apologize in advance if this situation happens.
 
+Let's get started!
+
 ## Objectives
 
 This chapter will help you to understand how Git and GitHub work, how you can
