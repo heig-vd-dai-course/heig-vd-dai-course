@@ -1114,7 +1114,7 @@ commit 2ea9f1c4d5ef42ee3cf1b0d3849a0445ad8d2683 (HEAD -> main)
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Jul 23 18:33:12 2024 +0200
 
-    Demonstration of changes made to the new repository
+    Update profile README
 
 commit 20f87413aef2fe9ef296767e6db839b722b83532 (origin/main, origin/HEAD)
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
@@ -1182,7 +1182,7 @@ commit 2ea9f1c4d5ef42ee3cf1b0d3849a0445ad8d2683 (HEAD -> main, origin/main, orig
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Jul 23 18:33:12 2024 +0200
 
-    Demonstration of changes made to the new repository
+    Update profile README
 
 commit 20f87413aef2fe9ef296767e6db839b722b83532
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
@@ -1243,17 +1243,17 @@ repository describing what you want to do:
 
 > [!TIP]
 >
-> While totally optional, it is a good to create an issue before starting to
-> work on any new feature. It allows to discuss the feature with the maintainers
-> of the project. Maybe the maintainers have some ideas on how to implement the
-> feature or maybe the feature is already planned and you can help them! This
-> avoids to waste time on a feature that will not be implemented or two people
-> working on the same feature at the same time.
+> While totally optional, it is good practice to create an issue before starting
+> to work on any new feature. It allows to discuss the feature with the
+> maintainers of the project. Maybe the maintainers have some ideas on how to
+> implement the feature or maybe the feature is already planned and you can help
+> them! This avoids to waste time on a feature that will not be implemented or
+> two people working on the same feature at the same time.
 
 #### Fork the repository
 
-This repository is protected and you will not be able to push changes directly
-to it. You will need to fork the repository and open a pull request.
+The main repository is protected and you will not be able to push changes
+directly to it. You will need to fork the repository and open a pull request.
 
 Fork the repository using the **Fork** button in the top right corner of the
 repository page as shown in the following screenshot:
