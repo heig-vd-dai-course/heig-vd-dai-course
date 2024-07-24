@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Java, IntelliJ IDEA and Maven
 description: Java, IntelliJ IDEA and Maven for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
-[illustration]:
-  https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -77,6 +76,7 @@ _paginate: false
 ## Objectives
 
 - Learn why Java is a popular programming language
+- Manage multiple Java versions with SDKMAN!
 - Develop Java apps with IntelliJ IDEA and Maven
 - Manage dependencies with Maven
 - Develop essential skills for professional Java development
@@ -96,6 +96,8 @@ You can find other resources and alternatives as well.
 - General-purpose, object-oriented language
 - Write once, run anywhere (WORA)
 - Created by James Gosling, 1995 at Sun Microsystems
+- The documentation seems scary but you will get used to it and it is very
+  useful
 
 ![bg right h:60%](https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg)
 
@@ -105,20 +107,21 @@ You can find other resources and alternatives as well.
 - Executes in Java virtual machine (JVM)
 - Where a JVM exists, Java can run (most of the time)
 
-![bg right contain](./images/java-java-virtual-machine.png)
+![bg right contain](./images/java-api-specification.png)
 
 ### JVM versions
 
 - Multiple implementations exist
 - Can target different platforms and/or specific features
 - JDK for development, JRE for running
+- Eclipse Temurin is recommended.
 
-![bg right contain](./images/java-jvm-versions.png)
+![bg right contain](./images/which-version-of-jdk-should-i-use.png)
 
 ### Java versions and version managers
 
-- Java 17 is the latest LTS
-- You can use [SDKMAN!](https://sdkman.io/) or [asdf](https://asdf-vm.com/)
+- Java 21 is the latest LTS
+- You can use [SDKMAN!](https://sdkman.io/) to manage multipe versions of Java
 - Match versions for project consistency
 
 ![bg right w:80%](https://sdkman.io/assets/img/sdk-man-small-pattern.svg)
@@ -180,6 +183,7 @@ You can find other resources and alternatives as well.
 
 - Manage multiple JetBrains IDEs
 - Install and update in one place
+- Optional but useful
 
 ![bg right w:60%](https://resources.jetbrains.com/storage/products/company/brand/logos/Toolbox_icon.svg)
 
@@ -189,7 +193,7 @@ You can find other resources and alternatives as well.
 - Ignore local config in Git
 - Commit shared project config
 
-![bg right contain](./images/intellij-configuration-files-and-git.png)
+![bg right contain](./images/gitignore-example.png)
 
 ### Summary
 
@@ -226,41 +230,47 @@ You can find other resources and alternatives as well.
   - `src/main/java`
   - `src/main/resources`
   - `src/test/java`
-- Simplifies build process
+- Simplifies build process with conventions
 
-![bg right contain](./images/maven-maven-project-structure.png)
+![bg right contain](./images/maven-project-structure.png)
 
 ### `pom.xml` file
 
 - Configuration and build settings
 - Shared among developers
+- Defines dependencies and plugins
+  - Plugins extend Maven functionality
+  - Dependencies are external libraries
 
-![bg right contain](./images/maven-pomxml-file.png)
+![bg right contain](./images/maven-pom-file.png)
 
 ### Maven lifecycle
 
 - Maven defines build process
 - Composed of phases and goals
 - Phases load plugin goals
+- Goals execute tasks on your project (e.g., compile, test, package)
 
-![bg right contain](./images/maven-maven-lifecycle.png)
+![bg right contain](./images/maven-lifecycle.png)
 
 ### Maven Repository
 
 - Public repository of Java libraries
 - Maven can download dependencies automatically
 - You can publish your own libraries
+- Many libraries available such as picocli, a library for building CLI
+  applications
 
-![bg right contain](./images/maven-maven-repository.png)
+![bg right contain](./images/maven-repository.png)
 
-### Maven "installation" and Maven wrapper
+### Maven wrapper
 
-- Single archive file
-- Add it to your `PATH` environment variable
-- Run manually from the archive directory
-- Use Maven wrapper script
+- Allows to use Maven without installing it
+- Wrapper script downloads Maven
+- Ensures consistent Maven version
+- Use `mvnw` or `mvnw.cmd` instead of `mvn`
 
-![bg right contain](./images/maven-maven-installation-and-maven-wrapper.png)
+![bg right contain](./images/maven-wrapper.png)
 
 ### Summary
 
@@ -277,11 +287,12 @@ You can find other resources and alternatives as well.
 
 ### What will you do?
 
-- Install and configure Java, IntelliJ IDEA and Maven
-- Create and run a new Maven project with IntelliJ IDEA and a Maven dependency
+- Install and configure SDKMAN!, Java, Maven and IntelliJ IDEA
+- Create and run a small CLI application with picocli, an external Maven
+  dependency
 - Publish your project on GitHub
 
-![bg right contain](./images/what-will-you-do.png)
+![bg right w:90%](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -290,7 +301,7 @@ You can find other resources and alternatives as well.
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 

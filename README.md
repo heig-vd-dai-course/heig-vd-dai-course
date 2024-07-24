@@ -35,7 +35,6 @@ The entire course planning for the semester is available at
 - [3. Git, GitHub and Markdown (2 periods)](./03-git-github-and-markdown/README.md)
   (WIP)
 - [4. Java, IntelliJ IDEA and Maven (2 periods)](./04-java-intellij-idea-and-maven/README.md)
-  (WIP)
 - [5. Java IOs (2 periods)](./05-java-ios/README.md) (WIP)
 - [6. Docker and Docker Compose (2 periods)](./06-docker-and-docker-compose/README.md)
   (WIP)
