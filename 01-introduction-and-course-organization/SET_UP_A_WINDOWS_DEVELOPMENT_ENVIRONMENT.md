@@ -480,18 +480,6 @@ guide.
 Install Java as mentioned in the course material. Install it in your Ubuntu
 distribution.
 
-> [!TIP]
->
-> You might need to install the missing packages for
-> [SDKMAN!](https://sdkman.io/) to work correctly.
->
-> Use `apt` to install them by running the following command in the terminal:
->
-> ```bash
-> # Install the missing packages for SDKMAN!
-> sudo apt install <name of the missing package>
-> ```
-
 #### Install Maven in WSL
 
 Install Maven as mentioned in the course material. Install it in your Ubuntu
