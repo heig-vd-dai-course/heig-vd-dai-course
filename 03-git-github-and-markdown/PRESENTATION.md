@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Git, GitHub and Markdown
 description: Git, GitHub and Markdown for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
-[illustration]:
-  https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -290,7 +289,7 @@ You can find other resources and alternatives as well.
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
