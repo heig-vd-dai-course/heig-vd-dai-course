@@ -161,7 +161,7 @@ A JAR file can be executed using the `java` command:
 java -Xmx1024M -Xms1024M -jar minecraft_server.1.21.jar nogui
 ```
 
-In this exemple, the `-Xmx1024M` and `-Xms1024M` options define the **maximum**
+In this example, the `-Xmx1024M` and `-Xms1024M` options define the **maximum**
 and **initial** memory allocation pool for a Java virtual machine (JVM),
 respectively.
 
@@ -1534,7 +1534,7 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 #### Add Spotless to format your code
 
-> Spotless is a general-purpose formatting plugin. [It allows to format (= >
+> Spotless is a general-purpose formatting plugin. [It allows to format (= > >
 > "beautify") your code automatically]
 >
 > <https://github.com/diffplug/spotless/tree/main/plugin-maven>
