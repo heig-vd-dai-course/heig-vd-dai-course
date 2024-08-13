@@ -374,7 +374,7 @@ library to your project:
 </dependency>
 ```
 
-### Maven installation and its wrapper
+### Maven wrapper
 
 Maven offers what is called the **Maven wrapper**. This wrapper is a **script**
 (a shell script on Linux and macOS and a Batch script on Windows) that will
@@ -498,7 +498,7 @@ Start by listing the available versions of Java:
 
 ```sh
 # List all available versions of Java
-sdk search java
+sdk list java
 ```
 
 The output should be similar to this:
@@ -1534,8 +1534,8 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 #### Add Spotless to format your code
 
-> Spotless is a general-purpose formatting plugin. [It allows to format (= > >
-> "beautify") your code automatically]
+> Spotless is a general-purpose formatting plugin. [It allows to format (= > > >
+> > "beautify") your code automatically]
 >
 > <https://github.com/diffplug/spotless/tree/main/plugin-maven>
 

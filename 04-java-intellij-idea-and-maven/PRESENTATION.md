@@ -172,7 +172,7 @@ You can find other resources and alternatives as well.
 
 ![bg right w:60%](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg)
 
-### Community and Ultimate Edition
+### Community Edition and Ultimate Edition
 
 - Community (free) and Ultimate (paid)
 - Free student license available
