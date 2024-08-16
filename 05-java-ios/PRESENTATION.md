@@ -77,29 +77,262 @@ _paginate: false
 
 ## Objectives
 
-- Understanding different IO types
-  - Binary vs. text
-  - Character encoding
-- Using IOs in Java
+- Understanding IOs in Java
+- Understanding the Java IO API
+- Understanding the different IO types
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-## Processing binary data vs. text data
+## Prepare and setup your environment
 
 <!-- _class: lead -->
 
 More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#processing-binary-data-vs-text-data).
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#prepare-and-setup-your-environment).
 You can find other resources and alternatives as well.
 
-### Processing binary data vs. text data
+### Check and run the code examples
+
+- Check the code examples
+- Run the code examples
+- Helps to understand the concepts
+- Modify/play with the code examples
+
+![bg right:40%](TODO)
+
+## Types of data
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#types-of-data).
+You can find other resources and alternatives as well.
+
+### Types of data
 
 - Two types of data: binary and text
 - Both are `0`s and `1`s - the difference is in interpretation
-- Binary data: pure copying
+- Binary data: raw data
 - Text data: interpretation
 
 ![bg right contain](./images/processing-binary-data-vs-text-data.png)
+
+## Sources, streams and sinks of data
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#sources-streams-and-sinks-of-data).
+You can find other resources and alternatives as well.
+
+### Sources, streams and sinks of data
+
+- Abstraction of data flow
+- Source: where data comes from (input)
+- Sink: where data goes to (output)
+- Stream: data flow between source and sink
+
+![bg right:40%](https://images.unsplash.com/photo-1543674892-7d64d45df18b?fit=crop&h=720)
+
+## The Java IO API
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#the-java-io-api).
+You can find other resources and alternatives as well.
+
+### The Java IO API
+
+- Part of `java.base` module
+  - `java.io`
+  - `java.nio`
+- Different classes for different IO types:
+  - Binary data
+  - Text data
+
+![bg right contain](./images/the-java-io-api.png)
+
+## Processing binary data with the Java IO API
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#processing-binary-data-with-the-java-io-api).
+You can find other resources and alternatives as well.
+
+### Processing binary data with the Java IO API
+
+- Most basic type of data processing:
+  1. Open a file
+  2. Read/write/modify the bytes as they are
+  3. Close the file
+
+![bg right:40%](TODO)
+
+### Reading binary data
+
+- Most simple way is to read byte by byte (not efficient)
+- `InputStream` and `FileInputStream` classes are used to read binary data
+- Let's have a look at the code example `BinaryReadFileExample.java`
+
+![bg right:40%](TODO)
+
+---
+
+```java
+class BinaryReadFileExample {
+
+  public static void main(String[] args) throws IOException {
+    InputStream fis = new FileInputStream("binary-file.bin");
+
+    // -1 indicates the end of the file
+    int b;
+    while ((b = fis.read()) != -1) {
+      System.out.print(b);
+    }
+
+    fis.close();
+  }
+}
+```
+
+### Writing binary data
+
+- Most simple way is to write byte by byte (not efficient)
+- `OutputStream` and `FileOutputStream` classes are used to write binary data
+- Let's have a look at the code example `BinaryWriteFileExample.java`
+
+![bg right:40%](TODO)
+
+---
+
+```java
+class BinaryWriteFileExample {
+
+  public static void main(String[] args) throws IOException {
+    OutputStream fos = new FileOutputStream("binary-file.bin");
+
+    for (int i = 0; i < 256; i++) {
+      fos.write(i);
+    }
+
+    fos.close();
+  }
+}
+```
+
+### Reading and writing binary data with a buffer
+
+- Reading and writing byte by byte is not efficient: each `read()` or `write()`
+  call results in a single system call every time
+
+- Buffers can be used to read and write multiple bytes at once as it is more
+  efficient
+
+![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+
+---
+
+Use a buffer to read multiple bytes at once:
+
+1. First time, a system call is made to read a block of data
+2. Subsequent reads are done from the buffer
+3. When the buffer is empty, a new block is read
+
+![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+
+---
+
+The same applies for writing:
+
+1. First time, a buffer is created
+2. Data is written to the buffer
+3. When the buffer is full, a system call is made to write the block
+4. The buffer is then emptied
+5. Bytes can remain in the buffer
+
+![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+
+---
+
+- `BufferedInputStream` and `BufferedOutputStream` classes are used to
+  read/write binary data with a buffer
+- Let's have a look at the code examples `BinaryBufferReadFileExample.java` and
+  `BinaryBufferWriteFileExample.java`
+
+![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+
+---
+
+```diff
+ class BinaryBufferReadFileExample {
+
+   public static void main(String[] args) throws IOException {
+     InputStream fis = new FileInputStream("binary-file.bin");
++    InputStream bis = new BufferedInputStream(fis);
+
+     // -1 indicates the end of the file
+     int b;
+-    while ((b = fis.read()) != -1) {
++    while ((b = bis.read()) != -1) {
+       System.out.print(b);
+     }
+
++    bis.close();
+     fis.close();
+   }
+ }
+```
+
+---
+
+```diff
+ class BinaryBufferWriteFileExample {
+
+   public static void main(String[] args) throws IOException {
+     OutputStream fos = new FileOutputStream("binary-file.bin");
++    BufferedOutputStream bos = new BufferedOutputStream(fos);
+
+     for (int i = 0; i < 256; i++) {
+-      fos.write(i);
++      bos.write(i);
+     }
+
++    // Flush the buffer to write the remaining bytes
++    bos.flush();
++    bos.close();
+     fos.close();
+   }
+ }
+```
+
+### A quick note on little endian vs. big endian
+
+- Little endian: least significant byte first (`0x78 0x56 0x34 0x12`)
+- Big endian: most significant byte first (`0x12 0x34 0x56 0x78`)
+- Java uses big endian by default
+- The class `ByteBuffer` can be used to convert between the two (not covered in
+  this course)
+
+![bg right:40%](TODO)
+
+## Processing text data with the Java IO API
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#processing-text-data-with-the-java-io-api).
+You can find other resources and alternatives as well.
+
+### Processing text data with the Java IO API
+
+- Text data: interpretation of binary data
+- Different character encodings
+- Different end of line characters
+- Different IO classes for text data
+
+![bg right:40%](TODO)
 
 ### Ancestor of character representations: ASCII
 
@@ -120,7 +353,7 @@ You can find other resources and alternatives as well.
 
 - Unicode: solves ASCII limitations
 - Standard to support all languages
-- Different implementations
+- Different implementations:
   - UTF-8
   - UTF-16
   - UTF-32
@@ -131,77 +364,227 @@ You can find other resources and alternatives as well.
 
 - UTF-8: variable-length encoding
 - Most common Unicode implementation
+- ASCII compatible
+- Quite the standard for web and software development
 
 ![bg right contain](./images/processing-binary-data-vs-text-data-utf-8.png)
 
 ### What happens if you ignore the character encoding?
 
-- Need to know character encoding
+- Not stored in the file itself
 - Misinterpretation leads to issues
+- Check, compile and run the `TextCharacterEncodingsExample.java` code example!
 
-![bg right w:80%](https://upload.wikimedia.org/wikipedia/commons/7/7f/Replacement_character.svg)
+![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/commons/7/7f/Replacement_character.svg)
+
+### Reading and writing text data
+
+- `Reader` and `Writer` classes are used to read/write text data
+- **Always specify the encoding!** If not specified, it can be incompatible with
+  other systems
+- Let's have a look at the code example `TextReadAndWriteFileExample.java`
+
+![bg right:40%](TODO)
+
+---
+
+```java
+class TextReadAndWriteFileExample {
+
+  public static void main(String[] args) throws IOException {
+    Reader reader = new FileReader("file.java", StandardCharsets.UTF_8);
+    Writer writer = new FileWriter("file.txt", StandardCharsets.UTF_8);
+
+    // -1 indicates the end of the file
+    int c;
+    while ((c = reader.read()) != -1) {
+      writer.write(c);
+    }
+
+    writer.close();
+    reader.close();
+  }
+}
+```
+
+---
+
+- Just like with binary data, reading and writing text data byte by byte is not
+  efficient
+- `BufferedReader` and `BufferedWriter` classes are used to read/write text data
+  with a buffer
+- Let's have a look at the code example `TextBufferReadAndWriteFileExample.java`
+
+![bg right:40%](TODO)
+
+---
+
+```diff
+ class TextBufferReadAndWriteFileExample {
+
+   public static void main(String[] args) throws IOException {
+     Reader reader = new FileReader("file.java", StandardCharsets.UTF_8);
++    BufferedReader br = new BufferedReader(reader);
++
+     Writer writer = new FileWriter("file.txt", StandardCharsets.UTF_8);
++    BufferedWriter bw = new BufferedWriter(writer);
+
+     // -1 indicates the end of the file
+     int c;
+-    while ((c = reader.read()) != -1) {
+-      writer.write(c);
++    while ((c = br.read()) != -1) {
++      bw.write(c);
+     }
+
++    writer.flush();
+     writer.close();
+     reader.close();
+   }
+```
 
 ### End of line characters
 
-- Different end-of-line characters on different systems
-  - Unix/Linux/macOS: `\n` (LF)
-  - Windows: `\r\n` (CR + LF)
+- Different end of line characters on different systems
+  - Unix/Linux/macOS: `\n`, called _"Line feed"_ (`LF`)
+  - Windows: `\r\n`, called _"Carriage Return + Line feed"_ (`CR`+`LF`)
 
 ![bg right w:90%](https://devblogs.microsoft.com/wp-content/uploads/sites/33/2019/02/Notepad-before.png)
 
-## Sources, streams and sinks of data
+---
 
-<!-- _class: lead -->
+```java
+class TextEndOfLineCharactersExample {
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#sources-streams-and-sinks-of-data).
-You can find other resources and alternatives as well.
+  public static String END_OF_LINE = "\n";
 
-### Sources, streams and sinks of data
+  public static void main(String[] args) throws IOException {
+    InputStream is = new FileInputStream("file.java");
+    Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
+    BufferedReader br = new BufferedReader(reader);
 
-- Abstraction of data flow
-- Source: where data comes from
-- Sink: where data goes
-- Stream: for data flow
+    OutputStream os = new FileOutputStream("file.txt");
+    Writer writer = new OutputStreamWriter(os, StandardCharsets.UTF_8);
+    BufferedWriter bw = new BufferedWriter(writer);
 
-![bg right:40%](https://images.unsplash.com/photo-1543674892-7d64d45df18b?fit=crop&h=720)
+    String line;
+    while ((line = br.readLine()) != null) {
+      // Careful: line does not contain end of line characters
+      bw.write(line + END_OF_LINE);
+    }
 
-## The Java IO API
-
-<!-- _class: lead -->
-
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#the-java-io-api).
-You can find other resources and alternatives as well.
-
-### The Java IO API
-
-- Part of `java.base` module
-  - `java.io`
-  - `java.nio`
-- Different classes for different IO types
-
-![bg right contain](./images/the-java-io-api.png)
-
-### Performance and buffering
-
-- Buffered IO vs. byte-by-byte
-- Buffer improves read/write efficiency using a memory buffer to store and fetch
-  data
-- Manual flushing with `flush()`
-
-![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+    bw.flush();
+    br.close();
+    is.close();
+  }
+}
+```
 
 ### Dealing with errors
 
-- Proper file open/close
-- Handling exceptions with `try-with-resources`
+- All kinds of errors can occur when reading/writing files
+- Files must be properly opened and closed
+- Ensure no files are corrupted
+- Two main ways to handle exceptions:
+  - `try-catch-finally` blocks
+  - `try-with-resources` blocks
 
 ![bg right:40%](https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?fit=crop&h=720)
+
+---
+
+```java
+// Bad example: try-catch without finally
+public static void tryCatchWithoutFinallyExample() {
+  try {
+    Reader reader = new FileReader("missing.file");
+    Writer writer = new FileWriter("missing.file");
+
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  }
+}
+```
+
+---
+
+```java
+// Better example: try-catch with finally
+public static void tryCatchFinallyExample() {
+  Reader reader = null;
+  Writer writer = null;
+
+  try {
+    reader = new FileReader("missing.file");
+    writer = new FileWriter("missing.file");
+
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  } finally {
+    if (writer != null) {
+      try {
+        writer.close();
+      } catch (IOException e) {
+        System.out.println("Exception in close writer: " + e);
+      }
+    }
+
+    if (reader != null) {
+      try {
+        reader.close();
+      } catch (IOException e) {
+        System.out.println("Exception in close reader: " + e);
+      }
+    }
+  }
+}
+```
+
+---
+
+```java
+// Best example: try-with-resources
+public static void tryWithResourcesExample() {
+  try (Reader reader = new FileReader("missing.file");
+      Writer writer = new FileWriter("missing.file")) {
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  }
+}
+```
+
+## When to use which IO?
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#when-to-use-which-io).
+You can find other resources and alternatives as well.
 
 ### When to use which IO?
 
 ![bg w:80%](./images/when-to-use-which-io.png)
+
+## Common pitfalls
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#common-pitfalls).
+You can find other resources and alternatives as well.
+
+### Common pitfalls
+
+- Not using buffers
+- Not closing the streams
+- Not handling exceptions properly
+- Not specifying the character encoding
+- Not specifying the end of line characters
+- Do not use `PrintWriter` - it swallows exceptions
+- Do not use `System.lineSeparator()` - it is platform dependent
 
 ## Practical content
 
@@ -209,7 +592,7 @@ You can find other resources and alternatives as well.
 
 ### What will you do?
 
-- Explore and try-out code examples
+- Explore and try-out the code examples
 - Run benchmarks for different IO types
 - Understand the differences between IO types and their use cases
 
@@ -238,9 +621,14 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-<!-- _class: lead -->
+In the next chapter, you will learn the following topics:
 
-You will start the practical work!
+- Docker and Docker Compose: how to containerize your applications
+  - What is an image?
+  - What is a container?
+  - How to try out new software without installing it?
+
+![bg right:40%](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
 
 ## Sources
 

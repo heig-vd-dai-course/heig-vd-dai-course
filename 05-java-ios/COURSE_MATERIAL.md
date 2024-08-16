@@ -28,6 +28,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
   - [Check and run the code examples](#check-and-run-the-code-examples)
+- [Types of data](#types-of-data)
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
 - [The Java IO API](#the-java-io-api)
 - [Processing binary data with the Java IO API](#processing-binary-data-with-the-java-io-api)
@@ -126,12 +127,34 @@ java HelloWorld
 You now have everything you need to run the code examples. Let's dive into the
 theory!
 
+## Types of data
+
+When you deal with data, you need to know what type of data you are dealing
+with.
+
+There are two main types of data:
+
+- **Binary data**: data that is stored as bytes. This is the most basic type of
+  data. It is used to store files, images, videos, etc.
+- **Text data**: data that is stored as characters. This is a more complex type
+  of data. It is used to store text files, configuration files, etc.
+
+What differentiates binary data from text data is how the data is interpreted:
+
+- **Binary data**: the data is read or written as bytes. You do not have to
+  interpret the bytes, you just use them as they are.
+- **Text data**: the data is read or written as characters. You have to
+  interpret the bytes to get the characters.
+
+When you read or write data, you need to know what type of data you are dealing
+with to use the right tools to read or write the data.
+
 ## Sources, streams and sinks of data
 
 Whenever you deal with data, you need to read data from a source and write it to
 a destination.
 
-A representation of this process is called a **stream**.
+An abstraction of this process is called **sources, streams and sinks of data**.
 
 A **stream** is a way to read or write data from a **source** to a **sink**.
 
@@ -164,19 +187,23 @@ scalable servers for example). We will not cover this API in this course.
 
 ## Processing binary data with the Java IO API
 
-Binary data processing is the most basic type of data processing: you open a
-file, you read the bits and you write the bits to another file. You do not have
-to interpret the bits, you just copy them.
+Binary data processing is the most basic type of data processing:
+
+1. You open a file
+2. You read/write/modify the bytes as they are (e.g. copy to another file).
+3. You close the file
+
+You do not have to interpret the bytes, you just use them as they are.
 
 ### Reading binary data
 
-When you read binary data, you read the bits as they are stored in the file.
+When you read binary data, you read the bytes as they are stored in the file.
 
 The most simple way to read binary data is byte by byte.
 
 This is done using the `InputStream` class. The `InputStream` class is an
 abstract class that is the superclass of all classes representing an input
-stream of bytes.
+stream of bytes (e.g. `FileInputStream`).
 
 Open the `BinaryReadFileExample.java` file in the `05-java-ios` directory to see
 how to read binary data byte by byte.
@@ -224,7 +251,7 @@ Continue to the next section to see how to create this file.
 
 ### Writing binary data
 
-When you write binary data, you write the bits as they are stored in the file.
+When you write binary data, you write the bytes as they are stored in the file.
 
 The most simple way to write binary data is byte by byte.
 
@@ -274,8 +301,24 @@ When you read or write binary data byte by byte, each `read()` or `write()` call
 will issue a system call to read or write one byte from or to the file. This is
 not efficient.
 
-To improve the performance, you can use a buffer. A buffer is a temporary memory
-space where you can store data before reading or writing it to the file.
+To improve the performance, you can (and should) use a buffer. Instead of
+reading one byte at a time, you can read a block of bytes at a time:
+
+- When reading for the first time, a system call is made and the data read is
+  stored in the buffer.
+- Then, as long as the buffer is not empty, we read from it (no system call).
+- As soon as the buffer is empty, a new system call is made and the process is
+  repeated.
+
+The same applies when writing data:
+
+- When writing for the first time, a system call is made and a buffer is created
+  to store the data.
+- Then, as long as the buffer is not full, we write to it (no system call).
+- As soon as the buffer is full, its content is written to the file and the
+  buffer is emptied and the process is repeated.
+- When closing the file, the remaining data in the buffer is written to the
+  file.
 
 This is done using the `BufferedInputStream` and `BufferedOutputStream` classes.
 
@@ -334,7 +377,7 @@ Here are the changes between the `BinaryWriteFileExample.java` file and the
 +      bos.write(i);
      }
 
-+    // Flush the buffer to write the remaining bytes as the buffer may not be full
++    // Flush the buffer to write the remaining bytes
 +    bos.flush();
 +    bos.close();
      fos.close();
@@ -350,8 +393,12 @@ writing data to the file directly. This is more efficient as the buffer can
 store more data than the `FileOutputStream` class can write in one system call.
 
 The `flush()` method is called to write the remaining bytes in the buffer to the
-file. This is important to call the `flush()` method to make sure that all data
-is written to the file.
+file. The `flush()` method is automatically called when the `close()` method is
+called.
+
+We recommend calling the `flush()` method before calling the `close()` method
+anyway to ensure that all data is written to the file just in case you do some
+other operations before effectively closing the file.
 
 Compile and execute the `BinaryBufferWriteFileExample.java` file. This will
 create the file `binary-file.bin` in the current directory.
@@ -382,9 +429,9 @@ Java uses big endian by default. You can use little endian by using the
 While binary data processing is quite simple, text data processing is more
 complex.
 
-When you read text data, you need to interpret the bits to get the characters.
+When you read text data, you need to interpret the bytes to get the characters.
 
-When you write text data, you need to encode the characters to bits.
+When you write text data, you need to encode the characters to bytes.
 
 To better understand text data processing, you need to understand character
 encodings.
@@ -485,7 +532,7 @@ languages.
 
 Notice that the word "student" is encoded in different ways depending on the
 character encoding used. This is because the character encoding defines how the
-characters are encoded in bits.
+characters are encoded in bytes.
 
 If you do not set the character encoding when you read or write text data, the
 default character encoding will be used. This is not what you want as the file
@@ -497,10 +544,12 @@ able to read the file correctly.
 When you read and write text data, you need to know the character encoding used
 to encode the text data.
 
-This is done using the `Reader` and `Writer` classes. The `Reader` class is an
-abstract class that is the superclass of all classes representing an input
-stream of characters. The `Writer` class is an abstract class that is the
-superclass of all classes representing an output stream of characters.
+This is done using the `Reader` and `Writer` classes:
+
+- The `Reader` class is an abstract class that is the superclass of all classes
+  representing an input stream of characters (e.g. `FileReader`).
+- The `Writer` class is an abstract class that is the superclass of all classes
+  representing an output stream of characters (e.g. `FileWriter`).
 
 Open the `TextReadFileExample.java` file in the `05-java-ios` directory to see
 how to read and write text data.
@@ -631,11 +680,10 @@ Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
 BufferedReader br = new BufferedReader(reader);
 ```
 
-Notice that this time, the class `InputStreamReader` is used to read the file
-with the `UTF-8` character encoding. It opens the file using a `FileInputStream`
-class as binary data and decodes the binary data to text data using the `UTF-8`
-character encoding. It then uses a `BufferedReader` class to read the text data
-with a buffer.
+Notice that this time, it opens the file using a `FileInputStream` class as
+binary data. It then uses the class `InputStreamReader` to decode the binary
+data to text data using the `UTF-8` character encoding. And finally, it uses the
+`BufferedReader` class to read the text data with a buffer.
 
 The following line opens a file for writing text data. It will attempt to open
 the file `TextEndOfLineCharactersExample.txt` in the current directory:
@@ -646,10 +694,9 @@ Writer writer = new OutputStreamWriter(os, StandardCharsets.UTF_8);
 BufferedWriter bw = new BufferedWriter(writer);
 ```
 
-Notice that this time, the class `OutputStreamWriter` is used to write the file
-with the `UTF-8` character encoding. It opens the file using a
-`FileOutputStream` class as binary data and encodes the text data to binary data
-using the `UTF-8` character encoding. It then uses a `BufferedWriter` class to
+Notice that this time, it opens the file using a `FileOutputStream` class as
+binary data. It then uses th class `OutputStreamWriter` to write the file with
+the `UTF-8` character encoding. And finally, it uses a `BufferedWriter` class to
 write the binary data with a buffer.
 
 The following line reads data from the file line by line and writes it to the
@@ -658,7 +705,7 @@ output file with the end of line character:
 ```java
 String line;
 while ((line = br.readLine()) != null) {
-  // Careful: line does not contain end-of-line characters
+  // Careful: line does not contain end of line characters
   bw.write(line + END_OF_LINE);
 }
 ```
@@ -687,32 +734,129 @@ If you do not close the file properly, you might lose data or corrupt the file.
 When accessing a file, many things can go wrong. The file might not exist, the
 file might be corrupted, the file might be locked by another process, etc.
 
-When you open a file, you need to handle these errors. You can do this by
-catching the `IOException` exception. This is done with a `try-catch-finally`
-block or, more recently, with a `try-with-resources` block.
-
-Using the `try-with-resources` block is the preferred way to handle errors as it
-is more concise and less error-prone, however, the class must implement the
-[`AutoCloseable`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html)
-interface.
+When you open a file, you need to handle these errors **not matter if you are
+work with binary or text data**. This is done with a `try-catch-finally` block
+or, more recently, with a `try-with-resources` block.
 
 The common exceptions you might encounter are:
 
 - `FileNotFoundException`: the file does not exist
-- `IOException`: the file cannot be accessed for other reasons
 - `UnsupportedEncodingException`: the file is encoded in an unsupported
   character encoding
+- `IOException`: the file cannot be accessed for other reasons
 
-The same applies when you will use the network: the network might be down, the
-connection might be lost, etc.
+The `FileNotFoundException` and `UnsupportedEncodingException` exceptions are
+ihnerited from the `IOException` exception.
+
+The same applies when you will use the network in future chapters: the network
+might be down, the connection might be lost, etc.
 
 You will have to manage these errors when you will work with the network.
 
 Open the `DealingWithErrorsExample.java` file in the `05-java-ios` directory to
 see how to handle errors when reading and writing data.
 
-Take some time to read the code and understand how to handle errors when reading
-and writing data.
+The following function is a bad example of how to handle errors when reading and
+writing binary data:
+
+```java
+public static void tryCatchWithoutFinallyExample() {
+  try {
+    Reader reader = new FileReader("missing.file");
+    Writer writer = new FileWriter("missing.file");
+
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  }
+}
+```
+
+It catches an exception but does not close the resources properly as seen in the
+previous sections.
+
+Even if the reader and writer would be closed after the
+`writer.write(reader.read());` line, it would be enough: if an error occurs when
+trying to write to the file (for reasons such as bad permissions, another
+process locking the file, etc.), the resources would not be closed properly.
+
+This can lead to resource leaks (= resources that are not closed properly and
+that are not available for other parts of the program) and corrupted files.
+
+A better way to handle errors is to use the `try-catch-finally` block as seen in
+the following function:
+
+```java
+public static void tryCatchFinallyExample() {
+  Reader reader = null;
+  Writer writer = null;
+
+  try {
+    reader = new FileReader("missing.file");
+    writer = new FileWriter("missing.file");
+
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  } finally {
+    if (writer != null) {
+      try {
+        writer.close();
+      } catch (IOException e) {
+        System.out.println("Exception in close writer: " + e);
+      }
+    }
+
+    if (reader != null) {
+      try {
+        reader.close();
+      } catch (IOException e) {
+        System.out.println("Exception in close reader: " + e);
+      }
+    }
+  }
+}
+```
+
+Using the `finally` block, the resources are closed properly whenever an error
+occurs or not. A `finally` block is always executed, even if no exception is
+thrown.
+
+This solution is better than the previous one, but it is verbose and hard to
+read. Let's see how to handle errors with the `try-with-resources` block.
+
+The `try-with-resources` block is a more concise and less error-prone way to
+handle errors when reading and writing data as seen in the following function:
+
+```java
+public static void tryWithResourcesExample() {
+  try (Reader reader = new FileReader("missing.file");
+      Writer writer = new FileWriter("missing.file")) {
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  }
+}
+```
+
+The `try-with-resources` block is a `try` block that declares one or more
+resources. A resource is an object that must be closed after the program is done
+with it. The `try-with-resources` block ensures that each resource is closed at
+the end of the block.
+
+While both `try-catching-finally` and `try-with-resources` blocks are valid ways
+to handle errors when reading and writing data, the `try-with-resources` block
+is the preferred way as it is more concise and less error-prone (you do not have
+to remember to close the resources in the `finally` block).
+
+In order for a class to be used in a `try-with-resources` block, it must
+implement the
+[`AutoCloseable`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html)
+interface. All the classes presented in this chapter implement the
+`AutoCloseable` interface, whatever you are dealing with binary or text data.
+
+We highly recommend you to use the `try-with-resources` block as it is the
+preferred way to handle errors and close resources.
 
 ## When to use which IO?
 
@@ -728,20 +872,26 @@ case:
 
 ## Common pitfalls
 
-When using the Java IO API, you need to set the character encoding when you read
-or write text data. If you do not set the character encoding, the default
-character encoding will be used, which is not what you want.
+Always set the character encoding when you read or write text data. If you do
+not set the character encoding, the default character encoding will be used,
+which is not what you want as it can differ from other systems.
 
-When using the Java IO API, you need to open and close a file before and after
-reading or writing data.
+Always close the file after you have read or written data. If you do not close
+the file, you might lose data or corrupt the file as other processes might not
 
-The class `PrintWriter` is a subclass of the `Writer` class that is used to
-write text data. It is a very useful class to write text data as it provides
-many convenience methods to write text data. However, it does not handle errors
-properly as it does not throw exceptions when an error occurs. It is better to
-use the `BufferedWriter` class to write text data.
+Always handle errors when you read or write data. If you do not handle errors,
+your program might crash and leave the files in an inconsistent state.
 
-The `System.lineSeparator()` method returns the end of line character(s) for the
+While reading the Java IO API, you might encounter the class `PrintWriter`. The
+`PrintWriter` class is a subclass of the `Writer` class that is used to write
+text data. It provides many conveniences where you do not have to handle the
+`flush()` and `close()` methods yourself. However, it does not handle errors
+properly as it does not throw exceptions when an error occurs. We will ask you
+not to use the `PrintWriter` class in this course. It is better to use the
+`BufferedWriter` class to write text data and handle errors properly.
+
+You might also encounter the `System.lineSeparator()` method. The
+`System.lineSeparator()` method returns the end of line character(s) for the
 current operating system. As it is a system-dependent property, it is better to
 set a constant for the end of line character(s) in your program.
 
@@ -817,7 +967,7 @@ Create a new discussion with the following information:
   - Why is it more efficient than the other types of streams?
   - What is the difference between binary data and text data?
   - What is a character encoding?
-  - Why is this methodology important?
+  - Why is this benchmark methodology important?
 
 This will notify us that you have completed the exercise and we can check your
 work.
@@ -877,7 +1027,12 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-You will start the practical work!
+In the next chapter, you will learn the following topics:
+
+- Docker and Docker Compose: how to containerize your applications
+  - What is an image?
+  - What is a container?
+  - How to try out new software without installing it?
 
 ## Additional resources
 
