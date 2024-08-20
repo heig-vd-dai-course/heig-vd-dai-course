@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
-[illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Java IOs - Course material
 
@@ -127,28 +126,6 @@ java HelloWorld
 You now have everything you need to run the code examples. Let's dive into the
 theory!
 
-## Types of data
-
-When you deal with data, you need to know what type of data you are dealing
-with.
-
-There are two main types of data:
-
-- **Binary data**: data that is stored as bytes. This is the most basic type of
-  data. It is used to store files, images, videos, etc.
-- **Text data**: data that is stored as characters. This is a more complex type
-  of data. It is used to store text files, configuration files, etc.
-
-What differentiates binary data from text data is how the data is interpreted:
-
-- **Binary data**: the data is read or written as bytes. You do not have to
-  interpret the bytes, you just use them as they are.
-- **Text data**: the data is read or written as characters. You have to
-  interpret the bytes to get the characters.
-
-When you read or write data, you need to know what type of data you are dealing
-with to use the right tools to read or write the data.
-
 ## Sources, streams and sinks of data
 
 Whenever you deal with data, you need to read data from a source and write it to
@@ -184,6 +161,28 @@ The **Java NIO API** was introduced in Java 1.4. It is a more modern API that
 can be more efficient and more flexible than the Java IO API in some use-case.
 It is also more complex to use and is meant for more advanced use cases (writing
 scalable servers for example). We will not cover this API in this course.
+
+## Types of data
+
+When you deal with data, you need to know what type of data you are dealing
+with.
+
+There are two main types of data:
+
+- **Binary data**: data that is stored as bytes. This is the most basic type of
+  data. It is used to store files, images, videos, etc.
+- **Text data**: data that is stored as characters. This is a more complex type
+  of data. It is used to store text files, configuration files, etc.
+
+What differentiates binary data from text data is how the data is interpreted:
+
+- **Binary data**: the data is read or written as bytes. You do not have to
+  interpret the bytes, you just use them as they are.
+- **Text data**: the data is read or written as characters. You have to
+  interpret the bytes to get the characters.
+
+When you read or write data, you need to know what type of data you are dealing
+with to use the right tools to read or write the data.
 
 ## Processing binary data with the Java IO API
 
@@ -680,8 +679,8 @@ Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
 BufferedReader br = new BufferedReader(reader);
 ```
 
-Notice that this time, it opens the file using a `FileInputStream` class as
-binary data. It then uses the class `InputStreamReader` to decode the binary
+Notice that this time, it opens the input file using a `FileInputStream` class
+as binary data. It then uses the class `InputStreamReader` to decode the binary
 data to text data using the `UTF-8` character encoding. And finally, it uses the
 `BufferedReader` class to read the text data with a buffer.
 
@@ -694,10 +693,10 @@ Writer writer = new OutputStreamWriter(os, StandardCharsets.UTF_8);
 BufferedWriter bw = new BufferedWriter(writer);
 ```
 
-Notice that this time, it opens the file using a `FileOutputStream` class as
-binary data. It then uses th class `OutputStreamWriter` to write the file with
-the `UTF-8` character encoding. And finally, it uses a `BufferedWriter` class to
-write the binary data with a buffer.
+Notice that this time, it opens the output file using a `FileOutputStream` class
+as binary data. It then uses th class `OutputStreamWriter` to write the file
+with the `UTF-8` character encoding. And finally, it uses a `BufferedWriter`
+class to write the binary data with a buffer.
 
 The following line reads data from the file line by line and writes it to the
 output file with the end of line character:
@@ -916,7 +915,7 @@ shown in the following screenshot:
 > Please make sure that the repository owner is your personal GitHub account and
 > not the `heig-vd-dai-course` organization.
 
-![Create the new repository from the template](./images/practical-content-create-and-clone-the-repository.png)
+![Create the new repository from the template](./images/create-and-clone-the-template-repository.png)
 
 Clone the repository locally.
 

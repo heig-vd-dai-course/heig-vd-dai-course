@@ -49,8 +49,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
-[illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -77,9 +76,10 @@ _paginate: false
 
 ## Objectives
 
-- Understanding IOs in Java
-- Understanding the Java IO API
-- Understanding the different IO types
+- Know the different types of data (binary vs. text)
+- Understand the abstract notion of sources, streams ang sink
+- Use the different IO types for different use-cases
+- Use the Java IO API
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -98,24 +98,7 @@ You can find other resources and alternatives as well.
 - Helps to understand the concepts
 - Modify/play with the code examples
 
-![bg right:40%](TODO)
-
-## Types of data
-
-<!-- _class: lead -->
-
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#types-of-data).
-You can find other resources and alternatives as well.
-
-### Types of data
-
-- Two types of data: binary and text
-- Both are `0`s and `1`s - the difference is in interpretation
-- Binary data: raw data
-- Text data: interpretation
-
-![bg right contain](./images/processing-binary-data-vs-text-data.png)
+![bg right w:80%](./images/code-examples-github-repository.png)
 
 ## Sources, streams and sinks of data
 
@@ -153,6 +136,25 @@ You can find other resources and alternatives as well.
 
 ![bg right contain](./images/the-java-io-api.png)
 
+## Types of data
+
+<!-- _class: lead -->
+
+More details for this section in the
+[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#types-of-data).
+You can find other resources and alternatives as well.
+
+### Types of data
+
+- Two types of data:
+  - Binary
+  - Text
+- Both are `0`s and `1`s - the difference is in interpretation:
+  - Binary data - raw data
+  - Text data - interpretation
+
+![bg right:45% w:90%](./images/processing-binary-data-vs-text-data.png)
+
 ## Processing binary data with the Java IO API
 
 <!-- _class: lead -->
@@ -168,15 +170,15 @@ You can find other resources and alternatives as well.
   2. Read/write/modify the bytes as they are
   3. Close the file
 
-![bg right:40%](TODO)
+![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ### Reading binary data
 
 - Most simple way is to read byte by byte (not efficient)
 - `InputStream` and `FileInputStream` classes are used to read binary data
-- Let's have a look at the code example `BinaryReadFileExample.java`
+- Let's have a look at the code example `BinaryReadFileExample`
 
-![bg right:40%](TODO)
+![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ---
 
@@ -201,9 +203,9 @@ class BinaryReadFileExample {
 
 - Most simple way is to write byte by byte (not efficient)
 - `OutputStream` and `FileOutputStream` classes are used to write binary data
-- Let's have a look at the code example `BinaryWriteFileExample.java`
+- Let's have a look at the code example `BinaryWriteFileExample`
 
-![bg right:40%](TODO)
+![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ---
 
@@ -225,12 +227,10 @@ class BinaryWriteFileExample {
 ### Reading and writing binary data with a buffer
 
 - Reading and writing byte by byte is not efficient: each `read()` or `write()`
-  call results in a single system call every time
+  call results in a system call every time
+- Buffers can be used to read write multiple bytes at once
 
-- Buffers can be used to read and write multiple bytes at once as it is more
-  efficient
-
-![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ---
 
@@ -240,7 +240,7 @@ Use a buffer to read multiple bytes at once:
 2. Subsequent reads are done from the buffer
 3. When the buffer is empty, a new block is read
 
-![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ---
 
@@ -252,16 +252,18 @@ The same applies for writing:
 4. The buffer is then emptied
 5. Bytes can remain in the buffer
 
-![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+   - A flush might be needed to empty the buffer
+
+![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ---
 
 - `BufferedInputStream` and `BufferedOutputStream` classes are used to
   read/write binary data with a buffer
-- Let's have a look at the code examples `BinaryBufferReadFileExample.java` and
-  `BinaryBufferWriteFileExample.java`
+- Let's have a look at the code examples `BinaryBufferReadFileExample` and
+  `BinaryBufferWriteFileExample`
 
-![bg right:40%](https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?fit=crop&h=720)
+![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ---
 
@@ -309,13 +311,14 @@ The same applies for writing:
 
 ### A quick note on little endian vs. big endian
 
-- Little endian: least significant byte first (`0x78 0x56 0x34 0x12`)
-- Big endian: most significant byte first (`0x12 0x34 0x56 0x78`)
+- Little endian: least significant byte first
+- Big endian: most significant byte first
 - Java uses big endian by default
 - The class `ByteBuffer` can be used to convert between the two (not covered in
   this course)
-
-![bg right:40%](TODO)
+- Example: `12345678`
+  - Little endian: `0x78 0x56 0x34 0x12`
+  - Big endian: `0x12 0x34 0x56 0x78`
 
 ## Processing text data with the Java IO API
 
@@ -332,7 +335,7 @@ You can find other resources and alternatives as well.
 - Different end of line characters
 - Different IO classes for text data
 
-![bg right:40%](TODO)
+![bg right:45% w:90%](./images/processing-text-data.png)
 
 ### Ancestor of character representations: ASCII
 
@@ -358,7 +361,7 @@ You can find other resources and alternatives as well.
   - UTF-16
   - UTF-32
 
-![bg right contain](./images/processing-binary-data-vs-text-data-unicode.png)
+![bg right contain](./images/unicode.png)
 
 ### UTF-8
 
@@ -367,24 +370,24 @@ You can find other resources and alternatives as well.
 - ASCII compatible
 - Quite the standard for web and software development
 
-![bg right contain](./images/processing-binary-data-vs-text-data-utf-8.png)
+![bg right contain](./images/utf-8-wikipedia-article.png)
 
 ### What happens if you ignore the character encoding?
 
 - Not stored in the file itself
 - Misinterpretation leads to issues
-- Check, compile and run the `TextCharacterEncodingsExample.java` code example!
+- Check, compile and run the `TextCharacterEncodingsExample` code example!
 
 ![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/commons/7/7f/Replacement_character.svg)
 
 ### Reading and writing text data
 
 - `Reader` and `Writer` classes are used to read/write text data
-- **Always specify the encoding!** If not specified, it can be incompatible with
-  other systems
-- Let's have a look at the code example `TextReadAndWriteFileExample.java`
+- **Always specify the encoding!** If not set, it can be incompatible with other
+  systems
+- Let's have a look at the code example `TextReadAndWriteFileExample`
 
-![bg right:40%](TODO)
+![bg right:45% w:90%](./images/processing-text-data.png)
 
 ---
 
@@ -413,9 +416,9 @@ class TextReadAndWriteFileExample {
   efficient
 - `BufferedReader` and `BufferedWriter` classes are used to read/write text data
   with a buffer
-- Let's have a look at the code example `TextBufferReadAndWriteFileExample.java`
+- Let's have a look at the code example `TextBufferReadAndWriteFileExample`
 
-![bg right:40%](TODO)
+![bg right:45% w:90%](./images/processing-text-data.png)
 
 ---
 
@@ -592,11 +595,12 @@ You can find other resources and alternatives as well.
 
 ### What will you do?
 
-- Explore and try-out the code examples
-- Run benchmarks for different IO types
-- Understand the differences between IO types and their use cases
+Benchmark the different types of streams you have learned:
 
-![bg right contain](./images/what-will-you-do.png)
+- Assemble all the code examples to satisfy the use-cases
+- Run some benchmarks to determine the best IOs for the given use-cases
+
+![bg right w:80%](./images/what-will-you-do.png)
 
 ### Find the practical content
 
