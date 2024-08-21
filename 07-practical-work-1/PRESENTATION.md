@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Practical work 1
 description: Practical work 1 for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-practical-work-1/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -148,10 +148,10 @@ COUCOU ?A VA ?
 
 Why is the `ç` not converted to uppercase?
 
-## Practical work review
+## Practical work presentations
 
-The practical work review will take place on **Tuesday 10.10.2023** in the
-**room B38**, at the very end of the corridor next to the door entry.
+The practical work presentations will take place on **Tuesday 10.10.2023** in
+the **room B38**, at the very end of the corridor next to the door entry.
 
 We only have **5 minutes per group**. Please be prepared to present your work.
 You decide what you want to show us and how you want to present it.
@@ -164,7 +164,7 @@ The order of presentation is random and is stated in the next slides.
 
 <!--
 **Please state your group on GitHub Discussions as soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
+it will help us to plan the practical presentations.**
 -->
 
 | #   | Group                                   | Passage |
