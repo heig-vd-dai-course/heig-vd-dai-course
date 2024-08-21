@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
-[illustration]:
-  https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Java IOs - Course material
 
@@ -26,22 +25,32 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
-- [Processing binary data vs. text data](#processing-binary-data-vs-text-data)
+- [Prepare and setup your environment](#prepare-and-setup-your-environment)
+  - [Check and run the code examples](#check-and-run-the-code-examples)
+- [Types of data](#types-of-data)
+- [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
+- [The Java IO API](#the-java-io-api)
+- [Processing binary data with the Java IO API](#processing-binary-data-with-the-java-io-api)
+  - [Reading binary data](#reading-binary-data)
+  - [Writing binary data](#writing-binary-data)
+  - [Reading and writing binary data with a buffer](#reading-and-writing-binary-data-with-a-buffer)
+  - [A quick note on little endian vs. big endian](#a-quick-note-on-little-endian-vs-big-endian)
+- [Processing text data with the Java IO API](#processing-text-data-with-the-java-io-api)
   - [Ancestor of character representations: ASCII](#ancestor-of-character-representations-ascii)
   - [Extended ASCII: codes pages](#extended-ascii-codes-pages)
   - [Unicode](#unicode)
   - [UTF-8](#utf-8)
   - [What happens if you ignore the character encoding?](#what-happens-if-you-ignore-the-character-encoding)
+  - [Reading and writing text data](#reading-and-writing-text-data)
   - [End of line characters](#end-of-line-characters)
-  - [A quick note on little endian vs. big endian](#a-quick-note-on-little-endian-vs-big-endian)
-- [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
-- [The Java IO API](#the-java-io-api)
-  - [Performance and buffering](#performance-and-buffering)
   - [Dealing with errors](#dealing-with-errors)
-  - [When to use which IO?](#when-to-use-which-io)
+- [When to use which IO?](#when-to-use-which-io)
+- [Common pitfalls](#common-pitfalls)
 - [Practical content](#practical-content)
-  - [Check and try-out the code examples](#check-and-try-out-the-code-examples)
-  - [Benchmarking the different types of streams](#benchmarking-the-different-types-of-streams)
+  - [Create and clone the repository](#create-and-clone-the-repository)
+  - [Implement the different types of streams](#implement-the-different-types-of-streams)
+  - [Compare the results](#compare-the-results)
+  - [Share your results](#share-your-results)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -64,26 +73,367 @@ without the hassle of network programming.
 You might need to use different types of IOs depending on the type of data you
 want to process. You will learn how to use the right IOs for the right data.
 
+As this chapter is quite abstract, you will first setup your environment to be
+able to run some code examples along with the theory.
+
 These skills are essential to be able to process data from the network later on
 this course!
 
 Let's get started!
 
-## Processing binary data vs. text data
+## Prepare and setup your environment
 
-There are two main types of data you can process: binary data and text data.
+### Check and run the code examples
 
-Binary data processing is the most basic type of data processing: you open a
-file, you read the bits and you write the bits to another file. You do not have
-to interpret the bits, you just copy them.
+In this section, you will clone the code examples repository to check and run
+the code examples along with the theory.
 
-What is the difference between binary data and text data?
+#### Clone the repository
 
-Computers only understand binary data. Binary data is a sequence of bits (`0`s
-and `1`s). Binary data can represent anything: text, images, videos, etc. On the
-file system, everything is binary data.
+Clone the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository to get the code examples.
 
-The real question is: how do we interpret these bits?
+#### Access the code examples in your terminal
+
+Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
+directory.
+
+As a quick reminder, these commands can help you to navigate in the terminal:
+
+- `ls` to list the files and directories in the current directory
+- `cd directory` to navigate to the `directory` directory
+- `cd ..` to navigate to the parent directory
+- `pwd` to print the current directory
+- `clear` to clear the terminal
+- `exit` to exit the terminal
+
+#### Explore and run the code examples
+
+In the `05-java-ios` directory, checkout the `README.md` file to learn how to
+run the code examples.
+
+As a quick reminder, you can run the code examples using the following command:
+
+```bash
+# Compile the code example
+javac HelloWorld.java
+
+# Run the code example
+java HelloWorld
+```
+
+You now have everything you need to run the code examples. Let's dive into the
+theory!
+
+## Sources, streams and sinks of data
+
+Whenever you deal with data, you need to read data from a source and write it to
+a destination.
+
+An abstraction of this process is called **sources, streams and sinks of data**.
+
+A **stream** is a way to read or write data from a **source** to a **sink**.
+
+A **source of data** is **where the data comes from**. It can be a file, a
+network connection, a keyboard, etc. A common term for a source of data is
+something that **produces** data (**a producer**).
+
+A **sink of data** is **where the data goes**. It can be another file, a network
+connection, a screen, etc. A common term for a sink of data is something that
+**consumes** data (**a consumer**).
+
+A **stream** is **a way to read or write data** from a source to a sink.
+
+## The Java IO API
+
+The [Java documentation](https://docs.oracle.com/en/java/javase/21/docs/api/) is
+separated in modules. The Java IO API is part of the `java.base` module.
+
+In the `java.base` module, there are two main packages to read and write data:
+
+- `java.io`: the standard Java IO API
+- `java.nio`: the Java NIO API
+
+The `java.io` package is called **Java IO API** or the **standard Java IO API**.
+
+The **Java NIO API** was introduced in Java 1.4. It is a more modern API that
+can be more efficient and more flexible than the Java IO API in some use-case.
+It is also more complex to use and is meant for more advanced use cases (writing
+scalable servers for example). We will not cover this API in this course.
+
+## Types of data
+
+When you deal with data, you need to know what type of data you are dealing
+with.
+
+There are two main types of data:
+
+- **Binary data**: data that is stored as bytes. This is the most basic type of
+  data. It is used to store files, images, videos, etc.
+- **Text data**: data that is stored as characters. This is a more complex type
+  of data. It is used to store text files, configuration files, etc.
+
+What differentiates binary data from text data is how the data is interpreted:
+
+- **Binary data**: the data is read or written as bytes. You do not have to
+  interpret the bytes, you just use them as they are.
+- **Text data**: the data is read or written as characters. You have to
+  interpret the bytes to get the characters.
+
+When you read or write data, you need to know what type of data you are dealing
+with to use the right tools to read or write the data.
+
+## Processing binary data with the Java IO API
+
+Binary data processing is the most basic type of data processing:
+
+1. You open a file
+2. You read/write/modify the bytes as they are (e.g. copy to another file).
+3. You close the file
+
+You do not have to interpret the bytes, you just use them as they are.
+
+### Reading binary data
+
+When you read binary data, you read the bytes as they are stored in the file.
+
+The most simple way to read binary data is byte by byte.
+
+This is done using the `InputStream` class. The `InputStream` class is an
+abstract class that is the superclass of all classes representing an input
+stream of bytes (e.g. `FileInputStream`).
+
+Open the `BinaryReadFileExample.java` file in the `05-java-ios` directory to see
+how to read binary data byte by byte.
+
+The following line opens a file for reading binary data. It will attempt to open
+the file `binary-file.bin` in the current directory:
+
+```java
+InputStream fis = new FileInputStream("binary-file.bin");
+```
+
+As this file is not yet created, the program will throw a
+`FileNotFoundException` exception if you try to execute the program. This is
+normal. You will create this file and run the program later.
+
+The following line reads data from the file byte by byte:
+
+```java
+// -1 indicates the end of the file
+int b;
+while ((b = fis.read()) != -1) {
+  System.out.print(b);
+}
+```
+
+Each `read()` call will read one byte from the file. The `read()` method returns
+the byte read as an `int`. If the end of the file is reached, the `read()`
+method will return `-1`.
+
+The following line closes the file:
+
+```java
+fis.close();
+```
+
+This is important to close the file after you have read the data. If you do not
+close the file, you might lose data or corrupt the file as other processes might
+not be able to access the file.
+
+Compile and execute the `BinaryReadFileExample.java` file. This will throw a
+`FileNotFoundException` exception as the file `binary-file.bin` does not yet
+exist.
+
+Continue to the next section to see how to create this file.
+
+### Writing binary data
+
+When you write binary data, you write the bytes as they are stored in the file.
+
+The most simple way to write binary data is byte by byte.
+
+This is done using the `OutputStream` class. The `OutputStream` class is an
+abstract class that is the superclass of all classes representing an output
+stream of bytes.
+
+Open the `BinaryWriteFileExample.java` file in the `05-java-ios` directory to
+see how to write binary data byte by byte.
+
+The following line opens a file for writing binary data. It will attempt to open
+the file `binary-file.bin` in the current directory:
+
+```java
+OutputStream fos = new FileOutputStream("binary-file.bin");
+```
+
+The following line writes data to the file byte by byte:
+
+```java
+for (int i = 0; i < 256; i++) {
+  fos.write(i);
+}
+```
+
+Each `write()` call will write one byte to the file.
+
+The following line closes the file:
+
+```java
+fis.close();
+```
+
+This is important to close the file after you have read the data. If you do not
+close the file, you might lose data or corrupt the file as other processes might
+not be able to access the file.
+
+Compile and execute the `BinaryWriteFileExample.java` file. This will create the
+file `binary-file.bin` in the current directory.
+
+Compile and execute the `BinaryReadFileExample.java` file. This will read the
+content of the file `binary-file.bin` and print the file content to the console.
+
+### Reading and writing binary data with a buffer
+
+When you read or write binary data byte by byte, each `read()` or `write()` call
+will issue a system call to read or write one byte from or to the file. This is
+not efficient.
+
+To improve the performance, you can (and should) use a buffer. Instead of
+reading one byte at a time, you can read a block of bytes at a time:
+
+- When reading for the first time, a system call is made and the data read is
+  stored in the buffer.
+- Then, as long as the buffer is not empty, we read from it (no system call).
+- As soon as the buffer is empty, a new system call is made and the process is
+  repeated.
+
+The same applies when writing data:
+
+- When writing for the first time, a system call is made and a buffer is created
+  to store the data.
+- Then, as long as the buffer is not full, we write to it (no system call).
+- As soon as the buffer is full, its content is written to the file and the
+  buffer is emptied and the process is repeated.
+- When closing the file, the remaining data in the buffer is written to the
+  file.
+
+This is done using the `BufferedInputStream` and `BufferedOutputStream` classes.
+
+The `BufferedInputStream` class is a subclass of the `InputStream` class that
+adds buffering to the input stream. The `BufferedOutputStream` class is a
+subclass of the `OutputStream` class that adds buffering to the output stream.
+
+Open the `BinaryBufferReadFileExample.java` file in the `05-java-ios` directory
+to see how to read binary data with a buffer.
+
+Here are the changes between the `BinaryReadFileExample.java` file and the
+`BinaryBufferReadFileExample.java` file:
+
+```diff
+   public static void main(String[] args) throws IOException {
+     InputStream fis = new FileInputStream("binary-file.bin");
++    InputStream bis = new BufferedInputStream(fis);
+
+     // -1 indicates the end of the file
+     int b;
+-    while ((b = fis.read()) != -1) {
++    while ((b = bis.read()) != -1) {
+       System.out.print(b);
+     }
+
++    bis.close();
+     fis.close();
+   }
+```
+
+The `BufferedInputStream` class is created with the `FileInputStream` class as
+an argument. The `BufferedInputStream` class will read data from the
+`FileInputStream` class and store it in a buffer.
+
+The `BufferedInputStream` class will read data from the buffer instead of
+reading data from the file directly. This is more efficient as the buffer can
+store more data than the `FileInputStream` class can read in one system call.
+
+Compile and execute the `BinaryBufferReadFileExample.java` file. This will read
+the content of the file `binary-file.bin` and print the file content to the
+console.
+
+Open the `BinaryBufferWriteFileExample.java` file in the `05-java-ios` directory
+to see how to write binary data with a buffer.
+
+Here are the changes between the `BinaryWriteFileExample.java` file and the
+`BinaryBufferWriteFileExample.java` file:
+
+```diff
+   public static void main(String[] args) throws IOException {
+     OutputStream fos = new FileOutputStream("binary-file.bin");
++    BufferedOutputStream bos = new BufferedOutputStream(fos);
+
+     for (int i = 0; i < 256; i++) {
+-      fos.write(i);
++      bos.write(i);
+     }
+
++    // Flush the buffer to write the remaining bytes
++    bos.flush();
++    bos.close();
+     fos.close();
+   }
+```
+
+The `BufferedOutputStream` class is created with the `FileOutputStream` class as
+an argument. The `BufferedOutputStream` class will write data to the
+`FileOutputStream` class and store it in a buffer.
+
+The `BufferedOutputStream` class will write data to the buffer instead of
+writing data to the file directly. This is more efficient as the buffer can
+store more data than the `FileOutputStream` class can write in one system call.
+
+The `flush()` method is called to write the remaining bytes in the buffer to the
+file. The `flush()` method is automatically called when the `close()` method is
+called.
+
+We recommend calling the `flush()` method before calling the `close()` method
+anyway to ensure that all data is written to the file just in case you do some
+other operations before effectively closing the file.
+
+Compile and execute the `BinaryBufferWriteFileExample.java` file. This will
+create the file `binary-file.bin` in the current directory.
+
+Compile and execute the `BinaryBufferReadFileExample.java` file. This will read
+the content of the file `binary-file.bin` and print the file content to the
+console.
+
+### A quick note on little endian vs. big endian
+
+When working with binary data, you need to know if the data is encoded in
+**little endian** or in **big endian**.
+
+**Little endian** means that the least significant byte is stored first. **Big
+endian** means that the most significant byte is stored first.
+
+For example, the number `0x12345678` is stored as `0x78 0x56 0x34 0x12` in
+little endian and as `0x12 0x34 0x56 0x78` in big endian.
+
+This is important to know when you read or write binary data. If you read or
+write binary data in the wrong endian, the data will be corrupted.
+
+Java uses big endian by default. You can use little endian by using the
+`ByteBuffer` class. We will not cover this in this course.
+
+## Processing text data with the Java IO API
+
+While binary data processing is quite simple, text data processing is more
+complex.
+
+When you read text data, you need to interpret the bytes to get the characters.
+
+When you write text data, you need to encode the characters to bytes.
+
+To better understand text data processing, you need to understand character
+encodings.
 
 ### Ancestor of character representations: ASCII
 
@@ -136,6 +486,9 @@ applications.
 UTF-8 is backward compatible with ASCII. This means that if you have a file
 encoded in ASCII, it is also encoded in UTF-8.
 
+The following table shows how a character is encoded in UTF-8 depending on the
+number of bytes used:
+
 | Binary data                                 | Meaning           |
 | ------------------------------------------- | ----------------- |
 | `0xxxxxxx`                                  | 1 byte character  |
@@ -154,8 +507,8 @@ Java strings for instance uses UTF-16, meaning a character is encoded in 2 bytes
 
 ### What happens if you ignore the character encoding?
 
-When you open a file, you need to know the character encoding used to encode the
-file.
+When you open a file, you need to know the character encoding that was used to
+encode the file.
 
 The character encoding is not usually stored in the file. You need to know it in
 advance to be able to read the file correctly.
@@ -168,6 +521,133 @@ A good example is when you open a text file encoded in UTF-8 with a text editor
 that does not support UTF-8. The text editor will try to interpret the file as
 ASCII and will display the wrong characters (`Ã©` instead of `é` for example).
 
+Open the `TextCharacterEncodingsExample.java` file in the `05-java-ios`
+directory to see how to encode and decode characters with different character
+encodings.
+
+Compile and execute the `TextCharacterEncodingsExample.java` file. This will
+print the word "student" encoded in different character encodings for different
+languages.
+
+Notice that the word "student" is encoded in different ways depending on the
+character encoding used. This is because the character encoding defines how the
+characters are encoded in bytes.
+
+If you do not set the character encoding when you read or write text data, the
+default character encoding will be used. This is not what you want as the file
+might be encoded in a different character encoding and all systems might not be
+able to read the file correctly.
+
+### Reading and writing text data
+
+When you read and write text data, you need to know the character encoding used
+to encode the text data.
+
+This is done using the `Reader` and `Writer` classes:
+
+- The `Reader` class is an abstract class that is the superclass of all classes
+  representing an input stream of characters (e.g. `FileReader`).
+- The `Writer` class is an abstract class that is the superclass of all classes
+  representing an output stream of characters (e.g. `FileWriter`).
+
+Open the `TextReadFileExample.java` file in the `05-java-ios` directory to see
+how to read and write text data.
+
+The following line opens a file for reading text data. It will attempt to open
+the file `TextReadAndWriteFileExample.java` (the current file) in the current
+directory:
+
+```java
+Reader reader = new FileReader("TextReadAndWriteFileExample.java", StandardCharsets.UTF_8);
+```
+
+Notice that the character encoding is set to `UTF-8`. This is important to set
+the character encoding when you read or write text data. If you do not set the
+character encoding, the default character encoding will be used, which is not
+what you want as it can differ from other systems.
+
+The following line opens a file for writing text data. It will attempt to open
+the file `TextReadAndWriteFileExample.txt` in the current directory:
+
+```java
+Writer writer = new FileWriter("TextReadAndWriteFileExample.txt", StandardCharsets.UTF_8);
+```
+
+The following line reads data from the file byte by byte and writes it to the
+output file:
+
+```java
+// -1 indicates the end of the file
+int c;
+while ((c = reader.read()) != -1) {
+  writer.write(c);
+}
+```
+
+Just as with binary data, each character is read and written byte by byte.
+
+The following line closes the file:
+
+```java
+writer.close();
+reader.close();
+```
+
+Just as with binary data, reading and writing text data byte by byte is not
+efficient. You can use a buffer to read and write text data more efficiently.
+
+Open the `TextBufferReadAndWriteFileExample.java` file in the `05-java-ios`
+directory to see how to read and write text data with a buffer.
+
+Here are the changes between the `TextReadFileExample.java` file and the
+`TextBufferReadAndWriteFileExample.java` file:
+
+```diff
+   public static void main(String[] args) throws IOException {
+     Reader reader = new FileReader("TextReadAndWriteFileExample.java", StandardCharsets.UTF_8);
++    BufferedReader br = new BufferedReader(reader);
++
+     Writer writer = new FileWriter("TextReadAndWriteFileExample.txt", StandardCharsets.UTF_8);
++    BufferedWriter bw = new BufferedWriter(writer);
+
+     // -1 indicates the end of the file
+     int c;
+-    while ((c = reader.read()) != -1) {
+-      writer.write(c);
++    while ((c = br.read()) != -1) {
++      bw.write(c);
+     }
+
++    writer.flush();
+     writer.close();
+     reader.close();
+   }
+```
+
+The `BufferedReader` class is created with the `FileReader` class as an
+argument. The `BufferedReader` class will read data from the `FileReader` class
+and store it in a buffer.
+
+The `BufferedReader` class will read data from the buffer instead of reading
+data from the file directly. This is more efficient as the buffer can store more
+data than the `FileReader` class can read in one system call.
+
+The `BufferedWriter` class is created with the `FileWriter` class as an
+argument. The `BufferedWriter` class will write data to the `FileWriter` class
+and store it in a buffer.
+
+The `BufferedWriter` class will write data to the buffer instead of writing data
+to the file directly. This is more efficient as the buffer can store more data
+than the `FileWriter` class can write in one system call.
+
+The `flush()` method is called to write the remaining bytes in the buffer to the
+file. This is important to call the `flush()` method to make sure that all data
+is written to the file.
+
+Compile and execute the `TextBufferReadAndWriteFileExample.java` file. This will
+read the content of the file `TextReadAndWriteFileExample.java` and write the
+file content to the file `TextReadAndWriteFileExample.txt`.
+
 ### End of line characters
 
 Another important thing to know when dealing with text files is the **end of
@@ -177,96 +657,71 @@ The end of line character is a special character that marks the end of a line.
 
 There are different end of line characters depending on the operating system:
 
-- Unix/Linux/macOS: `'\n'`, called Line feed (`LF`)
-- Windows: `'\r\n'`, called Carriage Return + Line feed (`CR`+`LF`)
+- Unix/Linux/macOS: `'\n'`, called _"Line feed"_ (`LF`)
+- Windows: `'\r\n'`, called _"Carriage Return + Line feed"_ (`CR`+`LF`)
 
 When you read a text file line by line, the string you get will **not** contain
-the end of line character(s). You have to add it yourself if you want to write
-the string to another file. Just something to keep in mind.
+the end of line character(s).
 
-### A quick note on little endian vs. big endian
+When you write a string to a file, you have to add the end of line character(s)
+yourself if you want to write a new line.
 
-When working with binary data, you need to know if the data is encoded in
-**little endian** or in **big endian**.
+Open the `TextEndOfLineCharactersExample.java` file in the `05-java-ios`
+directory to see how to read and write text data with end of line characters.
 
-**Little endian** means that the least significant byte is stored first. **Big
-endian** means that the most significant byte is stored first.
+The following line opens a file for writing text data. It will attempt to open
+the file `TextEndOfLineCharactersExample.java` (the current file) in the current
+directory:
 
-For example, the number `0x12345678` is stored as `0x78 0x56 0x34 0x12` in
-little endian and as `0x12 0x34 0x56 0x78` in big endian.
+```java
+InputStream is = new FileInputStream("TextEndOfLineCharactersExample.java");
+Reader reader = new InputStreamReader(is, StandardCharsets.UTF_8);
+BufferedReader br = new BufferedReader(reader);
+```
 
-This is important to know when you read or write binary data. If you read or
-write binary data in the wrong endian, the data will be corrupted.
+Notice that this time, it opens the input file using a `FileInputStream` class
+as binary data. It then uses the class `InputStreamReader` to decode the binary
+data to text data using the `UTF-8` character encoding. And finally, it uses the
+`BufferedReader` class to read the text data with a buffer.
 
-Java uses big endian by default. You can use little endian by using the
-`ByteBuffer` class. We will not cover this in this course.
+The following line opens a file for writing text data. It will attempt to open
+the file `TextEndOfLineCharactersExample.txt` in the current directory:
 
-## Sources, streams and sinks of data
+```java
+OutputStream os = new FileOutputStream("LineEndingsExample.txt");
+Writer writer = new OutputStreamWriter(os, StandardCharsets.UTF_8);
+BufferedWriter bw = new BufferedWriter(writer);
+```
 
-Whenever you want to read or write data, you need to have a source of data and a
-sink of data, using a stream to let the data flow from the source to the sink.
+Notice that this time, it opens the output file using a `FileOutputStream` class
+as binary data. It then uses th class `OutputStreamWriter` to write the file
+with the `UTF-8` character encoding. And finally, it uses a `BufferedWriter`
+class to write the binary data with a buffer.
 
-This representation is an abstraction of the real world. It is a way to
-represent the flow of data from one place to another.
+The following line reads data from the file line by line and writes it to the
+output file with the end of line character:
 
-A **source of data** is **where the data comes from**. It can be a file, a
-network connection, a keyboard, etc. A common term for a source of data is
-something that **produces** data (**a producer**).
+```java
+String line;
+while ((line = br.readLine()) != null) {
+  // Careful: line does not contain end of line characters
+  bw.write(line + END_OF_LINE);
+}
+```
 
-A **sink of data** is **where the data goes**. It can be another file, a network
-connection, a screen, etc. A common term for a sink of data is something that
-**consumes** data (**a consumer**).
+The `readLine()` method reads a line from the file. The line does not contain
+the end of line character(s). You have to add the end of line character(s)
+yourself if you want to write a new line.
 
-A **stream** is **a way to read or write data** from or to a source or a sink.
+Compile and execute the `TextEndOfLineCharactersExample.java` file. This will
+read the content of the file `TextEndOfLineCharactersExample.java` and write the
+file content to the file `TextEndOfLineCharactersExample.txt` with the end of
+line character(s).
 
-## The Java IO API
-
-The [Java documentation](https://docs.oracle.com/en/java/javase/17/docs/api/) is
-separated in modules. The Java IO API is part of the `java.base` module.
-
-In the `java.base` module, there are two main packages to read and write data:
-
-- `java.io`: the standard Java IO API
-- `java.nio`: the Java NIO API
-
-The `java.io` package is called **Java IO API** or the **standard Java IO API**.
-
-The **Java NIO API** was introduced in Java 1.4. It is a more modern API that
-can be more efficient and more flexible than the Java IO API in some use-case.
-It is also more complex to use and is meant for more advanced use cases (writing
-scalable servers for example). We will not cover it in this course.
-
-The documentation of the Java IO API is quite complex. It is not easy to find
-the right class to use for the right use case.
-
-You might need to check several classes before finding the right one.
-
-### Performance and buffering
-
-When reading and writing data, data can be read or written byte by byte or using
-a buffer.
-
-If you don’t use buffered IOs, calling `read()` will issue one system call to
-retrieve one single byte... which is not efficient.
-
-With buffered IOs, calling `read()` will pre-fetch "several" bytes and store it
-in a temporary memory space (i.e. in a buffer).
-
-"Several" defines the buffer size. Subsequent calls to `read()` will be able to
-fetch bytes directly from the buffer, which is very fast.
-
-When the buffer is empty, a new system call will be issued to fetch more bytes.
-
-If the buffer is full, a new system call will be issued to flush the buffer.
-
-If the buffer is half full, it must be flushed before it can be filled again.
-
-Calling `close()` will automatically flush the buffer as well but sometimes you
-want to flush the buffer without closing the file for performance reasons.
-
-If you want to be sure that all data is written to the file, you need to call
-`flush()` manually. Calling `flush()` will make a system call to write the
-content of the buffer to the file and empty the buffer.
+While the `System.lineSeparator()` method returns the end of line character(s)
+for the current operating system, it is better to set a constant for the end of
+line character(s) in your program. This way, you can control the end of line
+character(s) and make sure that the file is written correctly for all systems.
 
 ### Dealing with errors
 
@@ -278,28 +733,131 @@ If you do not close the file properly, you might lose data or corrupt the file.
 When accessing a file, many things can go wrong. The file might not exist, the
 file might be corrupted, the file might be locked by another process, etc.
 
-When you open a file, you need to handle these errors. You can do this by
-catching the `IOException` exception. This is done with a
-`try`/`catch`/`finally` block or, more recently, with a `try-with-resources`
-block. Using the `try-with-resources` block is the preferred way to handle
-errors as it is more concise and less error-prone, however, the class must
-implement the
-[`AutoCloseable`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/AutoCloseable.html)
-interface.
+When you open a file, you need to handle these errors **not matter if you are
+work with binary or text data**. This is done with a `try-catch-finally` block
+or, more recently, with a `try-with-resources` block.
 
 The common exceptions you might encounter are:
 
 - `FileNotFoundException`: the file does not exist
-- `IOException`: the file cannot be accessed for other reasons
 - `UnsupportedEncodingException`: the file is encoded in an unsupported
   character encoding
+- `IOException`: the file cannot be accessed for other reasons
 
-The same applies when you use the network: the network might be down, the
-connection might be lost, etc.
+The `FileNotFoundException` and `UnsupportedEncodingException` exceptions are
+ihnerited from the `IOException` exception.
+
+The same applies when you will use the network in future chapters: the network
+might be down, the connection might be lost, etc.
 
 You will have to manage these errors when you will work with the network.
 
-### When to use which IO?
+Open the `DealingWithErrorsExample.java` file in the `05-java-ios` directory to
+see how to handle errors when reading and writing data.
+
+The following function is a bad example of how to handle errors when reading and
+writing binary data:
+
+```java
+public static void tryCatchWithoutFinallyExample() {
+  try {
+    Reader reader = new FileReader("missing.file");
+    Writer writer = new FileWriter("missing.file");
+
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  }
+}
+```
+
+It catches an exception but does not close the resources properly as seen in the
+previous sections.
+
+Even if the reader and writer would be closed after the
+`writer.write(reader.read());` line, it would be enough: if an error occurs when
+trying to write to the file (for reasons such as bad permissions, another
+process locking the file, etc.), the resources would not be closed properly.
+
+This can lead to resource leaks (= resources that are not closed properly and
+that are not available for other parts of the program) and corrupted files.
+
+A better way to handle errors is to use the `try-catch-finally` block as seen in
+the following function:
+
+```java
+public static void tryCatchFinallyExample() {
+  Reader reader = null;
+  Writer writer = null;
+
+  try {
+    reader = new FileReader("missing.file");
+    writer = new FileWriter("missing.file");
+
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  } finally {
+    if (writer != null) {
+      try {
+        writer.close();
+      } catch (IOException e) {
+        System.out.println("Exception in close writer: " + e);
+      }
+    }
+
+    if (reader != null) {
+      try {
+        reader.close();
+      } catch (IOException e) {
+        System.out.println("Exception in close reader: " + e);
+      }
+    }
+  }
+}
+```
+
+Using the `finally` block, the resources are closed properly whenever an error
+occurs or not. A `finally` block is always executed, even if no exception is
+thrown.
+
+This solution is better than the previous one, but it is verbose and hard to
+read. Let's see how to handle errors with the `try-with-resources` block.
+
+The `try-with-resources` block is a more concise and less error-prone way to
+handle errors when reading and writing data as seen in the following function:
+
+```java
+public static void tryWithResourcesExample() {
+  try (Reader reader = new FileReader("missing.file");
+      Writer writer = new FileWriter("missing.file")) {
+    writer.write(reader.read());
+  } catch (IOException e) {
+    System.out.println("Exception: " + e);
+  }
+}
+```
+
+The `try-with-resources` block is a `try` block that declares one or more
+resources. A resource is an object that must be closed after the program is done
+with it. The `try-with-resources` block ensures that each resource is closed at
+the end of the block.
+
+While both `try-catching-finally` and `try-with-resources` blocks are valid ways
+to handle errors when reading and writing data, the `try-with-resources` block
+is the preferred way as it is more concise and less error-prone (you do not have
+to remember to close the resources in the `finally` block).
+
+In order for a class to be used in a `try-with-resources` block, it must
+implement the
+[`AutoCloseable`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html)
+interface. All the classes presented in this chapter implement the
+`AutoCloseable` interface, whatever you are dealing with binary or text data.
+
+We highly recommend you to use the `try-with-resources` block as it is the
+preferred way to handle errors and close resources.
+
+## When to use which IO?
 
 The Java IO API is very powerful. It can be used to read and write data from and
 to different sources and sinks of data using different types of streams.
@@ -311,47 +869,57 @@ case:
 
 ![Decision tree to choose the right IO for the right use case](./images/when-to-use-which-io.png)
 
+## Common pitfalls
+
+Always set the character encoding when you read or write text data. If you do
+not set the character encoding, the default character encoding will be used,
+which is not what you want as it can differ from other systems.
+
+Always close the file after you have read or written data. If you do not close
+the file, you might lose data or corrupt the file as other processes might not
+
+Always handle errors when you read or write data. If you do not handle errors,
+your program might crash and leave the files in an inconsistent state.
+
+While reading the Java IO API, you might encounter the class `PrintWriter`. The
+`PrintWriter` class is a subclass of the `Writer` class that is used to write
+text data. It provides many conveniences where you do not have to handle the
+`flush()` and `close()` methods yourself. However, it does not handle errors
+properly as it does not throw exceptions when an error occurs. We will ask you
+not to use the `PrintWriter` class in this course. It is better to use the
+`BufferedWriter` class to write text data and handle errors properly.
+
+You might also encounter the `System.lineSeparator()` method. The
+`System.lineSeparator()` method returns the end of line character(s) for the
+current operating system. As it is a system-dependent property, it is better to
+set a constant for the end of line character(s) in your program.
+
 ## Practical content
 
-### Check and try-out the code examples
+In this practical content, you will use all the knowledge you have learned in
+this chapter to benchmark the different types of streams.
 
-In this section, you will learn how to read and write data from and to different
-sources and sinks of data using different types of streams.
+You will learn how to read and write data from and to different sources and
+sinks of data using different types of streams and benchmark the different types
+of streams to see which one is the most efficient for different use cases.
 
-#### Clone the repository
-
-Clone the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository to get the code examples.
-
-#### Explore and run the code examples
-
-In the `05-java-ios` directory, checkout the `README.md` file to learn how to
-run the code examples.
-
-Take some time to explore the code examples. Run them and see what they do.
-
-### Benchmarking the different types of streams
-
-In this section, you will learn how to read and write data from and to different
-sources and sinks of data using different types of streams.
-
-#### Create and clone the repository
+### Create and clone the repository
 
 You can create a new GitHub project using the template we have prepared for you.
 When you create a new repository, you can choose to use a template. Select the
 `heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content` template as
 shown in the following screenshot:
 
-> [!WARNING]  
+> [!WARNING]
+>
 > Please make sure that the repository owner is your personal GitHub account and
 > not the `heig-vd-dai-course` organization.
 
-![Create the new repository from the template](./images/practical-content-create-and-clone-the-repository.png)
+![Create the new repository from the template](./images/create-and-clone-the-template-repository.png)
 
 Clone the repository locally.
 
-#### Implement the different types of streams
+### Implement the different types of streams
 
 Take some time to explore the codebase from the template we have prepared for
 you.
@@ -368,31 +936,28 @@ efficient for your use case:
 - Open a text file for buffer reading
 - Write a text file for buffer writing
 
-You will also generate random data to benchmark the different types of streams.
+You will then execute your CLI tool to write data of a certain size and read
+them back to compare the execution time.
 
 Read the course material carefully to find the right classes to use. You can
 also have a look at the Java documentation to find more details on the right
 classes to use and how to use them:
-<https://docs.oracle.com/en/java/javase/17/docs/api/index.html>.
+<https://docs.oracle.com/en/java/javase/21/docs/api/>.
 
-Please be aware that you **always** have to set the encoding when you read or
-write text data. If you do not set the encoding, the default encoding will be
-used, which is not what you want.
-
-#### Compare the results
+### Compare the results
 
 Generate different files with different sizes (1B, 1KiB, 1MiB, 5MiB). Compare
 the results with the execution time of the different types of streams. Which one
 is the most efficient for each use case?
 
-#### Share your results
+### Share your results
 
 Share your results in the GitHub Discussions of this organization:
 <https://github.com/orgs/heig-vd-dai-course/discussions>.
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2023-2024 - Java IOs benchmarking - First name Last Name
+- **Title**: DAI 2024-2025 - Java IOs benchmarking - First name Last Name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository, the results of your
   benchmarking in Markdown table and add your conclusions to the following
@@ -401,7 +966,7 @@ Create a new discussion with the following information:
   - Why is it more efficient than the other types of streams?
   - What is the difference between binary data and text data?
   - What is a character encoding?
-  - Why is this methodology important?
+  - Why is this benchmark methodology important?
 
 This will notify us that you have completed the exercise and we can check your
 work.
@@ -431,7 +996,8 @@ when reading and writing data.
 You have learned how to benchmark the different types of streams to find the
 most efficient one for your use case.
 
-You have also learned how to handle errors to avoid your program to crash.
+You have also learned how to handle errors to avoid your program to crash and
+leave the files in an inconsistent state.
 
 ### Test your knowledge
 
@@ -460,7 +1026,12 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-You will start the practical work!
+In the next chapter, you will learn the following topics:
+
+- Docker and Docker Compose: how to containerize your applications
+  - What is an image?
+  - What is a container?
+  - How to try out new software without installing it?
 
 ## Additional resources
 
@@ -483,3 +1054,7 @@ discuss it!
 
 - Main illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin)
   on [Unsplash](https://unsplash.com/photos/audio-mixer-set-4h0HqC3K4-c)
+
+```
+
+```
