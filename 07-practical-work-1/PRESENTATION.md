@@ -76,11 +76,13 @@ _paginate: false
 
 ## Practical work 1
 
-- A CLI to process files
+- A CLI to process files - you can choose what the CLI will do (you can be
+  creative!)
+  - Extract metrics from a text file
+  - Grayscale a JPEG file
+  - ...
 - Use Java, Maven and [picocli](https://picocli.info/)
-- You can choose what the CLI will do (you can be creative!)
-  - Transform the input file to lowercase/uppercase, convert a PNG to JPEG, ...
-- Publish your CLI on GitHub
+- Publish your CLI on GitHub using a proper Git workflow
 
 ![bg right:40%][illustration]
 
@@ -89,7 +91,7 @@ _paginate: false
 - Compile the project
 
 ```sh
-mvn clean package
+./mvnw clean package
 ```
 
 - Run the CLI without any arguments
@@ -102,16 +104,16 @@ java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar
 
 ```text
 Missing required options: '--input=<inputFile>', '--output=<outputFile>'
-Usage: IoProcessing [-hV] -i=<inputFile> [-ie=<inputEncoding>] -o=<outputFile>
-                    [-oe=<outputEncoding>] [COMMAND]
+Usage: practical-work-1-demo-1.0-SNAPSHOT.jar [-hV] -i=<inputFile>
+       [-I=<inputEncoding>] -o=<outputFile> [-O=<outputEncoding>] [COMMAND]
 Process an input file and return a result.
   -h, --help                Show this help message and exit.
   -i, --input=<inputFile>   The input file.
-      -ie, --input-encoding=<inputEncoding>
-                            The input file encoding.
+  -I, --input-encoding=<inputEncoding>
+                            The input file encoding (default: UTF-8).
   -o, --output=<outputFile> The output file.
-      -oe, --output-encoding=<outputEncoding>
-                            The output file encoding.
+  -O, --output-encoding=<outputEncoding>
+                            The output file encoding (default: UTF-8).
   -V, --version             Print version information and exit.
 Commands:
   uppercase  Converts the input file to uppercase.
@@ -120,52 +122,60 @@ Commands:
 
 ---
 
-- Run the CLI with the `uppercase` command
+- Run the CLI with the `uppercase` command:
 
-```sh
-java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar -i input.txt -o output.txt uppercase
-```
+  ```sh
+  java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
+    --input input.txt \
+    --output output.txt \
+    uppercase
+  ```
 
-- You can also specify the encoding of the input and output files
+- You can also specify the encoding of the input and output files:
 
-```sh
-java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
-    -i input.txt -ie UTF-8 \
-    -o output.txt -oe US-ASCII uppercase
-```
+  ```sh
+  java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
+    --input input.txt --input-encoding UTF-8 \
+    --output output.txt --output-encoding US-ASCII \
+    uppercase
+  ```
 
 ## See the result
 
-```sh
-$> cat input.txt
-Coucou ça va ?
-```
+- Input file:
 
-```sh
-$> cat output.txt
-COUCOU ?A VA ?
-```
+  ```text
+  $ cat input.txt
+  Bonjour, comment ça va aujourd'hui ?
+  ```
 
-Why is the `ç` not converted to uppercase?
+- Output file:
+
+  ```text
+  $ cat output.txt
+  BONJOUR, COMMENT ?A VA AUJOURD'HUI ?
+  ```
+
+- Why is the `ç` not converted to uppercase?
 
 ## Practical work presentations
 
-The practical work presentations will take place on **Tuesday 10.10.2023** in
-the **room B38**, at the very end of the corridor next to the door entry.
+The practical work presentations will take place on:
 
-We only have **5 minutes per group**. Please be prepared to present your work.
-You decide what you want to show us and how you want to present it.
+- **Tuesday 10.10.2023** in **room B38** (class A)
+- **Wednesday 11.10.2023** in **room B38** (class B)
+
+We only have **5 minutes per group**. You decide what you want to show us and
+how you want to present it.
 
 Come 5 minutes before your time slot with your computer.
 
+**Please state your group on GitHub Discussions as soon as possible.**
+
+<!--
 The order of presentation is random and is stated in the next slides.
 
 ---
-
-<!--
-**Please state your group on GitHub Discussions as soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical presentations.**
--->
 
 | #   | Group                                   | Passage |
 | --- | --------------------------------------- | ------- |
@@ -201,14 +211,7 @@ it will help us to plan the practical presentations.**
 | 19  | Simon Guggisberg and Jeremiah Steiner | 17:48   |
 | 20  | Sergey Komarov                        | 17:54   |
 | 21  | Pirakas Anthon                        | 18:00   |
-
-## Find the practical work
-
-<!-- _class: lead -->
-
-You can find the practical work for this part on [GitHub][practical-work].
-
-[![bg right w:75%][practical-work-qr-code]][practical-work]
+-->
 
 ## Grades and feedback
 
@@ -221,6 +224,14 @@ Each criterion will be accompanied by a comment explaining the points obtained,
 a general comment on your work and the final grade.
 
 If you have any questions about the evaluation, you can contact us!
+
+## Find the practical work
+
+<!-- _class: lead -->
+
+You can find the practical work for this part on [GitHub][practical-work].
+
+[![bg right w:75%][practical-work-qr-code]][practical-work]
 
 ## Finished? Was it easy? Was it hard?
 

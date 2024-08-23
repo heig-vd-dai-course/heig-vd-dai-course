@@ -22,28 +22,30 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Table of contents
 
-- [Table of contents](#table-of-contents)
-- [Introduction](#introduction)
-- [Objectives](#objectives)
-- [Group composition](#group-composition)
-- [Grading criteria](#grading-criteria)
-  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
-  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
-  - [Category 3 - Java IOs](#category-3---java-ios)
-  - [Category 4 - Presentation and questions](#category-4---presentation-and-questions)
-- [Constraints](#constraints)
-- [Remarks](#remarks)
-- [Submission](#submission)
-- [Grades and feedback](#grades-and-feedback)
-- [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-- [Sources](#sources)
+- [Practical work 1](#practical-work-1)
+  - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Objectives](#objectives)
+  - [Group composition](#group-composition)
+  - [Grading criteria](#grading-criteria)
+    - [Category 1 - Meta](#category-1---meta)
+    - [Category 2 - Git, GitHub and Markdown](#category-2---git-github-and-markdown)
+    - [Category 3 - Java, IntelliJ IDEA and Maven](#category-3---java-intellij-idea-and-maven)
+    - [Category 4 - Java IOs](#category-4---java-ios)
+    - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
+  - [Constraints](#constraints)
+  - [Remarks](#remarks)
+  - [Submission](#submission)
+  - [Grades and feedback](#grades-and-feedback)
+  - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+  - [Sources](#sources)
 
 ## Introduction
 
-We use CLI tools every day. For example, we use Git (with its `git` command line
-interface) to manage our code , Maven (with its `mvn` and `mvnw` command line
-interface) to build our projects, Java (with its `javac` and `java` command line
-interface) to run our programs, etc.
+We use command line interface (CLI) tools every day. For example, we use Git to
+manage our code (with its `git` command line interface), Maven to build our
+projects (with its `mvn` and `mvnw` command line interface), Java (with its
+`javac` and `java` command line interface) to run our programs, etc.
 
 In this practical work, you will create a CLI using
 [picocli](https://picocli.info/) to process files.
@@ -99,7 +101,7 @@ it is too complex or too simple.
 
 - 0 point - The work is insufficient
 - 0.1 point - The work is done
-- 0.2 point - The work is well done (without being perfect)
+- 0.2 point - The work is well done (without the need of being perfect)
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
 
@@ -119,7 +121,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 | 5   | Pull requests linked to the Issues are created, discussed and reviewed all along the project to integrate new work iteratively                                                                                                      |    0.2 |
 | 6   | The issue, pull request and commit messages are descriptive so a new comer can understand what has been done                                                                                                                        |    0.2 |
 | 7   | The commits are signed to increase the security and the confidence of the project                                                                                                                                                   |    0.2 |
-| 8   | The repository contains a gitignore file to ignore all unwanted files (Maven output, Intellij IDEA files related to local computer, etc.) to keep the repository clean/small and to avoid security leaks                            |    0.2 |
+| 8   | The repository contains a gitignore file to ignore all unwanted files (Maven output, IntelliJ IDEA files related to local computer, etc.) to keep the repository clean/small and to avoid security leaks                            |    0.2 |
 | 9   | The README is well structured and explains the purpose of your application so new users can understand it                                                                                                                           |    0.2 |
 | 10  | The README explains how to use your application with examples and outputs so a new user/developer can understand your application without having to run it locally                                                                  |    0.2 |
 | 11  | The README describes explicit commands to clone and build your application with Git and Maven so new developers can start and develop your project on their own computer                                                            |    0.2 |
@@ -129,7 +131,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 | #   | Criterion                                                                                                                                                                                          | Points |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 13  | The codebase is well structued, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase                                                     |    0.2 |
+| 13  | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase                                                    |    0.2 |
 | 14  | The codebase contains the two IntelliJ IDEA configuration files (_"Run the application"_ and _"Package application as JAR file"_) so developers can run and build the application within their IDE |    0.2 |
 | 15  | The codebase contains the Maven wrapper configuration file and scripts so developers can build the application without an IDE and without having to install Maven                                  |    0.2 |
 | 16  | The codebase is built with Maven and outputs an executable JAR file so the application can be ran everywhere Java is installed                                                                     |    0.2 |
@@ -156,7 +158,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 ## Constraints
 
 - The application must be written in Java, compatible with Java 21
-- The application must be built using Maven wlth the `maven-shade-plugin` plugin
+- The application must be built using Maven with the `maven-shade-plugin` plugin
 - The application must use the picocli dependency
 - You can only use the Java classes seen in the course to process the files
 - Your application must be slightly more complex and slightly different than the
