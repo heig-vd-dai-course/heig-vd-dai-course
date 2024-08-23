@@ -36,7 +36,6 @@ The entire course planning for the semester is available at
 - [4. Java, IntelliJ IDEA and Maven (2 periods)](./04-java-intellij-idea-and-maven/README.md)
 - [5. Java IOs (2 periods)](./05-java-ios/README.md)
 - [6. Docker and Docker Compose (2 periods)](./06-docker-and-docker-compose/README.md)
-  (WIP)
 - [7. Practical work 1 (8 periods)](./07-practical-work-1/README.md)
 - [8. Evaluation 1 (2 periods)](./08-evaluation-1/README.md) (WIP)
 - [9. Conclusions to part 1](./09-conclusion-to-part-1/README.md) (WIP)

@@ -1,6 +1,6 @@
 # Docker and Docker Compose
 
-- Time in class: 2 periods
+- Time in class: 2 periods (3 x 30 minutes)
 - Presentation
   [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-docker-and-docker-compose/)
   ·
