@@ -38,7 +38,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
   - [What will you do next?](#what-will-you-do-next)
   - [Additional resources](#additional-resources)
-- [Part 2 - Networking with Docker and Docker Compose](#part-2---networking-with-docker-and-docker-compose)
+- [Part 2 - Package your own applications with Docker and Docker Compose](#part-2---package-your-own-applications-with-docker-and-docker-compose)
   - [Introduction](#introduction-1)
   - [Write a Dockerfile, build and run an image with Docker](#write-a-dockerfile-build-and-run-an-image-with-docker)
   - [Build and run an application with Docker Compose](#build-and-run-an-application-with-docker-compose)
@@ -47,7 +47,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [What will you do next?](#what-will-you-do-next-1)
   - [Additional resources](#additional-resources-1)
   - [Solution](#solution)
-- [Part 3 - Publishing and using images with Docker and Docker Compose](#part-3---publishing-and-using-images-with-docker-and-docker-compose)
+- [Part 3 - Publish your own applications with Docker and Docker Compose](#part-3---publish-your-own-applications-with-docker-and-docker-compose)
   - [Introduction](#introduction-2)
   - [Publish an image on GitHub Container Registry](#publish-an-image-on-github-container-registry)
   - [Use the published image with Docker](#use-the-published-image-with-docker)
@@ -720,7 +720,7 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-## Part 2 - Networking with Docker and Docker Compose
+## Part 2 - Package your own applications with Docker and Docker Compose
 
 > [!IMPORTANT]
 >
@@ -1486,7 +1486,7 @@ repository.
 If you have any questions about the solution, feel free to open an issue to
 discuss it!
 
-## Part 3 - Publishing and using images with Docker and Docker Compose
+## Part 3 - Publish your own applications with Docker and Docker Compose
 
 > [!IMPORTANT]
 >
