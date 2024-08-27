@@ -22,23 +22,22 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Table of contents
 
-- [Practical work 1](#practical-work-1)
-  - [Table of contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Objectives](#objectives)
-  - [Group composition](#group-composition)
-  - [Grading criteria](#grading-criteria)
-    - [Category 1 - Meta](#category-1---meta)
-    - [Category 2 - Git, GitHub and Markdown](#category-2---git-github-and-markdown)
-    - [Category 3 - Java, IntelliJ IDEA and Maven](#category-3---java-intellij-idea-and-maven)
-    - [Category 4 - Java IOs](#category-4---java-ios)
-    - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
-  - [Constraints](#constraints)
-  - [Remarks](#remarks)
-  - [Submission](#submission)
-  - [Grades and feedback](#grades-and-feedback)
-  - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-  - [Sources](#sources)
+- [Table of contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Objectives](#objectives)
+- [Group composition](#group-composition)
+- [Grading criteria](#grading-criteria)
+  - [Category 1 - Meta](#category-1---meta)
+  - [Category 2 - Git, GitHub and Markdown](#category-2---git-github-and-markdown)
+  - [Category 3 - Java, IntelliJ IDEA and Maven](#category-3---java-intellij-idea-and-maven)
+  - [Category 4 - Java IOs](#category-4---java-ios)
+  - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
+- [Constraints](#constraints)
+- [Remarks](#remarks)
+- [Submission](#submission)
+- [Grades and feedback](#grades-and-feedback)
+- [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+- [Sources](#sources)
 
 ## Introduction
 
@@ -68,9 +67,9 @@ methodology but please do not copy/paste code from other groups.
 
 ## Objectives
 
-- Create a CLI to process files using the Java classes seen in class
-- Practice a Git workflow to work in a team
-- Share common configurations (IDE + build tool)
+- Create a CLI to process files with Java IOs
+- Practice Java, Maven and [picocli](https://picocli.info/)
+- Practice a Git workflow to share your work with your team
 
 ## Group composition
 
@@ -160,14 +159,15 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 - The application must be written in Java, compatible with Java 21
 - The application must be built using Maven with the `maven-shade-plugin` plugin
 - The application must use the picocli dependency
-- You can only use the Java classes seen in the course to process the files
+- You can only use the Java classes seen in the course to process the files (you
+  can use other libraries to help you once the files are opened)
 - Your application must be slightly more complex and slightly different than the
-  ones presented during the course (we emphasize the word **slightly**, no need
-  to shoot for the moon!)
+  examples presented during the course (we emphasize the word **slightly**, no
+  need to shoot for the moon!)
 
 ## Remarks
 
-Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
+Remember the KISS principle: Keep it simple, silly! Sometimes it is better to
 use a simple solution than a complex one.
 
 If your implementation is too complex, we might penalize you.
@@ -184,8 +184,8 @@ use signed pull requests to merge your work.
 You must update the GitHub Discussion you created previously with the following
 information:
 
-- **Description**: The link to your repository as well as the latest commit hash
-  of your work before submission
+- **Description**: The link to your repository as well as the commit hash you
+  want to submit
 
 **Your work is due on the day before the presentations at 23h59**. Check the
 [Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
@@ -233,6 +233,15 @@ practical work?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 

@@ -52,9 +52,9 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
 [illustration]:
   https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
-[practical-work]:
+[course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
-[practical-work-qr-code]:
+[course-material-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
 
 # Practical work 1
@@ -74,17 +74,15 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Practical work 1
+## Objectives
 
-- A CLI to process files - you can choose what the CLI will do (you can be
-  creative!)
-  - Extract metrics from a text file
-  - Grayscale a JPEG file
-  - ...
-- Use Java, Maven and [picocli](https://picocli.info/)
-- Publish your CLI on GitHub using a proper Git workflow
+- Create a command line tool (CLI) to process files with Java IOs
+- Practice Java, Maven and [picocli](https://picocli.info/)
+- Practice a Git workflow to share your work with your team
+- You can choose what the CLI will do (you can be creative! - extract metrics
+  from a text file, grayscale a JPEG file, etc.)
 
-![bg right:40%][illustration]
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## Demo
 
@@ -158,19 +156,116 @@ Commands:
 
 - Why is the `ç` not converted to uppercase?
 
-## Practical work presentations
+## Group composition
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Group composition
+
+- 2 students per group
+- Create a GitHub Discussion to:
+  - Announce your group members
+  - Announce your idea (even a draft is fine)
+- **Do it as soon before next week!**
+  - This helps us to plan the presentations
+
+![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
+
+## Grading criteria
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Grading criteria
+
+You can find all the grading criteria in the [course material][course-material]:
+
+- 0 point - The work is insufficient
+- 0.1 point - The work is done
+- 0.2 point - The work is well done (without the need of being perfect)
+
+Maximum grade: 25 points \* 0.2 + 1 = 6
+
+![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
+
+## Constraints
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Constraints
+
+- The application must be written in Java, compatible with Java 21
+- The application must be built using Maven with the `maven-shade-plugin` plugin
+- The application must use the picocli dependency
+- You can only use the Java classes seen in the course to process the files (you
+  can use other libraries to help you once the files are opened)
+- Your application must be slightly more complex and slightly different than the
+  examples presented during the course
+
+## Remarks
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### The KISS principle
+
+- Keep it simple, silly!
+- Don't try to do too much
+- Focus on the essentials and **do it well**
+
+Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
+
+<small>If you have not seen the movie scene, check it here:
+[YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0).</small>
+
+![bg right:40%](./images/asterix-et-obelix-mission-cleopatre-porte-au-plafond.png)
+
+## Submission
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Submission
+
+- Update the GitHub Discussion with the link to your repository to include:
+  - A link to your GitHub repository
+  - The commit hash of the version you want to submit
+
+**Your work is due on the day before the presentations at 23h59**. Check the
+[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
+date.
+
+## Grades and feedback
+
+Grades will be entered into GAPS, followed by an email with the feedback.
+
+The evaluation will use exactly the same grading grid as shown in the course
+material.
+
+Each criterion will be accompanied by a comment explaining the points obtained,
+a general comment on your work and the final grade.
+
+If you have any questions about the evaluation, you can contact us!
+
+## Presentations
 
 The practical work presentations will take place on:
 
-- **Tuesday 10.10.2023** in **room B38** (class A)
-- **Wednesday 11.10.2023** in **room B38** (class B)
+- **TODO XX.YY.202Z** in **room TODO** (class A)
+- **TODO 11.10.2023** in **room TODO** (class B)
 
 We only have **5 minutes per group**. You decide what you want to show us and
-how you want to present it.
+how you want to present it. **Come 5 minutes before your time slot** with your
+computer.
 
-Come 5 minutes before your time slot with your computer.
-
-**Please state your group on GitHub Discussions as soon as possible.**
+**Please state your group on GitHub Discussions before next week.**
 
 <!--
 The order of presentation is random and is stated in the next slides.
@@ -213,25 +308,13 @@ The order of presentation is random and is stated in the next slides.
 | 21  | Pirakas Anthon                        | 18:00   |
 -->
 
-## Grades and feedback
-
-Grades will be entered into GAPS, followed by an email with the feedback.
-
-The evaluation will use exactly the same grading grid as shown in the course
-material.
-
-Each criterion will be accompanied by a comment explaining the points obtained,
-a general comment on your work and the final grade.
-
-If you have any questions about the evaluation, you can contact us!
-
 ## Find the practical work
 
 <!-- _class: lead -->
 
-You can find the practical work for this part on [GitHub][practical-work].
+You can find the practical work for this part on [GitHub][course-material].
 
-[![bg right w:75%][practical-work-qr-code]][practical-work]
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 
