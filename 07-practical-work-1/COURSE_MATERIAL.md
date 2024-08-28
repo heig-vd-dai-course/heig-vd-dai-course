@@ -189,18 +189,27 @@ use signed pull requests to merge your work.
 
 ## Submission
 
+**Your work is due on the day before the presentations at 23h59**. Check the
+[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
+date.
+
+> [!IMPORTANT]
+>
+> Any minutes after the deadline will result in a penalty of -1 point on the
+> final grade. Each day of delay will result in a penalty of -1 point on the
+> final grade.
+
 You must update the GitHub Discussion you created previously with the following
 information:
 
 - **Description**: The link to your repository as well as the commit hash you
   want to submit
 
-**Your work is due on the day before the presentations at 23h59**. Check the
-[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
-date.
-
-Any commit after the deadline will not be taken into account. Each day of delay
-will result in a penalty of -1 point on the final grade.
+> [!IMPORTANT]
+>
+> If you do not update the GitHub Discussion with the link to your repository
+> and the commit hash before the deadline, it is considered as a late submission
+> and you will be penalized.
 
 ## Grades and feedback
 

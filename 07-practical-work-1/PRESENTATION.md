@@ -248,13 +248,13 @@ More details for this section in the [course material][course-material].
 
 ### Submission
 
-- Update the GitHub Discussion with the link to your repository to include:
-  - A link to your GitHub repository
-  - The commit hash of the version you want to submit
-
 **Your work is due on the day before the presentations at 23h59**. Check the
 [Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
 date.
+
+- Update the GitHub Discussion with the link to your repository to include:
+  - A link to your GitHub repository
+  - The commit hash of the version you want to submit
 
 ## Grades and feedback
 
