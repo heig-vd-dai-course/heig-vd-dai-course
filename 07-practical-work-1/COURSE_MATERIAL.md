@@ -159,7 +159,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 | #   | Criterion                                                                                                                                                                | Points |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
 | 23  | The application is presented and a demo is made as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how |    0.2 |
-| 24  | The presentation is clear and well prepared. Everyone speaks during the presentation                                                                                     |    0.2 |
+| 24  | The presentation is clear and well prepared - everyone speaks during the presentation                                                                                    |    0.2 |
 | 25  | The answers to the questions are correct                                                                                                                                 |    0.2 |
 
 ## Constraints
