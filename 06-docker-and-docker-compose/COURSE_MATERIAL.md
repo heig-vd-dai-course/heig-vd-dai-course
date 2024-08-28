@@ -352,7 +352,7 @@ docker run --rm -it debian /bin/bash
 docker run --rm -it fedora /bin/bash
 
 # Run an Alpine container
-docker run --rm -it alpine /bin/sh
+docker run --rm -it alpine /bin/ash
 ```
 
 As all these containers are (certainly) not on your computer yet, Docker will
