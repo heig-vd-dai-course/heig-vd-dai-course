@@ -27,36 +27,74 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
   - [Install Docker and Docker Compose](#install-docker-and-docker-compose)
   - [Check and run the code examples](#check-and-run-the-code-examples)
-- [Part 1 - Basics of Docker and Docker Compose](#part-1---basics-of-docker-and-docker-compose)
-  - [Introduction](#introduction)
-  - [Bare metal, virtualization and containerization](#bare-metal-virtualization-and-containerization)
-  - [OCI, images, containers and registries](#oci-images-containers-and-registries)
-  - [Docker](#docker)
-  - [Docker Compose](#docker-compose)
-  - [Docker Hub and GitHub Container Registry](#docker-hub-and-github-container-registry)
-  - [Conclusion](#conclusion)
-  - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-  - [What will you do next?](#what-will-you-do-next)
-  - [Additional resources](#additional-resources)
-- [Part 2 - Package your own applications with Docker and Docker Compose](#part-2---package-your-own-applications-with-docker-and-docker-compose)
-  - [Introduction](#introduction-1)
-  - [Write a Dockerfile, build and run an image with Docker](#write-a-dockerfile-build-and-run-an-image-with-docker)
-  - [Build and run an application with Docker Compose](#build-and-run-an-application-with-docker-compose)
-  - [Conclusion](#conclusion-1)
-  - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard-1)
-  - [What will you do next?](#what-will-you-do-next-1)
-  - [Additional resources](#additional-resources-1)
-  - [Solution](#solution)
-- [Part 3 - Publish your own applications with Docker and Docker Compose](#part-3---publish-your-own-applications-with-docker-and-docker-compose)
-  - [Introduction](#introduction-2)
-  - [Publish an image on GitHub Container Registry](#publish-an-image-on-github-container-registry)
-  - [Use the published image with Docker](#use-the-published-image-with-docker)
-  - [Use the published image with Docker Compose](#use-the-published-image-with-docker-compose)
-  - [Conclusion](#conclusion-2)
-  - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard-2)
-  - [What will you do next?](#what-will-you-do-next-2)
-  - [Additional resources](#additional-resources-2)
-  - [Solution](#solution-1)
+- [Bare metal, virtualization and containerization](#bare-metal-virtualization-and-containerization)
+  - [Bare metal](#bare-metal)
+  - [Virtualization](#virtualization)
+  - [Containerization](#containerization)
+- [OCI, images, containers and registries](#oci-images-containers-and-registries)
+  - [Docker Hub](#docker-hub)
+  - [GitHub Container Registry](#github-container-registry)
+  - [Alternatives](#alternatives)
+  - [Resources](#resources)
+- [Docker](#docker)
+  - [Dockerfile specification](#dockerfile-specification)
+  - [Summary](#summary)
+  - [Cheatsheet](#cheatsheet)
+  - [Alternatives](#alternatives-1)
+  - [Resources](#resources-1)
+- [Docker Compose](#docker-compose)
+  - [Docker Compose specification](#docker-compose-specification)
+  - [Summary](#summary-1)
+  - [Cheatsheet](#cheatsheet-1)
+  - [Alternatives](#alternatives-2)
+  - [Resources](#resources-2)
+- [Package your own applications with Docker](#package-your-own-applications-with-docker)
+- [Publish your own applications with Docker](#publish-your-own-applications-with-docker)
+- [Run your own applications with Docker and Docker Compose](#run-your-own-applications-with-docker-and-docker-compose)
+- [Conclusion](#conclusion)
+  - [What did you do and learn?](#what-did-you-do-and-learn)
+  - [Test your knowledge](#test-your-knowledge)
+- [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+- [What will you do next?](#what-will-you-do-next)
+- [Additional resources](#additional-resources)
+- [Introduction](#introduction)
+- [Write a Dockerfile, build and run an image with Docker](#write-a-dockerfile-build-and-run-an-image-with-docker)
+  - [Write, build and run a simple Dockerfile](#write-build-and-run-a-simple-dockerfile)
+  - [Write, build and run a more complex Dockerfile](#write-build-and-run-a-more-complex-dockerfile)
+  - [Write, build and run an even more complex Dockerfile](#write-build-and-run-an-even-more-complex-dockerfile)
+  - [Delete the images](#delete-the-images)
+- [Build and run an application with Docker Compose](#build-and-run-an-application-with-docker-compose)
+  - [Update the Docker Compose file](#update-the-docker-compose-file)
+  - [Build the image with Docker Compose](#build-the-image-with-docker-compose)
+  - [Run the image with Docker Compose](#run-the-image-with-docker-compose)
+  - [Push the image to GitHub Container Registry](#push-the-image-to-github-container-registry)
+  - [Pull the image from GitHub Container Registry](#pull-the-image-from-github-container-registry)
+  - [Share your Docker Compose application](#share-your-docker-compose-application)
+- [Conclusion](#conclusion-1)
+  - [What did you do and learn?](#what-did-you-do-and-learn-1)
+  - [Test your knowledge](#test-your-knowledge-1)
+- [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard-1)
+- [What will you do next?](#what-will-you-do-next-1)
+- [Additional resources](#additional-resources-1)
+- [Solution](#solution)
+- [Publish an image on GitHub Container Registry](#publish-an-image-on-github-container-registry)
+  - [Create a personal access token](#create-a-personal-access-token)
+  - [Login to GitHub Container Registry](#login-to-github-container-registry)
+  - [Tag the image correctly for GitHub Container Registry](#tag-the-image-correctly-for-github-container-registry)
+  - [Publish the image on GitHub Container Registry](#publish-the-image-on-github-container-registry)
+- [Use the published image with Docker](#use-the-published-image-with-docker)
+  - [Pull the image from GitHub Container Registry](#pull-the-image-from-github-container-registry-1)
+  - [Run the image with Docker](#run-the-image-with-docker)
+- [Use the published image with Docker Compose](#use-the-published-image-with-docker-compose)
+  - [Write a Docker Compose file](#write-a-docker-compose-file)
+  - [Run the application with Docker Compose](#run-the-application-with-docker-compose)
+- [Conclusion](#conclusion-2)
+  - [What did you do and learn?](#what-did-you-do-and-learn-2)
+  - [Test your knowledge](#test-your-knowledge-2)
+- [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard-2)
+- [What will you do next?](#what-will-you-do-next-2)
+- [Additional resources](#additional-resources-2)
+- [Solution](#solution-1)
 - [Optional content](#optional-content)
   - [Docker Compose v1 vs. Docker Compose v2](#docker-compose-v1-vs-docker-compose-v2)
   - [Security considerations](#security-considerations)
@@ -73,15 +111,6 @@ In this chapter, you will learn about the differences between bare metal,
 virtualization and containerization. You will how to use Docker and Docker
 Compose to run applications in containers without the need to install the
 software directly on your computer.
-
-As Docker and Docker Compose offer many features, this chapter is split into
-three parts, corresponding to the three main part of the course:
-
-- Part 1 - Basics of Docker and Docker Compose
-- Part 2 - Networking with Docker and Docker Compose
-- Part 3 - Publishing and using images with Docker and Docker Compose
-
-The content of this chapter will be useful for the rest of the course.
 
 ## Prepare and setup your environment
 
@@ -102,8 +131,8 @@ repository** (not using Docker Desktop):
 
 > [!NOTE]
 >
-> While it is possible to install Docker Desktop on Linux, we would not
-> recommend it. It is better to install Docker Engine and Docker Compose
+> While it is possible to install Docker Desktop on Linux (not WSL), we would
+> not recommend it. It is better to install Docker Engine and Docker Compose
 > directly on your system to avoid any overhead.
 
 Then, follow the post-installation steps to finalize the installation:
@@ -165,17 +194,7 @@ to learn how to run the code examples.
 You now have everything you need to run the code examples. Let's dive into the
 theory!
 
-## Part 1 - Basics of Docker and Docker Compose
-
-### Introduction
-
-In this part, you will learn the basics of Docker and Docker Compose. You will
-learn about the differences between bare metal, virtualization and
-containerization. You will learn how to use Docker and Docker Compose to run
-applications in containers without the need to install the software directly on
-your computer.
-
-### Bare metal, virtualization and containerization
+## Bare metal, virtualization and containerization
 
 Bare metal, virtualization and containerization are three different ways to run
 software on a computer (remember, a server is only a computer - the "Cloud" is
@@ -189,14 +208,14 @@ containerization is to watch the following video:
 You can find this video in the [Additional resources](#additional-resources)
 section for more information.
 
-#### Bare metal
+### Bare metal
 
 Bare metal is the traditional way to run software on a computer. The software is
 installed directly on the computer. The software has access to all the resources
 of the computer. This is the fastest and most straightforward way to run
 software on a computer/server
 
-#### Virtualization
+### Virtualization
 
 Virtualization is another way to run software on a computer. The software is
 installed in a virtual machine. The virtual machine is a virtual computer. The
@@ -209,7 +228,7 @@ Virtualization starts full operating systems. This is quite heavy. It takes time
 to start a virtual machine. It also takes a lot of space and/or ressources on
 the computer/server.
 
-#### Containerization
+### Containerization
 
 Containerization is another way to run software on a computer/server. The
 software is installed in a container. The container is a virtual environment.
@@ -222,7 +241,7 @@ computer/server. It starts only the software needed to run the application but
 in a virtual environment that can also have limited access to the resources of
 the computer/server.
 
-### OCI, images, containers and registries
+## OCI, images, containers and registries
 
 The OCI specification defines a standard for container images. The OCI
 specification is implemented by Docker, but also by other container engines.
@@ -246,22 +265,58 @@ instructions/files that specifies the container.
 
 A container image is stored in a container registry. A container registry is a
 service that stores container images. The most popular container registry is
-[Docker Hub](https://hub.docker.com/). It is a public registry. You can also
-create your own private registry such as the
-[GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
-or
-[GitLab Container Registry](https://docs.gitlab.com/ee/user/packages/container_registry/).
+[Docker Hub](#docker-hub).
 
 A container image can be uploaded/downloaded to/from a container registry.
 
 A container image can be used to create a container. A container is a runnable
-instance of an image. A container is created from an image. It is possible to
-create multiple containers from the same image.
+instance of an image.
 
-A container is isolated from the rest of the computer. It is isolated from other
-containers.
+Containers can be inherited from other containers.
 
-### Docker
+A container is isolated from the rest of the computer as well as from other
+containers. Access to the host system is restricted and must be explicitly
+granted.
+
+### Docker Hub
+
+> Docker Hub is the world's largest library and community for container images.
+>
+> <https://hub.docker.com>
+
+Docker Hub is a public container registry. It is the default registry for
+Docker.
+
+Other container registries are available. Some are public (anyone can pull your
+images), some are private (a username and password are required to pull them).
+
+### GitHub Container Registry
+
+> The Container registry stores container images within your organization or
+> personal account, and allows you to associate an image with a repository.
+>
+> <https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry>
+
+In this course, we will use the GitHub Container Registry to store your images.
+It will allow to store your images in the same place as your code.
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [GitLab Container Registry](https://docs.gitlab.com/ee/user/packages/container_registry/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- _None for now_
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+## Docker
 
 > Docker is a set of platform as a service (PaaS) products that use OS-level
 > virtualization to deliver software in packages called containers.
@@ -366,7 +421,7 @@ The `-it` option is used to run the container in interactive mode. It is used to
 attach the container's standard input, standard output and standard error to the
 terminal.
 
-The `/bin/bash` and `/bin/sh` arguments is used to override the default command
+The `/bin/bash` and `/bin/ash` arguments is used to override the default command
 of the container. The default command of the container is defined in the
 Dockerfile of the image. You will learn more about this later.
 
@@ -376,7 +431,7 @@ when the container is stopped.
 
 To exit the container, you can type `exit` in the shell.
 
-#### Dockerfile specification
+### Dockerfile specification
 
 The Dockerfile specification defines a standard for building Docker images. The
 Dockerfile specification is implemented by Docker, but also by other container
@@ -420,86 +475,13 @@ Windows (with the help of the Linux virtual machine).
 More information about the Dockerfile specification can be found in the official
 documentation: <https://docs.docker.com/engine/reference/builder/>.
 
-TODO
+Check the code examples to see how to write a Dockerfile and build a Docker
+image.
 
-Run the following command in a terminal:
+Check all available examples for part 1 regarding Dockerfiles and carefully read
+the README files to understand how to run them and what they do.
 
-```sh
-# Run a detached container with the alpine image
-docker run --rm -d alpine:3.18 /bin/sh -c "while true; do echo 'Hello world!'; sleep 5; done"
-```
-
-The `-d` option is used to run the container in detached mode. It is used to
-detach the container from the terminal.
-
-The `/bin/sh -c "while true; do echo 'Hello world!'; sleep 5; done"` argument is
-used to override the default command of the container. It will run an infinite
-loop that prints `Hello world!` every 5 seconds.
-
-The output should be similar to the following, displaying the container ID:
-
-```text
-1c8562b3df6e9fcfc1237c581a54108c47fb30132122da31af869a73b8f7ea13
-```
-
-No other output is displayed. This is because the container is running in
-detached mode. The container is running in the background.
-
-You can run the following command to display all running containers:
-
-```sh
-# Display all running containers
-docker ps
-```
-
-The output should be similar to the following:
-
-```text
-CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS     NAMES
-1c8562b3df6e   alpine:3.18   "/bin/sh -c 'while t…"   4 seconds ago   Up 2 seconds             upbeat_almeida
-```
-
-The `ps` command is used to display all running containers. It can be followed
-by the `--all` option to display all containers, including the stopped ones.
-
-You can display the logs of the container with the following command:
-
-```sh
-# Display the logs of the container
-docker logs 1c8562b3df6e
-```
-
-Replace `1c8562b3df6e` with the ID of your container.
-
-The output should be similar to the following:
-
-```text
-Hello world!
-```
-
-Of course, our container is not very useful. It is just an example to show how
-to run a container in detached mode and check its logs.
-
-You can run the following command to stop the container:
-
-```sh
-# Stop the container
-docker stop 1c8562b3df6e
-```
-
-Replace `1c8562b3df6e` with the ID of your container.
-
-The output should be similar to the following, confirming that the container has
-been stopped:
-
-```text
-1c8562b3df6e
-```
-
-You can check that the container has been stopped with the `docker ps` command
-as seen previously.
-
-#### Summary
+### Summary
 
 - Docker is a container engine
 - Docker is composed of two parts: the Docker daemon and the Docker CLI
@@ -510,7 +492,7 @@ as seen previously.
 - A container is a runnable instance of an image
 - A container is isolated from the rest of the computer
 
-#### Cheatsheet
+### Cheatsheet
 
 ```sh
 # Build and tag an image
@@ -544,7 +526,7 @@ docker container prune
 docker image prune
 ```
 
-#### Alternatives
+### Alternatives
 
 _Alternatives are here for general knowledge. No need to learn them._
 
@@ -556,7 +538,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-#### Resources
+### Resources
 
 _Resources are here to help you. They are not mandatory to read._
 
@@ -564,17 +546,19 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-### Docker Compose
+## Docker Compose
 
-> [Docker Compose](https://docs.docker.com/compose/) is a tool for defining and
-> running multi-container Docker applications.
+> Docker Compose is a tool for defining and running multi-container Docker
+> applications.
+>
+> <https://docs.docker.com/compose/>
 
 Docker Compose is a tool that is used to run multiple containers. It is used to
 run multiple containers that are related to each other. It is used to run
 multiple containers that are part of the same application (a backend and its
 database for example).
 
-#### Docker Compose specification
+### Docker Compose specification
 
 The Docker Compose specification defines a standard for defining and running
 multi-container Docker applications. The Docker Compose specification is
@@ -596,9 +580,12 @@ Compose file is named `docker-compose.yml` by convention.
 More information about the Docker Compose specification can be found in the
 official documentation: <https://docs.docker.com/compose/compose-file/>.
 
-TODO
+Check the code examples to see how to run a Docker Compose file.
 
-#### Summary
+Check all available examples for part 1 regarding Docker Compose and carefully
+read the README files to understand how to run them and what they do.
+
+### Summary
 
 - Docker Compose allows to define a multi-container Docker application in a
   Docker Compose file
@@ -607,7 +594,7 @@ TODO
   versioned with the application
 - Docker Compose v2 is the recommended version to use
 
-#### Cheatsheet
+### Cheatsheet
 
 ```sh
 # Start all services defined in the docker-compose.yml file
@@ -632,7 +619,7 @@ docker compose logs
 docker compose logs -f <service-name>
 ```
 
-#### Alternatives
+### Alternatives
 
 _Alternatives are here for general knowledge. No need to learn them._
 
@@ -643,7 +630,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-#### Resources
+### Resources
 
 _Resources are here to help you. They are not mandatory to read._
 
@@ -651,31 +638,15 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-### Docker Hub and GitHub Container Registry
+## Package your own applications with Docker
 
-> [Docker Hub](https://hub.docker.com) is the world's largest library and
-> community for container images.
+## Publish your own applications with Docker
 
-Docker Hub is a public container registry. It is the default registry for
-Docker.
+## Run your own applications with Docker and Docker Compose
 
-Other container registries are available. Some are public, some are private.
+## Conclusion
 
-In this course, we will use the
-[GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
-to store our images.
-
-#### Alternatives
-
-_Alternatives are here for general knowledge. No need to learn them._
-
-- [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-### Conclusion
-
-#### What did you do and learn?
+### What did you do and learn?
 
 In this chapter, you have installed Docker and Docker Compose. You have learned
 the basics of Docker and Docker Compose and you have used them to build and run
@@ -685,7 +656,7 @@ Docker and Docker Compose are very powerful tools. They are used by a lot of
 companies to build and run their applications in production on different
 environments.
 
-#### Test your knowledge
+### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
@@ -695,7 +666,7 @@ At this point, you should be able to answer the following questions:
 - What is the difference between the `ENTRYPOINT` and `CMD` instructions?
 - How can a volume be used to persist data?
 
-### Finished? Was it easy? Was it hard?
+## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
 chapter?
@@ -707,12 +678,12 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-### What will you do next?
+## What will you do next?
 
 We are arriving at the end of the first part of the course. An evaluation will
 be done to check your understanding of all the content seen in this first part.
 
-### Additional resources
+## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
 
@@ -720,7 +691,7 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-## Part 2 - Package your own applications with Docker and Docker Compose
+# Part 2 - Package, publish, and run your own applications with Docker and Docker Compose
 
 > [!IMPORTANT]
 >
@@ -732,16 +703,16 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 > This part is still a work in progress. It will be completed in the future.
 > Please do not use it for now.
 
-### Introduction
+## Introduction
 
 TODO
 
-### Write a Dockerfile, build and run an image with Docker
+## Write a Dockerfile, build and run an image with Docker
 
 In this section, you will write a Dockerfile, build it with a tag and run it
 with Docker.
 
-#### Write, build and run a simple Dockerfile
+### Write, build and run a simple Dockerfile
 
 Create a new directory named `my-custom-dockerfile`.
 
@@ -847,7 +818,7 @@ Hi from my custom Dockerfile!
 Environment variables are really useful to configure your application. You can
 use them to configure the database connection for example.
 
-#### Write, build and run a more complex Dockerfile
+### Write, build and run a more complex Dockerfile
 
 Update the `Dockerfile` with the following content:
 
@@ -1062,7 +1033,7 @@ between each run of the container with the help of volumes!
 More information about volumes can be found in the official documentation:
 <https://docs.docker.com/storage/volumes/>.
 
-#### Write, build and run an even more complex Dockerfile
+### Write, build and run an even more complex Dockerfile
 
 We will use [File Browser](https://github.com/filebrowser/filebrowser) in this
 example.
@@ -1251,7 +1222,7 @@ You can stop the container with the `docker stop` command as seen previously.
 
 Congrats! You have just embedded an application in a Docker image!
 
-#### Delete the images
+### Delete the images
 
 You can delete the images with the following command:
 
@@ -1265,14 +1236,14 @@ docker image rm my-custom-dockerfile:v2.0
 
 You will keep the `my-custom-dockerfile:v3.0` image for the next section.
 
-### Build and run an application with Docker Compose
+## Build and run an application with Docker Compose
 
 Docker Compose can be used to build the image from the Dockerfile as well.
 
 In this section, you will build the image from the Dockerfile with Docker
 Compose and run it with Docker Compose.
 
-#### Update the Docker Compose file
+### Update the Docker Compose file
 
 Update the `docker-compose.yml` file with the following content, replacing
 `<username>` with your GitHub username and the `<a specific version>` with the
@@ -1334,7 +1305,7 @@ Please note that, in this context, as you are using both the `build` and `image`
 keys, the `image` key will be used to tag the built Docker image. It will not
 use or fetch any images remotely.
 
-#### Build the image with Docker Compose
+### Build the image with Docker Compose
 
 Run the following command to build the image with Docker Compose:
 
@@ -1369,7 +1340,7 @@ Try to change the port used in the `Dockerfile` (do not forget to update the
 healthcheck's port) and run the `docker compose build` command again. Do not
 forget to update the Docker Compose file to map the right port as well.
 
-#### Run the image with Docker Compose
+### Run the image with Docker Compose
 
 Run the following command to run the image with Docker Compose:
 
@@ -1381,7 +1352,7 @@ docker compose up -d
 You can now open your browser and go to <http://localhost:8080> to access the
 application.
 
-#### Push the image to GitHub Container Registry
+### Push the image to GitHub Container Registry
 
 Run the following command to push the image on GitHub Container Registry:
 
@@ -1392,7 +1363,7 @@ docker compose push
 
 This will push the newly updated image to GitHub Container Registry.
 
-#### Pull the image from GitHub Container Registry
+### Pull the image from GitHub Container Registry
 
 Run the following command to pull the image from GitHub Container Registry:
 
@@ -1404,7 +1375,7 @@ docker compose pull
 This will replace the local image you built with the image from GitHub Container
 Registry.
 
-#### Share your Docker Compose application
+### Share your Docker Compose application
 
 Create a new Git repository (do not forget the `.gitignore` file with the
 required files! Which are they?) and push your code to it.
@@ -1427,9 +1398,9 @@ You can compare your solution with the official one stated in the
 [Solution](#solution) section, however, **we highly recommend you to try to
 complete the practical content by yourself first to learn the most**.
 
-### Conclusion
+## Conclusion
 
-#### What did you do and learn?
+### What did you do and learn?
 
 In this chapter, you have installed Docker and Docker Compose. You have learned
 the basics of Docker and Docker Compose and you have used them to build and run
@@ -1439,7 +1410,7 @@ Docker and Docker Compose are very powerful tools. They are used by a lot of
 companies to build and run their applications in production on different
 environments.
 
-#### Test your knowledge
+### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
@@ -1451,7 +1422,7 @@ At this point, you should be able to answer the following questions:
 - What is the purpose of the `EXPOSE` instruction? Is it required?
 - How can a volume be used to persist data?
 
-### Finished? Was it easy? Was it hard?
+## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
 chapter?
@@ -1463,13 +1434,13 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-### What will you do next?
+## What will you do next?
 
 In the next chapter, you will learn the following topics:
 
 - Use Docker and Docker compose to experiment with the SMTP protocol and Telnet
 
-### Additional resources
+## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
 
@@ -1477,7 +1448,7 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-### Solution
+## Solution
 
 You can find the solution to the practical content in the
 [`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
@@ -1486,27 +1457,11 @@ repository.
 If you have any questions about the solution, feel free to open an issue to
 discuss it!
 
-## Part 3 - Publish your own applications with Docker and Docker Compose
-
-> [!IMPORTANT]
->
-> This part is meant to be done in the third part of the course. It is not
-> mandatory to do it now. Please do this part when asked in a future chapter.
-
-> [!CAUTION]
->
-> This part is still a work in progress. It will be completed in the future.
-> Please do not use it for now.
-
-### Introduction
-
-TODO
-
-### Publish an image on GitHub Container Registry
+## Publish an image on GitHub Container Registry
 
 In this section, you will publish an image on GitHub Container Registry.
 
-#### Create a personal access token
+### Create a personal access token
 
 You will need a personal access token to publish an image on the GitHub
 Container Registry.
@@ -1523,7 +1478,7 @@ access token (classic):
 > **Settings** > **Developer settings** (at the very end of the left side bar) >
 > **Personal access tokens** > **Tokens (classic)**.
 
-#### Login to GitHub Container Registry
+### Login to GitHub Container Registry
 
 Run the following command in a terminal to export the personal access token as
 an environment variable:
@@ -1547,7 +1502,7 @@ The output should be similar to the following:
 Login Succeeded
 ```
 
-#### Tag the image correctly for GitHub Container Registry
+### Tag the image correctly for GitHub Container Registry
 
 The image must be tagged with the following format:
 `ghcr.io/<username>/<image>:<tag>`.
@@ -1583,7 +1538,7 @@ command:
 docker image rm my-custom-dockerfile:v3.0
 ```
 
-#### Publish the image on GitHub Container Registry
+### Publish the image on GitHub Container Registry
 
 Now publish the image on GitHub Container Registry with the following command,
 replacing `<username>` with your GitHub username:
@@ -1621,11 +1576,11 @@ You can delete the local image if you want.
 
 Congrats! You have just published your first image on GitHub Container Registry!
 
-### Use the published image with Docker
+## Use the published image with Docker
 
 In this section, you will use the published image with Docker.
 
-#### Pull the image from GitHub Container Registry
+### Pull the image from GitHub Container Registry
 
 Run the following command to pull the image from GitHub Container Registry,
 replacing `<username>` with your GitHub username:
@@ -1648,7 +1603,7 @@ What's Next?
   View a summary of image vulnerabilities and recommendations → docker scout quickview ghcr.io/<username>/my-custom-dockerfile:v3.0
 ```
 
-#### Run the image with Docker
+### Run the image with Docker
 
 Running the image with Docker is pretty straightforward. You just need to run
 the following command to run the image with Docker, replacing `<username>` with
@@ -1663,7 +1618,7 @@ If you have not deleted the local volumes, you should have access to the
 previous files created with File Browser, just as before, using the image you
 have published on GitHub Container Registry!
 
-### Use the published image with Docker Compose
+## Use the published image with Docker Compose
 
 In this section, you will run the same container with Docker Compose.
 
@@ -1676,7 +1631,7 @@ The Docker Compose file is easier to read and re-use than pure Docker commands.
 The Docker Compose file is named `docker-compose.yml` by default. You can use
 the `-f` option to specify a different file name.
 
-#### Write a Docker Compose file
+### Write a Docker Compose file
 
 Create a new file named `docker-compose.yml` in the `my-custom-dockerfile`
 directory and put the following content in it, replacing `<username>` with your
@@ -1731,7 +1686,7 @@ A Docker Compose file can easily be shared with your team in a Git repository.
 
 In future chapters, you will see Docker Compose in more details.
 
-#### Run the application with Docker Compose
+### Run the application with Docker Compose
 
 Run the following command to run the application with Docker Compose (in the
 same directory as the `docker-compose.yml` file):
@@ -1789,9 +1744,9 @@ You can stop the application with the following command:
 docker compose down
 ```
 
-### Conclusion
+## Conclusion
 
-#### What did you do and learn?
+### What did you do and learn?
 
 In this chapter, you have installed Docker and Docker Compose. You have learned
 the basics of Docker and Docker Compose and you have used them to build and run
@@ -1801,7 +1756,7 @@ Docker and Docker Compose are very powerful tools. They are used by a lot of
 companies to build and run their applications in production on different
 environments.
 
-#### Test your knowledge
+### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
@@ -1813,7 +1768,7 @@ At this point, you should be able to answer the following questions:
 - What is the purpose of the `EXPOSE` instruction? Is it required?
 - How can a volume be used to persist data?
 
-### Finished? Was it easy? Was it hard?
+## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
 chapter?
@@ -1834,13 +1789,13 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-### What will you do next?
+## What will you do next?
 
 In the next chapter, you will learn the following topics:
 
 - Use Docker and Docker compose to experiment with the SMTP protocol and Telnet
 
-### Additional resources
+## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
 
@@ -1848,7 +1803,7 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-### Solution
+## Solution
 
 You can find the solution to the practical content in the
 [`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
