@@ -1802,9 +1802,6 @@ we notice some difficulties, we will come back to you to help you.
 > Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
 > d'améliorations en français ou en anglais.
 >
-> L'anglais utilisé dans ce cours ne doit pas être une barrière dans votre
-> apprentissage.
->
 > N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
 > ou si vous avez des difficultés à réaliser les éléments demandés dans le
 > cours. Nous sommes là pour vous aider !

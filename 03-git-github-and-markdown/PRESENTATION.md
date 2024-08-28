@@ -86,9 +86,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#git).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Git
 
@@ -165,9 +164,8 @@ use it everywhere (even on a server).
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#github).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### GitHub
 
@@ -225,9 +223,8 @@ The whole process would be as follow:
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#markdown).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Markdown
 

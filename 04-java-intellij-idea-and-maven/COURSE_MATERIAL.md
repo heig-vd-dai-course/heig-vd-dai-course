@@ -43,7 +43,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [`pom.xml` file](#pomxml-file)
   - [Maven lifecycle](#maven-lifecycle)
   - [Maven Repository](#maven-repository)
-  - [Maven installation and its wrapper](#maven-installation-and-its-wrapper)
+  - [Maven wrapper](#maven-wrapper)
   - [Summary](#summary-2)
   - [Alternatives](#alternatives-2)
   - [Resources](#resources-2)
@@ -1534,8 +1534,8 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 #### Add Spotless to format your code
 
-> Spotless is a general-purpose formatting plugin. [It allows to format (= > > >
-> > "beautify") your code automatically]
+> Spotless is a general-purpose formatting plugin. It allows to format (=
+> "beautify") your code automatically.
 >
 > <https://github.com/diffplug/spotless/tree/main/plugin-maven>
 

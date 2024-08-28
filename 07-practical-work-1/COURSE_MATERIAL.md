@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
-[illustration]:
-  https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Practical work 1
 
@@ -26,45 +25,51 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 - [Group composition](#group-composition)
+- [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
-  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
-  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
-  - [Category 3 - Java IOs](#category-3---java-ios)
-  - [Category 4 - Presentation and questions](#category-4---presentation-and-questions)
+  - [Category 1 - Meta](#category-1---meta)
+  - [Category 2 - Git, GitHub and Markdown](#category-2---git-github-and-markdown)
+  - [Category 3 - Java, IntelliJ IDEA and Maven](#category-3---java-intellij-idea-and-maven)
+  - [Category 4 - Java IOs](#category-4---java-ios)
+  - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
 - [Constraints](#constraints)
 - [Remarks](#remarks)
 - [Submission](#submission)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+- [Sources](#sources)
 
 ## Introduction
 
-We use CLI tools every day. For example, we use `git` to manage our code, `mvn`
-to build our projects, `java` to run our programs, etc.
+We use command line interface (CLI) tools every day. For example, we use Git to
+manage our code (with its `git` command line interface), Maven to build our
+projects (with its `mvn` and `mvnw` command line interface), Java (with its
+`javac` and `java` command line interface) to run our programs, etc.
 
 In this practical work, you will create a CLI using
 [picocli](https://picocli.info/) to process files.
 
 The CLI will take an input file and an output file as arguments. It will also
-take optional arguments such as the input file encoding and the output file
-encoding (the default will be UTF-8 for example). The CLI will process the input
-file and write the result in the output file. It will display a message on
-success and a message on failure.
+take optional arguments to customize the CLI (such as the input file encoding
+and the output file encoding - the default being UTF-8 for example). The CLI
+will process the input file and write the result in the output file. It will
+display a message on success and a message on failure.
 
 You have the freedom to define what the CLI will do. You can be creative! For
-example, you can choose to transform the the input text file to the output text
-file (uppercase/lowercase/find/replace/count number of words/etc.), to convert a
-PNG to JPEG, add metadata to existing TIFF files, etc. If you do not have any
-idea, come to see us and we can give you some ideas.
+example, you can choose to transform a text file (find/replace/count number of
+occurrences/etc.), to grayscale a JPEG/PNG binary file manipulating its pixel
+values, add metadata to existing TIFF files, etc.
 
 Multiple groups can choose the same processing and you can share your
-methodology but please do not copy/paste code from other groups.
+methodology and take inspiration from/help each other. However, you are not
+allowed to plagiarize the code of another group. You will be penalized if you do
+so with 1 as the final grade.
 
 ## Objectives
 
-- Create a CLI to process files
-- Use Java IOs to process files with different encodings
-- Make usage of a Maven dependency
+- Create a CLI to process files with Java IOs
+- Practice Java, Maven and [picocli](https://picocli.info/)
+- Practice a Git workflow to share your work with your team
 
 ## Group composition
 
@@ -75,82 +80,102 @@ To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 1 - First name Last name member 1
+- **Title**: DAI 2024-2025 - Practical work 1 - First name Last name member 1
   and First name Last name member 2
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
 
+> [!IMPORTANT]
+>
+> **Please do it a soon as possible**, even if you do not have a clear idea yet
+> as it will help us to plan the practical work presentations.
+>
+> Please refer to the grading criteria to know what is expected from you.
+
+## Idea validation
+
 The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
-**Please do it a soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
+This will ensure that you have a good balance between the complexity of the
+practical work and the time you have to complete it.
+
+If you do not have any idea, come to see us and we can help you finding some
+ideas.
 
 ## Grading criteria
 
-- 0 point - The work is not done
-- 0.1 point - The work is insufficient
-- 0.2 point - The work is done
+- 0 point - The work is insufficient
+- 0.1 point - The work is done
+- 0.2 point - The work is well done (without the need of being perfect)
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
 
-### Category 1 - Git, GitHub and Markdown
+### Category 1 - Meta
 
-| #   | Criterion                                                               | Points |
-| --- | ----------------------------------------------------------------------- | -----: |
-| 1   | The repository is managed using issues and pull requests                |    0.2 |
-| 2   | The commits are signed                                                  |    0.2 |
-| 3   | The issues, pull requests and commits messages are descriptive          |    0.2 |
-| 4   | The whole team contributes to the project and can explain it in details |    0.2 |
-| 5   | The repository contains a gitignore file to ignore unwanted files       |    0.2 |
-| 6   | The repository contains example files to use with the CLI               |    0.2 |
-| 7   | The README is well structured and explains what the CLI is for          |    0.2 |
-| 8   | The README explains how to build the CLI                                |    0.2 |
-| 9   | The README explains how to use the CLI with examples and outputs        |    0.2 |
+| #   | Criterion                                                                                                                                                                                               | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 1   | The whole team contributes to the project and can explain it in details to share knowledge between the team                                                                                             |    0.2 |
+| 2   | A GitHub Discussion is opened during the first week of the project to explain the idea of the project so the teachers can validate the idea                                                             |    0.2 |
+| 3   | The GitHub Discussion is updated with the link to the repository and a related commit hash before the deadline - every 24 hours after the deadline will result in a -1 point penalty on the final grade |    0.2 |
 
-### Category 2 - Java, IntelliJ IDEA and Maven
+### Category 2 - Git, GitHub and Markdown
 
-| #   | Criterion                                                           | Points |
-| --- | ------------------------------------------------------------------- | -----: |
-| 10  | The codebase has all required files and is well structured          |    0.2 |
-| 11  | The codebase is well documented                                     |    0.2 |
-| 12  | The codebase is built and output an executable JAR file             |    0.2 |
-| 13  | The CLI uses [picocli](https://picocli.info/) as a Maven dependency |    0.2 |
-| 14  | The CLI displays a comprehensive help message on how to use the CLI |    0.2 |
+| #   | Criterion                                                                                                                                                                                                                           | Points |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 4   | Issues are created all along the project to describe new features, elements to improve, etc. to plan work                                                                                                                           |    0.2 |
+| 5   | Pull requests linked to the Issues are created, discussed and reviewed all along the project to integrate new work iteratively                                                                                                      |    0.2 |
+| 6   | The issue, pull request and commit messages are descriptive so a new comer can understand what has been done                                                                                                                        |    0.2 |
+| 7   | The commits are signed to increase the security and the confidence of the project                                                                                                                                                   |    0.2 |
+| 8   | The repository contains a gitignore file to ignore all unwanted files (Maven output, IntelliJ IDEA files related to local computer, etc.) to keep the repository clean/small and to avoid security leaks                            |    0.2 |
+| 9   | The README is well structured and explains the purpose of your application so new users can understand it                                                                                                                           |    0.2 |
+| 10  | The README explains how to use your application with examples and outputs so a new user/developer can understand your application without having to run it locally                                                                  |    0.2 |
+| 11  | The README describes explicit commands to clone and build your application with Git and Maven so new developers can start and develop your project on their own computer                                                            |    0.2 |
+| 12  | The repository contains meaningful example files to allow new users/developers (such as the teaching staff) to try out your application locally - these files can be the same as the ones used in the examples and outputs snippets |    0.2 |
 
-### Category 3 - Java IOs
+### Category 3 - Java, IntelliJ IDEA and Maven
 
-| #   | Criterion                                                                                                         | Points |
-| --- | ----------------------------------------------------------------------------------------------------------------- | -----: |
-| 15  | The CLI takes an input file and an output file as arguments                                                       |    0.2 |
-| 16  | The CLI takes optional arguments for customization (such as the input file encoding and the output file encoding) |    0.2 |
-| 17  | The CLI displays an error on invalid/missing inputs                                                               |    0.2 |
-| 18  | The CLI correctly processes the input file and writes the result in the output file                               |    0.2 |
-| 19  | The CLI displays a message on failure and a message on success with execution time                                |    0.2 |
-| 20  | The CLI uses all the best practices regarding file processing                                                     |    0.2 |
+| #   | Criterion                                                                                                                                                                                          | Points |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 13  | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase                                                    |    0.2 |
+| 14  | The codebase contains the two IntelliJ IDEA configuration files (_"Run the application"_ and _"Package application as JAR file"_) so developers can run and build the application within their IDE |    0.2 |
+| 15  | The codebase contains the Maven wrapper configuration file and scripts so developers can build the application without an IDE and without having to install Maven                                  |    0.2 |
+| 16  | The codebase is built with Maven and outputs an executable JAR file so the application can be ran everywhere Java is installed                                                                     |    0.2 |
 
-### Category 4 - Presentation and questions
+### Category 4 - Java IOs
 
-| #   | Criterion                                                                            | Points |
-| --- | ------------------------------------------------------------------------------------ | -----: |
-| 21  | The presentation is clear and well prepared                                          |    0.2 |
-| 22  | Everyone speaks during the presentation, and the presentation lasts the time allowed |    0.2 |
-| 23  | The presentation presents the CLI application                                        |    0.2 |
-| 24  | A demo of the CLI application is made                                                |    0.2 |
-| 25  | The answers to the questions are correct                                             |    0.2 |
+| #   | Criterion                                                                                                                                          | Points |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 17  | The CLI displays a comprehensive help message on how to use the application and displays errors on invalid/missing inputs and/or processing errors |    0.2 |
+| 18  | The CLI takes some mandatory arguments and other optional arguments for customization                                                              |    0.2 |
+| 19  | The CLI processes the files efficiently                                                                                                            |    0.2 |
+| 20  | The CLI processes the files so that they are compatible accros operating systems/languages                                                         |    0.2 |
+| 21  | The CLI correctly manages resources in case a problem occurs when processing the files                                                             |    0.2 |
+| 22  | The CLI correctly processes the input file and writes the result in the output file with its execution time                                        |    0.2 |
+
+### Category 5 - Presentation and questions
+
+| #   | Criterion                                                                                                                                                                | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+| 23  | The application is presented and a demo is made as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how |    0.2 |
+| 24  | The presentation is clear and well prepared - everyone speaks during the presentation                                                                                    |    0.2 |
+| 25  | The answers to the questions are correct                                                                                                                                 |    0.2 |
 
 ## Constraints
 
-- The CLI application must be written in Java, compatible with Java 17
-- The CLI application must be built using Maven
-- You must use one or more of the Java classes seen in the course
-- Your application must be slightly more complex and different than the ones
-  presented during the course
+- The application must be written in Java, compatible with Java 21
+- The application must be built using Maven with the `maven-shade-plugin` plugin
+- The application must use the picocli dependency
+- You can only use the Java classes seen in the course to process the files (you
+  can use other libraries to help you once the files are opened)
+- Your application must be slightly more complex and slightly different than the
+  examples presented during the course (we emphasize the word **slightly**, no
+  need to shoot for the moon!)
 
 ## Remarks
 
-Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
+Remember the KISS principle: Keep it simple, silly! Sometimes it is better to
 use a simple solution than a complex one.
 
 If your implementation is too complex, we might penalize you.
@@ -164,18 +189,27 @@ use signed pull requests to merge your work.
 
 ## Submission
 
-Your work is due on the **day of the presentations** (the _"Practical work
-review"_ sessions in the official planning available at
-<https://github.com/orgs/heig-vd-dai-course/projects>) at **13:15**.
+**Your work is due on the day before the presentations at 23h59**. Check the
+[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
+date.
 
-Any commit after the deadline will not be taken into account. Each day of delay
-will result in a penalty of -1 point on the final grade.
+> [!IMPORTANT]
+>
+> Any minutes after the deadline will result in a penalty of -1 point on the
+> final grade. Each day of delay will result in a penalty of -1 point on the
+> final grade.
 
 You must update the GitHub Discussion you created previously with the following
 information:
 
-- **Description**: The link to your repository as well as the latest commit hash
-  of your work before submission
+- **Description**: The link to your repository as well as the commit hash you
+  want to submit
+
+> [!IMPORTANT]
+>
+> If you do not update the GitHub Discussion with the link to your repository
+> and the commit hash before the deadline, it is considered as a late submission
+> and you will be penalized.
 
 ## Grades and feedback
 
@@ -193,29 +227,18 @@ If you have any questions about the evaluation, you can contact us!
 <summary>Grading grid template for the teaching staff</summary>
 
 ```markdown
-# Practical work 1 - Grading grid for First name Last name member 1
+# [DAI 202X-202Y] Retours sur le travail pratique Z
 
-and First name Last name member 2
+Bonjour,
 
-Here are the grades and comments for each criterion for the practical work.
+Vous trouverez en pièce jointe les retours que nous vous avons faits pour le
+travail pratique.
 
-## Grading criteria
+La note a été saisie dans GAPS également.
 
-- 0 point - The work is not done
-- 0.1 point - The work is insufficient
-- 0.2 point - The work is done
+Nous restons à votre disposition pour toute question.
 
-Maximum grade: 25 points \* 0.2 + 1 = 6
-
-## General feedback
-
-- ...
-
-## Final grade
-
-Your final grade is:
-
-Feel free to contact us if you have any questions about the evaluation!
+Cordialement, Ludovic Delafontaine et Hadrien Louis
 ```
 
 </details>
@@ -227,6 +250,15 @@ practical work?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 

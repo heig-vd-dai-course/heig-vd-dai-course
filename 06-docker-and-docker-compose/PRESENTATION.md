@@ -89,9 +89,8 @@ Learn software installation challenges and containerization benefits.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md#issues-with-software-installation).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### The problem
 
@@ -141,9 +140,8 @@ may have with software installation and maintenance.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md#bare-metal-virtualization-and-containerization).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Bare metal, virtualization and containerization
 
@@ -193,9 +191,8 @@ virtualization and containerization is the following video:
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md#oci-images-containers-and-registries).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### OCI, images, containers, and registries
 
@@ -209,9 +206,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md#docker).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Docker
 
@@ -274,9 +270,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md#docker).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Docker Compose
 
@@ -318,9 +313,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md#docker).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Docker Desktop
 
@@ -334,9 +328,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md#docker).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Docker Hub and GitHub Container Registry
 

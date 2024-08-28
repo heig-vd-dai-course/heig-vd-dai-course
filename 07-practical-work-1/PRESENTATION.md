@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Practical work 1
 description: Practical work 1 for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-practical-work-1/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -50,11 +50,10 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
-[illustration]:
-  https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
-[practical-work]:
+[illustration]: ./images/main-illustration.jpg
+[course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
-[practical-work-qr-code]:
+[course-material-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
 
 # Practical work 1
@@ -74,22 +73,22 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Practical work 1
+## Objectives
 
-- A CLI to process files
-- Use Java, Maven and [picocli](https://picocli.info/)
-- You can choose what the CLI will do (you can be creative!)
-  - Transform the input file to lowercase/uppercase, convert a PNG to JPEG, ...
-- Publish your CLI on GitHub
+- Create a command line tool (CLI) to process files with Java IOs
+- Practice Java, Maven and [picocli](https://picocli.info/)
+- Practice a Git workflow to share your work with your team
+- You can choose what the CLI will do (you can be creative! - extract metrics
+  from a text file, grayscale a JPEG file, etc.)
 
-![bg right:40%][illustration]
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## Demo
 
 - Compile the project
 
 ```sh
-mvn clean package
+./mvnw clean package
 ```
 
 - Run the CLI without any arguments
@@ -102,16 +101,16 @@ java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar
 
 ```text
 Missing required options: '--input=<inputFile>', '--output=<outputFile>'
-Usage: IoProcessing [-hV] -i=<inputFile> [-ie=<inputEncoding>] -o=<outputFile>
-                    [-oe=<outputEncoding>] [COMMAND]
+Usage: practical-work-1-demo-1.0-SNAPSHOT.jar [-hV] -i=<inputFile>
+       [-I=<inputEncoding>] -o=<outputFile> [-O=<outputEncoding>] [COMMAND]
 Process an input file and return a result.
   -h, --help                Show this help message and exit.
   -i, --input=<inputFile>   The input file.
-      -ie, --input-encoding=<inputEncoding>
-                            The input file encoding.
+  -I, --input-encoding=<inputEncoding>
+                            The input file encoding (default: UTF-8).
   -o, --output=<outputFile> The output file.
-      -oe, --output-encoding=<outputEncoding>
-                            The output file encoding.
+  -O, --output-encoding=<outputEncoding>
+                            The output file encoding (default: UTF-8).
   -V, --version             Print version information and exit.
 Commands:
   uppercase  Converts the input file to uppercase.
@@ -120,52 +119,172 @@ Commands:
 
 ---
 
-- Run the CLI with the `uppercase` command
+- Run the CLI with the `uppercase` command:
 
-```sh
-java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar -i input.txt -o output.txt uppercase
-```
+  ```sh
+  java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
+    --input input.txt \
+    --output output.txt \
+    uppercase
+  ```
 
-- You can also specify the encoding of the input and output files
+- You can also specify the encoding of the input and output files:
 
-```sh
-java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
-    -i input.txt -ie UTF-8 \
-    -o output.txt -oe US-ASCII uppercase
-```
+  ```sh
+  java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
+    --input input.txt --input-encoding UTF-8 \
+    --output output.txt --output-encoding US-ASCII \
+    uppercase
+  ```
 
 ## See the result
 
-```sh
-$> cat input.txt
-Coucou ça va ?
-```
+- Input file:
 
-```sh
-$> cat output.txt
-COUCOU ?A VA ?
-```
+  ```text
+  $ cat input.txt
+  Bonjour, comment ça va aujourd'hui ?
+  ```
 
-Why is the `ç` not converted to uppercase?
+- Output file:
 
-## Practical work review
+  ```text
+  $ cat output.txt
+  BONJOUR, COMMENT ?A VA AUJOURD'HUI ?
+  ```
 
-The practical work review will take place on **Tuesday 10.10.2023** in the
-**room B38**, at the very end of the corridor next to the door entry.
+- Why is the `ç` not converted to uppercase?
 
-We only have **5 minutes per group**. Please be prepared to present your work.
-You decide what you want to show us and how you want to present it.
+## Group composition
 
-Come 5 minutes before your time slot with your computer.
+<!-- _class: lead -->
 
+More details for this section in the [course material][course-material].
+
+### Group composition
+
+- 2 students per group
+- Create a GitHub Discussion to:
+  - Announce your group members
+  - Announce your idea (even a draft is fine)
+- **Do it as soon as possible before next week!**
+  - This helps us to plan the presentations
+
+![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
+
+## Idea validation
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Idea validation
+
+- You must state your idea on your GitHub Discussion
+- We might ask you to change your idea if it is too simple or too complex
+- We will help you to find a good idea if needed
+- **Do it as soon as possible before next week!**
+
+![bg right:40%](https://images.unsplash.com/photo-1543075137-5a97903aaa7a?fit=crop&h=720)
+
+## Grading criteria
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Grading criteria
+
+You can find all the grading criteria in the [course material][course-material]:
+
+- 0 point - The work is insufficient
+- 0.1 point - The work is done
+- 0.2 point - The work is well done (without the need of being perfect)
+
+Maximum grade: 25 points \* 0.2 + 1 = 6
+
+![bg right:40%](https://images.unsplash.com/photo-1645500010250-01b5bc42239e?fit=crop&h=720)
+
+## Constraints
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Constraints
+
+- The application must be written in Java, compatible with Java 21
+- The application must be built using Maven with the `maven-shade-plugin` plugin
+- The application must use the picocli dependency
+- You can only use the Java classes seen in the course to process the files (you
+  can use other libraries to help you once the files are opened)
+- Your application must be slightly more complex and slightly different than the
+  examples presented during the course
+
+## Remarks
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### The KISS principle
+
+- Keep it simple, silly!
+- Don't try to do too much
+- Focus on the essentials and **do it well**
+
+Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
+
+<small>If you have not seen the movie scene, check it here:
+[YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0).</small>
+
+![bg right:40%](./images/asterix-et-obelix-mission-cleopatre-porte-au-plafond.png)
+
+## Submission
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Submission
+
+**Your work is due on the day before the presentations at 23h59**. Check the
+[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
+date.
+
+- Update the GitHub Discussion with the link to your repository to include:
+  - A link to your GitHub repository
+  - The commit hash of the version you want to submit
+
+## Grades and feedback
+
+Grades will be entered into GAPS, followed by an email with the feedback.
+
+The evaluation will use exactly the same grading grid as shown in the course
+material.
+
+Each criterion will be accompanied by a comment explaining the points obtained,
+a general comment on your work and the final grade.
+
+If you have any questions about the evaluation, you can contact us!
+
+## Presentations
+
+The practical work presentations will take place on:
+
+- **TODO XX.YY.202Z** in **room TODO** (class A)
+- **TODO 11.10.2023** in **room TODO** (class B)
+
+We only have **5 minutes per group**. You decide what you want to show us and
+how you want to present it. **Come 5 minutes before your time slot** with your
+computer.
+
+**Please state your group on GitHub Discussions before next week.**
+
+<!--
 The order of presentation is random and is stated in the next slides.
 
 ---
-
-<!--
-**Please state your group on GitHub Discussions as soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
--->
 
 | #   | Group                                   | Passage |
 | --- | --------------------------------------- | ------- |
@@ -201,26 +320,15 @@ it will help us to plan the practical work review.**
 | 19  | Simon Guggisberg and Jeremiah Steiner | 17:48   |
 | 20  | Sergey Komarov                        | 17:54   |
 | 21  | Pirakas Anthon                        | 18:00   |
+-->
 
 ## Find the practical work
 
 <!-- _class: lead -->
 
-You can find the practical work for this part on [GitHub][practical-work].
+You can find the practical work for this part on [GitHub][course-material].
 
-[![bg right w:75%][practical-work-qr-code]][practical-work]
-
-## Grades and feedback
-
-Grades will be entered into GAPS, followed by an email with the feedback.
-
-The evaluation will use exactly the same grading grid as shown in the course
-material.
-
-Each criterion will be accompanied by a comment explaining the points obtained,
-a general comment on your work and the final grade.
-
-If you have any questions about the evaluation, you can contact us!
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -239,3 +347,12 @@ You can use reactions to express your opinion on a comment!
 - Main illustration by
   [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) on
   [Unsplash](https://unsplash.com/photos/ScZwMqoxcls)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Josh Calabrese](https://unsplash.com/@joshcala) on
+  [Unsplash](https://unsplash.com/photos/five-men-riding-row-boat-Ev1XqeVL2wI)
+- Illustration by [Nicole Baster](https://unsplash.com/@nicolebaster) on
+  [Unsplash](https://unsplash.com/photos/traffic-light-aGx-CFsM3fE)
+- Illustration by [Chris LaBarge](https://unsplash.com/@chrislabarge) on
+  [Unsplash](https://unsplash.com/photos/a-sign-that-is-on-a-tree-in-the-woods-dy1GA9Ow6JA)
+- Scene from the movie _Astérix et Obélix : Mission Cléopâtre_ by Alain Chabat

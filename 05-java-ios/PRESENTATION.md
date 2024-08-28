@@ -87,9 +87,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#prepare-and-setup-your-environment).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Check and run the code examples
 
@@ -104,9 +103,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#sources-streams-and-sinks-of-data).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Sources, streams and sinks of data
 
@@ -121,9 +119,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#the-java-io-api).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### The Java IO API
 
@@ -140,9 +137,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#types-of-data).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Types of data
 
@@ -159,9 +155,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#processing-binary-data-with-the-java-io-api).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Processing binary data with the Java IO API
 
@@ -324,9 +319,8 @@ The same applies for writing:
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#processing-text-data-with-the-java-io-api).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Processing text data with the Java IO API
 
@@ -563,9 +557,8 @@ public static void tryWithResourcesExample() {
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#when-to-use-which-io).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### When to use which IO?
 
@@ -575,9 +568,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md#common-pitfalls).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Common pitfalls
 
