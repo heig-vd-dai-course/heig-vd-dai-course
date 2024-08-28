@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
-[illustration]:
-  https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Practical work 1
 
@@ -26,6 +25,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 - [Group composition](#group-composition)
+- [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
   - [Category 1 - Meta](#category-1---meta)
   - [Category 2 - Git, GitHub and Markdown](#category-2---git-github-and-markdown)
@@ -60,10 +60,10 @@ example, you can choose to transform a text file (find/replace/count number of
 occurrences/etc.), to grayscale a JPEG/PNG binary file manipulating its pixel
 values, add metadata to existing TIFF files, etc.
 
-If you do not have any idea, come to see us and we can give you some ideas.
-
 Multiple groups can choose the same processing and you can share your
-methodology but please do not copy/paste code from other groups.
+methodology and take inspiration from/help each other. However, you are not
+allowed to plagiarize the code of another group. You will be penalized if you do
+so with 1 as the final grade.
 
 ## Objectives
 
@@ -93,8 +93,16 @@ information:
 >
 > Please refer to the grading criteria to know what is expected from you.
 
+## Idea validation
+
 The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
+
+This will ensure that you have a good balance between the complexity of the
+practical work and the time you have to complete it.
+
+If you do not have any idea, come to see us and we can help you finding some
+ideas.
 
 ## Grading criteria
 
@@ -137,14 +145,14 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 4 - Java IOs
 
-| #   | Criterion                                                                                                                                                                        | Points |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 17  | The CLI displays a comprehensive help message on how to use the application and displays errors on invalid/missing inputs and/or processing errors                               |    0.2 |
-| 18  | The CLI takes an input file and an output file as mandatory arguments and other optional arguments for customization (such as the input file/output file character encodings)    |    0.2 |
-| 19  | The CLI processes the files with buffers so it stays efficient even with large files                                                                                             |    0.2 |
-| 20  | The CLI processes the files respecting their respective charset(s)/character encoding(s) to ensure readability between operating systems/languages                               |    0.2 |
-| 21  | The CLI correctly manages resources with try-with-resources or try-catch-finally blocks to cleanly manage allocated resources in case a problem occurs when processing the files |    0.2 |
-| 22  | The CLI correctly processes the input file and writes the result in the output file with its execution time                                                                      |    0.2 |
+| #   | Criterion                                                                                                                                          | Points |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 17  | The CLI displays a comprehensive help message on how to use the application and displays errors on invalid/missing inputs and/or processing errors |    0.2 |
+| 18  | The CLI takes some mandatory arguments and other optional arguments for customization                                                              |    0.2 |
+| 19  | The CLI processes the files efficiently                                                                                                            |    0.2 |
+| 20  | The CLI processes the files so that they are compatible accros operating systems/languages                                                         |    0.2 |
+| 21  | The CLI correctly manages resources in case a problem occurs when processing the files                                                             |    0.2 |
+| 22  | The CLI correctly processes the input file and writes the result in the output file with its execution time                                        |    0.2 |
 
 ### Category 5 - Presentation and questions
 

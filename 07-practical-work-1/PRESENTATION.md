@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
-[illustration]:
-  https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -168,10 +167,25 @@ More details for this section in the [course material][course-material].
 - Create a GitHub Discussion to:
   - Announce your group members
   - Announce your idea (even a draft is fine)
-- **Do it as soon before next week!**
+- **Do it as soon as possible before next week!**
   - This helps us to plan the presentations
 
 ![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
+
+## Idea validation
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Idea validation
+
+- You must state your idea on your GitHub Discussion
+- We might ask you to change your idea if it is too simple or too complex
+- We will help you to find a good idea if needed
+- **Do it as soon as possible before next week!**
+
+![bg right:40%](https://images.unsplash.com/photo-1543075137-5a97903aaa7a?fit=crop&h=720)
 
 ## Grading criteria
 
@@ -189,7 +203,7 @@ You can find all the grading criteria in the [course material][course-material]:
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
 
-![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1645500010250-01b5bc42239e?fit=crop&h=720)
 
 ## Constraints
 
@@ -333,3 +347,12 @@ You can use reactions to express your opinion on a comment!
 - Main illustration by
   [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) on
   [Unsplash](https://unsplash.com/photos/ScZwMqoxcls)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Josh Calabrese](https://unsplash.com/@joshcala) on
+  [Unsplash](https://unsplash.com/photos/five-men-riding-row-boat-Ev1XqeVL2wI)
+- Illustration by [Nicole Baster](https://unsplash.com/@nicolebaster) on
+  [Unsplash](https://unsplash.com/photos/traffic-light-aGx-CFsM3fE)
+- Illustration by [Chris LaBarge](https://unsplash.com/@chrislabarge) on
+  [Unsplash](https://unsplash.com/photos/a-sign-that-is-on-a-tree-in-the-woods-dy1GA9Ow6JA)
+- Scene from the movie _Astérix et Obélix : Mission Cléopâtre_ by Alain Chabat
