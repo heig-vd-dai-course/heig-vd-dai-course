@@ -52,8 +52,7 @@ headingDivider: 4
 [feedback]: https://framaforms.org/dai-2024-2025-feedback-1-1695300279
 [feedback-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2024-2025-feedback-1-1695300279
-[illustration]:
-  https://images.unsplash.com/photo-1539186607619-df476afe6ff1?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Conclusion to part 1: Input/output processing
 

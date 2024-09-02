@@ -49,8 +49,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Introduction and course organization
 
