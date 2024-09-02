@@ -39,7 +39,7 @@ The entire course planning for the semester is available at
   (WIP)
 - [7. Practical work 1 (8 periods)](./07-practical-work-1/README.md)
 - [8. Evaluation 1 (2 periods)](./08-evaluation-1/README.md) (WIP)
-- [9. Conclusions to part 1](./09-conclusion-to-part-1/README.md) (WIP)
+- [9. Conclusion to part 1](./09-conclusion-to-part-1/README.md)
 
 ### Part 2 - Network programming with TCP and UDP (24 periods)
 

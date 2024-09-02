@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: 'HEIG-VD DAI Course - Conclusion to part 1: Input/output processing'
 description: 'Conclusion to part 1: Input/output processing for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-conclusion-to-part-1/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -49,9 +49,9 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-conclusion-to-part-1/09-conclusion-to-part-1-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]: https://framaforms.org/dai-2023-2024-feedback-1-1695300279
+[feedback]: https://framaforms.org/dai-2024-2025-feedback-1-1695300279
 [feedback-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2023-2024-feedback-1-1695300279
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2024-2025-feedback-1-1695300279
 [illustration]:
   https://images.unsplash.com/photo-1539186607619-df476afe6ff1?fit=crop&h=720
 
@@ -75,10 +75,9 @@ _paginate: false
 ## What have you learned?
 
 - The basics of Git, GitHub and Markdown
-- The basics of Maven with external dependencies
-- The basics of Java and IntelliJ IDEA
-- The different types of Java IOs (Text files + character encodings 🎉 vs.
-  binary files 🤖)
+- The basics of Java, IntelliJ IDEA and Maven with external dependencies
+- The different types of Java IOs and their use cases (📝 vs. 🤖)
+- The basics of Docker and Docker Compose with external registries
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
@@ -91,45 +90,6 @@ _paginate: false
 - All of this using the best practices!
 
 ![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
-
-## Evaluation
-
-You might be asked questions about the theoretical content, the practical
-content and the practical work.
-
-We might ask you to analyze or code a small program to solve a problem, describe
-a schema and/or explain a concept.
-
-All typical questions are at the end of each chapter you studied.
-
-The evaluation will be done on the computer. You will have to be connected to
-the
-[VPN](https://intranet.heig-vd.ch/services/informatique/poste-de-travail/reseau/vpn/Pages/vpn.aspx).
-It is **mandatory**.
-
----
-
-You can have access to the course material including your own notes and the
-[official Java documentation](https://docs.oracle.com/en/java/javase/17/docs/api/).
-Other websites are not allowed.
-
-No communication between students is allowed.
-
-ChatGPT, Copilot or any other AI assisted tools are not allowed during the
-evaluation.
-
-Cheating is not allowed. If you are caught cheating, you will get a 1 for the
-evaluation.
-
-All previous evaluations are available in the
-[`evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
-folder of the course repository.
-
-## Questions
-
-<!-- _class: lead -->
-
-Do you have any questions?
 
 ## Feedback
 
