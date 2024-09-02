@@ -49,9 +49,9 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/09-conclusion-to-part-1/09-conclusion-to-part-1-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]: https://framaforms.org/dai-2024-2025-feedback-1-1695300279
+[feedback]: https://framaforms.org/dai-2024-2025-feedback-1-1725285130
 [feedback-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2024-2025-feedback-1-1695300279
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2024-2025-feedback-1-1725285130
 [illustration]: ./images/main-illustration.jpg
 
 # Conclusion to part 1: Input/output processing

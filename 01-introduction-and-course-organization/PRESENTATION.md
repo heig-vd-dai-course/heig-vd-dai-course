@@ -311,7 +311,7 @@ If you have any difficulties with English, please let us know.
 
 ![bg right:40%](https://images.unsplash.com/photo-1617292797716-ec3000a44093?fit=crop&h=720)
 
-## _"What about ChatGPT, Copilot, etc.?"_
+## _"What about ChatGPT, GitHub Copilot, etc.?"_
 
 **You can use all the tools you want** (personal notes, Internet, AI tools,
 etc.), **except during evaluations and the exam**. You will be able to use these
