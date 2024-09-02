@@ -81,9 +81,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 ## Objectives
 
 In this chapter, you will learn about the differences between bare metal,
-virtualization and containerization. You will how to use Docker and Docker
-Compose to run applications in containers without the need to install the
-software directly on your computer.
+virtualization and containerization.
+
+You will learn how to use Docker and Docker Compose to build, publish, and run
+applications in containers without the need to install the software directly on
+your computer based on the OCI specification.
 
 ## Prepare and setup your environment
 
@@ -918,9 +920,17 @@ complete the practical content by yourself first to learn the most**.
 This is an optional section. Feel free to skip it if you do not have time.
 
 - Are you able to use environment variables in your Docker Compose file to
-  specify the implementation to use and the size of the file to write? Tip: to
-  use environment variables in command inside a Docker Compose file, you can use
-  the `$${ENVIRONMENT_VARIABLE_NAME}` syntax.
+  specify the implementation to use and the size of the file to write? As it
+  requires a few tricks, here are some tips:
+  - You need to define a new entrypoint to use a shell (like `/bin/bash`) to run
+    the Java application with the environment variables
+  - You need to define a new command in order to invoke the Java application
+    with the environment variables with the `-c` option of the shell (to run a
+    command in the shell)
+  - In order to escape the environment variables in the command, you can use the
+    `$$` syntax
+  - You need to define the environment variables in the Docker Compose file with
+    the `environment` instruction
 
 ## Conclusion
 
