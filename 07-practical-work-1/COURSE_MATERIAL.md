@@ -193,7 +193,7 @@ use signed pull requests to merge your work.
 [Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
 date.
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
 > Any minutes after the deadline will result in a penalty of -1 point on the
 > final grade. Each day of delay will result in a penalty of -1 point on the
@@ -205,7 +205,7 @@ information:
 - **Description**: The link to your repository as well as the commit hash you
   want to submit
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
 > If you do not update the GitHub Discussion with the link to your repository
 > and the commit hash before the deadline, it is considered as a late submission
