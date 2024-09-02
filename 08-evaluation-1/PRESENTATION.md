@@ -114,6 +114,18 @@ You will be able to use them during the exam at the end of the semester.
 
 ![bg right:40%][illustration]
 
+## Rules
+
+No communication between students is allowed.
+
+ChatGPT, Copilot or any other AI assisted tools are not allowed during the
+evaluation.
+
+Cheating is not allowed. If you are caught cheating, you will get a 1 for the
+evaluation.
+
+![bg right:40%][illustration]
+
 ## How to prepare
 
 All typical questions are at the end of each chapter you studied.
