@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: 'HEIG-VD DAI Course - Evaluation 1'
 description: 'Evaluation 1 for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-evaluation-1/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -48,8 +48,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-evaluation-1/08-evaluation-1-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Evaluation 1
 
@@ -68,43 +67,62 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Evaluation
+## Evaluation format
 
 In order to validate this part of the course, you will have to pass an
-evaluation. The questions will be in French and you can answer them in French or
-English.
+evaluation.
+
+The questions will be in French and you can answer them in French or English.
 
 The evaluation will only be **a theoretical part of 60 minutes**.
 
-The evaluation will be done on the computer with the help the online evaluation
-platform as used in the evaluation 1.
+The evaluation will be done on the computer with the help of an online
+evaluation platform.
 
-You will have to be connected to the
-[VPN](https://intranet.heig-vd.ch/services/informatique/poste-de-travail/reseau/vpn/Pages/vpn.aspx).
-It is **mandatory**.
-
----
+## Chapters evaluated
 
 The following chapters will be evaluated:
 
-- [HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/21-ssh-and-scp)
-- [Web infrastructures](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/22-web-infrastructures)
+- [Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/03-git-github-and-markdown)
+- [Java, IntelliJ IDEA and Maven](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04-java-intellij-idea-and-maven)
+- [Java IOs](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios)
+- [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
+- [Practical work 1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/07-practical-work-1)
 
----
+![bg right:40%][illustration]
+
+## Evaluation content
 
 You might be asked questions about the theoretical content, the practical
-content and elements seen in the practical work.
+content ini each chapter. You might be asked about elements seen in the
+practical work as well.
 
-You can only have access to your own notes in paper format. Your notes must fit
-on one sheet of paper (recto). They can contain anything useful to you:
-definitions, schemas, code snippets, etc. You will be able to use them during
-the exam at the end of the semester.
+You might also be asked to write/explain code snippets or to explain how to
+solve a specific problem.
+
+![bg right:40%][illustration]
+
+## Notes
+
+You have access to your own notes in paper format. Your notes must fit on **one
+sheet of paper (recto)**.
+
+They can contain anything useful to you: definitions, schemas, code snippets,
+etc.
+
+You will be able to use them during the exam at the end of the semester.
+
+![bg right:40%][illustration]
+
+## How to prepare
 
 All typical questions are at the end of each chapter you studied.
 
 All previous evaluations are available in the
-[`evaluation-4`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/08-evaluation-1)
-folder of the course repository.
+[`00-evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+directory of the course repository.
+
+![bg right:40%][illustration]
 
 ## Questions
 
