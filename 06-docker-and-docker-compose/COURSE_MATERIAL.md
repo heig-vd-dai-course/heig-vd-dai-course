@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/113
-[illustration]:
-  https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Docker and Docker Compose - Course material
 
@@ -83,9 +82,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 In this chapter, you will learn about the differences between bare metal,
 virtualization and containerization.
 
-You will learn how to use Docker and Docker Compose to build, publish, and run
+You will learn how what the OCI specification is and how it defines images,
+containers and registries.
+
+You will then use Docker and Docker Compose to build, publish, and run
 applications in containers without the need to install the software directly on
-your computer based on the OCI specification.
+your computer.
 
 ## Prepare and setup your environment
 
@@ -458,8 +460,8 @@ the README files to understand how to run them and what they do.
 
 ### Summary
 
-- Docker is a container engine
-- Docker is composed of two parts: the Docker daemon and the Docker CLI
+- Docker is a container engine composed of two parts: the Docker daemon and the
+  Docker CLI:
 - The Docker CLI is used to manage containers and images
 - The Dockerfile specification defines a standard for building Docker images
 - A Dockerfile is used to build a Docker image
