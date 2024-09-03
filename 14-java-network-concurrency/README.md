@@ -1,4 +1,4 @@
-# Concurrency with Java
+# Java network concurrency
 
 - Time in class: 2 periods
 - Presentation
