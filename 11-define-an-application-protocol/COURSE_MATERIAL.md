@@ -57,7 +57,7 @@ is defined by a set of rules that each party must follow to communicate.
 In this chapter, you will learn where to find information about application
 protocols, how is defined an application protocol and how to define your own
 application protocol. In future chapters, you will learn how to interact with
-well known application protocol.
+well known application protocols.
 
 ## What is an application protocol?
 
@@ -405,7 +405,7 @@ Share your application protocol in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2023-2024 - Check out my application protocol! - First name
+- **Title**: DAI 2024-2025 - Check out my application protocol! - First name
   Last Name
 - **Category**: Show and tell
 - **Description**: Copy/paste your application protocol.
@@ -459,6 +459,15 @@ chapter?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 

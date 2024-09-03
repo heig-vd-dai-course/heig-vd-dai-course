@@ -9,8 +9,8 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - SMTP and Telnet
 description: SMTP and Telnet for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-smtp-and-ncat/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -43,18 +43,18 @@ style: |
 headingDivider: 4
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-smtp-and-ncat/
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-smtp-and-ncat/12-smtp-and-ncat-presentation.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/15-smtp-and-ncat-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/114
 [illustration]:
   https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720
 [course-material]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/COURSE_MATERIAL.md
 [course-material-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/COURSE_MATERIAL.md
 
 # SMTP and Telnet
 
@@ -88,9 +88,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md#a-quick-reminder-about-networking).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### The Internet Protocol (IP)
 
@@ -124,9 +123,8 @@ Records map a domain name to an IP address.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md#electronic-messaging-protocols-smtp-pop3-and-imap).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Electronic messaging protocols: SMTP, POP3 and IMAP
 
@@ -166,9 +164,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md#dns-records-related-to-email).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### DNS records related to email
 
@@ -182,9 +179,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md#security-concerns-and-blacklisting).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Security concerns and blacklisting
 
@@ -200,9 +196,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md#a-focus-on-the-smtp-protocol).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### A focus on the SMTP protocol
 
@@ -231,9 +226,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md#telnet).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Telnet
 
@@ -263,7 +257,7 @@ You can find other resources and alternatives as well.
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 

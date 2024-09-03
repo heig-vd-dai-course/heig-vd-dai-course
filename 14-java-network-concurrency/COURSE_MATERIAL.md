@@ -1,14 +1,14 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-java-tcp-programming/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-tcp-programming/13-java-tcp-programming-course-material.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-java-tcp-programming/12-java-tcp-programming-course-material.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/116
 [illustration]:
   https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
 
-# Concurrency with Java - Course material
+# Java network concurrency - Course material
 
 <https://github.com/heig-vd-dai-course>
 
@@ -419,7 +419,7 @@ repository or clone it if you have not done it yet.
 
 #### Explore the code examples
 
-In the `13-java-tcp-programming` directory, checkout the `README.md` file to
+In the `12-java-tcp-programming` directory, checkout the `README.md` file to
 learn how to run the code examples.
 
 Take some time to explore the code examples.
@@ -432,13 +432,13 @@ using the Java Socket API.
 #### Start MailHog
 
 Just as in the
-[SMTP and Telnet](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/12-smtp-and-ncat)
+[SMTP and Telnet](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15-smtp-and-ncat)
 chapter, start MailHog in order to receive the emails sent by the Java code
 examples.
 
 #### Compile and run the SMTP client
 
-In the `13-java-tcp-programming` directory, compile and run the
+In the `12-java-tcp-programming` directory, compile and run the
 `SmtpClientExample` code example.
 
 ```sh
@@ -459,7 +459,7 @@ the same as the ones used with Telnet but in an automated way!
 
 #### Explore and run the code examples
 
-In the `13-java-tcp-programming` directory, checkout the `README.md` file to
+In the `12-java-tcp-programming` directory, checkout the `README.md` file to
 learn how to run the code examples.
 
 Take some time to explore the code examples. Run them and see what they do.
@@ -495,7 +495,7 @@ Share your results in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2023-2024 - Concurrent Java TCP servers - First name Last Name
+- **Title**: DAI 2024-2025 - Concurrent Java TCP servers - First name Last Name
 - **Category**: Show and tell
 - **Description**: Answer the questions for this section. Add links to the
   official Java documentation to support your answers.
@@ -550,6 +550,15 @@ chapter?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 

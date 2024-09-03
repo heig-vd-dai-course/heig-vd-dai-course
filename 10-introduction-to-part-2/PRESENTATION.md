@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: 'HEIG-VD DAI Course - Introduction to part 2: Network programming with TCP'
 description: 'Introduction to part 2: Network programming with TCP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-introduction-to-part-2/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -83,8 +83,8 @@ The answer was:
 > 2. The web server opens the file
 > 3. The web server reads the file
 > 4. The web server sends the file to you
-> 5. Your Web browser receives the file
-> 6. Your Web browser displays the file
+> 5. Your web browser receives the file
+> 6. Your web browser displays the file
 
 ## Do you know how does a web server work?
 

@@ -9,8 +9,8 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Java UDP programming
 description: Java UDP programming for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-udp-programming/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-udp-programming/
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -44,18 +44,18 @@ headingDivider: 4
 -->
 
 [web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-udp-programming/
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-udp-programming/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-udp-programming/14-java-udp-programming-presentation.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/13-java-udp-programming/13-java-udp-programming-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/120
 [illustration]:
   https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720
 [course-material]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming/COURSE_MATERIAL.md
 [course-material-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming/COURSE_MATERIAL.md
 
 # Java UDP programming
 
@@ -90,9 +90,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md#udp).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### UDP
 
@@ -108,9 +107,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md#differences-between-tcp-and-udp).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Differences between TCP and UDP
 
@@ -137,9 +135,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md#udp-datagrams).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### UDP datagrams
 
@@ -154,9 +151,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md#reliability).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Reliability
 
@@ -171,9 +167,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md#udp-in-the-socket-api).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### UDP in the Socket API
 
@@ -187,9 +182,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md#unicast-multicast-and-broadcast).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Unicast, broadcast and multicast
 
@@ -251,9 +245,8 @@ Think of it as a group conversation.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md#messaging-patterns).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Messaging patterns
 
@@ -272,9 +265,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/COURSE_MATERIAL.md#service-discovery-protocols).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Service discovery protocols
 
@@ -313,7 +305,7 @@ You can find other resources and alternatives as well.
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
