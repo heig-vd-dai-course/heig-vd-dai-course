@@ -26,14 +26,19 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 - [Group composition](#group-composition)
+- [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
-  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
-  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
-  - [Category 3 - Define an application protocol](#category-3---define-an-application-protocol)
-  - [Category 4 - Java TCP programming](#category-4---java-tcp-programming)
-  - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
+  - [Category 1 - Meta](#category-1---meta)
+  - [Category 2 - Git, GitHub and Markdown](#category-2---git-github-and-markdown)
+  - [Category 3 - Java, IntelliJ IDEA and Maven](#category-3---java-intellij-idea-and-maven)
+  - [Category 4 - Define an application protocol](#category-4---define-an-application-protocol)
+  - [Category 5 - Java TCP/UDP programming](#category-5---java-tcpudp-programming)
+  - [Category 6 - Java network concurrency](#category-6---java-network-concurrency)
+  - [Category 7 - Presentation and questions](#category-7---presentation-and-questions)
 - [Constraints](#constraints)
-- [Remarks](#remarks)
+- [Tips](#tips)
+  - [Create diagrams](#create-diagrams)
+  - [POSIX](#posix)
 - [Submission](#submission)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
@@ -45,18 +50,18 @@ Network applications are everywhere. They are used to communicate, to play
 games, to watch videos, to listen to music, to browse the web, to send emails,
 etc.
 
-In this practical work, you will create a network application that uses the TCP
-protocol.
+In this practical work, you will create your own network application.
 
-The network application will be defined by an application protocol, a client and
-a server. The client will send some requests to the server and the server will
-send some responses to the client.
+The network application will be defined by an application protocol and two
+processes that communicate over the network.
 
-The application protocol will be defined by you.
+The application protocol and the network protocol(s) it uses (TCP and/or UDP)
+will be defined by you.
 
 Feel free to be creative! For example, you can choose to create a chat
-application, a chess game, a shopping list, etc. If you do not have any idea,
-come to see us and we can give you.
+application, a chess game, a shopping list, the simulation of an Internet of
+Things (IoT) network, etc. If you do not have any idea, come to see us and we
+can give you.
 
 Multiple groups can choose the same application protocol and you can share your
 methodology but please do not copy/paste code from other groups.
@@ -64,8 +69,8 @@ methodology but please do not copy/paste code from other groups.
 ## Objectives
 
 - Define a network application protocol
-- Make usage of the TCP protocol
-- Use Java TCP programming to implement a client and a server application
+- Make usage of the TCP and/or UDP protocol(s)
+- Implement a client/receiver and a server/emitter application
 
 ## Group composition
 
@@ -76,129 +81,166 @@ To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 2 - First name Last name member 1
+- **Title**: DAI 2024-2025 - Practical work 2 - First name Last name member 1
   and First name Last name member 2
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
 
+> [!IMPORTANT]
+>
+> **Please do it a soon as possible**, even if you do not have a clear idea yet
+> as it will help us to plan the practical work presentations.
+>
+> Please refer to the grading criteria to know what is expected from you.
+
+## Idea validation
+
 The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
-**Please do it a soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
+This will ensure that you have a good balance between the complexity of the
+practical work and the time you have to complete it.
+
+If you do not have any idea, come to see us and we can help you finding some
+ideas.
 
 ## Grading criteria
 
-- 0 point - The work is not done
-- 0.1 point - The work is insufficient
-- 0.2 point - The work is done
+- 0 point - The work is insufficient
+- 0.1 point - The work is done
+- 0.2 point - The work is well done (without the need of being perfect)
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
 
-### Category 1 - Git, GitHub and Markdown
+> [!IMPORTANT]
+>
+> While the grading criteria might not be as detailed as in the previous
+> practical works for each section, you **must** continue to apply all the good
+> practices you have learned so far.
+>
+> If elements that are supposed to be acquired through the course or previous
+> practical works are omitted, forgotten or poorly implemented, we might
+> penalize you.
+>
+> Remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
 
-If your repository is private, you must add us as collaborators to your
-repository!
+### Category 1 - Meta
 
-| #   | Criterion                                                                                                               | Points |
-| --- | ----------------------------------------------------------------------------------------------------------------------- | -----: |
-| 1   | The whole team contributes to the project and can explain it in details                                                 |    0.2 |
-| 2   | The README is well structured and explains what the network application is for with its documented application protocol |    0.2 |
-| 3   | The README explains how to build the network application                                                                |    0.2 |
-| 4   | The README explains how to run the network application with examples and outputs                                        |    0.2 |
+| #   | Criterion                                                                                                                                                                                               | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 1   | A GitHub Discussion is opened during the first week of the project to explain the idea of the project so the teachers can validate the idea                                                             |    0.2 |
+| 2   | The GitHub Discussion is updated with the link to the repository and a related commit hash before the deadline - every 24 hours after the deadline will result in a -1 point penalty on the final grade |    0.2 |
 
-### Category 2 - Java, IntelliJ IDEA and Maven
+### Category 2 - Git, GitHub and Markdown
 
-| #   | Criterion                                                  | Points |
-| --- | ---------------------------------------------------------- | -----: |
-| 5   | The codebase has all required files and is well structured |    0.2 |
-| 6   | The codebase is well documented                            |    0.2 |
+| #   | Criterion                                                                                                                                                                | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+| 3   | Issues and pull requests are created/used all along the project to describe/integrate new features, elements to improve, etc. in your project                            |    0.2 |
+| 4   | The README is well structured and explains the purpose of your application so new users can understand it                                                                |    0.2 |
+| 5   | The README explains how to use your application with examples and outputs so a new user/developer can understand your application without having to run it locally       |    0.2 |
+| 6   | The README describes explicit commands to clone and build your application with Git and Maven so new developers can start and develop your project on their own computer |    0.2 |
 
-### Category 3 - Define an application protocol
+### Category 3 - Java, IntelliJ IDEA and Maven
 
-| #   | Criterion                                                                                     | Points |
-| --- | --------------------------------------------------------------------------------------------- | -----: |
-| 7   | The application protocol defines the port and protocol to use                                 |    0.2 |
-| 8   | The application protocol defines who initiates the connection and how                         |    0.2 |
-| 9   | The application protocol defines the available messages/actions with their input(s)/output(s) |    0.2 |
-| 10  | The application protocol defines the success/error codes and their explanations               |    0.2 |
-| 11  | The application protocol is described using one or multiple diagrams                          |    0.2 |
-| 12  | The application protocol defines the edge-cases when something could go wrong with a diagram  |    0.2 |
+| #   | Criterion                                                                                                                                       | Points |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 7   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase |    0.2 |
 
-### Category 4 - Java TCP programming
+### Category 4 - Define an application protocol
 
-| #   | Criterion                                                                                                                                                                                                                                                                    | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 13  | The server starts on the defined port (but you must be able to change it if needed) and accept connections from multiple clients at the same time                                                                                                                            |    0.2 |
-| 14  | The client can access the server on a given host (by default, the client tries to connect to the defined port but you must be able to change it if needed) and execute commands to interact with it without closing the connection for each action (see [Remarks](#remarks)) |    0.2 |
-| 15  | The client displays an error message with details when the connection has not succeed                                                                                                                                                                                        |    0.2 |
-| 16  | Some actions are private (unique to one user), some actions are common (affect all users)                                                                                                                                                                                    |    0.2 |
-| 17  | No one can manipulate items from another client if it is not authorized                                                                                                                                                                                                      |    0.2 |
-| 18  | The client and server correctly process the input/output commands                                                                                                                                                                                                            |    0.2 |
-| 19  | The client/server is informed if the server/client closes the connection                                                                                                                                                                                                     |    0.2 |
-| 20  | The application uses all the best practices regarding network programming                                                                                                                                                                                                    |    0.2 |
+| #   | Criterion                                                                                                      | Points |
+| --- | -------------------------------------------------------------------------------------------------------------- | -----: |
+| 8   | The repository contains the application protocol that describes your network application                       |    0.2 |
+| 9   | The application protocol defines the overview of the network application                                       |    0.2 |
+| 10  | The application protocol defines the transport protocol(s) the network application uses                        |    0.2 |
+| 11  | The application protocol defines the available messages/actions/commands for the client/server to communicate  |    0.2 |
+| 12  | The application protocol defines the success/error codes and their explanations                                |    0.2 |
+| 13  | The application protocol is described using successful and unsuccessful examples with one or multiple diagrams |    0.2 |
 
-### Category 5 - Presentation and questions
+### Category 5 - Java TCP/UDP programming
 
-| #   | Criterion                                                                            | Points |
-| --- | ------------------------------------------------------------------------------------ | -----: |
-| 21  | The presentation is clear and well prepared                                          |    0.2 |
-| 22  | Everyone speaks during the presentation, and the presentation lasts the time allowed |    0.2 |
-| 23  | The presentation presents the network application                                    |    0.2 |
-| 24  | A demo of the network application is made                                            |    0.2 |
-| 25  | The answers to the questions are correct                                             |    0.2 |
+| #   | Criterion                                                                                                                | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------ | -----: |
+| 14  | The server starts/listens on the defined port(s) by default (you must must be able to change it if needed)               |    0.2 |
+| 15  | The client accesses the server on a given host (you must be able to change it)                                           |    0.2 |
+| 16  | The client accesses the server on the defined port(s) by default (you must be able to change it if needed)               |    0.2 |
+| 17  | The client and server exchange messages/actions/commands to interact with each other                                     |    0.2 |
+| 18  | The client and server correctly process the messages/actions/commands and with their edge-cases in case a problem occurs |    0.2 |
+| 19  | The client and server are compatible across operating systems/languages                                                  |    0.2 |
+| 20  | The client and server correctly manage resources in case a problem occurs                                                |    0.2 |
+
+### Category 6 - Java network concurrency
+
+| #   | Criterion                                                                                | Points |
+| --- | ---------------------------------------------------------------------------------------- | -----: |
+| 21  | The network application accepts connections from multiple clients at the same time       |    0.2 |
+| 22  | The data structures used in the network application are resilient to concurrent accesses |    0.2 |
+
+### Category 7 - Presentation and questions
+
+| #   | Criterion                                                                                                                                                                | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+| 23  | The application is presented and a demo is made as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how |    0.2 |
+| 24  | The presentation is clear and well prepared - everyone speaks during the presentation                                                                                    |    0.2 |
+| 25  | The answers to the questions are correct                                                                                                                                 |    0.2 |
 
 ## Constraints
 
-- The network application must be written in Java, compatible with Java 17
-- The network application must be built using Maven
-- You must use one or more of the Java classes seen in the course
-- Your application must be slightly more complex and different than the ones
-  presented during the course
+- The application must be written in Java, compatible with Java 21
+- The application must be built using Maven with the `maven-shade-plugin` plugin
+- The application must use the picocli dependency
+- You can only use the Java classes seen in the course to initiate the network
+  connection
+- Your application must be slightly more complex and slightly different than the
+  examples presented during the course (we emphasize the word **slightly**, no
+  need to shoot for the moon!)
 
-## Remarks
+## Tips
 
-Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
-use a simple solution than a complex one.
-
-If your implementation is too complex, we might penalize you.
-
-If elements that are supposed to be acquired through the course or previous
-practical works are omitted, forgotten or poorly implemented, we might penalize
-you.
+### Create diagrams
 
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
 any other tools you want to create your diagrams.
 
-You can use any other dependencies you want in your Maven project. You must
-however explain why and how you use it in your README.
+### POSIX
 
-You can protect the `main` branch of your repository to prevent any push on it
-and force signed commits from team members. This will force all team members to
-use signed pull requests to merge your work.
+> The Portable Operating System Interface (POSIX) standard is a family of
+> standards specified by the IEEE Computer Society for maintaining compatibility
+> between operating systems. POSIX defines both the system and user-level
+> application programming interfaces (APIs), along with command line shells and
+> utility interfaces, for software compatibility (portability) with variants of
+> Unix and other operating systems.
+>
+> <https://en.wikipedia.org/wiki/POSIX>
 
-In order to run multiple commands/actions on the server without closing the
-connection, you can use what is called a
-[read-eval-print loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
-To make it simple, a REPL is simply a loop that will ask the user to input
-commands. The loop will then execute the command and display the result. The
-loop will continue until the user decides to exit the loop.
+Not all programs are/can be POSIX compliant. If you try to comply with the POSIX
+standard, you will be able to run your program on various operating systems
+without any issues.
 
 ## Submission
 
-Your work is due on the **day of the presentations** (the _"Practical work
-review"_ sessions in the official planning available at
-<https://github.com/orgs/heig-vd-dai-course/projects>) at **13:15**.
+**Your work is due on the day before the presentations at 23h59**. Check the
+[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
+date.
 
-Any commit after the deadline will not be taken into account. Each day of delay
-will result in a penalty of -1 point on the final grade.
+> [!IMPORTANT]
+>
+> Any minutes after the deadline will result in a penalty of -1 point on the
+> final grade. Each day of delay will result in a penalty of -1 point on the
+> final grade.
 
 You must update the GitHub Discussion you created previously with the following
 information:
 
-- **Description**: The link to your repository as well as the latest commit hash
-  of your work before submission
+- **Description**: The link to your repository as well as the commit hash you
+  want to submit
+
+> [!IMPORTANT]
+>
+> If you do not update the GitHub Discussion with the link to your repository
+> and the commit hash before the deadline, it is considered as a late submission
+> and you will be penalized.
 
 ## Grades and feedback
 
@@ -215,28 +257,20 @@ If you have any questions about the evaluation, you can contact us!
 <details>
 <summary>Grading grid template for the teaching staff</summary>
 
-```markdown
-# Practical work 2 - Grading grid for First name Last name member 1 and First name Last name member 2
+```text
+[DAI 202X-202Y] Retours sur le travail pratique Z
 
-Here are the grades and comments for each criterion for the practical work.
+Bonjour,
 
-## Grading criteria
+Vous trouverez en pièce jointe les retours que nous vous avons faits pour le
+travail pratique.
 
-- 0 point - The work is not done
-- 0.1 point - The work is insufficient
-- 0.2 point - The work is done
+La note a été saisie dans GAPS également.
 
-Maximum grade: 25 points \* 0.2 + 1 = 6
+Nous restons à votre disposition pour toute question.
 
-## General feedback
-
-- ...
-
-## Final grade
-
-Your final grade is:
-
-Feel free to contact us if you have any questions about the evaluation!
+Cordialement,
+Ludovic Delafontaine et Hadrien Louis
 ```
 
 </details>
@@ -248,6 +282,15 @@ practical work?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 

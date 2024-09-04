@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Practical work 2
 description: Practical work 2 for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-practical-work-2/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -52,9 +52,9 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/117
 [illustration]:
   https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720
-[practical-work]:
+[course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2/COURSE_MATERIAL.md
-[practical-work-qr-code]:
+[course-material-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2/COURSE_MATERIAL.md
 
 # Practical work 2
@@ -181,10 +181,10 @@ Bye.
 If a client tries to connect to the server when no thread is available, the
 client has to wait to be served.
 
-## Practical work review
+## Practical work presentations
 
-The practical work review will take place on **Tuesday 28.11.2023** in the
-**room B38**, at the very end of the corridor next to the door entry.
+The practical work presentations will take place on **Tuesday 28.11.2023** in
+the **room B38**, at the very end of the corridor next to the door entry.
 
 We only have **10 minutes per group** (6 minutes of presentation, 3 minutes of
 questions). Please be prepared to present your work. You decide what you want to
@@ -229,9 +229,9 @@ review.**
 
 <!-- _class: lead -->
 
-You can find the practical work for this part on [GitHub][practical-work].
+You can find the practical work for this part on [GitHub][course-material].
 
-[![bg right w:75%][practical-work-qr-code]][practical-work]
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Grades and feedback
 
