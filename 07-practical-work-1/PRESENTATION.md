@@ -221,21 +221,33 @@ More details for this section in the [course material][course-material].
 - Your application must be slightly more complex and slightly different than the
   examples presented during the course
 
-## Remarks
+## Tips
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material].
 
-### The KISS principle
+### The UNIX philosophy and the KISS principle
 
-- Keep it simple, silly!
+- _Write programs that do one thing and do it well._
+- _Write programs to work together._
+- _Write programs to handle text streams, because that is a universal
+  interface._
+
+![bg right:45% contain](./images/the-unix-philosophy.png)
+
+---
+
+The KISS principle summarizes the Unix philosophy in a simple sentence: _Keep it
+simple, silly!_
+
 - Don't try to do too much
-- Focus on the essentials and **do it well**
+- Focus on the essentials
+- Do it well
 
 Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
 
-<small>If you have not seen the movie scene, check it here:
+<small>Check the movie scene here:
 [YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0).</small>
 
 ![bg right:40%](./images/asterix-et-obelix-mission-cleopatre-porte-au-plafond.png)
@@ -255,6 +267,8 @@ date.
 - Update the GitHub Discussion with the link to your repository to include:
   - A link to your GitHub repository
   - The commit hash of the version you want to submit
+
+If you do not submit your work on time and/or correctly, you will be penalized.
 
 ## Grades and feedback
 
