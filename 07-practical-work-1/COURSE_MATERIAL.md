@@ -217,6 +217,10 @@ You can protect the `main` branch of your repository to prevent any push on it
 and force signed commits from team members. This will force all team members to
 use signed pull requests to merge your work.
 
+You can check the official documentation to know how to protect your main branch
+on GitHub:
+<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>.
+
 ## Submission
 
 **Your work is due on the day before the presentations at 23h59**. Check the

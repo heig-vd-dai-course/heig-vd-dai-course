@@ -673,11 +673,12 @@ example:
 - Markdown is easy to learn and use
 - Markdown can be used to create documentation
 - Markdown can be used to create slides
-- Markdown can be exported to many formats
-  - The presentations are exported to Web and PDF with the help of
-    [Marp](https://marp.app/)
-  - The course material is exported to PDF with the help of
-    [Pandoc](https://pandoc.org/) and [weasyprint](https://weasyprint.org/)
+- Markdown can be exported to many formats:
+  - For example, the presentations of this course are exported to Web and PDF
+    with the help of [Marp](https://marp.app/)
+  - For example, the course materials of this course are exported to PDF with
+    the help of [Pandoc](https://pandoc.org/) and
+    [weasyprint](https://weasyprint.org/)
 
 ### Alternatives
 
