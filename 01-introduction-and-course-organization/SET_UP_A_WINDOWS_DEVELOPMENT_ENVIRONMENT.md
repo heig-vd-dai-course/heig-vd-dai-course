@@ -449,6 +449,13 @@ From now on, you can use WSL as your primary development environment for the
 rest of the course. We will expect you to use WSL in all the assignments and
 projects.
 
+> [!CAUTION]
+>
+> **All** commands that you will run in the course will be run in the Ubuntu
+> terminal unless specified otherwise.
+>
+> No other environment will be supported (GitBash, Cygwin, etc.).
+
 The next sections will guide you through the installation and configuration of
 your Integrated Development Environment (IDE) and other tools.
 
