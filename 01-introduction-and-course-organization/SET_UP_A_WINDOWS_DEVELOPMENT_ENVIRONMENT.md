@@ -21,7 +21,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Configure Windows Terminal](#configure-windows-terminal)
 - [Update Ubuntu](#update-ubuntu)
 - [Exclude WSL from Windows Defender](#exclude-wsl-from-windows-defender)
-- [Check the Considerations for a development environment guide](#check-the-considerations-for-a-development-environment-guide)
+- [Check the _Considerations for a development environment_ guide](#check-the-considerations-for-a-development-environment-guide)
 - [Validate the installation](#validate-the-installation)
 - [Install and configure your IDE](#install-and-configure-your-ide)
   - [Install and configure IntelliJ IDEA to access WSL](#install-and-configure-intellij-idea-to-access-wsl)
@@ -35,6 +35,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Enable virtualization](#enable-virtualization)
 
 ## Introduction
+
+> [!NOTE]
+>
+> This guide is meant for people who are using Windows as their primary
+> operating system. If you have a Linux or macOS computer, you can skip this
+> guide and go straight to the
+> [Check the _Considerations for a development environment guide_](#check-the-considerations-for-a-development-environment-guide)
+> section.
 
 The HEIG-VD recommends Windows for your studies. This is mostly because other
 departments heavily rely on Windows-only products.
@@ -418,7 +426,7 @@ Add-MpPreference -ExclusionPath '\\wsl$\Ubuntu'
 
 You should do this for each distribution you have installed.
 
-## Check the Considerations for a development environment guide
+## Check the _Considerations for a development environment_ guide
 
 Before continuing with the installation and configuration of your Integrated
 Development Environment (IDE) and other tools, you should check the
