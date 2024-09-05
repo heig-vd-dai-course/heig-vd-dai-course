@@ -1308,13 +1308,13 @@ in the README file in the class you belong to:
 > [!IMPORTANT]
 >
 > As little as it seems, it is important to respect the alphabetical order. It
-> makes it easier to find someone in the list once we have to search for a
-> student to contact them for a project, for example.
+> helps us (the teaching staff) searching for someone when grading your work and
+> answering your questions. Thanks!
 >
 > Do not remove the HTML comments in the README file.
 
 ```markdown
-- First name Last name [@username](https://github.com/username)
+- First name LAST NAME [@username](https://github.com/username)
 ```
 
 #### Commit your changes
