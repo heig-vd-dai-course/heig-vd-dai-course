@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Docker and Docker Compose
 description: Docker and Docker Compose for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-docker-and-docker-compose/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -50,12 +50,13 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/113
-[illustration]:
-  https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md
 [course-material-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md
+[code-examples]:
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main
 
 # Docker and Docker Compose
 
@@ -76,65 +77,38 @@ _paginate: false
 
 ## Objectives
 
-Learn software installation challenges and containerization benefits.
-
-- Traditional software installation vs. containerization
-- Learn what an OCI images and containers are
-- Install & run software with Docker
-- Long, yet (very) useful chapter
+- Learn the differences between bare metal, virtualization and containerization
+- Learn how the OCI specification defines images, containers, and registries
+- Learn how to use Docker and Docker Compose to build, publish, and run
+  applications in containers
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-## Issues with software installation
+## Prepare and setup your environment
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### The problem
+### Install Docker and Docker Compose
 
-- Installing a software is easy
-- However, maintenance is hard:
-  - What to do when a new version is available?
-  - How to keep track of configuration changes?
-  - How to migrate to a new server?
+- Install Docker and Docker Compose
+- Configure Docker and Docker Compose to:
+  - Run without `sudo` (root)
+  - Start automatically at boot
 
-![bg right:40%](https://images.unsplash.com/photo-1548783917-a211bcc263cc?fit=crop&h=720)
+![bg right h:60%](./images/docker.svg)
+![bg right h:90% vertical](https://github.com/docker/compose/raw/main/logo.png)
 
-### A solution
+### Check and run the code examples
 
-- A solution can be containerization
-- Containerization allows to:
-  - Package software with its dependencies
-  - Run software in an isolated environment
-  - Share software with others
+- Check the code examples
+- Run the code examples
+- Helps to understand the concepts
+- Modify/play with the code examples
 
-![bg right:40%](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
-
-### An example
-
-- You work as a database administrator
-- You have to maintain multiple database servers
-- Some projects use MySQL 5.7, others MySQL 8.0
-- You must install and maintain multiple versions of MySQL
-- Versions can be incompatible with each other
-- You must keep track of configuration changes
-- Migration to a new server is hard as you have to reinstall each time
-- Your life is miserable and depressing... How to solve this?
-
----
-
-- Just install a container engine (e.g. Docker) on each server
-- Find official images for MySQL 5.7 and MySQL 8.0 on the registry
-- Start these images as containers - one for each version
-- Want to try a new version? Just start a new container!
-- Each container is isolated from the others so no more conflicts
-- Each container has its own configuration that is easy to track
-- Migration is easier: move the data and start the containers!
-
-Containerization has its own challenges but it can help to solve some issues you
-may have with software installation and maintenance.
+![bg right w:80%](./images/code-examples-github-repository.png)
 
 ## Bare metal, virtualization and containerization
 
@@ -178,15 +152,6 @@ find other resources and alternatives as well.
 
 ![bg right contain](./images/containerization.png)
 
----
-
-<!-- _class: lead -->
-
-A good resource to better understand the differences between bare metal,
-virtualization and containerization is the following video:
-
-[_"Big Misconceptions about Bare Metal, Virtual Machines, and Containers"_ by ByteByteGo](https://www.youtube.com/watch?v=Jz8Gs4UHTO8)
-
 ## OCI, images, containers, and registries
 
 <!-- _class: lead -->
@@ -196,11 +161,27 @@ find other resources and alternatives as well.
 
 ### OCI, images, containers, and registries
 
-- Container: runnable instance of an image
 - Image: read-only template for container creation
+- Container: runnable instance of an image
 - Registry: service storing images
 
-![bg right contain](./images/oci-images-containers-and-registries.png)
+![bg right contain](./images/oci-specification.png)
+
+### Docker Hub
+
+- The official registry
+- Hosts millions of images
+- Can be used to store and share images
+
+![bg right w:80%](./images/docker-hub.png)
+
+### GitHub Container Registry
+
+- GitHub's registry
+- Hosts images in the same place as the code
+- Will be used in this course for simplicity
+
+![bg right w:80%](./images/github-container-registry.png)
 
 ## Docker
 
@@ -226,35 +207,19 @@ find other resources and alternatives as well.
 - Based on an existing image
 - Defines a set of instructions to build the image
 - Written in plain text
-- Each step creates a layer in the image (takes disk space)
 
 ![bg right contain](./images/dockerfile-specification.png)
 
-### Security considerations
+### Code examples
 
-- Docker daemon runs as root (= as an admin user), meaning:
-  - It has access to the host filesystem
-  - It has access to the host network
-- The containers have limited access but you still need to be careful
-- It is good practice to run containers as non-root users
+Check the code examples in the
+[`heig-vd-dai-course-code-examples`][code-examples] Git repository:
 
-![bg right:40%](https://images.unsplash.com/photo-1496368077930-c1e31b4e5b44?fit=crop&h=720)
-
-### Ignore files
-
-- Same as the `.gitignore` file
-- Named `.dockerignore`
-- Can be used to exclude files from the build context
-
-```dockerignore
-# Ignore target directory
-/target
-
-# Ignore all files with .md extension
-*.md
-```
-
-![bg right contain](../03-git-github-and-markdown/images/git-ignore-files.png)
+- Basic Dockerfile
+- Dockerfile with command
+- Dockerfile with entrypoint and command
+- Dockerfile with build arguments
+- Dockerfile with run and copy commands
 
 ### Summary
 
@@ -292,63 +257,23 @@ find other resources and alternatives as well.
 
 ![bg right contain](./images/docker-compose-specification.png)
 
-### Docker Compose v1 vs. Docker Compose v2
+### Code examples
 
-- Docker Compose v1 written in Python (`docker-compose`)
-- Docker Compose v2 written in Go (`docker compose`)
-- Docker Compose v1 is deprecated
+Check the code examples in the
+[`heig-vd-dai-course-code-examples`][code-examples] Git repository:
 
-![bg right contain](./images/docker-compose-v1-vs-v2.png)
+- Basic Docker Compose
+- Docker Compose with ports
+- Docker Compose with volumes
+- Docker Compose with environment variables
 
 ### Summary
 
 - Docker Compose allows to define a multi-container Docker application in a
   Docker Compose file
 - A Docker Compose file can consist of a set of services, volumes and networks
-- A Docker Compose file (`docker-compose.yml`) can be easily shared and
+- A Docker Compose file (`docker-compose.yaml`) can be easily shared and
   versioned with the application
-- Docker Compose v2 is the recommended version to use
-
-## Docker Desktop
-
-<!-- _class: lead -->
-
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
-
-### Docker Desktop
-
-- A tool for macOS and Windows
-- Runs a Linux virtual machine to run Docker
-- Allows to run Docker and Docker Compose commands
-
-![bg right contain](./images/docker-desktop.png)
-
-## Docker Hub and GitHub Container Registry
-
-<!-- _class: lead -->
-
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
-
-### Docker Hub and GitHub Container Registry
-
-- Docker Hub is the official registry, hosting millions of images
-- We will use GitHub Container Registry to keep everything in one place
-
-![bg right contain](./images/docker-hub-and-github-container-registry.png)
-
-### Tips and tricks
-
-Some tips and tricks are described in the course material (not mandatory to
-read):
-
-- Healthchecks
-- Free some space
-- Multi-stage builds
-- Multi-architecture builds
-
-![bg right contain](./images/docker-hub-and-github-container-registry.png)
 
 ## Practical content
 
@@ -356,12 +281,13 @@ read):
 
 ### What will you do?
 
-- Install and configure Docker
-- Install and configure Docker Compose
-- Build, run and publish a container with Docker and Docker Compose
-- Containerize a simple web application
+Containerize the previous Java IOs project:
 
-![bg right contain](./images/what-will-you-do.png)
+- Create the Dockerfile and Docker Compose files
+- Publish on GitHub Container Registry
+- Run it on any Docker host
+
+![bg right w:80%](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -370,7 +296,7 @@ read):
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -386,13 +312,14 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next chapter, you will learn the following topics:
+We are arriving at the end of the first part of the course.
 
-- Experiment with the SMTP protocol and Telnet with Docker and Docker Compose
-  - How to send emails with SMTP? How is structured an email?
-  - Run a SMTP server with Docker and send an email with Telnet
+An evaluation will be done to check your understanding of all the content seen
+in this first part.
 
-![bg right:40%](https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720)
+More details will be given in the next chapter.
+
+![bg right:40%](https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720)
 
 ## Sources
 
@@ -406,5 +333,5 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [Scott Webb](https://unsplash.com/@scottwebb) on
   [Unsplash](https://unsplash.com/photos/yekGLpc3vro)
-- Illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska) on
-  [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
+- Illustration by [MChe Lee](https://unsplash.com/@mclee) on
+  [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)

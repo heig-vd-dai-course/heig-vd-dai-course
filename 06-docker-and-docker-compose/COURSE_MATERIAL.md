@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/113
-[illustration]:
-  https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Docker and Docker Compose - Course material
 
@@ -24,47 +23,42 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
-- [Issues with software installation](#issues-with-software-installation)
-  - [The problem](#the-problem)
-  - [A solution](#a-solution)
-  - [An example](#an-example)
+- [Prepare and setup your environment](#prepare-and-setup-your-environment)
+  - [Install Docker and Docker Compose](#install-docker-and-docker-compose)
+  - [Check and run the code examples](#check-and-run-the-code-examples)
 - [Bare metal, virtualization and containerization](#bare-metal-virtualization-and-containerization)
   - [Bare metal](#bare-metal)
   - [Virtualization](#virtualization)
   - [Containerization](#containerization)
 - [OCI, images, containers and registries](#oci-images-containers-and-registries)
-- [Docker](#docker)
-  - [Dockerfile specification](#dockerfile-specification)
-  - [Security considerations](#security-considerations)
-  - [Ignore files](#ignore-files)
-  - [Summary](#summary)
-  - [Cheatsheet](#cheatsheet)
+  - [Docker Hub](#docker-hub)
+  - [GitHub Container Registry](#github-container-registry)
   - [Alternatives](#alternatives)
   - [Resources](#resources)
-- [Docker Compose](#docker-compose)
-  - [Docker Compose specification](#docker-compose-specification)
-  - [Docker Compose v1 vs. Docker Compose v2](#docker-compose-v1-vs-docker-compose-v2)
-  - [Summary](#summary-1)
-  - [Cheatsheet](#cheatsheet-1)
+- [Docker](#docker)
+  - [Dockerfile specification](#dockerfile-specification)
+  - [Summary](#summary)
+  - [Cheatsheet](#cheatsheet)
   - [Alternatives](#alternatives-1)
   - [Resources](#resources-1)
-- [Docker Desktop](#docker-desktop)
+- [Docker Compose](#docker-compose)
+  - [Docker Compose specification](#docker-compose-specification)
+  - [Summary](#summary-1)
+  - [Cheatsheet](#cheatsheet-1)
   - [Alternatives](#alternatives-2)
-- [Docker Hub and GitHub Container Registry](#docker-hub-and-github-container-registry)
-  - [Alternatives](#alternatives-3)
-- [Tips and tricks](#tips-and-tricks)
-  - [Healthchecks](#healthchecks)
-  - [Free some space](#free-some-space)
-  - [Multi-stage builds](#multi-stage-builds)
-  - [Multi-architecture builds](#multi-architecture-builds)
+  - [Resources](#resources-2)
 - [Practical content](#practical-content)
-  - [Install Docker and Docker Compose](#install-docker-and-docker-compose)
-  - [Run a container with Docker](#run-a-container-with-docker)
-  - [Write a Dockerfile, build and run an image with Docker](#write-a-dockerfile-build-and-run-an-image-with-docker)
-  - [Publish an image on GitHub Container Registry](#publish-an-image-on-github-container-registry)
-  - [Use the published image with Docker](#use-the-published-image-with-docker)
-  - [Use the published image with Docker Compose](#use-the-published-image-with-docker-compose)
-  - [Build and run the application with Docker Compose](#build-and-run-the-application-with-docker-compose)
+- [Package your own applications with Docker](#package-your-own-applications-with-docker)
+- [Publish your own applications with Docker](#publish-your-own-applications-with-docker)
+  - [Create a personal access token](#create-a-personal-access-token)
+  - [Login to GitHub Container Registry](#login-to-github-container-registry)
+  - [Tag the image correctly for GitHub Container Registry](#tag-the-image-correctly-for-github-container-registry)
+  - [Publish the image on GitHub Container Registry](#publish-the-image-on-github-container-registry)
+- [Run your own applications with Docker and Docker Compose](#run-your-own-applications-with-docker-and-docker-compose)
+  - [Pull the image from GitHub Container Registry](#pull-the-image-from-github-container-registry)
+  - [Run the image with Docker](#run-the-image-with-docker)
+  - [Run the image with Docker Compose](#run-the-image-with-docker-compose)
+- [Share your Docker Compose application](#share-your-docker-compose-application)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -73,131 +67,118 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
 - [Solution](#solution)
+- [Optional content](#optional-content)
+  - [Docker Compose v1 vs. Docker Compose v2](#docker-compose-v1-vs-docker-compose-v2)
+  - [Security considerations](#security-considerations)
+  - [Free some space](#free-some-space)
+  - [Ignore files](#ignore-files)
+  - [Healthchecks](#healthchecks)
+  - [Multi-stage builds](#multi-stage-builds)
+  - [Multi-architecture builds](#multi-architecture-builds)
 - [Sources](#sources)
 
 ## Objectives
 
-In this chapter, you will learn how installation of software can be tedious and
-how containerization can help you with that.
+In this chapter, you will learn about the differences between bare metal,
+virtualization and containerization.
 
-You will learn how to install and run software on your computer with the help of
-Docker and Docker Compose to avoid the need to install the software directly on
+You will learn how what the OCI specification is and how it defines images,
+containers and registries.
+
+You will then use Docker and Docker Compose to build, publish, and run
+applications in containers without the need to install the software directly on
 your computer.
 
-This is a fairly long and complete chapter. It will take you some time to
-complete it. Do not hesitate to take breaks. The content of this chapter will be
-useful for the rest of the course.
+## Prepare and setup your environment
 
-## Issues with software installation
+### Install Docker and Docker Compose
 
-### The problem
+In this section, you will install Docker and Docker Compose on your computer.
 
-When you want to install a software on your computer, the traditional way is to
-download an installer, run it and follow the instructions. The installer will
-install the software on your computer, and you will be able to use it.
+#### Install Docker and Docker Compose on Linux and Windows (WSL)
 
-The installer has written some files on your computer, and it has modified some
-settings. It can be quite difficult to know what the installer has done on your
-computer. It can also be difficult to uninstall the software, because you need
-to know what the installer has done. Even if the installer has an uninstaller,
-it could not have removed everything.
+Go to the official website and follow the instructions to install
+[Docker Engine](https://docs.docker.com/engine/) on your distribution **from the
+repository** (not using Docker Desktop):
 
-The problem arises when you want to install another version of the software or
-on another computer: if you install the new version, it will overwrite the old
-version. If you want to keep the old version, you need to install the new
-version in another directory. If you want to keep both versions, you need to
-install the new version in another directory, and you need to change the
-application's settings to use the new version. It becomes quite a mess.
+- Debian: <https://docs.docker.com/engine/install/debian/>
+- Fedora: <https://docs.docker.com/engine/install/fedora/>
+- Ubuntu: <https://docs.docker.com/engine/install/ubuntu/>
+- Other distributions: <https://docs.docker.com/engine/install/>
 
-If you want to install the software on another computer, you need to manually
-change the settings; it can be difficult to know what to change.
+> [!NOTE]
+>
+> While it is possible to install Docker Desktop on Linux (not WSL), we would
+> not recommend it. It is better to install Docker Engine and Docker Compose
+> directly on your system to avoid any overhead.
 
-### A solution
+Then, follow the post-installation steps to finalize the installation:
+<https://docs.docker.com/engine/install/linux-postinstall/> (steps _"Manage
+Docker as a non-root user"_ and _"Configure Docker to start on boot with
+systemd"_).
 
-Containerization is one of the possible solutions to this problem. It is not the
-only solution, but it is a good one.
+##### Install Docker and Docker Compose on macOS
 
-With containerization, you can install the software in a container. The
-container is a virtual environment that contains the software and all its
-dependencies. The container is isolated from the rest of the computer and can be
-run on any computer that has the containerization software installed.
+Go to the official website and follow the instructions on how to install Docker
+Desktop on your system: <https://docs.docker.com/desktop/>.
 
-Each container is independent from the others. You can run multiple containers
-on the same computer. You can run multiple containers of a software using
-different versions, knowing that they will not interfere with each other.
+This will install Docker Engine and Docker Compose in a virtual machine.
 
-Containers are lightweight. They are faster to start than virtual machines. They
-are also faster to create and destroy than virtual machines.
+##### Check the installation
 
-The containerization software is called a container engine. The most popular
-container engine is Docker. Docker is an implementation of the Open Container
-Initiative (OCI) specification.
+Once Docker and Docker Compose are installed, you can check the installation by
+running the following commands in a terminal:
 
-### An example
+```sh
+# Check the Docker version
+docker --version
 
-Let's illustrate this with an example. Let's say you are a database engineer in
-a big company. You need to install and maintain databases for all the projects
-your team is working.
+# Check the Docker Compose version
+docker compose version
+```
 
-Some projects are very old and still use MySQL 5.7.
+The output should be similar to the following:
 
-At the time, you installed MySQL 5.7 in the `/usr/local/mysql` directory on the
-server.
+```text
+Docker version 27.1.2, build d01f264
 
-Due to performance issues, you had to change the configuration to improve the
-performance. These changes were done long ago and you do not remember what you
-changed.
+Docker Compose version v2.29.1
+```
 
-Since then, MySQL 8.0 has been released and new projects are based on MySQL 8.0.
+Ensure that the Docker daemon is running if you have any issue.
 
-Now you need to install MySQL 8.0 on the server. You cannot install it in the
-`/usr/local/mysql` directory, because it would overwrite the old version. You
-need to install it in another directory, for example `/usr/local/mysql-8.0`.
-Managing multiple versions of the same software is difficult.
+### Check and run the code examples
 
-MySQL 5.7 and MySQL 8.0 run on the same port (3306). You need to change the
-configuration of MySQL 8.0 to run on another port (3307 for example).
+In this section, you will clone the code examples repository to check and run
+the code examples along with the theory.
 
-Installing MySQL 8.0 might break the configuration of MySQL 5.7. You need to
-ensure that MySQL 5.7 is still working after installing MySQL 8.0 and that
-databases are not corrupted after the installation.
+#### Clone the repository
 
-While installing MySQL 8.0, some dependencies must be upgraded and are not
-compatible with MySQL 5.7 anymore. You need to ensure that MySQL 5.7 is still
-working after installing MySQL 8.0.
+Clone the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository to get the code examples.
 
-You might need to make the same changes on another server. You need to remember
-what you changed on the first server and apply the same changes on the second
-server.
+#### Access the code examples in your terminal
 
-All in all, it is quite difficult to install and maintain the software: it is
-prone to errors, difficult to reproduce , difficult to maintain and the headache
-is real.
+Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
+directory.
 
-Containerization can help you with that. You can start some MySQL 5.7 containers
-for the old projects and start some MySQL 8.0 containers for the new projects.
-Each container is isolated from the others.
+#### Explore and run the code examples
 
-You can run both containers at the same time, mapping their specific ports to
-different ports on the host easily. If you ever need to migrate the databases to
-another server, you can move the data specific to each container on the new
-server, start the containers again, and you are good to go. You can run the
-containers on any computer that has the containerization software installed.
+In the `06-docker-and-docker-compose` directory, checkout the `README.md` file
+to learn how to run the code examples.
 
-Containers are software packages that contain everything needed to run an
-application that can easily be shared and run on any computer that has the
-containerization software installed.
-
-Containers are a great way to try new software without having to install it on
-your computer. You can try the software in a container and delete the container
-when you are done. You do not need to worry about what the software has done on
-your computer.
+You now have everything you need to run the code examples. Let's dive into the
+theory!
 
 ## Bare metal, virtualization and containerization
 
 Bare metal, virtualization and containerization are three different ways to run
 software on a computer (remember, a server is only a computer - the "Cloud" is
 only someone else's computer).
+
+A good way to understand the differences between bare metal, virtualization and
+containerization is to watch the following video:
 
 ![Differences between bare metal, virtualization and containerization](./images/bare-metal-virtualization-and-containerization.png)
 
@@ -209,37 +190,38 @@ section for more information.
 Bare metal is the traditional way to run software on a computer. The software is
 installed directly on the computer. The software has access to all the resources
 of the computer. This is the fastest and most straightforward way to run
-software on a computer.
+software on a computer/server
 
 ### Virtualization
 
 Virtualization is another way to run software on a computer. The software is
 installed in a virtual machine. The virtual machine is a virtual computer. The
-virtual machine might have limited access to the resources of the computer. The
-virtual machine is isolated from the rest of the computer. This is a good way to
-run software on a computer when you want to isolate the software from the rest
-of the computer.
+virtual machine might have limited access to the resources of the
+computer/server. The virtual machine is isolated from the rest of the
+computer/server. This is a good way to run software when you want to isolate the
+software from the rest of the computer/server.
 
 Virtualization starts full operating systems. This is quite heavy. It takes time
-to start a virtual machine. It also takes a lot of space on the computer.
+to start a virtual machine. It also takes a lot of space and/or ressources on
+the computer/server.
 
 ### Containerization
 
-Containerization is another way to run software on a computer. The software is
-installed in a container. The container is a virtual environment. The container
-might also have limited access to the resources of the computer. The container
-is isolated from the rest of the computer as well, just like a virtual machine.
-However, a container is not a virtual machine. It is not a full operating
-system. It uses the underlying operating system of the computer and starts only
-the software needed to run the application.
+Containerization is another way to run software on a computer/server. The
+software is installed in a container. The container is a virtual environment.
 
-Containerization starts containers. This is much lighter than virtualization.
+A container is, however, much lighter than a virtual machine. It is (way) faster
+to start than a virtual machine.
+
+This is because a container shares the underlying operating system of the
+computer/server. It starts only the software needed to run the application but
+in a virtual environment that can also have limited access to the resources of
+the computer/server.
 
 ## OCI, images, containers and registries
 
-The OCI specification defines a standard for container images and container
-runtimes. The OCI specification is implemented by Docker, but also by other
-container engines.
+The OCI specification defines a standard for container images. The OCI
+specification is implemented by Docker, but also by other container engines.
 
 The OCI specification defines the following terms (among others):
 
@@ -255,31 +237,68 @@ description, etc.
 A container image is immutable. It cannot be modified. If you want to modify a
 container image, you need to create a new image.
 
-A container image is composed of layers. Each layer is a set of files. The
-layers are stacked on top of each other. The layers are read-only. When you
-modify a file, the file is copied to the top layer. The original file is not
-modified.
+A container image is composed of layers. Each layer is a set of
+instructions/files that specifies the container.
 
 A container image is stored in a container registry. A container registry is a
 service that stores container images. The most popular container registry is
-Docker Hub. It is a public registry. You can also create your own private
-registry.
+[Docker Hub](#docker-hub).
 
-A container image can be downloaded from a container registry. It can also be
-uploaded to a container registry.
+A container image can be uploaded/downloaded to/from a container registry.
 
 A container image can be used to create a container. A container is a runnable
-instance of an image. A container is created from an image. It is possible to
-create multiple containers from the same image.
+instance of an image.
 
-A container is isolated from the rest of the computer. It is isolated from other
-containers.
+Containers can be inherited from other containers.
+
+A container is isolated from the rest of the computer as well as from other
+containers. Access to the host system is restricted and must be explicitly
+granted.
+
+### Docker Hub
+
+> Docker Hub is the world's largest library and community for container images.
+>
+> <https://hub.docker.com>
+
+Docker Hub is a public container registry. It is the default registry for
+Docker.
+
+Other container registries are available. Some are public (anyone can pull your
+images), some are private (a username and password are required to pull them).
+
+### GitHub Container Registry
+
+> The Container registry stores container images within your organization or
+> personal account, and allows you to associate an image with a repository.
+>
+> <https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry>
+
+In this course, we will use the GitHub Container Registry to store your images.
+It will allow to store your images in the same place as your code.
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [GitLab Container Registry](https://docs.gitlab.com/ee/user/packages/container_registry/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- _None for now_
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Docker
 
-> [Docker](https://www.docker.com/) is a set of platform as a service (PaaS)
-> products that use OS-level virtualization to deliver software in packages
-> called containers.
+> Docker is a set of platform as a service (PaaS) products that use OS-level
+> virtualization to deliver software in packages called containers.
+>
+> <https://www.docker.com>
 
 Docker is composed of two parts:
 
@@ -295,6 +314,99 @@ CLI communicates with the Docker daemon through a socket.
 The Docker CLI is used to manage containers. It is used to create, start, stop,
 restart, delete, etc. containers. It is also used to manage images. It is used
 to download, upload, build, etc. images.
+
+Let's start our first container!
+
+Run the following command in a terminal:
+
+```sh
+# Run a container with the hello-world image
+docker run hello-world:latest
+```
+
+The `run` command is used to run a container. It is followed by the name of the
+image to use.
+
+The `hello-world` image is an image often used to test if Docker is correctly
+installed.
+
+The `:latest` tag is used to specify the version of the image. It is not
+required. If no tag is specified, the `:latest` tag is used by default.
+
+The output should be similar to the following:
+
+```text
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+c1ec31eb5944: Pull complete
+Digest: sha256:53cc4d415d839c98be39331c948609b659ed725170ad2ca8eb36951288f81b75
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+```
+
+Congratulations! You have just run your first container!
+
+Take some time to read the output. It explains what Docker did to run the
+container. It confirms that Docker is correctly installed on your computer as
+well.
+
+Just as the output suggests, you can run other Linux containers with the
+following commands:
+
+```sh
+# Run an Ubuntu container
+docker run --rm -it ubuntu /bin/bash
+
+# Run a Debian container
+docker run --rm -it debian /bin/bash
+
+# Run a Fedora container
+docker run --rm -it fedora /bin/bash
+
+# Run an Alpine container
+docker run --rm -it alpine /bin/ash
+```
+
+As all these containers are (certainly) not on your computer yet, Docker will
+download their images from the Docker Hub and will start them as containers on
+your computer.
+
+The `--rm` option is used to remove the container when it exits. It is not
+required. If the container is not removed, it will be stopped but not deleted.
+
+The `-it` option is used to run the container in interactive mode. It is used to
+attach the container's standard input, standard output and standard error to the
+terminal.
+
+The `/bin/bash` and `/bin/ash` arguments is used to override the default command
+of the container. The default command of the container is defined in the
+Dockerfile of the image. You will learn more about this later.
+
+Inside the container, you can run any command, just as you would on your system:
+you can install software, modify files, etc. Each change you do will be lost
+when the container is stopped.
+
+To exit the container, you can type `exit` in the shell.
 
 ### Dockerfile specification
 
@@ -340,40 +452,16 @@ Windows (with the help of the Linux virtual machine).
 More information about the Dockerfile specification can be found in the official
 documentation: <https://docs.docker.com/engine/reference/builder/>.
 
-### Security considerations
+Check the code examples to see how to write a Dockerfile and build a Docker
+image.
 
-A container is isolated from the rest of the computer. It is isolated from other
-containers. It is not isolated from the Docker daemon. The Docker daemon has
-access to the container.
-
-A container is not a virtual machine. It is not a sandbox. It is not a security
-boundary. It is not a security boundary between the container and the Docker
-daemon.
-
-The Docker daemon runs with root privileges. You must be careful when running
-containers. A security vulnerability in a container can lead to a full
-compromise of the host. Always try to run containers with a non-root user.
-
-It is not always possible to run a container with a non-root user. Some
-containers require root privileges to run. Some containers requires access to
-the Docker daemon. This is usually explicitly stated in the documentation of the
-container.
-
-### Ignore files
-
-When building an image, Docker will send the build context to the Docker daemon.
-
-The build context is the directory that contains the Dockerfile. To ignore files
-that are not needed to build the image, you can create a `.dockerignore` file in
-the build context. The `.dockerignore` file is similar to the `.gitignore` file.
-
-This can be useful to ignore files such as the `target` directory of a Maven
-project or private keys so that they are not sent to the Docker daemon.
+Check all available examples for part 1 regarding Dockerfiles and carefully read
+the README files to understand how to run them and what they do.
 
 ### Summary
 
-- Docker is a container engine
-- Docker is composed of two parts: the Docker daemon and the Docker CLI
+- Docker is a container engine composed of two parts: the Docker daemon and the
+  Docker CLI:
 - The Docker CLI is used to manage containers and images
 - The Dockerfile specification defines a standard for building Docker images
 - A Dockerfile is used to build a Docker image
@@ -437,8 +525,10 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Docker Compose
 
-> [Docker Compose](https://docs.docker.com/compose/) is a tool for defining and
-> running multi-container Docker applications.
+> Docker Compose is a tool for defining and running multi-container Docker
+> applications.
+>
+> <https://docs.docker.com/compose/>
 
 Docker Compose is a tool that is used to run multiple containers. It is used to
 run multiple containers that are related to each other. It is used to run
@@ -467,18 +557,10 @@ Compose file is named `docker-compose.yml` by convention.
 More information about the Docker Compose specification can be found in the
 official documentation: <https://docs.docker.com/compose/compose-file/>.
 
-### Docker Compose v1 vs. Docker Compose v2
+Check the code examples to see how to run a Docker Compose file.
 
-Please be aware that there are two versions of Docker Compose: Docker Compose v1
-and Docker Compose v2.
-
-Docker Compose v1 is the original version of Docker Compose. It was built with
-Python and is now deprecated. It is still available but it is not recommended to
-use it. The command to use Docker Compose v1 was `docker-compose`.
-
-Docker Compose v2 is the new version of Docker Compose. It is built with Go and
-it is the recommended version to use. The new command to use Docker Compose v2
-is `docker compose`.
+Check all available examples for part 1 regarding Docker Compose and carefully
+read the README files to understand how to run them and what they do.
 
 ### Summary
 
@@ -533,53 +615,442 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-## Docker Desktop
+## Practical content
 
-Docker Desktop is the easiest way to install Docker on your computer. It is
-available for macOS and Windows. As a student, you can get use it for free.
+In this practical content, you will learn how to package, publish and run your
+own applications with Docker and Docker Compose.
 
-Docker Desktop manages a Linux virtual machine. The Linux virtual machine runs
-the Docker daemon.
+You will need the output (the JAR file) of the practical content from chapter
+[Java IOs](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios).
 
-As Docker Desktop uses a virtual machine, some configuration (mostly network)
-might be a bit different than the one you can find on a Linux machine
-(workstation or server).
+If you do not have the output of the practical content from chapter Java IOs,
+you can use the solution mentioned in the Java IOs chapter. Clone and compile
+the solution to have the output for this practical content.
 
-### Alternatives
+## Package your own applications with Docker
 
-_Alternatives are here for general knowledge. No need to learn them._
+In this section, you will package your own applications with Docker.
 
-- [Rancher Desktop](https://rancherdesktop.io/)
-- [OrbStack](https://orbstack.dev/) - for macOS only
+You will write a Dockerfile, build it with a tag and run it with Docker.
+
+Using all the elements you have learned so far, create a Dockerfile that will
+run the JAR file you have from the Java IOs chapter.
+
+You can use the following Dockerfile as a starting point:
+
+```dockerfile
+# Base image
+FROM eclipse-temurin:21-jre
+```
+
+The base image is the `eclipse-temurin:21-jre` image. It is an image that
+contains the Java 21 Runtime Environment (JRE) to run Java applications with the
+help of the `java` command.
+
+> [!NOTE]
+>
+> Take some time to write the Dockerfile file. It is important to understand
+> each instruction and what it does.
+>
+> You can find the solution in the [Solution](#solution) section if needed.
+
+Once the Dockerfile has been written, you can build the image with the following
+command:
+
+```sh
+# Build the image with the java-ios-docker tag
+docker build -t java-ios-docker .
+```
+
+Validate that the image has been built correctly by running the following
+commands:
+
+```sh
+# Write a 100-bytes.bin file to /data/100-bytes.bin
+docker run --rm -v "$(pwd):/data" java-ios-docker \
+  --implementation BUFFERED_BINARY \
+  /data/100-bytes.bin \
+  write \
+  --size 100
+
+# Read the 100-bytes.bin file from /data/100-bytes.bin
+docker run --rm -v "$(pwd):/data" java-ios-docker \
+  --implementation BUFFERED_BINARY \
+  /data/100-bytes.bin \
+  read
+```
+
+Notice how the volume `/data` is mounted to the container to read and write
+files from the host system. It allows to persist the files between container
+runs as each run is isolated.
+
+Congrats! You have just packaged your own application with Docker!
+
+## Publish your own applications with Docker
+
+In this section, you will publish your own applications with Docker to the
+GitHub Container Registry.
+
+It will allow you to share your images with others.
+
+### Create a personal access token
+
+You will need a personal access token to publish an image on GitHub Container
+Registry.
+
+A personal access token is a token that you can use to authenticate to GitHub
+instead of using your password. It is more secure than using your password.
+
+Follow the instructions on the official website to authenticate with a personal
+access token (classic):
+<https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry>.
+
+> [!NOTE]
+>
+> You can find the personal access token in the settings of your GitHub account:
+> **Settings** > **Developer settings** (at the very end of the left side bar) >
+> **Personal access tokens** > **Tokens (classic)**.
+
+### Login to GitHub Container Registry
+
+Login to GitHub Container Registry with the following command, replacing
+`<username>` with your GitHub username:
+
+```sh
+# Login to GitHub Container Registry
+docker login ghcr.io -u <username>
+```
+
+When asked for the password, use the personal access token you created earlier.
+
+The output should be similar to the following:
+
+```text
+Login Succeeded
+```
+
+### Tag the image correctly for GitHub Container Registry
+
+The image must be tagged with the following format:
+`ghcr.io/<username>/<image>:<tag>`.
+
+Run the following command to tag the image with the correct format, replacing
+`<username>` with your GitHub username:
+
+```sh
+# Tag the image with the correct format
+docker tag java-ios-docker ghcr.io/<username>/java-ios-docker:latest
+```
+
+You can list all the images with the following command:
+
+```sh
+# List all the images
+docker images
+```
+
+The output should be similar to the following:
+
+```text
+REPOSITORY                                                                                    TAG       IMAGE ID       CREATED         SIZE
+java-ios-docker                                                                               latest    8214c1a1c97c   3 minutes ago   282MB
+ghcr.io/ludelafo/java-ios-docker                                                              latest    8214c1a1c97c   3 minutes ago   282MB
+```
+
+You can delete the local `java-ios-docker` image with the following command:
+
+```sh
+# Delete java-ios-docker image
+docker rmi java-ios-docker
+```
+
+### Publish the image on GitHub Container Registry
+
+Now publish the image on GitHub Container Registry with the following command,
+replacing `<username>` with your GitHub username:
+
+```sh
+# Publish the image on GitHub Container Registry
+docker push ghcr.io/<username>/java-ios-docker
+```
+
+The output should be similar to the following:
+
+```text
+The push refers to repository [ghcr.io/ludelafo/java-ios-docker]
+130abe5d3a5e: Pushed
+90ab30cf733e: Pushed
+6cc5022303de: Pushed
+750416b760e2: Pushed
+f975d1357d1a: Pushed
+0bf35e9086dc: Pushed
+f36fd4bb7334: Pushed
+latest: digest: sha256:d0d83a97c4522ddbeb8968e9d509fdebecf0450ca1651c13c14ca774f01e8675 size: 1784
+```
+
+You can now go to the GitHub Container Registry page of your repository to check
+that the image has been published, replacing `<username>` with your GitHub
+username: `https://github.com/<username>?tab=packages`, as shown in the
+following screenshot:
+
+![GitHub Container Registry](./images/github-container-registry-own-docker-images.png)
+
+As you can notice, the image is private by default. You can change the
+visibility of the image in the settings of the image.
+
+You can keep your images private if you want. Just be aware that you will need
+to authenticate to GitHub Container Registry to pull the image.
+
+You can delete the local image if you want.
+
+Congrats! You have just published your first image on GitHub Container Registry!
+
+## Run your own applications with Docker and Docker Compose
+
+In this section, you will use the published image with Docker and Docker Compose
+
+### Pull the image from GitHub Container Registry
+
+Run the following command to pull the image from GitHub Container Registry,
+replacing `<username>` with your GitHub username:
+
+```sh
+# Pull the image from GitHub Container Registry
+docker pull ghcr.io/<username>/java-ios-docker
+```
+
+The output should be similar to the following if you have deleted the
+`ghcr.io/<username>/java-ios-docker` image locally:
+
+```text
+Using default tag: latest
+latest: Pulling from ludelafo/java-ios-docker
+eb993dcd6942: Already exists
+62ad162d7203: Already exists
+4577d4ade6f1: Already exists
+4670d85c19d4: Already exists
+86ec1c7b50a4: Already exists
+38a1672e662b: Already exists
+ed73061654ac: Already exists
+Digest: sha256:d0d83a97c4522ddbeb8968e9d509fdebecf0450ca1651c13c14ca774f01e8675
+Status: Downloaded newer image for ghcr.io/ludelafo/java-ios-docker:latest
+ghcr.io/ludelafo/java-ios-docker:latest
+```
+
+### Run the image with Docker
+
+Running the image with Docker is pretty straightforward. You just need to run
+the following command to run the image with Docker, replacing `<username>` with
+your GitHub username:
+
+```sh
+# Write a 100-bytes.bin file to /data/100-bytes.bin
+docker run --rm -v "$(pwd):/data" java-ios-docker \
+  --implementation BUFFERED_BINARY \
+  /data/100-bytes.bin \
+  write \
+  --size 100
+
+# Read the 100-bytes.bin file from /data/100-bytes.bin
+docker run --rm -v "$(pwd):/data" java-ios-docker \
+  --implementation BUFFERED_BINARY \
+  /data/100-bytes.bin \
+  read
+```
+
+The results will be the same as when you ran the image locally but this time
+with the image pulled from GitHub Container Registry.
+
+### Run the image with Docker Compose
+
+In this section, you will run the same container with Docker Compose.
+
+You will write a Docker Compose file that will run the image you have published
+on GitHub Container Registry.
+
+Using all the elements you have learned so far, create a Docker Compose file
+that will run the image you have published on GitHub Container Registry with two
+services:
+
+- `writer`: a service that will write a 100-bytes.bin file from the `/data`
+  volume
+- `reader`: a service that will read the 100-bytes.bin file from the `/data`
+  volume
+
+> [!NOTE]
+>
+> Take some time to write the Docker Compose file. It is important to understand
+> each instruction and what it does.
+>
+> You can find the solution in the [Solution](#solution) section if needed.
+
+Once the Docker Compose file has been written, you can run the image with the
+following command:
+
+```sh
+# Write a 100-bytes.bin file to /data/100-bytes.bin
+docker compose up writer
+
+# Read the 100-bytes.bin file from /data/100-bytes.bin
+docker compose up reader
+```
+
+## Share your Docker Compose application
+
+Create a new Git repository and push your code to it.
+
+Share your Docker Compose application in the GitHub Discussions of this
+organization: <https://github.com/orgs/heig-vd-dai-course/discussions>.
+
+Create a new discussion with the following information:
+
+- **Title**: DAI 2024-2025 - My Docker Compose application - First name Last
+  Name
+- **Category**: Show and tell
+- **Description**: The link to your GitHub repository with a screenshot of your
+  Docker image published on GitHub Container Registry
+
+This will notify us that you have completed the exercise and we can check your
+work.
+
+You can compare your solution with the official one stated in the
+[Solution](#solution) section, however, **we highly recommend you to try to
+complete the practical content by yourself first to learn the most**.
+
+### Go further
+
+This is an optional section. Feel free to skip it if you do not have time.
+
+- Are you able to use environment variables in your Docker Compose file to
+  specify the implementation to use and the size of the file to write? As it
+  requires a few tricks, here are some tips:
+  - You need to define a new entrypoint to use a shell (like `/bin/bash`) to run
+    the Java application with the environment variables
+  - You need to define a new command in order to invoke the Java application
+    with the environment variables with the `-c` option of the shell (to run a
+    command in the shell)
+  - In order to escape the environment variables in the command, you can use the
+    `$$` syntax
+  - You need to define the environment variables in the Docker Compose file with
+    the `environment` instruction
+
+## Conclusion
+
+### What did you do and learn?
+
+In this chapter, you have installed Docker and Docker Compose. You have learned
+the basics of Docker and Docker Compose and you have used them to build,
+publish, and run a Docker image.
+
+Using Docker and Docker Compose, you have been able to run applications without
+the need to install the software directly on your computer.
+
+Docker and Docker Compose are very powerful tools. They are used by a lot of
+companies to build and run their applications in production on different
+environments.
+
+### Test your knowledge
+
+At this point, you should be able to answer the following questions:
+
+- What is the difference between an image and a container?
+- What is the difference between a Dockerfile and a Docker Compose file?
+- What is the difference between the `ENTRYPOINT` and `CMD` instructions?
+- What is the difference between the `RUN` and `CMD` instructions?
+- How can a volume be used to persist data?
+
+## Finished? Was it easy? Was it hard?
+
+Can you let us know what was easy and what was difficult for you during this
+chapter?
+
+This will help us to improve the course and adapt the content to your needs. If
+we notice some difficulties, we will come back to you to help you.
+
+➡️ [GitHub Discussions][discussions]
+
+You can use reactions to express your opinion on a comment!
+
+## What will you do next?
+
+We are arriving at the end of the first part of the course. An evaluation will
+be done to check your understanding of all the content seen in this first part.
+
+## Additional resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- [_"Big Misconceptions about Bare Metal, Virtual Machines, and Containers"_ by ByteByteGo](https://www.youtube.com/watch?v=Jz8Gs4UHTO8)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
-## Docker Hub and GitHub Container Registry
+## Solution
 
-> [Docker Hub](https://hub.docker.com) is the world's largest library and
-> community for container images.
+You can find the solution to the practical content in the
+[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
+repository.
 
-Docker Hub is a public container registry. It is the default registry for
-Docker.
+If you have any questions about the solution, feel free to open an issue to
+discuss it!
 
-Other container registries are available. Some are public, some are private.
+## Optional content
 
-In this course, we will use the
-[GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
-to store our images.
+The following content is optional. It is here to help you and for your general
+knowledge.
 
-### Alternatives
+### Docker Compose v1 vs. Docker Compose v2
 
-_Alternatives are here for general knowledge. No need to learn them._
+Please be aware that there are two versions of Docker Compose: Docker Compose v1
+and Docker Compose v2.
 
-- [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
+Docker Compose v1 is the original version of Docker Compose. It was built with
+Python and is now deprecated. It is still available but it is not recommended to
+use it. The command to use Docker Compose v1 was `docker-compose`.
 
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
+Docker Compose v2 is the new version of Docker Compose. It is built with Go and
+it is the recommended version to use. The new command to use Docker Compose v2
+is `docker compose`.
 
-## Tips and tricks
+### Security considerations
 
-These tips and tricks are not mandatory to know. They are here to help you and
-for your general knowledge.
+A container is isolated from the rest of the computer. It is isolated from other
+containers. It is not isolated from the Docker daemon. The Docker daemon has
+access to the container.
+
+A container is not a virtual machine. It is not a sandbox. It is not a security
+boundary. It is not a security boundary between the container and the Docker
+daemon.
+
+The Docker daemon runs with root privileges. You must be careful when running
+containers. A security vulnerability in a container can lead to a full
+compromise of the host. Always try to run containers with a non-root user.
+
+It is not always possible to run a container with a non-root user. Some
+containers require root privileges to run. Some containers requires access to
+the Docker daemon. This is usually explicitly stated in the documentation of the
+container.
+
+### Free some space
+
+Docker images, containers and volumes can take a lot of space on your computer.
+
+You can use the following commands to free some space:
+
+```sh
+# Delete all stopped containers, all networks not used by at least one container, all anonymous volumes not used by at least one container, all images without at least one container associated to them and all build cache
+docker system prune --all --volumes
+```
+
+### Ignore files
+
+When building an image, Docker will send the build context to the Docker daemon.
+
+The build context is the directory that contains the Dockerfile. To ignore files
+that are not needed to build the image, you can create a `.dockerignore` file in
+the build context. The `.dockerignore` file is similar to the `.gitignore` file.
+
+This can be useful to ignore files such as the `target` directory of a Maven
+project or private keys so that they are not sent to the Docker daemon.
 
 ### Healthchecks
 
@@ -623,17 +1094,6 @@ healthcheck:
   test: ["CMD", "curl", "-f", "http://localhost/"]
   interval: 30s
   timeout: 10s
-```
-
-### Free some space
-
-Docker images, containers and volumes can take a lot of space on your computer.
-
-You can use the following commands to free some space:
-
-```sh
-# Delete all stopped containers, all networks not used by at least one container, all anonymous volumes not used by at least one container, all images without at least one container associated to them and all build cache
-docker system prune --all --volumes
 ```
 
 ### Multi-stage builds
@@ -686,1330 +1146,6 @@ application compatible with multiple architectures.
 This topic will not be covered in this course. You can however find more
 information about multi-architecture builds in the official documentation:
 <https://docs.docker.com/build/building/multi-platform/>.
-
-## Practical content
-
-### Install Docker and Docker Compose
-
-In this section, you will install Docker and Docker Compose on your computer.
-
-#### Install Docker and Docker Compose on Linux
-
-> [!NOTE]  
-> While it is possible to install Docker Desktop on Linux, we would not
-> recommend it. It is better to install Docker Engine and Docker Compose
-> directly on your system to avoid any overhead.
-
-Go to the official website and follow the instructions to install
-[Docker Engine](https://docs.docker.com/engine/) on your distribution:
-
-- Debian: <https://docs.docker.com/engine/install/debian/>
-- Fedora: <https://docs.docker.com/engine/install/fedora/>
-- Ubuntu: <https://docs.docker.com/engine/install/ubuntu/>
-- Other distributions: <https://docs.docker.com/engine/install/>
-
-Then, follow the post-installation steps to finalize the installation:
-<https://docs.docker.com/engine/install/linux-postinstall/>.
-
-Docker Compose is not installed by default. You can install it by following the
-instructions on the official website:
-<https://docs.docker.com/compose/install/linux/>. We recommend to install Docker
-Compose using the repository.
-
-#### Install Docker and Docker Compose on macOS and Windows
-
-Go to the official website and follow the instructions on how to install Docker
-Desktop on your system: <https://docs.docker.com/desktop/>.
-
-This will install Docker Engine and Docker Compose in a virtual machine.
-
-#### Check the installation
-
-Once Docker and Docker Compose are installed, you can check the installation by
-running the following commands in a terminal:
-
-```sh
-# Check the Docker version
-docker --version
-
-# Check the Docker Compose version
-docker compose version
-```
-
-The output should be similar to the following:
-
-```text
-Docker version 24.0.6, build ed223bc
-
-Docker Compose version v2.21.0-desktop.1
-```
-
-Ensure that the Docker daemon is running if you have any issue.
-
-### Run a container with Docker
-
-In this section, you will run a container with Docker.
-
-#### Run a `hello-world` container with Docker
-
-Run the following command in a terminal:
-
-```sh
-# Run a container with the hello-world image
-docker run hello-world:latest
-```
-
-The `run` command is used to run a container. It is followed by the name of the
-image to use.
-
-The `hello-world` image is a minimal image. It is often used to test if Docker
-is correctly installed.
-
-The `:latest` tag is used to specify the version of the image. It is not
-required. If no tag is specified, the `:latest` tag is used by default.
-
-The output should be similar to the following:
-
-```text
-Unable to find image 'hello-world:latest' locally
-latest: Pulling from library/hello-world
-719385e32844: Pull complete
-Digest: sha256:4f53e2564790c8e7856ec08e384732aa38dc43c52f02952483e3f003afbf23db
-Status: Downloaded newer image for hello-world:latest
-
-Hello from Docker!
-This message shows that your installation appears to be working correctly.
-
-To generate this message, Docker took the following steps:
- 1. The Docker client contacted the Docker daemon.
- 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
-    (amd64)
- 3. The Docker daemon created a new container from that image which runs the
-    executable that produces the output you are currently reading.
- 4. The Docker daemon streamed that output to the Docker client, which sent it
-    to your terminal.
-
-To try something more ambitious, you can run an Ubuntu container with:
- $ docker run -it ubuntu bash
-
-Share images, automate workflows, and more with a free Docker ID:
- https://hub.docker.com/
-
-For more examples and ideas, visit:
- https://docs.docker.com/get-started/
-```
-
-Take some time to read the output. It explains what Docker did to run the
-container. It confirms that Docker is correctly installed on your computer as
-well.
-
-#### Run an interactive container with Docker
-
-Run the following command in a terminal:
-
-```sh
-# Run an interactive container with the alpine image
-docker run --rm -it alpine:3.18 /bin/sh
-```
-
-The `--rm` option is used to remove the container when it exits. It is not
-required. If the container is not removed, it will be stopped but not deleted.
-
-The `-it` option is used to run the container in interactive mode. It is used to
-attach the container's standard input, standard output and standard error to the
-terminal.
-
-The `alpine` image is a minimal image based on
-[Alpine Linux](https://www.alpinelinux.org/). It is often used to run small and
-optimized containers.
-
-The `:3.18` tag is used to specify the version of the image. It is not required.
-If no tag is specified, the `:latest` tag is used by default. You can find all
-the available tags on the Docker Hub page of the image:
-<https://hub.docker.com/_/alpine>.
-
-The `/bin/sh` argument is used to override the default command of the container.
-The default command of the container is defined in the Dockerfile of the image.
-
-The output should be similar to the following:
-
-```text
-Unable to find image 'alpine:3.18' locally
-3.18: Pulling from library/alpine
-Digest: sha256:eece025e432126ce23f223450a0326fbebde39cdf496a85d8c016293fc851978
-Status: Downloaded newer image for alpine:3.18
-/ #
-```
-
-Docker will check if the image is available locally. If it is not available
-locally, Docker will download it from the Docker Hub, the default registry.
-
-> [!IMPORTANT]  
-> Please be aware that Docker will check if the image is available locally using
-> the name and the tag of _any_ image available locally. If you have a local
-> image named `alpine:3.18` from a Ubuntu container that you have created on
-> your own, Docker will not download the `alpine:3.18` image from the registry.
-> It will use the local image instead. This can be confusing at first.
-
-You are now inside the container. You can run commands in the container. For
-example, you can run the following command to display the content of the
-`/etc/os-release` file to check the version of Alpine Linux:
-
-```sh
-# Display the content of the /etc/os-release file
-cat /etc/os-release
-```
-
-The output should be similar to the following:
-
-```text
-NAME="Alpine Linux"
-ID=alpine
-VERSION_ID=3.18.4
-PRETTY_NAME="Alpine Linux v3.18"
-HOME_URL="https://alpinelinux.org/"
-BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
-```
-
-You can run the following command to exit the container:
-
-```sh
-# Exit the container
-exit
-```
-
-#### Run a detached container with Docker
-
-Run the following command in a terminal:
-
-```sh
-# Run a detached container with the alpine image
-docker run --rm -d alpine:3.18 /bin/sh -c "while true; do echo 'Hello world!'; sleep 5; done"
-```
-
-The `-d` option is used to run the container in detached mode. It is used to
-detach the container from the terminal.
-
-The `/bin/sh -c "while true; do echo 'Hello world!'; sleep 5; done"` argument is
-used to override the default command of the container. It will run an infinite
-loop that prints `Hello world!` every 5 seconds.
-
-The output should be similar to the following, displaying the container ID:
-
-```text
-1c8562b3df6e9fcfc1237c581a54108c47fb30132122da31af869a73b8f7ea13
-```
-
-No other output is displayed. This is because the container is running in
-detached mode. The container is running in the background.
-
-You can run the following command to display all running containers:
-
-```sh
-# Display all running containers
-docker ps
-```
-
-The output should be similar to the following:
-
-```text
-CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS     NAMES
-1c8562b3df6e   alpine:3.18   "/bin/sh -c 'while t…"   4 seconds ago   Up 2 seconds             upbeat_almeida
-```
-
-The `ps` command is used to display all running containers. It can be followed
-by the `--all` option to display all containers, including the stopped ones.
-
-You can display the logs of the container with the following command:
-
-```sh
-# Display the logs of the container
-docker logs 1c8562b3df6e
-```
-
-Replace `1c8562b3df6e` with the ID of your container.
-
-The output should be similar to the following:
-
-```text
-Hello world!
-```
-
-Of course, our container is not very useful. It is just an example to show how
-to run a container in detached mode and check its logs.
-
-You can run the following command to stop the container:
-
-```sh
-# Stop the container
-docker stop 1c8562b3df6e
-```
-
-Replace `1c8562b3df6e` with the ID of your container.
-
-The output should be similar to the following, confirming that the container has
-been stopped:
-
-```text
-1c8562b3df6e
-```
-
-You can check that the container has been stopped with the `docker ps` command
-as seen previously.
-
-### Write a Dockerfile, build and run an image with Docker
-
-In this section, you will write a Dockerfile, build it with a tag and run it
-with Docker.
-
-#### Write, build and run a simple Dockerfile
-
-Create a new directory named `my-custom-dockerfile`.
-
-Create a new file named `Dockerfile` in the `my-custom-dockerfile` directory and
-put the following content in it:
-
-```dockerfile
-# Start from the alpine image
-FROM alpine:3.18
-
-# Set an GREETINGS environment variable
-ENV GREETINGS=Hello
-
-# Set a simple command
-CMD ["/bin/sh", "-c", "echo \"$GREETINGS from my custom Dockerfile!\""]
-```
-
-The `FROM` instruction is used to specify the base image. It is the first
-instruction of the Dockerfile. It is required. It is good practice to specify
-the version of the image instead of `latest`. It will ensure that the image will
-not change unexpectedly.
-
-The `ENV` instruction is used to specify an environment variable. It is used to
-specify the value of the `GREETINGS` environment variable. An environment
-variable is available during the build and the run of the container.
-
-The `CMD` instruction is used to specify the command to run when the container
-starts. In this case, it will invoke the shell to run the `echo` command with
-the value of the `GREETINGS` environment variable.
-
-You can now build the image with the following command:
-
-```sh
-# Build the image with the my-custom-dockerfile:v1.0 tag
-docker build \
-  -t my-custom-dockerfile:v1.0 \
-  my-custom-dockerfile
-```
-
-The `-t` option is used to tag the image. It is used to specify the name and the
-tag of the image. The name and the tag are separated by a colon (`:`).
-
-The `my-custom-dockerfile` argument is used to specify the build context. It is
-used to specify the directory that contains the Dockerfile. If you have a
-Dockerfile named `Dockerfile` in the current directory, you can omit this
-argument.
-
-The `v1.0` tag is used to specify the version of the image. It is not required.
-
-The output should be similar to the following:
-
-```text
-docker build -t my-custom-dockerfile:v1.0 my-custom-dockerfile
-[+] Building 0.1s (5/5) FINISHED                                                                                                                                                 docker:desktop-linux
- => [internal] load build definition from Dockerfile                                                                                                                                             0.1s
- => => transferring dockerfile: 145B                                                                                                                                                             0.0s
- => [internal] load .dockerignore                                                                                                                                                                0.1s
- => => transferring context: 2B                                                                                                                                                                  0.0s
- => [internal] load metadata for docker.io/library/alpine:3.18                                                                                                                                 0.0s
- => [1/1] FROM docker.io/library/alpine:3.18                                                                                                                                                   0.0s
- => exporting to image                                                                                                                                                                           0.0s
- => => exporting layers                                                                                                                                                                          0.0s
- => => writing image sha256:1210ca793235e534e370c97ad78fc30603dfff0fd6332460598d43d5a9ba5dd8                                                                                                     0.0s
- => => naming to docker.io/library/my-custom-dockerfile:v1.0
-```
-
-You can now run the image with the following command:
-
-```sh
-# Run the image with the my-custom-dockerfile:v1.0 tag
-docker run --rm \
-  my-custom-dockerfile:v1.0
-```
-
-The output should be similar to the following:
-
-```text
-Hello from my custom Dockerfile!
-```
-
-Congratulations! You have just ran your first Docker image!
-
-You can change the value of the `GREETINGS` environment variable with the
-following command:
-
-```sh
-# Run the image with the my-custom-dockerfile:v1.0 tag and override the environment variable
-docker run --rm \
-  --env GREETINGS=Hi \
-  my-custom-dockerfile:v1.0
-```
-
-The `--env` option is used to override the value of an environment variable. It
-is used to specify the name and the value of the environment variable. The name
-and the value are separated by an equal sign (`=`).
-
-The output should be similar to the following:
-
-```text
-Hi from my custom Dockerfile!
-```
-
-Environment variables are really useful to configure your application. You can
-use them to configure the database connection for example.
-
-#### Write, build and run a more complex Dockerfile
-
-Update the `Dockerfile` with the following content:
-
-```dockerfile
-# Start from the alpine image
-FROM alpine:3.18
-
-# Install the tree package using the apk package manager
-RUN apk add --no-cache tree
-
-# Set the working directory
-WORKDIR /app
-
-# Copy the current directory to the /app directory in the container
-COPY . .
-
-# Set a volume
-VOLUME /app/data
-
-# Set the entry point
-ENTRYPOINT ["tree", "--dirsfirst"]
-
-# Set the default command
-CMD ["/app"]
-```
-
-The `RUN` instruction is used to run a command in the container. It is used to
-install the `tree` package using the `apk` package manager from Alpine Linux.
-The `--no-cache` option is used to not cache the index locally. It is used to
-reduce the size of the image.
-
-The `WORKDIR` instruction is used to set the working directory of the container
-to `/app`. All the following instructions will be executed in the `/app`
-directory.
-
-The `COPY` instruction is used to copy the content of the current directory to
-the `/app` directory in the container.
-
-The `VOLUME` instruction is used to specify a volume. It is used to specify a
-directory that will be shared between the container and the host. The
-`/app/data` directory will be shared between the container and the host. This is
-only informative and can be omitted.
-
-The `ENTRYPOINT` instruction is used to specify the entry point of the
-container. It is used to specify the command that will be run when the container
-starts.
-
-The `CMD` instruction is used to specify the default command of the container.
-It is used to specify the arguments that will be passed to the entry point.
-
-You can now build the image with the following command:
-
-```sh
-# Build the image with the my-custom-dockerfile:v2.0 tag
-docker build \
-  -t my-custom-dockerfile:v2.0 \
-  my-custom-dockerfile
-```
-
-Run the container with the following command:
-
-```sh
-# Run the image with the my-custom-dockerfile:v2.0 tag
-docker run --rm \
-  my-custom-dockerfile:v2.0
-```
-
-The output should be similar to the following:
-
-```text
-/app
-├── data
-└── Dockerfile
-
-2 directories, 1 file
-```
-
-The `tree` command is used to display the content of a directory. It is not
-available by default in Alpine Linux. It was installed with the `apk` package
-manager.
-
-By default, the `tree` command displays the content of the `/app` directory
-inside the container.
-
-You can run the following command to display the content of the `/app/data`
-directory inside the container:
-
-```sh
-# Run the image with the my-custom-dockerfile:v2.0 tag and override the command
-docker run --rm my-custom-dockerfile:v2.0 /app/data
-```
-
-The output should be similar to the following:
-
-```text
-/app/data
-
-0 directories, 0 files
-```
-
-The command was overridden with the `/app/data` argument. The `tree` command
-displayed the content of the `/app/data` directory inside of the `/app`
-directory.
-
-At the moment, the `/app/data` directory is empty. Let's create a file in the
-`/app/data` directory inside the container:
-
-```sh
-# Run the image with the my-custom-dockerfile:v2.0 tag and override the entrypoint
-docker run --rm --entrypoint /bin/sh my-custom-dockerfile:v2.0 -c "touch /app/data/my-file.txt"
-```
-
-The `--entrypoint` option is used to override the entry point of the container.
-It is used to specify the command that will be run when the container starts,
-replacing the default entry point `tree` command by the `/bin/sh` command.
-
-The `-c` option is used to execute a command with `/bin/sh` in the container. It
-is used to run the `touch /app/data/my-file.txt` command in the container to
-create a file named `my-file.txt` in the `/app/data` directory.
-
-There should be no output this time. You can run the following command to
-display the content of the `/app/data` directory inside the container:
-
-```sh
-# Run the image with the my-custom-dockerfile:v2.0 tag and override the command
-docker run --rm my-custom-dockerfile:v2.0 /app/data
-```
-
-The output should be similar to the following:
-
-```text
-/app/data
-
-0 directories, 0 files
-```
-
-The `/app/data` directory is empty again! What happened?
-
-This is because the container is stateless. All the changes made in the
-container are lost when the container is stopped. When working with containers,
-you should not store any data in the container. You should store the data in a
-volume instead.
-
-Let's run the container again, but this time, let's mount a volume on the
-`/app/data` directory inside the container:
-
-```sh
-# Run the image with the my-custom-dockerfile:v2.0 tag and mount a volume
-docker run --rm -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" --entrypoint /bin/sh my-custom-dockerfile:v2.0 -c "touch /app/data/my-file.txt"
-```
-
-The `-v` option is used to mount a volume. It is used to specify a directory on
-the host that will be mounted on the `/app/data` directory inside the container.
-
-`pwd` is used to get the absolute path of the current directory.
-
-The `$(pwd)/my-data` argument is used to specify the directory on the host to
-mount on the `/app/data` directory inside the container. It is a relative path.
-It is relative to the current directory and should be created automatically if
-it does not exist.
-
-The container should have created a file named `my-file.txt` in the
-`$(pwd)/my-data` directory on the host. You can now run the initial command to
-display the content of the `/app/data` directory inside the container that is
-mapped to the `$(pwd)/my-data` directory on the host:
-
-```sh
-# Run the image with the my-custom-dockerfile:v2.0 tag and override the command
-docker run --rm -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" my-custom-dockerfile:v2.0 /app/data
-```
-
-The output should be similar to the following:
-
-```text
-/app/data
-└── my-file.txt
-
-1 directory, 1 file
-```
-
-The files are persisted on the host!
-
-Run the container again without overriding the command to display all `/app`
-files inside the container:
-
-```sh
-# Run the image with the my-custom-dockerfile:v2.0 tag
-docker run --rm -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" my-custom-dockerfile:v2.0
-```
-
-The output should be similar to the following:
-
-```text
-/app
-├── data
-│   └── my-file.txt
-└── Dockerfile
-
-2 directories, 2 files
-```
-
-All the files are displayed, the `Dockerfile` file from the container and the
-files persisted in the volume.
-
-The `Dockerfile` file will be the same each time the container is run as it was
-copied from the host when it was created. The files persisted in the volume will
-be persisted between each run of the container.
-
-Congratulations! You have just created a Docker image that can persist data
-between each run of the container with the help of volumes!
-
-More information about volumes can be found in the official documentation:
-<https://docs.docker.com/storage/volumes/>.
-
-#### Write, build and run an even more complex Dockerfile
-
-We will use [File Browser](https://github.com/filebrowser/filebrowser) in this
-example.
-
-File Browser is a web-based file manager. It is written in Go. It is available
-as a Docker image but we will create our own image to illustrate how to use a
-Dockerfile to install an application.
-
-Update the `Dockerfile` with the following content:
-
-```dockerfile
-# Start from the alpine image
-FROM alpine:3.18
-
-# Set File Browser version as an argument
-ARG FILEBROWSER_VERSION=2.25.0-r0
-
-# Install the main filebrowser package from the testing repository
-RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/testing "filebrowser=$FILEBROWSER_VERSION"
-
-# Install additional packages
-RUN apk add --no-cache curl
-
-# Set the working directory
-WORKDIR /app
-
-# Set volumes
-VOLUME /app/config
-VOLUME /app/data
-
-# Set the exposed ports
-EXPOSE 5000
-
-# Set a health check
-HEALTHCHECK --start-period=2s --interval=5s --timeout=3s \
-    CMD curl -f http://localhost:5000/health || exit 1
-
-# Override the entrypoint
-ENTRYPOINT ["/usr/bin/filebrowser"]
-
-# Set the default command
-CMD ["--address", "0.0.0.0", "--port", "5000", "--database", "/app/config/database.db", "--root", "/app/data"]
-```
-
-The `ARG` instruction is used to specify an argument. An argument is only used
-during the build of the image. It is not used when the container is run.
-
-It can be used to customize the build of the image. It can be used to specify
-the version of the application to install for example.
-
-File Browser is not available in the main repository of Alpine Linux. It is
-available in the testing repository. You can find more information about Alpine
-Linux repositories here: <https://wiki.alpinelinux.org/wiki/Repositories>.
-
-The `EXPOSE` instruction is used to specify the ports that will be exposed by
-the container. This is only informative and can be omitted.
-
-The `HEALTHCHECK` instruction is used to specify a health check. It is used to
-specify a command that will be run periodically to check if the container is
-healthy.
-
-The `ENTRYPOINT` instruction is used to start the application. The `CMD` are the
-arguments that will be passed to the entry point.
-
-You can now build the image with the following command:
-
-```sh
-# Build the image with the my-custom-dockerfile:v3.0 tag
-docker build \
-  -t my-custom-dockerfile:v3.0 \
-  my-custom-dockerfile
-```
-
-> **Note**
->
-> The Docker image does not build with an error similar to this following one?
->
-> ```text
-> 0.751 ERROR: unable to select packages:
-> 0.754   filebrowser-2.25.0-r1:
-> 0.754     breaks: world[filebrowser=2.25.0-r0]
-> ```
->
-> It means the `2.25.0-r0` version of the `filebrowser` package is not available
-> anymore in the Alpine Linux packages registry.
->
-> Check the next section to fix it!
-
-You can change the value of the `FILEBROWSER_VERSION` build argument with the
-following command:
-
-```sh
-# Run the image with the my-custom-dockerfile:v3.0 tag and set the build argument
-docker build \
-  -t my-custom-dockerfile:v3.0 \
-  --build-arg FILEBROWSER_VERSION=<a specific version> \
-  my-custom-dockerfile
-```
-
-The `--arg` option is used to override the value of a build argument. It is used
-to specify the name and the value of the build argument. The name and the value
-are separated by an equal sign (`=`).
-
-Build arguments are really useful to configure your building process of your
-application. You can use them to set a specific package version for example.
-
-You can check the latest version of File Browser in the Alpine Linux packages
-registry here: <https://pkgs.alpinelinux.org/packages?name=filebrowser> and use
-the `--build-arg` option to set the `FILEBROWSER_VERSION` build argument to
-build the image.
-
-> [!TIP]  
-> For people using an ARM computer (Apple Silicon), you might need to add the
-> `--platform=linux/amd64` parameter to the `build` command as well.
->
-> The File Browser package is only built for the `amd64` architecture at the
-> moment. You need to specify the `linux/amd64` platform to build the image for
-> the `amd64` architecture.
->
-> You can find more information about multi-architecture builds in the official
-> documentation: <https://docs.docker.com/build/building/multi-platform/>.
-
-Once the image is correctly built, start the container with the following
-command:
-
-```sh
-# Run the image with the my-custom-dockerfile:v3.0 tag
-docker run --rm -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" my-custom-dockerfile:v3.0
-```
-
-The `-p` option is used to publish a container's port(s) to the host. It is used
-to specify the port of the container that will be mapped to the port of the host
-to access the application.
-
-The output should be similar to the following:
-
-```text
-2023/10/09 09:59:25 No config file used
-2023/10/09 09:59:25 Listening on [::]:5000
-```
-
-As you can notice, the application is running inside the container on the
-port 5000. However, we have mapped the port 5000 of the container to the port
-8080 of the host. You can now open your browser and go to
-<http://localhost:8080> to access the application.
-
-The default username is `admin` and the default password is `admin`. You can
-change it in the settings of the application.
-
-The directory `/app/config` contains the database of the application. It is
-mounted on the `$(pwd)/my-config` directory on the host.
-
-You should have access to the previous files created in the `/app/data`
-directory as it is mounted on the `$(pwd)/my-data` directory on the host. If you
-try to create a new file, it should appear in the `$(pwd)/my-data` directory on
-the host.
-
-You can now stop the container with `Ctrl` + `C`.
-
-Start the container again with the following command:
-
-```sh
-# Run the image with the my-custom-dockerfile:v3.0 tag
-docker run --rm -d -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" my-custom-dockerfile:v3.0
-```
-
-This will start the container in detached mode.
-
-Check the container health with the following command:
-
-```sh
-# Check the container health
-docker ps
-```
-
-The output should be similar to the following:
-
-```text
-CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS                    PORTS                    NAMES
-67c49b39eb41   my-custom-dockerfile:v3.0   "/usr/bin/filebrowse…"   38 seconds ago   Up 38 seconds (healthy)   0.0.0.0:8080->5000/tcp   interesting_blackburn
-```
-
-The `STATUS` column should display `(healthy)`.
-
-You can stop the container with the `docker stop` command as seen previously.
-
-Congrats! You have just embedded an application in a Docker image!
-
-#### Delete the images
-
-You can delete the images with the following command:
-
-```sh
-# Delete the my-custom-dockerfile:v1.0 image
-docker image rm my-custom-dockerfile:v1.0
-
-# Delete the my-custom-dockerfile:v2.0 image
-docker image rm my-custom-dockerfile:v2.0
-```
-
-You will keep the `my-custom-dockerfile:v3.0` image for the next section.
-
-### Publish an image on GitHub Container Registry
-
-In this section, you will publish an image on GitHub Container Registry.
-
-#### Create a personal access token
-
-You will need a personal access token to publish an image on the GitHub
-Container Registry.
-
-A personal access token is a token that you can use to authenticate to GitHub
-instead of using your password. It is more secure than using your password.
-
-Follow the instructions on the official website to authenticate with a personal
-access token (classic):
-<https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry>.
-
-> [!NOTE]  
-> You can find the personal access token in the settings of your GitHub account:
-> **Settings** > **Developer settings** (at the very end of the left side bar) >
-> **Personal access tokens** > **Tokens (classic)**.
-
-#### Login to GitHub Container Registry
-
-Run the following command in a terminal to export the personal access token as
-an environment variable:
-
-```sh
-# Export the personal access token as an environment variable
-export GITHUB_CR_PAT=YOUR_TOKEN
-```
-
-Then, login to GitHub Container Registry with the following command, replacing
-`<username>` with your GitHub username:
-
-```sh
-# Login to GitHub Container Registry
-echo $GITHUB_CR_PAT | docker login ghcr.io -u <username> --password-stdin
-```
-
-The output should be similar to the following:
-
-```text
-Login Succeeded
-```
-
-#### Tag the image correctly for GitHub Container Registry
-
-The image must be tagged with the following format:
-`ghcr.io/<username>/<image>:<tag>`.
-
-Run the following command to tag the image with the correct format, replacing
-`<username>` with your GitHub username:
-
-```sh
-# Tag the image with the correct format
-docker tag my-custom-dockerfile:v3.0 ghcr.io/<username>/my-custom-dockerfile:v3.0
-```
-
-You can list all the images with the following command:
-
-```sh
-# List all the images
-docker images
-```
-
-The output should be similar to the following:
-
-```text
-REPOSITORY                              TAG           IMAGE ID       CREATED        SIZE
-my-custom-dockerfile                    v3.0          e42e7597d672   3 hours ago    28MB
-ghcr.io/<username>/my-custom-dockerfile   v3.0          e42e7597d672   3 hours ago    28MB
-```
-
-You can delete the local `my-custom-dockerfile:v3.0` image with the following
-command:
-
-```sh
-# Delete the my-custom-dockerfile:v3.0 image
-docker image rm my-custom-dockerfile:v3.0
-```
-
-#### Publish the image on GitHub Container Registry
-
-Now publish the image on GitHub Container Registry with the following command,
-replacing `<username>` with your GitHub username:
-
-```sh
-# Publish the image on GitHub Container Registry
-docker push ghcr.io/<username>/my-custom-dockerfile:v3.0
-```
-
-The output should be similar to the following:
-
-```text
-The push refers to repository [ghcr.io/<username>/my-custom-dockerfile]
-c0b7c5c10b2e: Pushed
-409ef710a552: Pushed
-1f2bcdca11cf: Pushed
-cc2447e1835a: Pushed
-v3.0: digest: sha256:e2df66ffaf748cb32b00d58226f2b89017e99b234e8d9de1fb2bde971f626ce5 size: 1156
-```
-
-You can now go to the GitHub Container Registry page of your repository to check
-that the image has been published, replacing `<username>` with your GitHub
-username: `https://github.com/<username>?tab=packages`, as shown in the
-following screenshot:
-
-![GitHub Container Registry](./images/practical-content-publish-the-image-on-the-github-container-registry.png)
-
-As you can notice, the image is private by default. You can change the
-visibility of the image in the settings of the image.
-
-You can keep your images private if you want. Just be aware that you will need
-to authenticate to GitHub Container Registry to pull the image.
-
-You can delete the local image if you want.
-
-Congrats! You have just published your first image on GitHub Container Registry!
-
-### Use the published image with Docker
-
-In this section, you will use the published image with Docker.
-
-#### Pull the image from GitHub Container Registry
-
-Run the following command to pull the image from GitHub Container Registry,
-replacing `<username>` with your GitHub username:
-
-```sh
-# Pull the image from GitHub Container Registry
-docker pull ghcr.io/<username>/my-custom-dockerfile:v3.0
-```
-
-The output should be similar to the following if you have deleted the
-`ghcr.io/<username>/my-custom-dockerfile:v3.0` image locally:
-
-```text
-v3.0: Pulling from <username>/my-custom-dockerfile
-Digest: sha256:e2df66ffaf748cb32b00d58226f2b89017e99b234e8d9de1fb2bde971f626ce5
-Status: Downloaded newer image for ghcr.io/<username>/my-custom-dockerfile:v3.0
-ghcr.io/<username>/my-custom-dockerfile:v3.0
-
-What's Next?
-  View a summary of image vulnerabilities and recommendations → docker scout quickview ghcr.io/<username>/my-custom-dockerfile:v3.0
-```
-
-#### Run the image with Docker
-
-Running the image with Docker is pretty straightforward. You just need to run
-the following command to run the image with Docker, replacing `<username>` with
-your GitHub username:
-
-```sh
-# Run the image with Docker
-docker run --rm -p 8080:5000 -v "$(pwd)/my-custom-dockerfile/my-config:/app/config" -v "$(pwd)/my-custom-dockerfile/my-data:/app/data" ghcr.io/<username>/my-custom-dockerfile:v3.0
-```
-
-If you have not deleted the local volumes, you should have access to the
-previous files created with File Browser, just as before, using the image you
-have published on GitHub Container Registry!
-
-### Use the published image with Docker Compose
-
-In this section, you will run the same container with Docker Compose.
-
-A Docker Compose file is a YAML file that describes the services that make up
-your application. It can be used to run a single container or multiple
-containers.
-
-The Docker Compose file is easier to read and re-use than pure Docker commands.
-
-The Docker Compose file is named `docker-compose.yml` by default. You can use
-the `-f` option to specify a different file name.
-
-#### Write a Docker Compose file
-
-Create a new file named `docker-compose.yml` in the `my-custom-dockerfile`
-directory and put the following content in it, replacing `<username>` with your
-GitHub username:
-
-```yaml
-services:
-  filebrowser:
-    image: ghcr.io/<username>/my-custom-dockerfile:v3.0
-    platform: linux/amd64
-    ports:
-      - "8080:5000"
-    volumes:
-      - ./my-config:/app/config
-      - ./my-data:/app/data
-```
-
-> [!TIP]  
-> For people using an ARM computer (Apple Silicon), you might need to add the
-> `platform: linux/amd64` after the image in the `docker-compose.yml` file as
-> well:
->
-> ```yaml
-> services:
->   filebrowser:
->     image: ghcr.io/<username>/my-custom-dockerfile:v3.0
->     platform: linux/amd64
->     ports:
->       - "8080:5000"
->     volumes:
->       - ./my-config:/app/config
->       - ./my-data:/app/data
-> ```
->
-> The File Browser package is only built for the `amd64` architecture at the
-> moment. You need to specify the `linux/amd64` platform to build the image for
-> the `amd64` architecture.
->
-> You can find more information about multi-architecture builds in the official
-> documentation: <https://docs.docker.com/build/building/multi-platform/>.
-
-The Docker Compose file is composed of services. Each service is a container.
-
-It is mostly a translation of the Docker commands you have seen previously. The
-file is more readable than pure Docker commands and is easier to re-use as well.
-
-Please note that the volumes do not need `$(pwd)` as the current directory will
-be extended to the absolute directory automatically by Docker Compose.
-
-A Docker Compose file can easily be shared with your team in a Git repository.
-
-In future chapters, you will see Docker Compose in more details.
-
-#### Run the application with Docker Compose
-
-Run the following command to run the application with Docker Compose (in the
-same directory as the `docker-compose.yml` file):
-
-```sh
-# Run the container with Docker Compose
-docker compose up -d
-```
-
-The `-d` option is used to run the container in detached mode.
-
-The output should be similar to the following:
-
-```text
-[+] Running 2/2
- ✔ Network my-custom-dockerfile_default            Created     0.1s
- ✔ Container my-custom-dockerfile-filebrowser-1    Started     0.0s
-```
-
-As you can notice, Docker Compose has created a network for you. It is used to
-connect the services together. Custom networks can be created to connect
-services together with Docker as well.
-
-You can now open your browser and go to <http://localhost:8080> to access the
-application.
-
-You can check the status of the services with the following command:
-
-```sh
-# Check the status of the container with Docker Compose
-docker compose ps
-```
-
-The output should be similar to the following:
-
-```text
-NAME                                 IMAGE                                        COMMAND                                                                                                    SERVICE       CREATED         STATUS                   PORTS
-my-custom-dockerfile-filebrowser-1   ghcr.io/<username>/my-custom-dockerfile:v3.0   "/usr/bin/filebrowser --address 0.0.0.0 --port 5000 --database /app/config/database.db --root /app/data"   filebrowser   4 minutes ago   Up 4 minutes (healthy)   0.0.0.0:8080->5000/tcp
-```
-
-You can check the logs of the service with the following command:
-
-```sh
-# Display the logs of the service with Docker Compose
-docker compose logs filebrowser
-```
-
-If you omit the service name, Docker Compose will display the logs of all the
-services.
-
-You can stop the application with the following command:
-
-```sh
-# Stop the application with Docker Compose
-docker compose down
-```
-
-### Build and run the application with Docker Compose
-
-Docker Compose can be used to build the image from the Dockerfile as well.
-
-In this section, you will build the image from the Dockerfile with Docker
-Compose and run it with Docker Compose.
-
-#### Update the Docker Compose file
-
-Update the `docker-compose.yml` file with the following content, replacing
-`<username>` with your GitHub username and the `<a specific version>` with the
-version of File Browser you want to use:
-
-```yaml
-services:
-  filebrowser:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        FILEBROWSER_VERSION: <a specific version>
-    image: ghcr.io/<username>/my-custom-dockerfile:v3.0
-    ports:
-      - "8080:5000"
-    volumes:
-      - ./my-config:/app/config
-      - ./my-data:/app/data
-```
-
-> [!TIP]  
-> For people using an ARM computer (Apple Silicon), you might need to add the
-> `platform: linux/amd64` after the image in the `docker-compose.yml` file as
-> well:
->
-> ```yaml
-> services:
->   filebrowser:
->     build:
->       context: .
->       dockerfile: Dockerfile
->       args:
->         FILEBROWSER_VERSION: <a specific version>
->     image: ghcr.io/<username>/my-custom-dockerfile:v3.0
->     platform: linux/amd64
->     ports:
->       - "8080:5000"
->     volumes:
->       - ./my-config:/app/config
->       - ./my-data:/app/data
-> ```
->
-> The File Browser package is only built for the `amd64` architecture at the
-> moment. You need to specify the `linux/amd64` platform to build the image for
-> the `amd64` architecture.
->
-> You can find more information about multi-architecture builds in the official
-> documentation: <https://docs.docker.com/build/building/multi-platform/>.
-
-The `build` instruction is used to build the image from the Dockerfile. It is
-used to specify the build context and the Dockerfile.
-
-Defining the `image` is optional. If you do not define it, Docker Compose will
-generate a name for you. If you define it, Docker Compose will use it instead.
-
-Please note that, in this context, as you are using both the `build` and `image`
-keys, the `image` key will be used to tag the built Docker image. It will not
-use or fetch any images remotely.
-
-#### Build the image with Docker Compose
-
-Run the following command to build the image with Docker Compose:
-
-```sh
-# Build the image with Docker Compose
-docker compose build
-```
-
-The output should be similar to this:
-
-```text
-[+] Building 0.1s (8/8) FINISHED                                  docker:desktop-linux
- => [filebrowser internal] load .dockerignore                                     0.0s
- => => transferring context: 2B                                                   0.0s
- => [filebrowser internal] load build definition from Dockerfile                  0.0s
- => => transferring dockerfile: 848B                                              0.0s
- => [filebrowser internal] load metadata for docker.io/library/alpine:3.18      0.0s
- => [filebrowser 1/4] FROM docker.io/library/alpine:3.18                        0.0s
- => CACHED [filebrowser 2/4] RUN apk add --no-cache --repository=https://dl-cdn.  0.0s
- => CACHED [filebrowser 3/4] RUN apk add --no-cache curl                          0.0s
- => CACHED [filebrowser 4/4] WORKDIR /app                                         0.0s
- => [filebrowser] exporting to image                                              0.0s
- => => exporting layers                                                           0.0s
- => => writing image sha256:7a159529e8f3b5687c77710aeed97d3679216db7bd3a45e9c2bb  0.0s
-
- => => naming to ghcr.io/<username>/my-custom-dockerfile:v3.0                       0.0s
-```
-
-As most layers are already cached, the build is pretty fast.
-
-Try to change the port used in the `Dockerfile` (do not forget to update the
-healthcheck's port) and run the `docker compose build` command again. Do not
-forget to update the Docker Compose file to map the right port as well.
-
-#### Run the image with Docker Compose
-
-Run the following command to run the image with Docker Compose:
-
-```sh
-# Run the image with Docker Compose
-docker compose up -d
-```
-
-You can now open your browser and go to <http://localhost:8080> to access the
-application.
-
-#### Push the image to GitHub Container Registry
-
-Run the following command to push the image on GitHub Container Registry:
-
-```sh
-# Push the image to GitHub Container Registry
-docker compose push
-```
-
-This will push the newly updated image to GitHub Container Registry.
-
-#### Pull the image from GitHub Container Registry
-
-Run the following command to pull the image from GitHub Container Registry:
-
-```sh
-# Pull the image from GitHub Container Registry
-docker compose pull
-```
-
-This will replace the local image you built with the image from GitHub Container
-Registry.
-
-#### Share your Docker Compose application
-
-Create a new Git repository (do not forget the `.gitignore` file with the
-required files! Which are they?) and push your code to it.
-
-Share your Docker Compose application in the GitHub Discussions of this
-organization: <https://github.com/orgs/heig-vd-dai-course/discussions>.
-
-Create a new discussion with the following information:
-
-- **Title**: DAI 2023-2024 - My Docker Compose application - First name Last
-  Name
-- **Category**: Show and tell
-- **Description**: The link to your GitHub repository with a screenshot of your
-  Docker image published on GitHub Container Registry
-
-This will notify us that you have completed the exercise and we can check your
-work.
-
-You can compare your solution with the official one stated in the
-[Solution](#solution) section, however, **we highly recommend you to try to
-complete the practical content by yourself first to learn the most**.
-
-### Go further
-
-This is an optional section. Feel free to skip it if you do not have time.
-
-- Are you able to use Docker to run the application you have developed in the
-  previous practical work? Add the required files and instructions to your
-  repository!
-- Are you able to make usage of the multi-stage builds to reduce the size of
-  your image? Update the required files and instructions to your repository!
-
-## Conclusion
-
-### What did you do and learn?
-
-In this chapter, you have installed Docker and Docker Compose. You have learned
-the basics of Docker and Docker Compose and you have used them to build and run
-a Docker image.
-
-Docker and Docker Compose are very powerful tools. They are used by a lot of
-companies to build and run their applications in production on different
-environments.
-
-### Test your knowledge
-
-At this point, you should be able to answer the following questions:
-
-- What is the difference between a container and an image?
-- What is the difference between a Dockerfile and a Docker Compose file?
-- What is the difference between the `RUN` and `CMD` instructions?
-- What is the difference between the `ENTRYPOINT` and `CMD` instructions?
-- What is the purpose of the `HEALTHCHECK` instruction?
-- What is the purpose of the `EXPOSE` instruction? Is it required?
-- How can a volume be used to persist data?
-
-## Finished? Was it easy? Was it hard?
-
-Can you let us know what was easy and what was difficult for you during this
-chapter?
-
-This will help us to improve the course and adapt the content to your needs. If
-we notice some difficulties, we will come back to you to help you.
-
-> [!NOTE]
->
-> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
-> d'améliorations en français ou en anglais.
->
-> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
-> ou si vous avez des difficultés à réaliser les éléments demandés dans le
-> cours. Nous sommes là pour vous aider !
-
-➡️ [GitHub Discussions][discussions]
-
-You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Use Docker and Docker compose to experiment with the SMTP protocol and Telnet
-
-## Additional resources
-
-_Resources are here to help you. They are not mandatory to read._
-
-- [_"Big Misconceptions about Bare Metal, Virtual Machines, and Containers"_ by ByteByteGo](https://www.youtube.com/watch?v=Jz8Gs4UHTO8)
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-## Solution
-
-You can find the solution to the practical content in the
-[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
-repository.
-
-If you have any questions about the solution, feel free to open an issue to
-discuss it!
 
 ## Sources
 
