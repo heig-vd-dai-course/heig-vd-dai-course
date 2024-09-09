@@ -1,7 +1,7 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-smtp-and-ncat/12-smtp-and-ncat-course-material.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/15-smtp-and-ncat-course-material.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/114
@@ -378,11 +378,11 @@ Pull the latest changes from the previously cloned
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
 repository or clone it if you have not done it yet.
 
-Explore the `12-smtp-and-ncat` directory containing the MailHog example with
+Explore the `15-smtp-and-ncat` directory containing the MailHog example with
 Docker Compose. Make sure to show hidden files and directories to see the `.env`
 file.
 
-In the `12-smtp-and-ncat` directory, run the following command:
+In the `15-smtp-and-ncat` directory, run the following command:
 
 ```sh
 # Start MailHog in background
@@ -402,8 +402,8 @@ The output should be similar to the following:
    ✔ 60493946972a Pull complete                                                                                                                              1.2s
    ✔ 368ee3bc1dbb Pull complete                                                                                                                              1.4s
 [+] Running 2/2
- ✔ Network 12-smtp-and-ncat_default      Created                                                                                                           0.1s
- ✔ Container 12-smtp-and-ncat-mailhog-1  Created
+ ✔ Network 15-smtp-and-ncat_default      Created                                                                                                           0.1s
+ ✔ Container 15-smtp-and-ncat-mailhog-1  Created
 ```
 
 This will start the MailHog SMTP server and the MailHog Web interface.
@@ -420,19 +420,19 @@ press `Ctrl` + `C`.
 The output should be similar to the following:
 
 ```text
-12-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 Using in-memory storage
-12-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 [SMTP] Binding to address: 0.0.0.0:1025
-12-smtp-and-ncat-mailhog-1  | [HTTP] Binding to address: 0.0.0.0:8025
-12-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 Serving under http://0.0.0.0:8025/
-12-smtp-and-ncat-mailhog-1  | Creating API v1 with WebPath:
-12-smtp-and-ncat-mailhog-1  | Creating API v2 with WebPath:
-12-smtp-and-ncat-mailhog-1  | [HTTP] Binding to address: 0.0.0.0:8025
-12-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 Using in-memory storage
-12-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 [SMTP] Binding to address: 0.0.0.0:1025
-12-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 Serving under http://0.0.0.0:8025/
-12-smtp-and-ncat-mailhog-1  | Creating API v1 with WebPath:
-12-smtp-and-ncat-mailhog-1  | Creating API v2 with WebPath:
-12-smtp-and-ncat-mailhog-1  | [APIv1] KEEPALIVE /api/v1/events
+15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 Using in-memory storage
+15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 [SMTP] Binding to address: 0.0.0.0:1025
+15-smtp-and-ncat-mailhog-1  | [HTTP] Binding to address: 0.0.0.0:8025
+15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 Serving under http://0.0.0.0:8025/
+15-smtp-and-ncat-mailhog-1  | Creating API v1 with WebPath:
+15-smtp-and-ncat-mailhog-1  | Creating API v2 with WebPath:
+15-smtp-and-ncat-mailhog-1  | [HTTP] Binding to address: 0.0.0.0:8025
+15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 Using in-memory storage
+15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 [SMTP] Binding to address: 0.0.0.0:1025
+15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 Serving under http://0.0.0.0:8025/
+15-smtp-and-ncat-mailhog-1  | Creating API v1 with WebPath:
+15-smtp-and-ncat-mailhog-1  | Creating API v2 with WebPath:
+15-smtp-and-ncat-mailhog-1  | [APIv1] KEEPALIVE /api/v1/events
 ```
 
 You can access the MailHog Web interface at <http://localhost:8025>.
@@ -606,6 +606,15 @@ chapter?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 
