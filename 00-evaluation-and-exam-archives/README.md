@@ -3,22 +3,13 @@
 This directory contains the archives of the previous evaluations and exams of
 the course.
 
-## Evaluations 1
-
-- [Evaluation 1 - 2023-2024](./EVALUATION_1_2023_2024/README.md)
-
-## Evaluations 2
-
-- [Evaluation 2 - 2023-2024](./EVALUATION_2_2023_2024/README.md)
-
-## Evaluations 3
-
-- [Evaluation 3 - 2023-2024](./EVALUATION_3_2023_2024/README.md)
-
-## Evaluations 4
-
-- [Evaluation 4 - 2023-2024](../25-evaluation-3/EVALUATION_4_2023_2024/README.md)
-
-## Exams
+## DAI 2024-2025
 
 - _None yet_
+
+## DAI 2023-2024
+
+- [Evaluation 1 - 2023-2024](./2023_2024_EVALUATION_1/README.md)
+- [Evaluation 2 - 2023-2024](./2023_2024_EVALUATION_2/README.md)
+- [Evaluation 3 - 2023-2024](./2023_2024_EVALUATION_3/README.md)
+- [Evaluation 4 - 2023-2024](./2023_2024_EVALUATION_4/README.md)
