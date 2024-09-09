@@ -49,8 +49,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-introduction-to-part-1/02-introduction-to-part-1-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1539186607619-df476afe6ff1?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Introduction to part 1: Input/output processing
 

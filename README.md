@@ -1,7 +1,8 @@
 # HEIG-VD DAI Course [![License](https://img.shields.io/github/license/heig-vd-dai-course/heig-vd-dai-course)](./LICENSE.md)
 
-The main repository for the DAI course (course material and discussions) at
-[HEIG-VD](https://heig-vd.ch), Switzerland.
+The main repository to the
+[Développement d'applications internet (DAI) course](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
+at [HEIG-VD](https://heig-vd.ch), Switzerland!
 
 ## Getting started
 
@@ -18,9 +19,9 @@ This course is equivalent to 3 ECTS credits = ~75-90 hours of work.
 
 64 periods in class are planned for this course, divided in 3 main parts:
 
-- [Part 1 - Input/output processing (18 periods)](#part-1---inputoutput-processing-18-periods)
-- [Part 2 - Network programming with TCP and UDP (24 periods)](#part-2---network-programming-with-tcp-and-udp-24-periods)
-- [Part 3 - Network programming with HTTP (20 periods)](#part-3---network-programming-with-http-20-periods)
+- Part 1 - Input/output processing (18 periods)
+- Part 2 - Network programming with TCP and UDP (24 periods)
+- Part 3 - Network programming with HTTP (20 periods)
 
 The entire course planning for the semester is available at
 <https://github.com/orgs/heig-vd-dai-course/projects>.
@@ -36,23 +37,22 @@ The entire course planning for the semester is available at
 - [4. Java, IntelliJ IDEA and Maven (2 periods)](./04-java-intellij-idea-and-maven/README.md)
 - [5. Java IOs (2 periods)](./05-java-ios/README.md)
 - [6. Docker and Docker Compose (2 periods)](./06-docker-and-docker-compose/README.md)
-  (WIP)
 - [7. Practical work 1 (8 periods)](./07-practical-work-1/README.md)
 - [8. Evaluation 1 (2 periods)](./08-evaluation-1/README.md)
-- [9. Conclusions to part 1](./09-conclusion-to-part-1/README.md) (WIP)
+- [9. Conclusions to part 1](./09-conclusion-to-part-1/README.md)
 
 ### Part 2 - Network programming with TCP and UDP (24 periods)
 
 - [10. Introduction to part 2](./10-introduction-to-part-2/README.md) (WIP)
 - [11. Define an application protocol (2 periods)](./11-define-an-application-protocol/README.md)
   (WIP)
-- [12. SMTP and ncat (2 periods)](./12-smtp-and-ncat/README.md) (WIP)
-- [13. Java TCP programming (2 periods)](./13-java-tcp-programming/README.md)
+- [12. Java TCP programming (2 periods)](./12-java-tcp-programming/README.md)
   (WIP)
-- [14. Java UDP programming (2 periods)](./14-java-udp-programming/README.md)
+- [13. Java UDP programming (2 periods)](./13-java-udp-programming/README.md)
   (WIP)
-- [15. Concurrency with Java (2 periods)](./15-concurrency-with-java/README.md)
+- [14. Java network concurrency (2 periods)](./14-java-network-concurrency/README.md)
   (WIP)
+- [15. SMTP and ncat (2 periods)](./15-smtp-and-ncat/README.md) (WIP)
 - [16. Practical work 2 (12 periods)](./16-practical-work-2/README.md) (WIP)
 - [17. Evaluation 2 (2 periods)](./17-evaluation-2/README.md) (WIP)
 - [18. Conclusion to part 2](./18-conclusion-to-part-2/README.md) (WIP)
