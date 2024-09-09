@@ -49,8 +49,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1451187580459-43490279c0fa?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Introduction and course organization
 
@@ -312,7 +311,7 @@ If you have any difficulties with English, please let us know.
 
 ![bg right:40%](https://images.unsplash.com/photo-1617292797716-ec3000a44093?fit=crop&h=720)
 
-## _"What about ChatGPT, Copilot, etc.?"_
+## _"What about ChatGPT, GitHub Copilot, etc.?"_
 
 **You can use all the tools you want** (personal notes, Internet, AI tools,
 etc.), **except during evaluations and the exam**. You will be able to use these
