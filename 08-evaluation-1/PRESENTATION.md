@@ -93,8 +93,8 @@ The following chapters will be evaluated:
 
 ## Evaluation content
 
-You might be asked questions about the theoretical content, the practical
-content ini each chapter. You might be asked about elements seen in the
+You might be asked questions about the theoretical content and the practical
+content in each chapter. You might also be asked about elements seen in the
 practical work as well.
 
 You might also be asked to write/explain code snippets or to explain how to
