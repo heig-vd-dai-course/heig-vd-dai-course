@@ -273,7 +273,7 @@ La note a été saisie dans GAPS également.
 Nous restons à votre disposition pour toute question.
 
 Cordialement,
-Ludovic Delafontaine et Hadrien Louis
+[Le personnel enseignant]
 ```
 
 </details>
