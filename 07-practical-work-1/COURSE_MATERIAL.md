@@ -33,7 +33,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Category 4 - Java IOs](#category-4---java-ios)
   - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
 - [Constraints](#constraints)
-- [Remarks](#remarks)
+- [Tips](#tips)
+  - [The Unix philosophy and the KISS principle](#the-unix-philosophy-and-the-kiss-principle)
+  - [External dependencies](#external-dependencies)
+  - [Protect your main branch](#protect-your-main-branch)
 - [Submission](#submission)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
@@ -150,7 +153,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 | 17  | The CLI displays a comprehensive help message on how to use the application and displays errors on invalid/missing inputs and/or processing errors |    0.2 |
 | 18  | The CLI takes some mandatory arguments and other optional arguments for customization                                                              |    0.2 |
 | 19  | The CLI processes the files efficiently                                                                                                            |    0.2 |
-| 20  | The CLI processes the files so that they are compatible accros operating systems/languages                                                         |    0.2 |
+| 20  | The CLI processes the files so that they are compatible across operating systems/languages                                                         |    0.2 |
 | 21  | The CLI correctly manages resources in case a problem occurs when processing the files                                                             |    0.2 |
 | 22  | The CLI correctly processes the input file and writes the result in the output file with its execution time                                        |    0.2 |
 
@@ -173,19 +176,50 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
   examples presented during the course (we emphasize the word **slightly**, no
   need to shoot for the moon!)
 
-## Remarks
+## Tips
 
-Remember the KISS principle: Keep it simple, silly! Sometimes it is better to
-use a simple solution than a complex one.
+### The Unix philosophy and the KISS principle
+
+> The Unix philosophy, originated by Ken Thompson, is a set of cultural norms
+> and philosophical approaches to minimalist, modular software development. It
+> is based on the experience of leading developers of the Unix operating system.
+>
+> <https://en.wikipedia.org/wiki/Unix_philosophy>
+
+The Unix philosophy is a set of rules that defines how Unix programs should be
+designed. It is used to define the Unix operating system and the programs that
+are used on this operating system.
+
+The Unix philosophy can be defined by the following rules, among others:
+
+- Write programs that do one thing and do it well.
+- Write programs to work together.
+- Write programs to handle text streams, because that is a universal interface.
+
+You can inspire yourself from the Unix philosophy to define your own
+applications.
+
+The KISS principle summarizes the Unix philosophy in a simple sentence: _Keep it
+simple, silly!_
+
+Sometimes it is better to use a simple solution than a complex one.
 
 If your implementation is too complex, we might penalize you.
+
+### External dependencies
 
 You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.
 
+### Protect your main branch
+
 You can protect the `main` branch of your repository to prevent any push on it
 and force signed commits from team members. This will force all team members to
 use signed pull requests to merge your work.
+
+You can check the official documentation to know how to protect your main branch
+on GitHub:
+<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>.
 
 ## Submission
 
@@ -226,8 +260,8 @@ If you have any questions about the evaluation, you can contact us!
 <details>
 <summary>Grading grid template for the teaching staff</summary>
 
-```markdown
-# [DAI 202X-202Y] Retours sur le travail pratique Z
+```text
+[DAI 202X-202Y] Retours sur le travail pratique Z
 
 Bonjour,
 
@@ -238,7 +272,8 @@ La note a été saisie dans GAPS également.
 
 Nous restons à votre disposition pour toute question.
 
-Cordialement, Ludovic Delafontaine et Hadrien Louis
+Cordialement,
+[Le personnel enseignant]
 ```
 
 </details>
