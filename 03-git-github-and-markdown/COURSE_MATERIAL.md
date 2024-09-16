@@ -1014,6 +1014,13 @@ it is the last commit of the main branch.
 Fill the `README.md` file with the content you want to show on your profile
 using Markdown using your favorite text editor.
 
+> [!NOTE]
+>
+> Exceptionally, you can edit the `README.md` file directly through the Windows
+> File Explorer by accessing the WSL filesystem. If you have cloned the
+> repository without paying attention of the current directory you were in, you
+> can find it in the `/home/<user>` directory.
+
 Feel free to be creative! You can add images, links, tables, etc.
 
 Missing inspiration? There are plenty of generators to help you create your
@@ -1303,7 +1310,7 @@ git branch -a
 
 Add yourself to the list of students in the `profile/README.md` file. Please add
 yourself in alphabetical order (by last name) as mentioned in the HTML comment
-in the README file in the class you belong to:
+in the README file in the class you belong to.
 
 > [!IMPORTANT]
 >
@@ -1313,8 +1320,15 @@ in the README file in the class you belong to:
 >
 > Do not remove the HTML comments in the README file.
 
+> [!NOTE]
+>
+> If you are on WSL, you can exceptionally edit the `README.md` file directly
+> through the Windows File Explorer by accessing the WSL filesystem. If you have
+> cloned the repository without paying attention of the current directory you
+> were in, you should find it in the `/home/<username>` directory.
+
 ```markdown
-- First name LAST NAME [@username](https://github.com/username)
+- First name Last name [@username](https://github.com/username)
 ```
 
 #### Commit your changes
