@@ -771,18 +771,22 @@ Open a terminal and type `git --version`.
 The output should be similar to this:
 
 ```text
-git version 2.41.0
+git version 2.34.1
 ```
 
 > [!WARNING]
 >
-> Ensure you have the latest version of Git installed. If you have an older
+> Ensure you have at least version 2.34.0 of Git installed. If you have an older
 > version, you might not be able to use some features mentioned in this course.
 
 #### Configure Git
 
 Git needs to know your name and email address to be able to label your commits
-properly. Use the same email address you used to create your GitHub account.
+properly.
+
+> [!IMPORTANT]
+>
+> Use the same email address you used to create your GitHub account.
 
 Open a terminal and type the following commands:
 
@@ -806,8 +810,13 @@ In this section you will enable SSH authentication on your GitHub account.
 
 #### Generate a SSH key
 
+> [!IMPORTANT]
+>
+> Follow the Linux instructions on the GitHub documentation! By default, the
+> Windows instructions are shown if you are on Windows.
+
 Follow the official documentation to generate a SSH key:
-<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
+<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>.
 
 > [!CAUTION]
 >
@@ -1005,6 +1014,13 @@ it is the last commit of the main branch.
 
 Fill the `README.md` file with the content you want to show on your profile
 using Markdown using your favorite text editor.
+
+> [!NOTE]
+>
+> Exceptionally, you can edit the `README.md` file directly through the Windows
+> File Explorer by accessing the WSL filesystem. If you have cloned the
+> repository without paying attention of the current directory you were in, you
+> can find it in the `/home/<user>` directory.
 
 Feel free to be creative! You can add images, links, tables, etc.
 
@@ -1295,18 +1311,25 @@ git branch -a
 
 Add yourself to the list of students in the `profile/README.md` file. Please add
 yourself in alphabetical order (by last name) as mentioned in the HTML comment
-in the README file in the class you belong to:
+in the README file in the class you belong to.
 
 > [!IMPORTANT]
 >
 > As little as it seems, it is important to respect the alphabetical order. It
-> makes it easier to find someone in the list once we have to search for a
-> student to contact them for a project, for example.
+> helps us (the teaching staff) searching for someone when grading your work and
+> answering your questions. Thanks!
 >
 > Do not remove the HTML comments in the README file.
 
+> [!NOTE]
+>
+> If you are on WSL, you can exceptionally edit the `README.md` file directly
+> through the Windows File Explorer by accessing the WSL filesystem. If you have
+> cloned the repository without paying attention of the current directory you
+> were in, you should find it in the `/home/<username>` directory.
+
 ```markdown
-- First name Last name [@username](https://github.com/username)
+- First name Last name [@username](https://github.com/<username>)
 ```
 
 #### Commit your changes
