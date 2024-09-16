@@ -20,7 +20,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Install Windows Terminal](#install-windows-terminal)
   - [Configure Windows Terminal](#configure-windows-terminal)
 - [Update Ubuntu](#update-ubuntu)
-- [Exclude WSL from Windows Defender](#exclude-wsl-from-windows-defender)
+- [Exclude WSL from your antivirus software](#exclude-wsl-from-your-antivirus-software)
+  - [Exclude WSL from Windows Defender](#exclude-wsl-from-windows-defender)
 - [Check the _Considerations for a development environment_ guide](#check-the-considerations-for-a-development-environment-guide)
 - [Validate the installation](#validate-the-installation)
 - [Install and configure your IDE](#install-and-configure-your-ide)
@@ -401,21 +402,41 @@ Press `y` when prompted to confirm the upgrade.
 
 All packages will be upgraded to the latest version.
 
-## Exclude WSL from Windows Defender
+## Exclude WSL from your antivirus software
 
-Excluding the WSL distribution from Windows Defender will prevent Windows
-Defender from scanning the files and folders in the WSL distribution and highly
-improve the performance of WSL.
+The following section will guide you through the process of excluding the WSL
+distribution from your antivirus software.
 
-It will also allow you to use WSL with your prefered Integrated Development
+This is an important step to improve the performance of WSL and avoid any issues
+with your Integrated Development Environment (IDE).
+
+It will also allow you to use WSL with your preferred Integrated Development
 Environment (IDE) without any issues.
 
 This should not expose your system to any security risks as the WSL distribution
 is isolated from the rest of the system.
 
-To exclude the WSL distribution from Windows Defender, you can run the following
-command in a PowerShell terminal as administrator as seen in the previous
-section:
+> [!IMPORTANT]
+>
+> At the moment, only Windows Defender is supported. If you are using another
+> antivirus software, you will need to check the documentation of your antivirus
+> software to exclude WSL from it. The path to exclude if you have installed
+> Ubuntu as the main WSL distribution is `\\wsl$\Ubuntu`.
+>
+> If you want to add your antivirus software to this guide, feel free to open an
+> issue and submit a pull request (more on this in a later course).
+
+- [Exclude WSL from Windows Defender](#exclude-wsl-from-windows-defender)
+
+### Exclude WSL from Windows Defender
+
+Excluding the WSL distribution from Windows Defender will prevent Windows
+Defender from scanning the files and folders in the WSL distribution and highly
+improve the performance of WSL.
+
+To exclude the WSL Ubuntu distribution from Windows Defender, you can run the
+following command in a PowerShell terminal as administrator as seen in the
+previous section:
 
 ```powershell
 # Exclude the WSL distribution from Windows Defender
