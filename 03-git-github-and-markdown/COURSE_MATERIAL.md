@@ -1328,7 +1328,7 @@ in the README file in the class you belong to.
 > were in, you should find it in the `/home/<username>` directory.
 
 ```markdown
-- First name Last name [@username](https://github.com/username)
+- First name Last name [@username](https://github.com/<username>)
 ```
 
 #### Commit your changes
