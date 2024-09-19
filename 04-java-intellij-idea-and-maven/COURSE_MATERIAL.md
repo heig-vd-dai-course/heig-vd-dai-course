@@ -451,6 +451,13 @@ mvn dependency:go-offline clean compile package
 
 ## Practical content
 
+> [!NOTE]
+>
+> If you are on Windows, you must follow the extra steps of the
+> [_Set up a Windows development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md#install-and-configure-intellij-idea-to-access-wsl)
+> guide to correctly configure the following tools with the Windows Subsystem
+> for Linux (WSL).
+
 ### Install SDKMAN!
 
 In this section, you will install SDKMAN! to manage different versions of Java.
@@ -486,7 +493,7 @@ core: 0.4.6
 
 ### Install Java
 
-In this section, you will install the latest version availabe as well as the
+In this section, you will install the latest version available as well as the
 latest Long term support (LTS) version of Java and switch between them using
 SDKMAN!.
 
@@ -558,9 +565,9 @@ Hit Q to exit this list view
 ================================================================================
 ```
 
-As mentioned in the theoric part, many Java JVMs are available, used to target
-different hardware and software environments and/or specific optimizations for a
-given platform and/or use-case.
+As mentioned in the theoretical part, many Java JVMs are available, used to
+target different hardware and software environments and/or specific
+optimizations for a given platform and/or use-case.
 
 > [!TIP]
 >
@@ -711,7 +718,7 @@ Follow the official documentation to enable the IntelliJ student license:
 
 #### Download and install IntelliJ Toolbox App
 
-Go to the official website and following the instructions on how to install
+Go to the official website and follow the instructions on how to install
 IntelliJ Toolbox App on your system: <https://www.jetbrains.com/toolbox/app>.
 
 #### Enable the student license in IntelliJ Toolbox App
@@ -720,17 +727,14 @@ Open IntelliJ Toolbox App and login with your JetBrains account.
 
 #### Install IntelliJ IDEA Ultimate Edition
 
+> [!NOTE]
+>
+> Reminder: For people on Windows, follow the
+> [_Set up a Windows development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md#install-and-configure-intellij-idea-to-access-wsl)
+> guide to correctly configure IntelliJ IDEA with the Windows Subsystem for
+> Linux (WSL).
+
 Install IntelliJ IDEA from the Toolbox App and you should be good to go!
-
-#### Configure IntelliJ IDEA
-
-If you are on Windows, you must follow the extra steps to configure IntelliJ
-IDEA to use the Windows Subsystem for Linux (WSL) as the default development
-environment.
-
-These instructions are available in the
-[Set up a Windows development environment](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md#install-and-configure-intellij-idea-to-access-wsl)
-guide.
 
 ### Create and run a new Maven project with IntelliJ IDEA
 
