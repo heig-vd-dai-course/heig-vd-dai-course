@@ -729,7 +729,7 @@ Open IntelliJ Toolbox App and login with your JetBrains account.
 
 > [!NOTE]
 >
-> Reminder: For people on Windows, follow the
+> **Reminder**: for people on Windows, follow the
 > [_Set up a Windows development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md#install-and-configure-intellij-idea-to-access-wsl)
 > guide to correctly configure IntelliJ IDEA with the Windows Subsystem for
 > Linux (WSL).
