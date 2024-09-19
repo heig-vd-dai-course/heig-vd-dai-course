@@ -68,18 +68,18 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Do you know what happens when you browse the Web?
+## Do you know what happens when you browse the Web? How do you think it works?
 
 <!-- _class: lead -->
 
-## What happens when you browse the Web?
+## What happens when you browse the Web
 
-1. You request a resource (e.g. a file) from a Web server
-2. The Web server opens the file
-3. The Web server reads the file
-4. The Web server sends the file to you
-5. Your Web browser receives the file
-6. Your Web browser displays the file
+1. You request a resource (e.g. a file) from a web server
+2. The web server opens the file
+3. The web server reads the file
+4. The web server sends the file to you
+5. Your web browser receives the file
+6. Your web browser displays the file
 
 The whole process uses **input/output** (IO) operations!
 

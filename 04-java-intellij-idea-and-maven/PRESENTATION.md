@@ -162,18 +162,20 @@ find other resources and alternatives as well.
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-## IntelliJ IDEA
+### IntelliJ IDEA
 
 - IDE for (Java) software development
 - Developed by JetBrains
 - Works on Windows, macOS, Linux
+- Quite a standard in the industry
 
 ![bg right w:60%](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg)
 
 ### Community Edition and Ultimate Edition
 
 - Community (free) and Ultimate (paid)
-- Free student license available
+- Free student license available - you can get it!
+- The Community Edition is sufficient for this course
 
 ![bg right contain](./images/intellij-community-and-ultimate-edition.png)
 
@@ -181,15 +183,15 @@ find other resources and alternatives as well.
 
 - Manage multiple JetBrains IDEs
 - Install and update in one place
-- Optional but useful
+- Optional but very useful
 
 ![bg right w:60%](https://resources.jetbrains.com/storage/products/company/brand/logos/Toolbox_icon.svg)
 
 ### Configuration files and Git
 
 - `.idea` directory for project config
-- Ignore local config in Git
-- Commit shared project config
+- Allow to share project settings between developers
+- Some files must be ignored to avoid issue (local config) in Git
 
 ![bg right contain](./images/gitignore-example.png)
 
@@ -218,6 +220,7 @@ find other resources and alternatives as well.
 - Software project management tool
 - Manages dependencies
 - Build automation tool
+- Allows to define a standard project structure
 
 ![bg right w:80%](https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg)
 
@@ -235,7 +238,7 @@ find other resources and alternatives as well.
 
 - Configuration and build settings
 - Shared among developers
-- Defines dependencies and plugins
+- Defines dependencies and plugins:
   - Plugins extend Maven functionality
   - Dependencies are external libraries
 
