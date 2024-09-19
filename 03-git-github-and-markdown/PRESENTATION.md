@@ -102,7 +102,7 @@ find other resources and alternatives as well.
 
 - Git operates with a client-server structure:
   - Remote repositories (server)
-  - Local repositories (local copies known as clones)
+  - Local repositories (local copies known as _clones_)
 - Fully distributed VCS for offline work: each clone contains the full history
 
 ![bg right contain](https://wac-cdn.atlassian.com/dam/jcr:9d51f0ee-5946-4be2-886c-ff040ef8c1a1/03.svg?cdnVersion=1210)
@@ -121,6 +121,7 @@ find other resources and alternatives as well.
 - Tracks distinct repository versions
 - Default branch is typically named `main`
 - Branches have names and commit pointers (heads)
+- Allow to work on features or bug fixes without affecting the main branch
 
 ![bg right w:90%](https://wac-cdn.atlassian.com/dam/jcr:34c86360-8dea-4be4-92f7-6597d4d5bfae/02%20Feature%20branches.svg?cdnVersion=1210)
 
@@ -131,6 +132,7 @@ find other resources and alternatives as well.
   - Merge
   - Rebase
   - Squash
+- In this course, you will focus on the merge method
 
 ![bg vertical right w:75%](https://wac-cdn.atlassian.com/dam/jcr:4639eeb8-e417-434a-a3f8-a972277fc66a/02%20Merging%20main%20into%20the%20feature%20branh.svg?cdnVersion=1210)
 ![bg vertical right w:75%](https://wac-cdn.atlassian.com/dam/jcr:a712e238-6cb9-4c8c-8ef7-1975dca49be3/04%20Squashing%20a%20commit%20with%20an%20interactive%20rebase.svg?cdnVersion=1210)
@@ -139,14 +141,17 @@ find other resources and alternatives as well.
 
 - Arise from simultaneous file edits
 - Git detects and requires resolution
+- Conflicts must be resolved to decide which changes to keep
+- It can be tricky but is a crucial skill
 
 ![bg right h:80%](https://imgs.xkcd.com/comics/git.png)
 
 ### Ignore Files
 
-- `.gitignore` omits specific files
-- Improves repository cleanliness
-- Avoid gitignore generators
+- gitignore files omit specific files that should not be on the repository
+- Improves repository cleanliness and security (avoid sensitive data leaks)
+- Tip: avoid online gitignore generators, they generate a lot of unnecessary
+  rules
 
 ![bg right contain](./images/git-ignore-files.png)
 
@@ -155,12 +160,12 @@ find other resources and alternatives as well.
 - Git is a distributed VCS
 - Git uses commits to track changes
 - Git uses branches to track different versions of the repository
-- Git can pull changes from a branch into another
+- Git can pull changes from a remote repository
 - Git can merge, rebase or squash branches/commits
 - Git can detect and resolve conflicts
 
-We encourage you to learn how to use Git from the command line, so you can still
-use it everywhere (even on a server).
+**We encourage you to learn how to use Git from the command line, so you can
+still use it everywhere (even on a server).**
 
 ## GitHub
 
@@ -174,21 +179,27 @@ find other resources and alternatives as well.
 - Git hosting platform
 - Created in 2008
 - Web-based Git hosting
-- Popular for open source
+- Popular for open source projets
 
 ![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
 
 ### Social platform
 
-- Social interactions: follow, star
+- Social interactions:
+  - Follow users
+  - Star projects
+  - Discover new projects
 - Forking repositories
+  - Create a copy of a repository
+  - Make changes and contribute back
 
 ![bg right contain](./images/github-social-platform.png)
 
 ### Free features and PRO features
 
 - Enhanced features with PRO
-- Free for students
+  - Access to premium features and software
+- Free for students - you can apply!
 
 ![bg right contain](./images/github-free-features-and-pro-features.png)
 
@@ -233,6 +244,7 @@ find other resources and alternatives as well.
 - Lightweight markup language
 - Created by John Gruber and Aaron Swartz in 2004
 - Simple and versatile
+- Used by many platforms and tools
 
 ![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg)
 
@@ -246,8 +258,8 @@ find other resources and alternatives as well.
 
 ### Syntax
 
-- Markup language with special characters
-- Discord and Telegram uses Markdown
+- Markup language with special characters (`#`, `*`, `-`, `[]`, `!`, etc.)
+- Discord and Telegram uses Markdown for formatting
 - Supports headings, text formatting, code blocks, lists, links, images, and
   tables
 
@@ -256,8 +268,8 @@ find other resources and alternatives as well.
 ### Specifications
 
 - No single standard
-- CommonMark and GitHub Flavored Markdown
-- Custom extensions for features
+- CommonMark and GitHub Flavored Markdown are the most popular
+- Custom extensions for additional features on some platforms
 
 ![bg right contain](./images/markdown-specifications.png)
 
