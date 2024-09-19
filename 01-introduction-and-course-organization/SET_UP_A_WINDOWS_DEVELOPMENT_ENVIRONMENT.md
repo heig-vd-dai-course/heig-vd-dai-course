@@ -499,6 +499,7 @@ course you are following. Come back to this document once you are asked to use
 the provided IDE.
 
 - [Install and configure IntelliJ IDEA to access WSL](#install-and-configure-intellij-idea-to-access-wsl)
+- _More IDEs to come soon_
 
 ### Install and configure IntelliJ IDEA to access WSL
 
@@ -520,6 +521,11 @@ distribution.
 
 Install Maven as mentioned in the course material. Install it in your Ubuntu
 distribution.
+
+#### Install IntelliJ Toolbox App
+
+Install IntelliJ IDEA as mentioned in the course material. Install it on your
+Windows.
 
 #### Install IntelliJ IDEA
 
