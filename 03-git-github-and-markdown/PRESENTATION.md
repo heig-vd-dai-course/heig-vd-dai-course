@@ -94,14 +94,16 @@ find other resources and alternatives as well.
 - A version control system (VCS)
 - Created in 2005 by Linus Torvalds
 - Efficiently tracks changes in files
+- Used to manage source code and documentation within a project
 
 ![bg right w:60%](https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg)
 
 ### Architecture
 
-- Git operates with a client-server structure
-- Repositories (server) and clones (local copies)
-- Fully distributed VCS for offline work
+- Git operates with a client-server structure:
+  - Remote repositories (server)
+  - Local repositories (local copies known as clones)
+- Fully distributed VCS for offline work: each clone contains the full history
 
 ![bg right contain](https://wac-cdn.atlassian.com/dam/jcr:9d51f0ee-5946-4be2-886c-ff040ef8c1a1/03.svg?cdnVersion=1210)
 
