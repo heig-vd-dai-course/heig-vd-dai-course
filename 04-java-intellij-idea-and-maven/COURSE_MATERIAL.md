@@ -115,7 +115,7 @@ run Java applications, you will need the JRE.
 ### Java versions and version managers
 
 Java has various **versions**, each with its **own set of features and
-improvements**. The latest Long term support (LTS) version is **Java 17**.
+improvements**. The latest Long term support (LTS) version is **Java 21**.
 
 As projects can use different versions of Java, it is common to use a **version
 manager** such as [SDKMAN!](https://sdkman.io/) or [asdf](https://asdf-vm.com/).
@@ -777,7 +777,6 @@ This will create the Maven wrapper files in your project:
 .
 ├── .mvn
 │   └── wrapper
-│       ├── maven-wrapper.jar
 │       └── maven-wrapper.properties
 ├── mvnw
 └── mvnw.cmd
@@ -786,14 +785,8 @@ This will create the Maven wrapper files in your project:
 The `mvnw` (Unix/Linux/macOS) and `mvnw.cmd` (Windows) files are the Maven
 wrapper scripts. These files are committed to Git.
 
-The `maven-wrapper.jar` file is the Maven wrapper itself. This file is not
-committed to Git.
-
 The `maven-wrapper.properties` file contains the configuration of the Maven
 wrapper, including the version to install. This file is committed to Git.
-
-You will exclude the `maven-wrapper.jar` file from Git by adding the following
-line to the gitignore file in a future section.
 
 Now, instead of using the Maven version you installed locally, you can use the
 Maven wrapper that will download and run Maven for you with a specific version.

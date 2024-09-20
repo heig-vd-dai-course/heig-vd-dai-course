@@ -281,6 +281,12 @@ find other resources and alternatives as well.
 - Maven defines a standard build process for Java projects.
 - The `pom.xml` file contains the configuration of your Maven project.
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->

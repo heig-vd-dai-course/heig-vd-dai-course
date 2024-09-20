@@ -258,7 +258,7 @@ find other resources and alternatives as well.
 
 ### Syntax
 
-- Markup language with special characters (`#`, `*`, `-`, `[]`, `!`, etc.)
+- Markup language with special characters (`#`, `*`, `-`, `[]`, `!` `_`, etc.)
 - Discord and Telegram uses Markdown for formatting
 - Supports headings, text formatting, code blocks, lists, links, images, and
   tables
@@ -279,6 +279,12 @@ find other resources and alternatives as well.
 - Markdown can be used to create documentation
 - Markdown can be used to create slides
 - Markdown can be exported to many formats
+
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
 
 ## Practical content
 
