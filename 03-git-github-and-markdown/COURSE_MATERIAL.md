@@ -831,6 +831,11 @@ Follow the official documentation to generate a SSH key:
 
 #### Add the public SSH key to your GitHub account
 
+> [!IMPORTANT]
+>
+> Follow the Linux instructions on the GitHub documentation! By default, the
+> Windows instructions are shown if you are on Windows.
+
 Follow the official documentation to add the public SSH key to your GitHub
 account:
 <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>
@@ -865,11 +870,16 @@ Signing commits is a good practice to prove that you are the author of a commit.
 
 In this section, you will sign all your commits with SSH.
 
-All information about signing commits can be found in the official
+Based on the official
 documentation:
 <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-signature-verification>.
 
 #### Add a new SSH signing key to your GitHub account
+
+> [!IMPORTANT]
+>
+> Follow the Linux instructions on the GitHub documentation! By default, the
+> Windows instructions are shown if you are on Windows.
 
 Follow the official documentation to add a new SSH signing key to your GitHub
 account:
@@ -882,6 +892,11 @@ account:
 > Just add the SSH key as a **signing key**.
 
 #### Tell Git to sign commits with SSH
+
+> [!IMPORTANT]
+>
+> Follow the Linux instructions on the GitHub documentation! By default, the
+> Windows instructions are shown if you are on Windows.
 
 Follow the official documentation to tell Git about your SSH key:
 <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>.
