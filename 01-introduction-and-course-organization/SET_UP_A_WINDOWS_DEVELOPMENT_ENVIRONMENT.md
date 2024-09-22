@@ -513,7 +513,7 @@ Inspired by the
 guide.
 
 <details>
-<summary>Click to expand the instructions once the course material asks you to.</summary>
+<summary>Click to expand the instructions once a future chapter asks you to.</summary>
 
 #### Install SDKMAN! in WSL
 
@@ -550,14 +550,22 @@ access the WSL distribution through the Windows Firewall.
 > These instructions are meant to be used with IntelliJ IDEA. If you are using
 > another JetBrains IDE, you will need to adapt the instructions accordingly.
 
-Allow IntelliJ IDEA to access the WSL distribution through the Windows Firewall
+Allow the access to WSL through the Windows Firewall by running the following command in a PowerShell terminal as administrator as
+seen in the previous section (be careful between the two commands for Windows 10 and Windows 11):
+
+```powershell
+# For Windows 10
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow
+
+# For Windows 11
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL (Hyper-V firewall))" -Action Allow 
+```
+
+Allow IntelliJ IDEA to access WSL through the Windows Firewall
 by running the following command in a PowerShell terminal as administrator as
 seen in the previous section:
 
 ```powershell
-# Allow IntelliJ IDEA to access the WSL distribution through the Windows Firewall
-New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
-
 # Renew the firewall rules
 Get-NetFirewallProfile -Name Public | Get-NetFirewallRule | where DisplayName -ILike "IntelliJ IDEA*" | Disable-NetFirewallRule
 ```
