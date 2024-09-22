@@ -709,7 +709,7 @@ Follow the official documentation to enable the IntelliJ student license:
 
 > [!NOTE]
 >
-> While not expected, you can use the Community Edition of IntelliJ IDEA if you
+> You can use the Community Edition of IntelliJ IDEA if you
 > prefer. We will not use any feature that is only available in the Ultimate
 > Edition.
 >
@@ -746,6 +746,12 @@ Open IntelliJ IDEA and create a new project. Fill the form as shown in the
 following screenshot:
 
 ![Create the Maven project](images/intellij-create-the-maven-project.png)
+
+> [!IMPORTANT]
+>
+> As mentioned in the course material, always use the LTS version of Java. As you have now multiple versions of Java installed on your machine, always check the version of Java used when creating a new project and use the LTS version.
+>
+> Set the artifact ID and group ID as shown in the screenshot as well.
 
 #### Run the Java project from IntelliJ IDEA
 
