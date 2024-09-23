@@ -449,8 +449,8 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 _Resources are here to help you. They are not mandatory to read._
 
-- [The Basics of GitHub](https://github.com/education/github-starter-course) - A
-  great Git repository to learn the basics of GitHub!
+- [GitHub's Start your journey](https://docs.github.com/en/get-started/start-your-journey) -
+  A great resource to learn the basics of GitHub!
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -831,6 +831,11 @@ Follow the official documentation to generate a SSH key:
 
 #### Add the public SSH key to your GitHub account
 
+> [!IMPORTANT]
+>
+> Follow the Linux instructions on the GitHub documentation! By default, the
+> Windows instructions are shown if you are on Windows.
+
 Follow the official documentation to add the public SSH key to your GitHub
 account:
 <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>
@@ -865,11 +870,15 @@ Signing commits is a good practice to prove that you are the author of a commit.
 
 In this section, you will sign all your commits with SSH.
 
-All information about signing commits can be found in the official
-documentation:
+Based on the official documentation:
 <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-signature-verification>.
 
 #### Add a new SSH signing key to your GitHub account
+
+> [!IMPORTANT]
+>
+> Follow the Linux instructions on the GitHub documentation! By default, the
+> Windows instructions are shown if you are on Windows.
 
 Follow the official documentation to add a new SSH signing key to your GitHub
 account:
@@ -882,6 +891,11 @@ account:
 > Just add the SSH key as a **signing key**.
 
 #### Tell Git to sign commits with SSH
+
+> [!IMPORTANT]
+>
+> Follow the Linux instructions on the GitHub documentation! By default, the
+> Windows instructions are shown if you are on Windows.
 
 Follow the official documentation to tell Git about your SSH key:
 <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>.
@@ -1374,7 +1388,7 @@ created:
 
 ```sh
 # Checkout to the branch you created earlier
-git checkout add-myself-github-username-to-the-list-of-students
+git checkout add-myself-to-the-list-of-students
 ```
 
 > [!TIP]
@@ -1385,15 +1399,15 @@ git checkout add-myself-github-username-to-the-list-of-students
 > argument.
 
 Change the title of the `.profile/README.md` file to
-`# This change is made on the branch 'add-myself-github-username-to-the-list-of-students'`
-and commit the changes:
+`# This change is made on the branch 'add-myself-to-the-list-of-students'` and
+commit the changes:
 
 ```sh
 # Add the staged files to the staging area
 git add profile/README.md
 
 # Commit the changes
-git commit -m "This change was done on branch 'add-myself-github-username-to-the-list-of-students'"
+git commit -m "This change was done on branch 'add-myself-to-the-list-of-students'"
 ```
 
 Merge the branch you just created:
@@ -1408,7 +1422,7 @@ git merge this-branch-will-create-a-conflict
 > `git merge` will merge the changes from the branch you are merging into the
 > current branch. In this case, you are merging the changes from the
 > `change-title-of-readme-file` branch into the
-> `add-myself-github-username-to-the-list-of-students`.
+> `add-myself-to-the-list-of-students`.
 
 You should see the following error:
 
@@ -1463,7 +1477,7 @@ git log
 You should see the commits you made:
 
 ```text
-commit 27fabbdb3b808bf3b32d25e72a388dc60c5bca24 (HEAD -> add-myself-github-username-to-the-list-of-students)
+commit 27fabbdb3b808bf3b32d25e72a388dc60c5bca24 (HEAD -> add-myself-to-the-list-of-students)
 Merge: 9061c5f eca5084
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Sep 12 16:26:38 2023 +0200
@@ -1474,7 +1488,7 @@ commit 9061c5f37e41ea3664e1be4541af66b50444c64b
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Sep 12 16:23:57 2023 +0200
 
-    This change was done on branch 'add-myself-github-username-to-the-list-of-students'
+    This change was done on branch 'add-myself-to-the-list-of-students'
 
 commit eca508463561e2f426eabec56a0208635c0b938c (this-branch-will-create-a-conflict)
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
@@ -1486,7 +1500,7 @@ commit 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb (origin/main, main)
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Mon Sep 4 14:39:51 2023 +0200
 
-    Add myself to the list of teaching staff
+    Add myself to the list of students
 ```
 
 The commit hashes are unique identifiers for each commit. They will, of course,
@@ -1542,7 +1556,7 @@ Checkout to the branch you created earlier:
 
 ```sh
 # Checkout to the branch you created earlier
-git checkout add-myself-github-username-to-the-list-of-students
+git checkout add-myself-to-the-list-of-students
 ```
 
 Merge the local `main` branch into the branch you created earlier:
@@ -1611,18 +1625,30 @@ want to discuss something with the maintainers.
 Once you are ready, mark the pull request as ready.
 
 Add a comment with the usernames of the
-[`@teaching-staff`](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff)
-team to let them know that your pull request is ready for review. Add a link to
-the issue as well if you did not link it in the description.
+[Teaching staff](https://github.com/heig-vd-dai-course#teaching-staff) team to
+let them know that your pull request is ready for review. Add a link to the
+issue as well if you did not link it in the description.
 
 #### Wait for review
 
 The maintainers will review your pull request and will ask for changes if
 needed.
 
+> [!IMPORTANT]
+>
+> The review can take a few day. Please be patient. Come back to this section
+> once the review is done. If another chapter is available, you can start it.
+
 They will then add you as a member of the GitHub organization and will add you
 to the `[@students](https://github.com/orgs/heig-vd-dai-course/teams/students)`
 team.
+
+> [!NOTE]
+>
+> You might not be able to see the list of students mentioned in the previous
+> section. You will be able to see it once you have joined the GitHub
+> organization as well as all other teams:
+> <https://github.com/orgs/heig-vd-dai-course/teams>.
 
 <details>
 <summary>Checklist for the maintainers</summary>
@@ -1634,6 +1660,7 @@ Check the following elements:
 - [x] The GitHub profile is mentioned next to the name of the student
 - [x] The issue is linked to the pull request, if not, link it yourself as the
       student do not have the rights to do so
+- [x] Add the student to the GitHub organization
 
 If they are conflicts because the students are editing the same lines, fix the
 conflict yourself so the students can focus on the content. You can use the
@@ -1742,7 +1769,7 @@ You can optionally delete the branch you created earlier:
 
 ```sh
 # Delete the branch
-git branch -d add-myself-github-username-to-the-list-of-students
+git branch -d add-myself-to-the-list-of-students
 ```
 
 This will delete the branch locally.

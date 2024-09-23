@@ -61,8 +61,8 @@ This guide is inspired from the following sources:
 
 If you have any issues with the below guide, check the
 [Troubleshooting](#troubleshooting) section. Feel free to ask for help if you
-are stuck but but please, try the [Troubleshooting](#troubleshooting) section
-before coming to us.
+are stuck but please, try the [Troubleshooting](#troubleshooting) section before
+coming to us.
 
 ## Update Windows
 
@@ -512,6 +512,14 @@ Inspired by the
 [How to use WSL development environment in JetBrains products by JetBrains](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
 guide.
 
+<details>
+<summary>Click to expand the instructions once a future chapter asks you to.</summary>
+
+#### Install SDKMAN! in WSL
+
+Install SDKMAN! as mentioned in the course material. Install it in your Ubuntu
+distribution.
+
 #### Install Java in WSL
 
 Install Java as mentioned in the course material. Install it in your Ubuntu
@@ -542,14 +550,23 @@ access the WSL distribution through the Windows Firewall.
 > These instructions are meant to be used with IntelliJ IDEA. If you are using
 > another JetBrains IDE, you will need to adapt the instructions accordingly.
 
-Allow IntelliJ IDEA to access the WSL distribution through the Windows Firewall
-by running the following command in a PowerShell terminal as administrator as
-seen in the previous section:
+Allow the access to WSL through the Windows Firewall by running the following
+command in a PowerShell terminal as administrator as seen in the previous
+section (be careful between the two commands for Windows 10 and Windows 11):
 
 ```powershell
-# Allow IntelliJ IDEA to access the WSL distribution through the Windows Firewall
-New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow
+# For Windows 10
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow
 
+# For Windows 11
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL (Hyper-V firewall))" -Action Allow
+```
+
+Allow IntelliJ IDEA to access WSL through the Windows Firewall by running the
+following command in a PowerShell terminal as administrator as seen in the
+previous section:
+
+```powershell
 # Renew the firewall rules
 Get-NetFirewallProfile -Name Public | Get-NetFirewallRule | where DisplayName -ILike "IntelliJ IDEA*" | Disable-NetFirewallRule
 ```
@@ -599,6 +616,8 @@ default by following these steps:
 3. Set the **Shell path** to the WSL distribution with
    `wsl.exe --distribution Ubuntu` as shown in the following screenshot:
    ![Configure IntelliJ IDEA terminal to use WSL](./images/intellij-idea-terminal-settings.png)
+
+</details>
 
 ## Tips and tricks
 
