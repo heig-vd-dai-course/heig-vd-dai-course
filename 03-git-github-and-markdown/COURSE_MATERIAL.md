@@ -870,8 +870,7 @@ Signing commits is a good practice to prove that you are the author of a commit.
 
 In this section, you will sign all your commits with SSH.
 
-Based on the official
-documentation:
+Based on the official documentation:
 <https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-signature-verification>.
 
 #### Add a new SSH signing key to your GitHub account

@@ -550,20 +550,21 @@ access the WSL distribution through the Windows Firewall.
 > These instructions are meant to be used with IntelliJ IDEA. If you are using
 > another JetBrains IDE, you will need to adapt the instructions accordingly.
 
-Allow the access to WSL through the Windows Firewall by running the following command in a PowerShell terminal as administrator as
-seen in the previous section (be careful between the two commands for Windows 10 and Windows 11):
+Allow the access to WSL through the Windows Firewall by running the following
+command in a PowerShell terminal as administrator as seen in the previous
+section (be careful between the two commands for Windows 10 and Windows 11):
 
 ```powershell
 # For Windows 10
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow
 
 # For Windows 11
-New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL (Hyper-V firewall))" -Action Allow 
+New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL (Hyper-V firewall))" -Action Allow
 ```
 
-Allow IntelliJ IDEA to access WSL through the Windows Firewall
-by running the following command in a PowerShell terminal as administrator as
-seen in the previous section:
+Allow IntelliJ IDEA to access WSL through the Windows Firewall by running the
+following command in a PowerShell terminal as administrator as seen in the
+previous section:
 
 ```powershell
 # Renew the firewall rules

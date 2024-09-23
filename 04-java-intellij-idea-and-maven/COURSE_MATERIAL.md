@@ -709,9 +709,8 @@ Follow the official documentation to enable the IntelliJ student license:
 
 > [!NOTE]
 >
-> You can use the Community Edition of IntelliJ IDEA if you
-> prefer. We will not use any feature that is only available in the Ultimate
-> Edition.
+> You can use the Community Edition of IntelliJ IDEA if you prefer. We will not
+> use any feature that is only available in the Ultimate Edition.
 >
 > You are free to use another IDE if you prefer but the official support for
 > this course is IntelliJ IDEA (Community or Ultimate Edition).
@@ -749,7 +748,9 @@ following screenshot:
 
 > [!IMPORTANT]
 >
-> As mentioned in the course material, always use the LTS version of Java. As you have now multiple versions of Java installed on your machine, always check the version of Java used when creating a new project and use the LTS version.
+> As mentioned in the course material, always use the LTS version of Java. As
+> you have now multiple versions of Java installed on your machine, always check
+> the version of Java used when creating a new project and use the LTS version.
 >
 > Set the artifact ID and group ID as shown in the screenshot as well.
 
