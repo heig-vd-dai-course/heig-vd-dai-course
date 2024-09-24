@@ -79,7 +79,7 @@ _paginate: false
 - Know the different types of data (binary vs. text)
 - Understand the abstract notion of sources, streams ang sink
 - Use the different IO types for different use-cases
-- Use the Java IO API
+- Use the Java IO API to read and write files
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -92,10 +92,11 @@ find other resources and alternatives as well.
 
 ### Check and run the code examples
 
-- Check the code examples
+- Check the
+  [code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
 - Run the code examples
-- Helps to understand the concepts
-- Modify/play with the code examples
+- Help to understand the concepts
+- Play with the code examples
 
 ![bg right w:80%](./images/code-examples-github-repository.png)
 
@@ -580,6 +581,12 @@ find other resources and alternatives as well.
 - Not specifying the end of line characters
 - Do not use `PrintWriter` - it swallows exceptions
 - Do not use `System.lineSeparator()` - it is platform dependent
+
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
 
 ## Practical content
 

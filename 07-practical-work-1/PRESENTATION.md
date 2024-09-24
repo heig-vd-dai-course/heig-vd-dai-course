@@ -241,16 +241,41 @@ More details for this section in the [course material][course-material].
 The KISS principle summarizes the Unix philosophy in a simple sentence: _Keep it
 simple, silly!_
 
-- Don't try to do too much
+- Do not try to do too much
 - Focus on the essentials
 - Do it well
 
 Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
 
 <small>Check the movie scene here:
-[YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0).</small>
+[YouTube](https://www.youtube.com/watch?v=dEP7aEyTOf0)</small>
 
 ![bg right:40%](./images/asterix-et-obelix-mission-cleopatre-porte-au-plafond.png)
+
+### External libraries
+
+- You can use any external librairies you want in your Maven project
+- You must explain why and how you use it in your README
+- **You cannot use some external libraries to open/close the files**
+
+![bg right w:80%](https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg)
+
+### Add members to the repository
+
+- Add your team members to the repository as collaborators
+- This allows them to push directly to the repository
+
+![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
+
+### Protect your main branch
+
+- GitHub allows to protect the main branch:
+  - Force pull requests
+  - Force code review
+  - Force signed commits
+- This is a good practice to guarantee quality
+
+![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
 
 ## Submission
 
@@ -260,15 +285,35 @@ More details for this section in the [course material][course-material].
 
 ### Submission
 
-**Your work is due on the day before the presentations at 23h59**. Check the
-[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
-date.
+Your work is due as follow:
 
-- Update the GitHub Discussion with the link to your repository to include:
-  - A link to your GitHub repository
-  - The commit hash of the version you want to submit
+- DAI-TIC-C (Friday mornings): **17.10.2024 23:59**
+- DAI-TIC-B (Monday mornings): **20.10.2024 23:59**
 
-If you do not submit your work on time and/or correctly, you will be penalized.
+Update the GitHub Discussion with the link to your repository as mentioned in
+the course material.
+
+**If you do not submit your work on time and/or correctly, you will be penalized
+(-1 point on the final grade for each day of delay).**
+
+## Presentations
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Presentations
+
+The practical work presentations will take place in **room B51a** on:
+
+- DAI-TIC-C (Friday mornings): **18.10.2024 8:30-10:25**
+- DAI-TIC-B (Monday mornings): **28.10.2024 8:30-10:25**
+
+We only have **6 minutes per group**. You decide what you want to show us and
+how you want to present it. **Come 5 minutes before your time slot** with your
+computer. You will have access to a beamer.
+
+**Please state your group on GitHub Discussions before next week.**
 
 ## Grades and feedback
 
@@ -282,59 +327,11 @@ a general comment on your work and the final grade.
 
 If you have any questions about the evaluation, you can contact us!
 
-## Presentations
+## Questions
 
-The practical work presentations will take place on:
+<!-- _class: lead -->
 
-- **TODO XX.YY.202Z** in **room TODO** (class A)
-- **TODO 11.10.2023** in **room TODO** (class B)
-
-We only have **5 minutes per group**. You decide what you want to show us and
-how you want to present it. **Come 5 minutes before your time slot** with your
-computer.
-
-**Please state your group on GitHub Discussions before next week.**
-
-<!--
-The order of presentation is random and is stated in the next slides.
-
----
-
-| #   | Group                                   | Passage |
-| --- | --------------------------------------- | ------- |
-| 1   | Alan Sottile and Calvin Graf            | 13:40   |
-| 2   | Lionel Pollien and Arthur Menétrey      | 13:46   |
-| 3   | Thomas Vuilleumier and Sebastian Diaz   | 13:52   |
-| 4   | Olin Bourquin and Kevin Farine          | 13:58   |
-| 5   | Guillaume Trüeb and Gwendal Piemontesi  | 14:04   |
-| 6   | Esteban Lopez                           | 14:10   |
-| 7   | Loïc Herman                             | 14:16   |
-| 8   | Alexandre Philibert and Valentin Ricard | 14:22   |
-
----
-
-| #   | Group                           | Passage |
-| --- | ------------------------------- | ------- |
-| 9   | Rémy Bleuer                     | 14:28   |
-| 10  | Theodros Mulugeta               | 14:34   |
-|     | Break                           |         |
-| 11  | Sarah Jallon                    | 17:00   |
-| 12  | Alexandre Iorio                 | 17:06   |
-| 13  | Colin Jaques                    | 17:12   |
-| 14  | Romain Humair and Lucas Lattion | 17:18   |
-| 15  | Slimani Walid                   | 17:24   |
-
----
-
-| #   | Group                                 | Passage |
-| --- | ------------------------------------- | ------- |
-| 16  | Aurélien Richard                      | 17:30   |
-| 17  | Massimo Stefani and Jonas Troeltsch   | 17:36   |
-| 18  | Ahmad Jano                            | 17:42   |
-| 19  | Simon Guggisberg and Jeremiah Steiner | 17:48   |
-| 20  | Sergey Komarov                        | 17:54   |
-| 21  | Pirakas Anthon                        | 18:00   |
--->
+Do you have any questions?
 
 ## Find the practical work
 

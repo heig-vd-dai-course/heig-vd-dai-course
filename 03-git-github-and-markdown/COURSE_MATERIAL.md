@@ -868,10 +868,8 @@ Let's switch to a bit of theory now!
 
 Signing commits is a good practice to prove that you are the author of a commit.
 
-In this section, you will sign all your commits with SSH.
-
-Based on the official documentation:
-<https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-signature-verification>.
+In this section, you will sign all your commits with SSH (source:
+<https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#ssh-commit-signature-verification>)
 
 #### Add a new SSH signing key to your GitHub account
 
@@ -1571,11 +1569,12 @@ More information in the official documentation:
 
 #### Push your changes
 
-Push your changes to the repository:
+Push your changes to the repository. This will create a new branch in your
+remote repository.
 
 ```sh
 # Push the changes to the repository
-git push
+git push --set-upstream origin add-myself-to-the-list-of-students
 ```
 
 #### Create a pull request

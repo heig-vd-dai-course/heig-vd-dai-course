@@ -33,7 +33,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Resources](#resources)
 - [IntelliJ IDEA](#intellij-idea)
   - [Community Edition and Ultimate Edition](#community-edition-and-ultimate-edition)
-  - [IntelliJ IDEA Toolbox App](#intellij-idea-toolbox-app)
+  - [JetBrains Toolbox App](#jetbrains-toolbox-app)
   - [Configuration files and Git](#configuration-files-and-git)
   - [Summary](#summary-1)
   - [Alternatives](#alternatives-1)
@@ -225,9 +225,9 @@ page.
 IntelliJ IDEA is available for Windows, macOS and Linux. Feel free to use
 another IDE if you prefer, but we have great experience with IntelliJ IDEA.
 
-### IntelliJ IDEA Toolbox App
+### JetBrains Toolbox App
 
-The **IntelliJ IDEA Toolbox App** is a desktop application that allows you to
+The **JetBrains Toolbox App** is a desktop application that allows you to
 **install and manage multiple JetBrains IDEs**.
 
 It is a convenient way to install and update IntelliJ IDEA and other JetBrains
