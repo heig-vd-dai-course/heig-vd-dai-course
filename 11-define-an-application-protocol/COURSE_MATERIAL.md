@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/95
-[illustration]:
-  https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Define an application protocol - Course material
 
@@ -43,8 +42,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Section 4 - Examples](#section-4---examples-1)
 - [Practical content](#practical-content)
   - [Define the application protocol for the _"Guess the number"_ game](#define-the-application-protocol-for-the-guess-the-number-game)
-  - [Define the application protocol for the "Temperature monitoring" application](#define-the-application-protocol-for-the-temperature-monitoring-application)
-  - [The context](#the-context-1)
+  - [Define the application protocol for the _"Temperature monitoring"_ application](#define-the-application-protocol-for-the-temperature-monitoring-application)
   - [Share your application protocols](#share-your-application-protocols)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -307,11 +305,10 @@ This section defines the purpose of the protocol:
 
 This section defines the transport protocol used by the application protocol:
 
-- What protocol(s) is/are involved?
-- On which port(s)?
+- What protocol(s) is/are involved? On which port(s)?
 - How are messages/actions encoded?
 - How are messages/actions delimited?
-- How are messages/actions treated?
+- How are messages/actions treated (text or binary)?
 - Who initiates/closes the communication?
 - What happens on an unknown message/action/exception?
 
@@ -346,8 +343,9 @@ the reader to understand the protocol using sequence or state diagrams.
 
 You are working for a startup that wants to create a new communication app.
 
-The app is simple: it allows users to send text messages to each other. The
-server is in charge of sending the messages to the recipients.
+The app is simple: it allows users (with unique usernames) to send small text
+messages (maximum 100 characters) to each other. The server is in charge of
+sending the messages to the recipients.
 
 You are asked to define the application protocol that will be used by the
 clients and the server.
@@ -372,25 +370,31 @@ The SMS protocol is a text message transport protocol. It must use the TCP
 (Transmission Control Protocol) to ensure the reliability of data transmission
 and must also use port 1234.
 
-The initial connection must be established by the client. The server can refuse
-the connection if the maximum number of connections is reached. The maximum
-number of connections per server is 5. Beyond this number, the server refuses
-the connection.
+Every message must be encoded in UTF-8 and delimited by a newline character
+(`\n`). The messages are treated as text messages.
+
+The initial connection must be established by the client.
 
 Once the connection is established, the client can send a text message to the
 server indicating the message recipient.
 
 The server must verify that the recipient is connected and that the message does
-not exceed 100 characters. If these conditions are met, the server sends the
-message to the recipient. Otherwise, the server sends an error message to the
-client who sent the message.
+not exceed 100 characters.
+
+If these conditions are met, the server sends the message to the recipient.
+
+Otherwise, the server sends an error message to the client who sent the message.
+
+On an unknown message, the server must send an error message to the client.
+
+Once a client has disconnected, the server must close the connection.
 
 ### Section 3 - Messages
 
-The messages sent by the client and the server are text messages. The messages
-sent by the client are in the following form:
+#### Connection
 
-#### Connexion
+The client sends a connection message to the server indicating the client's
+username.
 
 ##### Request
 
@@ -404,14 +408,14 @@ CONNECT <name>
 
 - `OK`: the connection has been successfully established
 - `ERROR <code>`: an error occurred during the connection. The error code is an
-  integer between 1 and 2 inclusive. The error codes are as follows:
-  - 1: the maximum number of connections is reached
-  - 2: the client's name is already in use
+  integer between 1 and 1 inclusive. The error codes are as follows:
+  - 1: the client's name is already in use
 
 #### Sending a message
 
-Le client envoie un message au serveur en indiquant le destinataire du message.
-Le serveur est alors en charge de transmettre le message au destinataire.
+The client sends a message to the server indicating the recipient of the
+message. The server is then responsible for sending the message to the
+recipient.
 
 ##### Request
 
@@ -447,6 +451,9 @@ None.
 
 #### List connected clients
 
+The client sends a message to the server to request the list of connected
+clients.
+
 ##### Request
 
 ```text
@@ -459,6 +466,8 @@ LIST
   The clients are separated by a space.
 
 #### Disconnection
+
+The client sends a message to the server to disconnect.
 
 ##### Request
 
@@ -476,21 +485,17 @@ None.
 
 ![Functional communication between a client and a server](./images/example-1.png)
 
-#### Communication between a client and a server with the maximum number of connections reached
-
-![Communication between a client and a server with the maximum number of connections reached](./images/example-2.png)
-
 #### Communication between a client and a server with a duplicate client name
 
-![Communication between a client and a server with a duplicate client name](./images/example-3.png)
+![Communication between a client and a server with a duplicate client name](./images/example-2.png)
 
 #### Communication between a client and a server with an unconnected recipient
 
-![Communication between a client and a server with an unconnected recipient](./images/example-4.png)
+![Communication between a client and a server with an unconnected recipient](./images/example-3.png)
 
 #### Communication between a client and a server with a too long message
 
-![Communication between a client and a server with a too long message](./images/example-5.png)
+![Communication between a client and a server with a too long message](./images/example-4.png)
 
 ## Practical content
 
@@ -535,12 +540,12 @@ any other tools you want to create your diagrams.
 
 This protocol will be used in a future chapter to implement the game.
 
-### Define the application protocol for the "Temperature monitoring" application
+### Define the application protocol for the _"Temperature monitoring"_ application
 
 In this section, you will define your own application protocol based on a given
 context.
 
-### The context
+#### The context
 
 You are working for an energy company that is interested in monitoring the
 temperature of its buildings. The company wants to create a new application
@@ -659,7 +664,7 @@ In the next chapter, you will learn the following topics:
 - Java TCP programming
   - How to create a TCP server
   - How to create a TCP client
-  - Implement the "Guess the number" game using TCP
+  - Implement the _"Guess the number"_ game using TCP
 
 ## Additional resources
 

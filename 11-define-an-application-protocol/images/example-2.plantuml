@@ -1,14 +1,6 @@
 @startuml
 C1->S: CONNECT alice
 S->C1: OK
-C2->S: CONNECT bob
-S->C2: OK
-C3->S: CONNECT charlie
-S->C3: OK
-C4->S: CONNECT dave
-S->C4: OK
-C5->S: CONNECT eve
-S->C5: OK
-C6->S: CONNECT frank
-S->C6: ERROR 1
+C2->S: CONNECT alice
+S->C2: ERROR 2
 @enduml

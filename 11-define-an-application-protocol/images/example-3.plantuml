@@ -1,6 +1,6 @@
 @startuml
 C1->S: CONNECT alice
 S->C1: OK
-C2->S: CONNECT alice
-S->C2: ERROR 2
+C1->S: SEND bob Hello Bob!
+S->C1: ERROR 1
 @enduml

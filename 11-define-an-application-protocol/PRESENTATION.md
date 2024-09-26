@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions
-[illustration]:
-  https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-define-an-application-protocol/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -76,53 +75,102 @@ _paginate: false
 
 ## Objectives
 
+- Refresh on networking
 - Learn where to find information about application protocols
 - Understand application protocol
 - Define application protocols
 - How to use an application protocol
+- **While quite short, one of the most important chapters of the course!**
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-## What is an application protocol?
+## A quick reminder about networking
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### What is an application protocol?
+### The Internet Protocol (IP)
+
+- Each computer has a unique IP address
+- IPv4 addresses are limited; NAT routers share IP addresses
+- IPv6 fixes this issue
+- IP addresses are used to route packets
+
+![bg right contain](./images/the-internet-protocol-ip.png)
+
+### The Domain Name System (DNS)
+
+- DNS maps domain names to IP addresses
+- Example: `heig-vd.ch` → `193.134.223.20`
+- dig and nslookup are useful tools to query DNS servers
+
+![bg right contain](./images/the-domain-name-system-dns.png)
+
+### Common DNS records
+
+Records map a domain name to an IP address.
+
+- `NS`: Name Server
+- `CNAME`: Alias
+- `A`: IPv4 address
+- `AAAA`: IPv6 address
+
+![bg right contain](./images/common-dns-records.png)
+
+### Reserved ports
+
+- Ports identify processes or services
+- Analogy: an IP address is like a street address, a port is like an apartment
+  number
+- Ports are 16-bit unsigned numbers, maximum 65535
+- Reserved ports: 0-1023
+- Other ports: wild west
+
+![bg right contain](./images/reserved-ports.png)
+
+## What is an application protocol
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### What is an application protocol
 
 - Defines application communication
-- RFCs on IETF
-- Relies on transport and network protocols
-- Multiple revisions exist
+- RFCs on the IETF website:
+  - Relies on transport and network protocols
+  - Multiple revisions exist
 
 ![bg right contain](./images/what-is-an-application-protocol.png)
 
-## How is structured an application protocol?
+## How is structured an application protocol
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### How is structured an application protocol?
+### How is structured an application protocol
 
-- Defined by rules
-- Messages format
-- Order of message exchange using sequence diagram(s)
-- Edge and error cases
+- Defined by a set of rules to follow in a RFC
+- Rules define:
+  - Transport protocol
+  - Messages order
+  - Examples and errors
 
 ![bg right contain](./images/how-is-structured-an-application-protocol.png)
 
-## How to define an application protocol?
+## How to define an application protocol
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### How to define an application protocol?
+### How to define an application protocol
 
 - Lot of work and thinking
 - A protocol is never perfect
@@ -130,85 +178,65 @@ find other resources and alternatives as well.
 
 ![bg right contain](./images/how-to-define-an-application-protocol.png)
 
+---
+
+- Simplified structure for this course:
+  - Section 1 - Overview
+  - Section 2 - Transport protocol
+  - Section 3 - Messages
+  - Section 4 - Examples
+
+![bg right contain](./images/how-to-define-an-application-protocol.png)
+
 ### Section 1 - Overview
 
-This section defines the purpose of the protocol. What is the goal of the
-protocol? What is the problem that it tries to solve?
+This section defines the purpose of the protocol:
 
-> The DAI protocol is meant to transfer files over the network.
->
-> The DAI protocol is a client-server protocol.
->
-> The client connects to a server and request a file. The server sends the file
-> or an error message if the file does not exist.
+- What is the goal of the protocol?
+- What is the problem that it tries to solve?
+- What the application protocol is used for?
 
 ### Section 2 - Transport protocol
 
-This section defines the transport protocol, the port that will be used and who
-initiates and who closes the connection.
+This section defines the transport protocol used by the application protocol:
 
-> The DAI protocol uses the TCP protocol. The server runs on port 55555.
->
-> The client has to know the IP address of the server to connect to. It
-> establishes the connection with the server.
->
-> The server closes the connection when the transfer is done or if an error
-> occurs (e.g. the file was not found).
+- What protocol(s) is/are involved? On which port(s)?
+- How are messages/actions encoded?
+- How are messages/actions delimited?
+- How are messages/actions treated (text or binary)?
+- Who initiates/closes the communication?
+- What happens on an unknown message/action/exception?
 
 ### Section 3 - Messages
 
 This section defines the messages that can be exchanged between the client and
 the server.
 
-> The client can send the following messages:
->
-> - `GET <file>`: used to request a file from the server
->   - `<file>`: the name of the file to request - The filename is an absolute
->     path to the file (`/data/file.txt`)
-> - `QUIT`: used to close the connection with the server
+- What are the messages/actions?
+- What are the parameters?
+- What are the return values?
+- What are the exceptions?
 
----
-
-> The server can send the following messages:
->
-> - `OK`: used to notify the client that the connection was successful and the
->   server is ready to receive commands
-> - `FILE <file>`: used to send the content of the requested file - the
->   connection is closed after this message
-> - `ERROR <code>`: used to notify the client that an error occurred - the
->   connection is closed after this message
->   - `400`: the request was malformed
->   - `404`: the file was not found
-
----
-
-> All messages are UTF-8 encoded and end with a new line character (`\n`).
->
-> If the file exists, the server sends the file content as binary data.
+Try to describe these for a given context, not from each point of view. It makes
+it way easier to understand and to implement.
 
 ### Section 4 - Examples
 
 This section defines examples of messages that can be exchanged between the
-client and the server and the exchange order.
+client and the server and the exchange order:
 
-![bg right:40% h:90%](./images/how-to-define-an-application-protocol-section-4-examples.png)
+- What are the examples of messages/actions?
+- What are the examples of exceptions?
 
-## Reserved ports
+It is important to define these examples to illustrate the protocol and to help
+the reader to understand the protocol using sequence or state diagrams.
+
+## Example - The SMS protocol
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
-
-### Reserved ports
-
-- Ports identify processes or services
-- Ports are 16-bit unsigned numbers
-- Well-known ports: 0-1023
-- Registered ports: 1024-49151
-- Dynamic ports: 49152-65535
-
-![bg right contain](./images/reserved-ports.png)
 
 ## Questions
 
@@ -222,11 +250,11 @@ Do you have any questions?
 
 ### What will you do?
 
-- Explore existing application protocols
-- Define your own application protocol based a use case
+- Define two custom application protocols:
+  - _"Guess the number"_ game
+  - _"Temperature monitoring"_ application
 
-Understanding how an application protocol is defined will help you to understand
-how to use them in future chapters!
+These application protocols will be used in the next chapters to implement them!
 
 ![bg right:40%](https://images.unsplash.com/photo-1535905557558-afc4877a26fc?fit=crop&h=720)
 
@@ -258,7 +286,7 @@ In the next chapter, you will learn the following topics:
 - Java TCP programming
   - How to create a TCP server
   - How to create a TCP client
-  - Implement the "Guess the number" game using TCP
+  - Implement the _"Guess the number"_ game using TCP
 
 ![bg right:40%](https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720)
 
