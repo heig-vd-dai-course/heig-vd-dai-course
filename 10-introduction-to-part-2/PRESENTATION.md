@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: 'HEIG-VD DAI Course - Introduction to part 2: Network programming with TCP'
-description: 'Introduction to part 2: Network programming with TCP for the DAI course at HEIG-VD, Switzerland'
+title: 'HEIG-VD DAI Course - Introduction to part 2: Network programming with TCP and UDP'
+description: 'Introduction to part 2: Network programming with TCP and UDP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-introduction-to-part-2/
 footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
@@ -52,7 +52,7 @@ headingDivider: 4
 [illustration]:
   https://images.unsplash.com/photo-1545987796-200677ee1011?fit=crop&h=720
 
-# Introduction to part 2: Network programming with TCP
+# Introduction to part 2: Network programming with TCP and UDP
 
 <!--
 _class: lead
@@ -90,11 +90,11 @@ The answer was:
 >
 > The whole process uses **input/output** (IO) operations!
 
-## Do you know how does a web server work?
+## Do you know how does a web server work? How do you think it works?
 
 <!-- _class: lead -->
 
-## How does a web server work?
+## How does a web server work
 
 1. A process is started on the server
 2. This process opens a socket on a specific port
@@ -109,19 +109,20 @@ protocol**, exchanging data the same way as **IOs** operations.
 ## What will you learn?
 
 - What is an **application protocol**
-- Try out existing applications and protocols with the help of **Docker and
-  Docker Compose**
-- How to create a **server** that listens for connections and a **client** that
-  connects to a server to **exchange data** between a server and a client
-- Make use of the **TCP** protocol
+- What is the **TCP** protocol
+- What is the **UDP** protocol
+- Learn the differences between **TCP** and **UDP**
+- Manage multiple connections with **Java network concurrency**
+- Learn about the **electronic messaging protocols**
 
 ![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
 ## What will you accomplish?
 
-- Define your own application protocol or use an existing one
-- Create a network application using the **TCP** protocol
-- As always, display your work on GitHub
+- Define and implement a game called _"Guess the number"_ with **TCP**
+- Define and implement an application called _"Temperature monitoring"_ with
+  **UDP**
+- Define, implement and share your own a network application
 
 ![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 
