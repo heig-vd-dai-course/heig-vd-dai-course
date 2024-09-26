@@ -36,7 +36,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Section 2 - Transport protocol](#section-2---transport-protocol)
   - [Section 3 - Messages](#section-3---messages)
   - [Section 4 - Examples](#section-4---examples)
-  - [Example - The SMS protocol](#example---the-sms-protocol)
+- [Example - The SMS protocol](#example---the-sms-protocol)
+  - [Section 1 - Overview](#section-1---overview-1)
+  - [Section 2 - Transport protocol](#section-2---transport-protocol-1)
+  - [Section 3 - Messages](#section-3---messages-1)
+  - [Section 4 - Examples](#section-4---examples-1)
 - [Practical content](#practical-content)
   - [Define the application protocol for the _"Guess the number"_ game](#define-the-application-protocol-for-the-guess-the-number-game)
   - [Define the application protocol for the "Temperature monitoring" application](#define-the-application-protocol-for-the-temperature-monitoring-application)
@@ -338,7 +342,7 @@ client and the server and the exchange order:
 It is important to define these examples to illustrate the protocol and to help
 the reader to understand the protocol using sequence or state diagrams.
 
-### Example - The SMS protocol
+## Example - The SMS protocol
 
 You are working for a startup that wants to create a new communication app.
 
@@ -353,14 +357,16 @@ Here is **one of the possible results**.
 > [!NOTE]
 >
 > Each person can have a different way to define the protocol. This is one of
-> the possible ways to define the protocol.
+> the possible ways to define the protocol. Your might be different and that is
+> totally fine. The most important is to define the protocol in a clear and
+> explicit way.
 
-#### Section 1 - Overview
+### Section 1 - Overview
 
 The SMS (Short Message Service) protocol is a communication protocol that allows
 the sending of text messages (generally short) between users.
 
-#### Section 2 - Transport protocol
+### Section 2 - Transport protocol
 
 The SMS protocol is a text message transport protocol. It must use the TCP
 (Transmission Control Protocol) to ensure the reliability of data transmission
@@ -379,14 +385,14 @@ not exceed 100 characters. If these conditions are met, the server sends the
 message to the recipient. Otherwise, the server sends an error message to the
 client who sent the message.
 
-#### Section 3 - Messages
+### Section 3 - Messages
 
 The messages sent by the client and the server are text messages. The messages
 sent by the client are in the following form:
 
-##### Connexion
+#### Connexion
 
-###### Request
+##### Request
 
 ```text
 CONNECT <name>
@@ -394,7 +400,7 @@ CONNECT <name>
 
 - `name`: the name of the client
 
-###### Response
+##### Response
 
 - `OK`: the connection has been successfully established
 - `ERROR <code>`: an error occurred during the connection. The error code is an
@@ -402,18 +408,18 @@ CONNECT <name>
   - 1: the maximum number of connections is reached
   - 2: the client's name is already in use
 
-##### Sending a message
+#### Sending a message
 
 Le client envoie un message au serveur en indiquant le destinataire du message.
 Le serveur est alors en charge de transmettre le message au destinataire.
 
-###### Request
+##### Request
 
 ```text
 SEND <recipent> <message>
 ```
 
-###### Response
+##### Response
 
 - `OK`: the message has been successfully sent
 - `ERROR <code>`: an error occurred while sending the message. The error code is
@@ -421,12 +427,12 @@ SEND <recipent> <message>
   - 1: the recipient is not connected
   - 2: the message exceeds 100 characters
 
-##### Receiving a message
+#### Receiving a message
 
 The server sends a message to the recipient indicating the sender of the
 message. The client is then responsible for displaying the received message.
 
-###### Request
+##### Request
 
 ```text
 RECEIVE <message> <sender>
@@ -435,54 +441,54 @@ RECEIVE <message> <sender>
 - `message`: the received message
 - `sender`: the name of the message sender
 
-###### Response
+##### Response
 
 None.
 
-##### List connected clients
+#### List connected clients
 
-###### Request
+##### Request
 
 ```text
 LIST
 ```
 
-###### Response
+##### Response
 
 - `CLIENTS <client1> <client2> <client3> ...`: the list of connected clients.
   The clients are separated by a space.
 
-##### Disconnection
+#### Disconnection
 
-###### Request
+##### Request
 
 ```text
 QUIT
 ```
 
-###### Response
+##### Response
 
 None.
 
-#### Section 4 - Examples
+### Section 4 - Examples
 
-##### Functional communication between a client and a server
+#### Functional communication between a client and a server
 
 ![Functional communication between a client and a server](./images/example-1.png)
 
-##### Communication between a client and a server with the maximum number of connections reached
+#### Communication between a client and a server with the maximum number of connections reached
 
 ![Communication between a client and a server with the maximum number of connections reached](./images/example-2.png)
 
-##### Communication between a client and a server with a duplicate client name
+#### Communication between a client and a server with a duplicate client name
 
 ![Communication between a client and a server with a duplicate client name](./images/example-3.png)
 
-##### Communication between a client and a server with an unconnected recipient
+#### Communication between a client and a server with an unconnected recipient
 
 ![Communication between a client and a server with an unconnected recipient](./images/example-4.png)
 
-##### Communication between a client and a server with a too long message
+#### Communication between a client and a server with a too long message
 
 ![Communication between a client and a server with a too long message](./images/example-5.png)
 
