@@ -77,7 +77,7 @@ _paginate: false
 ## Objectives
 
 - Know the different types of data (binary vs. text)
-- Understand the abstract notion of sources, streams ang sink
+- Understand the abstract notion of sources, streams and sink
 - Use the different IO types for different use-cases
 - Use the Java IO API to read and write files
 
@@ -112,7 +112,7 @@ find other resources and alternatives as well.
 - Abstraction of data flow
 - Source: where data comes from (input)
 - Sink: where data goes to (output)
-- Stream: data flow between source and sink
+- Stream: data flows between source and sink
 
 ![bg right:40%](https://images.unsplash.com/photo-1543674892-7d64d45df18b?fit=crop&h=720)
 
@@ -126,8 +126,8 @@ find other resources and alternatives as well.
 ### The Java IO API
 
 - Part of `java.base` module
-  - `java.io`
-  - `java.nio`
+  - `java.io` package
+  - `java.nio` package
 - Different classes for different IO types:
   - Binary data
   - Text data
@@ -247,7 +247,6 @@ The same applies for writing:
 3. When the buffer is full, a system call is made to write the block
 4. The buffer is then emptied
 5. Bytes can remain in the buffer
-
    - A flush might be needed to empty the buffer
 
 ![bg right:45% w:90%](./images/processing-binary-data.png)
@@ -356,7 +355,7 @@ find other resources and alternatives as well.
   - UTF-16
   - UTF-32
 
-![bg right contain](./images/unicode.png)
+![bg right contain](./images/unicode-website.png)
 
 ### UTF-8
 
