@@ -43,7 +43,7 @@ The entire course planning for the semester is available at
 
 ### Part 2 - Network programming with TCP and UDP (24 periods)
 
-- [10. Introduction to part 2](./10-introduction-to-part-2/README.md) (WIP)
+- [10. Introduction to part 2](./10-introduction-to-part-2/README.md)
 - [11. Define an application protocol (2 periods)](./11-define-an-application-protocol/README.md)
   (WIP)
 - [12. Java TCP programming (2 periods)](./12-java-tcp-programming/README.md)
