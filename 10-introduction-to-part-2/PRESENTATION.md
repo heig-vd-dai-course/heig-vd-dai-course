@@ -49,8 +49,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/10-introduction-to-part-2/10-introduction-to-part-2-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1545987796-200677ee1011?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Introduction to part 2: Network programming with TCP and UDP
 
