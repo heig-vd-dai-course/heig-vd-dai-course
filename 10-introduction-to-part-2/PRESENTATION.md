@@ -69,22 +69,26 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## _Do you know what happens when you browse the Web?_
+## _Do you know what happens when you browse the Web? How do you think it works?_
 
 <!-- _class: lead -->
 
 Do you remember this question from part 1?
 
-## What happens when you browse the Web?
+---
 
 The answer was:
 
+> **What happens when you browse the Web**
+>
 > 1. You request a resource (e.g. a file) from a web server
 > 2. The web server opens the file
 > 3. The web server reads the file
 > 4. The web server sends the file to you
 > 5. Your web browser receives the file
 > 6. Your web browser displays the file
+>
+> The whole process uses **input/output** (IO) operations!
 
 ## Do you know how does a web server work?
 
@@ -99,8 +103,8 @@ The answer was:
 5. The server and the client exchange data
 6. The client or server closes the connection
 
-The server and the client communicate over the network using a **protocol**,
-exchanging data the same way as **IOs** operations.
+The server and the client communicate over the network using a **network
+protocol**, exchanging data the same way as **IOs** operations.
 
 ## What will you learn?
 
