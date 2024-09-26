@@ -113,7 +113,7 @@ find other resources and alternatives as well.
 - Multiple implementations exist
 - Can target different platforms and/or specific features
 - JDK for development, JRE for running
-- Eclipse Temurin is recommended.
+- Eclipse Temurin is recommended
 
 ![bg right contain](./images/which-version-of-jdk-should-i-use.png)
 
@@ -179,7 +179,7 @@ find other resources and alternatives as well.
 
 ![bg right contain](./images/intellij-community-and-ultimate-edition.png)
 
-### IntelliJ IDEA Toolbox App
+### JetBrains Toolbox App
 
 - Manage multiple JetBrains IDEs
 - Install and update in one place

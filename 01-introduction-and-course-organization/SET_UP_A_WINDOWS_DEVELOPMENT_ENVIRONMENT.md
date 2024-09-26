@@ -506,11 +506,12 @@ the provided IDE.
 > [!NOTE]
 >
 > Follow these instructions when requested in the course. If you are following
-> this guide for the first time, you can skip this section.
+> this guide for the first time, you can skip this section and go straight to
+> the [Tips and tricks](#tips-and-tricks) section.
 
-Inspired by the
+_Inspired by the
 [How to use WSL development environment in JetBrains products by JetBrains](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
-guide.
+guide._
 
 <details>
 <summary>Click to expand the instructions once a future chapter asks you to.</summary>

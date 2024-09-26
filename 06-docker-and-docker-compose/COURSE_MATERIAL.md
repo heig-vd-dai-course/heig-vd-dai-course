@@ -48,17 +48,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Alternatives](#alternatives-2)
   - [Resources](#resources-2)
 - [Practical content](#practical-content)
-- [Package your own applications with Docker](#package-your-own-applications-with-docker)
-- [Publish your own applications with Docker](#publish-your-own-applications-with-docker)
-  - [Create a personal access token](#create-a-personal-access-token)
-  - [Login to GitHub Container Registry](#login-to-github-container-registry)
-  - [Tag the image correctly for GitHub Container Registry](#tag-the-image-correctly-for-github-container-registry)
-  - [Publish the image on GitHub Container Registry](#publish-the-image-on-github-container-registry)
-- [Run your own applications with Docker and Docker Compose](#run-your-own-applications-with-docker-and-docker-compose)
-  - [Pull the image from GitHub Container Registry](#pull-the-image-from-github-container-registry)
-  - [Run the image with Docker](#run-the-image-with-docker)
-  - [Run the image with Docker Compose](#run-the-image-with-docker-compose)
-- [Share your Docker Compose application](#share-your-docker-compose-application)
+  - [Package your own applications with Docker](#package-your-own-applications-with-docker)
+  - [Publish your own applications with Docker](#publish-your-own-applications-with-docker)
+  - [Run your own applications with Docker and Docker Compose](#run-your-own-applications-with-docker-and-docker-compose)
+  - [Share your Docker Compose application](#share-your-docker-compose-application)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -627,7 +620,7 @@ If you do not have the output of the practical content from chapter Java IOs,
 you can use the solution mentioned in the Java IOs chapter. Clone and compile
 the solution to have the output for this practical content.
 
-## Package your own applications with Docker
+### Package your own applications with Docker
 
 In this section, you will package your own applications with Docker.
 
@@ -686,14 +679,14 @@ runs as each run is isolated.
 
 Congrats! You have just packaged your own application with Docker!
 
-## Publish your own applications with Docker
+### Publish your own applications with Docker
 
 In this section, you will publish your own applications with Docker to the
 GitHub Container Registry.
 
 It will allow you to share your images with others.
 
-### Create a personal access token
+#### Create a personal access token
 
 You will need a personal access token to publish an image on GitHub Container
 Registry.
@@ -711,7 +704,7 @@ access token (classic):
 > **Settings** > **Developer settings** (at the very end of the left side bar) >
 > **Personal access tokens** > **Tokens (classic)**.
 
-### Login to GitHub Container Registry
+#### Login to GitHub Container Registry
 
 Login to GitHub Container Registry with the following command, replacing
 `<username>` with your GitHub username:
@@ -729,7 +722,7 @@ The output should be similar to the following:
 Login Succeeded
 ```
 
-### Tag the image correctly for GitHub Container Registry
+#### Tag the image correctly for GitHub Container Registry
 
 The image must be tagged with the following format:
 `ghcr.io/<username>/<image>:<tag>`.
@@ -764,7 +757,7 @@ You can delete the local `java-ios-docker` image with the following command:
 docker rmi java-ios-docker
 ```
 
-### Publish the image on GitHub Container Registry
+#### Publish the image on GitHub Container Registry
 
 Now publish the image on GitHub Container Registry with the following command,
 replacing `<username>` with your GitHub username:
@@ -805,11 +798,11 @@ You can delete the local image if you want.
 
 Congrats! You have just published your first image on GitHub Container Registry!
 
-## Run your own applications with Docker and Docker Compose
+### Run your own applications with Docker and Docker Compose
 
 In this section, you will use the published image with Docker and Docker Compose
 
-### Pull the image from GitHub Container Registry
+#### Pull the image from GitHub Container Registry
 
 Run the following command to pull the image from GitHub Container Registry,
 replacing `<username>` with your GitHub username:
@@ -837,7 +830,7 @@ Status: Downloaded newer image for ghcr.io/ludelafo/java-ios-docker:latest
 ghcr.io/ludelafo/java-ios-docker:latest
 ```
 
-### Run the image with Docker
+#### Run the image with Docker
 
 Running the image with Docker is pretty straightforward. You just need to run
 the following command to run the image with Docker, replacing `<username>` with
@@ -861,7 +854,7 @@ docker run --rm -v "$(pwd):/data" java-ios-docker \
 The results will be the same as when you ran the image locally but this time
 with the image pulled from GitHub Container Registry.
 
-### Run the image with Docker Compose
+#### Run the image with Docker Compose
 
 In this section, you will run the same container with Docker Compose.
 
@@ -895,7 +888,7 @@ docker compose up writer
 docker compose up reader
 ```
 
-## Share your Docker Compose application
+### Share your Docker Compose application
 
 Create a new Git repository and push your code to it.
 

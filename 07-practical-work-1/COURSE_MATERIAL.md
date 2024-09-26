@@ -36,8 +36,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Tips](#tips)
   - [The Unix philosophy and the KISS principle](#the-unix-philosophy-and-the-kiss-principle)
   - [External dependencies](#external-dependencies)
+  - [Add members to the repository](#add-members-to-the-repository)
   - [Protect your main branch](#protect-your-main-branch)
 - [Submission](#submission)
+- [Presentations](#presentations)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [Sources](#sources)
@@ -46,8 +48,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 We use command line interface (CLI) tools every day. For example, we use Git to
 manage our code (with its `git` command line interface), Maven to build our
-projects (with its `mvn` and `mvnw` command line interface), Java (with its
-`javac` and `java` command line interface) to run our programs, etc.
+projects (with its `mvn` and `mvnw` command line interface), Java to run our
+programs (with its `javac` and `java` command line interface), etc.
 
 In this practical work, you will create a CLI using
 [picocli](https://picocli.info/) to process files.
@@ -171,7 +173,8 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 - The application must be built using Maven with the `maven-shade-plugin` plugin
 - The application must use the picocli dependency
 - You can only use the Java classes seen in the course to process the files (you
-  can use other libraries to help you once the files are opened)
+  can use other libraries to help you once the files are opened) - See the
+  [External dependencies](#external-dependencies) section
 - Your application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word **slightly**, no
   need to shoot for the moon!)
@@ -211,6 +214,14 @@ If your implementation is too complex, we might penalize you.
 You can use any other dependencies you want in your Maven project. You must
 however explain why and how you use it in your README.
 
+As mentioned in the [Constraints](#constraints) section, you cannot use an
+external dependency that manages the files for you (open/close).
+
+### Add members to your repository
+
+You can add your team members to your repository as collaborators to allow them
+to push directly to the repository.
+
 ### Protect your main branch
 
 You can protect the `main` branch of your repository to prevent any push on it
@@ -223,15 +234,14 @@ on GitHub:
 
 ## Submission
 
-**Your work is due on the day before the presentations at 23h59**. Check the
-[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
-date.
+Your work is due as follow:
+
+- DAI-TIC-C (Friday mornings): **17.10.2024 23:59**
+- DAI-TIC-B (Monday mornings): **20.10.2024 23:59**
 
 > [!CAUTION]
 >
-> Any minutes after the deadline will result in a penalty of -1 point on the
-> final grade. Each day of delay will result in a penalty of -1 point on the
-> final grade.
+> Each day of delay will result in a penalty of -1 point on the final grade.
 
 You must update the GitHub Discussion you created previously with the following
 information:
@@ -244,6 +254,74 @@ information:
 > If you do not update the GitHub Discussion with the link to your repository
 > and the commit hash before the deadline, it is considered as a late submission
 > and you will be penalized.
+
+## Presentations
+
+The practical work presentations will take place in **room B51a** (next to the
+stairs) on:
+
+- DAI-TIC-C (Friday mornings): **18.10.2024 8:30-10:25**
+- DAI-TIC-B (Monday mornings): **28.10.2024 8:30-10:25**
+
+We only have **6 minutes per group**. You decide what you want to show us and
+how you want to present it.
+
+**Come 5 minutes before your time slot** (mentioned in the presentation) with
+your computer. You will have access to a video projector.
+
+**Please state your group on GitHub Discussions before next week**. This will
+allow us to prepare the order of presentation.
+
+<!--
+The order of presentation is random and is stated in the next tables:
+
+- [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
+- [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
+
+### DAI-TIC-B (Monday mornings)
+
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
+| 11  | TBD   | TDB     |
+| 12  | TBD   | TDB     |
+| 13  | TBD   | TDB     |
+| 14  | TBD   | TDB     |
+| 15  | TBD   | TDB     |
+| 16  | TBD   | TDB     |
+| 17  | TBD   | TDB     |
+| 18  | TBD   | TDB     |
+
+### DAI-TIC-C (Friday mornings)
+
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
+| 11  | TBD   | TDB     |
+| 12  | TBD   | TDB     |
+| 13  | TBD   | TDB     |
+| 14  | TBD   | TDB     |
+| 15  | TBD   | TDB     |
+| 16  | TBD   | TDB     |
+-->
 
 ## Grades and feedback
 

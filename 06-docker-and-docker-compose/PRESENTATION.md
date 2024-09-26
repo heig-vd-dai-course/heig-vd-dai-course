@@ -275,6 +275,12 @@ Check the code examples in the
 - A Docker Compose file (`docker-compose.yaml`) can be easily shared and
   versioned with the application
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->
