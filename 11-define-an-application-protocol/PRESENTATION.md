@@ -210,19 +210,11 @@ find other resources and alternatives as well.
 
 ![bg right contain](./images/reserved-ports.png)
 
-## A quick note on the Unix philosophy and POSIX
+## Questions
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
-
-### A quick note on the Unix philosophy and POSIX
-
-- Unix philosophy: minimalist, modular software
-- POSIX defines APIs for portability on multiple operating systems
-
-![bg right contain](./images/a-quick-note-on-the-unix-philosophy-and-posix.png)
+Do you have any questions?
 
 ## Practical content
 
@@ -263,12 +255,12 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Docker and Docker Compose: how to containerize your applications
-  - What is an image?
-  - What is a container?
-  - How to try out new software without installing it?
+- Java TCP programming
+  - How to create a TCP server
+  - How to create a TCP client
+  - Implement the "Guess the number" game using TCP
 
-![bg right:40%](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720)
 
 ## Sources
 

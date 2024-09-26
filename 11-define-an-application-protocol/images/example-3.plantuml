@@ -1,0 +1,6 @@
+@startuml
+C1->S: CONNECT alice
+S->C1: OK
+C2->S: CONNECT alice
+S->C2: ERROR 2
+@enduml

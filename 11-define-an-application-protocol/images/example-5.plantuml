@@ -1,0 +1,8 @@
+@startuml
+C1->S: CONNECT alice
+S->C1: OK
+C2->S: CONNECT bob
+S->C2: OK
+C1->S: SEND bob Hello Bob .... (100 characters)
+S->C1: ERROR 2
+@enduml
