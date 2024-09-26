@@ -263,7 +263,7 @@ Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
 ### Add members to the repository
 
 - Add your team members to your repository as collaborators
-- This allows them to push directly to your repository
+- This allows them to push directly to the repository
 
 ![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
 
@@ -366,4 +366,5 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/traffic-light-aGx-CFsM3fE)
 - Illustration by [Chris LaBarge](https://unsplash.com/@chrislabarge) on
   [Unsplash](https://unsplash.com/photos/a-sign-that-is-on-a-tree-in-the-woods-dy1GA9Ow6JA)
-- Scene from the movie _Astérix et Obélix : Mission Cléopâtre_ by Alain Chabat
+- Scene from the movie _Astérix et Obélix : Mission Cléopâtre (2002)_ by Alain
+  Chabat
