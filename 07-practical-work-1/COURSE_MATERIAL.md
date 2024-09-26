@@ -217,9 +217,9 @@ however explain why and how you use it in your README.
 As mentioned in the [Constraints](#constraints) section, you cannot use an
 external dependency that manages the files for you (open/close).
 
-### Add members to the repository
+### Add members to your repository
 
-You can add your team members to the repository as collaborators to allow them
+You can add your team members to your repository as collaborators to allow them
 to push directly to the repository.
 
 ### Protect your main branch

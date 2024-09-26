@@ -72,12 +72,28 @@ _paginate: false
 In order to validate this part of the course, you will have to pass an
 evaluation.
 
-The questions will be in French and you can answer them in French or English.
+The evaluation will last **60 minutes** and the questions will be in French. You
+can answer them in French or English.
 
-The evaluation will only be **a theoretical part of 60 minutes**.
+The evaluation dates will be as follow:
 
-The evaluation will be done on the computer with the help of an online
+- DAI-TIC-C (Friday mornings): **11.10.2024**
+- DAI-TIC-B (Monday mornings): **14.10.2024**
+
+---
+
+The evaluation will be done on the computer with the help of the HEIG-VD online
 evaluation platform.
+
+You must be connected to the _**HEIG-VD**_ network or connected to the VPN to
+access the evaluation platform.
+
+Once you are done, mark your evaluation as done and you can leave the room
+quietly.
+
+A dummy evaluation will be available before the evaluation so you can
+familiarize yourself with the platform. The link will be sent to you via GitHub
+Discussions.
 
 ## Chapters evaluated
 
@@ -87,6 +103,7 @@ The following chapters will be evaluated:
 - [Java, IntelliJ IDEA and Maven](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04-java-intellij-idea-and-maven)
 - [Java IOs](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios)
 - [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
+  (without the practical content)
 - [Practical work 1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/07-practical-work-1)
 
 ![bg right:40%][illustration]
@@ -118,8 +135,8 @@ You will be able to use them during the exam at the end of the semester.
 
 No communication between students is allowed.
 
-ChatGPT, Copilot or any other AI assisted tools are not allowed during the
-evaluation.
+ChatGPT, GitHub Copilot or any other AI assisted tools are not allowed during
+the evaluation.
 
 Cheating is not allowed. If you are caught cheating, you will get a 1 for the
 evaluation.
@@ -133,6 +150,8 @@ All typical questions are at the end of each chapter you studied.
 All previous evaluations are available in the
 [`00-evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 directory of the course repository.
+
+Check all evaluations are some chapters were rearranged this year.
 
 ![bg right:40%][illustration]
 
