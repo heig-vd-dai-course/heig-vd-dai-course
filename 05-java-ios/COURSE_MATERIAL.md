@@ -550,7 +550,7 @@ This is done using the `Reader` and `Writer` classes:
 - The `Writer` class is an abstract class that is the superclass of all classes
   representing an output stream of characters (e.g. `FileWriter`).
 
-Open the `TextReadFileExample.java` file in the `05-java-ios` directory to see
+Open the `TextReadAndWriteFileExample.java` file in the `05-java-ios` directory to see
 how to read and write text data.
 
 The following line opens a file for reading text data. It will attempt to open
