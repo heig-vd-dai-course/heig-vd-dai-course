@@ -48,8 +48,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-evaluation-2/17-evaluation-2-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Evaluation 2
 
