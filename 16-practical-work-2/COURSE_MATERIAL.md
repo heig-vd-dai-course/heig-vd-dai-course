@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/117
-[illustration]:
-  https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Practical work 2
 
@@ -38,7 +37,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Constraints](#constraints)
 - [Tips](#tips)
   - [Create diagrams](#create-diagrams)
-  - [POSIX](#posix)
+  - [The POSIX standard](#the-posix-standard)
 - [Submission](#submission)
 - [Presentations](#presentations)
 - [Grades and feedback](#grades-and-feedback)
@@ -70,10 +69,9 @@ methodology but please do not copy/paste code from other groups.
 ## Objectives
 
 - Define a network application protocol
-- Make usage of the TCP and/or UDP protocol(s)
 - Implement a network application that can be used by multiple clients at the
-  same time
-- Package, publish and run the network application with Docker
+  same time using the TCP and/or UDP protocol(s)
+- Package, publish and run a network application with Docker
 
 ## Group composition
 
@@ -210,6 +208,21 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 You can use [PlantUML](https://plantuml.com/), [draw.io](https://draw.io/) or
 any other tools you want to create your diagrams.
+
+### The POSIX standard
+
+> The Portable Operating System Interface (POSIX) standard is a family of
+> standards specified by the IEEE Computer Society for maintaining compatibility
+> between operating systems. POSIX defines both the system and user-level
+> application programming interfaces (APIs), along with command line shells and
+> utility interfaces, for software compatibility (portability) with variants of
+> Unix and other operating systems.
+>
+> <https://en.wikipedia.org/wiki/POSIX>
+
+Not all programs are/can be POSIX compliant. But if you try to comply with the
+POSIX standard, you will be able to run your program on various operating
+systems without any issues.
 
 ## Submission
 
@@ -358,6 +371,8 @@ You can use reactions to express your opinion on a comment!
 
 ## Sources
 
-- Main illustration by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)
+- Main illustrations by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)
   on
   [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
+  and [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
+  [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)

@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/117
-[illustration]:
-  https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -74,30 +73,36 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Practical work 2
+## Objectives
 
-- A TCP network application with its own application protocol
+- Define and implement a network application with TCP and/or UDP
+- Package, publish and run a network application with Docker
 - You can choose what the network application will do (you can be creative!)
   - a chat application, a chess game, a shopping list application, ...
-- Groups of two students
 
 ![bg right:40%][illustration]
 
-## Demo
+## Demo 1
 
-Compile the project:
+<!-- _class: lead -->
+
+A simple file transfer application with a TCP server and a client
+
+![bg opacity:0.1](https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720)
+
+---
+
+- Compile the project:
 
 ```sh
 ./mvnw clean package
 ```
 
-Run the CLI without any arguments:
+- Run the CLI without any arguments:
 
 ```sh
-java -jar target/practical-work-2-demo-1.0-SNAPSHOT.jar
+java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar
 ```
-
----
 
 ```text
 Missing required subcommand
@@ -108,21 +113,23 @@ Commands:
   client  Start a client to download files from a server
 ```
 
-Start the server:
+---
+
+- Start the server:
 
 ```sh
-java -jar target/practical-work-2-demo-1.0-SNAPSHOT.jar server -p 12345 -t 4
+java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar server -p 12345 -t 4
 ```
 
-Start the client:
+- Start the client:
 
 ```sh
-java -jar target/practical-work-2-demo-1.0-SNAPSHOT.jar client -p 12345
+java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar client -p 12345
 ```
 
 ---
 
-Output:
+- Output:
 
 ```text
   _____          _____   _____           _                  _
@@ -138,13 +145,11 @@ Available commands:
 LS - list available files on server
 GET <file> - get file from server
 QUIT - quit the client
-
->
 ```
 
 ---
 
-List available files:
+- List available files:
 
 ```text
 > ls
@@ -154,7 +159,7 @@ my-passwords-in-clear.txt
 rzr-sc2.exe
 ```
 
-Get one of the available files:
+- Get one of the available files:
 
 ```text
 > GET my-passwords-in-clear.txt
@@ -164,14 +169,14 @@ File saved to my-passwords-in-clear.txt
 
 ---
 
-Get a file that does not exist:
+- Get a file that does not exist:
 
 ```text
 > GET not-found.txt
 The specified file was not found on the server.
 ```
 
-Quit:
+- Quit:
 
 ```text
 > QUIT
@@ -180,6 +185,168 @@ Bye.
 
 If a client tries to connect to the server when no thread is available, the
 client has to wait to be served.
+
+## Demo 2
+
+<!-- _class: lead -->
+
+A weather station application with UDP multicast and unicast
+
+![bg opacity:0.1](https://images.unsplash.com/photo-1636357582639-27620e21d7c5?fit=crop&h=720)
+
+---
+
+![bg h:80%](./images/practical-work-3-architecture.png)
+
+---
+
+Compile the project:
+
+```sh
+./mvnw clean package
+```
+
+Run the CLI without any arguments:
+
+```sh
+java -jar target/practical-work-2-demo-2-1.0-SNAPSHOT.jar
+```
+
+---
+
+```text
+Missing required subcommand
+Usage: practical-work-2-demo-2-1.0-SNAPSHOT.jar [-hV] [COMMAND]
+DAI Weather Station
+  -h, --help      Show this help message and exit.
+  -V, --version   Print version information and exit.
+Commands:
+  thermometer-emitter      Emits temperature values.
+  pressure-emitter         Emits pressure values.
+  humidity-emitter         Emits humidity values.
+  weather-station          Start an UDP multicast receiver.
+  weather-client           Start an UDP weather client.
+  list-network-interfaces  List all available network interfaces.
+```
+
+---
+
+Start the weather station:
+
+```sh
+java -jar target/practical-work-2-demo-2-1.0-SNAPSHOT.jar weather-station \
+  -i eth0 \
+  --port 9876 \
+  --server-port 1234
+```
+
+Output:
+
+```text
+Multicast receiver started (10.11.12.25:9876)
+Unicast receiver started (10.11.12.25:1234)
+```
+
+---
+
+Start the emitters:
+
+```sh
+java -jar target/practical-work-2-demo-2-1.0-SNAPSHOT.jar thermometer-emitter \
+  --delay=0 \
+  --frequency 10000 \
+  -i eth0 \
+  -p 9876
+
+java -jar target/practical-work-2-demo-2-1.0-SNAPSHOT.jar pressure-emitter \
+  --delay=0 \
+  --frequency 10000 \
+  -i eth0 \
+  -p 9876
+```
+
+---
+
+Output:
+
+```text
+Emitter of type thermometer started (10.11.12.25:9876).
+Multicasting measure : 30.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 23.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 28.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 19.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 15.0 to 239.0.0.1:9876 on interface en0
+```
+
+```text
+Emitter of type pressure started (10.11.12.25:9876).
+Multicasting measure : 982.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 1027.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 970.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 996.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 982.0 to 239.0.0.2:9876 on interface en0
+```
+
+---
+
+Start the weather client:
+
+```sh
+java -jar practical-work-2-demo-2-1.0-SNAPSHOT.jar weather-client
+```
+
+Output:
+
+```text
+Welcome to the weather client!
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+>
+```
+
+You can then select the measures you want to get.
+
+---
+
+```text
+> 1
+List all measures (1) or only the average? (2)
+> 1
+----------------------------------------
+Received measures: [30.0, 23.0, 28.0, 19.0, 15.0]
+----------------------------------------
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+>
+```
+
+The client will then display all the measures received from the weather station.
+
+---
+
+```text
+> 3
+List all measures (1) or only the average? (2)
+> 2
+----------------------------------------
+Received average: 991.11
+----------------------------------------
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+> 4
+```
+
+The client will then display the average of the measures received from the
+weather station.
 
 ## Group composition
 
@@ -258,7 +425,17 @@ More details for this section in the [course material][course-material].
 - Create diagrams to help you understand the application
 - You can use [PlantUML](https://plantuml.com) or [Draw.io](https://draw.io) to
   create diagrams
-- [Draw.io](https://draw.io) to create diagrams
+
+### The POSIX standard
+
+> The Portable Operating System Interface (POSIX) standard is a family of
+> standards specified by the IEEE Computer Society for maintaining compatibility
+> between operating systems. POSIX defines both the system and user-level
+> application programming interfaces (APIs), along with command line shells and
+> utility interfaces, for software compatibility (portability) with variants of
+> Unix and other operating systems.
+>
+> <https://en.wikipedia.org/wiki/POSIX>
 
 ## Submission
 
@@ -338,6 +515,8 @@ You can use reactions to express your opinion on a comment!
 
 ## Sources
 
-- Main illustration by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)
+- Main illustrations by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex)
   on
   [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
+  and [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
+  [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)
