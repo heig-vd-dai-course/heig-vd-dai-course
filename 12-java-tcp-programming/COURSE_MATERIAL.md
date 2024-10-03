@@ -33,14 +33,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Server structure and methods](#server-structure-and-methods)
 - [Processing data from streams](#processing-data-from-streams)
   - [Variable length data](#variable-length-data)
-- [Handling one client at a time](#handling-one-client-at-a-time)
-- [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
-  - [Multi-processing](#multi-processing)
-  - [Multi-threading](#multi-threading)
-  - [Asynchronous programming](#asynchronous-programming)
 - [Practical content](#practical-content)
   - [Get the required files](#get-the-required-files)
-  - [Send an email using a SMTP client written in Java with the Socket API](#send-an-email-using-a-smtp-client-written-in-java-with-the-socket-api)
   - [Run full client/server examples](#run-full-clientserver-examples)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -57,21 +51,26 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 As you have seen in previous chapters, applications communicate with each other
 using application protocols.
 
-Some tools are created to interact with these protocols. For example, you can
-use Telnet to interact with the SMTP protocol to send emails or SCP to interact
-with the SSH protocol to transfer files.
-
 In this chapter, you will learn how to program your own TCP clients and servers
 in Java.
 
 This will allow you to create your own network applications, such as a chat
 server, a file server, a web server, etc.
 
+TODO
+
+In order to run multiple commands/actions on the server without closing the
+connection, you can use what is called a
+[read-eval-print loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
+To make it simple, a REPL is simply a loop that will ask the user to input
+commands. The loop will then execute the command and display the result. The
+loop will continue until the user decides to exit the loop.
+
 ## TCP
 
 TCP is a transport protocol. It is used to transfer data between two
 applications. TCP can only do UniCast: one application can only communicate with
-one other application.
+one other application at the same time.
 
 TCP is a connection-oriented protocol: a connection must be established between
 the two applications before data can be exchanged in a bidirectional way.
@@ -79,7 +78,7 @@ the two applications before data can be exchanged in a bidirectional way.
 TCP is a reliable protocol: data sent is guaranteed to be received by the other
 application.
 
-A good analogy is to think of TCP as a phone call. You must first establish a
+A good analogy is to think of TCP as a phone call: you must first establish a
 connection with the other person before you can talk to them. Once the
 connection is established, you can talk to the other person and they will hear
 everything you say.
@@ -100,9 +99,9 @@ correct order. If a segment is lost, TCP will retransmit it.
 
 The Socket API is a Java API that allows you to create TCP/UDP clients and
 servers. It is described in the
-[`java.net` package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/package-summary.html)
+[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
 in the
-[`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
+[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
 
 It has originally been developed in C in the context of the Unix operating
 system by Berkeley University. It has been ported to Java and is now available
@@ -116,9 +115,9 @@ A socket is identified by an IP address and a port number.
 A socket can act as a client or as a server:
 
 - A socket accepting connections is called a server socket (class
-  [`ServerSocket`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/ServerSocket.html)).
+  [`ServerSocket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/ServerSocket.html)).
 - A socket initiating a connection is called a client socket (class
-  [`Socket`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/Socket.html)).
+  [`Socket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/Socket.html)).
 
 The following schema shows the workflow of a client/server application:
 
@@ -186,7 +185,7 @@ output = socket.getOutputStream();
 ```
 
 You can then decorate the input and output streams with other streams to process
-the data.
+the data, just as with IOs.
 
 ```java
 // Get input stream as text
@@ -196,7 +195,7 @@ input = new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8);
 output = new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8);
 ```
 
-Use buffered streams to improve performance.
+Use buffered streams to improve performance:
 
 ```java
 // Get input stream as binary with buffer
@@ -206,7 +205,8 @@ input = new BufferedReader(new InputStreamReader(socket.getInputStream());
 output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
 ```
 
-> [!WARNING]  
+> [!IMPORTANT]
+>
 > Do not forget to flush the output stream after writing data to it. Otherwise,
 > the remaining data in the buffer will not be sent to the other application!
 >
@@ -265,144 +265,6 @@ for (int i = 0; i < dataLength; i++) {
 }
 ```
 
-## Handling one client at a time
-
-A server that handles one client at a time is called single-threaded, or
-single-threaded server.
-
-A single-threaded server is quite simple to implement:
-
-1. It creates a socket to listen for incoming connections.
-2. When a connection is accepted, it creates a socket to communicate with the
-   client.
-3. It then reads the data sent by the client and sends a response.
-
-The main drawback of a single-threaded server is that it can only handle one
-client at a time. If another client tries to connect, it will have to wait until
-the first client is disconnected.
-
-An analogy is to think of a single-threaded server as a restaurant with only one
-table. If a customer is already sitting at the table, another customer will have
-to wait until the first customer leaves.
-
-A single-threaded server is therefore not suitable for production. It is
-suitable for testing and learning purposes. In order to manage multiple clients,
-a server must handle multiple sockets.
-
-Multiple ways exist to handle multiple sockets at the same time and is called
-concurrency.
-
-## Handling multiple clients with concurrency
-
-Concurrency is the ability of an application to handle multiple clients at the
-same time.
-
-There are multiple ways to handle multiple clients with concurrency (among
-others):
-
-- Multi-processing
-- Multi-threading
-- Asynchronous programming
-
-Java has a package for concurrency called
-[`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html).
-
-In this course, we will focus on multi-threading but the other methods are
-equally valid and interesting to learn.
-
-### Multi-processing
-
-Multi-processing is the ability of an application to handle multiple processes
-at the same time.
-
-A process is a program in execution. It is identified by a process ID.
-
-A process has its own memory space. It cannot access the memory space of another
-process.
-
-The main process is the process that is created when the application starts.
-
-It creates other processes to handle multiple clients.
-
-A process is a heavy-weight object. It is quite expensive to create and destroy
-as it is a copy of the main process.
-
-Processes can communicate with each other using inter-process communication
-(IPC) but it is quite complex to implement.
-
-An analogy is to think of a process as restaurant chain with multiple
-restaurant. Each restaurant has only one table and can handle one customer. If a
-customer is already sitting at a table of a given restaurant, another customer
-can sit at a table at another restaurant.
-
-### Multi-threading
-
-Multi-threading is the ability of an application to handle multiple threads at
-the same time.
-
-A thread is a sequence of instructions that can be executed independently of the
-main thread.
-
-The main thread is the thread that is created when the application starts.
-
-It creates other threads to handle multiple clients.
-
-Each thread has its own stack and its own program counter.
-
-A thread is therefore quite similar to a process, except that it shares the same
-memory space as the other threads. It is therefore much cheaper to create and
-destroy than a process (but still more expensive than a simple object).
-
-Threads can communicate with each other using shared memory.
-
-Threads are more lightweight than processes but their number is limited by the
-operating system.
-
-There are two ways to manage threads:
-
-- Unlimited threads
-- Thread pool that limits the number of threads
-
-When discussing the unlimited threads approach, an analogy is to think of a
-restaurant with no tables at all. When a new customer arrives, the restaurant
-manager adds a new table for the customer. Each table can handle one customer.
-
-Using this approach, the more customers arrive, the more tables are added. This
-approach is not suitable for production as space and resources are limited.
-
-When discussing the thread pool approach, an analogy is to think of a restaurant
-with a limited number of tables. When a new customer arrives, the restaurant
-manager checks if a table is available. If a table is available, the customer
-can sit at the table. If no table is available, the customer will have to wait
-until a table is available.
-
-Using this approach, the number of tables is limited. This approach is suitable
-for production as space and resources are managed and limited.
-
-### Asynchronous programming
-
-Asynchronous programming is the ability of an application to handle multiple
-tasks at the same time, without blocking the main thread.
-
-Using asynchronous programming, the main thread can perform other tasks while
-waiting for a task to complete.
-
-Asynchronous programming is based on the concept of callbacks. A callback is a
-function that is called when a task is completed.
-
-An analogy is to think of asynchronous programming as a food truck without any
-tables. Once a customer wants something to eat, the person managing the food
-truck gives the customer a ticket. The customer then waits until the food is
-ready but can do other things in the meantime.
-
-Once the food is ready, the person managing the food truck calls the customer.
-The customer then comes to the food truck to get the food.
-
-Asynchronous programming is quite complex to implement. It is therefore not
-covered in this course.
-
-[Node.js](https://nodejs.org/) is a good example of asynchronous programming.
-
 ## Practical content
 
 ### Get the required files
@@ -424,37 +286,6 @@ learn how to run the code examples.
 
 Take some time to explore the code examples.
 
-### Send an email using a SMTP client written in Java with the Socket API
-
-In this section, you will learn how to send an email using the SMTP protocol
-using the Java Socket API.
-
-#### Start MailHog
-
-Just as in the
-[SMTP and Telnet](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15-smtp-and-ncat)
-chapter, start MailHog in order to receive the emails sent by the Java code
-examples.
-
-#### Compile and run the SMTP client
-
-In the `12-java-tcp-programming` directory, compile and run the
-`SmtpClientExample` code example.
-
-```sh
-# Compile the example
-javac SmtpClientExample.java
-
-# Run the example
-java SmtpClientExample
-```
-
-The mail has been sent to the MailHog SMTP server. You can check it in the
-MailHog Web interface at <http://localhost:8025>.
-
-Take some time to explore the code example. You should notice the commands are
-the same as the ones used with Telnet but in an automated way!
-
 ### Run full client/server examples
 
 #### Explore and run the code examples
@@ -463,14 +294,6 @@ In the `12-java-tcp-programming` directory, checkout the `README.md` file to
 learn how to run the code examples.
 
 Take some time to explore the code examples. Run them and see what they do.
-
-> [!NOTE]  
-> Please be aware that the `TcpServerVirtualThreadTextualExample` example must
-> be run with Java 21 or later. It is not mandatory to run this example but you
-> must understand how it works.
->
-> This example is not compatible with Java 17 but is already available in the
-> code examples repository for future use.
 
 #### Answer the following questions
 
