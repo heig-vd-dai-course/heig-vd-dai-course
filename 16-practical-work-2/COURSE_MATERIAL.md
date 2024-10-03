@@ -27,9 +27,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
-  - [Category 2 - Git, GitHub and Markdown](#category-2---git-github-and-markdown)
-  - [Category 3 - Java, IntelliJ IDEA and Maven](#category-3---java-intellij-idea-and-maven)
-  - [Category N - Docker and Docker Compose](#category-n---docker-and-docker-compose)
+  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
+  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
+  - [Category 3 - Docker and Docker Compose](#category-3---docker-and-docker-compose)
   - [Category 4 - Define an application protocol](#category-4---define-an-application-protocol)
   - [Category 5 - Java TCP/UDP programming](#category-5---java-tcpudp-programming)
   - [Category 6 - Java network concurrency](#category-6---java-network-concurrency)
@@ -133,7 +133,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 >
 > Remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
 
-### Category 2 - Git, GitHub and Markdown
+### Category 1 - Git, GitHub and Markdown
 
 | #   | Criterion                                                                                                                                                                          | Points |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -141,13 +141,13 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 | 2   | The README explains how to use your network application with examples and outputs so a new user/developer can understand your network application without having to run it locally |    0.2 |
 | 3   | The README describes explicit commands to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer   |    0.2 |
 
-### Category 3 - Java, IntelliJ IDEA and Maven
+### Category 2 - Java, IntelliJ IDEA and Maven
 
 | #   | Criterion                                                                                                                                       | Points |
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
 | 4   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase |    0.2 |
 
-### Category N - Docker and Docker Compose
+### Category 3 - Docker and Docker Compose
 
 | #   | Criterion                                                                                                                                               | Points |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |

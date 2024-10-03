@@ -85,13 +85,13 @@ _paginate: false
 
 ## Demo
 
-- Compile the project
+Compile the project:
 
 ```sh
 ./mvnw clean package
 ```
 
-- Run the CLI without any arguments
+Run the CLI without any arguments:
 
 ```sh
 java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar
@@ -119,41 +119,41 @@ Commands:
 
 ---
 
-- Run the CLI with the `uppercase` command:
+Run the CLI with the `uppercase` command:
 
-  ```sh
-  java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
-    --input input.txt \
-    --output output.txt \
-    uppercase
-  ```
+```sh
+java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
+  --input input.txt \
+  --output output.txt \
+  uppercase
+```
 
-- You can also specify the encoding of the input and output files:
+You can also specify the encoding of the input and output files:
 
-  ```sh
-  java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
-    --input input.txt --input-encoding UTF-8 \
-    --output output.txt --output-encoding US-ASCII \
-    uppercase
-  ```
+```sh
+java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
+  --input input.txt --input-encoding UTF-8 \
+  --output output.txt --output-encoding US-ASCII \
+  uppercase
+```
 
 ## See the result
 
-- Input file:
+Input file:
 
-  ```text
-  $ cat input.txt
-  Bonjour, comment ça va aujourd'hui ?
-  ```
+```text
+$ cat input.txt
+Bonjour, comment ça va aujourd'hui ?
+```
 
-- Output file:
+Output file:
 
-  ```text
-  $ cat output.txt
-  BONJOUR, COMMENT ?A VA AUJOURD'HUI ?
-  ```
+```text
+$ cat output.txt
+BONJOUR, COMMENT ?A VA AUJOURD'HUI ?
+```
 
-- Why is the `ç` not converted to uppercase?
+Why is the `ç` not converted to uppercase?
 
 ## Group composition
 

@@ -80,25 +80,25 @@ _paginate: false
 - You can choose what the network application will do (you can be creative!)
   - a chat application, a chess game, a shopping list application, ...
 
-![bg right:40%][illustration]
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## Demo 1
 
 <!-- _class: lead -->
 
-A simple file transfer application with a TCP server and a client
+A simple file transfer application made with TCP
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720)
 
 ---
 
-- Compile the project:
+Compile the project:
 
 ```sh
 ./mvnw clean package
 ```
 
-- Run the CLI without any arguments:
+Run the CLI without any arguments:
 
 ```sh
 java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar
@@ -115,21 +115,19 @@ Commands:
 
 ---
 
-- Start the server:
+Start the server:
 
 ```sh
 java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar server -p 12345 -t 4
 ```
 
-- Start the client:
+Start the client:
 
 ```sh
 java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar client -p 12345
 ```
 
 ---
-
-- Output:
 
 ```text
   _____          _____   _____           _                  _
@@ -145,11 +143,12 @@ Available commands:
 LS - list available files on server
 GET <file> - get file from server
 QUIT - quit the client
+>
 ```
 
 ---
 
-- List available files:
+List available files:
 
 ```text
 > ls
@@ -159,7 +158,7 @@ my-passwords-in-clear.txt
 rzr-sc2.exe
 ```
 
-- Get one of the available files:
+Get one of the available files:
 
 ```text
 > GET my-passwords-in-clear.txt
@@ -169,14 +168,14 @@ File saved to my-passwords-in-clear.txt
 
 ---
 
-- Get a file that does not exist:
+Get a file that does not exist:
 
 ```text
 > GET not-found.txt
 The specified file was not found on the server.
 ```
 
-- Quit:
+Quit:
 
 ```text
 > QUIT
@@ -190,13 +189,13 @@ client has to wait to be served.
 
 <!-- _class: lead -->
 
-A weather station application with UDP multicast and unicast
+A weather station application made with UDP
 
 ![bg opacity:0.1](https://images.unsplash.com/photo-1636357582639-27620e21d7c5?fit=crop&h=720)
 
 ---
 
-![bg h:80%](./images/practical-work-3-architecture.png)
+![bg h:80%](./images/practical-work-2-udp-network-application-architecture.png)
 
 ---
 
@@ -271,20 +270,20 @@ Output:
 
 ```text
 Emitter of type thermometer started (10.11.12.25:9876).
-Multicasting measure : 30.0 to 239.0.0.1:9876 on interface en0
-Multicasting measure : 23.0 to 239.0.0.1:9876 on interface en0
-Multicasting measure : 28.0 to 239.0.0.1:9876 on interface en0
-Multicasting measure : 19.0 to 239.0.0.1:9876 on interface en0
-Multicasting measure : 15.0 to 239.0.0.1:9876 on interface en0
+Multicasting measure : 30.0 to 239.0.0.1:9876 on interface eth0
+Multicasting measure : 23.0 to 239.0.0.1:9876 on interface eth0
+Multicasting measure : 28.0 to 239.0.0.1:9876 on interface eth0
+Multicasting measure : 19.0 to 239.0.0.1:9876 on interface eth0
+Multicasting measure : 15.0 to 239.0.0.1:9876 on interface eth0
 ```
 
 ```text
 Emitter of type pressure started (10.11.12.25:9876).
-Multicasting measure : 982.0 to 239.0.0.2:9876 on interface en0
-Multicasting measure : 1027.0 to 239.0.0.2:9876 on interface en0
-Multicasting measure : 970.0 to 239.0.0.2:9876 on interface en0
-Multicasting measure : 996.0 to 239.0.0.2:9876 on interface en0
-Multicasting measure : 982.0 to 239.0.0.2:9876 on interface en0
+Multicasting measure : 982.0 to 239.0.0.2:9876 on interface eth0
+Multicasting measure : 1027.0 to 239.0.0.2:9876 on interface eth0
+Multicasting measure : 970.0 to 239.0.0.2:9876 on interface eth0
+Multicasting measure : 996.0 to 239.0.0.2:9876 on interface eth0
+Multicasting measure : 982.0 to 239.0.0.2:9876 on interface eth0
 ```
 
 ---
@@ -345,8 +344,7 @@ Please enter the measures you want to get
 > 4
 ```
 
-The client will then display the average of the measures received from the
-weather station.
+The client can then quit the application.
 
 ## Group composition
 
@@ -422,9 +420,12 @@ More details for this section in the [course material][course-material].
 
 ### Create diagrams
 
-- Create diagrams to help you understand the application
-- You can use [PlantUML](https://plantuml.com) or [Draw.io](https://draw.io) to
-  create diagrams
+- You can use any tools you want to create your diagrams:
+  - [PlantUML](https://plantuml.com/)
+  - [draw.io](https://draw.io/)
+  - etc.
+
+![bg right:40% contain](https://upload.wikimedia.org/wikipedia/commons/3/30/Plantuml_Logo.svg)
 
 ### The POSIX standard
 
@@ -520,3 +521,11 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
   and [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
   [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Josh Calabrese](https://unsplash.com/@joshcala) on
+  [Unsplash](https://unsplash.com/photos/five-men-riding-row-boat-Ev1XqeVL2wI)
+- Illustration by [Nicole Baster](https://unsplash.com/@nicolebaster) on
+  [Unsplash](https://unsplash.com/photos/traffic-light-aGx-CFsM3fE)
+- Illustration by [Chris LaBarge](https://unsplash.com/@chrislabarge) on
+  [Unsplash](https://unsplash.com/photos/a-sign-that-is-on-a-tree-in-the-woods-dy1GA9Ow6JA)
