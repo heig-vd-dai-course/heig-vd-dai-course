@@ -181,57 +181,122 @@ Bye.
 If a client tries to connect to the server when no thread is available, the
 client has to wait to be served.
 
-## Practical work presentations
-
-The practical work presentations will take place on **Tuesday 28.11.2023** in
-the **room B38**, at the very end of the corridor next to the door entry.
-
-We only have **10 minutes per group** (6 minutes of presentation, 3 minutes of
-questions). Please be prepared to present your work. You decide what you want to
-show us and how you want to present it.
-
-Come 5 minutes before your time slot with your computer.
-
-The order of presentation is random and is stated in the next slides.
-
----
-
-<!--
-**Please state your group on GitHub Discussions as soon as possible, even if you
-do not have a clear idea yet as it will help us to plan the practical work
-review.**
--->
-
-| #   | Group                                 | Passage |
-| --- | ------------------------------------- | ------- |
-| 1   | Lucas Lattion and Romain Humair       | 13:35   |
-| 2   | Lopez Esteban and Bleuer Rémy         | 13:45   |
-| 3   | Calvin Graf and Alan Sottile          | 13:55   |
-| 4   | Thomas Vuilleumier and Sebastian Diaz | 14:05   |
-| 5   | Alexandre Iorio and Theodros Mulugeta | 14:15   |
-| 6   | Lionel Pollien and Arthur Menétrey    | 14:25   |
-| 7   | Richard Aurélien and Pirakas Anthon   | 14:35   |
-
----
-
-| #   | Group                                   | Passage |
-| --- | --------------------------------------- | ------- |
-| 8   | Valentin Ricard and Alexandre Philibert | 16:45   |
-| 9   | Komarov Sergey and Ahmad Jano           | 16:55   |
-| 10  | Sarah Jallon and Jonas Troeltsch        | 17:05   |
-| 11  | Piemontesi Gwendal and Trueb Guillaume  | 17:15   |
-| 12  | Loïc Herman and Massimo Stefani         | 17:25   |
-| 13  | Simon Guggisberg and Jeremiah Steiner   | 17:35   |
-| 14  | Olin Bourquin and Kevin Farine          | 17:45   |
-| 15  | Slimani Walid and Colin Jacques         | 17:55   |
-
-## Find the practical work
+## Group composition
 
 <!-- _class: lead -->
 
-You can find the practical work for this part on [GitHub][course-material].
+More details for this section in the [course material][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+### Group composition
+
+- 2 students per group
+- Create a GitHub Discussion to:
+  - Announce your group members
+  - Announce your idea (even a draft is fine)
+- **Do it as soon as possible before next week!**
+  - This helps us to plan the presentations
+
+![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
+
+## Idea validation
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Idea validation
+
+- You must state your idea on your GitHub Discussion
+- We might ask you to change your idea if it is too simple or too complex
+- We will help you to find a good idea if needed
+- **Do it as soon as possible before next week!**
+
+![bg right:40%](https://images.unsplash.com/photo-1543075137-5a97903aaa7a?fit=crop&h=720)
+
+## Grading criteria
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Grading criteria
+
+You can find all the grading criteria in the [course material][course-material]:
+
+- 0 point - The work is insufficient
+- 0.1 point - The work is done
+- 0.2 point - The work is well done (without the need of being perfect)
+
+Maximum grade: 25 points \* 0.2 + 1 = 6
+
+![bg right:40%](https://images.unsplash.com/photo-1645500010250-01b5bc42239e?fit=crop&h=720)
+
+## Constraints
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Constraints
+
+- The application must be written in Java, compatible with Java 21
+- The application must be built using Maven with the `maven-shade-plugin` plugin
+- The application must use the picocli dependency
+- You can only use the Java classes seen in the course to process the files (you
+  can use other libraries to help you once the files are opened)
+- Your application must be slightly more complex and slightly different than the
+  examples presented during the course
+
+## Tips
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Create diagrams
+
+- Create diagrams to help you understand the application
+- You can use [PlantUML](https://plantuml.com) or [Draw.io](https://draw.io) to
+  create diagrams
+- [Draw.io](https://draw.io) to create diagrams
+
+## Submission
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Submission
+
+Your work is due as follow:
+
+- DAI-TIC-C (Friday mornings): **01.12.2024 23:59**
+- DAI-TIC-B (Monday mornings): **05.12.2024 23:59**
+
+Update the GitHub Discussion with the link to your repository as mentioned in
+the course material.
+
+**If you do not submit your work on time and/or correctly, you will be penalized
+(-1 point on the final grade for each day of delay).**
+
+## Presentations
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Presentations
+
+The practical work presentations will take place in **TBD** on:
+
+- DAI-TIC-C (Friday mornings): **02.12.2024 8:30-10:25**
+- DAI-TIC-B (Monday mornings): **06.12.2024 8:30-10:25**
+
+We only have **TBD minutes per group**. You decide what you want to show us and
+how you want to present it. **Come 5 minutes before your time slot** with your
+computer. You will have access to a beamer.
+
+**Please state your group on GitHub Discussions before next week.**
 
 ## Grades and feedback
 
@@ -244,6 +309,20 @@ Each criterion will be accompanied by a comment explaining the points obtained,
 a general comment on your work and the final grade.
 
 If you have any questions about the evaluation, you can contact us!
+
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
+## Find the practical work
+
+<!-- _class: lead -->
+
+You can find the practical work for this part on [GitHub][course-material].
+
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 

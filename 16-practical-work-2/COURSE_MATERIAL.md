@@ -28,9 +28,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
-  - [Category 1 - Meta](#category-1---meta)
   - [Category 2 - Git, GitHub and Markdown](#category-2---git-github-and-markdown)
   - [Category 3 - Java, IntelliJ IDEA and Maven](#category-3---java-intellij-idea-and-maven)
+  - [Category N - Docker and Docker Compose](#category-n---docker-and-docker-compose)
   - [Category 4 - Define an application protocol](#category-4---define-an-application-protocol)
   - [Category 5 - Java TCP/UDP programming](#category-5---java-tcpudp-programming)
   - [Category 6 - Java network concurrency](#category-6---java-network-concurrency)
@@ -40,6 +40,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Create diagrams](#create-diagrams)
   - [POSIX](#posix)
 - [Submission](#submission)
+- [Presentations](#presentations)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [Sources](#sources)
@@ -70,7 +71,9 @@ methodology but please do not copy/paste code from other groups.
 
 - Define a network application protocol
 - Make usage of the TCP and/or UDP protocol(s)
-- Implement a client/receiver and a server/emitter application
+- Implement a network application that can be used by multiple clients at the
+  same time
+- Package, publish and run the network application with Docker
 
 ## Group composition
 
@@ -86,6 +89,13 @@ information:
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
+
+> [!IMPORTANT]
+>
+> **Please do it a soon as possible**, even if you do not have a clear idea yet
+> as it will help us to plan the practical work presentations.
+>
+> Please refer to the grading criteria to know what is expected from you.
 
 > [!IMPORTANT]
 >
@@ -125,27 +135,27 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 >
 > Remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
 
-### Category 1 - Meta
-
-| #   | Criterion                                                                                                                                                                                               | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 1   | A GitHub Discussion is opened during the first week of the project to explain the idea of the project so the teachers can validate the idea                                                             |    0.2 |
-| 2   | The GitHub Discussion is updated with the link to the repository and a related commit hash before the deadline - every 24 hours after the deadline will result in a -1 point penalty on the final grade |    0.2 |
-
 ### Category 2 - Git, GitHub and Markdown
 
-| #   | Criterion                                                                                                                                                                | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-| 3   | Issues and pull requests are created/used all along the project to describe/integrate new features, elements to improve, etc. in your project                            |    0.2 |
-| 4   | The README is well structured and explains the purpose of your application so new users can understand it                                                                |    0.2 |
-| 5   | The README explains how to use your application with examples and outputs so a new user/developer can understand your application without having to run it locally       |    0.2 |
-| 6   | The README describes explicit commands to clone and build your application with Git and Maven so new developers can start and develop your project on their own computer |    0.2 |
+| #   | Criterion                                                                                                                                                                          | Points |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 1   | The README is well structured and explains the purpose of your network application so new users can understand it                                                                  |    0.2 |
+| 2   | The README explains how to use your network application with examples and outputs so a new user/developer can understand your network application without having to run it locally |    0.2 |
+| 3   | The README describes explicit commands to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer   |    0.2 |
 
 ### Category 3 - Java, IntelliJ IDEA and Maven
 
 | #   | Criterion                                                                                                                                       | Points |
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 7   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase |    0.2 |
+| 4   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase |    0.2 |
+
+### Category N - Docker and Docker Compose
+
+| #   | Criterion                                                                                                                                               | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 5   | The network application is packaged and published to GitHub Container Registry with Docker so other people can use your network application with Docker |    0.2 |
+| 6   | The README describes explicit commands to build and publish your network application with Docker                                                        |    0.2 |
+| 7   | The README explains how to use your network application with Docker (`docker run` is enough for this practical work, no need to use Docker Compose)     |    0.2 |
 
 ### Category 4 - Define an application protocol
 
@@ -190,8 +200,6 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 - The application must be written in Java, compatible with Java 21
 - The application must be built using Maven with the `maven-shade-plugin` plugin
 - The application must use the picocli dependency
-- You can only use the Java classes seen in the course to initiate the network
-  connection
 - Your application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word **slightly**, no
   need to shoot for the moon!)
@@ -200,35 +208,19 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Create diagrams
 
-You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
+You can use [PlantUML](https://plantuml.com/), [draw.io](https://draw.io/) or
 any other tools you want to create your diagrams.
-
-### POSIX
-
-> The Portable Operating System Interface (POSIX) standard is a family of
-> standards specified by the IEEE Computer Society for maintaining compatibility
-> between operating systems. POSIX defines both the system and user-level
-> application programming interfaces (APIs), along with command line shells and
-> utility interfaces, for software compatibility (portability) with variants of
-> Unix and other operating systems.
->
-> <https://en.wikipedia.org/wiki/POSIX>
-
-Not all programs are/can be POSIX compliant. If you try to comply with the POSIX
-standard, you will be able to run your program on various operating systems
-without any issues.
 
 ## Submission
 
-**Your work is due on the day before the presentations at 23h59**. Check the
-[Planning](https://github.com/orgs/heig-vd-dai-course/projects) for the exact
-date.
+Your work is due as follow:
 
-> [!IMPORTANT]
+- DAI-TIC-C (Friday mornings): **01.12.2024 23:59**
+- DAI-TIC-B (Monday mornings): **05.12.2024 23:59**
+
+> [!CAUTION]
 >
-> Any minutes after the deadline will result in a penalty of -1 point on the
-> final grade. Each day of delay will result in a penalty of -1 point on the
-> final grade.
+> Each day of delay will result in a penalty of -1 point on the final grade.
 
 You must update the GitHub Discussion you created previously with the following
 information:
@@ -236,11 +228,79 @@ information:
 - **Description**: The link to your repository as well as the commit hash you
   want to submit
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
 > If you do not update the GitHub Discussion with the link to your repository
 > and the commit hash before the deadline, it is considered as a late submission
 > and you will be penalized.
+
+## Presentations
+
+The practical work presentations will take place in **room TBD** (next to the
+stairs) on:
+
+- DAI-TIC-B (Monday mornings): **02.12.2024 8:30-10:25**
+- DAI-TIC-C (Friday mornings): **06.12.2024 8:30-10:25**
+
+We only have **TBD minutes per group**. You decide what you want to show us and
+how you want to present it.
+
+**Come 5 minutes before your time slot** (mentioned in the presentation) with
+your computer. You will have access to a video projector.
+
+**Please state your group on GitHub Discussions before next week**. This will
+allow us to prepare the order of presentation.
+
+<!--
+The order of presentation is random and is stated in the next tables:
+
+- [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
+- [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
+
+### DAI-TIC-B (Monday mornings)
+
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
+| 11  | TBD   | TDB     |
+| 12  | TBD   | TDB     |
+| 13  | TBD   | TDB     |
+| 14  | TBD   | TDB     |
+| 15  | TBD   | TDB     |
+| 16  | TBD   | TDB     |
+| 17  | TBD   | TDB     |
+| 18  | TBD   | TDB     |
+
+### DAI-TIC-C (Friday mornings)
+
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
+| 11  | TBD   | TDB     |
+| 12  | TBD   | TDB     |
+| 13  | TBD   | TDB     |
+| 14  | TBD   | TDB     |
+| 15  | TBD   | TDB     |
+| 16  | TBD   | TDB     |
+-->
 
 ## Grades and feedback
 
@@ -270,7 +330,7 @@ La note a été saisie dans GAPS également.
 Nous restons à votre disposition pour toute question.
 
 Cordialement,
-Ludovic Delafontaine et Hadrien Louis
+[Le personnel enseignant]
 ```
 
 </details>
