@@ -53,8 +53,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 ## Objectives
 
 An application protocol is a document that is used to define how applications
-exchange information between them (usually a between a client and a server). It
-is defined by a set of rules that each party must follow to communicate.
+exchange information between them (usually between a client and a server). It is
+defined by a set of rules that each party must follow to communicate.
 
 In this chapter, you will have a refresh about networking and you will learn
 where to find information about application protocols, how is defined an
