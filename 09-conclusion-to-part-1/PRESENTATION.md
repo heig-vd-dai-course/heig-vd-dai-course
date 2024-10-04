@@ -76,7 +76,7 @@ _paginate: false
 - The basics of Git, GitHub and Markdown
 - The basics of Java, IntelliJ IDEA and Maven with external dependencies
 - The different types of Java IOs and their use cases (📝 vs. 🤖)
-- The basics of Docker and Docker Compose with external registries
+- The theory of Docker and Docker Compose
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
