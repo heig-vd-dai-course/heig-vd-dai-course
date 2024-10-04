@@ -370,8 +370,8 @@ The game is simple: the server generates a random number between 1 and 100
 The client has to guess the number. The server will respond with `HIGHER`,
 `LOWER` or `CORRECT` depending on the number guessed by the client.
 
-Once the client has guessed the number, the server will respond with `CORRECT`
-and the game will end.
+Once the client has guessed the number, the client can ask the server to restart
+the game with a `RESTART` message or to quit the game.
 
 #### The exercise
 
