@@ -220,7 +220,7 @@ class BinaryWriteFileExample {
 }
 ```
 
-### Reading and writing binary data with a buffer
+### Reading and writing binary data with buffers
 
 - Reading and writing byte by byte is not efficient: each `read()` or `write()`
   call results in a system call every time
@@ -254,7 +254,7 @@ The same applies for writing:
 ---
 
 - `BufferedInputStream` and `BufferedOutputStream` classes are used to
-  read/write binary data with a buffer
+  read/write binary data with buffers
 - Let's have a look at the code examples `BinaryBufferReadFileExample` and
   `BinaryBufferWriteFileExample`
 
@@ -404,7 +404,7 @@ class TextReadAndWriteFileExample {
 - Just like with binary data, reading and writing text data byte by byte is not
   efficient
 - `BufferedReader` and `BufferedWriter` classes are used to read/write text data
-  with a buffer
+  with buffers
 - Let's have a look at the code example `TextBufferReadAndWriteFileExample`
 
 ![bg right:45% w:90%](./images/processing-text-data.png)

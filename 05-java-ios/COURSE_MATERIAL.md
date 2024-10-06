@@ -33,7 +33,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Processing binary data with the Java IO API](#processing-binary-data-with-the-java-io-api)
   - [Reading binary data](#reading-binary-data)
   - [Writing binary data](#writing-binary-data)
-  - [Reading and writing binary data with a buffer](#reading-and-writing-binary-data-with-a-buffer)
+  - [Reading and writing binary data with buffers](#reading-and-writing-binary-data-with-buffers)
   - [A quick note on little endian vs. big endian](#a-quick-note-on-little-endian-vs-big-endian)
 - [Processing text data with the Java IO API](#processing-text-data-with-the-java-io-api)
   - [Ancestor of character representations: ASCII](#ancestor-of-character-representations-ascii)
@@ -294,7 +294,7 @@ file `binary-file.bin` in the current directory.
 Compile and execute the `BinaryReadFileExample.java` file. This will read the
 content of the file `binary-file.bin` and print the file content to the console.
 
-### Reading and writing binary data with a buffer
+### Reading and writing binary data with buffers
 
 When you read or write binary data byte by byte, each `read()` or `write()` call
 will issue a system call to read or write one byte from or to the file. This is
@@ -326,7 +326,7 @@ adds buffering to the input stream. The `BufferedOutputStream` class is a
 subclass of the `OutputStream` class that adds buffering to the output stream.
 
 Open the `BinaryBufferReadFileExample.java` file in the `05-java-ios` directory
-to see how to read binary data with a buffer.
+to see how to read binary data with buffers.
 
 Here are the changes between the `BinaryReadFileExample.java` file and the
 `BinaryBufferReadFileExample.java` file:
@@ -362,7 +362,7 @@ the content of the file `binary-file.bin` and print the file content to the
 console.
 
 Open the `BinaryBufferWriteFileExample.java` file in the `05-java-ios` directory
-to see how to write binary data with a buffer.
+to see how to write binary data with buffers.
 
 Here are the changes between the `BinaryWriteFileExample.java` file and the
 `BinaryBufferWriteFileExample.java` file:
@@ -598,7 +598,7 @@ Just as with binary data, reading and writing text data byte by byte is not
 efficient. You can use a buffer to read and write text data more efficiently.
 
 Open the `TextBufferReadAndWriteFileExample.java` file in the `05-java-ios`
-directory to see how to read and write text data with a buffer.
+directory to see how to read and write text data with buffers.
 
 Here are the changes between the `TextReadAndWriteFileExample.java` file and the
 `TextBufferReadAndWriteFileExample.java` file:
@@ -686,7 +686,7 @@ BufferedReader br = new BufferedReader(reader);
 Notice that this time, it opens the input file using a `FileInputStream` class
 as binary data. It then uses the class `InputStreamReader` to decode the binary
 data to text data using the `UTF-8` character encoding. And finally, it uses the
-`BufferedReader` class to read the text data with a buffer.
+`BufferedReader` class to read the text data with buffers.
 
 The following line opens a file for writing text data. It will attempt to open
 the file `TextEndOfLineCharactersExample.txt` in the current directory:
@@ -700,7 +700,7 @@ BufferedWriter bw = new BufferedWriter(writer);
 Notice that this time, it opens the output file using a `FileOutputStream` class
 as binary data. It then uses th class `OutputStreamWriter` to write the file
 with the `UTF-8` character encoding. And finally, it uses a `BufferedWriter`
-class to write the binary data with a buffer.
+class to write the binary data with buffers.
 
 The following line reads data from the file line by line and writes it to the
 output file with the end of line character:
