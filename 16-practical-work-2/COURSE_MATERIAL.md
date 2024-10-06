@@ -95,13 +95,6 @@ information:
 >
 > Please refer to the grading criteria to know what is expected from you.
 
-> [!IMPORTANT]
->
-> **Please do it a soon as possible**, even if you do not have a clear idea yet
-> as it will help us to plan the practical work presentations.
->
-> Please refer to the grading criteria to know what is expected from you.
-
 ## Idea validation
 
 The teaching staff might ask you to change the scope of your practical work if
@@ -170,7 +163,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 | #   | Criterion                                                                                                                | Points |
 | --- | ------------------------------------------------------------------------------------------------------------------------ | -----: |
-| 14  | The server starts/listens on the defined port(s) by default (you must must be able to change it if needed)               |    0.2 |
+| 14  | The server starts/listens on the defined port(s) by default (you must be able to change it if needed)                    |    0.2 |
 | 15  | The client accesses the server on a given host (you must be able to change it)                                           |    0.2 |
 | 16  | The client accesses the server on the defined port(s) by default (you must be able to change it if needed)               |    0.2 |
 | 17  | The client and server exchange messages/actions/commands to interact with each other                                     |    0.2 |
