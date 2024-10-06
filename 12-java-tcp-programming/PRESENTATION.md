@@ -300,6 +300,12 @@ Concurrency can be achieved with:
 
 ![bg right:40%](https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?fit=crop&h=720)
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->
