@@ -4,7 +4,7 @@ skinparam componentStyle rectangle
 skinparam ComponentPadding 10
 skinparam BoxPadding 20
 
-title Practical Work 3 - Architecture
+title Practical Work 2 - UDP network application - Architecture
 
 interface "Thermometer 1" as therm1
 interface "Humidity 1" as hum1
