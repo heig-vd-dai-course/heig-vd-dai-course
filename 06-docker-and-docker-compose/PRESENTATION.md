@@ -218,8 +218,8 @@ Check the code examples in the
 - Basic Dockerfile
 - Dockerfile with command
 - Dockerfile with entrypoint and command
-- Dockerfile with build arguments
 - Dockerfile with run and copy commands
+- Dockerfile with build arguments
 
 ### Summary
 

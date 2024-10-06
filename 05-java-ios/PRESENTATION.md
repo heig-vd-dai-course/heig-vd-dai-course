@@ -220,7 +220,7 @@ class BinaryWriteFileExample {
 }
 ```
 
-### Reading and writing binary data with a buffer
+### Reading and writing binary data with buffers
 
 - Reading and writing byte by byte is not efficient: each `read()` or `write()`
   call results in a system call every time
@@ -254,7 +254,7 @@ The same applies for writing:
 ---
 
 - `BufferedInputStream` and `BufferedOutputStream` classes are used to
-  read/write binary data with a buffer
+  read/write binary data with buffers
 - Let's have a look at the code examples `BinaryBufferReadFileExample` and
   `BinaryBufferWriteFileExample`
 
@@ -263,8 +263,6 @@ The same applies for writing:
 ---
 
 ```diff
- class BinaryBufferReadFileExample {
-
    public static void main(String[] args) throws IOException {
      InputStream fis = new FileInputStream("binary-file.bin");
 +    InputStream bis = new BufferedInputStream(fis);
@@ -276,32 +274,29 @@ The same applies for writing:
        System.out.print(b);
      }
 
+-    fis.close();
++    // Closing the BufferedInputStream automatically closes the FileInputStream
 +    bis.close();
-     fis.close();
    }
- }
 ```
 
 ---
 
 ```diff
- class BinaryBufferWriteFileExample {
-
    public static void main(String[] args) throws IOException {
      OutputStream fos = new FileOutputStream("binary-file.bin");
-+    BufferedOutputStream bos = new BufferedOutputStream(fos);
++    OutputStream bos = new BufferedOutputStream(fos);
 
      for (int i = 0; i < 256; i++) {
 -      fos.write(i);
 +      bos.write(i);
      }
 
+-    fos.close();
 +    // Flush the buffer to write the remaining bytes
 +    bos.flush();
 +    bos.close();
-     fos.close();
    }
- }
 ```
 
 ### A quick note on little endian vs. big endian
@@ -409,7 +404,7 @@ class TextReadAndWriteFileExample {
 - Just like with binary data, reading and writing text data byte by byte is not
   efficient
 - `BufferedReader` and `BufferedWriter` classes are used to read/write text data
-  with a buffer
+  with buffers
 - Let's have a look at the code example `TextBufferReadAndWriteFileExample`
 
 ![bg right:45% w:90%](./images/processing-text-data.png)
@@ -417,13 +412,11 @@ class TextReadAndWriteFileExample {
 ---
 
 ```diff
- class TextBufferReadAndWriteFileExample {
-
    public static void main(String[] args) throws IOException {
-     Reader reader = new FileReader("file.java", StandardCharsets.UTF_8);
+     Reader reader = new FileReader("TextReadAndWriteFileExample.java", StandardCharsets.UTF_8);
 +    BufferedReader br = new BufferedReader(reader);
 +
-     Writer writer = new FileWriter("file.txt", StandardCharsets.UTF_8);
+     Writer writer = new FileWriter("TextReadAndWriteFileExample.txt", StandardCharsets.UTF_8);
 +    BufferedWriter bw = new BufferedWriter(writer);
 
      // -1 indicates the end of the file
@@ -434,9 +427,12 @@ class TextReadAndWriteFileExample {
 +      bw.write(c);
      }
 
-+    writer.flush();
-     writer.close();
-     reader.close();
+-    writer.close();
+-    reader.close();
++    // Flush the buffer to write the remaining bytes
++    bw.flush();
++    bw.close();
++    br.close();
    }
 ```
 
