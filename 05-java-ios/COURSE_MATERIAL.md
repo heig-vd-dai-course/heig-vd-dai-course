@@ -334,7 +334,7 @@ Here are the changes between the `BinaryReadFileExample.java` file and the
 ```diff
    public static void main(String[] args) throws IOException {
      InputStream fis = new FileInputStream("binary-file.bin");
-+    InputStream bis = new BufferedInputStream(fis);
++    BufferedInputStream bis = new BufferedInputStream(fis);
 
      // -1 indicates the end of the file
      int b;
@@ -343,8 +343,9 @@ Here are the changes between the `BinaryReadFileExample.java` file and the
        System.out.print(b);
      }
 
+-    fis.close();
++    // Closing the BufferedInputStream automatically closes the FileInputStream
 +    bis.close();
-     fis.close();
    }
 ```
 
@@ -376,10 +377,10 @@ Here are the changes between the `BinaryWriteFileExample.java` file and the
 +      bos.write(i);
      }
 
+-    fos.close();
 +    // Flush the buffer to write the remaining bytes
 +    bos.flush();
 +    bos.close();
-     fos.close();
    }
 ```
 
@@ -550,8 +551,8 @@ This is done using the `Reader` and `Writer` classes:
 - The `Writer` class is an abstract class that is the superclass of all classes
   representing an output stream of characters (e.g. `FileWriter`).
 
-Open the `TextReadAndWriteFileExample.java` file in the `05-java-ios` directory to see
-how to read and write text data.
+Open the `TextReadAndWriteFileExample.java` file in the `05-java-ios` directory
+to see how to read and write text data.
 
 The following line opens a file for reading text data. It will attempt to open
 the file `TextReadAndWriteFileExample.java` (the current file) in the current
@@ -599,7 +600,7 @@ efficient. You can use a buffer to read and write text data more efficiently.
 Open the `TextBufferReadAndWriteFileExample.java` file in the `05-java-ios`
 directory to see how to read and write text data with a buffer.
 
-Here are the changes between the `TextReadFileExample.java` file and the
+Here are the changes between the `TextReadAndWriteFileExample.java` file and the
 `TextBufferReadAndWriteFileExample.java` file:
 
 ```diff
@@ -618,9 +619,12 @@ Here are the changes between the `TextReadFileExample.java` file and the
 +      bw.write(c);
      }
 
-+    writer.flush();
-     writer.close();
-     reader.close();
+-    writer.close();
+-    reader.close();
++    // Flush the buffer to write the remaining bytes
++    bw.flush();
++    bw.close();
++    br.close();
    }
 ```
 
@@ -745,7 +749,7 @@ The common exceptions you might encounter are:
 - `IOException`: the file cannot be accessed for other reasons
 
 The `FileNotFoundException` and `UnsupportedEncodingException` exceptions are
-ihnerited from the `IOException` exception.
+inherited from the `IOException` exception.
 
 The same applies when you will use the network in future chapters: the network
 might be down, the connection might be lost, etc.

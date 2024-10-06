@@ -263,8 +263,6 @@ The same applies for writing:
 ---
 
 ```diff
- class BinaryBufferReadFileExample {
-
    public static void main(String[] args) throws IOException {
      InputStream fis = new FileInputStream("binary-file.bin");
 +    InputStream bis = new BufferedInputStream(fis);
@@ -276,32 +274,29 @@ The same applies for writing:
        System.out.print(b);
      }
 
+-    fis.close();
++    // Closing the BufferedInputStream automatically closes the FileInputStream
 +    bis.close();
-     fis.close();
    }
- }
 ```
 
 ---
 
 ```diff
- class BinaryBufferWriteFileExample {
-
    public static void main(String[] args) throws IOException {
      OutputStream fos = new FileOutputStream("binary-file.bin");
-+    BufferedOutputStream bos = new BufferedOutputStream(fos);
++    OutputStream bos = new BufferedOutputStream(fos);
 
      for (int i = 0; i < 256; i++) {
 -      fos.write(i);
 +      bos.write(i);
      }
 
+-    fos.close();
 +    // Flush the buffer to write the remaining bytes
 +    bos.flush();
 +    bos.close();
-     fos.close();
    }
- }
 ```
 
 ### A quick note on little endian vs. big endian
@@ -417,13 +412,11 @@ class TextReadAndWriteFileExample {
 ---
 
 ```diff
- class TextBufferReadAndWriteFileExample {
-
    public static void main(String[] args) throws IOException {
-     Reader reader = new FileReader("file.java", StandardCharsets.UTF_8);
+     Reader reader = new FileReader("TextReadAndWriteFileExample.java", StandardCharsets.UTF_8);
 +    BufferedReader br = new BufferedReader(reader);
 +
-     Writer writer = new FileWriter("file.txt", StandardCharsets.UTF_8);
+     Writer writer = new FileWriter("TextReadAndWriteFileExample.txt", StandardCharsets.UTF_8);
 +    BufferedWriter bw = new BufferedWriter(writer);
 
      // -1 indicates the end of the file
@@ -434,9 +427,12 @@ class TextReadAndWriteFileExample {
 +      bw.write(c);
      }
 
-+    writer.flush();
-     writer.close();
-     reader.close();
+-    writer.close();
+-    reader.close();
++    // Flush the buffer to write the remaining bytes
++    bw.flush();
++    bw.close();
++    br.close();
    }
 ```
 
