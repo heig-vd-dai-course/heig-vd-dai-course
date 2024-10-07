@@ -629,7 +629,8 @@ You will write a Dockerfile, build it with a tag and run it with Docker.
 Using all the elements you have learned so far, create a Dockerfile that will
 run the JAR file you have from the Java IOs chapter.
 
-You can use the following Dockerfile as a starting point:
+You can use the following Dockerfile at the root level of the Java IOs project
+as a starting point:
 
 ```dockerfile
 # Base image
@@ -838,14 +839,14 @@ your GitHub username:
 
 ```sh
 # Write a 100-bytes.bin file to /data/100-bytes.bin
-docker run --rm -v "$(pwd):/data" java-ios-docker \
+docker run --rm -v "$(pwd):/data" ghcr.io/<username>/java-ios-docker \
   --implementation BUFFERED_BINARY \
   /data/100-bytes.bin \
   write \
   --size 100
 
 # Read the 100-bytes.bin file from /data/100-bytes.bin
-docker run --rm -v "$(pwd):/data" java-ios-docker \
+docker run --rm -v "$(pwd):/data" ghcr.io/<username>/java-ios-docker \
   --implementation BUFFERED_BINARY \
   /data/100-bytes.bin \
   read
