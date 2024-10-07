@@ -1547,7 +1547,6 @@ Spotless is a code formatter that can be used to format your code automatically.
 
 Add the Spotless Maven plugin to the `pom.xml` file:
 
-````xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -1600,7 +1599,7 @@ Add the Spotless Maven plugin to the `pom.xml` file:
     </plugins>
   </build>
 </project>
-````
+```
 
 The `spotless-maven-plugin` plugin will intervene in the `package` phase of the
 Maven lifecycle. It will execute the `check` goal, which will check if the code
