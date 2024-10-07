@@ -629,8 +629,8 @@ You will write a Dockerfile, build it with a tag and run it with Docker.
 Using all the elements you have learned so far, create a Dockerfile that will
 run the JAR file you have from the Java IOs chapter.
 
-You can use the following Dockerfile at the root level of the Java IOs project
-as a starting point:
+You can create a new file named "Dockerfile" (without any extension) at the root
+level of the Java IOs project as a starting point:
 
 ```dockerfile
 # Base image
