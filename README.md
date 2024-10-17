@@ -46,7 +46,6 @@ The entire course planning for the semester is available at
 - [10. Introduction to part 2](./10-introduction-to-part-2/README.md)
 - [11. Define an application protocol (2 periods)](./11-define-an-application-protocol/README.md)
 - [12. Java TCP programming (2 periods)](./12-java-tcp-programming/README.md)
-  (WIP)
 - [13. Java UDP programming (2 periods)](./13-java-udp-programming/README.md)
   (WIP)
 - [14. Java network concurrency (2 periods)](./14-java-network-concurrency/README.md)
