@@ -32,10 +32,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Server structure and methods](#server-structure-and-methods)
 - [Processing data from streams](#processing-data-from-streams)
   - [Variable length data](#variable-length-data)
-  - [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
+- [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
 - [Practical content](#practical-content)
   - [Check and run the code examples](#check-and-run-the-code-examples)
   - [Implement the _"Guess the number"_ game](#implement-the-guess-the-number-game)
+  - [Dockerize the application](#dockerize-the-application)
   - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -259,7 +260,7 @@ for (int i = 0; i < dataLength; i++) {
 }
 ```
 
-### Read-eval-print loop (REPL)
+## Read-eval-print loop (REPL)
 
 In order to run multiple commands/actions on the server without closing the
 connection, you can use what is called a
@@ -342,7 +343,7 @@ time.
 Do you have any idea why? You will find the answer in a future chapter but you
 can try to find it by yourself.
 
-#### Dockerize the application
+### Dockerize the application
 
 Using the Docker knowledge you have acquired in the
 [Docker and Docker Compose chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose),

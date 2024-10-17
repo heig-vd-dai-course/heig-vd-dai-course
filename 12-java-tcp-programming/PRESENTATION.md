@@ -298,9 +298,9 @@ Do you have any questions?
 ### What will you do?
 
 - Run full client/server examples
-- Implement the _"Guess the number"_ game:
-  - Using the application protocol you made in the previous chapter!
-  - A template is here for you
+- Implement the _"Guess the number"_ game (using the application protocol you
+  made in the previous chapter!)
+- Dockerize and share the game.
 
 ![bg right contain](./images/what-will-you-do-server.png)
 ![bg right vertical contain](./images/what-will-you-do-client.png)
