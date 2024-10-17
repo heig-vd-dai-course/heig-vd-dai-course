@@ -35,11 +35,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Section 2 - Transport protocol](#section-2---transport-protocol)
   - [Section 3 - Messages](#section-3---messages)
   - [Section 4 - Examples](#section-4---examples)
+- [Example - The SMS protocol](#example---the-sms-protocol)
 - [Practical content](#practical-content)
-  - [Study the SMS protocol example](#study-the-sms-protocol-example)
   - [Define the application protocol for the _"Guess the number"_ game](#define-the-application-protocol-for-the-guess-the-number-game)
   - [Define the application protocol for the _"Temperature monitoring"_ application](#define-the-application-protocol-for-the-temperature-monitoring-application)
-  - [Share your application protocols](#share-your-application-protocols)
+  - [Compare your application protocols with the official ones](#compare-your-application-protocols-with-the-official-ones)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -335,24 +335,22 @@ client and the server and the exchange order:
 It is important to define these examples to illustrate the protocol and to help
 the reader to understand the protocol using sequence or state diagrams.
 
-## Practical content
+## Example - The SMS protocol
 
-### Study the SMS protocol example
+> You are working for a startup that wants to create a new communication app.
+>
+> The app is simple: it allows users (with unique usernames) to send small text
+> messages (maximum 100 characters) to each other. The server is in charge of
+> sending the messages to the recipients.
+>
+> You are asked to define the application protocol that will be used by the
+> clients and the server.
 
-In this section, you explore and study the SMS protocol example.
-
-#### Get the latest changes from the code examples
-
-Pull the latest changes from the previously cloned
+Check the complete example in the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository or clone it if you have not done it yet.
+repository.
 
-#### Explore the code examples
-
-In the `11-define-an-application-protocol` directory, checkout the `README.md`
-file to get more information about the SMS protocol example.
-
-Take some time to explore this example and how it is structured.
+## Practical content
 
 ### Define the application protocol for the _"Guess the number"_ game
 
@@ -365,13 +363,14 @@ You are working for a game company that wants to create a new game called
 _"Guess the number"_.
 
 The game is simple: the server generates a random number between 1 and 100
-(customizable).
+(inclusive).
 
-The client has to guess the number. The server will respond with `HIGHER`,
-`LOWER` or `CORRECT` depending on the number guessed by the client.
+The client has to guess the number. The server will respond with with a message
+to indicate if the number is higher, lower or correct than the number guessed by
+the client.
 
 Once the client has guessed the number, the client can ask the server to restart
-the game with a `RESTART` message or to quit the game.
+the game or to quit the game.
 
 #### The exercise
 
@@ -391,9 +390,18 @@ Keep in mind the following points:
 You can represent your application protocol using a sequence diagram.
 
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
-any other tools you want to create your diagrams.
+any other tools you want to create your diagrams (even a simple pen and paper!).
 
 This protocol will be used in a future chapter to implement the game.
+
+> [!IMPORTANT]
+>
+> You might not be able to fill all sections of the protocol yet. It is totally
+> fine as we have not seen TCP and UDP yet. Do not worry if some sections are
+> empty or if you do not have all the information to fill them (such as the
+> transport protocols).
+>
+> You will go back to this protocol in a future chapter to complete it.
 
 ### Define the application protocol for the _"Temperature monitoring"_ application
 
@@ -432,37 +440,44 @@ Keep in mind the following points:
 You can represent your application protocol using a sequence diagram.
 
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
-any other tools you want to create your diagrams.
+any other tools you want to create your diagrams (even a simple pen and paper!).
 
 This protocol will be used in a future chapter to implement the application.
 
-### Share your application protocols
+> [!IMPORTANT]
+>
+> You might not be able to fill all sections of the protocol yet. It is totally
+> fine as we have not seen TCP and UDP yet. Do not worry if some sections are
+> empty or if you do not have all the information to fill them (such as the
+> transport protocols).
+>
+> You will go back to this protocol in a future chapter to complete it.
 
-Share your application protocols in the GitHub Discussions of this organization:
-<https://github.com/orgs/heig-vd-dai-course/discussions>.
+### Compare your application protocols with the official ones
 
-Create a new discussion with the following information:
+Compare your solutions with the official ones stated in the
+[Solution](#solution) section.
 
-- **Title**: DAI 2024-2025 - Check out my application protocols! - First name
-  Last Name
-- **Category**: Show and tell
-- **Description**: Copy/paste your application protocols in two distinct
-  sections.
-
-This will notify us that you have completed the exercise and we can check your
-work.
-
-You can compare your solution with the official one stated in the
-[Solution](#solution) section, however, **we highly recommend you to try to
-complete the practical content by yourself first to learn the most**.
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- You can check the RFC for the FTP protocol, DNS protocol and the DHCP
-  protocol. Are they similar to the protocols you have seen before? What are the
-  differences?
+#### _"Guess the number"_ game
+
+- Can you update the application protocol to allow the client to specify the
+  range of the number to guess before starting the game?
+
+#### _"Temperature monitoring"_ application
+
+- Can you update the application protocol to allow the operator to have the
+  latest temperature for a given room or the average temperature of that room?
+  - This will require to store all the temperatures received for a given room
+    and to calculate the average temperature instead of storing only the latest
+    temperature.
 
 ## Conclusion
 

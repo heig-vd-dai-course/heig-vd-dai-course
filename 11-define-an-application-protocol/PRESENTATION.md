@@ -174,7 +174,8 @@ find other resources and alternatives as well.
 
 - Lot of work and thinking
 - A protocol is never perfect
-- The more you think and design, the less you will have to change it later
+- The more you take your time to think and design it, the less you will have to
+  change it later
 
 ![bg right contain](./images/how-to-define-an-application-protocol.png)
 
@@ -237,6 +238,17 @@ the reader to understand the protocol using sequence or state diagrams.
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
+
+### Example - The SMS protocol
+
+> You are working for a startup that wants to create a new communication app.
+>
+> The app is simple: it allows users (with unique usernames) to send small text
+> messages (maximum 100 characters) to each other. The server is in charge of
+> sending the messages to the recipients.
+>
+> You are asked to define the application protocol that will be used by the
+> clients and the server.
 
 ## Questions
 
