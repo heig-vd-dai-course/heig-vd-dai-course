@@ -370,7 +370,7 @@ to indicate if the number is higher, lower or correct than the number guessed by
 the client.
 
 Once the client has guessed the number, the client can ask the server to restart
-the game to quit the game.
+the game or to quit the game.
 
 #### The exercise
 
