@@ -410,7 +410,7 @@ In the next chapter, you will learn the following topics:
 - Java UDP programming
   - How does UDP work?
   - How does it compare to TCP?
-  - How to create UDP network applications using the DatagramSocket API
+  - How to create UDP network applications
   - How to make usage of UDP specificities to create efficient network
     applications
   - Implement the _"Temperature monitoring"_ application using UDP
