@@ -36,7 +36,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Practical content](#practical-content)
   - [Check and run the code examples](#check-and-run-the-code-examples)
   - [Implement the _"Guess the number"_ game](#implement-the-guess-the-number-game)
-  - [Try to access the server from many clients at the same time](#try-to-access-the-server-from-many-clients-at-the-same-time)
   - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
@@ -336,13 +335,42 @@ or the one provided in the solution, implement the _"Guess the number"_ game.
 
 Use the code examples you just explored to help you implement the game.
 
-### Try to access the server from many clients at the same time
-
-Try to access the server from many clients at the same time. You will see that
-the server can only handle one client at a time.
+Once you have implemented the game, try to access the server from many clients
+at the same time. You will see that the server can only handle one client at a
+time.
 
 Do you have any idea why? You will find the answer in a future chapter but you
 can try to find it by yourself.
+
+#### Dockerize the application
+
+Using the Docker knowledge you have acquired in the
+[Docker and Docker Compose chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose),
+dockerize the application.
+
+The steps to dockerize the application are the following:
+
+- Create a `Dockerfile` for the application
+- Publish the application to GitHub Container Registry
+
+You should then be able to run the server and the client in Docker containers
+and access the server from the client using the following commands:
+
+```sh
+# Start the server
+docker run --rm -it --name the-server <docker-image-tag> server
+
+# Start the client and access the server container
+docker run --rm -it <docker-image-tag> client --host the-server
+```
+
+The `--name` sets the name of the container as well as the hostname of the
+container. This allows to access the server container using its hostname from
+the client.
+
+You might notice that no ports are published with the host. As both container
+run on Docker, they share the same network bridge. They can thus communicate
+together without passing by the host.
 
 ### Compare your solution with the official one
 
@@ -436,3 +464,7 @@ discuss it!
 
 - Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
   [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
+
+```
+
+```
