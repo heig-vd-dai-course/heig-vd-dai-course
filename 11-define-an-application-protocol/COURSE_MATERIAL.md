@@ -473,7 +473,11 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 #### _"Temperature monitoring"_ application
 
-- Can you update the application protocol to support mul
+- Can you update the application protocol to allow the operator to have the
+  latest temperature for a given room or the average temperature of that room?
+  - This will require to store all the temperatures received for a given room
+    and to calculate the average temperature instead of storing only the latest
+    temperature.
 
 ## Conclusion
 
