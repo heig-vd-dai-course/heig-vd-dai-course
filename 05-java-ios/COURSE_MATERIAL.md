@@ -110,7 +110,7 @@ As a quick reminder, these commands can help you to navigate in the terminal:
 
 #### Explore and run the code examples
 
-In the `05-java-ios` directory, checkout the `README.md` file to learn how to
+In the `05-java-ios` directory, check out the `README.md` file to learn how to
 run the code examples.
 
 As a quick reminder, you can run the code examples using the following command:

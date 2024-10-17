@@ -158,7 +158,7 @@ directory.
 
 #### Explore and run the code examples
 
-In the `06-docker-and-docker-compose` directory, checkout the `README.md` file
+In the `06-docker-and-docker-compose` directory, check out the `README.md` file
 to learn how to run the code examples.
 
 You now have everything you need to run the code examples. Let's dive into the
