@@ -33,9 +33,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Server structure and methods](#server-structure-and-methods)
 - [Processing data from streams](#processing-data-from-streams)
   - [Variable length data](#variable-length-data)
+  - [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
 - [Practical content](#practical-content)
-  - [Explore the code examples](#explore-the-code-examples)
+  - [Check and run the code examples](#check-and-run-the-code-examples)
   - [Implement the _"Guess the number"_ game](#implement-the-guess-the-number-game)
+  - [Try to access the server from many clients at the same time](#try-to-access-the-server-from-many-clients-at-the-same-time)
+  - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -59,15 +62,6 @@ server, a file server, a web server, etc.
 
 ## TCP
 
-TODO
-
-In order to run multiple commands/actions on the server without closing the
-connection, you can use what is called a
-[read-eval-print loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
-To make it simple, a REPL is simply a loop that will ask the user to input
-commands. The loop will then execute the command and display the result. The
-loop will continue until the user decides to exit the loop.
-
 TCP is a transport protocol. It is used to transfer data between two
 applications.
 
@@ -85,9 +79,6 @@ connection with the other person before you can talk to them. Once the
 connection is established, you can talk to the other person and they will hear
 everything you say. If they did not hear you well, you can repeat what you said
 until they hear you. They can, of course, also talk to you.
-
-With the help of port numbers, TCP allows multiple applications to communicate
-with each other on the same machine.
 
 TCP is a stream-oriented protocol: data is sent as a stream of bytes. The
 application must split the data into segments. Each segment is identified by a
@@ -270,62 +261,105 @@ for (int i = 0; i < dataLength; i++) {
 }
 ```
 
+### Read-eval-print loop (REPL)
+
+In order to run multiple commands/actions on the server without closing the
+connection, you can use what is called a
+[read-eval-print loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
+
+To make it simple, a REPL is simply a loop that will ask the user to input
+commands. The loop will then execute the command and display the result. The
+loop will continue until the user decides to exit the loop.
+
+In the context of a server, the server will wait for the client to send a
+command. The server will then execute the command and send the result back to
+the client. The server will continue to wait for the client to send a new
+command without closing the connection.
+
+On the client side, the client can interact with the server by sending commands
+to the server until they decide to close the connection.
+
+Both the client and the server can close the connection at any time. It is up to
+the developer to decide when and who manage to close the connection.
+
 ## Practical content
 
-### Explore the code examples
+### Check and run the code examples
 
-In this section, you will retrieve the latest changes from the
+In this section, you will clone the code examples repository to check and run
+the code examples.
+
+#### Clone the repository
+
+Clone the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository.
+repository to get the code examples.
 
-#### Get the latest changes from the code examples
+#### Access the code examples in your terminal
 
-Pull the latest changes from the previously cloned
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository or clone it if you have not done it yet.
+Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
+directory.
 
 #### Explore the code examples
 
 In the `12-java-tcp-programming` directory, checkout the `README.md` file to
 learn how to run the code examples.
 
-Take some time to explore the code examples.
+Take some time to explore and run the code examples.
 
 ### Implement the _"Guess the number"_ game
 
-Using the application protocol you have made (or the one from the official
-solution), implement the _"Guess the number"_ game in Java using the Socket API
-with a TCP server and client.
+In this section, you will implement the _"Guess the number"_ game using the
+application protocol you have made from the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
 
-#### Share your findings
+#### Create and clone the repository
 
-Share your results in the GitHub Discussions of this organization:
-<https://github.com/orgs/heig-vd-dai-course/discussions>.
+You can create a new GitHub project using the template we have prepared for you.
 
-Create a new discussion with the following information:
+When you create a new repository, you can choose to use a template. Select the
+`heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content`
+template.
 
-- **Title**: DAI 2024-2025 - Concurrent Java TCP servers - First name Last Name
-- **Category**: Show and tell
-- **Description**: Answer the questions for this section. Add links to the
-  official Java documentation to support your answers.
+> [!WARNING]
+>
+> Please make sure that the repository owner is your personal GitHub account and
+> not the `heig-vd-dai-course` organization.
 
-This will notify us that you have completed the exercise and we can check your
-work.
+#### Implement the game
 
-You can compare your solution with the official one stated in the
-[Solution](#solution) section, however, **we highly recommend you to try to
-complete the practical content by yourself first to learn the most**.
+Take some time to explore the codebase from the template we have prepared for
+you.
+
+Using the application protocol you have made from the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+or the one provided in the solution, implement the _"Guess the number"_ game.
+
+Use the code examples you just explored to help you implement the game.
+
+### Try to access the server from many clients at the same time
+
+Try to access the server from many clients at the same time. You will see that
+the server can only handle one client at a time.
+
+Do you have any idea why? You will find the answer in a future chapter but you
+can try to find it by yourself.
+
+### Compare your solution with the official one
+
+Compare your solutions with the official ones stated in the
+[Solution](#solution) section.
+
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- Based from the code examples, are you able to create a complete TCP
-  client/server application in Java that implement the DAI protocol presented in
-  chapter
-  [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)?
-  Feel free to create a new repository for this and share it with us in a new
-  discussion on GitHub Discussions!
+- Can you update the network application to allow the client to specify the
+  range of the number to guess before starting the game?
 
 ## Conclusion
 
@@ -334,14 +368,11 @@ This is an optional section. Feel free to skip it if you do not have time.
 In this chapter, you have learned how to use the Socket API to create your own
 TCP clients and servers in Java.
 
-You have also learned how to handle multiple clients at the same time using
-concurrency.
-
-You now have all the knowledge to create your TCP network applications. This is
-a big step forward!
+You have implemented your first network application based on the _"Guess the
+number"_ application protocol. Congratulations! It is a big step forward!
 
 You are now able to create your own network applications, such as a chat server,
-a file server, a web server, etc. Congratulations!
+a file server, a web server, etc.
 
 ### Test your knowledge
 
@@ -349,8 +380,8 @@ At this point, you should be able to answer the following questions:
 
 - What is a socket?
 - What is the difference between a server socket and a client socket?
-- What is the purpose of concurrency?
-- Cite three ways to handle multiple clients with concurrency.
+- How do sockets compare to files?
+- Why is TCP considered as a reliable protocol?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -375,7 +406,15 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-You will start the practical work!
+In the next chapter, you will learn the following topics:
+
+- Java UDP programming
+  - How does UDP work?
+  - How does it compare to TCP?
+  - How to create UDP network applications using the DatagramSocket API
+  - How to make usage of UDP specificities to create efficient network
+    applications
+  - Implement the _"Temperature monitoring"_ application using UDP
 
 ## Additional resources
 
