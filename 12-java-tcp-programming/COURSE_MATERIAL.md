@@ -34,8 +34,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Processing data from streams](#processing-data-from-streams)
   - [Variable length data](#variable-length-data)
 - [Practical content](#practical-content)
-  - [Get the required files](#get-the-required-files)
-  - [Run full client/server examples](#run-full-clientserver-examples)
+  - [Explore the code examples](#explore-the-code-examples)
+  - [Implement the _"Guess the number"_ game](#implement-the-guess-the-number-game)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -57,6 +57,8 @@ in Java.
 This will allow you to create your own network applications, such as a chat
 server, a file server, a web server, etc.
 
+## TCP
+
 TODO
 
 In order to run multiple commands/actions on the server without closing the
@@ -66,22 +68,23 @@ To make it simple, a REPL is simply a loop that will ask the user to input
 commands. The loop will then execute the command and display the result. The
 loop will continue until the user decides to exit the loop.
 
-## TCP
-
 TCP is a transport protocol. It is used to transfer data between two
-applications. TCP can only do UniCast: one application can only communicate with
-one other application at the same time.
+applications.
 
 TCP is a connection-oriented protocol: a connection must be established between
 the two applications before data can be exchanged in a bidirectional way.
 
-TCP is a reliable protocol: data sent is guaranteed to be received by the other
-application.
+TCP can only do Unicast: one application can only communicate with one other
+application at the same time.
+
+It is considered as a reliable protocol as data sent is guaranteed to be
+received by the other application.
 
 A good analogy is to think of TCP as a phone call: you must first establish a
 connection with the other person before you can talk to them. Once the
 connection is established, you can talk to the other person and they will hear
-everything you say.
+everything you say. If they did not hear you well, you can repeat what you said
+until they hear you. They can, of course, also talk to you.
 
 With the help of port numbers, TCP allows multiple applications to communicate
 with each other on the same machine.
@@ -97,8 +100,8 @@ correct order. If a segment is lost, TCP will retransmit it.
 
 ## The Socket API
 
-The Socket API is a Java API that allows you to create TCP/UDP clients and
-servers. It is described in the
+The Socket API is a Java API that allows you to create TCP clients and servers.
+It is described in the
 [`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
 in the
 [`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
@@ -109,6 +112,8 @@ on many platform and languages.
 
 To make it simple, a socket is just like a file that you can open, read from,
 write to and close. To exchange data, sockets on both sides must be connected.
+The processing is the same as with files, seen in the
+[Java IOs chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios).
 
 A socket is identified by an IP address and a port number.
 
@@ -238,7 +243,7 @@ String EOT = "\u0004";
 String line;
 while ((line = in.readLine()) != null && !line.equals(EOT)) {
   System.out.println(
-    "[Server " + SERVER_ID + "] received data from client: " + line
+    "[Server] received data from client: " + line
   );
 }
 ```
@@ -267,7 +272,7 @@ for (int i = 0; i < dataLength; i++) {
 
 ## Practical content
 
-### Get the required files
+### Explore the code examples
 
 In this section, you will retrieve the latest changes from the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
@@ -286,30 +291,11 @@ learn how to run the code examples.
 
 Take some time to explore the code examples.
 
-### Run full client/server examples
+### Implement the _"Guess the number"_ game
 
-#### Explore and run the code examples
-
-In the `12-java-tcp-programming` directory, checkout the `README.md` file to
-learn how to run the code examples.
-
-Take some time to explore the code examples. Run them and see what they do.
-
-#### Answer the following questions
-
-Using the official Java documentation, can you explain the differences between
-the following different implementations? When should you use one or the other
-and why?
-
-- `TcpServerSimpleTextualExample`
-- `TcpServerSingleThreadTextualExample`
-- `TcpServerMultiThreadTextualExample`
-- `TcpServerCachedThreadPoolTextualExample`
-- `TcpServerFixedThreadPoolTextualExample`
-- `TcpServerVirtualThreadTextualExample`
-
-Are you able to explain why the `TcpServerSingleThreadTextualExample` does not
-work as expected?
+Using the application protocol you have made (or the one from the official
+solution), implement the _"Guess the number"_ game in Java using the Socket API
+with a TCP server and client.
 
 #### Share your findings
 
