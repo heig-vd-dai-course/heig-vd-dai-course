@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/116
-[illustration]:
-  https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Java TCP programming - Course material
 
@@ -33,15 +32,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Server structure and methods](#server-structure-and-methods)
 - [Processing data from streams](#processing-data-from-streams)
   - [Variable length data](#variable-length-data)
-- [Handling one client at a time](#handling-one-client-at-a-time)
-- [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
-  - [Multi-processing](#multi-processing)
-  - [Multi-threading](#multi-threading)
-  - [Asynchronous programming](#asynchronous-programming)
+- [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
 - [Practical content](#practical-content)
-  - [Get the required files](#get-the-required-files)
-  - [Send an email using a SMTP client written in Java with the Socket API](#send-an-email-using-a-smtp-client-written-in-java-with-the-socket-api)
-  - [Run full client/server examples](#run-full-clientserver-examples)
+  - [Check and run the code examples](#check-and-run-the-code-examples)
+  - [Implement the _"Guess the number"_ game](#implement-the-guess-the-number-game)
+  - [Dockerize the application](#dockerize-the-application)
+  - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -57,10 +53,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 As you have seen in previous chapters, applications communicate with each other
 using application protocols.
 
-Some tools are created to interact with these protocols. For example, you can
-use Telnet to interact with the SMTP protocol to send emails or SCP to interact
-with the SSH protocol to transfer files.
-
 In this chapter, you will learn how to program your own TCP clients and servers
 in Java.
 
@@ -70,22 +62,22 @@ server, a file server, a web server, etc.
 ## TCP
 
 TCP is a transport protocol. It is used to transfer data between two
-applications. TCP can only do UniCast: one application can only communicate with
-one other application.
+applications.
 
 TCP is a connection-oriented protocol: a connection must be established between
 the two applications before data can be exchanged in a bidirectional way.
 
-TCP is a reliable protocol: data sent is guaranteed to be received by the other
-application.
+TCP can only do Unicast: one application can only communicate with one other
+application at the same time.
 
-A good analogy is to think of TCP as a phone call. You must first establish a
+It is considered as a reliable protocol as data sent is guaranteed to be
+received by the other application.
+
+A good analogy is to think of TCP as a phone call: you must first establish a
 connection with the other person before you can talk to them. Once the
 connection is established, you can talk to the other person and they will hear
-everything you say.
-
-With the help of port numbers, TCP allows multiple applications to communicate
-with each other on the same machine.
+everything you say. If they did not hear you well, you can repeat what you said
+until they hear you. They can, of course, also talk to you.
 
 TCP is a stream-oriented protocol: data is sent as a stream of bytes. The
 application must split the data into segments. Each segment is identified by a
@@ -98,11 +90,11 @@ correct order. If a segment is lost, TCP will retransmit it.
 
 ## The Socket API
 
-The Socket API is a Java API that allows you to create TCP/UDP clients and
-servers. It is described in the
-[`java.net` package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/package-summary.html)
+The Socket API is a Java API that allows you to create TCP clients and servers.
+It is described in the
+[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
 in the
-[`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
+[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
 
 It has originally been developed in C in the context of the Unix operating
 system by Berkeley University. It has been ported to Java and is now available
@@ -110,15 +102,17 @@ on many platform and languages.
 
 To make it simple, a socket is just like a file that you can open, read from,
 write to and close. To exchange data, sockets on both sides must be connected.
+The processing is the same as with files, seen in the
+[Java IOs chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios).
 
 A socket is identified by an IP address and a port number.
 
 A socket can act as a client or as a server:
 
 - A socket accepting connections is called a server socket (class
-  [`ServerSocket`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/ServerSocket.html)).
+  [`ServerSocket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/ServerSocket.html)).
 - A socket initiating a connection is called a client socket (class
-  [`Socket`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/Socket.html)).
+  [`Socket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/Socket.html)).
 
 The following schema shows the workflow of a client/server application:
 
@@ -186,7 +180,7 @@ output = socket.getOutputStream();
 ```
 
 You can then decorate the input and output streams with other streams to process
-the data.
+the data, just as with IOs.
 
 ```java
 // Get input stream as text
@@ -196,7 +190,7 @@ input = new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8);
 output = new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8);
 ```
 
-Use buffered streams to improve performance.
+Use buffered streams to improve performance:
 
 ```java
 // Get input stream as binary with buffer
@@ -206,7 +200,8 @@ input = new BufferedReader(new InputStreamReader(socket.getInputStream());
 output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
 ```
 
-> [!WARNING]  
+> [!IMPORTANT]
+>
 > Do not forget to flush the output stream after writing data to it. Otherwise,
 > the remaining data in the buffer will not be sent to the other application!
 >
@@ -238,7 +233,7 @@ String EOT = "\u0004";
 String line;
 while ((line = in.readLine()) != null && !line.equals(EOT)) {
   System.out.println(
-    "[Server " + SERVER_ID + "] received data from client: " + line
+    "[Server] received data from client: " + line
   );
 }
 ```
@@ -265,258 +260,134 @@ for (int i = 0; i < dataLength; i++) {
 }
 ```
 
-## Handling one client at a time
+## Read-eval-print loop (REPL)
 
-A server that handles one client at a time is called single-threaded, or
-single-threaded server.
+In order to run multiple commands/actions on the server without closing the
+connection, you can use what is called a
+[read-eval-print loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop).
 
-A single-threaded server is quite simple to implement:
+To make it simple, a REPL is simply a loop that will ask the user to input
+commands. The loop will then execute the command and display the result. The
+loop will continue until the user decides to exit the loop.
 
-1. It creates a socket to listen for incoming connections.
-2. When a connection is accepted, it creates a socket to communicate with the
-   client.
-3. It then reads the data sent by the client and sends a response.
+In the context of a server, the server will wait for the client to send a
+command. The server will then execute the command and send the result back to
+the client. The server will continue to wait for the client to send a new
+command without closing the connection.
 
-The main drawback of a single-threaded server is that it can only handle one
-client at a time. If another client tries to connect, it will have to wait until
-the first client is disconnected.
+On the client side, the client can interact with the server by sending commands
+to the server until they decide to close the connection.
 
-An analogy is to think of a single-threaded server as a restaurant with only one
-table. If a customer is already sitting at the table, another customer will have
-to wait until the first customer leaves.
-
-A single-threaded server is therefore not suitable for production. It is
-suitable for testing and learning purposes. In order to manage multiple clients,
-a server must handle multiple sockets.
-
-Multiple ways exist to handle multiple sockets at the same time and is called
-concurrency.
-
-## Handling multiple clients with concurrency
-
-Concurrency is the ability of an application to handle multiple clients at the
-same time.
-
-There are multiple ways to handle multiple clients with concurrency (among
-others):
-
-- Multi-processing
-- Multi-threading
-- Asynchronous programming
-
-Java has a package for concurrency called
-[`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html).
-
-In this course, we will focus on multi-threading but the other methods are
-equally valid and interesting to learn.
-
-### Multi-processing
-
-Multi-processing is the ability of an application to handle multiple processes
-at the same time.
-
-A process is a program in execution. It is identified by a process ID.
-
-A process has its own memory space. It cannot access the memory space of another
-process.
-
-The main process is the process that is created when the application starts.
-
-It creates other processes to handle multiple clients.
-
-A process is a heavy-weight object. It is quite expensive to create and destroy
-as it is a copy of the main process.
-
-Processes can communicate with each other using inter-process communication
-(IPC) but it is quite complex to implement.
-
-An analogy is to think of a process as restaurant chain with multiple
-restaurant. Each restaurant has only one table and can handle one customer. If a
-customer is already sitting at a table of a given restaurant, another customer
-can sit at a table at another restaurant.
-
-### Multi-threading
-
-Multi-threading is the ability of an application to handle multiple threads at
-the same time.
-
-A thread is a sequence of instructions that can be executed independently of the
-main thread.
-
-The main thread is the thread that is created when the application starts.
-
-It creates other threads to handle multiple clients.
-
-Each thread has its own stack and its own program counter.
-
-A thread is therefore quite similar to a process, except that it shares the same
-memory space as the other threads. It is therefore much cheaper to create and
-destroy than a process (but still more expensive than a simple object).
-
-Threads can communicate with each other using shared memory.
-
-Threads are more lightweight than processes but their number is limited by the
-operating system.
-
-There are two ways to manage threads:
-
-- Unlimited threads
-- Thread pool that limits the number of threads
-
-When discussing the unlimited threads approach, an analogy is to think of a
-restaurant with no tables at all. When a new customer arrives, the restaurant
-manager adds a new table for the customer. Each table can handle one customer.
-
-Using this approach, the more customers arrive, the more tables are added. This
-approach is not suitable for production as space and resources are limited.
-
-When discussing the thread pool approach, an analogy is to think of a restaurant
-with a limited number of tables. When a new customer arrives, the restaurant
-manager checks if a table is available. If a table is available, the customer
-can sit at the table. If no table is available, the customer will have to wait
-until a table is available.
-
-Using this approach, the number of tables is limited. This approach is suitable
-for production as space and resources are managed and limited.
-
-### Asynchronous programming
-
-Asynchronous programming is the ability of an application to handle multiple
-tasks at the same time, without blocking the main thread.
-
-Using asynchronous programming, the main thread can perform other tasks while
-waiting for a task to complete.
-
-Asynchronous programming is based on the concept of callbacks. A callback is a
-function that is called when a task is completed.
-
-An analogy is to think of asynchronous programming as a food truck without any
-tables. Once a customer wants something to eat, the person managing the food
-truck gives the customer a ticket. The customer then waits until the food is
-ready but can do other things in the meantime.
-
-Once the food is ready, the person managing the food truck calls the customer.
-The customer then comes to the food truck to get the food.
-
-Asynchronous programming is quite complex to implement. It is therefore not
-covered in this course.
-
-[Node.js](https://nodejs.org/) is a good example of asynchronous programming.
+Both the client and the server can close the connection at any time. It is up to
+the developer to decide when and who manage to close the connection.
 
 ## Practical content
 
-### Get the required files
+### Check and run the code examples
 
-In this section, you will retrieve the latest changes from the
+In this section, you will clone the code examples repository to check and run
+the code examples.
+
+#### Clone the repository
+
+Clone the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository.
+repository to get the code examples.
 
-#### Get the latest changes from the code examples
+#### Access the code examples in your terminal
 
-Pull the latest changes from the previously cloned
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository or clone it if you have not done it yet.
+Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
+directory.
 
 #### Explore the code examples
 
 In the `12-java-tcp-programming` directory, checkout the `README.md` file to
 learn how to run the code examples.
 
-Take some time to explore the code examples.
+Take some time to explore and run the code examples.
 
-### Send an email using a SMTP client written in Java with the Socket API
+### Implement the _"Guess the number"_ game
 
-In this section, you will learn how to send an email using the SMTP protocol
-using the Java Socket API.
+In this section, you will implement the _"Guess the number"_ game using the
+application protocol you have made from the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
 
-#### Start MailHog
+#### Create and clone the repository
 
-Just as in the
-[SMTP and Telnet](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15-smtp-and-ncat)
-chapter, start MailHog in order to receive the emails sent by the Java code
-examples.
+You can create a new GitHub project using the template we have prepared for you.
 
-#### Compile and run the SMTP client
+When you create a new repository, you can choose to use a template. Select the
+`heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content`
+template.
 
-In the `12-java-tcp-programming` directory, compile and run the
-`SmtpClientExample` code example.
+> [!WARNING]
+>
+> Please make sure that the repository owner is your personal GitHub account and
+> not the `heig-vd-dai-course` organization.
+
+#### Implement the game
+
+Take some time to explore the codebase from the template we have prepared for
+you.
+
+Using the application protocol you have made from the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+or the one provided in the solution, implement the _"Guess the number"_ game.
+
+Use the code examples you just explored to help you implement the game.
+
+Once you have implemented the game, try to access the server from many clients
+at the same time. You will see that the server can only handle one client at a
+time.
+
+Do you have any idea why? You will find the answer in a future chapter but you
+can try to find it by yourself.
+
+### Dockerize the application
+
+Using the Docker knowledge you have acquired in the
+[Docker and Docker Compose chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose),
+dockerize the application.
+
+The steps to dockerize the application are the following:
+
+- Create a `Dockerfile` for the application
+- Publish the application to GitHub Container Registry
+
+You should then be able to run the server and the client in Docker containers
+and access the server from the client using the following commands:
 
 ```sh
-# Compile the example
-javac SmtpClientExample.java
+# Start the server
+docker run --rm -it --name the-server <docker-image-tag> server
 
-# Run the example
-java SmtpClientExample
+# Start the client and access the server container
+docker run --rm -it <docker-image-tag> client --host the-server
 ```
 
-The mail has been sent to the MailHog SMTP server. You can check it in the
-MailHog Web interface at <http://localhost:8025>.
+The `--name` sets the name of the container as well as the hostname of the
+container. This allows to access the server container using its hostname from
+the client.
 
-Take some time to explore the code example. You should notice the commands are
-the same as the ones used with Telnet but in an automated way!
+You might notice that no ports are published with the host. As both container
+run on Docker, they share the same network bridge. They can thus communicate
+together without passing by the host.
 
-### Run full client/server examples
+### Compare your solution with the official one
 
-#### Explore and run the code examples
+Compare your solutions with the official ones stated in the
+[Solution](#solution) section.
 
-In the `12-java-tcp-programming` directory, checkout the `README.md` file to
-learn how to run the code examples.
-
-Take some time to explore the code examples. Run them and see what they do.
-
-> [!NOTE]  
-> Please be aware that the `TcpServerVirtualThreadTextualExample` example must
-> be run with Java 21 or later. It is not mandatory to run this example but you
-> must understand how it works.
->
-> This example is not compatible with Java 17 but is already available in the
-> code examples repository for future use.
-
-#### Answer the following questions
-
-Using the official Java documentation, can you explain the differences between
-the following different implementations? When should you use one or the other
-and why?
-
-- `TcpServerSimpleTextualExample`
-- `TcpServerSingleThreadTextualExample`
-- `TcpServerMultiThreadTextualExample`
-- `TcpServerCachedThreadPoolTextualExample`
-- `TcpServerFixedThreadPoolTextualExample`
-- `TcpServerVirtualThreadTextualExample`
-
-Are you able to explain why the `TcpServerSingleThreadTextualExample` does not
-work as expected?
-
-#### Share your findings
-
-Share your results in the GitHub Discussions of this organization:
-<https://github.com/orgs/heig-vd-dai-course/discussions>.
-
-Create a new discussion with the following information:
-
-- **Title**: DAI 2024-2025 - Concurrent Java TCP servers - First name Last Name
-- **Category**: Show and tell
-- **Description**: Answer the questions for this section. Add links to the
-  official Java documentation to support your answers.
-
-This will notify us that you have completed the exercise and we can check your
-work.
-
-You can compare your solution with the official one stated in the
-[Solution](#solution) section, however, **we highly recommend you to try to
-complete the practical content by yourself first to learn the most**.
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- Based from the code examples, are you able to create a complete TCP
-  client/server application in Java that implement the DAI protocol presented in
-  chapter
-  [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)?
-  Feel free to create a new repository for this and share it with us in a new
-  discussion on GitHub Discussions!
+- Can you update the network application to allow the client to specify the
+  range of the number to guess before starting the game?
 
 ## Conclusion
 
@@ -525,14 +396,11 @@ This is an optional section. Feel free to skip it if you do not have time.
 In this chapter, you have learned how to use the Socket API to create your own
 TCP clients and servers in Java.
 
-You have also learned how to handle multiple clients at the same time using
-concurrency.
-
-You now have all the knowledge to create your TCP network applications. This is
-a big step forward!
+You have implemented your first network application based on the _"Guess the
+number"_ application protocol. Congratulations! It is a big step forward!
 
 You are now able to create your own network applications, such as a chat server,
-a file server, a web server, etc. Congratulations!
+a file server, a web server, etc.
 
 ### Test your knowledge
 
@@ -540,8 +408,8 @@ At this point, you should be able to answer the following questions:
 
 - What is a socket?
 - What is the difference between a server socket and a client socket?
-- What is the purpose of concurrency?
-- Cite three ways to handle multiple clients with concurrency.
+- How do sockets compare to files?
+- Why is TCP considered as a reliable protocol?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -566,7 +434,15 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-You will start the practical work!
+In the next chapter, you will learn the following topics:
+
+- Java UDP programming
+  - How does UDP work?
+  - How does it compare to TCP?
+  - How to create UDP network applications
+  - How to make usage of UDP specificities to create efficient network
+    applications
+  - Implement the _"Temperature monitoring"_ application using UDP
 
 ## Additional resources
 

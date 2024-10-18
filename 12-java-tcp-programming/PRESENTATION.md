@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/116
-[illustration]:
-  https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-java-tcp-programming/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -79,8 +78,8 @@ _paginate: false
 ## Objectives
 
 - Program your own TCP client/server applications in Java with the Socket API
-- Understand how to handle multiple clients at the same time
 - Understand how to process data from streams
+- Make usage of a REPL
 
 Your applications will be able to communicate over the network!
 
@@ -97,9 +96,9 @@ find other resources and alternatives as well.
 
 TCP is a transport protocol that is similar to a phone call:
 
-1. A connection is established between two parties
+1. A connection is established between two parties (Unicast)
 2. Data sent is guaranteed to arrive in the same order
-3. Data can be sent again
+3. Data can be sent again if needed (retransmission)
 
 ![bg right:40%](https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?fit=crop&h=720)
 
@@ -181,6 +180,40 @@ find other resources and alternatives as well.
 
 ![bg right:40%](https://images.unsplash.com/photo-1594728613852-cac78bd0daba?fit=crop&h=720)
 
+---
+
+Get the streams from a socket:
+
+```java
+// Get input stream
+input = socket.getInputStream();
+
+// Get output stream
+output = socket.getOutputStream();
+```
+
+Read and write data from/to the streams as text:
+
+```java
+// Get input stream as text
+input = new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8);
+
+// Get output stream as text
+output = new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8);
+```
+
+---
+
+Improve performance with a buffer (with a binary stream):
+
+```java
+// Get input stream as binary with buffer
+input = new BufferedReader(new InputStreamReader(socket.getInputStream());
+
+// Get output stream as binary with buffer
+output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
+```
+
 ### Variable length data
 
 Data sent can have a variable length. Manage this using one of the two methods:
@@ -232,73 +265,31 @@ for (int i = 0; i < dataLength; i++) {
 }
 ```
 
-## Handling one client at a time
+## Read-Eval-Print Loop (REPL)
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### Handling one client at a time
+### Read-Eval-Print Loop (REPL)
 
-1. Create a socket to listen to incoming connections
-2. Create a new socket for the client
-3. Handle the connection
+A REPL is a concept that allows you to interact with a program by sending
+commands to it without restarting it.
 
-Analogy: a restaurant with one table
+In networking, it is used to send commands to a server that will read the
+commands, evaluate them, and send back the result.
 
-➡️ Simple but quite useless...
+All of this is done in a loop until the client or the server decides to close
+the connection.
 
-![bg right:40%](https://images.unsplash.com/photo-1513792117172-ef6bc78042c1?fit=crop&h=720)
+Useful to keep a connection open and send multiple commands!
 
-## Handling multiple clients at the same time
+## Questions
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
-
-### Handling multiple clients at the same time
-
-Handle multiple clients at the same time is called concurrency.
-
-Concurrency can be achieved with:
-
-- Multi-processing
-- Multi-threading
-- Asynchronous programming
-
-![bg right:40%](https://images.unsplash.com/photo-1559329007-40df8a9345d8?fit=crop&h=720)
-
-### Multi-processing
-
-- Create an entirely new process for each client
-- Heavyweight and slow
-- Not recommended
-- Analogy: a new restaurant for each customer, including the kitchen, waiters,
-  etc.
-
-![bg right:40%](https://images.unsplash.com/photo-1562835155-1fa627c69744?fit=crop&h=720)
-
-### Multi-threading
-
-- Create a new thread for each client
-- More lightweight and faster than multi-processing
-- Recommended with thread pool to limit resource usage
-- Not enough or too many threads can slow down the system
-- Analogy: a new or limited number of tables for each customer
-
-![bg right:40%](https://images.unsplash.com/photo-1559674437-65de136f4a05?fit=crop&h=720)
-
-### Asynchronous programming
-
-- Handle multiple clients with a single thread
-- Very performant!
-- Analogy: a food truck - you get a ticket, wait, get your food and leave
-- Out of scope for this course but interesting to know! Node.js is a good
-  example for this approach
-
-![bg right:40%](https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?fit=crop&h=720)
+Do you have any questions?
 
 ## Practical content
 
@@ -306,9 +297,10 @@ Concurrency can be achieved with:
 
 ### What will you do?
 
-- Send an email using a SMTP client written in Java with the Socket API
-- Run full client/server examples and understand how concurrent clients are
-  handled
+- Run full client/server examples
+- Implement the _"Guess the number"_ game (using the application protocol you
+  made in the previous chapter!)
+- Dockerize and share the game.
 
 ![bg right contain](./images/what-will-you-do-server.png)
 ![bg right vertical contain](./images/what-will-you-do-client.png)
@@ -352,16 +344,3 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/green-moss-on-rocky-river-9fqMbeny89c)
 - Illustration by [patricia serna](https://unsplash.com/@sernarial) on
   [Unsplash](https://unsplash.com/photos/assorted-tape-measures-zPZ9vqqDNBA)
-- Illustration by [Elliott Stallion](https://unsplash.com/@eagleboobs) on
-  [Unsplash](https://unsplash.com/photos/white-plastic-bottle-on-brown-wooden-table-near-glass-window-ci7b3Q77n0c)
-- Illustration by [K8](https://unsplash.com/@_k8_) on
-  [Unsplash](https://unsplash.com/photos/people-in-restaurant-sWEpcc0Rm0U)
-- Illustration by [bckfwd](https://unsplash.com/@bckfwd) on
-  [Unsplash](https://unsplash.com/photos/lighted-chandelier-inside-cafe-ifkd981FUdM)
-
----
-
-- Illustration by [James Elchico](https://unsplash.com/@jdelchico) on
-  [Unsplash](https://unsplash.com/photos/blue-and-brown-padded-chairs-near-table-zB4A-PP49ww)
-- Illustration by [micheile henderson](https://unsplash.com/@micheile) on
-  [Unsplash](https://unsplash.com/photos/woman-selling-inside-store-during-daytime-7NFwwp-vZk8)
