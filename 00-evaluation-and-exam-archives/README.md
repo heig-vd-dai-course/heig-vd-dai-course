@@ -5,7 +5,8 @@ the course.
 
 ## DAI 2024-2025
 
-- _None yet_
+- [Evaluation 1 - 2024-2025 - class DAI-TIC-B](./2024_2025_EVALUATION_1_DAI_TIC_B/README.md)
+- [Evaluation 1 - 2024-2025 - class DAI-TIC-C](./2024_2025_EVALUATION_1_DAI_TIC_C/README.md)
 
 ## DAI 2023-2024
 
