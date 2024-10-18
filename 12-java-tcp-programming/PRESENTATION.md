@@ -344,16 +344,3 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/green-moss-on-rocky-river-9fqMbeny89c)
 - Illustration by [patricia serna](https://unsplash.com/@sernarial) on
   [Unsplash](https://unsplash.com/photos/assorted-tape-measures-zPZ9vqqDNBA)
-- Illustration by [Elliott Stallion](https://unsplash.com/@eagleboobs) on
-  [Unsplash](https://unsplash.com/photos/white-plastic-bottle-on-brown-wooden-table-near-glass-window-ci7b3Q77n0c)
-- Illustration by [K8](https://unsplash.com/@_k8_) on
-  [Unsplash](https://unsplash.com/photos/people-in-restaurant-sWEpcc0Rm0U)
-- Illustration by [bckfwd](https://unsplash.com/@bckfwd) on
-  [Unsplash](https://unsplash.com/photos/lighted-chandelier-inside-cafe-ifkd981FUdM)
-
----
-
-- Illustration by [James Elchico](https://unsplash.com/@jdelchico) on
-  [Unsplash](https://unsplash.com/photos/blue-and-brown-padded-chairs-near-table-zB4A-PP49ww)
-- Illustration by [micheile henderson](https://unsplash.com/@micheile) on
-  [Unsplash](https://unsplash.com/photos/woman-selling-inside-store-during-daytime-7NFwwp-vZk8)
