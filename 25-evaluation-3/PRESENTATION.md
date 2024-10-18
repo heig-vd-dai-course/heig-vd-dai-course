@@ -121,8 +121,8 @@ solve a specific problem.
 
 ## Notes
 
-You have access to your own notes in paper format. Your notes must fit on **four
-sheets of paper (recto)**.
+You have access to your own notes in paper format. Your notes must fit on **4
+(1 + 1.5 + 1.5) sheets of paper (recto)**.
 
 They can contain anything useful to you: definitions, schemas, code snippets,
 etc.
