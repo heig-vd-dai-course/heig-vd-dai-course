@@ -465,7 +465,3 @@ discuss it!
 
 - Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
   [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
-
-```
-
-```
