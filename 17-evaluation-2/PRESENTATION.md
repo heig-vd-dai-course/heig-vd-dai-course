@@ -82,14 +82,12 @@ The evaluation dates will be as follow:
 
 ---
 
-The evaluation will be done on the computer with the help of the HEIG-VD online
-evaluation platform.
+The evaluation will be done on paper and is made up of two parts:
 
-You must be connected to the _**HEIG-VD**_ network or connected to the VPN to
-access the evaluation platform.
+1. A first part of 35 minutes
+2. A second part of 25 minutes
 
-Once you are done, mark your evaluation as done and you can leave the room
-quietly.
+A break between the two parts will be given.
 
 ## Chapters evaluated
 
@@ -124,8 +122,8 @@ solve a specific problem.
 
 ## Notes
 
-You have access to your own notes in paper format. Your notes must fit on **2.5
-sheets of paper (recto)**.
+You have access to your own notes in paper format. Your notes must fit on **2
+(1 + 1.5) sheets of paper (A4 - recto)**.
 
 They can contain anything useful to you: definitions, schemas, code snippets,
 etc.
