@@ -513,9 +513,6 @@ _Inspired by the
 [How to use WSL development environment in JetBrains products by JetBrains](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
 guide._
 
-<details>
-<summary>Click to expand the instructions once a future chapter asks you to.</summary>
-
 #### Install SDKMAN! in WSL
 
 Install SDKMAN! as mentioned in the course material. Install it in your Ubuntu
@@ -531,12 +528,12 @@ distribution.
 Install Maven as mentioned in the course material. Install it in your Ubuntu
 distribution.
 
-#### Install IntelliJ Toolbox App
+#### Install IntelliJ Toolbox App on Windows
 
 Install IntelliJ IDEA as mentioned in the course material. Install it on your
 Windows.
 
-#### Install IntelliJ IDEA
+#### Install IntelliJ IDEA on Windows
 
 Install IntelliJ IDEA as mentioned in the course material. Install it on your
 Windows.
@@ -617,8 +614,6 @@ default by following these steps:
 3. Set the **Shell path** to the WSL distribution with
    `wsl.exe --distribution Ubuntu` as shown in the following screenshot:
    ![Configure IntelliJ IDEA terminal to use WSL](./images/intellij-idea-terminal-settings.png)
-
-</details>
 
 ## Tips and tricks
 
