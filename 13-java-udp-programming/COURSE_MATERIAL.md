@@ -569,7 +569,9 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-You will start the practical work!
+In the next chapter, you will learn the following topics:
+
+- Manage mu
 
 ## Additional resources
 

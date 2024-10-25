@@ -327,9 +327,13 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-<!-- _class: lead -->
+- Learn the different ways to manage multiple clients at the same time with
+  concurrency
+- Update the two network applications to handle multiple clients:
+  - The _"Guess the number"_ game
+  - The _"Temperature monitoring"_ application
 
-You will start the practical work!
+![bg right:40%](https://images.unsplash.com/photo-1628440167042-197d8eb88929?fit=crop&h=720)
 
 ## Sources
 
@@ -348,3 +352,5 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/group-of-people-watching-fireworks-display-c5_eQi4rrjA)
 - Illustration by [Andy Holmes](https://unsplash.com/@andyjh07) on
   [Unsplash](https://unsplash.com/photos/milky-way-during-night-time-LUpDjlJv4_c)
+- Illustration by [Brent Olson](https://unsplash.com/@helixgames) on
+  [Unsplash](https://unsplash.com/photos/person-in-green-and-black-shorts-riding-on-black-and-red-bicycle-_aV5y0nLNew)

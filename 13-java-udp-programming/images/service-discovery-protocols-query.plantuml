@@ -25,8 +25,8 @@ end note
 The client (called service consumer) queries the network for a given service.
 end note
 
-client --> server1: <i>Hello strangers, I am looking for someone who could provide <b>this</b> service.</i>
-& client --> server2
+client -> server1: <i>Hello strangers, I am looking for someone who could provide <b>this</b> service.</i>
+& client -> server2
 
 |||
 
