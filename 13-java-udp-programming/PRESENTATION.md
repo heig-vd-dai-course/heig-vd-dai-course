@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/120
-[illustration]:
-  https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -286,15 +285,22 @@ find other resources and alternatives as well.
 
 ![bg h:80%](./images/service-discovery-protocols-query.png)
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->
 
 ### What will you do?
 
-- Run a complete emitter/receiver UDP example in Java
-- Dockerize the emitter/receiver UDP example
-- Isolate some containers in a dedicated Docker network
+- Run full emitters/receivers examples
+- Learn to use the debugger
+- Implement the _"Temperature monitoring"_ application (using the application
+  protocol you made in the previous chapter!)
 
 ![bg right contain](./images/what-will-you-do.png)
 

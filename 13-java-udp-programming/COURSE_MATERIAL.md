@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/120
-[illustration]:
-  https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Java UDP programming - Course material
 
@@ -38,10 +37,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Messaging patterns](#messaging-patterns)
 - [Service discovery protocols](#service-discovery-protocols)
 - [Practical content](#practical-content)
-  - [Run the emitters and receivers example](#run-the-emitters-and-receivers-example)
-  - [Dockerize the emitters and receivers example](#dockerize-the-emitters-and-receivers-example)
-  - [Isolate broadcast emitters and receivers to their own network](#isolate-broadcast-emitters-and-receivers-to-their-own-network)
-  - [Share your project](#share-your-project)
+  - [Check and run the code examples](#check-and-run-the-code-examples)
+  - [Learn to use the debugger](#learn-to-use-the-debugger)
+  - [Implement the _"Temperature monitoring"_ application](#implement-the-temperature-monitoring-application)
+  - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -58,12 +57,8 @@ You have seen and experimented with TCP in the previous chapter. You have seen
 that TCP is a connection-oriented protocol. It means that a connection must be
 established before sending data.
 
-In this chapter, you will see and experiment with UDP. UDP is a connectionless
-protocol. It means that a connection does not need to be established before
-sending data.
-
-UDP is mainly used when reliability is not required. It is used for streaming,
-gaming, etc.
+In this chapter, you will see and experiment with UDP. UDP is mainly used when
+reliability is not required. It is used for streaming, gaming, etc.
 
 UDP is sensibly different from TCP and it is important to understand the
 differences between the two protocols.
@@ -80,7 +75,7 @@ UDP does not provide any reliability mechanism. It does not guarantee that the
 data will be received by the receiver at all, nor that the data will be received
 in the same order as it was sent.
 
-A good analogy is to think of UDP as the postal service with postcards. You
+A good analogy is to think of UDP as the postal service with postcards: you
 write multiple postcards and send them to someone. You do not know if the
 postcards will be received nor if they arrive in the same order as they were
 sent. You do not know if the postcards will be received at all if the postal
@@ -154,6 +149,15 @@ help of [WebRTC](https://webrtc.org/). However, even these applications might
 prefer to make usage of the TCP protocol to guarantee the reliability of their
 services.
 
+The game [Factorio](https://www.factorio.com/) (a game where you build and
+manage factories) is another good example of an application that make usage of
+the UDP protocol when playing on a multiplayer server:
+
+> Factorio uses UDP only. The game builds its own "reliable delivery" layer
+> built on UDP to deal with packet loss and reordering issues.
+>
+> <https://wiki.factorio.com/Multiplayer>
+
 As mentioned before, it is up to the application to implement a reliability
 mechanism if required (with a message ID and an acknowledgement for example,
 just as TCP).
@@ -201,9 +205,9 @@ As seen in the
 [Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/12-java-tcp-programming)
 chapter, the Socket API is a Java API that allows you to create TCP/UDP clients
 and servers. It is described in the
-[`java.net` package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/package-summary.html)
+[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
 in the
-[`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
+[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
 
 In the UDP world, the `Socket` class is replaced by the `DatagramSocket` class.
 
@@ -408,382 +412,114 @@ These patterns can still be used with other protocols such as TCP.
 
 ## Practical content
 
-### Run the emitters and receivers example
+### Check and run the code examples
 
-In this section, you will start an example of emitters and receivers that use
-UDP to communicate.
+In this section, you will clone the code examples repository to check and run
+the code examples.
+
+#### Clone the repository
+
+Clone the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository to get the code examples.
+
+#### Access the code examples in your terminal
+
+Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
+directory.
+
+#### Explore the code examples
+
+In the `13-java-udp-programming` directory, checkout the `README.md` file to
+learn how to run the code examples.
+
+Take some time to explore and run the code examples.
+
+### Learn to use the debugger
+
+Every decent IDE has a debugger. The debugger is a tool that allows you to
+inspect the state of your program at runtime.
+
+The debugger allows you to:
+
+- Set breakpoints: a breakpoint is a point in your code where the program will
+  stop when it is reached.
+- Step through your code: you can step through your code line by line to see
+  what is happening.
+- Inspect variables and expressions: you can inspect the value of variables and
+  expressions at runtime.
+
+The debugger is a powerful tool to understand what is happening in your program.
+
+In IntelliJ IDEA, set a breakpoint by clicking on the left side of the line
+number, as shown in the following screenshot:
+
+![IntelliJ IDEA - Set a breakpoint](images/intellij-idea-set-a-breakpoint.png)
+
+Then, run the program in debug mode by clicking on the bug icon, as shown in the
+following screenshot:
+
+![IntelliJ IDEA - Run the program in debug mode](images/intellij-idea-run-debug-mode.png)
+
+The program will stop at the breakpoint. You can then use the debugger to step
+through the code, inspect variables and expressions, etc., as shown in the
+following screenshot:
+
+![IntelliJ IDEA - Debugger](images/intellij-idea-debugger.png)
+
+Take some time to learn how to use the debugger in your favorite IDE, this is a
+very useful tool.
+
+### Implement the _"Temperature monitoring"_ application
+
+In this section, you will implement the _"Temperature monitoring"_ game using
+the application protocol you have made from the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
 
 #### Create and clone the repository
 
 You can create a new GitHub project using the template we have prepared for you.
-When you create a new repository, you can choose to use a template. Select the
-`heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template`
-template as shown in the following screenshot:
 
-> [!WARNING]  
+When you create a new repository, you can choose to use a template. Select the
+`heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content`
+template.
+
+> [!WARNING]
+>
 > Please make sure that the repository owner is your personal GitHub account and
 > not the `heig-vd-dai-course` organization.
 
-![Create the new repository from the template](./images/practical-content-create-and-clone-the-repository.png)
-
-Clone the repository locally.
-
-#### Check the application's help message
+#### Implement the application
 
 Take some time to explore the codebase from the template we have prepared for
 you.
 
-Using Maven, build the application as seen in previous chapters, using the
-provided Maven wrapper.
+Using the application protocol you have made from the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+or the one provided in the solution, implement the _"Temperature monitoring"_
+application.
 
-Run the Java application with the following command:
+Use the code examples you just explored to help you implement the application.
 
-```sh
-# Run the application
-java -jar java-udp-programming-1.0-SNAPSHOT.jar --help
-```
+### Compare your solution with the official one
 
-Take some time to read and understand the help message.
+Compare your solutions with the official ones stated in the
+[Solution](#solution) section.
 
-#### Run the unicast emitter and receiver
-
-Using the help message, start the following applications in different terminals:
-
-- A unicast emitter with the following configuration:
-  - Delay: 0 seconds
-  - Frequency: 5 seconds
-  - Host: `127.0.0.1` or `localhost`
-  - Port: `9876`
-- A unicast receiver with the following configuration:
-  - Port: `9876`
-
-What are the commands to start the unicast emitter and receiver?
-
-Once the emitter is started, you should see that messages are emitted at the
-specified frequency in the terminal.
-
-The receiver should receive the messages and print them in the terminal.
-
-Do not stop the emitter and receiver yet.
-
-#### Run the broadcast emitter and receivers
-
-Using the help message, start the following applications in different terminals:
-
-- A broadcast emitter with the following configuration:
-  - Delay: 5 seconds
-  - Frequency: 30 seconds
-  - Host: `255.255.255.255`
-  - Port: `9877`
-- A broadcast receiver with the following configuration:
-  - Port: `9877`
-
-What are the commands to start the broadcast emitter and receiver?
-
-Once the emitter is started, you should see that messages are emitted at the
-specified frequency in the terminal.
-
-The receiver should receive the messages and print them in the terminal.
-
-Do not stop the emitter and receiver yet.
-
-#### Run the multicast emitter and receivers
-
-Using the help message, start the following applications in different terminals:
-
-- A multicast emitter with the following configuration:
-  - Delay: 10 seconds
-  - Frequency: 15 seconds
-  - Host: `239.1.1.1`
-  - Port: `9878`
-  - Network interface: check the note below
-- A multicast receiver with the following configuration:
-  - Host: `239.1.1.1`
-  - Port: `9878`
-  - Network interface: check the note below
-
-> [!IMPORTANT]]  
-> For the multicast emitter, you must specify a network interface to listen to
-> multicast datagrams. Check the help message to know how to do it.
-
-What are the commands to start the multicast emitter and receiver?
-
-Once the emitter is started, you should see that messages are emitted at the
-specified frequency in the terminal.
-
-The receiver should receive the messages and print them in the terminal.
-
-Do not stop the emitter and receiver yet.
-
-#### Check the logs of the emitters and receivers
-
-Take some time to read and understand the logs.
-
-What are your conclusions to the following questions?
-
-- What messages do the unicast receiver receives? Why?
-- What messages do the broadcast receiver receives? Why?
-- What messages do the multicast receiver receives? Why?
-
-#### Stop the emitters and receivers
-
-Stop all the emitters and receivers with `Ctrl` + `C`.
-
-### Dockerize the emitters and receivers example
-
-In this section, you will dockerize the emitters and receivers example to run
-them in containers using Docker and Docker Compose.
-
-#### Create the Dockerfile
-
-At the root level of your project, create a `Dockerfile` with the following
-content:
-
-```dockerfile
-# Start from the Java 17 Temurin image
-FROM eclipse-temurin:17
-
-# Set the working directory
-WORKDIR /app
-
-# Copy the jar file
-COPY target/java-udp-programming-1.0-SNAPSHOT.jar /app/java-udp-programming-1.0-SNAPSHOT.jar
-
-# Set the entrypoint
-ENTRYPOINT ["java", "-jar", "java-udp-programming-1.0-SNAPSHOT.jar"]
-
-# Set the default command
-CMD ["--help"]
-```
-
-Take some time to understand this Dockerfile. Can you explain each line with
-your own words?
-
-#### Build and run the Docker image
-
-Just as seen in the
-[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
-chapter, build the image accordingly with the tag `java-udp-programming` and run
-the container with the name `java-udp-programming`.
-
-Which command(s) did you use to build the Docker image?
-
-Which command(s) did you use to run the Docker image?
-
-#### Publish the Docker image
-
-Just as seen in the
-[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
-chapter, publish your Docker image to the GitHub Container Registry.
-
-Which command(s) did you use to publish the Docker image?
-
-#### Create the Docker Compose file
-
-At the root level of your project, create a `docker-compose.yml` file.
-
-Using the examples from the
-[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
-chapter, add the same containers as mentioned before as services to your Docker
-Compose file:
-
-- A unicast emitter with the following configuration:
-  - Delay: 0 seconds
-  - Frequency: 5 seconds
-  - Host: `unicast-receiver-1`
-  - Port: `9876`
-- A broadcast emitter with the following configuration:
-  - Delay: 5 seconds
-  - Frequency: 30 seconds
-  - Host: `255.255.255.255`
-  - Port: `9876`
-- A multicast emitter with the following configuration:
-  - Delay: 10 seconds
-  - Frequency: 15 seconds
-  - Host: `239.1.1.1`
-  - Port: `9876`
-  - Network interface: `eth0` (the default network interface of the container)
-- Two unicast receivers with the following configuration:
-  - Unicast receiver 1:
-    - Port: `9876`
-  - Unicast receiver 2:
-    - Port: `9876`
-- Two broadcast receivers with the following configuration:
-  - Broadcast receiver 1:
-    - Port: `9876`
-  - Broadcast receiver 2:
-    - Port: `9876`
-- Three multicast receivers with the following configuration:
-  - Multicast receiver 1:
-    - Host: `239.1.1.1`
-    - Port: `9876`
-    - Network interface: `eth0` (the default network interface of the container)
-  - Multicast receiver 2:
-    - Host: `239.1.1.1`
-    - Port: `9876`
-    - Network interface: `eth0` (the default network interface of the container)
-  - Multicast receiver 3:
-    - Host: `239.1.1.2`
-    - Port: `9876`
-    - Network interface: `eth0` (the default network interface of the container)
-
-Here is a template that can help you:
-
-```yaml
-<name of the service>:
-  image: <name/link of the docker image>
-  command:
-    - <pass command arguments to the entrypoint>
-```
-
-You should know that Docker Compose creates a DNS hostname for each service it
-starts. This means you can access another service using its name.
-
-Example:
-
-```yaml
-unicast-emitter:
-  image: java-udp-programming
-  command:
-    - unicast
-    - --host=unicast-receiver-1
-    - --port=4040
-    - --delay=1000
-    - --frequency=10000
-```
-
-For receivers, you can even add the following line to your service to
-start/depend on another service before it starts:
-
-```yaml
-depends_on:
-  - <name of the service to wait on>
-```
-
-#### Run the Docker Compose file
-
-Just as seen in the Docker and Docker Compose chapter, run the Docker Compose
-file.
-
-When running your Docker Compose, you should be able to see the outputs of all
-the emitters and receivers.
-
-Which command(s) did you use to run the Docker Compose file?
-
-#### Check the logs of the emitters and receivers
-
-Take some time to read and understand the logs.
-
-What are your conclusions to the following questions?
-
-- What messages do the unicast receivers receive? Why?
-- What messages do the broadcast receivers receive? Why?
-- What messages do the multicast receivers receive? Why?
-- What are the differences between the outputs of the emitters and receivers
-  when running them with Docker Compose and when running them manually?
-
-> [!TIP]  
-> To help you filter and understand the outputs, you can start only a subset of
-> the services specified in your Docker Compose file if you want to. For
-> example, to start only the unicast emitter and receivers, you can use the
-> following command:
->
-> ```sh
-> # Start only the unicast emitter and receivers
-> docker compose up unicast-emitter unicast-receiver-1 unicast-receiver-2
-> ```
-
-### Isolate broadcast emitters and receivers to their own network
-
-As you might have noticed, broadcasting will notify all receivers on the
-network.
-
-To isolate the broadcast emitters in their own network, Docker and Docker
-Compose can make usage of networks.
-
-Docker networks can isolate a number of containers to a specific network. A
-network can link multiple containers and containers can be linked to multiple
-networks.
-
-In this section, you will add networks to your Docker Compose file to isolate
-some containers.
-
-#### Define the network
-
-At the root level of the Docker Compose file, define a Docker network with the
-following content:
-
-```yaml
-networks:
-  my-isolated-network:
-    name: my-isolated-network-name
-```
-
-This will create a Docker network. You can check the list of Docker networks
-with the following command:
-
-```sh
-# List Docker networks
-docker network list
-```
-
-You can find the network you just created with the name
-`my-isolated-network-name`.
-
-You should also notice that Docker Compose has created a default network for all
-other containers. This network is named with the name of the current directory
-in which you ran the Docker Compose commands and add `_default` to the current
-directory name.
-
-Docker networks is a topic on its own. We will not go further than this in the
-context of this course. We just want to be able to link/isolate containers
-together so they can communicate between them.
-
-#### Isolate the broadcast emitters and receivers
-
-To isolate the broadcast emitters and receivers, add the following key to the
-`broadcast-emitter`, `broadcast-receiver-1`, `broadcast-receiver-2` containers:
-
-```yaml
-networks:
-  - my-isolated-network
-```
-
-As networks is an array, you can add multiple networks to a container if needed.
-
-#### Run the network again with the isolated networks
-
-Start all containers again. You should notice that the broadcast emitters do not
-interfere with the other containers, thanks to the isolated network!
-
-How and why did the network helped for the broadcast emitters and receivers?
-
-### Share your project
-
-Share your project in the GitHub Discussions of this organization:
-<https://github.com/orgs/heig-vd-dai-course/discussions>.
-
-Create a new discussion with the following information:
-
-- **Title**: DAI 2024-2025 - UDP emitters and receivers with Docker Compose -
-  First name Last Name
-- **Category**: Show and tell
-- **Description**: The link to your GitHub repository, answers to all questions
-  asked in this practical content.
-
-This will notify us that you have completed the exercise and we can check your
-work.
-
-You can compare your solution with the official one stated in the
-[Solution](#solution) section, however, **we highly recommend you to try to
-complete the practical content by yourself first to learn the most**.
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- Are you able to double the number of receivers and emitters but keeping them
-  isolated in their own network?
+- Can you update the application protocol to allow the operator to have the
+  latest temperature for a given room or the average temperature of that room?
+  - This will require to store all the temperatures received for a given room
+    and to calculate the average temperature instead of storing only the latest
+    temperature.
+- Are you able to Dockerize this application as well?
 
 ## Conclusion
 
