@@ -75,15 +75,16 @@ methodology but please do not copy/paste code from other groups.
 
 ## Group composition
 
-You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one.
+You will work in groups of two or three students. You can choose your
+partner(s). If you do not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2024-2025 - Practical work 2 - First name Last name member 1
-  and First name Last name member 2
+- **Title**: DAI 2024-2025 - Practical work 2 - First name Last name member 1,
+  First name Last name member 2 and First name Last name member 3 (if
+  applicable)
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
