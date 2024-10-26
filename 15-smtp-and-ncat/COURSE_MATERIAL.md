@@ -8,7 +8,7 @@
 [illustration]:
   https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720
 
-# SMTP and Telnet - Course material
+# SMTP and ncat - Course material
 
 <https://github.com/heig-vd-dai-course>
 
@@ -26,25 +26,22 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
-- [A quick reminder about networking](#a-quick-reminder-about-networking)
-  - [The Internet Protocol (IP)](#the-internet-protocol-ip)
-  - [The Domain Name System (DNS)](#the-domain-name-system-dns)
-  - [Common DNS records](#common-dns-records)
 - [Electronic messaging protocols: SMTP, POP3 and IMAP](#electronic-messaging-protocols-smtp-pop3-and-imap)
   - [SMTP](#smtp)
   - [POP3](#pop3)
   - [IMAP](#imap)
 - [DNS records related to email](#dns-records-related-to-email)
-- [Security concerns and blacklisting](#security-concerns-and-blacklisting)
+- [Security concerns and spam](#security-concerns-and-spam)
 - [A focus on the SMTP protocol](#a-focus-on-the-smtp-protocol)
-- [Telnet](#telnet)
+- [ncat](#ncat)
   - [Alternatives](#alternatives)
   - [Resources](#resources)
 - [Practical content](#practical-content)
-  - [Install and configure Telnet](#install-and-configure-telnet)
-  - [Start MailHog](#start-mailhog)
-  - [Send an email to MailHog with Telnet](#send-an-email-to-mailhog-with-telnet)
-  - [Stop MailHog](#stop-mailhog)
+  - [Install and configure ncat](#install-and-configure-ncat)
+  - [Start Mailpit](#start-mailpit)
+  - [Send an email to Mailpit with ncat](#send-an-email-to-mailpit-with-ncat)
+  - [Send an email to Mailpit with a Java SMTP client](#send-an-email-to-mailpit-with-a-java-smtp-client)
+  - [Stop Mailpit](#stop-mailpit)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -56,68 +53,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-In this chapter, you will have a refresh about networking and learn about the
-different electronic messaging protocols with a focus on the SMTP protocol. You
-will also learn how to use the Telnet protocol to send an email to an SMTP
-server.
-
-## A quick reminder about networking
-
-### The Internet Protocol (IP)
-
-Each computer connected to the Internet has an
-[IP (Internet Protocol) address](https://en.wikipedia.org/wiki/IP_address). This
-IP address is used to identify the computer on the Internet. It is a unique
-address. As [IPv4](https://en.wikipedia.org/wiki/Internet_Protocol_version_4)
-addresses are limited, there are
-[NAT (Network Address Translation)](https://en.wikipedia.org/wiki/Network_address_translation)
-routers that allow to share a single IP address between multiple computers. This
-is why [IPv6](https://en.wikipedia.org/wiki/IPv6) was created.
-
-### The Domain Name System (DNS)
-
-The [Domain Name System (DNS)](https://en.wikipedia.org/wiki/Domain_Name_System)
-is a system that allows to map a domain name to an IP address. For example, the
-domain name `heig-vd.ch` is mapped to the IP address `193.134.223.20`.
-
-You can check this by running the following command with
-[nslookup](https://en.wikipedia.org/wiki/Nslookup):
-
-```sh
-nslookup heig-vd.ch
-```
-
-The output should be similar to the following:
-
-```text
-Server:         8.8.8.8
-Address:        8.8.8.8#53
-
-Non-authoritative answer:
-Name:   heig-vd.ch
-Address: 193.134.223.20
-```
-
-Note the `Address` line. It is the IP mapping the DNS record.
-
-The current DNS server used to resolve the DNS query is `8.8.8.8`.
-
-When you send an email, your email client will use the DNS to find the IP
-address of the email server. Then, it will use the IP address to send the email
-to the email server.
-
-### Common DNS records
-
-The DNS holds what are called DNS records. These records are used to map a
-domain name to an IP address. There are many types of DNS records. The most
-common ones are:
-
-- `NS`: This record specifies the name servers for a given domain name.
-- `CNAME`: This record specifies an alias for a given domain name.
-- `A`: This record specifies the IP address of a given domain name (IPv4).
-- `AAAA`: This record specifies the IP address of a given domain name (IPv6).
-
-In this course, you will learn to use a few of these records.
+In this chapter, you will learn about the different electronic messaging
+protocols with a focus on the SMTP protocol. You will also learn how to use the
+SMTP protocol to send an email to an SMTP server using ncat and a Java client.
 
 ## Electronic messaging protocols: SMTP, POP3 and IMAP
 
@@ -127,9 +65,9 @@ There are three main protocols used for electronic messaging:
 - POP3 (Post Office Protocol)
 - IMAP (Internet Message Access Protocol)
 
-You could use any email clients (called Mail User Agents (MUA) in the RFCs) such
-as Thunderbird, Gmail or Outlook to use these protocols. They will send and
-receive emails from an email server (called Mail Transfer Agent (MTA) in the
+You could use any email clients (called **Mail User Agents (MUA)** in the RFCs)
+such as Thunderbird, Gmail or Outlook to use these protocols. They will send and
+receive emails from an email server (called **Mail Transfer Agent (MTA)** in the
 RFCs).
 
 ### SMTP
@@ -239,9 +177,11 @@ Note the `ANSWER SECTION` line. The `A` record the IP mapping the DNS record.
 The `MX` record is the email server that will receive emails for the given
 domain name. One of the `TXT` contains the `SPF` records with `v=spf1 [...]`.
 
-## Security concerns and blacklisting
+## Security concerns and spam
 
-The email protocols are quite old and were not designed with security in mind.
+The email protocols are quite old and were not designed with security in mind in
+the first place.
+
 If we look at the SMTP protocol, we can see that:
 
 - SMTP does not require authentication
@@ -252,26 +192,29 @@ If we look at the SMTP protocol, we can see that:
 - And many other issues
 
 Because of this, SMTP is often used by spammers to send spam emails. To prevent
-this, there are many blacklists that contain IP addresses of known spammers. If
-an email server is on a blacklist, it will not be able to send emails to some
+this, there are many denylists that contain IP addresses of known spammers. If
+an email server is on a denylist, it will not be able to send emails to some
 email servers.
 
 Maintaining email servers is a complex task that requires a lot of knowledge
 about the protocols and the security issues. This is why many companies use
 third-party email services such as Google or Microsoft 365.
 
-In this course, we will use what is called a mock server. A mock server imitates
-the functionalities of a real server for testing purposes. In this case, we will
-use a simple SMTP server with a Web interface to send and check emails. This
-SMTP server is called MailHog and can be run with Docker:
-<https://github.com/mailhog/MailHog>.
-
-> [!CAUTION]  
+> [!CAUTION]
+>
 > Considering these security flaws, please be aware that spoofing an email
 > address is really not that hard. However, the HEIG-VD has a strict policy
-> regarding the use of its email addresses. If you are caught spoofing an email
-> address, you could get in trouble. Please use the MailHog SMTP server for your
-> tests to avoid any issues.
+> regarding the use of its email addresses.
+>
+> If you are caught spoofing an email address, you could get in trouble. Please
+> use the Mailpit SMTP server for your tests to avoid any issues.
+
+In this course, we will use what is called a mock server. A mock server imitates
+the functionalities of a real server for testing purposes. In this case, we will
+use a simple SMTP server with a web interface to send and check emails.
+
+A really simple SMTP server called Mailpit can be used and run with Docker for
+exactly this purpose: <https://github.com/axllent/mailpit>.
 
 ## A focus on the SMTP protocol
 
@@ -303,29 +246,26 @@ The following diagram shows the sequence of commands to send an email:
 
 ![Sequence diagram of the SMTP protocol](./images/a-focus-on-the-smtp-protocol-2.png)
 
-## Telnet
+## ncat
 
-[Telnet](https://en.wikipedia.org/wiki/Telnet) is a client/server protocol that
-allows to connect to a server and send commands to it.
+[ncat](https://nmap.org/ncat/) is a client/server network utility that can read
+and write data across network connections using the TCP or UDP protocols.
 
-Telnet can be used to connect to many services such as HTTP, SMTP, POP3, IMAP,
-etc. In this course, we will use Telnet to connect to an SMTP server and send an
-email.
+ncat can be used to connect to many services such as HTTP, SMTP, POP3, IMAP,
+etc.
 
-The Telnet protocol is described in
-[RFC 854](https://datatracker.ietf.org/doc/html/rfc854).
+In this course, we will use ncat to connect to an SMTP server and send an email.
 
-As SMTP, Telnet is very old and is not considered secure. However, it is still
-used to test services such as SMTP and/or to configure network devices such as
-routers that you might have to configure during your career. This is why we will
-use it in this course for local testing.
+ncat can be used to test services such as SMTP and/or to configure network
+devices such as routers that you might have to configure during your career.
+This is why we will use it in this course for local testing.
 
 ### Alternatives
 
 _Alternatives are here for general knowledge. No need to learn them._
 
 - Netcat
-- Ncat
+- Telnet
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -339,21 +279,21 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Practical content
 
-### Install and configure Telnet
+### Install and configure ncat
 
-In this section, you will install and configure Telnet on your operating system.
+In this section, you will install and configure ncat on your operating system.
 
-#### Install Telnet
+#### Install ncat
 
-Telnet is a widely used protocol that is available on most operating systems.
-However, as it is not secure, it is often not installed by default.
+ncat is a widely used network utility that is available on most operating
+systems.
 
-Check out the following resources to install/enable Telnet on your operating
-system. You only need the **client**, not the server:
+Install ncat using the package manager of your operating system:
 
-- Linux: <https://www.baeldung.com/linux/telnet>
-- macOS: <https://osxdaily.com/2018/07/18/get-telnet-macos/>
-- Windows: <https://www.makeuseof.com/enable-telnet-windows/>
+```sh
+# Install ncat on Ubuntu
+sudo apt install ncat
+```
 
 #### Check the installation
 
@@ -361,52 +301,46 @@ You can check the installation by running the following command:
 
 ```sh
 # Check the installation
-telnet
+ncat --version
 ```
 
 The output should be similar to the following:
 
 ```text
-telnet>
+Ncat: Version 7.94SVN ( https://nmap.org/ncat )
 ```
 
-You are now in a Telnet session. You can exit it with the `quit` command.
-
-### Start MailHog
+### Start Mailpit
 
 Pull the latest changes from the previously cloned
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
 repository or clone it if you have not done it yet.
 
-Explore the `15-smtp-and-ncat` directory containing the MailHog example with
+Explore the `15-smtp-and-ncat` directory containing the Mailpit example with
 Docker Compose. Make sure to show hidden files and directories to see the `.env`
 file.
 
 In the `15-smtp-and-ncat` directory, run the following command:
 
 ```sh
-# Start MailHog in background
+# Start Mailpit in background
 docker compose up -d
 ```
 
 The output should be similar to the following:
 
 ```text
-[+] Running 8/8
- ✔ mailhog 7 layers [⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                        19.5s
-   ✔ df20fa9351a1 Pull complete                                                                                                                              0.6s
-   ✔ ed8968b2872e Pull complete                                                                                                                              0.6s
-   ✔ a92cc7c5fd73 Pull complete                                                                                                                              0.5s
-   ✔ f17c8f1adafb Pull complete                                                                                                                              7.3s
-   ✔ 03954754c53a Pull complete                                                                                                                              1.0s
-   ✔ 60493946972a Pull complete                                                                                                                              1.2s
-   ✔ 368ee3bc1dbb Pull complete                                                                                                                              1.4s
+[+] Running 4/4
+ ✔ mailpit Pulled                                  5.4s
+   ✔ 43c4264eed91 Already exists                   0.0s
+   ✔ acf8b88d34d5 Pull complete                    2.4s
+   ✔ 345ad78f8587 Pull complete                    2.5s
 [+] Running 2/2
- ✔ Network 15-smtp-and-ncat_default      Created                                                                                                           0.1s
- ✔ Container 15-smtp-and-ncat-mailhog-1  Created
+ ✔ Network 15-smtp-and-ncat_default      Created   0.2s
+ ✔ Container 15-smtp-and-ncat-mailpit-1  Started   0.4s
 ```
 
-This will start the MailHog SMTP server and the MailHog Web interface.
+This will start the Mailpit SMTP server and the Mailpit web interface.
 
 Display and follow the logs of the container with the following command:
 
@@ -420,70 +354,69 @@ press `Ctrl` + `C`.
 The output should be similar to the following:
 
 ```text
-15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 Using in-memory storage
-15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 [SMTP] Binding to address: 0.0.0.0:1025
-15-smtp-and-ncat-mailhog-1  | [HTTP] Binding to address: 0.0.0.0:8025
-15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:26 Serving under http://0.0.0.0:8025/
-15-smtp-and-ncat-mailhog-1  | Creating API v1 with WebPath:
-15-smtp-and-ncat-mailhog-1  | Creating API v2 with WebPath:
-15-smtp-and-ncat-mailhog-1  | [HTTP] Binding to address: 0.0.0.0:8025
-15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 Using in-memory storage
-15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 [SMTP] Binding to address: 0.0.0.0:1025
-15-smtp-and-ncat-mailhog-1  | 2023/10/17 08:16:33 Serving under http://0.0.0.0:8025/
-15-smtp-and-ncat-mailhog-1  | Creating API v1 with WebPath:
-15-smtp-and-ncat-mailhog-1  | Creating API v2 with WebPath:
-15-smtp-and-ncat-mailhog-1  | [APIv1] KEEPALIVE /api/v1/events
+mailpit-1  | time="2024/10/26 08:49:01" level=info msg="[smtpd] starting on [::]:1025 (no encryption)"
+mailpit-1  | time="2024/10/26 08:49:01" level=info msg="[http] starting on [::]:8025"
+mailpit-1  | time="2024/10/26 08:49:01" level=info msg="[http] accessible via http://localhost:8025/"
 ```
 
-You can access the MailHog Web interface at <http://localhost:8025>.
+You can access the Mailpit web interface at <http://localhost:8025>.
 
-### Send an email to MailHog with Telnet
+### Send an email to Mailpit with ncat
 
-In this section, you will send an email with Telnet to the MailHog SMTP server.
+In this section, you will send an email with ncat to the Mailpit SMTP server.
 
 #### Connect to the SMTP server
 
-Now that MailHog is running, you can send an email with Telnet.
+Now that Mailpit is running, you can send an email with Telnet.
 
 Open a new terminal and run the following command:
 
 ```sh
-telnet localhost 1025
+ncat -C localhost 1025
 ```
+
+The `-C` option allows to use the CRLF line endings. This is required by the
+SMTP protocol.
 
 The output should be similar to the following:
 
 ```text
-Trying ::1...
-Connected to localhost.
-Escape character is '^]'.
-220 mailhog.example ESMTP MailHog
+220 f3a8189f0ff4 Mailpit ESMTP Service ready
 ```
 
-This means that you are connected to the MailHog SMTP server.
+This means that you are connected to the Mailpit SMTP server.
 
 #### Send an email
 
-In the Telnet session, run the following commands, replace all `<>` values with
-your own values (you must keep the `<` and `>` characters!) and the
-`the-smtp-domain-name.tld` with any domain name you want. Each command should
-return you a status code:
+In the ncat session, run the following commands. Each command should return you
+a status code. Feel free to change the content of the email (you must keep the
+`<>` characters):
+
+Say hello to the SMTP server:
 
 ```text
 EHLO the-smtp-domain-name.tld
 ```
 
+Tell the SMTP server who you are:
+
 ```text
 MAIL FROM: <your-email@gmail.com>
 ```
+
+Tell the SMTP server who the recipient is:
 
 ```text
 RCPT TO: <recipient@example.com>
 ```
 
+Start the email content:
+
 ```text
 DATA
 ```
+
+Set the email headers
 
 ```text
 Subject: Your Subject
@@ -500,6 +433,14 @@ To: Recipient Name <recipient@example.com>
 ```text
 Content-Type: text/plain; charset="utf-8"
 ```
+
+An empty line is required between the headers and the content:
+
+```text
+
+```
+
+Set the email content:
 
 ```text
 Your email content goes here.
@@ -533,37 +474,77 @@ The `.`, on a line by itself, indicates the end of the email content.
 The output should be similar to this:
 
 ```text
-250 Ok: queued as nE5VmMF5saBAV-vC0V2Em7f_p8pgsh5589hamlAl2WQ=@mailhog.example
+250 2.0.0 Ok: queued as YXmrXP7s4GwckUDLoqVSnk
 ```
 
-The mail has been sent to the MailHog SMTP server. You can check it in the
-MailHog Web interface at <http://localhost:8025>.
+The mail has been sent to the Mailpit SMTP server. You can check it in the
+Mailpit web interface at <http://localhost:8025>.
 
-Congratulations! You have sent your first email with Telnet!
+Congratulations! You have sent your first email with ncat!
 
 As you can see, the commands used to prepare and send the email are quite
 simple. However, the email content is not. This is why we use email clients
-instead of Telnet to send emails.
+instead of ncat to send emails.
 
 These commands follow the SMTP protocol, just as any other application protocols
-such as the one you created in a previous chapter and the ones you will create
+such as the ones you created in a previous chapter and the ones you will create
 in the future.
 
-To quit the Telnet session, run the following command:
+To quit the SMTP session, run the following command:
 
 ```text
 QUIT
 ```
 
-### Stop MailHog
+The output should be similar to the following:
 
-To stop MailHog, run the following command:
+```text
+221 2.0.0 f3a8189f0ff4 Mailpit ESMTP Service closing transmission channel
+```
+
+To exit ncat, press `Ctrl` + `C`.
+
+### Send an email to Mailpit with a Java SMTP client
+
+In this section, you will send an email with Java to the Mailpit SMTP server.
+
+#### Explore the Java client
+
+Explore the `SmtpClientExample.java` file in the `15-smtp-and-ncat` directory.
+
+The Java client uses the `java.net.Socket` class to connect to the Mailpit SMTP
+server and send an email.
+
+#### Run the Java client
+
+Compile the Java client:
+
+```sh
+# Compile the Java client
+javac SmtpClientExample.java
+```
+
+Run the Java client:
+
+```sh
+# Run the Java client
+java SmtpClientExample
+```
+
+#### Check the email
+
+The email should be sent to the Mailpit SMTP server. You can check it in the
+Mailpit web interface at <http://localhost:8025>.
+
+### Stop Mailpit
+
+To stop Mailpit, run the following command:
 
 ```sh
 docker compose down
 ```
 
-This will stop and remove the MailHog container.
+This will stop and remove the Mailpit container.
 
 ### Go further
 
@@ -579,14 +560,14 @@ This is an optional section. Feel free to skip it if you do not have time.
 ### What did you do and learn?
 
 In this chapter, you have had a refresh about networking with IP adresses and
-DNS records. You have also learned about the SMTP protocol and how to use Telnet
+DNS records. You have also learned about the SMTP protocol and how to use ncat
 to send an email to an SMTP server.
 
 Based on the official RFC, you have learned that SMTP is a simple text-based
 protocol to send emails with rather simple commands.
 
-With the help of MailHog and Docker, you have now a way to test your emails with
-a fake SMTP server for all your other applications!
+With the help of Mailpit and Docker, you have now a way to test your emails with
+a fake SMTP server (called a _mock server_) for all your other applications!
 
 ### Test your knowledge
 
@@ -595,7 +576,7 @@ At this point, you should be able to answer the following questions:
 - What are the difference between SMTP, POP3 and IMAP?
 - What are the DNS records related to email?
 - What are the security concerns related to email?
-- What is Telnet?
+- What is ncat?
 - What are the SMTP commands to send an email?
 - What is the difference between the SMTP commands and the email content?
 
@@ -622,11 +603,9 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next chapter, you will learn the following topics:
-
-- Experiment with the SSH protocol and SCP with Docker and Docker Compose
-  - How to access remote servers?
-  - Run a SSH server with Docker and copy files from/to a server with SCP
+We are arriving at the end of the second part of the course. An evaluation will
+be done to check your understanding of all the content seen in this first
+second.
 
 ## Additional resources
 

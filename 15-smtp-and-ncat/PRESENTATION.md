@@ -7,8 +7,8 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - SMTP and Telnet
-description: SMTP and Telnet for the DAI course at HEIG-VD, Switzerland
+title: HEIG-VD DAI Course - SMTP and ncat
+description: SMTP and ncat for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/
 footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
@@ -56,7 +56,7 @@ headingDivider: 4
 [course-material-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/COURSE_MATERIAL.md
 
-# SMTP and Telnet
+# SMTP and ncat
 
 <!--
 _class: lead
@@ -77,47 +77,14 @@ _paginate: false
 
 ## Objectives
 
-- Refresh on networking
-- Learn electronic messaging protocols
+- Learn electronic messaging protocols:
+  - SMTP
+  - POP3
+  - IMAP
 - Focus on the SMTP protocol
-- Learn how to use Telnet to send an email to an SMTP server
+- Learn how to use ncat and Java to send an email to an SMTP server
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
-
-## A quick reminder about networking
-
-<!-- _class: lead -->
-
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
-
-### The Internet Protocol (IP)
-
-- Each computer has a unique IP address
-- IPv4 addresses are limited; NAT routers share IP addresses
-- IPv6 fixes this issue
-- IP addresses are used to route packets
-
-![bg right contain](./images/the-internet-protocol-ip.png)
-
-### The Domain Name System (DNS)
-
-- DNS maps domain names to IP addresses
-- Example: `heig-vd.ch` → `193.134.223.20`
-- dig and nslookup are useful tools to query DNS servers
-
-![bg right contain](./images/the-domain-name-system-dns.png)
-
-### Common DNS records
-
-Records map a domain name to an IP address.
-
-- `NS`: Name Server
-- `CNAME`: Alias
-- `A`: IPv4 address
-- `AAAA`: IPv6 address
-
-![bg right contain](./images/common-dns-records.png)
 
 ## Electronic messaging protocols: SMTP, POP3 and IMAP
 
@@ -128,9 +95,9 @@ find other resources and alternatives as well.
 
 ### Electronic messaging protocols: SMTP, POP3 and IMAP
 
-- Email clients are called Mail User Agents (MUA)
-- Email servers are called Mail Transfer Agents (MTA)
-- They use these protocols
+- Email clients are called **Mail User Agents (MUA)**
+- Email servers are called **Mail Transfer Agents (MTA)**
+- They use different protocols to communicate
 
 ![bg right:40% h:90%](https://blog.thunderbird.net/files/2023/05/1024x1024@2x.png)
 ![bg vertical right:40% h:70%](https://upload.wikimedia.org/wikipedia/commons/e/ea/Microsoft_Exchange_%282019-present%29.svg)
@@ -175,19 +142,19 @@ find other resources and alternatives as well.
 
 ![bg right contain](./images/dns-records-related-to-email.png)
 
-## Security concerns and blacklisting
+## Security concerns and spam
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### Security concerns and blacklisting
+### Security concerns and spam
 
 - SMTP is old and insecure
 - Easy to spoof and forge emails
 - Hard to maintain
-- ➡️ Your email server can be used for spam and can be blacklisted
+- ➡️ Your email server can be used for spam and can be blocked
 - ➡️ We will use a mock server to simulate an email server
 
 ![bg right:40%](https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?fit=crop&h=720)
@@ -222,21 +189,26 @@ find other resources and alternatives as well.
 
 ![bg right:70% h:80%](./images/a-focus-on-the-smtp-protocol-2.png)
 
-## Telnet
+## ncat
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### Telnet
+### ncat
 
-- Telnet is a text-based protocol
-- It is used to connect to a remote server
-- Old and insecure protocol but still useful to test network applications
-- We will use it to connect to an SMTP server
+- ncat is network utility for reading from and writing to network connections
+- It is used to connect to a remote server (SMTP, HTTP, ...)
+- We will use it to interact with a SMTP server
 
-![bg right contain](./images/telnet.png)
+![bg right contain](./images/ncat.png)
+
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
 
 ## Practical content
 
@@ -244,11 +216,12 @@ find other resources and alternatives as well.
 
 ### What will you do?
 
-- Install and configure Telnet
+- Install and configure ncat
 - Start a SMTP server with Docker Compose
-- Send an email with Telnet to the SMTP server
+- Send an email with ncat to the SMTP server
+- Send an email with Java to the SMTP server
 
-![bg right contain](./images/what-will-you-do.png)
+![bg right w:90%](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -273,13 +246,14 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-In the next chapter, you will learn the following topics:
+We are arriving at the end of the second part of the course.
 
-- Experiment with the SSH protocol and SCP with Docker and Docker Compose
-  - How to access remote servers?
-  - Run a SSH server with Docker and copy files from/to a server with SCP
+An evaluation will be done to check your understanding of all the content seen
+in this second part.
 
-![bg right:40%](https://images.unsplash.com/photo-1506818144585-74b29c980d4b?fit=crop&h=720)
+More details will be given in the next chapter.
+
+![bg right:40%](https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720)
 
 ## Sources
 
@@ -289,5 +263,5 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [Nik](https://unsplash.com/@helloimnik) on
   [Unsplash](https://unsplash.com/photos/brown-eggs-on-white-textile-LUYD2b7MNrg)
-- Illustration by [Mathew Schwartz](https://unsplash.com/@cadop) on
-  [Unsplash](https://unsplash.com/photos/sb7RUrRMaC4)
+- Illustration by [MChe Lee](https://unsplash.com/@mclee) on
+  [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
