@@ -1,4 +1,4 @@
-# SMTP and Telnet
+# SMTP and ncat
 
 - Time in class: 2 periods
 - Presentation
