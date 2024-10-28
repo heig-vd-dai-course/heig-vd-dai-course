@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/120
-[illustration]:
-  https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -286,15 +285,22 @@ find other resources and alternatives as well.
 
 ![bg h:80%](./images/service-discovery-protocols-query.png)
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->
 
 ### What will you do?
 
-- Run a complete emitter/receiver UDP example in Java
-- Dockerize the emitter/receiver UDP example
-- Isolate some containers in a dedicated Docker network
+- Run full emitters/receivers examples
+- Learn to use the debugger
+- Implement the _"Temperature monitoring"_ application (using the application
+  protocol you made in the previous chapter!)
 
 ![bg right contain](./images/what-will-you-do.png)
 
@@ -321,9 +327,13 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-<!-- _class: lead -->
+- Learn the different ways to manage multiple clients at the same time with
+  concurrency
+- Update the two network applications to handle multiple clients:
+  - The _"Guess the number"_ game
+  - The _"Temperature monitoring"_ application
 
-You will start the practical work!
+![bg right:40%](https://images.unsplash.com/photo-1628440167042-197d8eb88929?fit=crop&h=720)
 
 ## Sources
 
@@ -342,3 +352,5 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/group-of-people-watching-fireworks-display-c5_eQi4rrjA)
 - Illustration by [Andy Holmes](https://unsplash.com/@andyjh07) on
   [Unsplash](https://unsplash.com/photos/milky-way-during-night-time-LUpDjlJv4_c)
+- Illustration by [Brent Olson](https://unsplash.com/@helixgames) on
+  [Unsplash](https://unsplash.com/photos/person-in-green-and-black-shorts-riding-on-black-and-red-bicycle-_aV5y0nLNew)

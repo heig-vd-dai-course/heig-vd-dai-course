@@ -1,30 +1,38 @@
 @startuml query
+!pragma teoz true
+skinparam BoxPadding 100
+skinparam maxMessageSize 150
 skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
 
 title "Query - An active discovery protocol pattern"
 
-participant "Server 2" as server2
-participant "Server 1" as server1
-participant "Service providers" as providers
-participant "Service consumer" as consumer
-participant "Client" as client
+box "Service providers" #LightBlue
+  participant "Server 1" as server1
+  participant "Server 2" as server2
+end box
 
-note over server2, providers
-Some servers (called service
-providers) listen the network
-to reply to service consumers
-requests/queries.
+box "Service consumer" #LightPink
+  participant "Client" as client
+end box
+
+note over server1, server2
+Some servers (called service providers) listen the network to reply to service consumers requests/queries.
 end note
 
-/ note over consumer, client
-The client (called service
-consumer) query the network
-for a given service.
+/ note over client
+The client (called service consumer) queries the network for a given service.
 end note
 
-client -> providers: <i>Hello strangers,</i>\n<i>I am looking for</i>\n<i>someone who</i>\n<i>could provide</i>\n<i><b>this</b> service.</i>
+client -> server1: <i>Hello strangers, I am looking for someone who could provide <b>this</b> service.</i>
+& client -> server2
 
-server1 -> client: <i>I offer the</i>\n<i>service you</i>\n<i>are looking</i>\n<i>for. You can</i>\n<i>reach me at</i>\n<i>this address.</i>
+|||
 
-client -> server1: <i>Hello.</i>\n<i>I request the use</i>\n<i>of your service.</i>
+server2 -> client: <i>I offer the service you are looking for. You can reach me at this address.</i>
+
+|||
+
+client -> server2: <i>Hello. I request the use of your service.</i>
 @enduml
