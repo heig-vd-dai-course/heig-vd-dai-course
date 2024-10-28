@@ -121,7 +121,7 @@ solve a specific problem.
 
 ## Notes
 
-You have access to your own notes in paper format. Your notes must fit on **one
+You have access to your own notes in paper format. Your notes must fit on **1
 sheet of paper (recto)**.
 
 They can contain anything useful to you: definitions, schemas, code snippets,
@@ -151,7 +151,7 @@ All previous evaluations are available in the
 [`00-evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 directory of the course repository.
 
-Check all evaluations are some chapters were rearranged this year.
+Check all evaluations as some chapters were rearranged this year.
 
 ![bg right:40%][illustration]
 

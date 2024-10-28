@@ -51,7 +51,7 @@ The entire course planning for the semester is available at
   (WIP)
 - [15. SMTP and ncat (2 periods)](./15-smtp-and-ncat/README.md)
 - [16. Practical work 2 (12 periods)](./16-practical-work-2/README.md)
-- [17. Evaluation 2 (2 periods)](./17-evaluation-2/README.md) (WIP)
+- [17. Evaluation 2 (2 periods)](./17-evaluation-2/README.md)
 - [18. Conclusion to part 2](./18-conclusion-to-part-2/README.md)
 
 ### Part 3 - Network programming with HTTP (20 periods)

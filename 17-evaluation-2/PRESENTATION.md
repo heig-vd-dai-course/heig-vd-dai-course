@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: 'HEIG-VD DAI Course - Evaluation 2'
 description: 'Evaluation 2 for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-evaluation-2/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -48,8 +48,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/17-evaluation-2/17-evaluation-2-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Evaluation 2
 
@@ -68,43 +67,94 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Evaluation
+## Evaluation format
 
 In order to validate this part of the course, you will have to pass an
-evaluation. The questions will be in French and you can answer them in French or
-English.
+evaluation.
 
-The evaluation will only be **a theoretical part of 60 minutes**.
+The evaluation will last **60 minutes** and the questions will be in French. You
+can answer them in French or English.
 
-The evaluation will be done on the computer with the help the online evaluation
-platform as used in the Evaluation 2.
+The evaluation dates will be as follow:
 
-You will have to be connected to the
-[VPN](https://intranet.heig-vd.ch/services/informatique/poste-de-travail/reseau/vpn/Pages/vpn.aspx).
-It is **mandatory**.
+- DAI-TIC-B (Monday mornings): **25.11.2024**
+- DAI-TIC-C (Friday mornings): **29.11.2024**
 
 ---
+
+The evaluation will be done on paper and is made up of two parts:
+
+1. A first part of 35 minutes
+2. A second part of 25 minutes
+
+A break between the two parts will be given.
+
+## Chapters evaluated
 
 The following chapters will be evaluated:
 
-- [HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/21-ssh-and-scp)
-- [Web infrastructures](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/22-web-infrastructures)
+- [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-define-an-application-protocol)
+- [Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-java-tcp-programming)
+- [Java UDP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming)
+- [Java network concurrency](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-network-concurrency)
+- [SMTP and ncat](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat)
+- [Practical work 2](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2)
+
+![bg right:40%][illustration]
 
 ---
 
-You might be asked questions about the theoretical content, the practical
-content and elements seen in the practical work.
+- [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
+  (without the practical content regarding Docker Compose)
 
-You can only have access to your own notes in paper format. Your notes must fit
-on one sheet of paper (recto). They can contain anything useful to you:
-definitions, schemas, code snippets, etc. You will be able to use them during
-the exam at the end of the semester.
+![bg right:40%][illustration]
+
+## Evaluation content
+
+You might be asked questions about the theoretical content and the practical
+content in each chapter. You might also be asked about elements seen in the
+practical work as well.
+
+You might also be asked to write/explain code snippets or to explain how to
+solve a specific problem.
+
+![bg right:40%][illustration]
+
+## Notes
+
+You have access to your own notes in paper format. Your notes must fit on **2.5
+(1 + 1.5) sheets of paper (recto)**.
+
+They can contain anything useful to you: definitions, schemas, code snippets,
+etc.
+
+You will be able to use them during the exam at the end of the semester.
+
+![bg right:40%][illustration]
+
+## Rules
+
+No communication between students is allowed.
+
+ChatGPT, GitHub Copilot or any other AI assisted tools are not allowed during
+the evaluation.
+
+Cheating is not allowed. If you are caught cheating, you will get a 1 for the
+evaluation.
+
+![bg right:40%][illustration]
+
+## How to prepare
 
 All typical questions are at the end of each chapter you studied.
 
 All previous evaluations are available in the
-[`evaluation-4`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/17-evaluation-2)
-folder of the course repository.
+[`00-evaluation-and-exam-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
+directory of the course repository.
+
+Check all evaluations as some chapters were rearranged this year.
+
+![bg right:40%][illustration]
 
 ## Questions
 
