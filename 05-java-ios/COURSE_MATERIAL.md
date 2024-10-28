@@ -910,6 +910,7 @@ of streams to see which one is the most efficient for different use cases.
 ### Create and clone the repository
 
 You can create a new GitHub project using the template we have prepared for you.
+
 When you create a new repository, you can choose to use a template. Select the
 `heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content` template as
 shown in the following screenshot:
