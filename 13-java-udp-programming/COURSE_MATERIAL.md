@@ -571,7 +571,8 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Manage mu
+- Understand network concurrency.
+- Manage multiple clients with concurrency.
 
 ## Additional resources
 
