@@ -298,7 +298,7 @@ In the next chapter, you will learn the following topics:
 - Java TCP programming
   - How to create a TCP server
   - How to create a TCP client
-  - Implement the _"Guess the number"_ game using TCP
+  - Implement the _"Guess the number"_ game using TCP (optional)
 
 ![bg right:40%](https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720)
 

@@ -25,6 +25,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
+- [Explore the code examples](#explore-the-code-examples)
 - [TCP](#tcp)
 - [The Socket API](#the-socket-api)
   - [Client/server common methods](#clientserver-common-methods)
@@ -34,10 +35,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Variable length data](#variable-length-data)
 - [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
 - [Practical content](#practical-content)
-  - [Check and run the code examples](#check-and-run-the-code-examples)
-  - [Implement the _"Guess the number"_ game](#implement-the-guess-the-number-game)
-  - [Dockerize the application](#dockerize-the-application)
-  - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
+  - [Update your application protocol](#update-your-application-protocol)
+  - [Try to access the server from multiple clients at the same time](#try-to-access-the-server-from-multiple-clients-at-the-same-time)
+  - [Explore the Java TCP programming template](#explore-the-java-tcp-programming-template)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -58,6 +58,23 @@ in Java.
 
 This will allow you to create your own network applications, such as a chat
 server, a file server, a web server, etc.
+
+## Explore the code examples
+
+Individually, or in pair/group, **take 15 minutes to explore and discuss the
+code examples** provided in the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository. Clone it or pull the latest changes to get the code examples.
+
+The code examples are located in the `12-java-tcp-programming` directory.
+
+Try to answer the following questions:
+
+- How do the code examples work?
+- What are the main takeaways of the code examples?
+- What are the main differences between the code examples?
+
+You can use the following theoretical content to help you.
 
 ## TCP
 
@@ -283,38 +300,61 @@ the developer to decide when and who manage to close the connection.
 
 ## Practical content
 
-### Check and run the code examples
+### Update your application protocol
 
-In this section, you will clone the code examples repository to check and run
-the code examples.
+Now that you have gained new knowledge regarding TCP, update the application
+protocol you have created for the _"Guess the number"_ game in the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+chapter to reflect the usage of the TCP protocol.
 
-#### Clone the repository
-
-Clone the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository to get the code examples.
-
-#### Access the code examples in your terminal
-
-Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
-directory.
-
-#### Explore the code examples
-
-In the `12-java-tcp-programming` directory, checkout the `README.md` file to
-learn how to run the code examples.
-
-Take some time to explore and run the code examples.
-
-### Implement the _"Guess the number"_ game
-
-In this section, you will implement the _"Guess the number"_ game using the
-application protocol you have made from the
+You can check the official solution in the
 [Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
 
-#### Create and clone the repository
+### Try to access the server from multiple clients at the same time
 
-You can create a new GitHub project using the template we have prepared for you.
+Try to access the server from multiple clients at the same time (start the
+client multiple times). You will see that the server can only handle one client
+at a time.
+
+Do you have any idea why? You will find the answer in a future chapter but you
+can try to find it by yourself now. Discuss with your peers if needed to share
+your findings.
+
+### Explore the Java TCP programming template
+
+In this section, you will explore the Java TCP programming template.
+
+This is a simple template that you can use to create your own TCP clients and
+servers in Java.
+
+The template is located in the
+[`heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-template`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content-template).
+
+Take some time to explore the template. Then, try to answer the following
+questions:
+
+- How would you use it to create your own TCP clients and servers?
+- What are the main takeaways of the template?
+- How you would you implement a TCP network application using the template and
+  the provided code examples?
+
+You can use the template to create your own TCP network applications.
+
+### Go further
+
+This is an optional section. Feel free to skip it if you do not have time.
+
+#### Implement the _"Guess the number"_ game
+
+Implement the _"Guess the number"_ game using the application protocol you have
+made from the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
+
+You can use the application protocol you have made or the one provided in the
+solution if you have not done it.
+
+Use the template and the code examples you just explored to help you implement
+the game.
 
 When you create a new repository, you can choose to use a template. Select the
 `heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content`
@@ -325,25 +365,7 @@ template.
 > Please make sure that the repository owner is your personal GitHub account and
 > not the `heig-vd-dai-course` organization.
 
-#### Implement the game
-
-Take some time to explore the codebase from the template we have prepared for
-you.
-
-Using the application protocol you have made from the
-[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-or the one provided in the solution, implement the _"Guess the number"_ game.
-
-Use the code examples you just explored to help you implement the game.
-
-Once you have implemented the game, try to access the server from many clients
-at the same time. You will see that the server can only handle one client at a
-time.
-
-Do you have any idea why? You will find the answer in a future chapter but you
-can try to find it by yourself.
-
-### Dockerize the application
+#### Dockerize the application
 
 Using the Docker knowledge you have acquired in the
 [Docker and Docker Compose chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose),
@@ -365,29 +387,34 @@ docker run --rm -it --name the-server <docker-image-tag> server
 docker run --rm -it <docker-image-tag> client --host the-server
 ```
 
+> [!NOTE]
+>
+> I (Ludovic) was not able to test these commands thoroughly. You might need to
+> adapt them to make them work. If something does not work, feel free to tell me
+> so I can update the commands.
+
 The `--name` sets the name of the container as well as the hostname of the
 container. This allows to access the server container using its hostname from
 the client.
 
-You might notice that no ports are published with the host. As both container
-run on Docker, they share the same network bridge. They can thus communicate
+You might notice that no ports are published to the host. As both container run
+on Docker, they share the same network bridge. They can thus communicate
 together without passing by the host.
 
-### Compare your solution with the official one
+#### Compare your solution with the official one
 
-Compare your solutions with the official ones stated in the
-[Solution](#solution) section.
+Compare your solution with the official one stated in the [Solution](#solution)
+section.
 
 If you have any questions about the solution, feel free to ask as described in
 the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 section.
 
-### Go further
-
-This is an optional section. Feel free to skip it if you do not have time.
+#### Go one step further
 
 - Can you update the network application to allow the client to specify the
   range of the number to guess before starting the game?
+- Can you implement the "_Temperature monitoring_" application with TCP?
 
 ## Conclusion
 
@@ -396,11 +423,13 @@ This is an optional section. Feel free to skip it if you do not have time.
 In this chapter, you have learned how to use the Socket API to create your own
 TCP clients and servers in Java.
 
-You have implemented your first network application based on the _"Guess the
-number"_ application protocol. Congratulations! It is a big step forward!
+Congratulations! It is a big step forward!
 
 You are now able to create your own network applications, such as a chat server,
 a file server, a web server, etc.
+
+As for now, only one client can access the server at the same time. You will see
+in a future chapter how to manage multiple clients at the same time!
 
 ### Test your knowledge
 
@@ -437,12 +466,9 @@ You can use reactions to express your opinion on a comment!
 In the next chapter, you will learn the following topics:
 
 - Java UDP programming
-  - How does UDP work?
   - How does it compare to TCP?
-  - How to create UDP network applications
-  - How to make usage of UDP specificities to create efficient network
-    applications
-  - Implement the _"Temperature monitoring"_ application using UDP
+  - How to create efficient UDP network applications
+  - Implement the _"Temperature monitoring"_ application using UDP (optional)
 
 ## Additional resources
 

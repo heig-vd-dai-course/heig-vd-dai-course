@@ -25,6 +25,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
+- [Explore the code examples](#explore-the-code-examples)
 - [UDP](#udp)
 - [Differences between TCP and UDP](#differences-between-tcp-and-udp)
 - [UDP datagrams](#udp-datagrams)
@@ -37,11 +38,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Messaging patterns](#messaging-patterns)
 - [Service discovery protocols](#service-discovery-protocols)
 - [Practical content](#practical-content)
-  - [Check and run the code examples](#check-and-run-the-code-examples)
+  - [Update your application protocol](#update-your-application-protocol)
   - [Learn to use the debugger](#learn-to-use-the-debugger)
-  - [Implement the _"Temperature monitoring"_ application](#implement-the-temperature-monitoring-application)
-  - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
+  - [Try to emit from multiple emitters at the same time](#try-to-emit-from-multiple-emitters-at-the-same-time)
+  - [Explore the Java UDP programming template](#explore-the-java-udp-programming-template)
   - [Go further](#go-further)
+  - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
@@ -62,6 +64,23 @@ reliability is not required. It is used for streaming, gaming, etc.
 
 UDP is sensibly different from TCP and it is important to understand the
 differences between the two protocols.
+
+## Explore the code examples
+
+Individually, or in pair/group, **take 15 minutes to explore and discuss the
+code examples** provided in the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository. Clone it or pull the latest changes to get the code examples.
+
+The code examples are located in the `13-java-udp-programming` directory.
+
+Try to answer the following questions:
+
+- How do the code examples work?
+- What are the main takeaways of the code examples?
+- What are the main differences between the code examples?
+
+You can use the following theoretical content to help you.
 
 ## UDP
 
@@ -412,28 +431,15 @@ These patterns can still be used with other protocols such as TCP.
 
 ## Practical content
 
-### Check and run the code examples
+### Update your application protocol
 
-In this section, you will clone the code examples repository to check and run
-the code examples.
+Now that you have gained new knowledge regarding UDP, update the application
+protocol you have created for the _"Temperature monitoring"_ application in the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+chapter to reflect the usage of the UDP protocol.
 
-#### Clone the repository
-
-Clone the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository to get the code examples.
-
-#### Access the code examples in your terminal
-
-Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
-directory.
-
-#### Explore the code examples
-
-In the `13-java-udp-programming` directory, checkout the `README.md` file to
-learn how to run the code examples.
-
-Take some time to explore and run the code examples.
+You can check the official solution in the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
 
 ### Learn to use the debugger
 
@@ -470,15 +476,56 @@ following screenshot:
 Take some time to learn how to use the debugger in your favorite IDE, this is a
 very useful tool.
 
-### Implement the _"Temperature monitoring"_ application
+### Try to emit from multiple emitters at the same time
 
-In this section, you will implement the _"Temperature monitoring"_ game using
-the application protocol you have made from the
+Try to emit from multiple emitters at the same time (start the emitter multiple
+times). You will see that the server will receive all messages from the
+emitters.
+
+Do you have any idea why? How does it compare to the TCP examples you have seen
+in the
+[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-udp-programming)
+chapter?
+
+You will find the answer in a future chapter but you can try to find it by
+yourself now. Discuss with your peers if needed to share your findings.
+
+### Explore the Java UDP programming template
+
+In this section, you will explore the Java UDP programming template.
+
+This is a simple template that you can use to create your own UDP
+emitters/clients and receivers/servers in Java.
+
+The template is located in the
+[`heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-template`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template).
+
+Take some time to explore the template. Then, try to answer the following
+questions:
+
+- How would you use it to create your own UDP emitters/clients and
+  receivers/servers?
+- What are the main takeaways of the template?
+- How you would you implement a UDP network application using the template and
+  the provided code examples?
+
+You can use the template to create your own UDP network applications.
+
+### Go further
+
+This is an optional section. Feel free to skip it if you do not have time.
+
+#### Implement the _"Temperature monitoring"_ application
+
+Implement the _"Temperature monitoring"_ game using the application protocol you
+have made from the
 [Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
 
-#### Create and clone the repository
+You can use the application protocol you have made or the one provided in the
+solution if you have not done it.
 
-You can create a new GitHub project using the template we have prepared for you.
+Use the template and the code examples you just explored to help you implement
+the game.
 
 When you create a new repository, you can choose to use a template. Select the
 `heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content`
@@ -489,36 +536,62 @@ template.
 > Please make sure that the repository owner is your personal GitHub account and
 > not the `heig-vd-dai-course` organization.
 
-#### Implement the application
+#### Dockerize the application
 
-Take some time to explore the codebase from the template we have prepared for
-you.
+Using the Docker knowledge you have acquired in the
+[Docker and Docker Compose chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose),
+dockerize the application.
 
-Using the application protocol you have made from the
-[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-or the one provided in the solution, implement the _"Temperature monitoring"_
-application.
+The steps to dockerize the application are the following:
 
-Use the code examples you just explored to help you implement the application.
+- Create a `Dockerfile` for the application
+- Publish the application to GitHub Container Registry
+
+You should then be able to run the emitter, the receiver and the operator in
+Docker containers and access the receiver from the operator using the following
+commands:
+
+```sh
+# Start the emitter
+docker run --rm -it <docker-image-tag> emitter
+
+# Start the receiver
+docker run --rm -it --name the-receiver <docker-image-tag> receiver --network-interface eth0
+
+# Start the operator and access the receiver container
+docker run --rm -it <docker-image-tag> operator --host the-receiver
+```
+
+> [!NOTE]
+>
+> I (Ludovic) was not able to test these commands thoroughly. You might need to
+> adapt them to make them work. If something does not work, feel free to tell me
+> so I can update the commands.
+
+The `--name` sets the name of the container as well as the hostname of the
+container. This allows to access the receiver container using its hostname from
+the operator.
+
+You might notice that no ports are published to the host. As both container run
+on Docker, they share the same network bridge. They can thus communicate
+together without passing by the host.
 
 ### Compare your solution with the official one
 
-Compare your solutions with the official ones stated in the
-[Solution](#solution) section.
+Compare your solution with the official one stated in the [Solution](#solution)
+section.
 
 If you have any questions about the solution, feel free to ask as described in
 the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 section.
 
-### Go further
-
-This is an optional section. Feel free to skip it if you do not have time.
+#### Go one step further
 
 - Can you update the application protocol to allow the operator to have the
   latest temperature for a given room or the average temperature of that room?
-  - This will require to store all the temperatures received for a given room
-    and to calculate the average temperature instead of storing only the latest
-    temperature.
+  - **Tip**: this will require to store all the temperatures received for a
+    given room and to calculate the average temperature instead of storing only
+    the latest temperature.
 - Are you able to Dockerize this application as well?
 
 ## Conclusion
@@ -533,7 +606,7 @@ network application to use it anywhere.
 
 Just as with TCP, you have now all the knowledge to build bigger and better
 network applications. We continue our journey toward network application
-programming, understanding and shipment.
+programming.
 
 ### Test your knowledge
 

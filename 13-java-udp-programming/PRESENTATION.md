@@ -85,6 +85,26 @@ _paginate: false
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
+## Check and run the code examples
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### Check and run the code examples
+
+Individually, or in pair/group, **take 15 minutes to explore and discuss the
+[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**.
+
+Answer the questions available in the course material:
+
+- How do the code examples work?
+- What are the main takeaways of the code examples?
+- What are the main differences between the code examples?
+
+If needed, use the theoretical content to help you.
+
 ## UDP
 
 <!-- _class: lead -->
@@ -297,12 +317,13 @@ Do you have any questions?
 
 ### What will you do?
 
-- Run full emitters/receivers examples
+- Update your application protocol with the new knowledge you gained
 - Learn to use the debugger
-- Implement the _"Temperature monitoring"_ application (using the application
-  protocol you made in the previous chapter!)
+- Try to emit from multiple emitters at the same time
+- Explore the Java UDP programming template
+- Implement the _"Temperature monitoring"_ application (optional)
 
-![bg right contain](./images/what-will-you-do.png)
+![bg right:40% contain](./images/TODO.png)
 
 ### Find the practical content
 
@@ -329,7 +350,7 @@ You can use reactions to express your opinion on a comment!
 
 - Learn the different ways to manage multiple clients at the same time with
   concurrency
-- Update the two network applications to handle multiple clients:
+- Update the two network applications to handle multiple clients (optional):
   - The _"Guess the number"_ game
   - The _"Temperature monitoring"_ application
 
