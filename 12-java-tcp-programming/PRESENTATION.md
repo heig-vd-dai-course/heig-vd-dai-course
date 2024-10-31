@@ -85,6 +85,26 @@ Your applications will be able to communicate over the network!
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
+## Check and run the code examples
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### Check and run the code examples
+
+Individually, or in pair/group, **take 15 minutes to explore and discuss the
+[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**.
+
+Answer the questions available in the course material:
+
+- How do the code examples work?
+- What are the main takeaways of the code examples?
+- What are the main differences between the code examples?
+
+If needed, use the theoretical content to help you.
+
 ## TCP
 
 <!-- _class: lead -->
@@ -297,13 +317,12 @@ Do you have any questions?
 
 ### What will you do?
 
-- Run full client/server examples
-- Implement the _"Guess the number"_ game (using the application protocol you
-  made in the previous chapter!)
-- Dockerize and share the game.
+- Update your application protocol with the new knowledge you gained
+- Try to access the server from multiple clients at the same time
+- Explore the Java TCP programming template
+- Implement and Dockerize the _"Guess the number"_ game (optional)
 
-![bg right contain](./images/what-will-you-do-server.png)
-![bg right vertical contain](./images/what-will-you-do-client.png)
+![bg right:40% contain](./images/TODO.png)
 
 ### Find the practical content
 
@@ -328,9 +347,14 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-<!-- _class: lead -->
+In the next chapter, you will learn the following topics:
 
-You will start the practical work!
+- Java UDP programming
+  - How does it compare to TCP?
+  - How to create efficient UDP network applications
+  - Implement the _"Temperature monitoring"_ application using UDP (optional)
+
+![bg right:40%](https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720)
 
 ## Sources
 
