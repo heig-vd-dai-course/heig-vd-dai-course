@@ -85,16 +85,16 @@ Your applications will be able to communicate over the network!
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-## Check and run the code examples
+## Explore the code examples
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### Check and run the code examples
+### Explore the code examples
 
-Individually, or in pair/group, **take 15 minutes to explore and discuss the
+Individually, or in pair/group, **take 10 minutes to explore and discuss the
 [code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**.
 
 Answer the questions available in the course material:
@@ -116,7 +116,7 @@ find other resources and alternatives as well.
 
 TCP is a transport protocol that is similar to a phone call:
 
-1. A connection is established between two parties (Unicast)
+1. A connection is established between two parties (unicast)
 2. Data sent is guaranteed to arrive in the same order
 3. Data can be sent again if needed (retransmission)
 
@@ -318,7 +318,7 @@ Do you have any questions?
 ### What will you do?
 
 - Update your application protocol with the new knowledge you gained
-- Try to access the server from multiple clients at the same time
+- Execute the code examples and run multiple clients at the same time
 - Explore the Java TCP programming template
 - Implement and Dockerize the _"Guess the number"_ game (optional)
 

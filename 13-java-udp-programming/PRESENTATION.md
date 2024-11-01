@@ -85,16 +85,16 @@ _paginate: false
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-## Check and run the code examples
+## Explore the code examples
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### Check and run the code examples
+### Explore the code examples
 
-Individually, or in pair/group, **take 15 minutes to explore and discuss the
+Individually, or in pair/group, **take 10 minutes to explore and discuss the
 [code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**.
 
 Answer the questions available in the course material:
@@ -319,7 +319,7 @@ Do you have any questions?
 
 - Update your application protocol with the new knowledge you gained
 - Learn to use the debugger
-- Try to emit from multiple emitters at the same time
+- Execute the code examples and run multiple emitters at the same time
 - Explore the Java UDP programming template
 - Implement the _"Temperature monitoring"_ application (optional)
 

@@ -431,6 +431,11 @@ These patterns can still be used with other protocols such as TCP.
 
 ## Practical content
 
+### Execute the code examples
+
+Return to the code examples and take some time to execute them, understand them
+and see the results.
+
 ### Update your application protocol
 
 Now that you have gained new knowledge regarding UDP, update the application

@@ -35,6 +35,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Variable length data](#variable-length-data)
 - [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
 - [Practical content](#practical-content)
+  - [Execute the code examples](#execute-the-code-examples)
   - [Update your application protocol](#update-your-application-protocol)
   - [Try to access the server from multiple clients at the same time](#try-to-access-the-server-from-multiple-clients-at-the-same-time)
   - [Explore the Java TCP programming template](#explore-the-java-tcp-programming-template)
@@ -61,7 +62,7 @@ server, a file server, a web server, etc.
 
 ## Explore the code examples
 
-Individually, or in pair/group, **take 15 minutes to explore and discuss the
+Individually, or in pair/group, **take 10 minutes to explore and discuss the
 code examples** provided in the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
 repository. Clone it or pull the latest changes to get the code examples.
@@ -84,7 +85,7 @@ applications.
 TCP is a connection-oriented protocol: a connection must be established between
 the two applications before data can be exchanged in a bidirectional way.
 
-TCP can only do Unicast: one application can only communicate with one other
+TCP can only do unicast: one application can only communicate with one other
 application at the same time.
 
 It is considered as a reliable protocol as data sent is guaranteed to be
@@ -299,6 +300,11 @@ Both the client and the server can close the connection at any time. It is up to
 the developer to decide when and who manage to close the connection.
 
 ## Practical content
+
+### Execute the code examples
+
+Return to the code examples and take some time to execute them, understand them
+and see the results.
 
 ### Update your application protocol
 
