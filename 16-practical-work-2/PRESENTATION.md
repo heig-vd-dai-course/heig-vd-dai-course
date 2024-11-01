@@ -448,8 +448,8 @@ More details for this section in the [course material][course-material].
 
 Your work is due as follow:
 
-- DAI-TIC-C (Friday mornings): **01.12.2024 23:59**
-- DAI-TIC-B (Monday mornings): **05.12.2024 23:59**
+- DAI-TIC-B (Monday mornings): **01.12.2024 23:59**
+- DAI-TIC-C (Friday mornings): **05.12.2024 23:59**
 
 Update the GitHub Discussion with the link to your repository as mentioned in
 the course material.
@@ -467,8 +467,8 @@ More details for this section in the [course material][course-material].
 
 The practical work presentations will take place in **TBD** on:
 
-- DAI-TIC-C (Friday mornings): **02.12.2024 8:30-10:25**
-- DAI-TIC-B (Monday mornings): **06.12.2024 8:30-10:25**
+- DAI-TIC-B (Monday mornings): **02.12.2024**
+- DAI-TIC-C (Friday mornings): **06.12.2024**
 
 We only have **TBD minutes per group**. You decide what you want to show us and
 how you want to present it. **Come 5 minutes before your time slot** with your
