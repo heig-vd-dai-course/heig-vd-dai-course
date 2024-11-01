@@ -409,7 +409,8 @@ More details for this section in the [course material][course-material].
 - The application must use the picocli dependency
 - You can only use the Java classes seen in the course
 - Your application must be slightly more complex and slightly different than the
-  examples presented during the course
+  examples presented during the course (we emphasize the word **slightly**, no
+  need to shoot for the moon!)
 
 ## Tips
 
