@@ -246,8 +246,8 @@ information:
 The practical work presentations will take place in **room TBD** (next to the
 stairs) on:
 
-- DAI-TIC-B (Monday mornings): **02.12.2024 8:30-10:25**
-- DAI-TIC-C (Friday mornings): **06.12.2024 8:30-10:25**
+- DAI-TIC-B (Monday mornings): **02.12.2024**
+- DAI-TIC-C (Friday mornings): **06.12.2024**
 
 We only have **TBD minutes per group**. You decide what you want to show us and
 how you want to present it.
