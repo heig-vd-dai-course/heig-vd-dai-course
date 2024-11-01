@@ -222,8 +222,8 @@ systems without any issues.
 
 Your work is due as follow:
 
-- DAI-TIC-C (Friday mornings): **01.12.2024 23:59**
-- DAI-TIC-B (Monday mornings): **05.12.2024 23:59**
+- DAI-TIC-B (Monday mornings): **01.12.2024 23:59**
+- DAI-TIC-C (Friday mornings): **05.12.2024 23:59**
 
 > [!CAUTION]
 >
