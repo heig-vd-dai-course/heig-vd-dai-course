@@ -423,9 +423,64 @@ More details for this section in the [course material][course-material].
 - You can use any tools you want to create your diagrams:
   - [PlantUML](https://plantuml.com/)
   - [draw.io](https://draw.io/)
-  - etc.
+  - Scans from paper diagrams
+  - Any other tools you want
+
+PDF, PNG, SVG, etc. are all accepted formats in your repository.
 
 ![bg right:40% contain](https://upload.wikimedia.org/wikipedia/commons/3/30/Plantuml_Logo.svg)
+
+### Extract the command and parameters from the message
+
+The Short Message Service (SMS) protocol presented in the
+[_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+chapter (accessible in the
+[examples repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository) defines the following message:
+
+```text
+RECEIVE <message> <username>
+```
+
+This message is sent by the server to a client to inform them that they have
+received a message from another user.
+
+---
+
+The command is `RECEIVE` and the parameters are `<message>` and `<username>`.
+
+The message can be up to 100 characters long.
+
+You can use the following snippet of code to extract the command and the
+parameters from the message:
+
+---
+
+```java
+List<String> messageParts = Arrays.asList(emitterMessage.split(" ", 2));
+
+String command = messageParts.get(0);
+switch (command) {
+  // Other cases can be defined here...
+  case "RECEIVE" -> {
+    if (messageParts.size() < 2) {
+      // Invalid message, do something about it such as logging it or returning an error...
+    }
+
+    List<String> parameters = Arrays.asList(messageParts.get(1).split(" "));
+
+    if (parameters.size() < 2) {
+      // Invalid message, do something about it such as logging it or returning an error...
+    }
+
+    String user = parameters.removeLast();
+    String message = String.join(" ", parameters);
+
+    System.out.printf("Message from %s: %s\n", user, message);
+  }
+  // Other cases can be defined here...
+}
+```
 
 ### The POSIX standard
 

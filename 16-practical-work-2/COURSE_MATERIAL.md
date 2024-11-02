@@ -37,6 +37,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Constraints](#constraints)
 - [Tips](#tips)
   - [Create diagrams](#create-diagrams)
+  - [Extract the command and parameters from the message](#extract-the-command-and-parameters-from-the-message)
   - [The POSIX standard](#the-posix-standard)
 - [Submission](#submission)
 - [Presentations](#presentations)
@@ -201,8 +202,82 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Create diagrams
 
-You can use [PlantUML](https://plantuml.com/), [draw.io](https://draw.io/) or
-any other tools you want to create your diagrams.
+You can use [PlantUML](https://plantuml.com/), [draw.io](https://draw.io/),
+scans paper diagrams or any other tools you want to create your diagrams.
+
+PDF, PNG, SVG, etc. are all accepted formats in your repository.
+
+### Extract the command and parameters from the message
+
+The Short Message Service (SMS) protocol presented in the
+[_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+chapter (accessible in the
+[examples repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository) defines the following message:
+
+```text
+RECEIVE <message> <username>
+```
+
+This message is sent by the server to a client to inform them that they have
+received a message from another user.
+
+The command is `RECEIVE` and the parameters are `<message>` and `<username>`.
+
+The message can be up to 100 characters long.
+
+You can use the following snippet of code to extract the command and the
+parameters from the message:
+
+```java
+// Extract the command and the parameters from the message and store them in a
+// List. The first element of the List is the command and the second element is
+// the parameters.
+//
+// The second parameter of the split method is the maximum number of parts
+// that can be created. If the message contains more than one space, the
+// remaining parts will be added to the last part.
+List<String> messageParts = Arrays.asList(emitterMessage.split(" ", 2));
+
+// Get the command from the message
+String command = messageParts.get(0);
+
+// Switch on the command
+switch (command) {
+  // Other cases can be defined here...
+  case "RECEIVE" -> {
+    // We check that the message contains at least two parts (the command and
+    // its parameters). If not, the message is invalid (from the application
+    // protocol) and we ignore it (or we can send an error message to the
+    // client).
+    if (messageParts.size() < 2) {
+      System.out.println("Invalid message, ignoring...");
+      break;
+    }
+
+    // Get the parameters from the message
+    List<String> parameters = Arrays.asList(messageParts.get(1).split(" "));
+
+    // Check that the parameters contains at least two parts (the message and
+    // the user). If not, the message is invalid and we ignore it (or we can
+    // send an error message to the client).
+    if (parameters.size() < 2) {
+      System.out.println("Invalid message, ignoring...");
+      break;
+    }
+
+    // Get (and remove) the user from the parameters (the last part)
+    String user = parameters.removeLast();
+
+    // Join the remaining parts with a space to form the message
+    String message = String.join(" ", parameters);
+
+    // Do something with the message and the user
+    System.out.printf("Message from %s: %s\n", user, message);
+  }
+  // Other cases can be defined here...
+}
+```
 
 ### The POSIX standard
 
