@@ -92,8 +92,8 @@ _paginate: false
 
 ## Feedback
 
-Your feedback helps us know **what what you liked and what you disliked** in
-your learning experience. **The feedback is anonymous**.
+Your feedback helps us know **what you liked and what you disliked** in your
+learning experience. **The feedback is anonymous**.
 
 We would be very grateful if you could [take a few minutes to fill
 it][feedback]. **Thank you!**

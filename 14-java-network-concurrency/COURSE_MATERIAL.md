@@ -1,12 +1,11 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-java-tcp-programming/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-network-concurrency/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-java-tcp-programming/12-java-tcp-programming-course-material.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-network-concurrency/14-java-network-concurrency-course-material.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/116
-[illustration]:
-  https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/453
+[illustration]: ./images/main-illustration.jpg
 
 # Java network concurrency - Course material
 
@@ -26,22 +25,26 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
-- [TCP](#tcp)
-- [The Socket API](#the-socket-api)
-  - [Client/server common methods](#clientserver-common-methods)
-  - [Client workflow and methods](#client-workflow-and-methods)
-  - [Server structure and methods](#server-structure-and-methods)
-- [Processing data from streams](#processing-data-from-streams)
-  - [Variable length data](#variable-length-data)
+- [Disclaimer](#disclaimer)
+- [Explore the code examples](#explore-the-code-examples)
+- [Concurrency: an introduction](#concurrency-an-introduction)
+  - [What is a processor?](#what-is-a-processor)
+  - [What is a core?](#what-is-a-core)
+  - [What is a thread?](#what-is-a-thread)
+  - [What is a process?](#what-is-a-process)
+  - [What problems can concurrency cause?](#what-problems-can-concurrency-cause)
+  - [What happens when multiple threads access the same resource?](#what-happens-when-multiple-threads-access-the-same-resource)
 - [Handling one client at a time](#handling-one-client-at-a-time)
 - [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
   - [Multi-processing](#multi-processing)
   - [Multi-threading](#multi-threading)
   - [Asynchronous programming](#asynchronous-programming)
+- [Handling multiple threads in Java](#handling-multiple-threads-in-java)
+- [Concurrent safe variable types and data structures in Java](#concurrent-safe-variable-types-and-data-structures-in-java)
 - [Practical content](#practical-content)
-  - [Get the required files](#get-the-required-files)
-  - [Send an email using a SMTP client written in Java with the Socket API](#send-an-email-using-a-smtp-client-written-in-java-with-the-socket-api)
-  - [Run full client/server examples](#run-full-clientserver-examples)
+  - [Execute the code examples](#execute-the-code-examples)
+  - [Answer the following questions](#answer-the-following-questions)
+  - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -54,223 +57,175 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-As you have seen in previous chapters, applications communicate with each other
-using application protocols.
+You might have notice in previous chapters that your network applications could
+only handle one client at a time. This is not very useful in a production
+environment.
 
-Some tools are created to interact with these protocols. For example, you can
-use Telnet to interact with the SMTP protocol to send emails or SCP to interact
-with the SSH protocol to transfer files.
+In this chapter, you will have a quick introduction to concurrency to handle
+multiple clients at the same time
 
-In this chapter, you will learn how to program your own TCP clients and servers
-in Java.
+You will then learn how to implement and manage concurrency in Java network
+applications to allow the handling of multiple clients at the same time.
 
-This will allow you to create your own network applications, such as a chat
-server, a file server, a web server, etc.
+## Disclaimer
 
-## TCP
+In this chapter, you will learn how to create network applications with
+concurrency to handle multiple clients at the same time. We will focus on
+network applications and the different ways to handle concurrency.
 
-TCP is a transport protocol. It is used to transfer data between two
-applications. TCP can only do UniCast: one application can only communicate with
-one other application.
+Even though you will have a good understanding of concurrency at the end of this
+chapter, **this is not a concurrency course**.
 
-TCP is a connection-oriented protocol: a connection must be established between
-the two applications before data can be exchanged in a bidirectional way.
+The Java programming language has a few classes to handle concurrency, described
+in modules such as `java.util.concurrent`, `java.util.concurrent.atomic`, and
+`java.util.concurrent.locks` (among others).
 
-TCP is a reliable protocol: data sent is guaranteed to be received by the other
-application.
+We will explore and use some of these classes in this chapter but we will not
+dive into the details of each classes.
 
-A good analogy is to think of TCP as a phone call. You must first establish a
-connection with the other person before you can talk to them. Once the
-connection is established, you can talk to the other person and they will hear
-everything you say.
+The most important is to understand the concept of concurrency and how to handle
+multiple clients at the same time in Java network applications.
 
-With the help of port numbers, TCP allows multiple applications to communicate
-with each other on the same machine.
+We will use the strict minimum to handle concurrency in the context of this
+course. You might discover other ways to handle concurrency in other/future
+courses.
 
-TCP is a stream-oriented protocol: data is sent as a stream of bytes. The
-application must split the data into segments. Each segment is identified by a
-sequence number.
+## Explore the code examples
 
-TCP segments are encapsulated in IP packets, called payloads.
+Individually, or in pair/group, **take 10 minutes to explore and discuss the
+code examples** provided in the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository. Clone it or pull the latest changes to get the code examples.
 
-Thanks to the sequence numbers, TCP is able to reassemble the segments in the
-correct order. If a segment is lost, TCP will retransmit it.
+The code examples are located in the `14-java-network-concurrency` directory.
 
-## The Socket API
+Try to answer the following questions:
 
-The Socket API is a Java API that allows you to create TCP/UDP clients and
-servers. It is described in the
-[`java.net` package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/package-summary.html)
-in the
-[`java.base` module](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/module-summary.html).
+- How do the code examples work?
+- What are the main takeaways of the code examples?
+- What are the main differences between the code examples?
 
-It has originally been developed in C in the context of the Unix operating
-system by Berkeley University. It has been ported to Java and is now available
-on many platform and languages.
+You can use the following theoretical content to help you.
 
-To make it simple, a socket is just like a file that you can open, read from,
-write to and close. To exchange data, sockets on both sides must be connected.
+## Concurrency: an introduction
 
-A socket is identified by an IP address and a port number.
+Concurrency is the ability of an application to handle multiple tasks at a given
+time. It differs from parallelism, which is the ability of an application to
+execute multiple tasks at the same time.
 
-A socket can act as a client or as a server:
+But before we dive into concurrency, let's take a step back and remember what a
+processor is.
 
-- A socket accepting connections is called a server socket (class
-  [`ServerSocket`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/ServerSocket.html)).
-- A socket initiating a connection is called a client socket (class
-  [`Socket`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/net/Socket.html)).
+### What is a processor?
 
-The following schema shows the workflow of a client/server application:
+A processor is a piece of hardware that executes instructions. It can execute
+only one instruction at a time.
 
-![Client/server application workflow](./images/client-server-workflow.png)
+A processor can execute instructions very quickly (millions of instructions per
+second). It therefore gives the impression that it can execute multiple
+instructions at the same time.
 
-### Client/server common methods
+However, most computers and servers only have one processor. They can only
+execute one instruction at a time.
 
-| Operation           | Description                        |
-| ------------------- | ---------------------------------- |
-| `socket()`          | Creates a new socket               |
-| `getInputStream()`  | Gets the input stream of a socket  |
-| `getOutputStream()` | Gets the output stream of a socket |
-| `close()`           | Closes a socket                    |
+When a processor manage multiple tasks at a given time, it is called concurrency
+and makes use of threads by switching between tasks very quickly.
 
-### Client workflow and methods
+### What is a core?
 
-In order to create a client, the following workflow is followed:
+A core is a part of a processor that can execute instructions. A processor can
+have multiple cores. It is called a multi-core processor.
 
-> 1. Create a socket (class `Socket`)
-> 2. Connect the socket to an IP address and a port number
-> 3. Read and write data from/to the socket
-> 4. Flush and close the socket
+When multiple processors and/or multiple cores are present, they can execute
+multiple instructions at the same time. When an application make usage of this
+feature for one common goal, this is called parallelism or
+[parallel computing](https://en.wikipedia.org/wiki/Parallel_computing).
 
-The available methods are the following:
+Parallel computing is quite complex to implement. It is therefore not covered in
+this course.
 
-| Operation   | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| `connect()` | Connects a socket to an IP address and a port number |
+In this course, we will focus on concurrency to manage multiple clients at a
+given time, even on a single-core processor.
 
-### Server structure and methods
+### What is a thread?
 
-In order to create a server, the following workflow is followed:
+A processor (or core) can manage multiple threads at the same time. A thread is
+a sequence of instructions that can be managed independently of the main thread.
 
-> 1. Create a socket (class `ServerSocket`)
-> 2. Bind the socket to an IP address and a port number
-> 3. Listen for incoming connections
-> 4. Loop
->    1. Accept an incoming connection - creates a new socket (class `Socket`) on
->       a random port number
->    2. Read and write data from/to the socket
->    3. Flush and close the socket
-> 5. Close the socket (`ServerSocket`)
+The main thread is the thread that is created when the application starts.
 
-The available methods are the following:
+It creates other threads to handle other tasks.
 
-| Operation  | Description                                       |
-| ---------- | ------------------------------------------------- |
-| `bind()`   | Binds a socket to an IP address and a port number |
-| `listen()` | Listens for incoming connections                  |
-| `accept()` | Accepts an incoming connection                    |
+Think of a thread as a sub-task that can be executed independently of the main
+program.
 
-## Processing data from streams
+A thread is quite similar to a process, except that it shares the same memory
+space as the other threads. It is therefore much cheaper to create and destroy
+than a process (but still more expensive than a simple object).
 
-Sockets use data streams to send and receive data, just like files.
+Threads can communicate with each other using shared memory.
 
-You get an input stream to read data from a socket and an output stream to write
-data to a socket.
+Threads are more lightweight than processes but their number is limited by the
+operating system.
 
-```java
-// Get input stream
-input = socket.getInputStream();
+You have used threads in this course while using picocli, maybe without knowing
+it. Each command is executed in a separate thread and is marked with the
+interface `Runnable` or `Callable` to accomplish this.
 
-// Get output stream
-output = socket.getOutputStream();
-```
+Using threads, a server can manage multiple clients at the same time. Each
+client is handled by a thread and can communicate with the server using shared
+memory.
 
-You can then decorate the input and output streams with other streams to process
-the data.
+### What is a process?
 
-```java
-// Get input stream as text
-input = new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8);
+A process is a program in execution. It is identified by a process ID.
 
-// Get output stream as text
-output = new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8);
-```
+Each process has its own memory space. It cannot access the memory space of
+another process and can have multiple threads.
 
-Use buffered streams to improve performance.
+A process is a heavy-weight object. It is quite expensive to create and destroy.
 
-```java
-// Get input stream as binary with buffer
-input = new BufferedReader(new InputStreamReader(socket.getInputStream());
+Processes can communicate with each other using inter-process communication
+(IPC) but it is quite complex to implement.
 
-// Get output stream as binary with buffer
-output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
-```
+### What problems can concurrency cause?
 
-> [!WARNING]  
-> Do not forget to flush the output stream after writing data to it. Otherwise,
-> the remaining data in the buffer will not be sent to the other application!
->
-> ```java
-> out.flush();
-> ```
->
-> Also, do not forget all the good practices seen in the
-> [Java IOs chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios)
-> (encoding, buffering, etc.). They must be applied here too!
+Managing multiple clients (processes) at the same time is a common requirement
+for network applications and has a few quirks:
 
-### Variable length data
+- What happens when a client connects to the server?
+- How to isolate the data sent by one client from the others?
+- What happens when multiple clients want to access the same resource
+  (variables) at the same time?
 
-Depending on the application protocol, the data sent can have a variable length.
+We will discuss and solve some these problems in this chapter.
 
-There are two ways to handle variable length data:
+### What happens when multiple threads access the same resource?
 
-- Use a delimiter
-- Use a fixed length
+When multiple threads access the same resource (variables) at the same time, it
+can create problems:
 
-If the data has a delimiter, you can use a buffered reader to read the data
-until the delimiter is found.
+- A thread can read a variable while another thread is writing to it.
+- A thread can write to a variable while another thread is reading from it.
+- A thread can write to a variable while another thread is writing to it.
 
-```java
-// End of transmission character
-String EOT = "\u0004";
+Remember: a processor can only execute one instruction at a time. When multiple
+threads access the same resource, the processor must decide which thread to
+execute first. At any time, the processor can switch from one thread to another,
+even in the middle of an instruction.
 
-// Read data until the delimiter is found
-String line;
-while ((line = in.readLine()) != null && !line.equals(EOT)) {
-  System.out.println(
-    "[Server " + SERVER_ID + "] received data from client: " + line
-  );
-}
-```
+These problems are called race conditions. Race conditions are the most common
+problems when multiple threads access the same resource and can lead to
+unexpected results/errors/crashes/bugs.
 
-If the data has a fixed length, you must send the length of the data before
-sending the data itself.
-
-```java
-// Send the length of the data
-out.write("DATA_LENGTH " + data.length() + "\n");
-
-// Send the data
-out.write(data);
-```
-
-```java
-// Read the length of the data
-String[] parts = in.readLine().split(" ");
-int dataLength = Integer.parseInt(parts[1]);
-
-// Read the data
-for (int i = 0; i < dataLength; i++) {
-  System.out.print((char) in.read());
-}
-```
+These issues and best safe practices will be discussed in this chapter.
 
 ## Handling one client at a time
 
 A server that handles one client at a time is called single-threaded, or
 single-threaded server.
 
-A single-threaded server is quite simple to implement:
+A single-threaded server is quite simple and trivial to implement:
 
 1. It creates a socket to listen for incoming connections.
 2. When a connection is accepted, it creates a socket to communicate with the
@@ -305,7 +260,7 @@ others):
 - Asynchronous programming
 
 Java has a package for concurrency called
-[`java.util.concurrent`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/package-summary.html).
+[`java.util.concurrent`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html).
 
 In this course, we will focus on multi-threading but the other methods are
 equally valid and interesting to learn.
@@ -331,8 +286,8 @@ Processes can communicate with each other using inter-process communication
 (IPC) but it is quite complex to implement.
 
 An analogy is to think of a process as restaurant chain with multiple
-restaurant. Each restaurant has only one table and can handle one customer. If a
-customer is already sitting at a table of a given restaurant, another customer
+restaurants. Each restaurant has only one table and can handle one customer. If
+a customer is already sitting at a table of a given restaurant, another customer
 can sit at a table at another restaurant.
 
 ### Multi-threading
@@ -403,145 +358,183 @@ covered in this course.
 
 [Node.js](https://nodejs.org/) is a good example of asynchronous programming.
 
-## Practical content
+## Handling multiple threads in Java
 
-### Get the required files
+In Java, you can manage multiple threads using the
+[`ExecutorService`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)
+interface.
 
-In this section, you will retrieve the latest changes from the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository.
+The `ExecutorService` interface provides a way to run multiple methods in
+parallel. It is a high-level API that provides a way to manage multiple threads
+and run multiple methods in parallel.
 
-#### Get the latest changes from the code examples
+The `ExecutorService` interface has multiple
+[`Executors`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executors.html)
+implementations that you will discover in deeper in the practical content of
+this chapter. Each implementation has its own pros and cons.
 
-Pull the latest changes from the previously cloned
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository or clone it if you have not done it yet.
+This snippet taken from the
+[Java UDP programming - Practical content template](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template/tree/main)
+repository in the
+[`Receiver.java`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template/blob/main/src/main/java/ch/heigvd/dai/commands/Receiver.java)
+file shows how to use the `ExecutorService` interface to run multiple methods in
+parallel with a `newFixedThreadPool` implementation with two threads (one for
+each method):
 
-#### Explore the code examples
+```java
+@Override
+public Integer call() {
+  try (ExecutorService executorService = Executors.newFixedThreadPool(2); ) {
+    executorService.submit(this::emittersWorker);
+    executorService.submit(this::operatorsWorker);
+  } catch (Exception e) {
+    System.out.println("[Receiver] Exception: " + e);
 
-In the `12-java-tcp-programming` directory, checkout the `README.md` file to
-learn how to run the code examples.
+    return 1;
+  }
 
-Take some time to explore the code examples.
+  return 0;
+}
 
-### Send an email using a SMTP client written in Java with the Socket API
+public Integer emittersWorker() {
+  // Manage emitters
+}
 
-In this section, you will learn how to send an email using the SMTP protocol
-using the Java Socket API.
 
-#### Start MailHog
-
-Just as in the
-[SMTP and Telnet](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15-smtp-and-ncat)
-chapter, start MailHog in order to receive the emails sent by the Java code
-examples.
-
-#### Compile and run the SMTP client
-
-In the `12-java-tcp-programming` directory, compile and run the
-`SmtpClientExample` code example.
-
-```sh
-# Compile the example
-javac SmtpClientExample.java
-
-# Run the example
-java SmtpClientExample
+public Integer operatorsWorker() {
+  // Manage operators
+}
 ```
 
-The mail has been sent to the MailHog SMTP server. You can check it in the
-MailHog Web interface at <http://localhost:8025>.
+## Concurrent safe variable types and data structures in Java
 
-Take some time to explore the code example. You should notice the commands are
-the same as the ones used with Telnet but in an automated way!
+When multiple threads access the same resource (= the same variable), it is
+important to use concurrency safe variables types and/or data structures.
 
-### Run full client/server examples
+A concurrency safe variable type and/or data structure is a variable type or
+data structure that can be accessed by multiple threads at the same time without
+creating inconsistencies that can lead to unexpected
+results/errors/crashes/bugs.
 
-#### Explore and run the code examples
+Using these variable types and data structures, you can avoid using
+`synchronized` blocks or methods. It is more efficient, more modern, and easier
+to use.
 
-In the `12-java-tcp-programming` directory, checkout the `README.md` file to
-learn how to run the code examples.
+Java provides a set of safe variable types that can be used to manage data
+shared between threads.
 
-Take some time to explore the code examples. Run them and see what they do.
+You can find all the safe variable types in the
+[`java.util.concurrent.atomic`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/atomic/package-summary.html)
+package.
 
-> [!NOTE]  
-> Please be aware that the `TcpServerVirtualThreadTextualExample` example must
-> be run with Java 21 or later. It is not mandatory to run this example but you
-> must understand how it works.
->
-> This example is not compatible with Java 17 but is already available in the
-> code examples repository for future use.
+Some useful safe variable types are (among others):
 
-#### Answer the following questions
+- `AtomicBoolean`
+- `AtomicInteger`
+- `AtomicLong`
 
-Using the official Java documentation, can you explain the differences between
-the following different implementations? When should you use one or the other
-and why?
+These variable types are thread-safe and can be used to manage data shared
+between threads and must be used instead of the standard variable types
+(`int`/`Integer`, `long`/`Long`, `boolean`/`Boolean`, etc.) when multiple
+threads access the same resource.
 
-- `TcpServerSimpleTextualExample`
-- `TcpServerSingleThreadTextualExample`
-- `TcpServerMultiThreadTextualExample`
-- `TcpServerCachedThreadPoolTextualExample`
-- `TcpServerFixedThreadPoolTextualExample`
-- `TcpServerVirtualThreadTextualExample`
+Java provides a set of concurrent collections (= data structures) that can be
+used to manage data shared between threads.
 
-Are you able to explain why the `TcpServerSingleThreadTextualExample` does not
-work as expected?
+You can find all the concurrent collections in the
+[`java.util.concurrent`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html)
+package.
 
-#### Share your findings
+Some useful concurrent collections are (among others):
 
-Share your results in the GitHub Discussions of this organization:
-<https://github.com/orgs/heig-vd-dai-course/discussions>.
+- `ConcurrentHashMap`
+- `CopyOnWriteArrayList`
+- `CopyOnWriteArraySet`
+- `ConcurrentLinkedQueue`
 
-Create a new discussion with the following information:
+These collections are thread-safe and can be used to manage data shared between
+threads and must be used instead of the standard collections (`HashMap`,
+`ArrayList`, `HashSet`, `LinkedList`, etc.) when multiple threads access the
+same resource.
 
-- **Title**: DAI 2024-2025 - Concurrent Java TCP servers - First name Last Name
-- **Category**: Show and tell
-- **Description**: Answer the questions for this section. Add links to the
-  official Java documentation to support your answers.
+When multiple concurrent variable types and/or data structures are co-dependent,
+it is important to use them together with locks to avoid inconsistencies (the
+same as mutexes and semaphores in C/C++).
 
-This will notify us that you have completed the exercise and we can check your
-work.
+Locks will not be covered (and not expected to be used) in this course but you
+can find additional information in the
+[`java.util.concurrent.locks`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/locks/package-summary.html)
+package if you are interested.
 
-You can compare your solution with the official one stated in the
-[Solution](#solution) section, however, **we highly recommend you to try to
-complete the practical content by yourself first to learn the most**.
+## Practical content
+
+### Execute the code examples
+
+Return to the code examples and take some time to execute them, understand them
+and see the results.
+
+### Answer the following questions
+
+Using the
+[official Java documentation](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executors.html),
+can you answer these questions?
+
+- Explain the differences between the following different implementations?
+  - `TcpServerSimpleExample`
+  - `TcpServerSingleThreadExample`
+  - `TcpServerMultiThreadExample`
+  - `TcpServerCachedThreadPoolExample`
+  - `TcpServerFixedThreadPoolExample`
+  - `TcpServerVirtualThreadExample`
+- When and why should you use one or the other?
+- What is the difference between a thread and a virtual thread?
+- Are you able to explain why the `TcpServerSingleThreadExample` does not work
+  as expected?
+
+### Compare your solution with the official one
+
+Compare your solution with the official one stated in the [Solution](#solution)
+section.
+
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- Based from the code examples, are you able to create a complete TCP
-  client/server application in Java that implement the DAI protocol presented in
-  chapter
-  [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)?
-  Feel free to create a new repository for this and share it with us in a new
-  discussion on GitHub Discussions!
+#### Update the _"Guess the number"_ game to handle multiple clients
+
+Are you able to update the _"Guess the number"_ to handle multiple clients at
+the same time?
+
+#### Update the _"Temperature monitoring"_ application to handle multiple clients
+
+Are you able to update the "_Temperature monitoring_" application to handle
+multiple clients at the same time?
 
 ## Conclusion
 
 ### What did you do and learn?
 
-In this chapter, you have learned how to use the Socket API to create your own
-TCP clients and servers in Java.
+In this chapter, you have learned how to handle multiple clients at the same
+time using concurrency.
 
-You have also learned how to handle multiple clients at the same time using
-concurrency.
+You now have all the knowledge to create your own TCP and/or UDP network
+applications in a robust and efficient way.
 
-You now have all the knowledge to create your TCP network applications. This is
-a big step forward!
-
-You are now able to create your own network applications, such as a chat server,
-a file server, a web server, etc. Congratulations!
+You now have everything to create your own network applications, such as a chat
+server, a file server, a web server, games, etc. Congratulations!
 
 ### Test your knowledge
 
 At this point, you should be able to answer the following questions:
 
-- What is a socket?
-- What is the difference between a server socket and a client socket?
+- What is a thread?
 - What is the purpose of concurrency?
 - Cite three ways to handle multiple clients with concurrency.
+- How to handle multiple threads in Java?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -566,7 +559,13 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-You will start the practical work!
+In the next chapter, you will learn the following topics:
+
+- Learn about electronic mail protocols
+- Experiment with the SMTP protocol
+  - Start a local SMTP server for testing
+  - Send an email using ncat
+  - Send an email using a SMTP client written in Java
 
 ## Additional resources
 
@@ -587,5 +586,5 @@ discuss it!
 
 ## Sources
 
-- Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
-  [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
+- Main illustration by [Brent Olson](https://unsplash.com/@helixgames) on
+  [Unsplash](https://unsplash.com/photos/person-in-green-and-black-shorts-riding-on-black-and-red-bicycle-_aV5y0nLNew)

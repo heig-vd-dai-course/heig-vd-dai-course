@@ -306,16 +306,6 @@ the developer to decide when and who manage to close the connection.
 Return to the code examples and take some time to execute them, understand them
 and see the results.
 
-### Update your application protocol
-
-Now that you have gained new knowledge regarding TCP, update the application
-protocol you have created for the _"Guess the number"_ game in the
-[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-chapter to reflect the usage of the TCP protocol.
-
-You can check the official solution in the
-[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
-
 ### Try to access the server from multiple clients at the same time
 
 Try to access the server from multiple clients at the same time (start the
@@ -325,6 +315,16 @@ at a time.
 Do you have any idea why? You will find the answer in a future chapter but you
 can try to find it by yourself now. Discuss with your peers if needed to share
 your findings.
+
+### Update your application protocol
+
+Now that you have gained new knowledge regarding TCP, update the application
+protocol you have created for the _"Guess the number"_ game in the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+chapter to reflect the usage of the TCP protocol.
+
+You can check the official solution in the
+[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
 
 ### Explore the Java TCP programming template
 
