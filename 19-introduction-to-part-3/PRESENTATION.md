@@ -7,10 +7,10 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: 'HEIG-VD DAI Course - Introduction to part 3: Network programming with UDP'
-description: 'Introduction to part 3: Network programming with UDP for the DAI course at HEIG-VD, Switzerland'
+title: 'HEIG-VD DAI Course - Introduction to part 4: Network programming with HTTP'
+description: 'Introduction to part 4: Network programming with HTTP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-3/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -50,9 +50,9 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [illustration]:
-  https://images.unsplash.com/photo-1631220706319-657942774d02?fit=crop&h=720
+  https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
 
-# Introduction to part 3: Network programming with UDP
+# Introduction to part 3: Network programming with HTTP
 
 <!--
 _class: lead
@@ -69,63 +69,45 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## _Do you know how does a web server work?_
+## Up until now, you have mostly worked with low-level protocols such as TCP and UDP
 
 <!-- _class: lead -->
 
-Do you remember this question from part 2?
+These protocols are the foundation of the Internet and network communications.
 
-## What happens when you browse the Web?
-
-The answer was:
-
-> 1. A process is started on the server
-> 2. This process opens a socket on a specific port
-> 3. The process waits for a connection
-> 4. A client (another process) connects to the server
-> 5. The server and the client exchange data
-> 6. The client or server closes the connection
-
-## Do you know how does streaming work?
-
-<!-- _class: lead -->
-
-## How does streaming work (simplified)?
-
-1. A web browser connects to a service (YouTube, Twitch, etc.)
-2. The service (a server) sends data to the client continuously
-3. The client displays the data as it comes
-4. If the bandwidth is bad, the client adapts the quality of the stream
-
-To optimize the bandwidth, the server certainly uses UDP instead of TCP as it is
-more efficient.
-
-UDP is a protocol used in streaming, gaming, VoIP, etc. It is more efficient
-than TCP but less reliable as you will see in this part.
+Today, you will learn about a higher-level protocol: HTTP.
 
 ## What will you learn?
 
-- Learn how to use of the **UDP protocol** to:
-  - **Send** and **receive** data
-  - **Broadcast** messages to **multiple clients**
-  - Find services on the network with **service discovery patterns**
-- How to **Dockerize** a Java application
+- Learn **how** and **why HTTP is used widely** to **build web applications**
+- Learn how to use **HTTP in Java** to build simple (CRUD) **APIs**
+- Learn how to **set up a web infrastructure** to host web applications:
+  - **Reverse proxy**
+  - **Load balancer**
 
 ![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
 ## What will you accomplish?
 
-- Create a network application using the **UDP** protocol (with its own
-  **application protocol**)
-- **Build** and **share** your application **with Docker and Docker Compose**
-- Again, sharing your work on GitHub (it's becoming a habit!)
+- Build **a simple web API** in Java
+- **Acquire**, **configure** and **set up a server**
+- **Acquire** a (free) **domain name**
+- **Deploy** a web application on the server with a **reverse proxy**
+- **Access** the web application from the **Internet**
 
 ![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 
+## Closing the loop
+
+<!-- _class: lead -->
+
+This part will be the last one of the course. This is the last step to close the
+loop (from code to production).
+
 ## Sources
 
-- Main illustration by [Allie Reefer](https://unsplash.com/@thepghtraveler) on
-  [Unsplash](https://unsplash.com/photos/rAoQn6kwv64)
+- Main illustration by [shawnanggg](https://unsplash.com/@shawnanggg) on
+  [Unsplash](https://unsplash.com/photos/vdBE638sszE)
 - Illustration by [Unseen Studio](https://unsplash.com/@craftedbygc) on
   [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
 - Illustration by [Jared Erondu](https://unsplash.com/@erondu) on
