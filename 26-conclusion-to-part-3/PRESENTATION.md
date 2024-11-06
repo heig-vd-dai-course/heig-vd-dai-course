@@ -52,8 +52,7 @@ headingDivider: 4
 [feedback]: https://framaforms.org/dai-2024-2025-feedback-3-1725286022
 [feedback-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2024-2025-feedback-3-1725286022
-[illustration]:
-  https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Conclusion to part 3: Network programming with HTTP
 

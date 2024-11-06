@@ -49,8 +49,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-3/19-introduction-to-part-3-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Introduction to part 3: Network programming with HTTP
 
