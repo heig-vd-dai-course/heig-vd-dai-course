@@ -49,9 +49,8 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-network-concurrency/14-java-network-concurrency-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/116
-[illustration]:
-  https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/453
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-network-concurrency/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -78,159 +77,121 @@ _paginate: false
 
 ## Objectives
 
-- Program your own TCP client/server applications in Java with the Socket API
-- Understand how to handle multiple clients at the same time
-- Understand how to process data from streams
-
-Your applications will be able to communicate over the network!
+- Learn what is concurrency
+- Learn the different ways to handle multiple clients at the same time:
+  - Multi-processing
+  - Multi-threading
+  - Asynchronous programming
+- Learn how to implement and manage concurrency in Java network applications
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
-## TCP
+## Disclaimer
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### TCP
+### Disclaimer
 
-TCP is a transport protocol that is similar to a phone call:
+- **This is not a course on concurrency**
+- Many many things are not covered
+- Focus on concurrency for network applications
+- Other ways and mechanisms to handle concurrency will be covered in other
+  courses
 
-1. A connection is established between two parties
-2. Data sent is guaranteed to arrive in the same order
-3. Data can be sent again
+![bg right:40%](https://images.unsplash.com/photo-1520414283774-cd4cb599a987?fit=crop&h=720)
 
-![bg right:40%](https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?fit=crop&h=720)
-
-## The Socket API
-
-<!-- _class: lead -->
-
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
-
-### The Socket API
-
-- Originally developed by Berkeley University
-- Ported to Java and many other languages
-- Provides a simple API to use TCP and UDP
-- A socket is a connection between two parties using a protocol and a port
-
-![bg right h:90%](./images/client-server-workflow.png)
-
----
-
-![bg contain](./images/the-socket-api-client.png)
-![bg contain](./images/the-socket-api-server.png)
-
-### Client/server common functions
-
-| Operation           | Description                        |
-| ------------------- | ---------------------------------- |
-| `socket()`          | Creates a new socket               |
-| `getInputStream()`  | Gets the input stream of a socket  |
-| `getOutputStream()` | Gets the output stream of a socket |
-| `close()`           | Closes a socket                    |
-
-### Client structure and functions
-
-1. Create a `Socket`
-2. Connect the socket to an IP address and a port number
-3. Read and write data from/to the socket
-4. Flush and close the socket
-
-| Operation   | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| `connect()` | Connects a socket to an IP address and a port number |
-
-### Server structure and functions
-
-1. Create a `ServerSocket`
-2. Bind the socket to an IP address and a port number
-3. Listen for incoming connections
-4. Loop
-   1. Accept an incoming connection - creates a new `Socket` on a port
-   2. Read and write data from/to the socket
-   3. Flush and close the socket
-5. Close the `ServerSocket`
-
----
-
-| Operation  | Description                                       |
-| ---------- | ------------------------------------------------- |
-| `bind()`   | Binds a socket to an IP address and a port number |
-| `listen()` | Listens for incoming connections                  |
-| `accept()` | Accepts an incoming connection                    |
-
-To make it simple, a socket is just like a file that you can open, read from,
-write to and close. To exchange data, sockets on both sides must be connected.
-
-## Processing data from streams
+## Explore the code examples
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### Processing data from streams
+### Explore the code examples
 
-- Sockets use data streams to send and receive data, just like files
-- Get an input stream to read data from a socket
-- Get an output stream to write data to a socket
+Individually, or in pair/group, **take 10 minutes to explore and discuss the
+[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**.
 
-![bg right:40%](https://images.unsplash.com/photo-1594728613852-cac78bd0daba?fit=crop&h=720)
+Answer the questions available in the course material:
 
-### Variable length data
+- How do the code examples work?
+- What are the main takeaways of the code examples?
+- What are the main differences between the code examples?
 
-Data sent can have a variable length. Manage this using one of the two methods:
+If needed, use the theoretical content to help you.
 
-- Use a delimiter
-- Communicate a fixed length
+## Concurrency: an introduction
 
-This must be defined by your application protocol!
+<!-- _class: lead -->
 
-![bg right:40%](https://images.unsplash.com/photo-1508188317434-1fd219bb636f?fit=crop&h=720)
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
----
+### Concurrency: an introduction
 
-Using a delimiter:
+- Ability to handle multiple tasks at the same time
+- Differs from parallelism, the ability to execute multiple tasks simultaneously
+- Before we dive into concurrency, let's take a step back and remember what a
+  processor is
 
-```java
-// End of transmission character
-String EOT = "\u0004";
+![bg right:40%](https://images.unsplash.com/photo-1554564200-198b0cd87cf5?fit=crop&h=720)
 
-// Read data until the delimiter is found
-String line;
-while ((line = in.readLine()) != null && !line.equals(EOT)) {
-  System.out.println(
-    "[Server " + SERVER_ID + "] received data from client: " + line
-  );
-}
-```
+### What is a processor?
 
----
+- Piece of hardware that executes millions of instructions every second
+- Gives the illusion of executing multiple tasks at the same time
+- However, it can execute only one instruction at a time
+- When managing multiple tasks, the processor switches between tasks
 
-Communicating a fixed length:
+![bg right:40%](https://images.unsplash.com/photo-1698440050363-1697e5f0277c?fit=crop&h=720)
 
-```java
-// Send the length of the data
-out.write("DATA_LENGTH " + data.length() + "\n");
+### What is a core?
 
-// Send the data
-out.write(data);
-```
+- A physical unit inside a processor that executes instructions (always one at a
+  time)
+- A processor can have multiple cores, called multi-core processors
+- Cores can execute multiple instructions at the same time (parallelism) - not
+  covered in this course
 
-```java
-// Read the length of the data
-String[] parts = in.readLine().split(" ");
-int dataLength = Integer.parseInt(parts[1]);
+![bg right:40%](https://images.unsplash.com/photo-1716772911614-7e830fb35765?fit=crop&h=720)
 
-// Read the data
-for (int i = 0; i < dataLength; i++) {
-  System.out.print((char) in.read());
-}
-```
+### What is a thread?
+
+- A thread is a sequence of instructions that can be executed by a core
+- A core can manage multiple threads at the same time
+- The main thread is the thread that starts when the application starts
+- More lightweight than processes and share the same memory space
+
+![bg right:40%](https://images.unsplash.com/photo-1717444309226-c0809d4b5bde?fit=crop&h=720)
+
+### What is a process?
+
+- A process is an instance of a program that is being executed
+- A process can have multiple threads (such as picocli)
+- Processes are isolated from each other and have their own memory space
+- Heavier than threads: expensive to create and manage
+
+![bg right:40%](https://images.unsplash.com/photo-1718154621829-881f65a74a8c?fit=crop&h=720)
+
+### What problems can concurrency cause?
+
+- What happens when a client connects to the server?
+- How to isolate the data sent by one client from the others?
+- What happens when multiple clients want to access the same resource
+  (variables) at the same time?
+
+![bg right:40%](https://images.unsplash.com/photo-1606987482048-c6826204b417?fit=crop&h=720)
+
+### What happens when multiple threads access the same resource?
+
+- The processor has to switch between threads
+- The order in which the threads are executed is not guaranteed
+- The threads can access the same resource at the same time
+
+![bg right:40%](https://images.unsplash.com/photo-1506951796365-405279289a75?fit=crop&h=720)
 
 ## Handling one client at a time
 
@@ -251,7 +212,7 @@ Analogy: a restaurant with one table
 
 ![bg right:40%](https://images.unsplash.com/photo-1513792117172-ef6bc78042c1?fit=crop&h=720)
 
-## Handling multiple clients at the same time
+## Handling multiple clients with concurrency
 
 <!-- _class: lead -->
 
@@ -260,7 +221,7 @@ find other resources and alternatives as well.
 
 ### Handling multiple clients at the same time
 
-Handle multiple clients at the same time is called concurrency.
+Handling multiple clients at the same time is called concurrency.
 
 Concurrency can be achieved with:
 
@@ -300,15 +261,96 @@ Concurrency can be achieved with:
 
 ![bg right:40%](https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?fit=crop&h=720)
 
+## Handling multiple threads in Java
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### Handling multiple threads in Java
+
+- Java provides the
+  [`ExecutorService`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)
+  interface to manage threads
+- It uses different
+  [`Executors`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executors.html)
+  implementations
+- Each implementation has its own pros and cons
+- You have used threads with picocli (each sub-command is a thread)
+
+![bg right:40%](https://images.unsplash.com/photo-1529133396358-0f5f0c4a1c8a?fit=crop&h=720)
+
+---
+
+```java
+@Override
+public Integer call() {
+  try (ExecutorService executorService = Executors.newFixedThreadPool(2); ) {
+    executorService.submit(this::emittersWorker);
+    executorService.submit(this::operatorsWorker);
+  } catch (Exception e) {
+    System.out.println("[Receiver] Exception: " + e);
+
+    return 1;
+  }
+
+  return 0;
+}
+
+public Integer emittersWorker() {
+  // Manage emitters
+}
+
+
+public Integer operatorsWorker() {
+  // Manage operators
+}
+```
+
+## Concurrent safe variable types and data structures in Java
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### Concurrent safe variable types and data structures in Java
+
+- A thread-safe variable type and/or data structure is a variable type/data
+  structure that can be accessed by multiple threads at the same time
+- Java provides several thread-safe variable types and data structures
+
+![bg right:40%](https://images.unsplash.com/photo-1552879890-3a06dd3a06c2?fit=crop&h=720)
+
+---
+
+- **Variables types**:
+  - `AtomicBoolean` instead of `boolean`/`Boolean`
+  - `AtomicInteger` instead of `int`/`Integer`
+  - `AtomicLong` instead of `long`/`Long`
+- **Data structures**:
+  - `ConcurrentHashMap` instead of `HashMap`
+  - `ConcurrentLinkedQueue` instead of `LinkedList`
+  - `CopyOnWriteArrayList` instead of `ArrayList`
+  - `CopyOnWriteArraySet` instead of `HashSet`
+
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->
 
 ### What will you do?
 
-- Send an email using a SMTP client written in Java with the Socket API
 - Run full client/server examples and understand how concurrent clients are
   handled
+- Update the _"Guess the number"_ game and the _"Temperature monitoring"_
+  application to handle multiple clients (optional)
 
 ![bg right contain](./images/what-will-you-do-server.png)
 ![bg right vertical contain](./images/what-will-you-do-client.png)
@@ -336,32 +378,54 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-<!-- _class: lead -->
+- Learn about electronic mail protocols
+- Experiment with the SMTP protocol
+  - Start a local SMTP server for testing
+  - Send an email using ncat
+  - Send an email using a SMTP client written in Java
 
-You will start the practical work!
+![bg right:40%](https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720)
 
 ## Sources
 
-- Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
-  [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
+- Main illustration by [Brent Olson](https://unsplash.com/@helixgames) on
+  [Unsplash](https://unsplash.com/photos/person-in-green-and-black-shorts-riding-on-black-and-red-bicycle-_aV5y0nLNew)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
-- Illustration by [Alexander Andrews](https://unsplash.com/@alex_andrews) on
-  [Unsplash](https://unsplash.com/photos/black-corded-telephone-JYGnB9gTCls)
-- Illustration by [Oleksandra Bardash](https://unsplash.com/@bardashka) on
-  [Unsplash](https://unsplash.com/photos/green-moss-on-rocky-river-9fqMbeny89c)
-- Illustration by [patricia serna](https://unsplash.com/@sernarial) on
-  [Unsplash](https://unsplash.com/photos/assorted-tape-measures-zPZ9vqqDNBA)
+- Illustration by [Bernard Hermant](https://unsplash.com/@bernardhermant) on
+  [Unsplash](https://unsplash.com/photos/white-and-black-signage-mountain-on-wall--iVnye8VaHY)
+- Illustration by [alexey turenkov](https://unsplash.com/@2renkov) on
+  [Unsplash](https://unsplash.com/photos/woman-playing-assorted-color-balls-NmTVRg4zfkI)
+- Illustration by [Andrey Matveev](https://unsplash.com/@zelebb) on
+  [Unsplash](https://unsplash.com/photos/a-close-up-of-a-computer-motherboard-0Sdxy9Ev6oQ)
+- Illustration by [BoliviaInteligente](https://unsplash.com/@boliviainteligente)
+  on
+  [Unsplash](https://unsplash.com/photos/a-close-up-of-a-computer-motherboard-with-intel-chips-rfXMr--MQRU)
+- Illustration by [BoliviaInteligente](https://unsplash.com/@boliviainteligente)
+  on
+  [Unsplash](https://unsplash.com/photos/a-close-up-of-a-computer-processor-chip-yPo7IBTDGGc)
+- Illustration by [BoliviaInteligente](https://unsplash.com/@boliviainteligente)
+  on
+  [Unsplash](https://unsplash.com/photos/an-image-of-an-apple-logo-on-a-circuit-board-m6sD50Q2iOE)
+
+---
+
+- Illustration by [That's Her Business](https://unsplash.com/@thatsherbusiness)
+  on
+  [Unsplash](https://unsplash.com/photos/white-ceramic-mug-with-coffee-KzeOMdcEswk)
+- Illustration by [Jens Herrndorff](https://unsplash.com/@jens_h) on
+  [Unsplash](https://unsplash.com/photos/aerial-photography-of-cross-streets-8osoVBQWWHc)
 - Illustration by [Elliott Stallion](https://unsplash.com/@eagleboobs) on
   [Unsplash](https://unsplash.com/photos/white-plastic-bottle-on-brown-wooden-table-near-glass-window-ci7b3Q77n0c)
 - Illustration by [K8](https://unsplash.com/@_k8_) on
   [Unsplash](https://unsplash.com/photos/people-in-restaurant-sWEpcc0Rm0U)
 - Illustration by [bckfwd](https://unsplash.com/@bckfwd) on
   [Unsplash](https://unsplash.com/photos/lighted-chandelier-inside-cafe-ifkd981FUdM)
-
----
-
 - Illustration by [James Elchico](https://unsplash.com/@jdelchico) on
   [Unsplash](https://unsplash.com/photos/blue-and-brown-padded-chairs-near-table-zB4A-PP49ww)
 - Illustration by [micheile henderson](https://unsplash.com/@micheile) on
   [Unsplash](https://unsplash.com/photos/woman-selling-inside-store-during-daytime-7NFwwp-vZk8)
+- Illustration by [Afrah](https://unsplash.com/@ahmedafrah) on
+  [Unsplash](https://unsplash.com/photos/coffee-bean-lot-0x-_TV1zQFU)
+- Illustration by [Pop & Zebra](https://unsplash.com/@popnzebra) on
+  [Unsplash](https://unsplash.com/photos/a-rack-filled-with-lots-of-yellow-hard-hats-wp81DxKUd1E)

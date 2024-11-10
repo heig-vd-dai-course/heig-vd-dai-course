@@ -38,9 +38,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Messaging patterns](#messaging-patterns)
 - [Service discovery protocols](#service-discovery-protocols)
 - [Practical content](#practical-content)
+  - [Execute the code examples](#execute-the-code-examples)
+  - [Try to emit from multiple emitters at the same time](#try-to-emit-from-multiple-emitters-at-the-same-time)
   - [Update your application protocol](#update-your-application-protocol)
   - [Learn to use the debugger](#learn-to-use-the-debugger)
-  - [Try to emit from multiple emitters at the same time](#try-to-emit-from-multiple-emitters-at-the-same-time)
   - [Explore the Java UDP programming template](#explore-the-java-udp-programming-template)
   - [Go further](#go-further)
   - [Compare your solution with the official one](#compare-your-solution-with-the-official-one)
@@ -436,6 +437,20 @@ These patterns can still be used with other protocols such as TCP.
 Return to the code examples and take some time to execute them, understand them
 and see the results.
 
+### Try to emit from multiple emitters at the same time
+
+Try to emit from multiple emitters at the same time (start the emitter multiple
+times). You will see that the server will receive all messages from the
+emitters.
+
+Do you have any idea why? How does it compare to the TCP examples you have seen
+in the
+[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-udp-programming)
+chapter?
+
+You will find the answer in a future chapter but you can try to find it by
+yourself now. Discuss with your peers if needed to share your findings.
+
 ### Update your application protocol
 
 Now that you have gained new knowledge regarding UDP, update the application
@@ -480,20 +495,6 @@ following screenshot:
 
 Take some time to learn how to use the debugger in your favorite IDE, this is a
 very useful tool.
-
-### Try to emit from multiple emitters at the same time
-
-Try to emit from multiple emitters at the same time (start the emitter multiple
-times). You will see that the server will receive all messages from the
-emitters.
-
-Do you have any idea why? How does it compare to the TCP examples you have seen
-in the
-[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-udp-programming)
-chapter?
-
-You will find the answer in a future chapter but you can try to find it by
-yourself now. Discuss with your peers if needed to share your findings.
 
 ### Explore the Java UDP programming template
 
@@ -597,7 +598,7 @@ section.
   - **Tip**: this will require to store all the temperatures received for a
     given room and to calculate the average temperature instead of storing only
     the latest temperature.
-- Are you able to Dockerize this application as well?
+- Can you implement the "_Guess the number_" game with UDP?
 
 ## Conclusion
 
