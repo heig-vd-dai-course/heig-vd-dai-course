@@ -30,8 +30,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Concurrency: an introduction](#concurrency-an-introduction)
   - [What is a processor?](#what-is-a-processor)
   - [What is a core?](#what-is-a-core)
-  - [What is a thread?](#what-is-a-thread)
   - [What is a process?](#what-is-a-process)
+  - [What is a thread?](#what-is-a-thread)
   - [What problems can concurrency cause?](#what-problems-can-concurrency-cause)
   - [What happens when multiple threads access the same resource?](#what-happens-when-multiple-threads-access-the-same-resource)
 - [Handling one client at a time](#handling-one-client-at-a-time)
@@ -147,6 +147,18 @@ this course.
 In this course, we will focus on concurrency to manage multiple clients at a
 given time, even on a single-core processor.
 
+### What is a process?
+
+A process is a program in execution. It is identified by a process ID.
+
+Each process has its own memory space. It cannot access the memory space of
+another process and can have multiple threads.
+
+A process is a heavy-weight object. It is quite expensive to create and destroy.
+
+Processes can communicate with each other using inter-process communication
+(IPC) but it is quite complex to implement.
+
 ### What is a thread?
 
 A processor (or core) can manage multiple threads at the same time. A thread is
@@ -154,7 +166,7 @@ a sequence of instructions that can be managed independently of the main thread.
 
 The main thread is the thread that is created when the application starts.
 
-It creates other threads to handle other tasks.
+It can create other threads to handle other tasks.
 
 Think of a thread as a sub-task that can be executed independently of the main
 program.
@@ -175,18 +187,6 @@ interface `Runnable` or `Callable` to accomplish this.
 Using threads, a server can manage multiple clients at the same time. Each
 client is handled by a thread and can communicate with the server using shared
 memory.
-
-### What is a process?
-
-A process is a program in execution. It is identified by a process ID.
-
-Each process has its own memory space. It cannot access the memory space of
-another process and can have multiple threads.
-
-A process is a heavy-weight object. It is quite expensive to create and destroy.
-
-Processes can communicate with each other using inter-process communication
-(IPC) but it is quite complex to implement.
 
 ### What problems can concurrency cause?
 
