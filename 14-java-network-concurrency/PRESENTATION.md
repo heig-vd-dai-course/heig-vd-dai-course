@@ -158,15 +158,6 @@ find other resources and alternatives as well.
 
 ![bg right:40%](https://images.unsplash.com/photo-1716772911614-7e830fb35765?fit=crop&h=720)
 
-### What is a thread?
-
-- A thread is a sequence of instructions that can be executed by a core
-- A core can manage multiple threads at the same time
-- The main thread is the thread that starts when the application starts
-- More lightweight than processes and share the same memory space
-
-![bg right:40%](https://images.unsplash.com/photo-1717444309226-c0809d4b5bde?fit=crop&h=720)
-
 ### What is a process?
 
 - A process is an instance of a program that is being executed
@@ -175,6 +166,15 @@ find other resources and alternatives as well.
 - Heavier than threads: expensive to create and manage
 
 ![bg right:40%](https://images.unsplash.com/photo-1718154621829-881f65a74a8c?fit=crop&h=720)
+
+### What is a thread?
+
+- A thread is a sequence of instructions that can be executed by a core
+- A core can manage multiple threads at the same time
+- The main thread is the thread that starts when the application starts
+- More lightweight than processes and share the same memory space
+
+![bg right:40%](https://images.unsplash.com/photo-1717444309226-c0809d4b5bde?fit=crop&h=720)
 
 ### What problems can concurrency cause?
 
@@ -335,6 +335,17 @@ find other resources and alternatives as well.
   - `CopyOnWriteArrayList` instead of `ArrayList`
   - `CopyOnWriteArraySet` instead of `HashSet`
 
+---
+
+- Multiple concurrent variable types and/or data structures can be co-dependent
+- You must use them together with locks (the equivalent to mutexes and
+  semaphores in C/C++) to avoid inconsistencies
+
+Locks will not be covered (and not expected to be used) in this course but you
+can find additional information in the [course material][course-material].
+
+![bg right:40%](https://images.unsplash.com/photo-1627832703630-22c0798ae17e?q=80&w=2487?fit=crop&h=720)
+
 ## Questions
 
 <!-- _class: lead -->
@@ -429,3 +440,10 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/coffee-bean-lot-0x-_TV1zQFU)
 - Illustration by [Pop & Zebra](https://unsplash.com/@popnzebra) on
   [Unsplash](https://unsplash.com/photos/a-rack-filled-with-lots-of-yellow-hard-hats-wp81DxKUd1E)
+- Illustration by [Kateryna Miller ](https://unsplash.com/@sammountain) on
+  [Unsplash](https://unsplash.com/photos/black-white-and-green-hanging-decors-mkll7wvtv_o)
+
+---
+
+- Illustration by [MChe Lee](https://unsplash.com/@mclee) on
+  [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)

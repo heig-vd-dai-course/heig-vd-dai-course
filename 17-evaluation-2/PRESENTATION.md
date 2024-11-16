@@ -82,12 +82,16 @@ The evaluation dates will be as follow:
 
 ---
 
-The evaluation will be done on paper and is made up of two parts:
+The evaluation will be done on paper and is made up of two parts.
 
-1. A first part of 35 minutes
-2. A second part of 25 minutes
+Once you have finished the first part, come to the teacher's desk to hand it in
+and you will receive the second part.
 
-A break between the two parts will be given.
+Once you have finished the second part, you can leave the room quietly.
+
+You cannot get the first part back once you have handed it in.
+
+![bg right:40%][illustration]
 
 ## Chapters evaluated
 
@@ -135,9 +139,6 @@ You will be able to use them during the exam at the end of the semester.
 ## Rules
 
 No communication between students is allowed.
-
-ChatGPT, GitHub Copilot or any other AI assisted tools are not allowed during
-the evaluation.
 
 Cheating is not allowed. If you are caught cheating, you will get a 1 for the
 evaluation.
