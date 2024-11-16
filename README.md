@@ -55,7 +55,7 @@ The entire course planning for the semester is available at
 
 ### Part 3 - Network programming with HTTP (20 periods)
 
-- [19. Introduction to part 3](./19-introduction-to-part-3/README.md) (WIP)
+- [19. Introduction to part 3](./19-introduction-to-part-3/README.md)
 - [20. SSH and SCP (2 periods)](./20-ssh-and-scp/README.md) (WIP)
 - [21. HTTP and curl (2 periods)](./21-http-and-curl/README.md) (WIP)
 - [22. Web infrastructures (2 periods)](./22-web-infrastructures/README.md)
@@ -64,7 +64,7 @@ The entire course planning for the semester is available at
   (WIP)
 - [24. Practical work 3 (10 periods)](./24-practical-work-3/README.md) (WIP)
 - [25. Evaluation 3 (2 periods)](./25-evaluation-3/README.md)
-- [26. Conclusion to part 3](./26-conclusion-to-part-3/README.md) (WIP)
+- [26. Conclusion to part 3](./26-conclusion-to-part-3/README.md)
 
 ### Conclusion (2 periods)
 

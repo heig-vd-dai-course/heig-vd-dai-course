@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: 'HEIG-VD DAI Course - Conclusion to part 3: Network programming with HTTP'
 description: 'Conclusion to part 3: Network programming with HTTP for the DAI course at HEIG-VD, Switzerland'
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/26-conclusion-to-part-3/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -49,11 +49,10 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/26-conclusion-to-part-3/26-conclusion-to-part-3-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]: https://framaforms.org/dai-2023-2024-feedback-4-1700494751
+[feedback]: https://framaforms.org/dai-2024-2025-feedback-3-1725286022
 [feedback-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2023-2024-feedback-4-1700494751
-[illustration]:
-  https://images.unsplash.com/photo-1519043916581-33ecfdba3b1c?fit=crop&h=720
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2024-2025-feedback-3-1725286022
+[illustration]: ./images/main-illustration.jpg
 
 # Conclusion to part 3: Network programming with HTTP
 
@@ -74,17 +73,17 @@ _paginate: false
 
 ## What have you learned?
 
-- How and why HTTP can be used to build web applications
+- How and why HTTP can be used to build web applications:
   - Methods, status codes, headers, etc.
-- How HTTP features can be used to build web infrastructures
+- How HTTP features can be used to build web infrastructures:
   - Reverse proxies, load balancers, caching, scalability, etc.
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
 ## What have you accomplished?
 
-- You have acquired and set up a server on the HEIG-VD network
-- You have created a simple (CRUD) API to deploy on your server
+- You have acquired and set up a server on a cloud provider
+- You have created a simple web API to deploy on your server
 - You have acquired and configured a domain name to use for yourself
 - You have deployed your API on your server
 
@@ -99,8 +98,8 @@ of yourself!
 
 ## Feedback
 
-Your feedback helps us know **what what you liked and what you disliked** in
-your learning experience. **The feedback is anonymous**.
+Your feedback helps us know **what you liked and what you disliked** in your
+learning experience. **The feedback is anonymous**.
 
 We would be very grateful if you could [take a few minutes to fill
 it][feedback]. **Thank you!**
