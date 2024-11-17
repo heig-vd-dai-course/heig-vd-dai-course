@@ -360,8 +360,8 @@ Do you have any questions?
 
 - Run full client/server examples and understand how concurrent clients are
   handled
-- Update the _"Guess the number"_ game and the _"Temperature monitoring"_
-  application to handle multiple clients (optional)
+- Explore and answer questions about some concurrent strategies
+- Update previous game/application to handle multiple clients (optional)
 
 ![bg right contain](./images/what-will-you-do-server.png)
 ![bg right vertical contain](./images/what-will-you-do-client.png)

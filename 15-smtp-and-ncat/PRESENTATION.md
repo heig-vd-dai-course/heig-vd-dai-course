@@ -169,7 +169,7 @@ find other resources and alternatives as well.
 ### A focus on the SMTP protocol
 
 - SMTP is a text-based protocol
-- Commands are sent by the client to the server
+- Messages are sent by the client to the server
 - The server responds with a status code
 - The client can send the next command
 
