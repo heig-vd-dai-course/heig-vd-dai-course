@@ -111,6 +111,12 @@ The following chapters will be evaluated:
 - [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
   (without the practical content regarding Docker Compose)
 
+**This evaluation will be more challenging than the previous one.**
+
+**You must be prepared, fast and concise.**
+
+**Aim for all the points, but do not spend too much time on a single question.**
+
 ![bg right:40%][illustration]
 
 ## Evaluation content
