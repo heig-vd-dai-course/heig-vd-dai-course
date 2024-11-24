@@ -7,10 +7,10 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Practical work 4
-description: Practical work 4 for the DAI course at HEIG-VD, Switzerland
+title: HEIG-VD DAI Course - Practical work 3
+description: Practical work 3 for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/24-practical-work-3/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -52,12 +52,12 @@ headingDivider: 4
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
 [illustration]:
   https://images.unsplash.com/photo-1572901334602-f40b66a0c71c?fit=crop&h=720
-[practical-work]:
+[course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
-[practical-work-qr-code]:
+[course-material-qr-code]:
   https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
 
-# Practical work 4
+# Practical work 3
 
 <!--
 _class: lead
@@ -74,37 +74,36 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Practical work 4
+## Objectives
 
-- Get a virtual machine on our cloud
+- Acquire a virtual machine from a cloud provider
 - Access the virtual machine (SSH)
 - Install Docker and Docker Compose
 - Develop a simple CRUD API
 - Deploy the applications (reverse proxy + CRUD API)
 - Access the applications from a (free) domain name
 
-![bg right:40%][illustration]
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ---
 
-- A CRUD API to manage resources
-- You can choose what the CRUD API does/manages:
+- The CRUD API manages resources. You can choose what the CRUD API does/manages:
   - Music
   - Books
   - Video games
-  - A todo list
-  - Groceries
+  - A todo/groceries list
   - ...
-- **Groups of 4 students**
 
-![bg right:40%][illustration]
+The CRUD API must be accessible from the internet.
+
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
 ## Demo
 
 <!-- _class: lead -->
 
 The API for the demonstration is accessible at  
-<https://heig-vd-dai-course.dedyn.io>.
+<https://heig-vd-dai-course.duckdns.org>.
 
 ---
 
@@ -117,13 +116,13 @@ Locally - Compile the project:
 Locally - Build the Docker image with Docker Compose:
 
 ```sh
-docker compose build
+docker build -t <docker tag> .
 ```
 
 Locally - Publish the Docker image to the container registry:
 
 ```sh
-docker compose push
+docker push <docker tag>
 ```
 
 ---
@@ -137,13 +136,13 @@ docker compose pull
 On the server - Start Traefik (the reverse proxy):
 
 ```sh
-docker compose -f traefik/docker-compose.yml up -d
+docker compose -f traefik/docker-compose.yaml up -d
 ```
 
 On the server - Start the CRUD API:
 
 ```sh
-docker compose -f api/docker-compose.yml up -d
+docker compose -f api/docker-compose.yaml up -d
 ```
 
 ---
@@ -155,13 +154,13 @@ Create a few drinks:
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"name":"Hot wine","description":"Hot wine with spices","price":3.0}' \
-  https://heig-vd-dai-course.dedyn.io/drinks
+  https://heig-vd-dai-course.duckdns.org/drinks
 
 # Christmas tea
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"name":"Christmas tea","description":"Warm tea","price":2.0}' \
-  https://heig-vd-dai-course.dedyn.io/drinks
+  https://heig-vd-dai-course.duckdns.org/drinks
 ```
 
 ---
@@ -169,7 +168,7 @@ curl -X POST \
 Get the list of drinks:
 
 ```sh
-curl https://heig-vd-dai-course.dedyn.io/drinks
+curl https://heig-vd-dai-course.duckdns.org/drinks
 ```
 
 Output:
@@ -191,7 +190,7 @@ Output:
 Filter the drinks with a price equal to 2.0 CHF:
 
 ```sh
-curl https://heig-vd-dai-course.dedyn.io/drinks?price=2.0
+curl https://heig-vd-dai-course.duckdns.org/drinks?price=2.0
 ```
 
 Output:
@@ -212,7 +211,7 @@ Output:
 Get a specific drink:
 
 ```sh
-curl https://heig-vd-dai-course.dedyn.io/drinks/1
+curl https://heig-vd-dai-course.duckdns.org/drinks/1
 ```
 
 Output:
@@ -234,7 +233,7 @@ Update a drink:
 curl -X PUT \
   -H "Content-Type: application/json" \
   -d '{"name":"Hot wine","description":"Nice hot wine","price":3.0}' \
-  https://heig-vd-dai-course.dedyn.io/drinks/1
+  https://heig-vd-dai-course.duckdns.org/drinks/1
 ```
 
 Output:
@@ -253,7 +252,7 @@ Output:
 Delete a drink:
 
 ```sh
-curl -X DELETE -i https://heig-vd-dai-course.dedyn.io/drinks/1
+curl -X DELETE -i https://heig-vd-dai-course.duckdns.org/drinks/1
 ```
 
 Output:
@@ -275,7 +274,7 @@ Adding another drink with the same name:
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"name":"Christmas tea","description":"Another tea","price":2.0}' \
-  https://heig-vd-dai-course.dedyn.io/drinks
+  https://heig-vd-dai-course.duckdns.org/drinks
 ```
 
 Output:
@@ -286,63 +285,127 @@ Conflict
 
 Leads to a `409` (Conflict) status code as we want to keep the names unique.
 
-## Guidelines
-
-**This is important, please read carefully!**
-
-- State your group on GitHub Discussions before the end of the day!
-- Define someone in your group as the responsible
-- **Write to the IT department** to get a virtual machine as soon as possible
-  (**before the end of the day**!)
-  - Use the template email provided in the course material.
-  - Put the teaching staff in CC.
-
-## Practical work review
-
-The practical work review will take place on **Tuesday 23.01.2024** in the
-**room B51a**, next to our classroom.
-
-We only have **10 minutes per group** (10 minutes of presentation, no time for
-questions). Please be prepared to present your work. You decide what you want to
-show us and how you want to present it.
-
-Come 5 minutes before your time slot with your computer.
-
-The order of presentation is random and is stated in the next slides.
-
----
-
-<!--
-
-**Please state your group on GitHub Discussions as soon as possible, even if you
-do not have a clear idea yet as it will help us to plan the practical work
-review.**
-
--->
-
-| #   | Group                                                                        | Passage |
-| --- | ---------------------------------------------------------------------------- | ------- |
-| 1   | Alexandre Philibert, Gwendal Piemontesi, Valentin Ricard and Trueb Guillaume | 13h25   |
-| 2   | Thomas Vuilleumier, Sebastian Diaz, Arthur Menétrey and Lionel Pollien       | 13h35   |
-| 3   | Komarov Sergey and Jano Ahmad                                                | 13h45   |
-| 4   | Sarah Jallon, Jonas Troeltsch, Jeremiah Steiner and Simon Guggisberg         | 13h55   |
-| 5   | Pirakas Anthon, Aurélien Richard, Romain Humair and Lucas Lattion            | 14h05   |
-
----
-
-| #   | Group                                                              | Passage |
-| --- | ------------------------------------------------------------------ | ------- |
-| 6   | Bleuer Rémy, Graf Calvin, Lopez Esteban and Sottile Alan           | 14h15   |
-| 7   | Massimo Stefani, Loïc Herman, Kevin Farine and Olin Bourquin       | 14h25   |
-| 8   | Jaques Colin, Iorio Alexandre, Mulugeta Theodros and Slimani Walid | 14h35   |
-
-## Find the practical work
+## Group composition
 
 <!-- _class: lead -->
 
-You can find the practical work for this part on [GitHub][practical-work].
+More details for this section in the [course material][course-material].
 
-[![bg right w:75%][practical-work-qr-code]][practical-work]
+### Group composition
+
+- 2 or 3 students per group
+- Create a GitHub Discussion to:
+  - Announce your group members
+  - Announce your idea (even a draft is fine)
+- **Do it as soon as possible before next week!**
+  - This helps us to plan the presentations
+
+![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
+
+## Idea validation
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Idea validation
+
+- You must state your idea on your GitHub Discussion
+- We might ask you to change your idea if it is too simple or too complex
+- We will help you to find a good idea if needed
+- **Do it as soon as possible before next week!**
+
+![bg right:40%](https://images.unsplash.com/photo-1543075137-5a97903aaa7a?fit=crop&h=720)
+
+## Grading criteria
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Grading criteria
+
+You can find all the grading criteria in the [course material][course-material]:
+
+- 0 point - The work is insufficient
+- 0.1 point - The work is done
+- 0.2 point - The work is well done (without the need of being perfect)
+
+Maximum grade: 25 points \* 0.2 + 1 = 6
+
+![bg right:40%](https://images.unsplash.com/photo-1645500010250-01b5bc42239e?fit=crop&h=720)
+
+## Constraints
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Constraints
+
+- The application must be written in Java, compatible with Java 21
+- The application must be built using Maven with the `maven-shade-plugin` plugin
+- The application must use the picocli dependency
+- You can only use the Java classes seen in the course
+- Your application must be slightly more complex and slightly different than the
+  examples presented during the course (we emphasize the word **slightly**, no
+  need to shoot for the moon!)
+- The web application can only use the HTTP/HTTPS protocols
+
+## Tips
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Obtain a domain name
+
+Many providers offer free domain names. You can use the following providers:
+
+- <http://www.duckdns.org/> (recommended)
+- <https://www.noip.com/>
+- <https://freedns.afraid.org/>
+- <https://desec.io/>
+
+![bg w:80% right:40%](https://www.duckdns.org/img/ducky_icon.png)
+
+## Submission
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Submission
+
+Your work is due as follow:
+
+- DAI-TIC-B (Monday mornings): **19.01.2025 23:59**
+- DAI-TIC-C (Friday mornings): **23.01.2025 23:59**
+
+Update the GitHub Discussion with the link to your repository as mentioned in
+the course material.
+
+**If you do not submit your work on time and/or correctly, you will be penalized
+(-1 point on the final grade for each day of delay).**
+
+## Presentations
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Presentations
+
+The practical work presentations will take place in **TBD** on:
+
+- DAI-TIC-B (Monday mornings): **20.01.2025**
+- DAI-TIC-C (Friday mornings): **24.01.2025**
+
+We only have **TBD minutes per group**. You decide what you want to show us and
+how you want to present it. **Come 5 minutes before your time slot** with your
+computer. You will have access to a beamer.
+
+**Please state your group on GitHub Discussions before next week.**
 
 ## Grades and feedback
 
@@ -355,6 +418,20 @@ Each criterion will be accompanied by a comment explaining the points obtained,
 a general comment on your work and the final grade.
 
 If you have any questions about the evaluation, you can contact us!
+
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
+## Find the practical work
+
+<!-- _class: lead -->
+
+You can find the practical work for this part on [GitHub][course-material].
+
+[![bg right w:75%][course-material-qr-code]][course-material]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -372,3 +449,11 @@ You can use reactions to express your opinion on a comment!
 
 - Main illustration by [Lāsma Artmane](https://unsplash.com/@lasmaa) on
   [Unsplash](https://unsplash.com/photos/lighted-christmas-tree-surrounded-by-houses-5X8N9A2ruHM)
+- Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
+  [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
+- Illustration by [Josh Calabrese](https://unsplash.com/@joshcala) on
+  [Unsplash](https://unsplash.com/photos/five-men-riding-row-boat-Ev1XqeVL2wI)
+- Illustration by [Nicole Baster](https://unsplash.com/@nicolebaster) on
+  [Unsplash](https://unsplash.com/photos/traffic-light-aGx-CFsM3fE)
+- Illustration by [Chris LaBarge](https://unsplash.com/@chrislabarge) on
+  [Unsplash](https://unsplash.com/photos/a-sign-that-is-on-a-tree-in-the-woods-dy1GA9Ow6JA)

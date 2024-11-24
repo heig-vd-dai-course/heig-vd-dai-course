@@ -8,7 +8,7 @@
 [illustration]:
   https://images.unsplash.com/photo-1572901334602-f40b66a0c71c?fit=crop&h=720
 
-# Practical work 4
+# Practical work 3
 
 <https://github.com/heig-vd-dai-course>
 
@@ -26,21 +26,23 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 - [Group composition](#group-composition)
-- [Guidelines](#guidelines)
-  - [Obtain a virtual machine](#obtain-a-virtual-machine)
-  - [Install and configure the virtual machine](#install-and-configure-the-virtual-machine)
-  - [Obtain a domain name](#obtain-a-domain-name)
-  - [Run the secure Traefik and whoami examples](#run-the-secure-traefik-and-whoami-examples)
+- [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
-  - [Category 2 - Docker and Docker Compose](#category-2---docker-and-docker-compose)
-  - [Category 3 - SSH and SCP](#category-3---ssh-and-scp)
-  - [Category 4 - HTTP and curl](#category-4---http-and-curl)
-  - [Category 5 - Web infrastructures](#category-5---web-infrastructures)
-  - [Category 6 - Presentation and questions](#category-6---presentation-and-questions)
+  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
+  - [Category 3 - Docker and Docker Compose](#category-3---docker-and-docker-compose)
+  - [Category 4 - Define an application protocol](#category-4---define-an-application-protocol)
+  - [Category 5 - Java network concurrency](#category-5---java-network-concurrency)
+  - [Category 6 - SSH and SCP](#category-6---ssh-and-scp)
+  - [Category 7 - HTTP and curl](#category-7---http-and-curl)
+  - [Category 8 - Web infrastructures](#category-8---web-infrastructures)
+  - [Category 9 - Caching and performance](#category-9---caching-and-performance)
+  - [Category 10 - Presentation and questions](#category-10---presentation-and-questions)
 - [Constraints](#constraints)
-- [Remarks](#remarks)
+- [Tips](#tips)
+  - [Obtain a domain name](#obtain-a-domain-name)
 - [Submission](#submission)
+- [Presentations](#presentations)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [Sources](#sources)
@@ -55,11 +57,11 @@ In this practical work, you will create a web application that uses the HTTP
 protocol.
 
 The web application will be defined by an application protocol interface (API)
-and will be deployed on a virtual machine and accessible from the Internet using
-a domain name.
+and will be deployed on a virtual machine (a server). The application will be
+accessible from the Internet using a domain name.
 
-You can interact with the web application using your web browser and/or a
-command line tool such as curl or you can develop your own application client.
+You will be able to interact with the web application using your web browser
+and/or a command line tool such as curl.
 
 The API will be defined by you.
 
@@ -76,246 +78,160 @@ methodology but please do not copy/paste code from other groups.
 
 ## Objectives
 
-- Dialog with the IT department of the HEIG-VD to get a virtual machine on our
-  cloud infrastructure
+- Obtain a virtual machine on a cloud provider
 - Access the virtual machine with SSH
 - Install Docker and Docker Compose on the virtual machine
 - Define some Docker Compose files to run the web application with a reverse
   proxy (Traefik)
 - Deploy the simple CRUD API on the virtual machine
-- Access the CRUD API from a domain name
+- Access the CRUD API from a domain name with HTTPS (Let's encrypt)
 
 ## Group composition
 
-As the end of the semester is approaching, we know you have a lot of work to do
-for other courses.
-
-As this practical work is more complex than the previous ones, you can work in
-groups between two and four students. You can choose your partners. If you do
-not have a partner or a group, we will assign you one.
+You will work in groups of two or three students. You can choose your
+partner(s). If you do not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 4 - First name Last name member 1,
-  First name Last name member 2, First name Last name member 3 and First name
-  Last name member 4
+- **Title**: DAI 2024-2025 - Practical work 3 - First name Last name member 1,
+  First name Last name member 2 and First name Last name member 3 (if
+  applicable)
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
 
+> [!IMPORTANT]
+>
+> **Please do it a soon as possible**, even if you do not have a clear idea yet
+> as it will help us to plan the practical work presentations.
+>
+> Please refer to the grading criteria to know what is expected from you.
+
+## Idea validation
+
 The teaching staff might ask you to change the scope of your practical work if
 it is too complex or too simple.
 
-**Please do it a soon as possible, even if you do not have a clear idea yet as
-it will help us to plan the practical work review.**
+This will ensure that you have a good balance between the complexity of the
+practical work and the time you have to complete it.
 
-## Guidelines
+If you do not have any idea, come to see us and we can help you finding some
+ideas.
 
-In order for this practical work to be successful, you must follow the following
-steps:
+## Grading criteria
 
-1. [Obtain a virtual machine](#obtain-a-virtual-machine)
-2. [Install and configure the virtual machine](#install-and-configure-the-virtual-machine)
-3. [Obtain a domain name](#obtain-a-domain-name)
-4. [Run the secure Traefik and whoami examples](#run-the-secure-traefik-and-whoami-examples)
-5. Develop the web application
+- 0 point - The work is insufficient
+- 0.1 point - The work is done
+- 0.2 point - The work is well done (without the need of being perfect)
 
-Steps 1, 3 can be done in parallel before steps 2 and 4. Step 5 can be started
-right away.
-
-### Obtain a virtual machine
-
-#### Order the virtual machine
-
-You must send an email to the IT department of the HEIG-VD to get a virtual
-machine on our cloud infrastructure.
-
-Define a person in the group that will be the contact person for the virtual
-machine. This person will be responsible for the virtual machine and will be
-contacted by the IT department if there is a problem with the virtual machine.
-
-The contact email is: [`mehdi.salhi@hes-so.ch`](mailto:mehdi.salhi@hes-so.ch).
-
-You have a template email below. Please take some time to understand what
-information you need to provide and why.
-
-Replace the `<Prénom Nom de l'étudiant-e>` and
-`<Date de début de mise en service>` placeholders with the correct information.
-
-For the `<Date de début de mise en service>` placeholder, set it for the end of
-the week. The IT department will need some time to create the virtual machine.
-
-For the `<Date de fin de service>` placeholder, set it for the end of the
-semester. The virtual machine will be deleted at the end of the semester.
-
-**Please do it as soon as possible!**
-
-```text
-Sujet : [DAI] Machine virtuelle pour le cours DAI 2023-2024
-
-Bonjour,
-
-Je souhaite obtenir une machine virtuelle avec les spécifications suivantes dans le cadre du cours DAI :
-
-- Personne de contact / responsable : <Prénom Nom de l'étudiant-e>
-- Date de mise en service souhaitée : <Date de début de mise en service>
-- Date de fin de service souhaitée : <Date de fin de service>
-- OS / distribution : Ubuntu 22.04
-- CPU : 1vCPU
-- RAM : 2GB
-- Stockage : 50GB
-- Ports :
-  - Réseau interne (avec le VPN) : 22 (SSH)
-  - Réseau externe (depuis Internet) : 80 (HTTP), 443 (HTTPS)
-
-Merci d'avance et bonne journée,
-<Prénom Nom de l'étudiant-e>
-```
-
-<details>
-<summary>Template email for the IT department</summary>
-
-```text
-Bonjour,
-
-Merci pour votre mail.
-
-Vous trouverez les informations pour la machine virtuelle du cours DAI ci-dessous :
-
-- Nom de la machine : <Nom de la machine>
-- IP interne (avec le VPN) : <IP interne>
-- IP externe (depuis Internet) : <IP externe>
-- Nom d'utilisateur et mot de passe : <Lien vers un service tel que [Yopass](https://yopass.se/) avec une date d'expiration d'une semaine>
-
-Note 1 : le lien contenant le nom d'utilisateur et le mot de passe n'est valide qu'une semaine. Veuillez conserver ces informations dans un endroit sûr.
-Note 2 : il faut être connecté au VPN de l'école pour y accéder.
-Note 3 : le firewall UFW est activé sur la VM et autorise uniquement les connexions SSH. Les autres services doivent être autorisé par vos soins (HTTP, HTTPS).
-
-Meilleures salutations,
-<Prénom Nom de la personne responsable à l'IT>
-```
-
-</details>
-
-#### Wait for the virtual machine
-
-The IT department will send you an email with the information to access the
-virtual machine with the following information:
-
-- The internal IP address of the virtual machine (to access it with SSH)
-- The external IP address of the virtual machine (to access it from the
-  Internet)
-- The username to access the virtual machine
-- The password to access the virtual machine
-
-### Install and configure the virtual machine
-
-#### Access the virtual machine
-
-Once the virtual machine is created, you can access it using its internal IP
-with SSH as seen in the
-[SSH and SCP](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/20-ssh-and-scp)
-chapter.
-
-You will have to be connected to the
-[VPN](https://intranet.heig-vd.ch/services/informatique/poste-de-travail/reseau/vpn/Pages/vpn.aspx).
-It is mandatory.
-
-#### Update the virtual machine and install `apache2-utils`
-
-Once you have access to the virtual machine, you can update it with the
-following commands:
-
-```sh
-# Update the list of packages
-sudo apt update
-
-# Upgrade the packages
-sudo apt upgrade
-```
-
-This will ensure that the virtual machine is up-to-date.
-
-Install `apache2-utils` with the following command:
-
-```sh
-# Install apache2-utils
-sudo apt install apache2-utils
-```
-
-This will ensure that you can use the `htpasswd` command line tool to create
-users for the Traefik dashboard in a future step.
-
-#### Install Docker and Docker Compose on the virtual machine
-
-Install Docker and Docker Compose as seen in the
-[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
-chapter.
-
-As the virtual machine is running Linux, follow the instructions for Linux. Do
-not forget the post-installation steps. This will ensure that Docker and Docker
-Compose start automatically when the virtual machine is rebooted and that you
-can use Docker without the need of using `sudo` (= admin) each time.
-
-Check that you can run the `hello-world` Docker image as seen in the Docker and
-Docker Compose chapter to ensure you can use Docker on the virtual machine
-without the need of `sudo`.
-
-#### Clone the example repository on the virtual machine
-
-Clone the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository to get the code examples but this time, **clone it using HTTPS**.
-
-This will ensure that you can clone the repository without the need of an SSH
-configuration (useful when you are not on your own computer).
-
-#### Try to access the whoami applications from the Internet
-
-> [!WARNING]  
-> This step might fail, it is normal. You will have to fix it in the next step.
-
-Start the `whoami-on-ports-80-and-443` example available in the
-[`24-practical-work-3`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main/24-practical-work-3)
-directory.
-
-This should start two whoami containers on ports `80` and `443` on the virtual
-machine.
-
-You should notice that the application is not accessible from the Internet
-(yet).
-
-This is because the virtual machine is protected by a firewall. You will have to
-open the ports on the virtual machine to allow the traffic to go through.
-
-#### Open the ports on the virtual machine
-
-You can open the port of the virtual machine using
-[UFW](https://en.wikipedia.org/wiki/Uncomplicated_Firewall) with the following
-command:
-
-```sh
-# Open the HTTP protocol on the virtual machine
-sudo ufw allow http
-
-# Open the HTTPS protocol on the virtual machine
-sudo ufw allow https
-```
-
-#### Check out everything is now working
-
-Using the external IP address of the virtual machine, try to access the whoami
-applications from the Internet again.
-
-This time, you should be able to access the application from the Internet!
-
-You have confirmed that you can access the application(s) deployed on the
-virtual machine from the Internet.
-
-You can now stop the application on the virtual machine with
-`docker compose down`.
+Maximum grade: 25 points \* 0.2 + 1 = 6
+
+> [!IMPORTANT]
+>
+> While the grading criteria might not be as detailed as in the previous
+> practical works for each section, you **must** continue to apply all the good
+> practices you have learned so far.
+>
+> If elements that are supposed to be acquired through the course or previous
+> practical works are omitted, forgotten or poorly implemented, we might
+> penalize you.
+>
+> Remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
+
+### Category 1 - Git, GitHub and Markdown
+
+If your repository is private, you must add us as collaborators to your
+repository!
+
+| #   | Criterion                                                                                                                                                                            | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+| 1   | The README is well structured and explains the purpose of your web with the authors' names so new users can understand it and know who is behind the application                     |    0.2 |
+| 2   | The README describes **explicit commands** to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer |    0.2 |
+
+### Category 2 - Java, IntelliJ IDEA and Maven
+
+| #   | Criterion                                                                                                                                       | Points |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 3   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase |    0.2 |
+| 4   | The codebase is structured using Domain Driven Design (DDD) so each domain of the application are well separated                                |    0.2 |
+
+### Category 3 - Docker and Docker Compose
+
+| #   | Criterion                                                                                                                                               | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 5   | The network application is packaged and published to GitHub Container Registry with Docker so other people can use your network application with Docker |    0.2 |
+| 6   | The README describes **explicit commands** to build and publish your network application with Docker                                                    |    0.2 |
+| 7   | The README describes **explicit commands** to use your network application with Docker Compose so other people can easily use it                        |    0.2 |
+| 8   | The Docker applications (Traefik and your web application) are split into multiple directories and make usage of networks to communicate together       |    0.2 |
+
+### Category 4 - Define an application protocol
+
+| #   | Criterion                                                                                                       | Points |
+| --- | --------------------------------------------------------------------------------------------------------------- | -----: |
+| 9   | The README (or repository) contains the application protocol interface (API) that describes the web application |    0.2 |
+
+### Category 5 - Java network concurrency
+
+| #   | Criterion                                                                                | Points |
+| --- | ---------------------------------------------------------------------------------------- | -----: |
+| 10  | The data structures used in the network application are resilient to concurrent accesses |    0.2 |
+
+### Category 6 - SSH and SCP
+
+| #   | Criterion                                                                                    | Points |
+| --- | -------------------------------------------------------------------------------------------- | -----: |
+| 11  | You and the teaching staff can access the virtual machine without a password using a SSH key |    0.2 |
+
+### Category 7 - HTTP and curl
+
+| #   | Criterion                                                                                                                                                       | Points |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 12  | The web application makes usage of at least the following HTTP verbs: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                                 |    0.2 |
+| 13  | The web application offers at least two resources (= domains) on which to operate CRUD operations                                                               |    0.2 |
+| 14  | The README explains how to use your web application with **explicit examples using curl** with outputs to demonstrate how to interact with your web application |    0.2 |
+
+### Category 8 - Web infrastructures
+
+| #   | Criterion                                                                                                                                | Points |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 15  | The README (or repository) contains instructions how to install and configure the virtual machine with each step                         |    0.2 |
+| 16  | The README (or repository) contains explains how to configure the DNS zone to access your web application                                |    0.2 |
+| 17  | The README (or repository) contains instructions how to deploy, run and access the web applications with Docker Compose                  |    0.2 |
+| 18  | At least Traefik and your web application are deployed on the virtual machine                                                            |    0.2 |
+| 19  | The README displays the domain names configuration in the DNS zone to validate everything is set up right                                |    0.2 |
+| 20  | The web applications (the Traefik dashboard and your own application) are accessible using a domain name and/or subdomain names          |    0.2 |
+| 21  | The web applications (the Traefik dashboard and your own application) use automatic HTTPS/TLS certificate generations with Let's Encrypt |    0.2 |
+
+### Category 9 - Caching and performance
+
+| #   | Criterion                                                             | Points |
+| --- | --------------------------------------------------------------------- | -----: |
+| 22  | The requests are cached to improve performance until the data changes |    0.2 |
+
+### Category 10 - Presentation and questions
+
+| #   | Criterion                                                                                                                                                                    | Points |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 23  | The web application is presented and a demo is made as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how |    0.2 |
+| 24  | The presentation is clear and well prepared - everyone speaks during the presentation                                                                                        |    0.2 |
+| 25  | The answers to the questions are correct                                                                                                                                     |    0.2 |
+
+## Constraints
+
+- The application must be written in Java, compatible with Java 21
+- The application must be built using Maven with the `maven-shade-plugin` plugin
+- The application must use the picocli dependency
+- You can only use the Java classes seen in the course to implement the network
+  application (you can use any other libraries for other aspects of the
+  application, such as UI, etc.)
+- Your application must be slightly more complex and slightly different than the
+  examples presented during the course (we emphasize the word **slightly**, no
+  need to shoot for the moon!)
+- The web application can only use the HTTP/HTTPS protocols
+
+## Tips
 
 ### Obtain a domain name
 
@@ -325,157 +241,111 @@ practical work.
 If you do not have a domain or you do not want to use your own domain, you will
 acquire a free domain name for the purpose of this practical work.
 
-You can register a free domain name at <https://desec.io/>. Unlike other
-providers, this provider allows you to create 15 domain names per account with
-sub-domains for free. In addition, the provider is open-source and does not bind
-you to some shady terms and conditions.
+Many providers offer free domain names. You can use the following providers:
 
-Create an account on <https://desec.io/> and register a domain name. Please use
-the option **Register a new domain under dedyn.io (dynDNS)** to register a
-domain name under the `dedyn.io` domain.
+- <http://www.duckdns.org/> (recommended)
+- <https://www.noip.com/>
+- <https://freedns.afraid.org/>
+- <https://desec.io/>
 
-The domain name can be anything you want. It does not have to be related to the
-practical work nor this course and you can use it for other purposes in the
-future as well.
+Even though most of these providers seem fishy and old-fashioned, they are
+reliable and well-known in the free domain name industry. You can use any of
+them to acquire a free domain name that you can use for the purpose of this
+practical work.
 
-### Run the secure Traefik and whoami examples
-
-> [!NOTE]  
-> You might need to finish the
-> [Web infrastructures](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/22-web-infrastructures)
-> chapter before this step.
-
-Start the `traefik-secure` and `whoami-with-traefik-secure` examples in the
-[`24-practical-work-3`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main/24-practical-work-3)
-directory.
-
-> [!NOTE]  
-> You can run the advanced Traefik and whoami examples if you want. They are
-> more complex but they are more versatile and easier to maintain.
->
-> They are not required for this practical work.
-
-If you are able to access the Traefik dashboard and the whoami application from
-the Internet, you have successfully configured Traefik to use HTTPS with a
-domain name.
-
-You now have all the required elements to deploy and run your web application on
-the Internet!
-
-## Grading criteria
-
-- 0 point - The work is not done
-- 0.1 point - The work is insufficient
-- 0.2 point - The work is done
-
-Maximum grade: 25 points \* 0.2 + 1 = 6
-
-### Category 1 - Git, GitHub and Markdown
-
-If your repository is private, you must add us as collaborators to your
-repository!
-
-| #   | Criterion                                                                                                                           | Points |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 1   | The README is well structured and explains what the web application is for with its documented application protocol interface (API) |    0.2 |
-| 2   | The README explains the group composition and roles for each member                                                                 |    0.2 |
-| 3   | The README explains how to install and configure the server with each step                                                          |    0.2 |
-| 4   | The README explains how to deploy, run and access the web application                                                               |    0.2 |
-| 5   | The README explains how to configure the DNS zone to access your web application                                                    |    0.2 |
-| 6   | The README explains how to build and publish the web application with Docker                                                        |    0.2 |
-| 7   | The README explains how to interact with the web application with examples and outputs using curl                                   |    0.2 |
-| 8   | The repository is cloned using Git (HTTPS) on the server to run the web application                                                 |    0.2 |
-
-### Category 2 - Docker and Docker Compose
-
-| #   | Criterion                                                                   | Points |
-| --- | --------------------------------------------------------------------------- | -----: |
-| 9   | Docker and Docker Compose are correctly installed on the server             |    0.2 |
-| 10  | The Docker applications (Traefik + API) are split into multiple directories |    0.2 |
-| 11  | The web application runs with Docker and Docker Compose on the server       |    0.2 |
-
-### Category 3 - SSH and SCP
-
-| #   | Criterion                                                    | Points |
-| --- | ------------------------------------------------------------ | -----: |
-| 12  | You can access the server without a password using a SSH key |    0.2 |
-
-### Category 4 - HTTP and curl
-
-| #   | Criterion                                                                                                            | Points |
-| --- | -------------------------------------------------------------------------------------------------------------------- | -----: |
-| 13  | The web application makes usage of at least the following HTTP verbs: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`      |    0.2 |
-| 14  | The web application can be used using a web browser, a command line tool such as curl or a custom application client |    0.2 |
-
-### Category 5 - Web infrastructures
-
-| #   | Criterion                                                                           | Points |
-| --- | ----------------------------------------------------------------------------------- | -----: |
-| 15  | At least Traefik and your web application are deployed on the server                |    0.2 |
-| 16  | The applications are accessible using a domain name and/or subdomain names          |    0.2 |
-| 17  | The applications use automatic HTTPS/TLS certificate generations with Let's Encrypt |    0.2 |
-| 18  | The domain names are correctly configured in the DNS zone                           |    0.2 |
-
-### Category 6 - Presentation and questions
-
-| #   | Criterion                                                                                                          | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------ | -----: |
-| 19  | The presentation is clear and well prepared                                                                        |    0.2 |
-| 20  | Everyone speaks during the presentation, and the presentation lasts the time allowed                               |    0.2 |
-| 21  | The presentation presents the access to the server and how to clone and run the web application                    |    0.2 |
-| 22  | The presentation presents the configuration of the DNS zone with its (sub)domain names                             |    0.2 |
-| 23  | The presentation presents the web application                                                                      |    0.2 |
-| 24  | A demo of the web application is made using the deployed version of the application (with curl and/or the browser) |    0.2 |
-| 25  | The answers to the questions are correct                                                                           |    0.2 |
-
-## Constraints
-
-- The web application must be written in Java, compatible with Java 17
-- The web application must be built using Maven
-- You must use one or more of the Java classes seen in the course
-- Your application must be slightly more complex and different than the ones
-  presented during the course
-- The web application can only use the HTTP protocol
-- You must build and release the application using Docker and Docker Compose
-- You must use Traefik as the reverse proxy with a domain name to access the web
-  application
-- You must use Docker and Docker Compose to run the web application
-
-## Remarks
-
-Remember the KISS principle: Keep It Simple, Silly! Sometimes it is better to
-use a simple solution than a complex one.
-
-If your implementation is too complex, we might penalize you.
-
-If elements that are supposed to be acquired through the course or previous
-practical works are omitted, forgotten or poorly implemented, we might penalize
-you.
-
-If you have a domain name, you can use it. If you do not have a domain name, you
-will obtain a free domain name for the purpose of this practical work.
-
-You can protect the `main` branch of your repository to prevent any push on it
-and force signed commits from team members. This will force all team members to
-use signed pull requests to merge your work.
+The (free) domain name can be anything you want. It does not have to be related
+to the practical work nor this course and you can use it for other purposes in
+the future as well.
 
 ## Submission
 
-Your work is due on the **day of the presentations** (the _"Practical work
-review"_ sessions in the official planning available at
-<https://github.com/orgs/heig-vd-dai-course/projects>) at **13:15**.
+Your work is due as follow:
 
-Any commit after the deadline will not be taken into account. Each day of delay
-will result in a penalty of -1 point on the final grade.
+- DAI-TIC-B (Monday mornings): **19.01.2025 23:59**
+- DAI-TIC-C (Friday mornings): **23.01.2025 23:59**
 
-You must create a new GitHub Discussion at
-<https://github.com/orgs/heig-vd-dai-course/discussions> with the following
+> [!CAUTION]
+>
+> Each day of delay will result in a penalty of -1 point on the final grade.
+
+You must update the GitHub Discussion you created previously with the following
 information:
 
-- **Title**: DAI 2023-2024 - Practical work 4 - @member1 and @member2
-- **Category**: Show and tell
-- **Description**: The link to your repository as well as the latest commit hash
-  of your work before submission
+- **Description**: The link to your repository as well as the commit hash you
+  want to submit
+
+> [!CAUTION]
+>
+> If you do not update the GitHub Discussion with the link to your repository
+> and the commit hash before the deadline, it is considered as a late submission
+> and you will be penalized.
+
+## Presentations
+
+The practical work presentations will take place in **room TBD** on:
+
+- DAI-TIC-B (Monday mornings): **20.01.2025**
+- DAI-TIC-C (Friday mornings): **24.01.2025**
+
+We only have **TBD minutes per group**. You decide what you want to show us and
+how you want to present it.
+
+**Come 5 minutes before your time slot** (mentioned in the presentation) with
+your computer. You will have access to a video projector.
+
+**Please state your group on GitHub Discussions before next week**. This will
+allow us to prepare the order of presentation.
+
+<!--
+The order of presentation is random and is stated in the next tables:
+
+- [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
+- [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
+
+### DAI-TIC-B (Monday mornings)
+
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
+| 11  | TBD   | TDB     |
+| 12  | TBD   | TDB     |
+| 13  | TBD   | TDB     |
+| 14  | TBD   | TDB     |
+| 15  | TBD   | TDB     |
+| 16  | TBD   | TDB     |
+| 17  | TBD   | TDB     |
+| 18  | TBD   | TDB     |
+
+### DAI-TIC-C (Friday mornings)
+
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
+| 11  | TBD   | TDB     |
+| 12  | TBD   | TDB     |
+| 13  | TBD   | TDB     |
+| 14  | TBD   | TDB     |
+| 15  | TBD   | TDB     |
+| 16  | TBD   | TDB     |
+-->
 
 ## Grades and feedback
 
@@ -492,28 +362,20 @@ If you have any questions about the evaluation, you can contact us!
 <details>
 <summary>Grading grid template for the teaching staff</summary>
 
-```markdown
-# Practical work 4 - Grading grid for First name Last name member 1 and First name Last name member 2
+```text
+[DAI 202X-202Y] Retours sur le travail pratique Z
 
-Here are the grades and comments for each criterion for the practical work.
+Bonjour,
 
-## Grading criteria
+Vous trouverez en pièce jointe les retours que nous vous avons faits pour le
+travail pratique.
 
-- 0 point - The work is not done
-- 0.1 point - The work is insufficient
-- 0.2 point - The work is done
+La note a été saisie dans GAPS également.
 
-Maximum grade: 25 points \* 0.2 + 1 = 6
+Nous restons à votre disposition pour toute question.
 
-## General feedback
-
-- ...
-
-## Final grade
-
-Your final grade is:
-
-Feel free to contact us if you have any questions about the evaluation!
+Cordialement,
+[Le personnel enseignant]
 ```
 
 </details>
@@ -525,6 +387,15 @@ practical work?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 
