@@ -212,7 +212,7 @@ PDF, PNG, SVG, etc. are all accepted formats in your repository.
 The Short Message Service (SMS) protocol presented in the
 [_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
 chapter (accessible in the
-[examples repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+[examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
 repository) defines the following message:
 
 ```text
@@ -298,8 +298,8 @@ systems without any issues.
 
 Your work is due as follow:
 
-- DAI-TIC-B (Monday mornings): **01.12.2024 23:59**
 - DAI-TIC-C (Friday mornings): **05.12.2024 23:59**
+- DAI-TIC-B (Monday mornings): **08.12.2024 23:59**
 
 > [!CAUTION]
 >
@@ -322,8 +322,8 @@ information:
 The practical work presentations will take place in **room TBD** (next to the
 stairs) on:
 
-- DAI-TIC-B (Monday mornings): **02.12.2024**
 - DAI-TIC-C (Friday mornings): **06.12.2024**
+- DAI-TIC-B (Monday mornings): **09.12.2024**
 
 We only have **TBD minutes per group**. You decide what you want to show us and
 how you want to present it.
