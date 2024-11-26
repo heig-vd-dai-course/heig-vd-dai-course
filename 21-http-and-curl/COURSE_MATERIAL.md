@@ -1,7 +1,7 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-ssh-and-scp/21-ssh-and-scp-course-material.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/21-http-and-curl-course-material.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
@@ -48,7 +48,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [How to document an API](#how-to-document-an-api)
   - [How to persist data](#how-to-persist-data)
   - [How to secure an API](#how-to-secure-an-api)
-- [Share your project](#share-your-project)
 - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -67,8 +66,8 @@ protocols.
 You have mastered these protocols and you are now able to build network
 applications using them.
 
-TCP and UDP are low-level protocols. They are used to transfer data between
-computers. They do not define how the data should be structured.
+TCP and UDP are considered low-level protocols. They are used to transfer data
+between computers. They do not define how the data should be structured.
 
 It is up to the developers to define how the data should be structured, using an
 application protocol, for example.
@@ -114,62 +113,27 @@ production, you will have to use a third-party library such as
 [Spring Boot](https://spring.io/projects/spring-boot).
 
 As these libraries are out of the scope of this course (and mostly because you
-will see them details in future courses), we will not use them.
+will see them in details in future courses), we will not use them.
 
 ## Prepare and setup your environment
 
 ### curl
 
-In this section, you will start [curl](https://curl.se/) using its official
-Docker image available on Docker Hub: <https://github.com/curl/curl-container>.
+In this section, you will install [curl](https://curl.se/).
 
-curl is a command line tool used to transfer data over the Web. It supports
+curl is a command line tool used to transfer data over the web. It supports
 numerous protocols including HTTP, HTTPS, FTP, FTPS, SFTP, etc.
 
 curl is a very powerful tool. It is used by developers to test their APIs.
 
-#### Start and configure curl
+#### Install and configure curl
 
-To start curl, run the following command:
-
-```sh
-# Pull the Docker image
-docker pull curlimages/curl:latest
-
-# Start the Docker image
-docker run --rm curlimages/curl:latest
-```
-
-The output should be similar to the following:
-
-```text
-Unable to find image 'curlimages/curl:latest' locally
-latest: Pulling from curlimages/curl
-96526aa774ef: Already exists
-b3ed3d59459c: Pull complete
-4f4fb700ef54: Pull complete
-Digest: sha256:4a3396ae573c44932d06ba33f8696db4429c419da87cbdc82965ee96a37dd0af
-Status: Downloaded newer image for curlimages/curl:latest
-curl: try 'curl --help' or 'curl --manual' for more information
-```
-
-Now start the container overwriting the default entrypoint to access the
-container:
+To install curl, run the following command:
 
 ```sh
-# Start the Docker image
-docker run --rm -it --entrypoint /bin/sh curlimages/curl:latest
+# Install curl
+sudo apt install curl
 ```
-
-The output should be similar to the following:
-
-```text
-~ $
-```
-
-You are now in the container. You should be able to use `curl` inside the
-container for the following sections. To exit the container, type `exit` and
-press `Enter`.
 
 #### Alternatives
 
@@ -210,12 +174,12 @@ Add the latest **stable** version of Javalin available in the Maven repository:
 seen in previous chapters:
 
 ```xml
-<!-- https://mvnrepository.com/artifact/io.javalin/javalin-bundle -->
-<dependency>
-    <groupId>io.javalin</groupId>
-    <artifactId>javalin-bundle</artifactId>
-    <version>5.6.3</version>
-</dependency>
+    <!-- https://mvnrepository.com/artifact/io.javalin/javalin-bundle -->
+    <dependency>
+      <groupId>io.javalin</groupId>
+      <artifactId>javalin-bundle</artifactId>
+      <version>6.3.0</version>
+    </dependency>
 ```
 
 As stated in the [official documentation](https://javalin.io/tutorials/docker),
@@ -226,43 +190,45 @@ Update the following properties to the `pom.xml` file with the following
 content:
 
 ```xml
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <transformers>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>ch.heigvd.dai.Main</mainClass>
-                                </transformer>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
-                                    <resource>MANIFEST.MF</resource>
-                                </transformer>
-                            </transformers>
-                            <filters>
-                                <filter>
-                                    <artifact>*:*</artifact>
-                                    <excludes>
-                                        <exclude>META-INF/*.SF</exclude>
-                                        <exclude>META-INF/*.DSA</exclude>
-                                        <exclude>META-INF/*.RSA</exclude>
-                                    </excludes>
-                                </filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+  <build>
+    <plugins>
+      <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.5.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <phase>package</phase>
+            <configuration>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>ch.heigvd.dai.Main</mainClass>
+                </transformer>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
+                  <resource>MANIFEST.MF</resource>
+                </transformer>
+              </transformers>
+              <filters>
+                <!-- This filter is needed to avoid a bug in the shade plugin -->
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 ```
 
 The difference with the previous `pom.xml` file is the addition of the `filters`
@@ -273,20 +239,20 @@ section. This section is required to correctly use the Maven shade with Javalin.
 Update the `Main.java` file with the following code:
 
 ```java
-package ch.heigvd;
+package ch.heigvd.dai;
 
 import io.javalin.Javalin;
 
 public class Main {
-    public static final int PORT = 8080;
+  public static final int PORT = 8080;
 
-    public static void main(String[] args) {
-        Javalin app = Javalin.create();
+  public static void main(String[] args) {
+    Javalin app = Javalin.create();
 
-        app.get("/", ctx -> ctx.result("Hello, world!"));
+    app.get("/", ctx -> ctx.result("Hello, world!"));
 
-        app.start(PORT);
-    }
+    app.start(PORT);
+  }
 }
 ```
 
@@ -301,12 +267,8 @@ Using curl, you can also access the server:
 
 ```sh
 # Send a GET request to the server
-curl "http://host.docker.internal:8080"
+curl "http://localhost:8080"
 ```
-
-The host `host.docker.internal` is a special host that allows you to access the
-host from inside the container. If you do not use curl inside a container, you
-can use `localhost` instead.
 
 The output should be the same as in the browser.
 
@@ -378,7 +340,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## HTTP
 
 Hyper Text Transfer Protocol (HTTP) is a protocol used to transfer data over the
-Web based on TCP. It is a client-server protocol based on the request-response
+web based on TCP. It is a client-server protocol based on the request-response
 pattern: a client (called **user agent** in the HTTP specification) sends a
 request to a server, the server processes the request and sends a response to
 the client.
@@ -467,7 +429,7 @@ HTTP/3 is the latest version of HTTP. It was released in 2022. It is based on
 the QUIC protocol instead of TCP. QUIC is based on the UDP protocol, making it
 more efficient.
 
-The main point of HTTP/3 is to make the Web faster and more secure, using a more
+The main point of HTTP/3 is to make the web faster and more secure, using a more
 efficient protocol based on UDP.
 
 ### HTTP resources
@@ -482,7 +444,7 @@ server). A static resource is a file stored on a server. A dynamic resource is
 generated by a server (data returned in JSON or YAML format - more on this
 later).
 
-Let's take a look at the following URL (the "Fiche d'unité" of the current
+Let's take a look at the following URL (the _"Fiche d'unité"_ of the current
 course in GAPS):
 
 <https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573>
@@ -573,34 +535,24 @@ Other methods exist but are out of the scope of this course.
 Let's update the `Main.java` file to demonstrate this:
 
 ```java
-package ch.heigvd;
+package ch.heigvd.dai;
 
 import io.javalin.Javalin;
 
 public class Main {
-
   public static final int PORT = 8080;
 
   public static void main(String[] args) {
     Javalin app = Javalin.create();
 
-    app.get("/", ctx ->
-        ctx.result("Hello, world from a GET request method!")
-    );
-    app.post("/", ctx ->
-        ctx.result("Hello, world from a POST request method!")
-    );
-    app.patch("/", ctx ->
-        ctx.result("Hello, world from a PATCH request method!")
-    );
-    app.delete("/", ctx ->
-        ctx.result("Hello, world from a DELETE request method!")
-    );
+    app.get("/", ctx -> ctx.result("Hello, world from a GET request method!"));
+    app.post("/", ctx -> ctx.result("Hello, world from a POST request method!"));
+    app.patch("/", ctx -> ctx.result("Hello, world from a PATCH request method!"));
+    app.delete("/", ctx -> ctx.result("Hello, world from a DELETE request method!"));
 
     app.start(PORT);
   }
 }
-
 ```
 
 We have added a new context for each HTTP method. Each context will respond to
@@ -617,7 +569,7 @@ Hello, world from a GET request method!
 Now, let's try to send a `POST` request to the server using curl:
 
 ```sh
-curl -X POST "http://host.docker.internal:8080"
+curl -X POST "http://localhost:8080"
 ```
 
 The `-X` option tells curl to use to set the HTTP method.
@@ -632,10 +584,10 @@ Try the other methods using curl:
 
 ```sh
 # Send a PATCH request to the server
-curl -X PATCH "http://host.docker.internal:8080"
+curl -X PATCH "http://localhost:8080"
 
 # Send a DELETE request to the server
-curl -X DELETE "http://host.docker.internal:8080"
+curl -X DELETE "http://localhost:8080"
 ```
 
 You should see the different responses.
@@ -678,7 +630,7 @@ is important to understand the structure of a HTTP request and response.
 
 #### Structure of a HTTP request
 
-A HTTP request is structured as follows:
+A HTTP request is structured as follow:
 
 ```text
 <HTTP method> <URL> HTTP/<HTTP version>
@@ -697,7 +649,9 @@ Accept: */*
 
 ```
 
-> [!IMPORTANT] Do not forget the empty line!
+> [!IMPORTANT]
+>
+> Do not forget the empty line!
 
 In this example, we request the resource `/` from the server `gaps.heig-vd.ch`
 using the HTTP method `GET`.
@@ -789,7 +743,7 @@ earlier:
 
 #### Structure of a HTTP response
 
-A HTTP response is structured as follows:
+A HTTP response is structured as follow:
 
 ```text
 HTTP/<HTTP version> <HTTP status code> <HTTP status message>
@@ -942,37 +896,40 @@ code.
 Let's update the `Main.java` file to demonstrate this:
 
 ```java
-package ch.heigvd;
+package ch.heigvd.dai;
 
 import io.javalin.Javalin;
 import io.javalin.http.HttpStatus;
 
 public class Main {
-
   public static final int PORT = 8080;
 
   public static void main(String[] args) {
     Javalin app = Javalin.create();
 
-    app.get("/", ctx ->
-        ctx
-          .result("Hello, world from a GET request method with a `HttpStatus.OK` response status!")
-    );
-    app.post("/", ctx ->
-        ctx
-          .result("Hello, world from a POST request method with a `HttpStatus.CREATED` response status!")
-          .status(HttpStatus.CREATED)
-    );
-    app.patch("/", ctx ->
-        ctx
-          .result("Hello, world from a PATCH request method with a `HttpStatus.OK` response status!")
-          .status(HttpStatus.OK)
-    );
-    app.delete("/", ctx ->
-        ctx
-          .result("Hello, world from a DELETE request method with a `HttpStatus.NO_CONTENT` response status!")
-          .status(HttpStatus.NO_CONTENT)
-    );
+    app.get(
+        "/",
+        ctx ->
+            ctx.result(
+                "Hello, world from a GET request method with a `HttpStatus.OK` response status!"));
+    app.post(
+        "/",
+        ctx ->
+            ctx.result(
+                    "Hello, world from a POST request method with a `HttpStatus.CREATED` response status!")
+                .status(HttpStatus.CREATED));
+    app.patch(
+        "/",
+        ctx ->
+            ctx.result(
+                    "Hello, world from a PATCH request method with a `HttpStatus.OK` response status!")
+                .status(HttpStatus.OK));
+    app.delete(
+        "/",
+        ctx ->
+            ctx.result(
+                    "Hello, world from a DELETE request method with a `HttpStatus.NO_CONTENT` response status!")
+                .status(HttpStatus.NO_CONTENT));
 
     app.start(PORT);
   }
@@ -982,7 +939,7 @@ public class Main {
 Now, let's try to send a `GET` request to the server using curl:
 
 ```sh
-curl -v http://host.docker.internal:8080
+curl -v http://localhost:8080
 ```
 
 The `-v` option tells curl to print the request headers.
@@ -1019,13 +976,13 @@ Try the other methods using curl:
 
 ```sh
 # Send a POST request to the server
-curl -v -X POST "http://host.docker.internal:8080"
+curl -v -X POST "http://localhost:8080"
 
 # Send a PATCH request to the server
-curl -v -X PATCH http://host.docker.internal:8080
+curl -v -X PATCH http://localhost:8080
 
 # Send a DELETE request to the server
-curl -v -X DELETE http://host.docker.internal:8080
+curl -v -X DELETE http://localhost:8080
 ```
 
 The status codes should be the same as in the code. They are defined by the
@@ -1064,11 +1021,16 @@ Let's update the `Main.java` file to demonstrate this by adding a new context
 with a path parameter:
 
 ```java
-app.get("/path-parameter-demo/{path-parameter}", ctx -> {
-  String pathParameter = ctx.pathParam("path-parameter");
+    app.get(
+        "/path-parameter-demo/{path-parameter}",
+        ctx -> {
+          String pathParameter = ctx.pathParam("path-parameter");
 
-  ctx.result("You just called `/path-parameter-demo` with path parameter '" + pathParameter + "'!");
-});
+          ctx.result(
+              "You just called `/path-parameter-demo` with path parameter '"
+                  + pathParameter
+                  + "'!");
+        });
 ```
 
 In this example, we have added a new context with the path
@@ -1084,7 +1046,7 @@ Run the application and open your browser at
 Let's try to send a `GET` request to the server using curl:
 
 ```sh
-curl http://host.docker.internal:8080/path-parameter-demo/Hello%20world
+curl http://localhost:8080/path-parameter-demo/Hello%20world
 ```
 
 The output should be similar to the following:
@@ -1111,7 +1073,7 @@ Let's try to send a `GET` request to the server using curl to display the
 response headers:
 
 ```sh
-curl -i http://host.docker.internal:8080/path-parameters-demo/path-parameter/not-found
+curl -i http://localhost:8080/path-parameters-demo/path-parameter/not-found
 ```
 
 The output should be similar to the following:
@@ -1148,16 +1110,18 @@ Let's update the `Main.java` file to demonstrate this by adding a new context
 with some query parameters:
 
 ```java
-app.get("/query-parameters-demo", ctx -> {
-  String firstName = ctx.queryParam("firstName");
-  String lastName = ctx.queryParam("lastName");
+    app.get(
+        "/query-parameters-demo",
+        ctx -> {
+          String firstName = ctx.queryParam("firstName");
+          String lastName = ctx.queryParam("lastName");
 
-  if (firstName == null || lastName == null) {
-    throw new BadRequestResponse();
-  }
+          if (firstName == null || lastName == null) {
+            throw new BadRequestResponse();
+          }
 
-  ctx.result("Hello, " + firstName + " " + lastName + "!");
-});
+          ctx.result("Hello, " + firstName + " " + lastName + "!");
+        });
 ```
 
 In this example, we have added a new context with the path
@@ -1198,7 +1162,7 @@ Let's try to send a `GET` request to the server using curl to display the
 response headers:
 
 ```sh
-curl -i http://host.docker.internal:8080/query-parameters-demo
+curl -i http://localhost:8080/query-parameters-demo
 ```
 
 The output should be similar to the following:
@@ -1236,11 +1200,13 @@ Hello, world!
 Let's update the `Main.java` file to demonstrate this:
 
 ```java
-app.post("/body-demo", ctx -> {
-  String data = ctx.body();
+    app.post(
+        "/body-demo",
+        ctx -> {
+          String data = ctx.body();
 
-  ctx.result("You just called `/body-demo` with data '" + data + "'!");
-});
+          ctx.result("You just called `/body-demo` with data '" + data + "'!");
+        });
 ```
 
 In this example, we have added a new context with the path `/body-demo`. This
@@ -1253,7 +1219,7 @@ As this context responds to `POST` requests, you will have to use curl to send a
 `POST` request to the server (as your browser sends `GET` requests by default):
 
 ```sh
-curl -X POST -d "Hello, world!" http://host.docker.internal:8080/body-demo
+curl -X POST -d "Hello, world!" http://localhost:8080/body-demo
 ```
 
 The `-d` option tells curl to use to set the body.
@@ -1267,18 +1233,18 @@ You just called `/body-demo` with data 'Hello, world!'!
 Let's display the request and response headers:
 
 ```sh
-curl -i -v -X POST -d "Hello, world!" http://host.docker.internal:8080/body-demo
+curl -i -v -X POST -d "Hello, world!" http://localhost:8080/body-demo
 ```
 
 The output should be similar to the following:
 
 ```text
-You just called `/body-demo` with data 'Hello, world!'!~ $ curl -i -v -X POST -d "Hello, world!" http://host.docker.internal:8080/body-demo
+You just called `/body-demo` with data 'Hello, world!'!~ $ curl -i -v -X POST -d "Hello, world!" http://localhost:8080/body-demo
 Note: Unnecessary use of -X or --request, POST is already inferred.
 *   Trying 192.168.65.254:8080...
-* Connected to host.docker.internal (192.168.65.254) port 8080
+* Connected to localhost (192.168.65.254) port 8080
 > POST /body-demo HTTP/1.1
-> Host: host.docker.internal:8080
+> Host: localhost:8080
 > User-Agent: curl/8.4.0
 > Accept: */*
 > Content-Length: 13
@@ -1294,7 +1260,7 @@ Content-Type: text/plain
 Content-Length: 55
 
 <
-* Connection #0 to host host.docker.internal left intact
+* Connection #0 to host localhost left intact
 You just called `/body-demo` with data 'Hello, world!'!
 ```
 
@@ -1368,23 +1334,25 @@ representations:
 Let's update the `Main.java` file to demonstrate this:
 
 ```java
-app.get("/content-negotiation-demo", ctx -> {
-  String acceptHeader = ctx.header("Accept");
+    app.get(
+        "/content-negotiation-demo",
+        ctx -> {
+          String acceptHeader = ctx.header("Accept");
 
-  if (acceptHeader == null) {
-    throw new BadRequestResponse();
-  }
+          if (acceptHeader == null) {
+            throw new BadRequestResponse();
+          }
 
-  if (acceptHeader.contains("text/html")) {
-    ctx.contentType("text/html");
-    ctx.result("<h1>Hello, world!</h1>");
-  } else if (acceptHeader.contains("text/plain")) {
-    ctx.contentType("text/plain");
-    ctx.result("Hello, world!");
-  } else {
-    throw new NotAcceptableResponse();
-  }
-});
+          if (acceptHeader.contains("text/html")) {
+            ctx.contentType("text/html");
+            ctx.result("<h1>Hello, world!</h1>");
+          } else if (acceptHeader.contains("text/plain")) {
+            ctx.contentType("text/plain");
+            ctx.result("Hello, world!");
+          } else {
+            throw new NotAcceptableResponse();
+          }
+        });
 ```
 
 In this example, we have added a new context with the path
@@ -1422,7 +1390,7 @@ Now, try to access the URL <http://localhost:8080/content-negotiation-demo> with
 curl:
 
 ```sh
-curl -v -i http://host.docker.internal:8080/content-negotiation-demo
+curl -v -i http://localhost:8080/content-negotiation-demo
 ```
 
 The output should be similar to the following:
@@ -1438,7 +1406,7 @@ Let's specify the `Accept` header to tell the server that we accept the media
 type `text/plain`:
 
 ```sh
-curl -H "Accept: text/plain" http://host.docker.internal:8080/content-negotiation-demo
+curl -H "Accept: text/plain" http://localhost:8080/content-negotiation-demo
 ```
 
 The output should be similar to the following:
@@ -1450,16 +1418,16 @@ Hello, world!
 Let's display the request and response headers:
 
 ```sh
-curl -v -i -H "Accept: text/plain" http://host.docker.internal:8080/content-negotiation-demo
+curl -v -i -H "Accept: text/plain" http://localhost:8080/content-negotiation-demo
 ```
 
 The output should be similar to the following:
 
 ```text
 *   Trying 192.168.65.254:8080...
-* Connected to host.docker.internal (192.168.65.254) port 8080
+* Connected to localhost (192.168.65.254) port 8080
 > GET /content-negotiation-demo HTTP/1.1
-> Host: host.docker.internal:8080
+> Host: localhost:8080
 > User-Agent: curl/8.4.0
 > Accept: text/plain
 >
@@ -1473,7 +1441,7 @@ Content-Type: text/plain
 Content-Length: 13
 
 <
-* Connection #0 to host host.docker.internal left intact
+* Connection #0 to host localhost left intact
 Hello, world!
 ```
 
@@ -1611,17 +1579,20 @@ S -> C: 200 OK (profile page)
 Let's update the `Main.java` file to demonstrate this:
 
 ```java
-app.get("/cookie-demo", ctx -> {
-  String cookie = ctx.cookie("cookie");
+    app.get(
+        "/cookie-demo",
+        ctx -> {
+          String cookie = ctx.cookie("cookie");
 
-  if (cookie == null) {
-    ctx.cookie("cookie", "cookie-demo");
+          if (cookie == null) {
+            ctx.cookie("cookie", "cookie-demo");
 
-    ctx.result("You just called `/cookie-demo` without a cookie. A cookie is now set!");
-  } else {
-    ctx.result("You just called `/cookie-demo` with a cookie. Its value is '" + cookie + "'!");
-  }
-});
+            ctx.result("You just called `/cookie-demo` without a cookie. A cookie is now set!");
+          } else {
+            ctx.result(
+                "You just called `/cookie-demo` with a cookie. Its value is '" + cookie + "'!");
+          }
+        });
 ```
 
 In this example, we have added a new context with the path `/cookie-demo`. This
@@ -1817,19 +1788,19 @@ Start by creating a new directory `src/main/java/ch/heigvd/users` and a new file
 `User.java`:
 
 ```java
-package ch.heigvd.users;
+package ch.heigvd.dai.users;
 
 public class User {
 
-    public Integer id;
-    public String firstName;
-    public String lastName;
-    public String email;
-    public String password;
+  public Integer id;
+  public String firstName;
+  public String lastName;
+  public String email;
+  public String password;
 
-    public User() {
-        // Empty constructor for serialisation/deserialization
-    }
+  public User() {
+    // Empty constructor for serialisation/deserialization
+  }
 }
 ```
 
@@ -1849,116 +1820,119 @@ fields.
 Now, let's create a new class `UsersController.java` in the same directory:
 
 ```java
-package ch.heigvd.users;
+package ch.heigvd.dai.users;
 
 import io.javalin.http.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UsersController {
+  private final ConcurrentHashMap<Integer, User> users;
+  private final AtomicInteger userId = new AtomicInteger();
 
-    private final ConcurrentHashMap<Integer, User> users;
-    private final AtomicInteger userId = new AtomicInteger();
+  public UsersController(ConcurrentHashMap<Integer, User> users) {
+    this.users = users;
+  }
 
-    public UsersController(ConcurrentHashMap<Integer, User> users) {
-        this.users = users;
+  public void create(Context ctx) {
+    User newUser =
+        ctx.bodyValidator(User.class)
+            .check(obj -> obj.firstName != null, "Missing first name")
+            .check(obj -> obj.lastName != null, "Missing last name")
+            .check(obj -> obj.email != null, "Missing email")
+            .check(obj -> obj.password != null, "Missing password")
+            .get();
+
+    for (User user : users.values()) {
+      if (user.email.equals(newUser.email)) {
+        throw new ConflictResponse();
+      }
     }
 
-    public void create(Context ctx) {
-        User newUser = ctx.bodyValidator(User.class)
-                .check(obj -> obj.firstName != null, "Missing first name")
-                .check(obj -> obj.lastName != null, "Missing last name")
-                .check(obj -> obj.email != null, "Missing email")
-                .check(obj -> obj.password != null, "Missing password")
-                .get();
+    User user = new User();
 
-        for (User user : users.values()) {
-            if (user.email.equals(newUser.email)) {
-                throw new ConflictResponse();
-            }
-        }
+    user.id = userId.getAndIncrement();
+    user.firstName = newUser.firstName;
+    user.lastName = newUser.lastName;
+    user.email = newUser.email;
+    user.password = newUser.password;
 
-        User user = new User();
+    users.put(user.id, user);
 
-        user.id = userId.getAndIncrement();
-        user.firstName = newUser.firstName;
-        user.lastName = newUser.lastName;
-        user.email = newUser.email;
-        user.password = newUser.password;
+    ctx.status(HttpStatus.CREATED);
+    ctx.json(user);
+  }
 
-        users.put(user.id, user);
+  public void getOne(Context ctx) {
+    Integer id =
+        ctx.pathParamAsClass("id", Integer.class)
+            .check(userId -> users.get(userId) != null, "User not found")
+            .getOrThrow(message -> new NotFoundResponse());
 
-        ctx.status(HttpStatus.CREATED);
-        ctx.json(user);
+    User user = users.get(id);
+
+    ctx.json(user);
+  }
+
+  public void getMany(Context ctx) {
+    String firstName = ctx.queryParam("firstName");
+    String lastName = ctx.queryParam("lastName");
+
+    List<User> users = new ArrayList<>();
+
+    for (User user : this.users.values()) {
+      if (firstName != null && !user.firstName.equals(firstName)) {
+        continue;
+      }
+
+      if (lastName != null && !user.lastName.equals(lastName)) {
+        continue;
+      }
+
+      users.add(user);
     }
 
-    public void getOne(Context ctx) {
-        Integer id = ctx.pathParamAsClass("id", Integer.class)
-                .check(userId -> users.get(userId) != null, "User not found")
-                .getOrThrow(message -> new NotFoundResponse());
+    ctx.json(users);
+  }
 
-        User user = users.get(id);
+  public void update(Context ctx) {
+    Integer id =
+        ctx.pathParamAsClass("id", Integer.class)
+            .check(userId -> users.get(userId) != null, "User not found")
+            .getOrThrow(message -> new NotFoundResponse());
 
-        ctx.json(user);
-    }
+    User updateUser =
+        ctx.bodyValidator(User.class)
+            .check(obj -> obj.firstName != null, "Missing first name")
+            .check(obj -> obj.lastName != null, "Missing last name")
+            .check(obj -> obj.email != null, "Missing email")
+            .check(obj -> obj.password != null, "Missing password")
+            .get();
 
-    public void getMany(Context ctx) {
-        String firstName = ctx.queryParam("firstName");
-        String lastName = ctx.queryParam("lastName");
+    User user = users.get(id);
 
-        List<User> users = new ArrayList<>();
+    user.firstName = updateUser.firstName;
+    user.lastName = updateUser.lastName;
+    user.email = updateUser.email;
+    user.password = updateUser.password;
 
-        for (User user : this.users.values()) {
-            if (firstName != null && !user.firstName.equals(firstName)) {
-                continue;
-            }
+    users.put(id, user);
 
-            if (lastName != null && !user.lastName.equals(lastName)) {
-                continue;
-            }
+    ctx.json(user);
+  }
 
-            users.add(user);
-        }
+  public void delete(Context ctx) {
+    Integer id =
+        ctx.pathParamAsClass("id", Integer.class)
+            .check(userId -> users.get(userId) != null, "User not found")
+            .getOrThrow(message -> new NotFoundResponse());
 
-        ctx.json(users);
-    }
+    users.remove(id);
 
-    public void update(Context ctx) {
-        Integer id = ctx.pathParamAsClass("id", Integer.class)
-                .check(userId -> users.get(userId) != null, "User not found")
-                .getOrThrow(message -> new NotFoundResponse());
-
-        User updateUser = ctx.bodyValidator(User.class)
-                .check(obj -> obj.firstName != null, "Missing first name")
-                .check(obj -> obj.lastName != null, "Missing last name")
-                .check(obj -> obj.email != null, "Missing email")
-                .check(obj -> obj.password != null, "Missing password")
-                .get();
-
-        User user = users.get(id);
-
-        user.firstName = updateUser.firstName;
-        user.lastName = updateUser.lastName;
-        user.email = updateUser.email;
-        user.password = updateUser.password;
-
-        users.put(id, user);
-
-        ctx.json(user);
-    }
-
-    public void delete(Context ctx) {
-        Integer id = ctx.pathParamAsClass("id", Integer.class)
-                .check(userId -> users.get(userId) != null, "User not found")
-                .getOrThrow(message -> new NotFoundResponse());
-
-        users.remove(id);
-
-        ctx.status(HttpStatus.NO_CONTENT);
-    }
+    ctx.status(HttpStatus.NO_CONTENT);
+  }
 }
 ```
 
@@ -1992,58 +1966,57 @@ Now let's implement the auth domain. Start by creating a new directory
 `src/main/java/ch/heigvd/auth` and a new file `AuthController.java`:
 
 ```java
-package ch.heigvd.auth;
+package ch.heigvd.dai.auth;
 
-import ch.heigvd.users.User;
+import ch.heigvd.dai.users.User;
 import io.javalin.http.*;
-
 import java.util.concurrent.ConcurrentHashMap;
 
 public class AuthController {
+  private final ConcurrentHashMap<Integer, User> users;
 
-    private final ConcurrentHashMap<Integer, User> users;
+  public AuthController(ConcurrentHashMap<Integer, User> users) {
+    this.users = users;
+  }
 
-    public AuthController(ConcurrentHashMap<Integer, User> users) {
-        this.users = users;
-    }
+  public void login(Context ctx) {
+    User loginUser =
+        ctx.bodyValidator(User.class)
+            .check(obj -> obj.email != null, "Missing email")
+            .check(obj -> obj.password != null, "Missing password")
+            .get();
 
-    public void login(Context ctx) {
-        User loginUser = ctx.bodyValidator(User.class)
-                .check(obj -> obj.email != null, "Missing email")
-                .check(obj -> obj.password != null, "Missing password")
-                .get();
-
-        for (User user : users.values()) {
-            if (user.email.equals(loginUser.email) && user.password.equals(loginUser.password)) {
-                ctx.cookie("user", user.id.toString());
-                ctx.status(HttpStatus.NO_CONTENT);
-                return;
-            }
-        }
-
-        throw new UnauthorizedResponse();
-    }
-
-    public void logout(Context ctx) {
-        ctx.removeCookie("user");
+    for (User user : users.values()) {
+      if (user.email.equals(loginUser.email) && user.password.equals(loginUser.password)) {
+        ctx.cookie("user", user.id.toString());
         ctx.status(HttpStatus.NO_CONTENT);
+        return;
+      }
     }
 
-    public void profile(Context ctx) {
-        String userId = ctx.cookie("user");
+    throw new UnauthorizedResponse();
+  }
 
-        if (userId == null) {
-            throw new UnauthorizedResponse();
-        }
+  public void logout(Context ctx) {
+    ctx.removeCookie("user");
+    ctx.status(HttpStatus.NO_CONTENT);
+  }
 
-        User user = users.get(Integer.parseInt(userId));
+  public void profile(Context ctx) {
+    String userId = ctx.cookie("user");
 
-        if (user == null) {
-            throw new UnauthorizedResponse();
-        }
-
-        ctx.json(user);
+    if (userId == null) {
+      throw new UnauthorizedResponse();
     }
+
+    User user = users.get(Integer.parseInt(userId));
+
+    if (user == null) {
+      throw new UnauthorizedResponse();
+    }
+
+    ctx.json(user);
+  }
 }
 ```
 
@@ -2064,18 +2037,16 @@ The final step is to update the `Main.java` file to define the endpoints/routes
 that will be used by the API using the same controllers we have just created:
 
 ```java
-package ch.heigvd;
+package ch.heigvd.dai;
 
-import ch.heigvd.auth.AuthController;
-import ch.heigvd.users.User;
-import ch.heigvd.users.UsersController;
+import ch.heigvd.dai.auth.AuthController;
+import ch.heigvd.dai.users.User;
+import ch.heigvd.dai.users.UsersController;
 import io.javalin.Javalin;
-
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Main {
-
-  public final static int PORT = 8080;
+  public static final int PORT = 8080;
 
   public static void main(String[] args) {
     Javalin app = Javalin.create();
@@ -2110,7 +2081,7 @@ should return an empty array.
 Let's try to create a new user using curl:
 
 ```sh
-curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}' http://host.docker.internal:8080/users
+curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}' http://localhost:8080/users
 ```
 
 The output should be similar to the following:
@@ -2128,7 +2099,7 @@ The user has been successfully created with ID `0` and a status code `201`.
 Let's try to create the same user again:
 
 ```sh
-curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}' http://host.docker.internal:8080/users
+curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}' http://localhost:8080/users
 ```
 
 The output should be similar to the following:
@@ -2148,7 +2119,7 @@ code.
 Let's create a user with a missing field:
 
 ```sh
-curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"Johanna","lastName":"Dane","email":"johanna.dane@example.com"}' http://host.docker.internal:8080/users
+curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"Johanna","lastName":"Dane","email":"johanna.dane@example.com"}' http://localhost:8080/users
 ```
 
 The output should be similar to the following:
@@ -2170,7 +2141,7 @@ Refresh the page at <http://localhost:8080/users>. You should see the user you
 have just created in an array. You can do the same with curl:
 
 ```sh
-curl -i http://host.docker.internal:8080/users
+curl -i http://localhost:8080/users
 ```
 
 The output should be similar to the following:
@@ -2187,13 +2158,13 @@ Content-Length: 194
 Let's get the user we have just created (the same can be done in the browser):
 
 ```sh
-curl -i http://host.docker.internal:8080/users/0
+curl -i http://localhost:8080/users/0
 ```
 
 Let's try to update the user using curl:
 
 ```sh
-curl -i -X PUT -H "Content-Type: application/json" -d '{"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}' http://host.docker.internal:8080/users/0
+curl -i -X PUT -H "Content-Type: application/json" -d '{"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}' http://localhost:8080/users/0
 ```
 
 The output should be similar to the following:
@@ -2212,7 +2183,7 @@ The user has been successfully updated with ID `0` and a status code `200`.
 Let's try to login the user using curl:
 
 ```sh
-curl -i -X POST -H "Content-Type: application/json" -d '{"email":"jane.doe@example.com","password":"secret"}' http://host.docker.internal:8080/login
+curl -i -X POST -H "Content-Type: application/json" -d '{"email":"jane.doe@example.com","password":"secret"}' http://localhost:8080/login
 ```
 
 The output should be similar to the following:
@@ -2233,7 +2204,7 @@ the server has set a cookie with the name `user` and the value `0`.
 Let's use the cookie to get the current user:
 
 ```sh
-curl -i --cookie user=0 http://host.docker.internal:8080/profile
+curl -i --cookie user=0 http://localhost:8080/profile
 ```
 
 The `--cookie` option allows to send a cookie with the request. A browser does
@@ -2253,7 +2224,7 @@ Content-Length: 95
 Let's try to get the current user without the cookie:
 
 ```sh
-curl -i http://host.docker.internal:8080/profile
+curl -i http://localhost:8080/profile
 ```
 
 The output should be similar to the following:
@@ -2273,7 +2244,7 @@ code.
 Let's try to logout the user using curl:
 
 ```sh
-curl -i -X POST http://host.docker.internal:8080/logout
+curl -i -X POST http://localhost:8080/logout
 ```
 
 The output should be similar to the following:
@@ -2299,7 +2270,7 @@ ensure the cookie is invalidated.
 Let's try to delete the user using curl:
 
 ```sh
-curl -i -X DELETE http://host.docker.internal:8080/users/0
+curl -i -X DELETE http://localhost:8080/users/0
 ```
 
 The output should be similar to the following:
@@ -2595,28 +2566,6 @@ In the context of this course, it is not important that the API is secure. It is
 more important to understand the basics of how to design, how to develop and how
 to document an API.
 
-## Share your project
-
-Create a new Git repository and push your code to it. Do not forget all the
-files you have created or modified during this chapter and the best practices
-you have learned.
-
-Share your project in the GitHub Discussions of this organization:
-<https://github.com/orgs/heig-vd-dai-course/discussions>.
-
-Create a new discussion with the following information:
-
-- **Title**: DAI 2023-2024 - Users API - First name Last Name
-- **Category**: Show and tell
-- **Description**: The link to your GitHub repository.
-
-This will notify us that you have completed the exercise and we can check your
-work.
-
-You can compare your solution with the official one stated in the
-[Solution](#solution) section, however, **we highly recommend you to try to
-complete the practical content by yourself first to learn the most**.
-
 ## Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
@@ -2664,6 +2613,15 @@ chapter?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 
