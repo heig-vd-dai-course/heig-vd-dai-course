@@ -469,8 +469,15 @@ machine:
 - [x] You have updated the packages on the virtual machine. This is a good
       practice to avoid security vulnerabilities.
 
-Congratulations! You have now an up-to-date and secure virtual machine to use
-for the rest of the course.
+#### Install and configure Docker and Docker Compose
+
+Install and configure Docker and Docker Compose on the virtual machine as seen
+in the
+[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
+chapter. You will need Docker and Docker Compose for the rest of the course.
+
+Congratulations! You have now an up-to-date and configured virtual machine to
+use for the rest of the course.
 
 ### Copy files with SCP
 

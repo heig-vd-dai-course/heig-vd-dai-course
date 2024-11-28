@@ -174,8 +174,8 @@ Do you have any questions?
 
 ### What will you do?
 
-- Acquire a virtual machine on the cloud
-- Install and configure SSH to connect to the virtual machine
+- Acquire a virtual machine (= a server) on the cloud
+- Install and configure the virtual machine (SSH, Docker and Docker Compose)
 - Transfer files to/from the virtual machine with SCP
 
 ![bg right contain](./images/what-will-you-do.png)
