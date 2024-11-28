@@ -35,11 +35,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Alternatives](#alternatives-1)
   - [Resources](#resources-1)
 - [Practical content](#practical-content)
-  - [Install and configure the SSH client and SCP](#install-and-configure-the-ssh-client-and-scp)
-  - [Start and configure the SSH server](#start-and-configure-the-ssh-server)
-  - [Connect to the SSH server with a password](#connect-to-the-ssh-server-with-a-password)
-  - [Connect to the SSH server without a password](#connect-to-the-ssh-server-without-a-password)
+  - [Install and configure SSH (and SCP)](#install-and-configure-ssh-and-scp)
+  - [Acquire a virtual machine on a cloud provider](#acquire-a-virtual-machine-on-a-cloud-provider)
+  - [Access and configure the virtual machine](#access-and-configure-the-virtual-machine)
   - [Copy files with SCP](#copy-files-with-scp)
+  - [Add the teaching staff's public key to the virtual machine](#add-the-teaching-staffs-public-key-to-the-virtual-machine)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -54,6 +54,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 In this chapter, you will have a refresh about security and learn how to use the
 Secure Shell (SSH) protocol to connect to a remote machine. You will also learn
 how to transfer files from/to a remote machine with Secure Copy (SCP).
+
+For this, you will acquire a virtual machine on a cloud provider and configure
+it. You will then connect to the virtual machine with SSH and copy files from/to
+the virtual machine with SCP.
 
 ## A quick reminder about security
 
@@ -198,9 +202,8 @@ SCP is an illustration of the client/server architecture using the SSH protocol.
 
 _Alternatives are here for general knowledge. No need to learn them._
 
-- FTP
-- SFTP
-- Rsync
+- [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
+- [rsync](https://rsync.samba.org)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -214,9 +217,10 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Practical content
 
-### Install and configure the SSH client and SCP
+### Install and configure SSH (and SCP)
 
 In this section, you will install and configure SSH on your operating system.
+This will automatically install SCP as well.
 
 #### Install the SSH client
 
@@ -227,7 +231,12 @@ in the
 [Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/03-git-github-and-markdown)
 chapter.
 
-If not, follow the instructions below to install it.
+If not, follow the instructions below to install it:
+
+```sh
+# Install the SSH client
+sudo apt install openssh-client
+```
 
 #### Check the installation
 
@@ -236,396 +245,232 @@ Open a terminal and type `ssh -V`.
 The output should be similar to this:
 
 ```text
-OpenSSH_9.4p1, OpenSSL 3.1.3 19 Sep 2023
+OpenSSH_9.6p1 Ubuntu-3ubuntu13.5, OpenSSL 3.0.13 30 Jan 2024
 ```
 
-### Start and configure the SSH server
+### Acquire a virtual machine on a cloud provider
 
-#### Start the SSH server
+In this section, you will acquire a virtual machine on a cloud provider.
 
-Pull the latest changes from the previously cloned
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository or clone it if you have not done it yet.
+Many other cloud providers exist and offer free tiers (= free resources for a
+limited time). You can check the following Git repository for a list of cloud
+providers offering free tiers:
+<https://github.com/cloudcommunity/Cloud-Free-Tier-Comparison> if you want to
+explore more on this topic.
 
-Explore the `20-ssh-and-scp` directory containing the OpenSSH server example
-with Docker Compose. Make sure to show hidden files and directories to see the
-`.env` file.
+In this course, we will use a virtual machine from
+[Microsoft Azure](https://azure.microsoft.com).
 
-In the `20-ssh-and-scp` directory, run the following command:
+Using your HES-SO email address, you can apply for the
+[Azure for Students](https://azure.microsoft.com/en-us/free/students/) offer to
+get free credits without the need for a credit card.
+
+#### Access Microsoft Azure
+
+Access the Azure portal with the following link: <https://portal.azure.com>.
+
+Use your HES-SO email address to log in (`<first name>.<last name>@hes-so.ch`
+where `<first name>` and `<last name>` are 8 characters max) and the password
+you usually use to log in to the HES-SO services (GAPS, Cyberlearn, etc.).
+
+#### Apply for the Azure for Students offer
+
+Once you are logged in, you can apply for the Azure for Students offer with the
+following link: <https://azure.microsoft.com/en-us/free/students/>.
+
+If needed, log in with your HES-SO email address again.
+
+Fill the form with your information and set up your account.
+
+You should now have access to the Azure portal with free credits.
+
+#### Create a virtual machine
+
+Return to the Azure portal and create a new virtual machine from the dashboard
+in section `Create a resource`.
+
+Select a virtual machine with the following characteristics:
+
+- **Project details**
+  - **Subscription**: Azure for Students
+  - **Resource group**: Create new with the name `heig-vd-dai-course`
+- **Instance details**
+  - **Virtual machine name**: `heig-vd-dai-course-vm`
+  - **Region**: (Europe) West Europe
+  - **Availability options**: No infrastructure redundancy required
+  - **Security type**: Trusted launch virtual machines (the default)
+  - **Image**: Ubuntu Server 24.04 LTS - x64 Gen2 (the default)
+  - **VM architecture**: x64
+  - **Size**: `Standard_B1s` - you might need to click _"See all sizes"_ to see
+    this option
+- **Administrator account**
+  - **Authentication type**: SSH public key
+  - **Username**: `ubuntu` - please use this username so the teaching staff can
+    help you if needed
+  - **SSH public key source**: Use existing public key
+  - **SSH public key**: Paste your public key here
+- **Inbound port rules**
+  - **Public inbound ports**: Allow selected ports
+  - **Select inbound ports**: HTTP (80), HTTPS (443), SSH (22)
+
+Although the `Standard_B1s` size is one of the
+[cheapest](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/)
+and least powerful option, it will be enough for this course. It will allow you
+to use your remaining credits for other services.
+
+Click on the `Review + create` button.
+
+Validate the configuration and click on the `Create` button.
+
+![Create a virtual machine part 1/4](./images/create-a-virtual-machine-1.png)
+
+![Create a virtual machine part 2/4](./images/create-a-virtual-machine-2.png)
+
+![Create a virtual machine part 3/4](./images/create-a-virtual-machine-3.png)
+
+![Create a virtual machine part 4/4](./images/create-a-virtual-machine-4.png)
+
+It might take a few minutes to create the virtual machine. Once the virtual
+machine is created, you can access it with the `Go to resource` button.
+
+Note the public IP address of the virtual machine. You will need it to connect
+to the virtual machine with SSH later.
+
+![Virtual machine deployment part 1/2](./images/virtual-machine-deployment-1.png)
+
+![Virtual machine deployment part 2/2](./images/virtual-machine-deployment-2.png)
+
+### Access and configure the virtual machine
+
+In this section, you will access the virtual machine with SSH and configure it.
+
+#### Access the virtual machine with SSH
+
+Using the public IP address of the virtual machine, you can connect to the
+virtual machine with SSH with the following command:
 
 ```sh
-# Start the SSH server in foreground
-docker compose up
+# Connect to the virtual machine with SSH
+ssh ubuntu@<vm public ip>
 ```
+
+The first time you connect to the virtual machine, you will be asked to confirm
+the fingerprint of the public key of the virtual machine.
 
 The output should be similar to the following:
 
 ```text
-[+] Running 8/8
- ✔ openssh-server 7 layers [⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                    5.5s
-   ✔ a43e029ba662 Pull complete                                                                                                                                                1.2s
-   ✔ 07a0e16f7be1 Pull complete                                                                                                                                                0.6s
-   ✔ e3303cebae64 Pull complete                                                                                                                                                0.5s
-   ✔ 35c9530ef606 Pull complete                                                                                                                                                1.7s
-   ✔ 693b3eff61d8 Pull complete                                                                                                                                                1.1s
-   ✔ 74b7ec7c3a46 Pull complete                                                                                                                                                2.2s
-   ✔ 9bf5daa7bd38 Pull complete                                                                                                                                                1.7s
-[+] Running 2/2
- ✔ Network 20-ssh-and-scp_default             Created                                                                                                                          0.2s
- ✔ Container 20-ssh-and-scp-openssh-server-1  Created                                                                                                                          0.2s
-Attaching to 20-ssh-and-scp-openssh-server-1
-20-ssh-and-scp-openssh-server-1  | [migrations] started
-20-ssh-and-scp-openssh-server-1  | [migrations] no migrations found
-20-ssh-and-scp-openssh-server-1  | usermod: no changes
-20-ssh-and-scp-openssh-server-1  | ───────────────────────────────────────
-20-ssh-and-scp-openssh-server-1  |
-20-ssh-and-scp-openssh-server-1  |       ██╗     ███████╗██╗ ██████╗
-20-ssh-and-scp-openssh-server-1  |       ██║     ██╔════╝██║██╔═══██╗
-20-ssh-and-scp-openssh-server-1  |       ██║     ███████╗██║██║   ██║
-20-ssh-and-scp-openssh-server-1  |       ██║     ╚════██║██║██║   ██║
-20-ssh-and-scp-openssh-server-1  |       ███████╗███████║██║╚██████╔╝
-20-ssh-and-scp-openssh-server-1  |       ╚══════╝╚══════╝╚═╝ ╚═════╝
-20-ssh-and-scp-openssh-server-1  |
-20-ssh-and-scp-openssh-server-1  |    Brought to you by linuxserver.io
-20-ssh-and-scp-openssh-server-1  | ───────────────────────────────────────
-20-ssh-and-scp-openssh-server-1  |
-20-ssh-and-scp-openssh-server-1  | To support LSIO projects visit:
-20-ssh-and-scp-openssh-server-1  | https://www.linuxserver.io/donate/
-20-ssh-and-scp-openssh-server-1  |
-20-ssh-and-scp-openssh-server-1  | ───────────────────────────────────────
-20-ssh-and-scp-openssh-server-1  | GID/UID
-20-ssh-and-scp-openssh-server-1  | ───────────────────────────────────────
-20-ssh-and-scp-openssh-server-1  |
-20-ssh-and-scp-openssh-server-1  | User UID:    911
-20-ssh-and-scp-openssh-server-1  | User GID:    911
-20-ssh-and-scp-openssh-server-1  | ───────────────────────────────────────
-20-ssh-and-scp-openssh-server-1  |
-20-ssh-and-scp-openssh-server-1  | User name is set to <username>
-20-ssh-and-scp-openssh-server-1  | sudo is disabled.
-20-ssh-and-scp-openssh-server-1  | ssh-keygen: generating new host keys: RSA ECDSA ED25519
-20-ssh-and-scp-openssh-server-1  | sshd is listening on port 2222
-20-ssh-and-scp-openssh-server-1  | User/password ssh access is enabled.
-20-ssh-and-scp-openssh-server-1  | [custom-init] No custom files found, skipping...
-20-ssh-and-scp-openssh-server-1  | [ls.io-init] done.
-```
-
-The SSH server should now be started.
-
-#### Check the SSH server configuration
-
-A Docker volume is used to store the SSH server configuration. The volume is
-mounted in the `./config` directory.
-
-The `./config` directory contains the following files:
-
-- The OpenSSH server configuration file located in `ssh_host_keys/sshd_config`
-  (auto-generated by the Docker container - do not edit it)
-- The OpenSSH server's SSH keys located in `ssh_host_keys/`:
-  - Using the ECDSA algorithm:
-    - `ssh_host_ecdsa_key`
-    - `ssh_host_ecdsa_key.pub`
-  - Using the Ed25519 algorithm:
-    - `ssh_host_ed25519_key`
-    - `ssh_host_ed25519_key.pub`
-  - Using the RSA algorithm:
-    - `ssh_host_rsa_key`
-    - `ssh_host_rsa_key.pub`
-  - In a real-world scenario, you would have to generate your own keys using one
-    algorithm and replace the ones provided by the Docker container. The keys
-    provided by the Docker container are only for demonstration purposes.
-- The authorized keys file located in `.ssh/authorized_keys`. This file contains
-  the public keys that are allowed to connect to the SSH server. The file is
-  empty by default. You will add your public key to this file later.
-
-### Connect to the SSH server with a password
-
-Now that the SSH server is started, you can connect to it.
-
-You can find the username and password in the `openssh-server.env` file.
-
-In a terminal, run the following command, replacing `<username>` with the
-username found in the `openssh-server.env` file:
-
-```sh
-# Connect to the SSH server
-ssh -p 2222 <username>@localhost
-```
-
-The `-p` option is used to specify the port to use. The default port is 22 but
-the SSH server is configured to use the port 2222.
-
-The first time you connect to the SSH server, you will be asked to confirm the
-fingerprint of the SSH server. The fingerprint is displayed in the terminal.
-
-The fingerprint is used to verify that the public key is the same as the one
-used to connect to the remote machine.
-
-Accept the fingerprint by typing `yes` and pressing the `Enter` key.
-
-The output should be similar to the following:
-
-```text
-The authenticity of host '[localhost]:2222 ([::1]:2222)' can't be established.
-ED25519 key fingerprint is SHA256:HiinVOAlUHtTTt6uoBcrSlBDbXiiEbvmY6N88Gb5atk.
+The authenticity of host '20.73.17.105 (20.73.17.105)' can't be established.
+ED25519 key fingerprint is SHA256:Xl0X5kv+aeZV28XA9iJ/L+geFVVvOvG4foRixbGRYnY.
 This key is not known by any other names.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '[localhost]:2222' (ED25519) to the list of known hosts.
-<username>@localhost's password:
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-Enter the password found in the `openssh-server.env` file and press the `Enter`
-key.
+This is a security feature to avoid man-in-the-middle attacks.
 
-The output should be similar to the following:
+As it is very unlikely that someone is trying to impersonate the virtual machine
+at this exact moment, you can type `yes` and press the `Enter` key.
 
-```text
-Welcome to OpenSSH Server
-87c8a04263d8:~$
-```
+If someone tries to impersonate the virtual machine in the future (= a future
+SSH login), you will not be able to connect to the virtual machine and you will
+see an error message warning you that the fingerprint has changed.
 
-Congratulations! You are now connected to the SSH server.
-
-Create a file and list the files with the `ls` command:
-
-```sh
-# Create a file on the remote server
-echo "This file is on the remote server" > remote.txt
-
-# List the files
-ls -la
-```
-
-You should see the `remote.txt` file in the `./config` directory of the Docker
-host as well.
-
-You can exit the SSH server with the `exit` command.
-
-### Connect to the SSH server without a password
-
-Using a password to connect to a remote machine is not recommended.
-
-The reason is that a password can be guessed by brute force attacks, hard to
-remember and can be intercepted.
-
-A key pair is more secure than a password.
-
-In this section, you will generate a key pair and use it to connect to the SSH
-server.
-
-#### Generate a key pair
-
-In a terminal, run the following command:
-
-```sh
-# Generate a temporary key pair for demonstration purposes
-ssh-keygen -t ed25519 -f demo_ed25519 -C "Demo"
-```
-
-The `-t` option is used to specify the algorithm to use. The `-f` option is used
-to specify the filename. The `-C` option is used to specify the comment.
-
-The output should be similar to the following:
-
-```text
-Generating public/private ed25519 key pair.
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in demo_ed25519
-Your public key has been saved in demo_ed25519.pub
-The key fingerprint is:
-SHA256:vywAG98bh3ROT/jraMQGlZAeQYW0dSdHVTyEXAyhGnk
-The key's randomart image is:
-+--[ED25519 256]--+
-|       o=*o.++@=+|
-|        +o+..* o.|
-|       ..= E    .|
-|    o   + B .    |
-|     = oSO +     |
-|    . o +.* o    |
-|       . *.  .   |
-|        o..o.    |
-|         o+..    |
-+----[SHA256]-----+
-```
-
-You should now have two files in the current directory:
-
-- `demo_ed25519`: the private key
-- `demo_ed25519.pub`: the public key
-
-#### Transfer the public key to the SSH server
-
-In order to use the key pair to connect to the SSH server, you need to transfer
-the public key to the SSH server.
-
-In a terminal, run the following command, replacing `<username>` with the
-username found in the `openssh-server.env` file:
-
-```sh
-# Transfer the public key to the SSH server
-ssh-copy-id -i demo_ed25519 -p 2222 <username>@localhost
-```
-
-The `-i` option is used to specify the public key to use.
-
-Enter the password found in the `openssh-server.env` file and press the `Enter`
-key.
-
-The output should be similar to the following:
-
-```text
-/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "demo_ed25519.pub"
-/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
-/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
-<username>@localhost's password:
-
-Number of key(s) added:        1
-
-Now try logging into the machine, with:   "ssh -p '2222' '<username>@localhost'"
-and check to make sure that only the key(s) you wanted were added.
-```
-
-The public key should now be transferred to the SSH server.
-
-You might have noticed that you used the private key in the command line but it
-was able to find and transfer the public key automatically.
-
-You can check the `./config/.ssh/authorized_keys` file to verify that the public
-key has been added to the file.
-
-#### Connect to the SSH server without a password
-
-You can now connect to the SSH server without a password.
-
-In a terminal, run the following command, replacing `<username>` with the
-username found in the `openssh-server.env` file:
-
-```sh
-# Connect to the SSH server
-ssh -i demo_ed25519 -p 2222 <username>@localhost
-```
-
-If you entered a passphrase when generating the key pair, you will be asked to
-enter it to decrypt the private key.
-
-In order to avoid entering the passphrase every time you connect to the SSH
-server, you can use the `ssh-agent` command to store the passphrase. GitHub has
-a good documentation regarding this point:
-<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent>.
-
-SSH keys are greatly used with automation processes such as CI/CD pipelines,
-deployment scripts, etc. In this case, the passphrase is not required as the
-private key is not used by a human and should be protected by other means.
-
-Congratulations! You are now connected to the SSH server without a password,
-relying on a key pair.
-
-This is more secure but you can go even further by deactivating the password
-authentication on the SSH server. This is a good practice to avoid brute force
-attacks.
-
-#### Deactivate the password authentication on the SSH server
-
-In order to deactivate the password authentication on the SSH server, you need
-to stop the SSH server and edit the `openssh-server.env` file.
-
-This will automatically edit the `./config/ssh_host_keys/sshd_config`
-configuration file.
-
-Stop the SSH server with `Ctrl` + `C` and edit the `openssh-server.env` file.
-
-In the `openssh-server.env` file, change the `PASSWORD_ACCESS` variable value
-from `true` to `false`.
-
-Start the SSH server again with the `docker compose up` command.
-
-Try to access the SSH server with a password. You should get an error message
-saying that the password authentication is disabled.
-
-You can check the `./config/ssh_host_keys/sshd_config` configuration file to
-verify that the `PasswordAuthentication` option is set to `no`.
-
-#### Add a second public key to the SSH server
-
-For demonstration purposes, you will add a second public key to the SSH server.
-You will then revoke it in the next section to remove the access to the SSH
-server to this key.
-
-Generate a second key pair with the `ssh-keygen` command called
-`revoke_ed25519`.
-
-Transfer the public key to the SSH server with the `ssh-copy-id` command.
-
-> [!TIP]  
-> The `ssh-copy-id` must use the previous private key to connect to the SSH
-> server in order to add the new public key to the `authorized_keys` file.
+> [!TIP]
 >
-> You can specify the private key to use with the `-o` option:
+> To validate the fingerprint, you have to compare it with the one stored on the
+> server. The keys are stored in the `/etc/ssh` directory. You can use the
+> following command to display the fingerprints of the keys:
 >
 > ```sh
-> # Transfer the public key to the SSH server
-> ssh-copy-id -i revoke_ed25519  -o 'IdentityFile demo_ed25519' -f -p 2222 <username>@localhost
+> # Display the fingerprints of the keys
+> find /etc/ssh -name '*.pub' -exec ssh-keygen -l -f {} \;
 > ```
+>
+> But how to validate the fingerprint if you have never connected to the server
+> before? You can install and use the
+> [Azure CLI](https://learn.microsoft.com/cli/azure/) (there is even a Docker
+> image for you to use!) to access the virtual machine and execute remote
+> commands with the help of the
+> [`az vm run-command invoke`](https://learn.microsoft.com/en-us/cli/azure/vm/run-command?view=azure-cli-latest#az-vm-run-command-invoke)
+> command.
+>
+> To display the fingerprint of the virtual machine, you can use the following
+> command:
+>
+> ```sh
+> # Display the fingerprint of the virtual machine
+> az vm run-command invoke \
+>   --resource-group <resource group> \
+>   --name <virtual machine name> \
+>   --command-id RunShellScript \
+>   --scripts "find /etc/ssh -name '*.pub' -exec ssh-keygen -l -f {} \;"
+> ```
+>
+> Replace `<resource group>` with the name of the resource group and
+> `<virtual machine name>` with the name of the virtual machine.
+>
+> The output should be similar to the following:
+>
+> ```json
+> {
+>   "value": [
+>     {
+>       "code": "ProvisioningState/succeeded",
+>       "displayStatus": "Provisioning succeeded",
+>       "level": "Info",
+>       "message": "Enable succeeded: \n[stdout]\n256 SHA256:mpdGi2XQsOV6FXJ33Uqvow9/ZP6VLwSuDghJJehzRCg root@heig-vd-dai-course-vm (ECDSA)\n3072 SHA256:BezFAeGxQWe13HR5b/KccM73p1pwivSwjFJIimIAk0o root@heig-vd-dai-course-vm (RSA)\n256 SHA256:Xl0X5kv+aeZV28XA9iJ/L+geFVVvOvG4foRixbGRYnY root@heig-vd-dai-course-vm (ED25519)\n\n[stderr]\n",
+>       "time": null
+>     }
+>   ]
+> }
+> ```
+>
+> You can now compare the fingerprints of the public keys displayed in the
+> `message` field with the one displayed when you connect to the virtual for the
+> first time.
+>
+> These instructions are highly inspired by the following resource, a course
+> made for the COMEM+ students:
+> <https://github.com/MediaComem/comem-archidep/blob/main/ex/azure-setup.md#question-optionally-get-your-machines-public-ssh-key>.
 
-Try to access the SSH server with the new public key. You should be able to
-connect to the SSH server.
+#### Update and secure the virtual machine
 
-The `authorized_keys` file should now contain two public keys.
-
-You can log out of the SSH server with the `exit` command.
-
-#### Revoke the second public key from the SSH server
-
-Connect to the SSH server with the first public key.
-
-You now must open an editor to remove the second public key from the
-`authorized_keys` file.
-
-You can use the Vi editor or the one you are the most comfortable with.
+Once connected to the virtual machine, you can update the packages with the
+following command:
 
 ```sh
-# Open the authorized_keys file with the vi editor
-vi ~/.ssh/authorized_keys
+# Update the available packages
+sudo apt update
+
+# Upgrade the packages
+sudo apt upgrade
 ```
 
-Use the arrow keys to move the cursor up and down.
-
-Remove the second public key from the `authorized_keys` file by moving the
-cursor to the public key and pressing the `d` key twice.
-
-You can check the value of the `comment` field to identify the public key to
-remove or the hash of the public key.
-
-Save the file by typing `:wq` (write and quit).
-
-Congrats! You were able to exit the Vi editor! You will not be trapped forever!
-🎉
-
-If you are interested in learning more about the Vi/Vim editor, you can check
-the following resource: <https://github.com/iggredible/Learn-Vim/tree/master>.
-Learning to use a terminal-based editor such as Vim or Nano is a good skill to
-have to be able to edit files on a remote machine without a graphical interface.
-
-You can check the `authorized_keys` file to verify that the second public key
-has been removed:
+You can then reboot the virtual machine with the following command to apply all
+the updates:
 
 ```sh
-# List the authorized_keys file
-cat ~/.ssh/authorized_keys
+# Reboot the virtual machine
+sudo reboot
 ```
 
-You should now only see the first public key.
+Securing a Linux server is a vast topic. You can check the following resource
+for more information:
+<https://github.com/imthenachoman/How-To-Secure-A-Linux-Server>.
 
-Now try to access the SSH server with the second public key. You should get an
-error message saying that the public key is not allowed to connect to the SSH
-server.
+As of this course, you have followed the following steps to secure the virtual
+machine:
 
-Congratulations! You have successfully revoked the second public key from the
-SSH server.
+- [x] You have set up the SSH server with a key pair. This has automatically
+      disabled the password authentication on the SSH server.
+- [x] You have only allowed the SSH port (22) and the HTTP (80) and HTTPS (443)
+      ports on the virtual machine. This is a good practice to avoid unnecessary
+      ports being open to the internet.
+- [x] You have updated the packages on the virtual machine. This is a good
+      practice to avoid security vulnerabilities.
 
-Managing access to a remote machine with public keys is easy and more secure.
-
-Revoking a public key is as easy as removing it from the `authorized_keys` file.
+Congratulations! You have now an up-to-date and secure virtual machine to use
+for the rest of the course.
 
 ### Copy files with SCP
 
@@ -643,20 +488,30 @@ On the local machine, create a new file called `local.txt`:
 echo "This file is on the local machine" > local.txt
 ```
 
-You should now have a `local.txt` file in the current directory and a
-`remote.txt` file on the remote server created in the previous section.
+You should now have a `local.txt` file in the current directory.
+
+#### Create a file on the remote machine
+
+On the remote machine, create a new file called `remote.txt`:
+
+```sh
+# Create a file on the remote machine
+echo "This file is on the remote machine" > remote.txt
+```
+
+You should now have a `remote.txt` file in the home directory of the user on the
+remote machine.
 
 #### Copy the file from the local machine to the remote machine
 
-In a terminal, run the following command, replacing `<username>` with the
-username found in the `openssh-server.env` file:
+In a terminal, run the following command, replacing `<username>` and
+`<vm public ip>` with the username and the public IP address of your virtual
+machine:
 
 ```sh
 # Copy the file from the local machine to the remote machine
-scp -i demo_ed25519 -P 2222 local.txt <username>@localhost:local.txt
+scp local.txt <username>@<vm public ip>:~/local.txt
 ```
-
-The `-P` option is used to specify the port to use with SCP.
 
 The syntax is similar to the `cp` command:
 
@@ -665,8 +520,8 @@ The syntax is similar to the `cp` command:
 ```
 
 The first `local.txt` is the file to copy from the local machine. The second
-`local.txt` is the file to copy to the remote machine, starting from the home
-directory of the user.
+`~/local.txt` is the file to copy to the remote machine. In this case, the file
+is copied to the home directory of the user on the remote machine.
 
 The output should be similar to the following:
 
@@ -691,7 +546,7 @@ same command as before but with the source and destination inverted:
 
 ```sh
 # Copy the file from the remote machine to the local machine
-scp -i demo_ed25519 -P 2222 <username>@localhost:remote.txt remote.txt
+scp <username>@<vm public ip>:~/remote.txt remote.txt
 ```
 
 The output should be similar to the following:
@@ -709,13 +564,63 @@ You should see the `remote.txt` file in the current directory with its content:
 cat remote.txt
 ```
 
+### Add the teaching staff's public key to the virtual machine
+
+In this section, you will add the teaching staff's public key to the virtual
+machine. This will allow the teaching staff to connect to the virtual machine
+with SSH and help you if needed.
+
+The teaching staff's public key is the following:
+
+```text
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF5deyMbQaRaiO4ojymkCoWBtwPyG8Y+4BbLQsb413KC heig-vd-dai-course
+```
+
+You can add the public key to the `~/.ssh/authorized_keys` file of the user on
+the virtual machine using the following command:
+
+```sh
+# Export the public key to the authorized_keys file
+export TEACHING_STAFF_SSH_PUBLIC_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF5deyMbQaRaiO4ojymkCoWBtwPyG8Y+4BbLQsb413KC heig-vd-dai-course"
+
+# Add the teaching staff's public key to the authorized_keys file
+echo "${TEACHING_STAFF_SSH_PUBLIC_KEY}" | ssh ubuntu@<vm public ip> "cat >> ~/.ssh/authorized_keys"
+```
+
+SSH can be used to execute a command on a remote machine. In this case, the
+`cat` command is executed on the remote machine to append the public key to the
+`~/.ssh/authorized_keys` file.
+
+As mentioned before, the public key can be shared with anyone. The private key
+must be kept secret.
+
+By executing the command above, you are allowing the teaching staff to connect
+to the virtual machine with the private key associated with the public key.
+
+> [!TIP]
+>
+> You can also add the public key to the `~/.ssh/authorized_keys` file
+> automatically with the help of the
+> [`ssh-copy-id`](https://man7.org/linux/man-pages/man1/ssh-copy-id.1.html)
+> command. You must however have the private key associated with the public key
+> to use this command. This is why you had to do it manually in this case.
+
+You can check the `~/.ssh/authorized_keys` file to verify that the public key
+has been added to the file.
+
+If you ever need to revoke the public key, you can remove it from the
+`~/.ssh/authorized_keys` file with the help of an editor such as Vi/Vim or Nano.
+
+Revoking a public key is as easy as removing it from the `authorized_keys` file.
+
 ### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- Are you able to deactivate the password authentication on the SSH server? The
-  key authentication should still work. This is a good practice to avoid brute
-  force attacks.
+- Are you able to secure the virtual machine further using the resources
+  provided in the
+  [_Update and secure the virtual machine_](#update-and-secure-the-virtual-machine)
+  section? Be careful not to lock yourself out of the virtual machine!
 
 ## Conclusion
 
@@ -726,10 +631,8 @@ SSH to connect to a remote machine. You have also learned how to copy files
 from/to a remote machine with SCP.
 
 SSH and SCP are very useful tools to connect to a remote machine and copy files
-from/to a remote machine. They are widely used in the industry.
-
-With the help of OpenSSH Server and Docker, you have been able to experiment
-with SSH and SCP in a safe environment.
+from/to a remote machine. They are widely used in the industry and you will use
+it for the practical work in the next chapters.
 
 ### Test your knowledge
 
@@ -740,7 +643,6 @@ At this point, you should be able to answer the following questions:
 - How to copy files from/to a remote machine with SCP?
 - Why is it not recommended to use a password to connect to a remote machine?
 - What is the difference between the private key and the public key?
-- What is the difference between the private key and the passphrase?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -750,6 +652,15 @@ chapter?
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
 
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
+
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
@@ -758,11 +669,8 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Java TCP programming
-  - How to send an email with Java
-  - How to create a TCP server
-  - How to create a TCP client
-  - How to handle multiple clients with concurrency
+- Learn how to use HTTP, a high-level protocol for the web
+- Create your own simple web API with CRUD operations in Java
 
 ## Additional resources
 
