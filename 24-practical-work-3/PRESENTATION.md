@@ -352,23 +352,6 @@ More details for this section in the [course material][course-material].
   need to shoot for the moon!)
 - The web application can only use the HTTP/HTTPS protocols
 
-## Tips
-
-<!-- _class: lead -->
-
-More details for this section in the [course material][course-material].
-
-### Obtain a domain name
-
-Many providers offer free domain names. You can use the following providers:
-
-- <http://www.duckdns.org/> (recommended)
-- <https://www.noip.com/>
-- <https://freedns.afraid.org/>
-- <https://desec.io/>
-
-![bg w:80% right:40%](https://www.duckdns.org/img/ducky_icon.png)
-
 ## Submission
 
 <!-- _class: lead -->

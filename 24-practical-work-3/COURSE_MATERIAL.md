@@ -39,8 +39,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Category 9 - Caching and performance](#category-9---caching-and-performance)
   - [Category 10 - Presentation and questions](#category-10---presentation-and-questions)
 - [Constraints](#constraints)
-- [Tips](#tips)
-  - [Obtain a domain name](#obtain-a-domain-name)
 - [Submission](#submission)
 - [Presentations](#presentations)
 - [Grades and feedback](#grades-and-feedback)
@@ -230,32 +228,6 @@ repository!
   examples presented during the course (we emphasize the word **slightly**, no
   need to shoot for the moon!)
 - The web application can only use the HTTP/HTTPS protocols
-
-## Tips
-
-### Obtain a domain name
-
-If you already own a domain name, you can use it for the purpose of this
-practical work.
-
-If you do not have a domain or you do not want to use your own domain, you will
-acquire a free domain name for the purpose of this practical work.
-
-Many providers offer free domain names. You can use the following providers:
-
-- <http://www.duckdns.org/> (recommended)
-- <https://www.noip.com/>
-- <https://freedns.afraid.org/>
-- <https://desec.io/>
-
-Even though most of these providers seem fishy and old-fashioned, they are
-reliable and well-known in the free domain name industry. You can use any of
-them to acquire a free domain name that you can use for the purpose of this
-practical work.
-
-The (free) domain name can be anything you want. It does not have to be related
-to the practical work nor this course and you can use it for other purposes in
-the future as well.
 
 ## Submission
 
