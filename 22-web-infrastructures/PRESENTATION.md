@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Web infrastructures
 description: Web infrastructures for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-web-infrastructures/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -90,21 +90,19 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#prepare-and-setup-your-environment).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
-### Access your `hosts` file
+### Obtain a domain name
 
-File to map hostnames to IP addresses, just as DNS does, but only for your
-computer.
+Many providers offer free domain names. You can use the following providers:
 
-- Windows:  
-  `%WinDir%\System32\Drivers\Etc\Hosts`
-- Linux and macOS:  
-  `/etc/hosts`
+- <http://www.duckdns.org/> (recommended)
+- <https://www.noip.com/>
+- <https://freedns.afraid.org/>
+- <https://desec.io/>
 
-![bg right:40% contain](./images/hosts-file.png)
+![bg w:80% right:40%](https://www.duckdns.org/img/ducky_icon.png)
 
 ### Traefik
 
@@ -128,9 +126,8 @@ computer.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#functional-and-non-functional-requirements).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Functional and non-functional requirements
 
@@ -170,9 +167,8 @@ Examples of **non-functional requirements**:
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#web-infrastructure-definition).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Web infrastructure definition
 
@@ -190,9 +186,8 @@ of web applications.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#the-host-header).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### The `Host` header
 
@@ -217,9 +212,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#forward-proxy-and-reverse-proxy).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Forward proxy and reverse proxy
 
@@ -255,9 +249,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#system-scalability).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### System scalability
 
@@ -321,9 +314,8 @@ Out of scope for this course, but here are some tools you can use:
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#load-balancing).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Load balancing
 
@@ -360,115 +352,11 @@ help of a cookie.
 
 ![bg right:40%](https://images.unsplash.com/photo-1651581212768-4b39414c9b27?fit=crop&h=720)
 
-## Caching
+## Questions
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md#caching).
-You can find other resources and alternatives as well.
-
-### Caching
-
-Process of **storing a copy of a resource to serve it faster**.
-
-Caching can **improve the performance** of a system and **reduce the load** on
-the backend.
-
-Caching can be done on the **client-side** or **server-side**.
-
-![bg right:40%](https://images.unsplash.com/photo-1613443736772-e36d7fbfbaa8?fit=crop&h=720)
-
-### Managing cache with HTTP
-
-Managing chache is challenging because it is difficult to know when to
-invalidate the cache (the data can be stale).
-
-Two main caching models:
-
-- **Expiration model**: the cache is valid for a certain amount of time
-- **Validation model**: the cache is valid until the data is modified
-
-#### Expiration model
-
-- The cache is valid for a certain amount of time
-- If the cache is not expired, the cache is used
-- Uses the `Cache-Control: max-age=<secondes>` header
-- The cache is invalidated after the expiration time
-
-![bg right:40%](https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?fit=crop&h=720)
-
----
-
-![bg h:80%](./images/expiration-model-part-1.png)
-
----
-
-![bg h:80%](./images/expiration-model-part-2.png)
-
----
-
-![bg h:80%](./images/expiration-model-part-3.png)
-
-#### Validation model
-
-- The cache is valid until the data is modified
-- If the cache is not expired, the cache is used
-- Two ways to validate the cache:
-  - **Last-Modified**: `Last-Modified` and `If-Modified-Since` headers
-  - **ETag**: `ETag` and `If-None-Match` headers
-
-![bg right:40%](https://images.unsplash.com/photo-1684862030284-6b24307ebd4a?fit=crop&h=720)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-1.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-2.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-3.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-1.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-2.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-3.png)
-
-### CDN
-
-Content Delivery Network (CDN) is a network of servers that are geographically
-distributed around the world.
-
-Improve performance by serving static content (images, videos, etc.) from the
-closest server.
-
-![bg right:40%](https://images.unsplash.com/photo-1676911809788-5b9ee7f145fe?fit=crop&h=720)
-
-### Where to cache?
-
-The best would be to cache at each level of the system to ensure the best
-performance but it is not always possible or faisable:
-
-- **Client-side**: the cache is stored on the client
-- **Server-side**: the cache is stored on the server
-- **CDN**: the cache is stored on a CDN
-
-Private caches are caches that are only used by one client. Public caches are
-caches that are used by multiple clients.
-
----
-
-![bg w:80%](./images/where-to-cache.png)
+Do you have any questions?
 
 ## Practical content
 
@@ -493,7 +381,7 @@ caches that are used by multiple clients.
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -543,11 +431,3 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/assorted-box-lot-pdFMl6enmeo)
 - Illustration by [Markus Spiske](https://unsplash.com/@markusspiske) on
   [Unsplash](https://unsplash.com/photos/a-toy-tractor-and-rocks-CBtiTnW_6Kk)
-- Illustration by [Fermin Rodriguez Penelas](https://unsplash.com/@ferminrp) on
-  [Unsplash](https://unsplash.com/photos/silhouette-of-mountain-near-body-of-water-during-daytime-6CQe-WYoPPk)
-- Illustration by [Andrik Langfield](https://unsplash.com/@andriklangfield) on
-  [Unsplash](https://unsplash.com/photos/pocket-watch-at-355-0rTCXZM7Xfo)
-- Illustration by [Karen Grigorean](https://unsplash.com/@karengrigorean) on
-  [Unsplash](https://unsplash.com/photos/a-person-pointing-at-a-large-display-of-pictures-9D6UlCW38Ss)
-- Illustration by [Shubham's Web3](https://unsplash.com/@shubzweb3) on
-  [Unsplash](https://unsplash.com/photos/an-abstract-background-of-orange-and-white-cubes-km9umcj61Ow)

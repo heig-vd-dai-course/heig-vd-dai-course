@@ -27,26 +27,25 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
-  - [Access your `hosts` file](#access-your-hosts-file)
-  - [Traefik](#traefik)
-  - [whoami](#whoami)
+  - [Validate you have access to the virtual machine from the Internet on ports 80 and 443](#validate-you-have-access-to-the-virtual-machine-from-the-internet-on-ports-80-and-443)
+  - [Obtain a domain name](#obtain-a-domain-name)
+  - [Add the required DNS records to the DNS zone](#add-the-required-dns-records-to-the-dns-zone)
 - [Functional and non-functional requirements](#functional-and-non-functional-requirements)
 - [Web infrastructure definition](#web-infrastructure-definition)
 - [The `Host` header](#the-host-header)
 - [Forward proxy and reverse proxy](#forward-proxy-and-reverse-proxy)
   - [Forward proxy](#forward-proxy)
   - [Reverse proxy](#reverse-proxy)
+  - [Traefik as a reverse proxy](#traefik-as-a-reverse-proxy)
+  - [Experiment with Traefik](#experiment-with-traefik)
 - [System scalability](#system-scalability)
   - [Vertical scaling](#vertical-scaling)
   - [Horizontal scaling](#horizontal-scaling)
   - [When to use scale up or scale out?](#when-to-use-scale-up-or-scale-out)
   - [How to monitor your system?](#how-to-monitor-your-system)
 - [Load balancing](#load-balancing)
-- [Caching](#caching)
-  - [Managing cache with HTTP](#managing-cache-with-http)
-  - [CDN](#cdn)
-  - [Where to cache?](#where-to-cache)
 - [Go further](#go-further)
+  - [Create the users file](#create-the-users-file)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
@@ -65,81 +64,37 @@ system.
 Thanks to HTTP features, the reverse proxy will be able to serve multiple
 domains on the same IP address.
 
-You will also learn how to use caching to improve the performance of your
-system.
+Finally, you will learn how to monitor your system.
 
-Finally, you will learn how to monitor your system and how to calculate the
-number of servers needed to handle a certain amount of requests.
+As this chapter is quite abstract, you will first setup your environment to be
+able to run some code examples along with the theory.
 
 ## Prepare and setup your environment
 
-### Access your `hosts` file
+### Validate you have access to the virtual machine from the Internet on ports 80 and 443
 
-In this section, you will access your `hosts` file.
+In this section, you will validate that you have access to the virtual machine
+from the Internet on ports 80 and 443 using
+[whoami](https://github.com/traefik/whoami).
 
-The host file is a computer file used by an operating system to map hostnames to
-IP addresses. The hosts file is a plain text file and is conventionally named
-`hosts`. The hosts file can be used as an alternative to (or in conjunction
-with) DNS.
+whoami is a tiny Go webserver that prints os information and HTTP request to
+output.
 
-On Unix-like operating systems (Linux and macOS), the hosts file is located at
-`/etc/hosts`.
+whoami will be used to test various features of HTTP.
 
-On Windows, the hosts file is located at `%WinDir%\System32\Drivers\Etc\Hosts`.
+Fot the time being, try to access the virtual machine from the Internet on ports
+80 and 443 using the public IP address of the virtual machine.
 
-Ensure you can access your `hosts` file and edit it for the next steps.
+You should notice that you have a timeout error. This is because the virtual
+machine is not configured to respond to requests on ports 80 and 443, no
+services are running on these ports at the moment.
 
-### Traefik
-
-In this section, you will install and configure
-[Traefik](https://traefik.io/traefik/) using its official Docker image available
-on Docker Hub: <https://hub.docker.com/_/traefik>.
-
-Traefik is an open-source Edge Router that makes exposing/publishing your
-services on the Internet a fun and easy experience. It receives requests on
-behalf of your system and finds out which components are responsible for
-handling them.
-
-Traefik is full of features and can be used as a reverse proxy, a load balancer,
-a Kubernetes ingress controller, and much more.
-
-One of the main features of Traefik is to issue and renew
-[Let's Encrypt](https://letsencrypt.org/) (HTTPS) certificates automatically in
-conjuncture with
-[Docker Compose labels](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels).
-
-We will go into more details about Traefik in the next sections.
-
-Run the `traefik-insecure` example from the
+Run the _"whoami on ports 80 and 443"_ example from the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository. Read the README carefully. Take some time to explore the code, it
-should contain comments to help you understand what is going on.
+repository.
 
-You should be able to access the Traefik dashboard at <http://localhost:8080>
-and <http://traefik.localhost>.
-
-#### Alternatives
-
-_Alternatives are here for general knowledge. No need to learn them._
-
-- [Caddy](https://caddyserver.com/)
-- [Nginx](https://www.nginx.com/)
-- [Apache](https://httpd.apache.org/)
-- [HAProxy](https://www.haproxy.org/)
-- [certbot](https://certbot.eff.org/)
-
-_Missing item in the list? Feel free to open a pull request to add it! ✨_
-
-### whoami
-
-[whoami](https://github.com/traefik/whoami) is a tiny Go webserver that prints
-os information and HTTP request to output.
-
-whoami is used to test various features of Traefik/HTTP.
-
-In the next sections, you will use whoami to test Traefik/HTTP features using
-its official Docker image available on Docker Hub:
-<https://hub.docker.com/r/traefik/whoami>.
+Read the README carefully. Take some time to explore the code; it should contain
+comments to help you understand what is going on.
 
 #### Alternatives
 
@@ -148,6 +103,129 @@ _Alternatives are here for general knowledge. No need to learn them._
 - _None yet_
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Obtain a domain name
+
+In this section, you will acquire a domain name.
+
+A domain name is a human-readable name that is used to identify a website on the
+Internet.
+
+If you already own a domain name, you can use it for the purpose of this course.
+
+If you do not have a domain or you do not want to use your own domain, you will
+acquire a free domain name for the purpose of this course.
+
+Access <http://www.duckdns.org/> and log in with your GitHub account.
+
+> [!NOTE]
+>
+> Even though this DNS provider seem fishy and old-fashioned, it is reliable and
+> well-known in the free domain name industry. You can use it to acquire a free
+> domain name that you can use for the purpose of this course.
+
+Click on the `Add Domain` button and choose a domain name.
+
+The (free) domain name can be anything you want. It does not have to be related
+to the practical work nor this course and you can use it for other purposes in
+the future as well.
+
+#### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [No-IP](https://www.noip.com/)
+- [FreeDNS](https://freedns.afraid.org/)
+- [deSEC](https://desec.io/)
+
+> [!NOTE]
+>
+> Even though most of these providers seem fishy and old-fashioned, they are
+> reliable and well-known in the free domain name industry. You can use any of
+> them to acquire a free domain name that you can use for the purpose of this
+> course.
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Add the required DNS records to the DNS zone
+
+In this section, you will add the required DNS records to the DNS zone of your
+domain name provider.
+
+This will allow you to access the services hosted on the virtual machine using
+the domain name and its subdomains you acquired.
+
+#### Add the DNS records
+
+Add an `A` record to the DNS zone of your domain name provider to point to the
+IP address of the virtual machine.
+
+**Example**: if your domain name is `heig-vd-dai-course.duckdns.org` and your
+virtual machine IP address is `20.73.17.105`, you must add an `A` record for
+`heig-vd-dai-course.duckdns.org` pointing to `20.73.17.105`.
+
+Add a second wildcard `A` record to the DNS zone of your domain name provider to
+point to the IP address of the virtual machine. This will allow access to all
+your services hosted under a subdomain of your domain name.
+
+**Example**: if your domain name is `heig-vd-dai-course.duckdns.org` and your
+virtual machine IP address is `20.73.17.105`, you must add a wildcard `A` record
+for `*.heig-vd-dai-course.duckdns.org` pointing to `20.73.17.105`.
+
+#### Test the DNS resolution
+
+Test the DNS resolution of the DNS records you added.
+
+```sh
+# Test the DNS resolution
+nslookup <domain name>
+```
+
+On success, the output should be similar to the following:
+
+```text
+Server:   127.0.0.53
+Address:  127.0.0.53#53
+
+Non-authoritative answer:
+Name: heig-vd-dai-course.duckdns.org
+Address: 20.73.17.105
+```
+
+On failure, the output should be similar to the following:
+
+```text
+Server:   127.0.0.53
+Address:  127.0.0.53#53
+
+** server can't find heig-vd-dai-course.duckdns.org: NXDOMAIN
+```
+
+You might have to wait a few minutes (max 15 minutes in our experience) for the
+DNS record to be propagated and get a successful response.
+
+Do the same for the wildcard DNS record (`*.heig-vd-dai-course.duckdns.org`).
+
+You should now be able to access the virtual machine from the Internet using the
+domain name and its subdomains you acquired. Try to access the whoami service
+using the domain name and its subdomains you acquired.
+
+You should see the whoami service running on ports 80 and 443.
+
+If you do not get the expected results, your domain name provider might not have
+propagated the DNS records yet. Wait a few minutes and try again.
+
+Once you have confirmed that you can access the virtual machine from the
+Internet using the domain name and its subdomains you acquired, you can stop the
+whoami service:
+
+```sh
+# Stop the containers
+docker compose down
+```
+
+You are now ready for the rest of this chapter! Congrats! Let's go back to the
+theory for a moment.
 
 ## Functional and non-functional requirements
 
@@ -326,12 +404,59 @@ A reverse proxy can be used to:
 A reverse proxy is a very powerful component that can be used to build a web
 infrastructure.
 
-Run the `whoami-with-traefik-pathprefix-rule` example from the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository. Read the README carefully. Take some time to explore the code, it
-should contain comments to help you understand what is going on.
+In this course, we will use Traefik as a reverse proxy.
 
-You should be able to access whoami at <http://localhost/whoami>.
+### Traefik as a reverse proxy
+
+Traefik is an open-source Edge Router that makes exposing/publishing your
+services on the Internet a fun and easy experience. It receives requests on
+behalf of your system and finds out which components are responsible for
+handling them.
+
+Traefik is full of features and can be used as a reverse proxy, a load balancer,
+a Kubernetes ingress controller, and much more. It also offers a Docker image
+for us to use.
+
+One of the main features of Traefik is to issue and renew
+[Let's Encrypt](https://letsencrypt.org/) (HTTPS) certificates automatically in
+conjuncture with
+[Docker Compose labels](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels).
+
+We will go into more details about Traefik in the next sections.
+
+Run the _"Traefik"_ example from the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository.
+
+Read the README carefully. Take some time to explore the code; it should contain
+comments to help you understand what is going on.
+
+You should be able to access the Traefik dashboard at the subdomain you set up.
+
+This will allow to validate Traefik configuration.
+
+#### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [Caddy](https://caddyserver.com/)
+- [Nginx](https://www.nginx.com/)
+- [Apache](https://httpd.apache.org/)
+- [HAProxy](https://www.haproxy.org/)
+- [certbot](https://certbot.eff.org/)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Experiment with Traefik
+
+Run the _"whoami with host-based routing"_ example from the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository.
+
+Read the README carefully. Take some time to explore the code, it should contain
+comments to help you understand what is going on.
+
+You should be able to access whoami at the subdomain you set up.
 
 The output should be similar to the following:
 
@@ -340,8 +465,8 @@ Hostname: 629ffa2f25bd
 IP: 127.0.0.1
 IP: 172.26.0.3
 RemoteAddr: 172.26.0.2:40742
-GET /whoami HTTP/1.1
-Host: localhost
+GET / HTTP/1.1
+Host: WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Encoding: gzip, deflate, br
@@ -363,8 +488,9 @@ Note the following headers:
 
 - `Hostname`: the domain name of the whoami container
 - `IP`: the IP addresses of the whoami container
-- `GET /whoami HTTP/1.1`: the HTTP request from the client
-- `Host: localhost`: the domain name requested by the client
+- `GET / HTTP/1.1`: the HTTP request from the client
+- `Host: WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME`: the domain name requested by the
+  client
 - `X-Forwarded-For`: the IP address of the client
 - `X-Forwarded-Host`: the domain name of the client
 - `X-Forwarded-Port`: the port of the client
@@ -380,38 +506,35 @@ proxy has forwarded the request to the whoami container. The whoami container
 has sent a response to the reverse proxy. The reverse proxy has forwarded the
 response to the client.
 
-Now, run the `whoami-with-traefik-host-rule` example from the
+Now, run the _"whoami with host-based and path-based routing"_ example from the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository. Read the README carefully. Take some time to explore the code, it
-should contain comments to help you understand what is going on.
+repository.
 
-You should be able to access whoami at <http://whoami.localhost>.
+Read the README carefully. Take some time to explore the code, it should contain
+comments to help you understand what is going on.
+
+You should be able to access whoami at the subdomain you set up with the path
+`/whoami`.
 
 Same as before, but this time, the reverse proxy has mapped the
-`whoami.localhost` domain to the whoami container.
+`WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME` domain and the `/whoami` path to the whoami
+container.
 
-Now, run the `whoami-with-traefik-host-and-pathprefix-rules` example from the
+Now, run the _"whoami with host-based, path-based routing and `StripPrefix`
+middleware"_ example from the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository. Read the README carefully. Take some time to explore the code, it
-should contain comments to help you understand what is going on.
+repository.
 
-You should be able to access whoami at <http://whoami.localhost/whoami>.
-
-Same as before, but this time, the reverse proxy has mapped the
-`whoami.localhost` domain and the `/whoami` path to the whoami container.
-
-Now, run the `whoami-with-traefik-pathprefix-rule-and-stripper-middleware`
-example from the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository. Read the README carefully. Take some time to explore the code, it
-should contain comments to help you understand what is going on.
+Read the README carefully. Take some time to explore the code, it should contain
+comments to help you understand what is going on.
 
 You should be able to access whoami at
-<http://localhost/whoami-without-stripprefix> and
-<http://localhost/whoami-with-stripprefix>.
+`https://WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME/whoami-without-stripprefix` and
+`https://WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME/whoami-with-stripprefix`.
 
-The output of <http://localhost/whoami-without-stripprefix> should be similar to
-the following:
+The output of
+`https://WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME/whoami-without-stripprefix` should
+be similar to the following:
 
 ```text
 Hostname: 25eeca6ff2bb
@@ -419,7 +542,7 @@ IP: 127.0.0.1
 IP: 172.26.0.5
 RemoteAddr: 172.26.0.2:55338
 GET /whoami-without-stripprefix HTTP/1.1
-Host: localhost
+Host: WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Encoding: gzip, deflate, br
@@ -437,8 +560,9 @@ X-Forwarded-Server: 880dafe26d2a
 X-Real-Ip: 192.168.65.1
 ```
 
-The output of <http://localhost/whoami-with-stripprefix> should be similar to
-the following:
+The output of
+`https://WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME/whoami-with-stripprefix` should be
+similar to the following:
 
 ```text
 Hostname: 27cf1df3b435
@@ -446,7 +570,7 @@ IP: 127.0.0.1
 IP: 172.26.0.4
 RemoteAddr: 172.26.0.2:33656
 GET / HTTP/1.1
-Host: localhost
+Host: WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
 Accept-Encoding: gzip, deflate, br
@@ -480,7 +604,8 @@ static content from a subdirectory).
 
 Thanks to these capabilities, a reverse proxy can be used to build a web
 infrastructure that can serve multiple domains on the same IP address and that
-can scale.
+can scale. It can change the request before forwarding it to the server and
+change the response before forwarding it to the client.
 
 ## System scalability
 
@@ -592,13 +717,16 @@ strategies:
   of the request (e.g. the IP address of the client, the URL of the request,
   etc.).
 
-Run the `whoami-with-traefik-host-rule-and-sticky-sessions` example from the
+Run the _"whoami with host-based routing and sticky sessions"_ example from the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository. Read the README carefully. Take some time to explore the code, it
-should contain comments to help you understand what is going on.
+repository.
 
-You should be able to access the whoami instances at <http://whoami1.localhost>
-and <http://whoami2.localhost>.
+Read the README carefully. Take some time to explore the code, it should contain
+comments to help you understand what is going on.
+
+You should be able to access the whoami instances at
+`https://WHOAMI_1_FULLY_QUALIFIED_DOMAIN_NAME` and
+`https://WHOAMI_2_FULLY_QUALIFIED_DOMAIN_NAME`.
 
 Notice that the `Hostname` and `IP` values are different for each instance.
 
@@ -613,162 +741,8 @@ The sticky-session strategy is useful when you want to keep the state of a
 client on the same server: if a client is making an order on your website, you
 want to keep the state of the order on the same server to avoid issues.
 
-## Caching
-
-Caching is the process of storing data in a cache. A cache is a temporary
-storage component area where data is stored so that future requests for that
-data can be served faster.
-
-Caching can be used to improve the performance of a system by serving cached
-data instead of processing a request again. Caching significantly improves the
-performance of a system because it avoids processing the same request multiple
-times.
-
-This has several advantages:
-
-- The client will receive the response faster, especially when the client itself
-  (browser) has cached the response.
-- The server does not have to process the request (parse the request, query the
-  database, compose the response, etc).
-- The network does not have to carry the messages along the entire path between
-  client and server.
-
-It however introduces some complexity because it is difficult to know when to
-invalidate a cache. If a cache is not invalidated, it can serve stale data.
-
-Caching can be done on the client-side or on the server-side:
-
-- **Client-side caching**: once a client has received a response from a server,
-  it can store the response in a cache. The next time the client needs the same
-  resource, it can use the cached response instead of sending a new request to
-  the server.
-- **Server-side caching**: the server stores data in a cache with the help of a
-  reverse proxy. The next time the server needs the same resource, it can use
-  the cached response instead of processing the request again.
-
-### Managing cache with HTTP
-
-Managing cache is challenging because it is difficult to know when to invalidate
-a cache. If a cache is not invalidated, it can serve stale data.
-
-There are two main caching models:
-
-- **Expiration model**: the cache is valid for a certain amount of time.
-- **Validation model**: the cache is valid until the data is modified.
-
-Expiration and validation are two mechanisms that can be used to control
-caching.
-
-Expiration is the process of specifying how long a response can be cached.
-
-Validation is the process of checking if a cached response is still valid.
-
-Both can be used at the same time to improve the performance of the system.
-
-Much more details about caching with HTTP can be found on MDN Web Docs:
-<https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching>.
-
-#### Expiration model
-
-The expiration model is the simplest caching model. It is described in
-[RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.2).
-
-The cache is invalidated after a certain amount of time. The cache can be
-invalidated after a certain amount of time because the data is not expected to
-change.
-
-The expiration model can be used to cache static content (e.g. images, videos,
-etc.) or to cache responses from servers to improve the performance of the
-system.
-
-The expiration model can be implemented with the following header:
-
-- `Cache-Control: max-age=<number of seconds>`: specifies the maximum amount of
-  seconds a resource will be considered fresh. and responses.
-
-![Expiration model](./images/expiration-model.png)
-
-#### Validation model
-
-The validation model is more complex than the expiration model. It is described
-in [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
-
-The cache is invalidated when the data is modified. The cache can be invalidated
-when the data is modified because the data is expected to change.
-
-The validation model can be used to cache responses from servers to improve the
-performance of the system.
-
-The main idea of the validation model is:
-
-1. Send a request to the server to check if the data has changed.
-2. If the data has not changed, the server can return a `304 Not Modified`
-   response to the client.
-3. If the data has changed, the server can return a `200 OK` response to the
-   client with the new data.
-
-The request to check if the data has changed is called a **conditional
-request**.
-
-There are two types of conditional requests:
-
-- **Based on the `Last-Modified` header**: allows a `304 Not Modified` to be
-  returned if content is unchanged since the last time it was modified.
-- **Based on the `ETag` header**: allows a `304 Not Modified` to be returned if
-  content is unchanged for the version/hash of the given entity.
-
-##### Based on the `Last-Modified` header
-
-With HTTP, the validation model can be implemented with the following headers:
-
-- `Last-Modified`: indicates the date and time at which the origin server
-  believes the selected representation was last modified.
-- `If-Modified-Since`: allows a `304 Not Modified` to be returned if content is
-  unchanged since the time specified in this field (= the value of the
-  `Last-Modified` header).
-
-The `Last-Modified` header is used to check if the data has changed since the
-last time it was modified.
-
-![Validation based on the Last-Modified header](./images/validation-model-based-on-the-last-modified-header.png)
-
-##### Based on the `ETag` header
-
-With HTTP, the validation model can be implemented with the following headers:
-
-- `ETag`: provides the current entity tag for the selected representation. Think
-  of it like a version number or a hash for the given resource.
-- `If-None-Match`: allows a `304 Not Modified` to be returned if content is
-  unchanged for the entity specified (`ETag`) by this field (= the value of the
-  `ETag` header).
-
-The `ETag` header is used to check if the data has changed since the last time
-it was modified.
-
-![Validation based on the ETag header](./images/validation-model-based-on-the-etag-header.png)
-
-### CDN
-
-Content delivery networks (CDNs) are a type of cache that can be used to serve
-static content (e.g. images, videos, etc.) to clients.
-
-A CDN is a geographically distributed network of proxy servers and their data
-centers.
-
-A CDN can be used to improve the performance of a system by serving static
-content to clients from the closest server.
-
-### Where to cache?
-
-Caching can be done on the client-side, on the server-side, or on a CDN.
-
-Private caches are caches that are only used by one client. Public caches are
-caches that are used by multiple clients.
-
-![Where to cache](./images/where-to-cache.png)
-
-The best would be to cache at each level of the system to ensure the best
-performance but it is not always possible or faisable.
+However, a new client can be forwarded to any server in the pool, leveraging the
+load balancing strategy.
 
 ## Go further
 
@@ -777,13 +751,60 @@ This is an optional section. Feel free to skip it if you do not have time.
 - Are you able to add a basic authentication to the Traefik dashboard using a
   middleware?
 
+<details>
+<summary>Hint</summary>
+
+### Create the users file
+
+The Traefik dashboard is protected with a
+[`BasicAuth`](https://doc.traefik.io/traefik/middlewares/http/basicauth/)
+middleware (more information about basic authentication on Wikipedia at
+<https://en.wikipedia.org/wiki/Basic_access_authentication>). You must create a
+`auth-users.txt` file with the username and password of the users allowed to
+access the Traefik dashboard.
+
+Docker Compose allows the use of
+[Docker Secrets](https://docs.docker.com/compose/use-secrets/) to pass sensitive
+information to a service.
+
+The [`docker-compose.yml`](./docker-compose.yml) file is already configured to
+use the `secrets/auth-users.txt` file as a Docker Secret. You must create the
+`auth-users.txt` file in the `secrets` directory.
+
+To create the `auth-users.txt` file, you can use the
+[`htpasswd`](https://httpd.apache.org/docs/2.4/programs/htpasswd.html) command
+line tool. For example, to create a user named `admin` with the password
+`admin`, you can run the following command:
+
+```sh
+# Create the secrets directory
+mkdir secrets
+
+# Create the auth-users.txt file
+htpasswd -c secrets/auth-users.txt admin
+```
+
+`htpasswd` will ask you to enter the password for the user. You can add more
+users to the `auth-users.txt` file by running the same command without the `-c`
+option.
+
+The `auth-users.txt` file must be created before starting the containers.
+
+Restart the containers to apply the changes.
+
+When accessing the Traefik dashboard, you should be prompted to enter a username
+thanks to the `BasicAuth` middleware. Enter the username and password you
+defined in the `auth-users.txt` file.
+
+</details>
+
 ## Conclusion
 
 ### What did you do and learn?
 
 In this chapter, you have learned about functional and non-functional
-requirements, what a web infrastructure is and what components it is composed
-of, what a reverse proxy and a load balancer are and how they can be used to
+requirements. What a web infrastructure is and what components it is composed
+of. What a reverse proxy and a load balancer are and how they can be used to
 build a web infrastructure.
 
 Thanks to the `Host` header, you have learned how a reverse proxy can serve
@@ -811,8 +832,6 @@ At this point, you should be able to answer the following questions:
 - What is the `Host` header? How can it be used to serve multiple domains on the
   same IP address?
 - What is the difference between vertical and horizontal scaling?
-- What is the difference between a CDN and a reverse proxy cache?
-- What is the difference between expiration and validation caching models?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -821,6 +840,15 @@ chapter?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
+
+> [!NOTE]
+>
+> Vous pouvez évidemment poser toutes vos questions et/ou vos propositions
+> d'améliorations en français ou en anglais.
+>
+> N'hésitez pas à nous dire si vous avez des difficultés à comprendre un concept
+> ou si vous avez des difficultés à réaliser les éléments demandés dans le
+> cours. Nous sommes là pour vous aider !
 
 ➡️ [GitHub Discussions][discussions]
 
