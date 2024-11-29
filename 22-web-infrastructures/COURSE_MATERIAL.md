@@ -27,6 +27,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
+  - [Clone the code examples repository on the virtual machine](#clone-the-code-examples-repository-on-the-virtual-machine)
   - [Validate you have access to the virtual machine from the Internet on ports 80 and 443](#validate-you-have-access-to-the-virtual-machine-from-the-internet-on-ports-80-and-443)
   - [Obtain a domain name](#obtain-a-domain-name)
   - [Add the required DNS records to the DNS zone](#add-the-required-dns-records-to-the-dns-zone)
@@ -70,6 +71,19 @@ able to run some code examples along with the theory.
 
 ## Prepare and setup your environment
 
+### Clone the code examples repository on the virtual machine
+
+In this section, you will clone the
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository on the virtual machine.
+
+This repository contains code examples that you will run to validate your
+understanding of the theory.
+
+Clone the repository as seen in previous chapters. **This time, clone it with
+HTTPS instead of SSH.** This will allow you to clone the repository without
+having to set up an SSH key on the virtual machine.
+
 ### Validate you have access to the virtual machine from the Internet on ports 80 and 443
 
 In this section, you will validate that you have access to the virtual machine
@@ -84,9 +98,9 @@ whoami will be used to test various features of HTTP.
 Fot the time being, try to access the virtual machine from the Internet on ports
 80 and 443 using the public IP address of the virtual machine.
 
-You should notice that you have a timeout error. This is because the virtual
-machine is not configured to respond to requests on ports 80 and 443, no
-services are running on these ports at the moment.
+You should notice that you have an error. This is because the virtual machine is
+not configured to respond to requests on ports 80 and 443, no services are
+running on these ports at the moment.
 
 Run the _"whoami on ports 80 and 443"_ example from the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
@@ -120,7 +134,7 @@ Access <http://www.duckdns.org/> and log in with your GitHub account.
 > [!NOTE]
 >
 > Even though this DNS provider seem fishy and old-fashioned, it is reliable and
-> well-known in the free domain name industry. You can use it to acquire a free
+> well-known in the free domain name community. You can use it to acquire a free
 > domain name that you can use for the purpose of this course.
 
 Click on the `Add Domain` button and choose a domain name.
@@ -140,7 +154,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 > [!NOTE]
 >
 > Even though most of these providers seem fishy and old-fashioned, they are
-> reliable and well-known in the free domain name industry. You can use any of
+> reliable and well-known in the free domain name community. You can use any of
 > them to acquire a free domain name that you can use for the purpose of this
 > course.
 
@@ -163,6 +177,11 @@ IP address of the virtual machine.
 virtual machine IP address is `20.73.17.105`, you must add an `A` record for
 `heig-vd-dai-course.duckdns.org` pointing to `20.73.17.105`.
 
+> [!TIP]
+>
+> On Duck DNS, the default are `A`/`AAAA` records. Add a record and it will be
+> of the right type.
+
 Add a second wildcard `A` record to the DNS zone of your domain name provider to
 point to the IP address of the virtual machine. This will allow access to all
 your services hosted under a subdomain of your domain name.
@@ -171,9 +190,15 @@ your services hosted under a subdomain of your domain name.
 virtual machine IP address is `20.73.17.105`, you must add a wildcard `A` record
 for `*.heig-vd-dai-course.duckdns.org` pointing to `20.73.17.105`.
 
+> [!TIP]
+>
+> On Duck DNS, only the root domain name is required. The wildcard DNS record is
+> automatically added for you.
+
 #### Test the DNS resolution
 
-Test the DNS resolution of the DNS records you added.
+Test the DNS resolution of the DNS records you added from the virtual machine
+and from your local machine.
 
 ```sh
 # Test the DNS resolution
@@ -207,7 +232,8 @@ Do the same for the wildcard DNS record (`*.heig-vd-dai-course.duckdns.org`).
 
 You should now be able to access the virtual machine from the Internet using the
 domain name and its subdomains you acquired. Try to access the whoami service
-using the domain name and its subdomains you acquired.
+using the domain name and its subdomains you acquired. Any subdomain should work
+such as `whoami.heig-vd-dai-course.duckdns.org`.
 
 You should see the whoami service running on ports 80 and 443.
 
@@ -455,32 +481,38 @@ repository.
 Read the README carefully. Take some time to explore the code, it should contain
 comments to help you understand what is going on.
 
-You should be able to access whoami at the subdomain you set up.
+You should be able to access whoami at the subdomain you set up. You can check
+the Traefik dashboard to see the configuration.
 
 The output should be similar to the following:
 
 ```text
-Hostname: 629ffa2f25bd
+Hostname: 43a2c970b7ad
 IP: 127.0.0.1
-IP: 172.26.0.3
-RemoteAddr: 172.26.0.2:40742
+IP: ::1
+IP: 172.18.0.4
+RemoteAddr: 172.18.0.2:55832
 GET / HTTP/1.1
-Host: WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-GB,en;q=0.5
+Host: whoami1.heig-vd-dai-course.duckdns.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Dnt: 1
+Priority: u=0, i
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
+Sec-Gpc: 1
+Te: trailers
 Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 192.168.65.1
-X-Forwarded-Host: localhost
-X-Forwarded-Port: 80
-X-Forwarded-Proto: http
-X-Forwarded-Server: 880dafe26d2a
-X-Real-Ip: 192.168.65.1
+X-Forwarded-For: 188.154.42.56
+X-Forwarded-Host: whoami1.heig-vd-dai-course.duckdns.org
+X-Forwarded-Port: 443
+X-Forwarded-Proto: https
+X-Forwarded-Server: 5f59b99ca0e6
+X-Real-Ip: 188.154.42.56
 ```
 
 Note the following headers:
@@ -513,7 +545,7 @@ Read the README carefully. Take some time to explore the code, it should contain
 comments to help you understand what is going on.
 
 You should be able to access whoami at the subdomain you set up with the path
-`/whoami`.
+`/whoami`. You can check the Traefik dashboard to see the configuration.
 
 Same as before, but this time, the reverse proxy has mapped the
 `WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME` domain and the `/whoami` path to the whoami
@@ -536,27 +568,32 @@ The output of
 be similar to the following:
 
 ```text
-Hostname: 25eeca6ff2bb
+Hostname: 1c8108e7434e
 IP: 127.0.0.1
-IP: 172.26.0.5
-RemoteAddr: 172.26.0.2:55338
+IP: ::1
+IP: 172.18.0.6
+RemoteAddr: 172.18.0.2:49452
 GET /whoami-without-stripprefix HTTP/1.1
-Host: WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-GB,en;q=0.5
+Host: whoami3.heig-vd-dai-course.duckdns.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Dnt: 1
+Priority: u=0, i
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
+Sec-Gpc: 1
+Te: trailers
 Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 192.168.65.1
-X-Forwarded-Host: localhost
-X-Forwarded-Port: 80
-X-Forwarded-Proto: http
-X-Forwarded-Server: 880dafe26d2a
-X-Real-Ip: 192.168.65.1
+X-Forwarded-For: 188.154.42.56
+X-Forwarded-Host: whoami3.heig-vd-dai-course.duckdns.org
+X-Forwarded-Port: 443
+X-Forwarded-Proto: https
+X-Forwarded-Server: 5f59b99ca0e6
+X-Real-Ip: 188.154.42.56
 ```
 
 The output of
@@ -564,28 +601,33 @@ The output of
 similar to the following:
 
 ```text
-Hostname: 27cf1df3b435
+Hostname: 66f8a256cbcf
 IP: 127.0.0.1
-IP: 172.26.0.4
-RemoteAddr: 172.26.0.2:33656
+IP: ::1
+IP: 172.18.0.5
+RemoteAddr: 172.18.0.2:56678
 GET / HTTP/1.1
-Host: WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
-Accept-Encoding: gzip, deflate, br
-Accept-Language: en-GB,en;q=0.5
+Host: whoami3.heig-vd-dai-course.duckdns.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Dnt: 1
+Priority: u=0, i
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: none
 Sec-Fetch-User: ?1
+Sec-Gpc: 1
+Te: trailers
 Upgrade-Insecure-Requests: 1
-X-Forwarded-For: 192.168.65.1
-X-Forwarded-Host: localhost
-X-Forwarded-Port: 80
+X-Forwarded-For: 188.154.42.56
+X-Forwarded-Host: whoami3.heig-vd-dai-course.duckdns.org
+X-Forwarded-Port: 443
 X-Forwarded-Prefix: /whoami-with-stripprefix
-X-Forwarded-Proto: http
-X-Forwarded-Server: 880dafe26d2a
-X-Real-Ip: 192.168.65.1
+X-Forwarded-Proto: https
+X-Forwarded-Server: 5f59b99ca0e6
+X-Real-Ip: 188.154.42.56
 ```
 
 You should notice the following differences:
@@ -600,6 +642,12 @@ the root path, thanks to the `stripprefix` middleware.
 
 This configuration can be useful in some contexts (e.g. when you want to serve
 static content from a subdirectory).
+
+At the end of this section, you should have five whoami instances running on
+your virtual machine, all accessible at different subdomains and paths thanks to
+the reverse proxy:
+
+![Traefik dashboard](./images/traefik-dashboard.png)
 
 Thanks to these capabilities, a reverse proxy can be used to build a web
 infrastructure that can serve multiple domains on the same IP address and that
@@ -756,7 +804,7 @@ This is an optional section. Feel free to skip it if you do not have time.
   - Create a `auth-users.txt` file with the username and password of the users
     with the help of the
     [`htpasswd`](https://httpd.apache.org/docs/2.4/programs/htpasswd.html)
-    command line tool
+    command line tool (you might need to install it)
   - Make usage of [Docker Secrets](https://docs.docker.com/compose/use-secrets/)
     to pass sensitive information to a service
 
@@ -822,7 +870,12 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-You will start the practical work!
+In the next (and final!) chapter, you will learn the following topics:
+
+- Caching and performance
+  - How and where to cache data to improve the performance of your system
+  - What are the different types of caching
+  - Implement a cache in your system
 
 ## Additional resources
 

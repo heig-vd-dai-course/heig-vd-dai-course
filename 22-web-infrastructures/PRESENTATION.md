@@ -82,7 +82,6 @@ _paginate: false
 - Understand how HTTP features can help to build web infrastructures
 - Understand the concepts of a reverse proxy
 - Understand the concepts of load balancing
-- Understand the concepts of caching
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -93,34 +92,18 @@ _paginate: false
 More details for this section in the [course material][course-material]. You can
 find other resources and alternatives as well.
 
-### Obtain a domain name
+### Prepare and setup your environment
 
-Many providers offer free domain names. You can use the following providers:
+**Take 20 minutes to set up your environment using the [course
+material][course-material]**:
 
-- <http://www.duckdns.org/> (recommended)
-- <https://www.noip.com/>
-- <https://freedns.afraid.org/>
-- <https://desec.io/>
+- Clone the code examples repository on the virtual machine
+- Validate you have access to the virtual machine from the Internet on ports 80
+  and 443
+- Obtain a domain name
+- Add the required DNS records to the DNS zone
 
-![bg w:80% right:40%](https://www.duckdns.org/img/ducky_icon.png)
-
-### Traefik
-
-- An open source reverse proxy (more on this later)
-- Works well with Docker Compose and Kubernetes
-- Issue and renew [Let's Encrypt](https://letsencrypt.org/) (HTTPS) certificates
-  automatically
-- Easy to use with
-  [Docker Compose labels](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels)
-
-![bg right h:60%](https://upload.wikimedia.org/wikipedia/commons/1/1b/Traefik.logo.png)
-
-### whoami
-
-- A tiny Go webserver that prints os information and HTTP request to output
-- Used to demonstrate the use of HTTP with a reverse proxy and a load balancer
-
-![bg right contain](./images/whoami.png)
+This will allow to run the examples along the theory in this chapter.
 
 ## Functional and non-functional requirements
 
@@ -245,6 +228,29 @@ find other resources and alternatives as well.
 
 ![bg right w:80%](./images/reverse-proxy.png)
 
+### Traefik as a reverse proxy
+
+- Works well with Docker Compose and Kubernetes
+- Issue and renew [Let's Encrypt](https://letsencrypt.org/) (HTTPS) certificates
+  automatically
+- Easy to use with
+  [Docker Compose labels](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels)
+
+![bg right h:60%](https://upload.wikimedia.org/wikipedia/commons/1/1b/Traefik.logo.png)
+
+### Experiment with Traefik
+
+**Take 20 minutes to experiment with Traefik using the [course
+material][course-material] and the
+[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**:
+
+- Run the _"whoami with host-based routing"_ example
+- Run the _"whoami with host-based and path-based routing"_ example
+- Run the _"whoami with host-based, path-based routing and `StripPrefix`
+  middleware"_ example
+
+You should have a better understanding of how Traefik works.
+
 ## System scalability
 
 <!-- _class: lead -->
@@ -352,36 +358,24 @@ help of a cookie.
 
 ![bg right:40%](https://images.unsplash.com/photo-1651581212768-4b39414c9b27?fit=crop&h=720)
 
+---
+
+**Take 20 minutes to experiment with Traefik using the [course
+material][course-material] and the
+[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**:
+
+- Run the _"whoami with host-based routing and sticky sessions"_ example
+
+You should have a better understanding of how sticky sessions work.
+
+For those who have time, you can check the _"Go further"_ section in the course
+material.
+
 ## Questions
 
 <!-- _class: lead -->
 
 Do you have any questions?
-
-## Practical content
-
-<!-- _class: lead -->
-
-### What will you do?
-
-- Set up a reverse proxy
-- Set up whoami
-- Explore the features of the reverse proxy:
-  - `PathPrefix` rule
-  - `Host` rule
-  - `StripPrefix` middleware
-  - Sticky sessions
-
-![bg right contain](./images/what-will-you-do.png)
-
-### Find the practical content
-
-<!-- _class: lead -->
-
-You can find the practical content for this chapter on
-[GitHub][course-material].
-
-![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
