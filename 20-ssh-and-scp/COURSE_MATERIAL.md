@@ -40,6 +40,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Access and configure the virtual machine](#access-and-configure-the-virtual-machine)
   - [Copy files with SCP](#copy-files-with-scp)
   - [Add the teaching staff's public key to the virtual machine](#add-the-teaching-staffs-public-key-to-the-virtual-machine)
+  - [Optional: shutdown the virtual machine](#optional-shutdown-the-virtual-machine)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -619,6 +620,22 @@ If you ever need to revoke the public key, you can remove it from the
 `~/.ssh/authorized_keys` file with the help of an editor such as Vi/Vim or Nano.
 
 Revoking a public key is as easy as removing it from the `authorized_keys` file.
+
+### Optional: shutdown the virtual machine
+
+If you want to stop the virtual machine to avoid consuming your free credits,
+you can stop the virtual machine with the following command:
+
+```sh
+# Stop the virtual machine
+sudo poweroff
+```
+
+You can start the virtual machine again from the Azure portal.
+
+Please be aware that stopping the virtual machine will stop the services running
+on the virtual machine. No one will be able to connect to the virtual machine
+while it is stopped.
 
 ### Go further
 
