@@ -275,6 +275,24 @@ Check the code examples in the
 - A Docker Compose file (`docker-compose.yaml`) can be easily shared and
   versioned with the application
 
+## Make containers communicate with each other using Docker networks
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### Make containers communicate with each other using Docker networks
+
+Docker networks allow containers to communicate with each other. Each container
+can be connected to one or more networks.
+
+Check the code examples in the
+[`heig-vd-dai-course-code-examples`][code-examples] Git repository:
+
+- Make two containers communicate with each other with Docker
+- Make two containers communicate with each other with Docker Compose
+
 ## Questions
 
 <!-- _class: lead -->

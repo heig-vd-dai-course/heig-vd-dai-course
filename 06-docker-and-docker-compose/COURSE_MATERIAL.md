@@ -25,6 +25,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
   - [Install Docker and Docker Compose](#install-docker-and-docker-compose)
+  - [Alternatives](#alternatives)
+  - [Resources](#resources)
   - [Check and run the code examples](#check-and-run-the-code-examples)
 - [Bare metal, virtualization and containerization](#bare-metal-virtualization-and-containerization)
   - [Bare metal](#bare-metal)
@@ -33,20 +35,21 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [OCI, images, containers and registries](#oci-images-containers-and-registries)
   - [Docker Hub](#docker-hub)
   - [GitHub Container Registry](#github-container-registry)
-  - [Alternatives](#alternatives)
-  - [Resources](#resources)
+  - [Alternatives](#alternatives-1)
+  - [Resources](#resources-1)
 - [Docker](#docker)
   - [Dockerfile specification](#dockerfile-specification)
   - [Summary](#summary)
   - [Cheatsheet](#cheatsheet)
-  - [Alternatives](#alternatives-1)
-  - [Resources](#resources-1)
+  - [Alternatives](#alternatives-2)
+  - [Resources](#resources-2)
 - [Docker Compose](#docker-compose)
   - [Docker Compose specification](#docker-compose-specification)
   - [Summary](#summary-1)
   - [Cheatsheet](#cheatsheet-1)
-  - [Alternatives](#alternatives-2)
-  - [Resources](#resources-2)
+  - [Alternatives](#alternatives-3)
+  - [Resources](#resources-3)
+- [Make containers communicate with each other using Docker networks](#make-containers-communicate-with-each-other-using-docker-networks)
 - [Practical content](#practical-content)
   - [Package your own applications with Docker](#package-your-own-applications-with-docker)
   - [Publish your own applications with Docker](#publish-your-own-applications-with-docker)
@@ -75,12 +78,15 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 In this chapter, you will learn about the differences between bare metal,
 virtualization and containerization.
 
-You will learn how what the OCI specification is and how it defines images,
+You will learn what the OCI specification is and how it defines images,
 containers and registries.
 
 You will then use Docker and Docker Compose to build, publish, and run
-applications in containers without the need to install the software directly on
-your computer.
+applications in containers so you can run them and share them with others
+without the need to install anything else than Docker and Docker Compose.
+
+As this chapter is quite abstract, you will first setup your environment to be
+able to run some code examples along with the theory.
 
 ## Prepare and setup your environment
 
@@ -139,6 +145,23 @@ Docker Compose version v2.29.1
 ```
 
 Ensure that the Docker daemon is running if you have any issue.
+
+### Alternatives
+
+_Alternatives are here for general knowledge. No need to learn them._
+
+- [OrbStack](<https://orbstack.dev/) (macOS)
+- [Colima](<https://github.com/abiosoft/colima) (macOS)
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+### Resources
+
+_Resources are here to help you. They are not mandatory to read._
+
+- _None for now_
+
+_Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Check and run the code examples
 
@@ -445,11 +468,16 @@ Windows (with the help of the Linux virtual machine).
 More information about the Dockerfile specification can be found in the official
 documentation: <https://docs.docker.com/engine/reference/builder/>.
 
-Check the code examples to see how to write a Dockerfile and build a Docker
-image.
+Check the code examples in the `heig-vd-dai-course-code-examples` Git
+repository:
 
-Check all available examples for part 1 regarding Dockerfiles and carefully read
-the README files to understand how to run them and what they do.
+- Basic Dockerfile
+- Dockerfile with command
+- Dockerfile with entrypoint and command
+- Dockerfile with run and copy commands
+- Dockerfile with build arguments
+
+Carefully read the README files to understand how to run them and what they do.
 
 ### Summary
 
@@ -550,10 +578,15 @@ Compose file is named `docker-compose.yml` by convention.
 More information about the Docker Compose specification can be found in the
 official documentation: <https://docs.docker.com/compose/compose-file/>.
 
-Check the code examples to see how to run a Docker Compose file.
+Check the code examples in the `heig-vd-dai-course-code-examples` Git
+repository:
 
-Check all available examples for part 1 regarding Docker Compose and carefully
-read the README files to understand how to run them and what they do.
+- Basic Docker Compose
+- Docker Compose with ports
+- Docker Compose with volumes
+- Docker Compose with environment variables
+
+Carefully read the README files to understand how to run them and what they do.
 
 ### Summary
 
@@ -608,6 +641,54 @@ _Resources are here to help you. They are not mandatory to read._
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
+## Make containers communicate with each other using Docker networks
+
+As each container is isolated from the rest of the computer, it is not possible
+to communicate between containers by default.
+
+To make containers communicate with each other, you need to create a network.
+
+A network is a virtual network that is shared between containers. It allows
+containers to communicate with each other.
+
+To create a network, you can use the `docker network create` command:
+
+```sh
+# Create a network
+docker network create <network name>
+```
+
+To list all networks, you can use the `docker network list` command:
+
+```sh
+# List all networks
+docker network list
+```
+
+To delete a network, you can use the `docker network rm` command:
+
+```sh
+# Delete a network
+docker network rm <network name>
+```
+
+Once a network is created, you can start containers and connect them to the
+network.
+
+Docker Compose allows to create networks and connect containers to them in a
+Docker Compose file.
+
+Check the code examples to see how to create a network and connect containers to
+it.
+
+Check the code examples in the `heig-vd-dai-course-code-examples` Git
+repository:
+
+- Make two containers communicate with each other with Docker
+- Make two containers communicate with each other with Docker Compose
+
+Carefully read the README files to understand how to run them and what they do.
+
 ## Practical content
 
 In this practical content, you will learn how to package, publish and run your
@@ -629,8 +710,11 @@ You will write a Dockerfile, build it with a tag and run it with Docker.
 Using all the elements you have learned so far, create a Dockerfile that will
 run the JAR file you have from the Java IOs chapter.
 
-You can create a new file named "Dockerfile" (without any extension) at the root
-level of the Java IOs project as a starting point:
+You can create a new file named `Dockerfile` (without any extension) at the root
+level of the Java IOs project.
+
+Use the following content as a starting point. You can then complete it with the
+instructions you need to run the JAR file:
 
 ```dockerfile
 # Base image
