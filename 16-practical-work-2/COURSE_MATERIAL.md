@@ -41,6 +41,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [The POSIX standard](#the-posix-standard)
 - [Submission](#submission)
 - [Presentations](#presentations)
+  - [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
+  - [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
 - [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [Sources](#sources)
@@ -319,13 +321,12 @@ information:
 
 ## Presentations
 
-The practical work presentations will take place in **room TBD** (next to the
-stairs) on:
+The practical work presentations will take place in **room B38** on:
 
 - DAI-TIC-C (Friday mornings): **06.12.2024**
 - DAI-TIC-B (Monday mornings): **09.12.2024**
 
-We only have **TBD minutes per group**. You decide what you want to show us and
+We only have **10 minutes per group**. You decide what you want to show us and
 how you want to present it.
 
 **Come 5 minutes before your time slot** (mentioned in the presentation) with
@@ -334,7 +335,6 @@ your computer. You will have access to a video projector.
 **Please state your group on GitHub Discussions before next week**. This will
 allow us to prepare the order of presentation.
 
-<!--
 The order of presentation is random and is stated in the next tables:
 
 - [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
@@ -342,48 +342,42 @@ The order of presentation is random and is stated in the next tables:
 
 ### DAI-TIC-B (Monday mornings)
 
-| #   | Group | Passage |
-| --- | ----- | ------- |
-| 1   | TBD   | TDB     |
-| 2   | TBD   | TDB     |
-| 3   | TBD   | TDB     |
-| 4   | TBD   | TDB     |
-| 5   | TBD   | TDB     |
-| 6   | TBD   | TDB     |
-| 7   | TBD   | TDB     |
-| 8   | TBD   | TDB     |
-| 9   | TBD   | TDB     |
-| 10  | TBD   | TDB     |
-| 11  | TBD   | TDB     |
-| 12  | TBD   | TDB     |
-| 13  | TBD   | TDB     |
-| 14  | TBD   | TDB     |
-| 15  | TBD   | TDB     |
-| 16  | TBD   | TDB     |
-| 17  | TBD   | TDB     |
-| 18  | TBD   | TDB     |
+| #   | Group                                                    | Passage     |
+| --- | -------------------------------------------------------- | ----------- |
+| 1   | Berberat Alex and Gorgerat Lisa                          | 09:00-09:10 |
+| 2   | Tristan Baud, Mathieu Emery and Arno Tribolet            | 09:12-09:22 |
+| 3   | Victor Nicolet, Pierric Ripoll and Colin Moschard        | 09:24-09:34 |
+| 4   | Carbonara Nicolas and Surbeck Léon                       | 09:36-09:46 |
+| 5   | Gruber Adam and Pittet Axel                              | 09:48-09:58 |
+| 6   | Drin Racaj, Nils Donatantonio and Esteban Giorgis        | 10:00-10:10 |
+| 7   | David Schildböck, Maxime Lestiboudois and Nathan Parisod | 10:12-10:22 |
+| 8   | Thiébaud Jonathan and Rothen Evan                        | 10:24-10:34 |
+| 9   | Kury Dorian and Buxtorf Basile                           | 10:36-10:46 |
+| 10  | Aude Laydu and Leonard Cseres                            | 10:48-10:58 |
+| 11  | Mathéo Lopez, Emily Baquerizo and Kimberly Beyeler       | 11:00-11:10 |
+| 12  | Antoine Leresche and Robin Forestier                     | 11:12-11:22 |
+| 13  | Wulliamoz Nathan and Kocher Benjamin                     | 11:24-11:34 |
+| 14  | Kénan Augsburger and Mário Ferreira                      | 11:36-11:46 |
+| 15  | Florian Choller and Alexandre Delétraz                   | 11:48-11:58 |
 
 ### DAI-TIC-C (Friday mornings)
 
-| #   | Group | Passage |
-| --- | ----- | ------- |
-| 1   | TBD   | TDB     |
-| 2   | TBD   | TDB     |
-| 3   | TBD   | TDB     |
-| 4   | TBD   | TDB     |
-| 5   | TBD   | TDB     |
-| 6   | TBD   | TDB     |
-| 7   | TBD   | TDB     |
-| 8   | TBD   | TDB     |
-| 9   | TBD   | TDB     |
-| 10  | TBD   | TDB     |
-| 11  | TBD   | TDB     |
-| 12  | TBD   | TDB     |
-| 13  | TBD   | TDB     |
-| 14  | TBD   | TDB     |
-| 15  | TBD   | TDB     |
-| 16  | TBD   | TDB     |
--->
+| #   | Group                                               | Passage     |
+| --- | --------------------------------------------------- | ----------- |
+| 1   | Sara Camassa and David Berger                       | 09:00-09:10 |
+| 2   | Urs Behrmann and Rodrigo Lopes dos santos           | 09:12-09:22 |
+| 3   | Antoine Aubry, Louis Haye and Zaïd Schouwey         | 09:24-09:34 |
+| 4   | Dylan Langumier and Raphael Perret                  | 09:36-09:46 |
+| 5   | Kilian Froidevaux and Nicolas Bovard                | 09:48-09:58 |
+| 6   | Aladin Iseni and Arthur Jacobs                      | 10:00-10:10 |
+| 7   | Yoann Changanaqui and Camille Theubet               | 10:12-10:22 |
+| 8   | Ali Zoubir and Léonard Jouve                        | 10:24-10:34 |
+| 9   | Mathieu Rabot and Florian Duruz                     | 10:36-10:46 |
+| 10  | Thirusan Rajadurai and Thomas Stäheli               | 10:48-10:58 |
+| 11  | Dani Tiago Faria dos Santos and Nicolas Duprat      | 11:00-11:10 |
+| 12  | Guillaume Fragnière and Killian Viquerat            | 11:12-11:22 |
+| 13  | Pedro Alves da Silva and Gonçalo Carvalheiro Heleno | 11:24-11:34 |
+| 14  | Gianni Cecchetto and Nathan Tschantz                | 11:36-11:46 |
 
 ## Grades and feedback
 

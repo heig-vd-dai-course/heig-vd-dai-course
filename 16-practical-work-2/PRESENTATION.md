@@ -520,12 +520,12 @@ More details for this section in the [course material][course-material].
 
 ### Presentations
 
-The practical work presentations will take place in **TBD** on:
+The practical work presentations will take place in **B38** on:
 
 - DAI-TIC-C (Friday mornings): **06.12.2024**
 - DAI-TIC-B (Monday mornings): **09.12.2024**
 
-We only have **TBD minutes per group**. You decide what you want to show us and
+We only have **10 minutes per group**. You decide what you want to show us and
 how you want to present it. **Come 5 minutes before your time slot** with your
 computer. You will have access to a beamer.
 
