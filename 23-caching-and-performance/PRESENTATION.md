@@ -7,10 +7,10 @@ theme: gaia
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Caching with Javalin
-description: Caching with Javalin for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-with-javalin/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+title: HEIG-VD DAI Course - Caching and performance
+description: Caching and performance for the DAI course at HEIG-VD, Switzerland
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-and-performance/
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -44,20 +44,20 @@ headingDivider: 4
 -->
 
 [web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-with-javalin/
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-and-performance/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-with-javalin/23-caching-with-javalin-presentation.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-and-performance/23-caching-and-performance-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/122
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
 [illustration]:
   https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720
 [course-material]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/COURSE_MATERIAL.md
 [course-material-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/COURSE_MATERIAL.md
 
-# Caching with Javalin
+# Caching and performance
 
 <!--
 _class: lead
@@ -78,8 +78,8 @@ _paginate: false
 
 ## Objectives
 
-- Understand the concepts of Caching with Javalin
-- Understand how HTTP features can help to build Caching with Javalin
+- Understand the concepts of Caching and performance
+- Understand how HTTP features can help to build Caching and performance
 - Understand the concepts of a reverse proxy
 - Understand the concepts of load balancing
 - Understand the concepts of caching
@@ -90,9 +90,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md#prepare-and-setup-your-environment).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Access your `hosts` file
 
@@ -128,9 +127,8 @@ computer.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md#functional-and-non-functional-requirements).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Functional and non-functional requirements
 
@@ -170,9 +168,8 @@ Examples of **non-functional requirements**:
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md#web-infrastructure-definition).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Web infrastructure definition
 
@@ -190,9 +187,8 @@ of web applications.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md#the-host-header).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### The `Host` header
 
@@ -217,9 +213,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md#forward-proxy-and-reverse-proxy).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Forward proxy and reverse proxy
 
@@ -255,9 +250,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md#system-scalability).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### System scalability
 
@@ -321,9 +315,8 @@ Out of scope for this course, but here are some tools you can use:
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md#load-balancing).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Load balancing
 
@@ -364,9 +357,8 @@ help of a cookie.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin/COURSE_MATERIAL.md#caching).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Caching
 
@@ -470,6 +462,12 @@ caches that are used by multiple clients.
 
 ![bg w:80%](./images/where-to-cache.png)
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->
@@ -493,7 +491,7 @@ caches that are used by multiple clients.
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
