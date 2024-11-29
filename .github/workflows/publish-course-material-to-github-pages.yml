@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Delete files that should not be published
         run: |
@@ -41,7 +41,7 @@ jobs:
           args: .github/workflows/build-presentation-content.sh
 
       - name: Upload files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: course-material
           path: |
@@ -59,7 +59,7 @@ jobs:
     needs: build-course-material
     steps:
       - name: Download course-material
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: course-material
 
@@ -71,7 +71,7 @@ jobs:
           tree -H '.' --noreport --dirsfirst -T 'HEIG-VD DAI Course' -P "*.html|*.pdf" --prune --charset utf-8 -o index.html
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
@@ -84,4 +84,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
