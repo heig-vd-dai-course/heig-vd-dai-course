@@ -352,6 +352,23 @@ More details for this section in the [course material][course-material].
   need to shoot for the moon!)
 - The web application can only use the HTTP/HTTPS protocols
 
+## Tips
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material].
+
+### Tips
+
+You are allowed to reuse your Bases de données relationnelles (BDR) project for
+this practical work.
+
+You can decide to merge the two projects into one if you want or keep the idea
+and implement it in a different way (in memory for example, as you will see in
+the course materials).
+
+![bg right:40%](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720)
+
 ## Submission
 
 <!-- _class: lead -->
@@ -440,3 +457,5 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/traffic-light-aGx-CFsM3fE)
 - Illustration by [Chris LaBarge](https://unsplash.com/@chrislabarge) on
   [Unsplash](https://unsplash.com/photos/a-sign-that-is-on-a-tree-in-the-woods-dy1GA9Ow6JA)
+- Illustration by [Jan Antonin Kolar](https://unsplash.com/@jankolar) on
+  [Unsplash](https://unsplash.com/photos/brown-wooden-drawer-lRoX0shwjUQ)

@@ -39,6 +39,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Category 9 - Caching and performance](#category-9---caching-and-performance)
   - [Category 10 - Presentation and questions](#category-10---presentation-and-questions)
 - [Constraints](#constraints)
+- [Tips](#tips)
 - [Submission](#submission)
 - [Presentations](#presentations)
 - [Grades and feedback](#grades-and-feedback)
@@ -228,6 +229,15 @@ repository!
   examples presented during the course (we emphasize the word **slightly**, no
   need to shoot for the moon!)
 - The web application can only use the HTTP/HTTPS protocols
+
+## Tips
+
+You are allowed to reuse your Bases de données relationnelles (BDR) project for
+this practical work.
+
+You can decide to merge the two projects into one if you want or keep the idea
+and implement it in a different way (in memory as you will see in the course
+materials).
 
 ## Submission
 
