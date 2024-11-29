@@ -45,7 +45,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [How to monitor your system?](#how-to-monitor-your-system)
 - [Load balancing](#load-balancing)
 - [Go further](#go-further)
-  - [Create the users file](#create-the-users-file)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
@@ -749,54 +748,21 @@ load balancing strategy.
 This is an optional section. Feel free to skip it if you do not have time.
 
 - Are you able to add a basic authentication to the Traefik dashboard using a
-  middleware?
+  middleware? You will have to do the following:
+  - Add a
+    [`BasicAuth` middleware](https://doc.traefik.io/traefik/middlewares/http/basicauth/)
+    to the Traefik configuratione (more information about basic authentication
+    on Wikipedia at <https://en.wikipedia.org/wiki/Basic_access_authentication>)
+  - Create a `auth-users.txt` file with the username and password of the users
+    with the help of the
+    [`htpasswd`](https://httpd.apache.org/docs/2.4/programs/htpasswd.html)
+    command line tool
+  - Make usage of [Docker Secrets](https://docs.docker.com/compose/use-secrets/)
+    to pass sensitive information to a service
 
-<details>
-<summary>Hint</summary>
-
-### Create the users file
-
-The Traefik dashboard is protected with a
-[`BasicAuth`](https://doc.traefik.io/traefik/middlewares/http/basicauth/)
-middleware (more information about basic authentication on Wikipedia at
-<https://en.wikipedia.org/wiki/Basic_access_authentication>). You must create a
-`auth-users.txt` file with the username and password of the users allowed to
-access the Traefik dashboard.
-
-Docker Compose allows the use of
-[Docker Secrets](https://docs.docker.com/compose/use-secrets/) to pass sensitive
-information to a service.
-
-The [`docker-compose.yml`](./docker-compose.yml) file is already configured to
-use the `secrets/auth-users.txt` file as a Docker Secret. You must create the
-`auth-users.txt` file in the `secrets` directory.
-
-To create the `auth-users.txt` file, you can use the
-[`htpasswd`](https://httpd.apache.org/docs/2.4/programs/htpasswd.html) command
-line tool. For example, to create a user named `admin` with the password
-`admin`, you can run the following command:
-
-```sh
-# Create the secrets directory
-mkdir secrets
-
-# Create the auth-users.txt file
-htpasswd -c secrets/auth-users.txt admin
-```
-
-`htpasswd` will ask you to enter the password for the user. You can add more
-users to the `auth-users.txt` file by running the same command without the `-c`
-option.
-
-The `auth-users.txt` file must be created before starting the containers.
-
-Restart the containers to apply the changes.
-
-When accessing the Traefik dashboard, you should be prompted to enter a username
-thanks to the `BasicAuth` middleware. Enter the username and password you
-defined in the `auth-users.txt` file.
-
-</details>
+The _"Traefik with DNS challenge"_ exemple
+[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
+repository makes usage of this configuration if you want to check it out.
 
 ## Conclusion
 
