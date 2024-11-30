@@ -1455,13 +1455,42 @@ different clients.
 
 Stateless and stateful are two terms that are often used in computer science.
 
-A stateless application is an application that loses its state when it is
-restarted. This means that the application does not store any data on the disk
-or a database or stores the data in memory (RAM).
+A stateless application is an application that does not/cannot keep track of the
+state of the client between each request and/or whenever the application loses
+its state when it is restarted. This can happen in the following cases:
 
-A stateful application is an application that keeps its state when it is
-restarted. This means that the application stores data on the disk or a
-database.
+- The application does not store any data on the disk or a database
+- The application stores the data in memory (RAM)
+- The application stores its data in a temporary storage (cache, etc.) that is
+  lost when the application is restarted
+
+**Examples of stateless applications**:
+
+- A vending machine doesn’t remember what you tried to buy earlier; it only
+  responds to your current input.
+- A calculator doesn’t remember the result of the previous calculation; it only
+  responds to the current input.
+- It’s like a food counter at a fast-food restaurant where they don’t remember
+  you. You have to give your full order with your ticket every time
+- A Docker container is stateless by default. When you restart a container, all
+  the data is lost unless you use a volume to store the data outside the
+  container
+
+A stateful application is an application that keeps track of the state of the
+client between each request and/or whenever the application loses its state when
+it is restarted. This means that the application can track the user and know
+what the user did before and/or stores data on the disk or a database to be able
+to retrieve it when the application is restarted.
+
+**Examples of stateful applications**:
+
+- A shopping cart on an e-commerce site remembers what items you’ve added.
+- A login system remembers that you’re logged in and doesn’t ask you to log in
+  again every time you visit a new page.
+- It’s like a waiter who remembers your order as you go through a multi-course
+  meal.
+- A database is stateful by default. When you restart a database, all the data
+  is still there
 
 This concept can be applied to network protocols such as HTTP as well.
 
