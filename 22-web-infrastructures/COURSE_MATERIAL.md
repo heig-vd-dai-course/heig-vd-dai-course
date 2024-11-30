@@ -75,7 +75,8 @@ able to run some code examples along with the theory.
 
 In this section, you will clone the
 [`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository on the virtual machine.
+repository on the virtual machine your created the the
+[SSH and SCP chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/20-ssh-and-scp).
 
 This repository contains code examples that you will run to validate your
 understanding of the theory.
