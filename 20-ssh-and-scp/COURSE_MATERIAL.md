@@ -40,7 +40,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Access and configure the virtual machine](#access-and-configure-the-virtual-machine)
   - [Copy files with SCP](#copy-files-with-scp)
   - [Add the teaching staff's public key to the virtual machine](#add-the-teaching-staffs-public-key-to-the-virtual-machine)
-  - [Optional: shutdown the virtual machine](#optional-shutdown-the-virtual-machine)
+  - [Optional but recommended: shutdown the virtual machine](#optional-but-recommended-shutdown-the-virtual-machine)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -309,10 +309,19 @@ Select a virtual machine with the following characteristics:
   - **Username**: `ubuntu` - please use this username so the teaching staff can
     help you if needed
   - **SSH public key source**: Use existing public key
-  - **SSH public key**: Paste your public key here
+  - **SSH public key**: Paste your public key here - see the note below for more
+    information
 - **Inbound port rules**
   - **Public inbound ports**: Allow selected ports
   - **Select inbound ports**: HTTP (80), HTTPS (443), SSH (22)
+
+> [!NOTE]
+>
+> You can use the same public key you used to sign your commits if Git as seen
+> in the
+> [Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/03-git-github-and-markdown)
+> chapter or you can generate a new one with the `ssh-keygen` command for the
+> purpose of this chapter.
 
 Although the `Standard_B1s` size is one of the
 [cheapest](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/)
@@ -621,7 +630,7 @@ If you ever need to revoke the public key, you can remove it from the
 
 Revoking a public key is as easy as removing it from the `authorized_keys` file.
 
-### Optional: shutdown the virtual machine
+### Optional but recommended: shutdown the virtual machine
 
 If you want to stop the virtual machine to avoid consuming your free credits,
 you can stop the virtual machine with the following command:
@@ -633,9 +642,14 @@ sudo poweroff
 
 You can start the virtual machine again from the Azure portal.
 
-Please be aware that stopping the virtual machine will stop the services running
-on the virtual machine. No one will be able to connect to the virtual machine
-while it is stopped.
+Please be aware that stopping the virtual machine will stop all the services
+running on it. No one will be able to connect to the virtual machine while it is
+stopped.
+
+However, after submitting your work for the
+[practical work 3](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/24-practical-work-3),
+please keep the virtal machine running so the teaching staff can access it to
+grade your work.
 
 ### Go further
 
