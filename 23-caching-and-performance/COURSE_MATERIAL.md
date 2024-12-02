@@ -189,6 +189,9 @@ With HTTP, the validation model can be implemented with the following headers:
 - `If-Modified-Since`: allows a `304 Not Modified` to be returned if content is
   unchanged since the time specified in this field (= the value of the
   `Last-Modified` header).
+- `If-Unmodified-Since`: allows a `412 Precondition Failed` to be returned if
+  content is changed since the time specified in this field (= the value of the
+  `Last-Modified` header).
 
 The `Last-Modified` header is used to check if the data has changed since the
 last time it was modified.
@@ -203,6 +206,9 @@ With HTTP, the validation model can be implemented with the following headers:
   of it like a version number or a hash for the given resource.
 - `If-None-Match`: allows a `304 Not Modified` to be returned if content is
   unchanged for the entity specified (`ETag`) by this field (= the value of the
+  `ETag` header).
+- `If-Match`: allows a `412 Precondition Failed` to be returned if content is
+  changed for the entity specified (`ETag`) by this field (= the value of the
   `ETag` header).
 
 The `ETag` header is used to check if the data has changed since the last time
