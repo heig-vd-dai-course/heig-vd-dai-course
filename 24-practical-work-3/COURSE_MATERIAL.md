@@ -31,13 +31,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
   - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
   - [Category 3 - Docker and Docker Compose](#category-3---docker-and-docker-compose)
-  - [Category 4 - Define an application protocol](#category-4---define-an-application-protocol)
-  - [Category 5 - Java network concurrency](#category-5---java-network-concurrency)
-  - [Category 6 - SSH and SCP](#category-6---ssh-and-scp)
-  - [Category 7 - HTTP and curl](#category-7---http-and-curl)
-  - [Category 8 - Web infrastructures](#category-8---web-infrastructures)
-  - [Category 9 - Caching and performance](#category-9---caching-and-performance)
-  - [Category 10 - Presentation and questions](#category-10---presentation-and-questions)
+  - [Category 4 - Java network concurrency](#category-4---java-network-concurrency)
+  - [Category 5 - SSH and SCP](#category-5---ssh-and-scp)
+  - [Category 6 - HTTP and curl](#category-6---http-and-curl)
+  - [Category 7 - Web infrastructures](#category-7---web-infrastructures)
+  - [Category 8 - Caching and performance](#category-8---caching-and-performance)
+  - [Category 9 - Presentation and questions](#category-9---presentation-and-questions)
 - [Constraints](#constraints)
 - [Tips](#tips)
 - [Submission](#submission)
@@ -144,54 +143,49 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 If your repository is private, you must add us as collaborators to your
 repository!
 
-| #   | Criterion                                                                                                                                                                            | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-| 1   | The README is well structured and explains the purpose of your web with the authors' names so new users can understand it and know who is behind the application                     |    0.2 |
-| 2   | The README describes **explicit commands** to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer |    0.2 |
+| #   | Criterion                                                                                                                                                        | Points |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 1   | The README is well structured and explains the purpose of your web with the authors' names so new users can understand it and know who is behind the application |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
-| #   | Criterion                                                                                                                                       | Points |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 3   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase |    0.2 |
-| 4   | The codebase is structured using Domain Driven Design (DDD) so each domain of the application are well separated                                |    0.2 |
+| #   | Criterion                                                                                                                                                                            | Points |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+| 2   | The README describes **explicit commands** to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer |    0.2 |
+| 3   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase                                      |    0.2 |
 
 ### Category 3 - Docker and Docker Compose
 
 | #   | Criterion                                                                                                                                               | Points |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 5   | The network application is packaged and published to GitHub Container Registry with Docker so other people can use your network application with Docker |    0.2 |
-| 6   | The README describes **explicit commands** to build and publish your network application with Docker                                                    |    0.2 |
-| 7   | The README describes **explicit commands** to use your network application with Docker Compose so other people can easily use it                        |    0.2 |
-| 8   | The Docker applications (Traefik and your web application) are split into multiple directories and make usage of networks to communicate together       |    0.2 |
+| 4   | The network application is packaged and published to GitHub Container Registry with Docker so other people can use your network application with Docker |    0.2 |
+| 5   | The README describes **explicit commands** to build and publish your network application with Docker                                                    |    0.2 |
+| 6   | The README describes **explicit commands** to use your network application with Docker Compose so other people can easily use it                        |    0.2 |
+| 7   | The Docker applications (Traefik and your web application) are split into multiple directories and make usage of networks to communicate together       |    0.2 |
 
-### Category 4 - Define an application protocol
-
-| #   | Criterion                                                                                                       | Points |
-| --- | --------------------------------------------------------------------------------------------------------------- | -----: |
-| 9   | The README (or repository) contains the application protocol interface (API) that describes the web application |    0.2 |
-
-### Category 5 - Java network concurrency
+### Category 4 - Java network concurrency
 
 | #   | Criterion                                                                                | Points |
 | --- | ---------------------------------------------------------------------------------------- | -----: |
-| 10  | The data structures used in the network application are resilient to concurrent accesses |    0.2 |
+| 8   | The data structures used in the network application are resilient to concurrent accesses |    0.2 |
 
-### Category 6 - SSH and SCP
+### Category 5 - SSH and SCP
 
 | #   | Criterion                                                                                    | Points |
 | --- | -------------------------------------------------------------------------------------------- | -----: |
-| 11  | You and the teaching staff can access the virtual machine without a password using a SSH key |    0.2 |
+| 9   | You and the teaching staff can access the virtual machine without a password using a SSH key |    0.2 |
 
-### Category 7 - HTTP and curl
+### Category 6 - HTTP and curl
 
 | #   | Criterion                                                                                                                                                       | Points |
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 12  | The web application makes usage of at least the following HTTP verbs: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                                 |    0.2 |
+| 10  | The README (or repository) contains the application protocol interface (API) that describes the web application                                                 |    0.2 |
+| 11  | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                               |    0.2 |
+| 12  | The web application return status codes must be consistent and reflect the HTTP methods                                                                         |    0.2 |
 | 13  | The web application offers at least two resources (= domains) on which to operate CRUD operations                                                               |    0.2 |
 | 14  | The README explains how to use your web application with **explicit examples using curl** with outputs to demonstrate how to interact with your web application |    0.2 |
 
-### Category 8 - Web infrastructures
+### Category 7 - Web infrastructures
 
 | #   | Criterion                                                                                                                                | Points |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------- | -----: |
@@ -203,13 +197,13 @@ repository!
 | 20  | The web applications (the Traefik dashboard and your own application) are accessible using a domain name and/or subdomain names          |    0.2 |
 | 21  | The web applications (the Traefik dashboard and your own application) use automatic HTTPS/TLS certificate generations with Let's Encrypt |    0.2 |
 
-### Category 9 - Caching and performance
+### Category 8 - Caching and performance
 
 | #   | Criterion                                                             | Points |
 | --- | --------------------------------------------------------------------- | -----: |
 | 22  | The requests are cached to improve performance until the data changes |    0.2 |
 
-### Category 10 - Presentation and questions
+### Category 9 - Presentation and questions
 
 | #   | Criterion                                                                                                                                                                    | Points |
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
