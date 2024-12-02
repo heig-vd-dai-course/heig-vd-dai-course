@@ -6,7 +6,7 @@
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
 [illustration]:
-  https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720
+  https://images.unsplash.com/photo-1529922331924-26e6a694629d?fit=crop&h=720
 
 # Caching and performance - Course material
 
@@ -27,10 +27,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Caching](#caching)
-  - [Managing cache with HTTP](#managing-cache-with-http)
   - [CDN](#cdn)
   - [Where to cache?](#where-to-cache)
-- [Go further](#go-further)
+- [Managing cache with HTTP](#managing-cache-with-http)
+  - [Expiration model](#expiration-model)
+  - [Validation model](#validation-model)
+- [Managing cache with proxies](#managing-cache-with-proxies)
+- [Practical content](#practical-content)
+  - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
@@ -41,7 +45,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-TODO
+In this last and final chapter of this course, you will learn about caching and
+performance.
+
+You will learn about caching, how it can be used to improve the performance of a
+system, and how you can manage cache with HTTP.
 
 ## Caching
 
@@ -76,7 +84,32 @@ Caching can be done on the client-side or on the server-side:
   reverse proxy. The next time the server needs the same resource, it can use
   the cached response instead of processing the request again.
 
-### Managing cache with HTTP
+### CDN
+
+Content delivery networks (CDNs) are a type of cache that can be used to serve
+static content (e.g. images, videos, etc.) to clients.
+
+A CDN is a geographically distributed network of proxy servers and their data
+centers.
+
+A CDN can be used to improve the performance of a system by serving static
+content to clients from the closest server for clients all around the world.
+
+### Where to cache?
+
+Caching can be done on the client-side, on the server-side, or on a CDN.
+
+Private caches are caches that are only used by one client. Public caches are
+caches that are used by multiple clients.
+
+![Where to cache](./images/where-to-cache.png)
+
+The best would be to cache at each level of the system to ensure the best
+performance but it is not always possible or faisable.
+
+In the context of this course, we will focus on server-side caching.
+
+## Managing cache with HTTP
 
 Managing cache is challenging because it is difficult to know when to invalidate
 a cache. If a cache is not invalidated, it can serve stale data.
@@ -98,7 +131,7 @@ Both can be used at the same time to improve the performance of the system.
 Much more details about caching with HTTP can be found on MDN Web Docs:
 <https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching>.
 
-#### Expiration model
+### Expiration model
 
 The expiration model is the simplest caching model. It is described in
 [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.2).
@@ -118,7 +151,7 @@ The expiration model can be implemented with the following header:
 
 ![Expiration model](./images/expiration-model.png)
 
-#### Validation model
+### Validation model
 
 The validation model is more complex than the expiration model. It is described
 in [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
@@ -147,7 +180,7 @@ There are two types of conditional requests:
 - **Based on the `ETag` header**: allows a `304 Not Modified` to be returned if
   content is unchanged for the version/hash of the given entity.
 
-##### Based on the `Last-Modified` header
+#### Based on the `Last-Modified` header
 
 With HTTP, the validation model can be implemented with the following headers:
 
@@ -162,7 +195,7 @@ last time it was modified.
 
 ![Validation based on the Last-Modified header](./images/validation-model-based-on-the-last-modified-header.png)
 
-##### Based on the `ETag` header
+#### Based on the `ETag` header
 
 With HTTP, the validation model can be implemented with the following headers:
 
@@ -177,35 +210,28 @@ it was modified.
 
 ![Validation based on the ETag header](./images/validation-model-based-on-the-etag-header.png)
 
-### CDN
+## Managing cache with proxies
 
-Content delivery networks (CDNs) are a type of cache that can be used to serve
-static content (e.g. images, videos, etc.) to clients.
+A forward/reverse proxy can be used to manage cache with HTTP. A forward/reverse
+proxy can cache responses from clients/servers to improve the performance of the
+system.
 
-A CDN is a geographically distributed network of proxy servers and their data
-centers.
+Traefik, for example, can be used as a reverse proxy to cache responses from
+servers. It is available as a middleware in their Enterprise version. You can
+learn more about it in their documentation at
+<https://doc.traefik.io/traefik-enterprise/middlewares/http-cache/>.
 
-A CDN can be used to improve the performance of a system by serving static
-content to clients from the closest server.
+As it is out of the scope/reach for this course, we will not go into details
+about how to configure Traefik to cache responses from servers. We will,
+however, implement it on the server side with Javalin.
 
-### Where to cache?
+## Practical content
 
-Caching can be done on the client-side, on the server-side, or on a CDN.
-
-Private caches are caches that are only used by one client. Public caches are
-caches that are used by multiple clients.
-
-![Where to cache](./images/where-to-cache.png)
-
-The best would be to cache at each level of the system to ensure the best
-performance but it is not always possible or faisable.
-
-## Go further
+### Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-- Are you able to add a basic authentication to the Traefik dashboard using a
-  middleware?
+- Are you able to mix the expiration and validation models at the same time?
 
 ## Conclusion
 
@@ -280,5 +306,5 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ## Sources
 
-- Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
-  [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
+- Main illustration by [Richard Horne](https://unsplash.com/@richardhorne) on
+  [Unsplash](https://unsplash.com/photos/black-and-blue-train-running-near-the-tunnel-2PKKbKEkmQE)

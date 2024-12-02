@@ -102,7 +102,7 @@ The following chapters will be evaluated:
 - [SSH and SCP](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp)
 - [HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl)
 - [Web infrastructures](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures)
-- [Caching with Javalin](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-with-javalin)
+- [Caching and performance](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance)
 - [Practical work 3](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3)
 - [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
 
