@@ -530,6 +530,10 @@ machine:
 scp local.txt <username>@<vm public ip>:~/local.txt
 ```
 
+> [!IMPORTANT]
+>
+> SCP must be run from the local machine.
+
 The syntax is similar to the `cp` command:
 
 ```text
@@ -565,6 +569,10 @@ same command as before but with the source and destination inverted:
 # Copy the file from the remote machine to the local machine
 scp <username>@<vm public ip>:~/remote.txt remote.txt
 ```
+
+> [!IMPORTANT]
+>
+> SCP must be run from the local machine.
 
 The output should be similar to the following:
 
@@ -603,6 +611,10 @@ export TEACHING_STAFF_SSH_PUBLIC_KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF5dey
 # Add the teaching staff's public key to the authorized_keys file
 echo "${TEACHING_STAFF_SSH_PUBLIC_KEY}" | ssh ubuntu@<vm public ip> "cat >> ~/.ssh/authorized_keys"
 ```
+
+> [!IMPORTANT]
+>
+> This command must be run from the local machine.
 
 SSH can be used to execute a command on a remote machine. In this case, the
 `cat` command is executed on the remote machine to append the public key to the

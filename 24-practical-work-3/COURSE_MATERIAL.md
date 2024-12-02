@@ -177,13 +177,13 @@ repository!
 
 ### Category 6 - HTTP and curl
 
-| #   | Criterion                                                                                                                                                       | Points |
-| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 10  | The README (or repository) contains the application protocol interface (API) that describes the web application                                                 |    0.2 |
-| 11  | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                               |    0.2 |
-| 12  | The web application return status codes must be consistent and reflect the HTTP methods                                                                         |    0.2 |
-| 13  | The web application offers at least two resources (= domains) on which to operate CRUD operations                                                               |    0.2 |
-| 14  | The README explains how to use your web application with **explicit examples using curl** with outputs to demonstrate how to interact with your web application |    0.2 |
+| #   | Criterion                                                                                                                                                                                    | Points |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 10  | The README (or repository) contains the application protocol interface (API) that describes the web application                                                                              |    0.2 |
+| 11  | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                                                            |    0.2 |
+| 12  | The web application return status codes must be consistent and reflect the HTTP methods                                                                                                      |    0.2 |
+| 13  | The web application offers at least two resources (= domains) on which to operate CRUD operations                                                                                            |    0.2 |
+| 14  | The README explains how to use your web application with **explicit examples using curl** with outputs to demonstrate how to interact with your web application **deployed on the Internet** |    0.2 |
 
 ### Category 7 - Web infrastructures
 
