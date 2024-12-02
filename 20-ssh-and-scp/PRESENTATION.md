@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - SSH and SCP
 description: SSH and SCP for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-ssh-and-scp/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -76,6 +76,8 @@ _paginate: false
 ## Objectives
 
 - Refresh on security
+- Acquire a virtual machine (= a server) on the cloud
+- Install and configure the virtual machine/server
 - Learn how to use the SSH protocol to connect to a remote server
 - Learn how to use the SCP protocol to transfer files to a remote server
 
@@ -85,9 +87,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/COURSE_MATERIAL.md#a-quick-reminder-about-security).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### A quick reminder about security
 
@@ -101,9 +102,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/COURSE_MATERIAL.md#ssh).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### SSH
 
@@ -150,9 +150,8 @@ Ed25519 and ECDSA are the recommended algorithms.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/COURSE_MATERIAL.md#scp).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### SCP
 
@@ -163,16 +162,21 @@ You can find other resources and alternatives as well.
 
 ![bg right:40%](https://images.unsplash.com/photo-1616628188540-925618b98318?fit=crop&h=720)
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->
 
 ### What will you do?
 
-- Install and configure SSH and SCP
-- Start a SSH server with Docker Compose
-- Connect to the SSH server with SSH
-- Transfer a file to the SSH server with SCP
+- Acquire a virtual machine (= a server) on the cloud
+- Install and configure the virtual machine (SSH, Docker and Docker Compose)
+- Transfer files to/from the virtual machine with SCP
 
 ![bg right contain](./images/what-will-you-do.png)
 
@@ -183,7 +187,7 @@ You can find other resources and alternatives as well.
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -201,13 +205,10 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Java TCP programming
-  - How to send an email with Java
-  - How to create a TCP server
-  - How to create a TCP client
-  - How to handle multiple clients with concurrency
+- Learn how to use HTTP, a high-level protocol for the web
+- Create your own simple web API with CRUD operations with Java
 
-![bg right:40%](https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720)
 
 ## Sources
 
