@@ -59,7 +59,6 @@ The entire course planning for the semester is available at
 - [20. SSH and SCP (2 periods)](./20-ssh-and-scp/README.md)
 - [21. HTTP and curl (2 periods)](./21-http-and-curl/README.md)
 - [22. Web infrastructures (2 periods)](./22-web-infrastructures/README.md)
-  (WIP)
 - [23. Caching and performance (2 periods)](./23-caching-and-performance/README.md)
   (WIP)
 - [24. Practical work 3 (10 periods)](./24-practical-work-3/README.md) (WIP)
