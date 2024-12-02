@@ -9,8 +9,8 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - HTTP and curl
 description: HTTP and curl for the DAI course at HEIG-VD, Switzerland
-url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-ssh-and-scp/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -43,18 +43,18 @@ style: |
 headingDivider: 4
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-ssh-and-scp/
+[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-ssh-and-scp/21-ssh-and-scp-presentation.pdf
+  https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/21-http-and-curl-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
 [illustration]:
   https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
 [course-material]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md
+  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
 [course-material-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md
+  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
 
 # HTTP and curl
 
@@ -90,9 +90,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md#disclaimer).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### Disclaimer
 
@@ -103,15 +102,14 @@ You can find other resources and alternatives as well.
 - For production, use a framework like [Quarkus](https://quarkus.io/) or
   [Spring Boot](https://spring.io/projects/spring-boot)
 
-![bg right:40%](https://images.unsplash.com/photo-1597346813123-d96988410ed6?fit=crop&h=720)
+![bg right:40%](https://images.unsplash.com/photo-1520414283774-cd4cb599a987?fit=crop&h=720)
 
 ## Prepare and setup your environment
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md#prepare-and-setup-your-environment).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### curl
 
@@ -136,9 +134,8 @@ You can find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md#http).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### HTTP
 
@@ -438,9 +435,8 @@ Disadvantages: A bit more complex to implement.
 
 <!-- _class: lead -->
 
-More details for this section in the
-[course material](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/COURSE_MATERIAL.md#api-design).
-You can find other resources and alternatives as well.
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
 
 ### API design
 
@@ -550,6 +546,12 @@ and how to document an API.
 
 ![bg right:40%](https://images.unsplash.com/photo-1609770231080-e321deccc34c?fit=crop&h=720)
 
+## Questions
+
+<!-- _class: lead -->
+
+Do you have any questions?
+
 ## Practical content
 
 <!-- _class: lead -->
@@ -571,7 +573,7 @@ and how to document an API.
 You can find the practical content for this chapter on
 [GitHub][course-material].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+![bg right w:75%][course-material-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -602,8 +604,8 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/KvD36NRFjl4)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
-- Illustration by [Gemma Evans](https://unsplash.com/@stayandroam) on
-  [Unsplash](https://unsplash.com/photos/white-and-black-no-smoking-no-smoking-sign-2EW2wd2qszg)
+- Illustration by [Bernard Hermant](https://unsplash.com/@bernardhermant) on
+  [Unsplash](https://unsplash.com/photos/white-and-black-signage-mountain-on-wall--iVnye8VaHY)
 - Illustration by [Walling](https://unsplash.com/@walling) on
   [Unsplash](https://unsplash.com/photos/silver-iphone-6-beside-macbook-pro-h91bpI4c8I0)
 - Illustration by [Pavan Trikutam](https://unsplash.com/@ptrikutam) on
