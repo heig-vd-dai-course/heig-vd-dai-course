@@ -3,7 +3,7 @@ name: Release course material to GitHub Releases
 on:
   push:
     tags:
-      - '*'
+      - "*"
 
 # Sets permissions of the GITHUB_TOKEN to allow release to GitHub Releases
 permissions:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Delete files that should not be released
         run: |
@@ -60,7 +60,7 @@ jobs:
           args: .github/workflows/build-presentation-content.sh
 
       - name: Release course material to GitHub Releases
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           body: |
             This release contains the course material for the DAI course at [HEIG-VD](https://heig-vd.ch), Switzerland.
