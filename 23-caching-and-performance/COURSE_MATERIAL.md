@@ -82,7 +82,7 @@ This has several advantages:
 
 It however introduces some complexity because it is difficult to know when to
 invalidate a cache. If a cache is not invalidated, it can serve stale data (=
-old data).
+outdated data).
 
 ### Types of caching
 
@@ -210,10 +210,11 @@ There are two types of conditional requests:
 
 #### Based on the `Last-Modified` header
 
-With HTTP, the validation model can be implemented with the following headers:
+With HTTP, the validation model based on the `Last-Modified` header can be
+implemented with the following headers:
 
-- `Last-Modified`: indicates the date and time at which the origin server
-  believes the selected representation was last modified.
+- `Last-Modified`: indicates the date and time at which the resource was last
+  updated.
 - `If-Modified-Since`: returns a `304 Not Modified` if content is unchanged
   since the time specified in this field (= the value of the `Last-Modified`
   header).
@@ -228,7 +229,8 @@ last time it was modified.
 
 #### Based on the `ETag` header
 
-With HTTP, the validation model can be implemented with the following headers:
+With HTTP, the validation model based on the `ETag` header can be implemented
+with the following headers:
 
 - `ETag`: provides the current entity tag for the selected representation. Think
   of it like a version number or a hash for the given resource.
@@ -280,7 +282,7 @@ In this practical content, you will implement the validation model based on the
 `Last-Modified` header in your application.
 
 You will need the results of the practical content from chapter
-[HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/21-http-and-curl).
+[HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/23-caching-and-performance).
 
 If you do not have the results of the practical content from chapter HTTP and
 curl, you can use the solution mentioned in the HTTP and curl chapter. Clone the
@@ -292,10 +294,10 @@ Update your `Main.java` class to add a `Map` to cache results to your
 application:
 
 ```diff
-diff --git a/21-http-and-curl/src/main/java/ch/heigvd/dai/Main.java b/21-http-and-curl/src/main/java/ch/heigvd/dai/Main.java
+diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java
 index d4aae20..cc64e48 100644
---- a/21-http-and-curl/src/main/java/ch/heigvd/dai/Main.java
-+++ b/21-http-and-curl/src/main/java/ch/heigvd/dai/Main.java
+--- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java
++++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java
 @@ -4,20 +4,33 @@ import ch.heigvd.dai.auth.AuthController;
  import ch.heigvd.dai.users.User;
  import ch.heigvd.dai.users.UsersController;
@@ -349,10 +351,10 @@ Update the `AuthController.java` and `UsersController.java` classes to use the
 `Map` to cache results to your application:
 
 ```diff
-diff --git a/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java b/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
+diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
 index 08c8670..4ebbf93 100644
---- a/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
-+++ b/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
+--- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
++++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
 @@ -2,13 +2,19 @@ package ch.heigvd.dai.auth;
 
  import ch.heigvd.dai.users.User;
@@ -377,10 +379,10 @@ index 08c8670..4ebbf93 100644
 ```
 
 ```diff
-diff --git a/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java b/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
+diff --git **a/23-caching-and-performance/src/main/java/ch/heigvd/dai**/users/UsersController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
 index 76bca68..ac9f527 100644
---- a/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
+--- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
++++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
 @@ -1,6 +1,7 @@
  package ch.heigvd.dai.users;
 
@@ -416,10 +418,10 @@ Update the `AuthController.java` and `UsersController.java` classes to store
 results in the cache and return the `Last-Modified` header:
 
 ```diff
-diff --git a/src/main/java/ch/heigvd/dai/auth/AuthController.java b/src/main/java/ch/heigvd/dai/auth/AuthController.java
+diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
 index 4ebbf93..dba1f86 100644
---- a/src/main/java/ch/heigvd/dai/auth/AuthController.java
-+++ b/src/main/java/ch/heigvd/dai/auth/AuthController.java
+--- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
++++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
 @@ -56,6 +56,18 @@ public class AuthController {
        throw new UnauthorizedResponse();
      }
@@ -442,10 +444,10 @@ index 4ebbf93..dba1f86 100644
 ```
 
 ```diff
-diff --git a/src/main/java/ch/heigvd/dai/users/UsersController.java b/src/main/java/ch/heigvd/dai/users/UsersController.java
+diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
 index 2948a46..05c5e88 100644
---- a/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/src/main/java/ch/heigvd/dai/users/UsersController.java
+--- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
++++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
 @@ -14,6 +14,10 @@ public class UsersController {
 
    private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
@@ -569,10 +571,10 @@ Update the `AuthController.java` and `UsersController.java` classes to validate
 the cache with the `If-Modified-Since` header:
 
 ```diff
-diff --git a/src/main/java/ch/heigvd/dai/auth/AuthController.java b/src/main/java/ch/heigvd/dai/auth/AuthController.java
+diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
 index dba1f86..bbd93ca 100644
---- a/src/main/java/ch/heigvd/dai/auth/AuthController.java
-+++ b/src/main/java/ch/heigvd/dai/auth/AuthController.java
+--- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
++++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
 @@ -50,6 +50,15 @@ public class AuthController {
 
      Integer userId = Integer.parseInt(userIdCookie);
@@ -592,10 +594,10 @@ index dba1f86..bbd93ca 100644
 ```
 
 ```diff
-diff --git a/src/main/java/ch/heigvd/dai/users/UsersController.java b/src/main/java/ch/heigvd/dai/users/UsersController.java
+diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
 index 05c5e88..b69cb4a 100644
---- a/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/src/main/java/ch/heigvd/dai/users/UsersController.java
+--- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
++++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
 @@ -68,6 +68,15 @@ public class UsersController {
    public void getOne(Context ctx) {
      Integer id = ctx.pathParamAsClass("id", Integer.class).get();
@@ -645,10 +647,10 @@ Upddate the `UsersController.java` classe to validate the cache with the
 `If-Unmodified-Since` header:
 
 ```diff
-diff --git a/src/main/java/ch/heigvd/dai/users/UsersController.java b/src/main/java/ch/heigvd/dai/users/UsersController.java
+diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
 index b69cb4a..a5a3aee 100644
---- a/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/src/main/java/ch/heigvd/dai/users/UsersController.java
+--- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
++++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
 @@ -145,6 +145,15 @@ public class UsersController {
    public void update(Context ctx) {
      Integer id = ctx.pathParamAsClass("id", Integer.class).get();
@@ -943,7 +945,7 @@ Then, you can use the browser to test the caching system of the `GET` requests.
 
 To check if the cache is working as expected, open the developer tools of your
 browser and check the `Network` tab as seen in the chapter
-[HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/21-http-and-curl).
+[HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/23-caching-and-performance).
 
 You can use the same steps as with curl to test the caching system with a
 browser.
