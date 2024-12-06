@@ -51,7 +51,7 @@ headingDivider: 4
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
 [illustration]:
-  https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720
+  https://images.unsplash.com/photo-1529922331924-26e6a694629d?fit=crop&h=720
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/COURSE_MATERIAL.md
 [course-material-qr-code]:
@@ -104,70 +104,16 @@ Caching can be done on the **client-side** or **server-side**.
 
 ![bg right:40%](https://images.unsplash.com/photo-1613443736772-e36d7fbfbaa8?fit=crop&h=720)
 
-### Managing cache with HTTP
+### Types of caching
 
-Managing chache is challenging because it is difficult to know when to
-invalidate the cache (the data can be stale).
-
-Two main caching models:
-
-- **Expiration model**: the cache is valid for a certain amount of time
-- **Validation model**: the cache is valid until the data is modified
-
-#### Expiration model
-
-- The cache is valid for a certain amount of time
-- If the cache is not expired, the cache is used
-- Uses the `Cache-Control: max-age=<secondes>` header
-- The cache is invalidated after the expiration time
-
-![bg right:40%](https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?fit=crop&h=720)
-
----
-
-![bg h:80%](./images/expiration-model-part-1.png)
-
----
-
-![bg h:80%](./images/expiration-model-part-2.png)
-
----
-
-![bg h:80%](./images/expiration-model-part-3.png)
-
-#### Validation model
-
-- The cache is valid until the data is modified
-- If the cache is not expired, the cache is used
-- Two ways to validate the cache:
-  - **Last-Modified**: `Last-Modified` and `If-Modified-Since` headers
-  - **ETag**: `ETag` and `If-None-Match` headers
-
-![bg right:40%](https://images.unsplash.com/photo-1684862030284-6b24307ebd4a?fit=crop&h=720)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-1.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-2.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-3.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-1.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-2.png)
-
----
-
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-3.png)
+- **Client-side caching** (private caches): once a client has received a
+  response from a server, it can store the response in a cache. The next time
+  the client needs the same resource, it can use the cached response instead of
+  sending a new request to the server.
+- **Server-side caching** (shared caches): the server stores data in a cache
+  with the help of a reverse proxy or by the web application. The next time the
+  server needs the same resource, it can use the cached response instead of
+  processing the request again.
 
 ### CDN
 
@@ -195,6 +141,140 @@ caches that are used by multiple clients.
 
 ![bg w:80%](./images/where-to-cache.png)
 
+## Managing cache with HTTP
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### Managing cache with HTTP
+
+Managing cache is challenging because it is difficult to know when to invalidate
+the cache (the data can be stale (= outdated)).
+
+Two main caching models:
+
+- **Expiration model**: the cache is considered valid for a certain amount of
+  time
+- **Validation model**: the cache is considered valid until the data is modified
+
+#### Expiration model
+
+- The cache is valid for a certain amount of time
+- If the cache is not expired, the cache is used
+- Uses the `Cache-Control: max-age=<secondes>` header
+- The cache is invalidated after the expiration time
+
+![bg right:40%](https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?fit=crop&h=720)
+
+---
+
+![bg h:80%](./images/expiration-model-part-1.png)
+
+---
+
+![bg h:80%](./images/expiration-model-part-2.png)
+
+---
+
+![bg h:80%](./images/expiration-model-part-3.png)
+
+#### Validation model
+
+- The cache is valid until the data is modified
+- If the cache is not expired, the cache is used
+- Two ways to validate the cache:
+  - Based on the **`Last-Modified`** header
+  - Based on the **`ETag`** header
+
+![bg right:40%](https://images.unsplash.com/photo-1684862030284-6b24307ebd4a?fit=crop&h=720)
+
+#### Based on the `Last-Modified` header
+
+- `Last-Modified`: indicates the date and time at which the resource was last
+  updated.
+- `If-Modified-Since`: returns a `304 Not Modified` if content is unchanged
+  since the time specified in this field (= the value of the `Last-Modified`
+  header).
+- `If-Unmodified-Since`: returns a `412 Precondition Failed` if content has
+  changed since the time specified in this field (= the value of the
+  `Last-Modified` header) **when you try to update/delete the resource**.
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-1.png)
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-2.png)
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-3.png)
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-4.png)
+
+#### Based on the `ETag` header
+
+- `ETag`: provides the current entity tag for the selected representation. Think
+  of it like a version number or a hash for the given resource.
+- `If-None-Match`: returns a `304 Not Modified` if content is unchanged for the
+  entity specified (`ETag`) by this field (= the value of the `ETag` header).
+- `If-Match`: returns a `412 Precondition Failed` if content is changed for the
+  entity specified (`ETag`) by this field (= the value of the `ETag` header)
+  **when you try to update/delete the resource**.
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-etag-header-part-1.png)
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-etag-header-part-2.png)
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-etag-header-part-3.png)
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-etag-header-part-4.png)
+
+## Managing cache with proxies
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### Managing cache with proxies
+
+Proxies can cache responses to reduce the load on the backend and improve
+performance.
+
+Traefik offers a caching middleware in its Enterprise version. Out of reach for
+this course.
+
+![bg right h:60%](https://upload.wikimedia.org/wikipedia/commons/1/1b/Traefik.logo.png)
+
+## Managing cache with key-value stores
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course-material]. You can
+find other resources and alternatives as well.
+
+### Managing cache with key-value stores
+
+Redis is a popular key-value store that can be used to store cache data.
+
+We will implement this manually in Javalin.
+
+![bg right h:20%](https://redis.io/wp-content/uploads/2024/04/Logotype.svg)
+
 ## Questions
 
 <!-- _class: lead -->
@@ -207,15 +287,11 @@ Do you have any questions?
 
 ### What will you do?
 
-- Set up a reverse proxy
-- Set up whoami
-- Explore the features of the reverse proxy:
-  - `PathPrefix` rule
-  - `Host` rule
-  - `StripPrefix` middleware
-  - Sticky sessions
+- Implement and validate the validation model based on the `Last-Modified`
+  header in your previous web application using curl and a web browser
+- This is your last practical content for this course..!
 
-![bg right contain](./images/what-will-you-do.png)
+![bg right w:90%](./images/what-will-you-do.png)
 
 ### Find the practical content
 
@@ -240,45 +316,28 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-<!-- _class: lead -->
+We are arriving at the end of the second part of the course.
 
-You will start the practical work!
+An evaluation will be done to check your understanding of all the content seen
+in this second part.
+
+More details will be given in the next chapter.
+
+![bg right:40%](https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720)
 
 ## Sources
 
-- Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
-  [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
+- Main illustration by [Richard Horne](https://unsplash.com/@richardhorne) on
+  [Unsplash](https://unsplash.com/photos/black-and-blue-train-running-near-the-tunnel-2PKKbKEkmQE)
 - Illustration by [Aline de Nadai](https://unsplash.com/@alinedenadai) on
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
-- Illustration by [Mohammadreza alidoos](https://unsplash.com/@mralidoost) on
-  [Unsplash](https://unsplash.com/photos/black-and-silver-laptop-computer-0rUp9vgyEYo)
-- Illustration by [Gaurav Dhwaj Khadka](https://unsplash.com/@gauravdhwajkhadka)
-  on
-  [Unsplash](https://unsplash.com/photos/brown-wooden-table-near-window-eRQ5Pk59p9s)
-- Illustration by [Imre Tömösvári](https://unsplash.com/@timester12) on
-  [Unsplash](https://unsplash.com/photos/gray-suv-on-road-during-daytime-FbhuN53_330)
-- Illustration by [Kelvin T](https://unsplash.com/@gogofoto) on
-  [Unsplash](https://unsplash.com/photos/blue-weighing-scale-at-0-FE_uysP-cfw)
-- Illustration by [Alfred Kenneally](https://unsplash.com/@alken) on
-  [Unsplash](https://unsplash.com/photos/black-beetle-on-green-grass-during-daytime-VrsNMCejQEw)
-- Illustration by [Mikhail Vasilyev](https://unsplash.com/@miklevasilyev) on
-  [Unsplash](https://unsplash.com/photos/colony-of-fire-ant-Vf1JrKMUS0Q)
-
----
-
-- Illustration by [Ibrahim Boran](https://unsplash.com/@ibrahimboran) on
-  [Unsplash](https://unsplash.com/photos/black-flat-screen-tv-turned-on-near-black-and-gray-audio-component-iYkqHp5cGQ4)
-- Illustration by [Elena Mozhvilo](https://unsplash.com/@miracleday) on
-  [Unsplash](https://unsplash.com/photos/person-sitting-on-chair-in-front-of-table-with-food-slaDjF7-HHQ)
-- Illustration by [Evan Krause](https://unsplash.com/@evankrause_) on
-  [Unsplash](https://unsplash.com/photos/assorted-box-lot-pdFMl6enmeo)
-- Illustration by [Markus Spiske](https://unsplash.com/@markusspiske) on
-  [Unsplash](https://unsplash.com/photos/a-toy-tractor-and-rocks-CBtiTnW_6Kk)
 - Illustration by [Fermin Rodriguez Penelas](https://unsplash.com/@ferminrp) on
   [Unsplash](https://unsplash.com/photos/silhouette-of-mountain-near-body-of-water-during-daytime-6CQe-WYoPPk)
+- Illustration by [Shubham's Web3](https://unsplash.com/@shubzweb3) on
+  [Unsplash](https://unsplash.com/photos/an-abstract-background-of-orange-and-white-cubes-km9umcj61Ow)
 - Illustration by [Andrik Langfield](https://unsplash.com/@andriklangfield) on
   [Unsplash](https://unsplash.com/photos/pocket-watch-at-355-0rTCXZM7Xfo)
 - Illustration by [Karen Grigorean](https://unsplash.com/@karengrigorean) on
   [Unsplash](https://unsplash.com/photos/a-person-pointing-at-a-large-display-of-pictures-9D6UlCW38Ss)
-- Illustration by [Shubham's Web3](https://unsplash.com/@shubzweb3) on
-  [Unsplash](https://unsplash.com/photos/an-abstract-background-of-orange-and-white-cubes-km9umcj61Ow)
+- Illustration by [MChe Lee](https://unsplash.com/@mclee) on
+  [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
