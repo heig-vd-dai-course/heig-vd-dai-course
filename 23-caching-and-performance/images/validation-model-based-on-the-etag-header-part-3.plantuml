@@ -1,42 +1,39 @@
-@startuml
+@startuml validation-model-based-on-the-etag-header-part-3
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
 
-title "Validation based on the ETag header"
+title "Validation model based on the ETag header - part 3/4"
 
-participant Client
-participant Server
+participant "Client 1" as client1
+participant "Server" as server
+participant "Client 2" as client2
 
-== Data modified ==
+== Update data with no mid-air collisions (no in-between editions) ==
 
-note over Server
-Data has been updated 
-at 23:55:00 on the server 
-either from another client 
-or by itself (e.g. cron job)
-
-The new hash is: 457ae5b8
-end note
-
-Server -> Server
-
-|||
-
-note over Client, Server
-GET /index.html HTTP/1.1
+note over client1, server
+PATCH /users/1 HTTP/1.1
 Host: example.com
-Accept: text/html
-If-None-Match: "33a64df5"
+Accept: application/json
+If-Match: 33a64df5
 end note
-Client -> Server: New request (at 23 Feb 2022, 00:15:00)
+client1 -> server: The email of the user is updated (at 22 Feb 2022, 23:15:00)
 
 |||
 
-note over Client, Server
+server -> server: Check if no one has modified the user since Tue, 20 Feb 2022 22:00:00 GMT...\nNo modifications; the cache is updated.
+
+|||
+
+note over client1, server
 HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1039
-Date: Tue, 23 Feb 2022 00:15:22 GMT
-ETag: "457ae5b8"
+Content-Type: application/json
+Content-Length: 1012
+Date: Tue, 22 Feb 2022 23:15:01 GMT
+ETag: 84ab545e
 end note
-Server -> Client: The information has changed
+server -> client1: Response
 
 @enduml

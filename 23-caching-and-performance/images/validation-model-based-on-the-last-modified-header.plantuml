@@ -1,82 +1,137 @@
-@startuml
+@startuml validation-model-based-on-the-last-modified-header
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
 
-title "Validation based on the Last-Modified header"
+title "Validation model based on the Last-Modified header"
 
-participant Client
-participant Server
+participant "Client 1" as client1
+participant "Server" as server
+participant "Client 2" as client2
 
-== First request ==
+== First requests ==
 
-note over Client, Server
-GET /index.html HTTP/1.1
+note over client1, server
+GET /users/1 HTTP/1.1
 Host: example.com
-Accept: text/html
+Accept: application/json
 end note
-Client -> Server: Initial request (at 22 Feb 2022, 22:22:00)
+client1 -> server: Initial request (at 22 Feb 2022, 22:22:00)
 
 |||
 
-note over Client, Server
+server -> server: Check in cache...\nCache missed; need to store request in cache.
+
+|||
+
+note over client1, server
 HTTP/1.1 200 OK
-Content-Type: text/html
+Content-Type: application/json
 Content-Length: 1024
-Date: Tue, 22 Feb 2022 22:22:22 GMT
+Date: Tue, 22 Feb 2022 22:22:02 GMT
 Last-Modified: Tue, 20 Feb 2022 22:00:00 GMT
 end note
-Server -> Client: Response
+server -> client1: Response
 
-|||
+...
 
-== Data unmodified ==
-
-|||
-
-note over Client, Server
-GET /index.html HTTP/1.1
+note over server, client2
+GET /users/1 HTTP/1.1
 Host: example.com
-Accept: text/html
-If-Modified-Since: Tue, 20 Feb 2022 22:00:00 GMT
+Accept: application/json
 end note
-Client -> Server: New request (at 22 Feb 2022, 23:05:00)
+server <- client2: Initial request (at 22 Feb 2022, 22:30:00)
 
 |||
 
-note over Client, Server
-HTTP/1.1 304 Not Modified
-Date: Tue, 22 Feb 2022 23:05:22 GMT
-end note
-Server -> Client: The information hasn't changed
-
-== Data modified ==
-
-note over of Server
-Data has been updated
-at 23:55:00 on the server
-either from another client
-or by itself (e.g. cron job)
-end note
-
-Server -> Server
+server -> server: Check in cache...\nCache hit; no need to store request in cache.
 
 |||
 
-note over Client, Server
-GET /index.html HTTP/1.1
-Host: example.com
-Accept: text/html
-If-Modified-Since: Tue, 20 Feb 2022 22:00:00 GMT
-end note
-Client -> Server: New request (at 23 Feb 2022, 00:15:00)
-
-|||
-
-note over Client, Server
+note over server, client2
 HTTP/1.1 200 OK
-Content-Type: text/html
-Content-Length: 1039
-Date: Tue, 23 Feb 2022 00:15:22 GMT
-Last-Modified: Tue, 22 Feb 2022 23:55:00 GMT
+Content-Type: application/json
+Content-Length: 1024
+Date: Tue, 22 Feb 2022 22:30:01 GMT
+Last-Modified: Tue, 20 Feb 2022 22:00:00 GMT
 end note
-Server -> Client: The information has changed
+server -> client2: Response
+
+...
+
+== Get data that have not been modified ==
+
+|||
+
+note over client1, server
+GET /users/1 HTTP/1.1
+Host: example.com
+Accept: application/json
+If-Modified-Since: Tue, 20 Feb 2022 22:00:00 GMT
+end note
+client1 -> server: New request (at 22 Feb 2022, 23:05:00)
+
+|||
+
+server -> server: Check in cache...\nCache hit; no need to store request in cache.
+
+note over client1, server
+HTTP/1.1 304 Not Modified
+Date: Tue, 22 Feb 2022 23:05:21 GMT
+end note
+server -> client1: The information has not changed
+
+...
+
+== Update data with no mid-air collisions (no in-between editions) ==
+
+note over client1, server
+PATCH /users/1 HTTP/1.1
+Host: example.com
+Accept: application/json
+If-Unmodified-Since: Tue, 20 Feb 2022 22:00:00 GMT
+end note
+client1 -> server: The email of the user is updated (at 22 Feb 2022, 23:15:00)
+
+|||
+
+server -> server: Check if no one has modified the user since Tue, 20 Feb 2022 22:00:00 GMT...\nNo modifications; the cache is updated.
+
+|||
+
+note over client1, server
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1012
+Date: Tue, 22 Feb 2022 23:15:01 GMT
+Last-Modified: Tue, 20 Feb 2022 23:15:00 GMT
+end note
+server -> client1: Response
+
+...
+
+== Update data with mid-air collisions (in-between editions) ==
+
+note over server, client2
+PATCH /users/1 HTTP/1.1
+Host: example.com
+Accept: application/json
+If-Unmodified-Since: Tue, 20 Feb 2022 22:00:00 GMT
+end note
+client2 -> server: The username of the user is updated (at 22 Feb 2022, 23:30:00)
+
+|||
+
+server -> server: Check if no one has modified the user since Tue, 20 Feb 2022 22:00:00 GMT...\nModifications have occured; invalid request.
+
+|||
+
+note over server, client2
+HTTP/1.1 412 Precondition Failed
+Date: Tue, 22 Feb 2022 23:30:01 GMT
+end note
+server -> client2: Response
 
 @enduml

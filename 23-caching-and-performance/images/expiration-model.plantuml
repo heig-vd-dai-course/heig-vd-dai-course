@@ -1,66 +1,67 @@
-@startuml
+@startuml expiration-model
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
 
-title "Expiration"
+title "Expiration model"
 
-participant Client
-participant Server
+participant "Client" as client
+participant "Server" as server
 
 == Initial request at 22 Feb 2022, 22:22:00 ==
 
-note over Client, Server
+note over client, server
 GET /index.html HTTP/1.1
 Host: example.com
 Accept: text/html
 end note
-Client -> Server: Request
+client -> server: Request
 
 |||
 
-note over Client, Server
+note over client, server
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Date: Tue, 22 Feb 2022 22:22:22 GMT
 Cache-Control: max-age=3600
 end note
-Server -> Client: Response
+server -> client: Response
 
 ...
 
 == Requests before 22 Feb 2022, 23:22:00 ==
 
-note over Client, Server
-For one hour, the client will
-use the data that is in cache
-regardless of the fact that the
-data might have changed on the
-server.
+note over client, server
+For one hour, the client will use the data that is in cache, regardless of the fact that the data might have changed on the server.
 
 No requests will be made.
 end note
 
-Server -> Server
-
-== Requests after 22 Feb 2022, 23:22:00 ==
+client -> client
 
 ...
 
-note over Client, Server
+== Requests after 22 Feb 2022, 23:22:00 ==
+
+note over client, server
 GET /index.html HTTP/1.1
 Host: example.com
 Accept: text/html
 end note
-Client -> Server: Request
+client -> server: Request
 
 |||
 
-note over Client, Server
+note over client, server
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1039
 Date: Tue, 22 Feb 2022 23:22:22 GMT
 Cache-Control: max-age=3600
 end note
-Server -> Client: Response
+server -> client: Response
 
 @enduml
