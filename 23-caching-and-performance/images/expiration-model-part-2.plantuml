@@ -1,0 +1,23 @@
+@startuml expiration-model-part-2
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+
+title "Expiration model - part 2/3"
+
+participant "Client" as client
+participant "Server" as server
+
+== Requests before 22 Feb 2022, 23:22:00 ==
+
+note over client, server
+For one hour, the client will use the data that is in cache, regardless of the fact that the data might have changed on the server.
+
+No requests will be made.
+end note
+
+client -> client
+
+@enduml

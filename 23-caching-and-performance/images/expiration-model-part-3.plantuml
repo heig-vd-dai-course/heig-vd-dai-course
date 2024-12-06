@@ -1,0 +1,33 @@
+@startuml expiration-model-part-3
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+
+title "Expiration model - part 3/3"
+
+participant "Client" as client
+participant "Server" as server
+
+== Requests after 22 Feb 2022, 23:22:00 ==
+
+note over client, server
+GET /index.html HTTP/1.1
+Host: example.com
+Accept: text/html
+end note
+client -> server: Request
+
+|||
+
+note over client, server
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1039
+Date: Tue, 22 Feb 2022 23:22:22 GMT
+Cache-Control: max-age=3600
+end note
+server -> client: Response
+
+@enduml
