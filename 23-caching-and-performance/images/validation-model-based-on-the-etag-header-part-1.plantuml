@@ -1,28 +1,62 @@
-@startuml
+@startuml validation-model-based-on-the-etag-header-part-1
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
 
-title "Validation based on the ETag header"
+title "Validation model based on the ETag header - part 1/4"
 
-participant Client
-participant Server
+participant "Client 1" as client1
+participant "Server" as server
+participant "Client 2" as client2
 
-== First request ==
+== First requests ==
 
-note over Client, Server
-GET /index.html HTTP/1.1
+note over client1, server
+GET /users/1 HTTP/1.1
 Host: example.com
-Accept: text/html
+Accept: application/json
 end note
-Client -> Server: Initial request (at 22 Feb 2022, 22:22:00)
+client1 -> server: Initial request (at 22 Feb 2022, 22:22:00)
 
 |||
 
-note over Client, Server
+server -> server: Check in cache...\nCache missed; need to store request in cache.
+
+|||
+
+note over client1, server
 HTTP/1.1 200 OK
-Content-Type: text/html
+Content-Type: application/json
 Content-Length: 1024
-Date: Tue, 22 Feb 2022 22:22:22 GMT
-ETag: "33a64df5"
+Date: Tue, 22 Feb 2022 22:22:02 GMT
+ETag: 33a64df5
 end note
-Server -> Client: Response
+server -> client1: Response
+
+...
+
+note over server, client2
+GET /users/1 HTTP/1.1
+Host: example.com
+Accept: application/json
+end note
+server <- client2: Initial request (at 22 Feb 2022, 22:30:00)
+
+|||
+
+server -> server: Check in cache...\nCache hit; no need to store request in cache.
+
+|||
+
+note over server, client2
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 1024
+Date: Tue, 22 Feb 2022 22:30:01 GMT
+ETag: 33a64df5
+end note
+server -> client2: Response
 
 @enduml
