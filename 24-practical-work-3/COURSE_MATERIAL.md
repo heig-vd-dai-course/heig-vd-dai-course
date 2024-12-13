@@ -215,7 +215,7 @@ repository!
 
 - The application must be written in Java, compatible with Java 21
 - The application must be built using Maven with the `maven-shade-plugin` plugin
-- The application must use the picocli dependency
+- The application must use the Javalin dependency
 - You can only use the Java classes seen in the course to implement the network
   application (you can use any other libraries for other aspects of the
   application, such as UI, etc.)
