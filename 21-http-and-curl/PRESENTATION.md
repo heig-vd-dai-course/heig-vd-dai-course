@@ -362,39 +362,27 @@ the server. These are based on the MIME types:
 
 The same URL can return different content types based on the `Accept` header.
 
-### HTTP sessions (stateless vs. stateful)
+### HTTP sessions
 
-- Stateless: the application does not store any data between requests
-- Stateful: the application stores data between requests
+As HTTP is based on the request-response model, each request is independent of
+the others. This is called a stateless protocol.
 
-HTTP is a stateless protocol.
+This means that the server cannot know/identify who is the author of each
+request without additional information. Let's take an example:
 
-The server does not store any data between requests.
+1. A first user access the homepage of a website
+2. A second user access the homepage of the same website
 
-Let's illustrate this with an example.
-
----
-
-Imagine that you have a website with a few pages that you can access:
-
-- A login page (`/login` - public)
-- A profile page (`/profile` - private)
-
-1. You access the login page and fill in your username and password and you
-   click on the "Login" button.
-2. The server checks your credentials accept your login request.
-3. You try to access the profile page but the server rejects your request. Why?
-
-The server does not know who you are..!
+Who is the author of each request?
 
 ---
 
 Why does the server not know who you are?
 
-It is because you do not have a way to state who you are. You do not have a
-**session** with the server.
+It is because you have not stated who you are. In other words, you do not have a
+session with the server.
 
-They are two ways to create a session:
+They are two ways to maintain a session:
 
 - Using a query parameter
 - Using cookies
@@ -403,7 +391,7 @@ They are two ways to create a session:
 
 #### HTTP sessions using a query parameter
 
-A query parameter can be used to create a session:
+A query parameter can be used to maintain a session:
 
 ```text
 C: POST /login
@@ -416,13 +404,13 @@ Advantages: Easy to implement.
 
 Disadvantages: The token is visible in the URL (security issue).
 
-#### HTTP sessions using cookies
+#### HTTP sessions using a cookie
 
-A cookie can be used to create a session:
+A cookie can be used to maintain a session:
 
 ```text
 C: POST /login
-S: 302 Found (redirect to /profile and set a cookie with the token)
+S: 200 OK (set a cookie with the token)
 C: GET /profile (the cookie is sent by the client)
 S: 200 OK (profile page)
 ```
@@ -430,6 +418,36 @@ S: 200 OK (profile page)
 Advantages: The token is not visible in the URL (more secure).
 
 Disadvantages: A bit more complex to implement.
+
+### Do all websites use sessions?
+
+Not all applications need a session.
+
+For example, a calculator application that waits for a calculation and directly
+sends the result does not need to keep track of the client:
+
+- Each request is independent of the others
+- The server can directly respond to each request
+
+The server does not have to know who is the author of the request: it can send
+the result directly to the client.
+
+In this case, the server does not need to use HTTP sessions and is, therefore,
+stateless.
+
+---
+
+On the other hand, an e-commerce application where the user can add items to a
+shopping cart needs to keep track of the client:
+
+- The user can add items to the shopping cart
+- The user can remove items from the shopping cart
+- The user can buy the items in the shopping cart
+
+The server must know who is the author of each request in order to maintain the
+shopping cart.
+
+In this case, the server must use HTTP sessions and is, therefore, stateful.
 
 ## API design
 
