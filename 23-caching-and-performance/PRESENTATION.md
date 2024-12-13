@@ -78,11 +78,10 @@ _paginate: false
 
 ## Objectives
 
-- Understand the concepts of Caching and performance
-- Understand how HTTP features can help to build Caching and performance
-- Understand the concepts of a reverse proxy
-- Understand the concepts of load balancing
 - Understand the concepts of caching
+- Understand how caching can improve performance
+- Understand how HTTP features can help to cache data
+- Implement caching in a web application
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -243,6 +242,17 @@ Two main caching models:
 
 ![bg h:80%](./images/validation-model-based-on-the-etag-header-part-4.png)
 
+### Is it possible to use both models?
+
+Yes, it is possible to use the expiration model and the validation model at the
+same time:
+
+- No request attempt at all if the cache is not expired
+- Validation model when the cache is expired
+
+![bg right:40%](https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?fit=crop&h=720)
+![bg right:40% vertical](https://images.unsplash.com/photo-1684862030284-6b24307ebd4a?fit=crop&h=720)
+
 ## Managing cache with proxies
 
 <!-- _class: lead -->
@@ -316,10 +326,10 @@ You can use reactions to express your opinion on a comment!
 
 ## What will you do next?
 
-We are arriving at the end of the second part of the course.
+We are arriving at the end of the third part of the course.
 
 An evaluation will be done to check your understanding of all the content seen
-in this second part.
+in this third part.
 
 More details will be given in the next chapter.
 

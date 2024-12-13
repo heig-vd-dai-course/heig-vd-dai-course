@@ -126,7 +126,7 @@ Records map a domain name to an IP address.
   number
 - Ports are 16-bit unsigned numbers, maximum 65535
 - Reserved ports: 0-1023
-- Other ports: wild west
+- Other ports: far west
 
 ![bg right contain](./images/reserved-ports.png)
 

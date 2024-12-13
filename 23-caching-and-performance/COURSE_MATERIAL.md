@@ -33,13 +33,13 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Managing cache with HTTP](#managing-cache-with-http)
   - [Expiration model](#expiration-model)
   - [Validation model](#validation-model)
+  - [Is it possible to use both models?](#is-it-possible-to-use-both-models)
 - [Managing cache with proxies](#managing-cache-with-proxies)
 - [Managing cache with key-value stores](#managing-cache-with-key-value-stores)
 - [Practical content](#practical-content)
-  - [Add a `Map` to cache results to your application](#add-a-map-to-cache-results-to-your-application)
-  - [Store results in the cache and return the `Last-Modified` header](#store-results-in-the-cache-and-return-the-last-modified-header)
-  - [Validate the cache with the `If-Modified-Since` header](#validate-the-cache-with-the-if-modified-since-header)
-  - [Validate the cache with the `If-Unmodified-Since` header](#validate-the-cache-with-the-if-unmodified-since-header)
+  - [Update the `Main.java` class to cache the results](#update-the-mainjava-class-to-cache-the-results)
+  - [Update the `AuthController.java` to cache the results](#update-the-authcontrollerjava-to-cache-the-results)
+  - [Update the `UsersController.java` to cache the results](#update-the-userscontrollerjava-to-cache-the-results)
   - [Test the caching system with curl](#test-the-caching-system-with-curl)
   - [Test the caching system with a browser](#test-the-caching-system-with-a-browser)
   - [Go further](#go-further)
@@ -57,14 +57,14 @@ In this last and final chapter of this course, you will learn about caching and
 performance.
 
 You will learn about caching, how it can be used to improve the performance of a
-system, and how you can manage cache with HTTP and how to implement it in your
-application.
+system, where to cache, how you can manage cache with HTTP and how to implement
+it in your application.
 
 ## Caching
 
 Caching is the process of storing data in a cache. A cache is a temporary
-storage component area where data is stored so that future requests for that
-data can be served faster.
+storage where data is stored so that future requests for that data can be served
+faster.
 
 Caching can be used to improve the performance of a system by serving cached
 data instead of processing a request again. Caching significantly improves the
@@ -75,8 +75,8 @@ This has several advantages:
 
 - The client will receive the response faster, especially when the client itself
   (browser) has cached the response.
-- The server does not have to process the request (parse the request, query the
-  database, compose the response, etc).
+- The server does not have to process the request (query the database, process
+  the data, compose the response, etc).
 - The network does not have to carry the messages along the entire path between
   client and server.
 
@@ -198,15 +198,34 @@ request**.
 When clients want to update a resource, they can send a conditional request to
 the server to check if the data has changed since the last time it was modified.
 
-If not, the server can update the resource. If the data has changed, the server
-can return a `412 Precondition Failed` response to the client.
+If the data has not changed since the last modification. The server accepts the
+changes, update the resource and returns a `200 OK` response.
+
+If the data has changed, it means someone else has updated the data prior to our
+changes. The server cannot accept the changes and returns a
+`412 Precondition Failed` response to the client.
+
+> [!TIP]
+>
+> Some common terms used in the context of caching are **cache hit** and **cache
+> miss**.
+>
+> A **cache hit** occurs when the cache contains the requested data and can
+> return it without accessing the origin server.
+>
+> A **cache miss** occurs when the cache does not contain the requested data and
+> must access the origin server to get it.
+>
+> You will see these terms used in the context of caching in the following
+> diagrams and explanations.
 
 There are two types of conditional requests:
 
 - **Based on the `Last-Modified` header**: allows a `304 Not Modified` to be
-  returned if content is unchanged since the last time it was modified.
+  returned if content is unchanged since the last time it was modified (= a
+  cache hit)
 - **Based on the `ETag` header**: allows a `304 Not Modified` to be returned if
-  content is unchanged for the version/hash of the given entity.
+  content is unchanged for the version/hash of the given entity (= a cache hit)
 
 #### Based on the `Last-Modified` header
 
@@ -216,11 +235,10 @@ implemented with the following headers:
 - `Last-Modified`: indicates the date and time at which the resource was last
   updated.
 - `If-Modified-Since`: returns a `304 Not Modified` if content is unchanged
-  since the time specified in this field (= the value of the `Last-Modified`
-  header).
+  since the last known time (= a cache hit).
 - `If-Unmodified-Since`: returns a `412 Precondition Failed` if content has
-  changed since the time specified in this field (= the value of the
-  `Last-Modified` header) **when you try to update/delete the resource**.
+  changed since the last known time (= a cache miss) **when you try to
+  update/delete the resource**.
 
 The `Last-Modified` header is used to check if the data has changed since the
 last time it was modified.
@@ -235,15 +253,25 @@ with the following headers:
 - `ETag`: provides the current entity tag for the selected representation. Think
   of it like a version number or a hash for the given resource.
 - `If-None-Match`: returns a `304 Not Modified` if content is unchanged for the
-  entity specified (`ETag`) by this field (= the value of the `ETag` header).
+  entity specified (`ETag`) (= a cache hit).
 - `If-Match`: returns a `412 Precondition Failed` if content is changed for the
-  entity specified (`ETag`) by this field (= the value of the `ETag` header)
-  **when you try to update/delete the resource**.
+  entity specified (`ETag`) (= a cache miss) **when you try to update/delete the
+  resource**.
 
 The `ETag` header is used to check if the data has changed since the last time
 it was modified.
 
 ![Validation based on the ETag header](./images/validation-model-based-on-the-etag-header.png)
+
+### Is it possible to use both models?
+
+Yes, it is possible to use the expiration model and the validation model at the
+same time.
+
+It can improve the performance even more because a client will not even attempt
+to send a request to the server if the expiration time is not reached. But once
+the expiration time is reached, the client will send a validation request to the
+server to check if the data has changed.
 
 ## Managing cache with proxies
 
@@ -288,7 +316,7 @@ If you do not have the results of the practical content from chapter HTTP and
 curl, you can use the solution mentioned in the HTTP and curl chapter. Clone the
 solution to have the project ready for this practical content.
 
-### Add a `Map` to cache results to your application
+### Update the `Main.java` class to cache the results
 
 Update your `Main.java` class to add a `Map` to cache results to your
 application:
@@ -298,7 +326,10 @@ diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java b/
 index d4aae20..cc64e48 100644
 --- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java
 +++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java
-@@ -4,20 +4,33 @@ import ch.heigvd.dai.auth.AuthController;
+@@ -1,36 +1,49 @@
+ package ch.heigvd.dai;
+
+ import ch.heigvd.dai.auth.AuthController;
  import ch.heigvd.dai.users.User;
  import ch.heigvd.dai.users.UsersController;
  import io.javalin.Javalin;
@@ -335,6 +366,19 @@ index d4aae20..cc64e48 100644
 
      // Auth routes
      app.post("/login", authController::login);
+     app.post("/logout", authController::logout);
+     app.get("/profile", authController::profile);
+
+     // Users routes
+     app.post("/users", usersController::create);
+     app.get("/users", usersController::getMany);
+     app.get("/users/{id}", usersController::getOne);
+     app.put("/users/{id}", usersController::update);
+     app.delete("/users/{id}", usersController::delete);
+
+     app.start(PORT);
+   }
+ }
 ```
 
 In this code snippet, we have added a `Map` to cache results to your
@@ -347,15 +391,18 @@ Javalin does not support `LocalDateTime` (the class representing a date) by
 default. We have added a custom configuration to Javalin to parse
 `LocalDateTime`.
 
-Update the `AuthController.java` and `UsersController.java` classes to use the
-`Map` to cache results to your application:
+### Update the `AuthController.java` to cache the results
+
+Update the `AuthController.java` to use the `Map` to cache results to your
+application:
 
 ```diff
-diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-index 08c8670..4ebbf93 100644
---- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-+++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-@@ -2,13 +2,19 @@ package ch.heigvd.dai.auth;
+diff --git a/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java b/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
+index 08c8670..83db13b 100644
+--- a/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
++++ b/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
+@@ -1,55 +1,81 @@
+ package ch.heigvd.dai.auth;
 
  import ch.heigvd.dai.users.User;
  import io.javalin.http.*;
@@ -365,64 +412,61 @@ index 08c8670..4ebbf93 100644
  public class AuthController {
    private final ConcurrentHashMap<Integer, User> users;
 
--  public AuthController(ConcurrentHashMap<Integer, User> users) {
 +  private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
 +
+-  public AuthController(ConcurrentHashMap<Integer, User> users) {
 +  public AuthController(
-+          ConcurrentHashMap<Integer, User> users,
-+          ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
++      ConcurrentHashMap<Integer, User> users,
++      ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
      this.users = users;
 +    this.usersCache = usersCache;
    }
 
    public void login(Context ctx) {
-```
+     User loginUser =
+         ctx.bodyValidator(User.class)
+             .check(obj -> obj.email != null, "Missing email")
+             .check(obj -> obj.password != null, "Missing password")
+             .get();
 
-```diff
-diff --git **a/23-caching-and-performance/src/main/java/ch/heigvd/dai**/users/UsersController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-index 76bca68..ac9f527 100644
---- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-@@ -1,6 +1,7 @@
- package ch.heigvd.dai.users;
+     for (User user : users.values()) {
+       if (user.email.equalsIgnoreCase(loginUser.email)
+           && user.password.equals(loginUser.password)) {
+         ctx.cookie("user", String.valueOf(user.id));
+         ctx.status(HttpStatus.NO_CONTENT);
+         return;
+       }
+     }
 
- import io.javalin.http.*;
-+import java.time.LocalDateTime;
- import java.util.ArrayList;
- import java.util.List;
- import java.util.concurrent.ConcurrentHashMap;
-@@ -10,8 +11,13 @@ public class UsersController {
-   private final ConcurrentHashMap<Integer, User> users;
-   private final AtomicInteger userId = new AtomicInteger(1);
-
--  public UsersController(ConcurrentHashMap<Integer, User> users) {
-+  private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
-+
-+  public UsersController(
-+          ConcurrentHashMap<Integer, User> users,
-+          ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
-     this.users = users;
-+    this.usersCache = usersCache;
+     throw new UnauthorizedResponse();
    }
 
-   public void create(Context ctx) {
-```
+   public void logout(Context ctx) {
+     ctx.removeCookie("user");
+     ctx.status(HttpStatus.NO_CONTENT);
+   }
 
-In these code snippets, we have updated the `AuthController.java` and
-`UsersController.java` classes to use the `Map` to cache results to your
-application.
+   public void profile(Context ctx) {
+     String userIdCookie = ctx.cookie("user");
 
-### Store results in the cache and return the `Last-Modified` header
+     if (userIdCookie == null) {
+       throw new UnauthorizedResponse();
+     }
 
-Update the `AuthController.java` and `UsersController.java` classes to store
-results in the cache and return the `Last-Modified` header:
+     Integer userId = Integer.parseInt(userIdCookie);
 
-```diff
-diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-index 4ebbf93..dba1f86 100644
---- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-+++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-@@ -56,6 +56,18 @@ public class AuthController {
++    // Get the last known modification date of the user
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if the user has been modified since the last known modification date
++    if (lastKnownModification != null && usersCache.get(userId).equals(lastKnownModification)) {
++      throw new NotModifiedResponse();
++    }
++
+     User user = users.get(userId);
+
+     if (user == null) {
        throw new UnauthorizedResponse();
      }
 
@@ -443,23 +487,74 @@ index 4ebbf93..dba1f86 100644
  }
 ```
 
+In this code snippets, we have updated the `AuthController.java` to:
+
+1. Use the `Map` to cache the results of your application
+2. Store results in the cache
+3. Return the `Last-Modified` header
+4. Validate the cache with the `If-Modified-Since` header
+5. Validate the cache with the `If-Unmodified-Since` header
+
+### Update the `UsersController.java` to cache the results
+
+Update the `UsersController.java` to use the `Map` to cache the results to your
+application:
+
 ```diff
-diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-index 2948a46..05c5e88 100644
---- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-@@ -14,6 +14,10 @@ public class UsersController {
+diff --git a/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java b/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
+index 76bca68..e66cc00 100644
+--- a/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
++++ b/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
+@@ -1,117 +1,221 @@
+ package ch.heigvd.dai.users;
 
-   private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
+ import io.javalin.http.*;
++import java.time.LocalDateTime;
+ import java.util.ArrayList;
+ import java.util.List;
+ import java.util.concurrent.ConcurrentHashMap;
+ import java.util.concurrent.atomic.AtomicInteger;
 
+ public class UsersController {
+   private final ConcurrentHashMap<Integer, User> users;
+   private final AtomicInteger userId = new AtomicInteger(1);
+
++  private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
++
 +  // This is a magic number used to store the users' list last modification date
 +  // As the ID for users starts from 1, it is safe to reserve the value -1 for all users
 +  private final Integer RESERVED_ID_TO_IDENTIFY_ALL_USERS = -1;
 +
-   public UsersController(
-           ConcurrentHashMap<Integer, User> users,
-           ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
-@@ -46,7 +50,18 @@ public class UsersController {
+-  public UsersController(ConcurrentHashMap<Integer, User> users) {
++  public UsersController(
++      ConcurrentHashMap<Integer, User> users,
++      ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
+     this.users = users;
++    this.usersCache = usersCache;
+   }
+
+   public void create(Context ctx) {
+     User newUser =
+         ctx.bodyValidator(User.class)
+             .check(obj -> obj.firstName != null, "Missing first name")
+             .check(obj -> obj.lastName != null, "Missing last name")
+             .check(obj -> obj.email != null, "Missing email")
+             .check(obj -> obj.password != null, "Missing password")
+             .get();
+
+     for (User user : users.values()) {
+       if (user.email.equalsIgnoreCase(newUser.email)) {
+         throw new ConflictResponse();
+       }
+     }
+
+     User user = new User();
+
+     user.id = userId.getAndIncrement();
+     user.firstName = newUser.firstName;
+     user.lastName = newUser.lastName;
+     user.email = newUser.email;
+     user.password = newUser.password;
 
      users.put(user.id, user);
 
@@ -478,7 +573,21 @@ index 2948a46..05c5e88 100644
      ctx.json(user);
    }
 
-@@ -59,6 +74,18 @@ public class UsersController {
+   public void getOne(Context ctx) {
+     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
+
++    // Get the last known modification date of the user
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if the user has been modified since the last known modification date
++    if (lastKnownModification != null && usersCache.get(id).equals(lastKnownModification)) {
++      throw new NotModifiedResponse();
++    }
++
+     User user = users.get(id);
+
+     if (user == null) {
        throw new NotFoundResponse();
      }
 
@@ -497,7 +606,32 @@ index 2948a46..05c5e88 100644
      ctx.json(user);
    }
 
-@@ -80,6 +107,18 @@ public class UsersController {
+   public void getMany(Context ctx) {
++    // Get the last known modification date of all users
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if all users have been modified since the last known modification date
++    if (lastKnownModification != null
++        && usersCache.containsKey(RESERVED_ID_TO_IDENTIFY_ALL_USERS)
++        && usersCache.get(RESERVED_ID_TO_IDENTIFY_ALL_USERS).equals(lastKnownModification)) {
++      throw new NotModifiedResponse();
++    }
++
+     String firstName = ctx.queryParam("firstName");
+     String lastName = ctx.queryParam("lastName");
+
+     List<User> users = new ArrayList<>();
+
+     for (User user : this.users.values()) {
+       if (firstName != null && !user.firstName.equalsIgnoreCase(firstName)) {
+         continue;
+       }
+
+       if (lastName != null && !user.lastName.equalsIgnoreCase(lastName)) {
+         continue;
+       }
+
        users.add(user);
      }
 
@@ -516,7 +650,36 @@ index 2948a46..05c5e88 100644
      ctx.json(users);
    }
 
-@@ -107,6 +146,21 @@ public class UsersController {
+   public void update(Context ctx) {
+     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
+
++    // Get the last known modification date of the user
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Unmodified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if the user has been modified since the last known modification date
++    if (lastKnownModification != null && !usersCache.get(id).equals(lastKnownModification)) {
++      throw new PreconditionFailedResponse();
++    }
++
+     User updateUser =
+         ctx.bodyValidator(User.class)
+             .check(obj -> obj.firstName != null, "Missing first name")
+             .check(obj -> obj.lastName != null, "Missing last name")
+             .check(obj -> obj.email != null, "Missing email")
+             .check(obj -> obj.password != null, "Missing password")
+             .get();
+
+     User user = users.get(id);
+
+     if (user == null) {
+       throw new NotFoundResponse();
+     }
+
+     user.firstName = updateUser.firstName;
+     user.lastName = updateUser.lastName;
+     user.email = updateUser.email;
+     user.password = updateUser.password;
 
      users.put(id, user);
 
@@ -538,7 +701,21 @@ index 2948a46..05c5e88 100644
      ctx.json(user);
    }
 
-@@ -119,6 +173,12 @@ public class UsersController {
+   public void delete(Context ctx) {
+     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
+
++    // Get the last known modification date of the user
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Unmodified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if the user has been modified since the last known modification date
++    if (lastKnownModification != null && !usersCache.get(id).equals(lastKnownModification)) {
++      throw new PreconditionFailedResponse();
++    }
++
+     if (!users.containsKey(id)) {
+       throw new NotFoundResponse();
+     }
 
      users.remove(id);
 
@@ -553,146 +730,13 @@ index 2948a46..05c5e88 100644
  }
 ```
 
-In these code snippets, we have updated the `AuthController.java` and
-`UsersController.java` classes to store results in the cache and return the
-`Last-Modified` header.
+In this code snippets, we have updated the `UsersController.java` to:
 
-If you run your application and create a new user, you will see that the
-`Last-Modified` header is returned in the response.
-
-The same applies when you get a user or all users.
-
-However, at the moment, each time you create, get, update, or delete a user, the
-full object(s) are returned as the caching system is not yet fully implemented.
-
-### Validate the cache with the `If-Modified-Since` header
-
-Update the `AuthController.java` and `UsersController.java` classes to validate
-the cache with the `If-Modified-Since` header:
-
-```diff
-diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-index dba1f86..bbd93ca 100644
---- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-+++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/auth/AuthController.java
-@@ -50,6 +50,15 @@ public class AuthController {
-
-     Integer userId = Integer.parseInt(userIdCookie);
-
-+    // Get the last known modification date of the user
-+    LocalDateTime lastKnownModification =
-+            ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
-+
-+    // Check if the user has been modified since the last known modification date
-+    if (lastKnownModification != null && usersCache.get(userId).equals(lastKnownModification)) {
-+      throw new NotModifiedResponse();
-+    }
-+
-     User user = users.get(userId);
-
-     if (user == null) {
-```
-
-```diff
-diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-index 05c5e88..b69cb4a 100644
---- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-@@ -68,6 +68,15 @@ public class UsersController {
-   public void getOne(Context ctx) {
-     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
-
-+    // Get the last known modification date of the user
-+    LocalDateTime lastKnownModification =
-+            ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
-+
-+    // Check if the user has been modified since the last known modification date
-+    if (lastKnownModification != null && usersCache.get(id).equals(lastKnownModification)) {
-+      throw new NotModifiedResponse();
-+    }
-+
-     User user = users.get(id);
-
-     if (user == null) {
-@@ -90,6 +99,17 @@ public class UsersController {
-   }
-
-   public void getMany(Context ctx) {
-+    // Get the last known modification date of all users
-+    LocalDateTime lastKnownModification =
-+            ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
-+
-+    // Check if all users have been modified since the last known modification date
-+    if (lastKnownModification != null
-+            && usersCache.containsKey(RESERVED_ID_TO_IDENTIFY_ALL_USERS)
-+            && usersCache.get(RESERVED_ID_TO_IDENTIFY_ALL_USERS).equals(lastKnownModification)) {
-+      throw new NotModifiedResponse();
-+    }
-+
-     String firstName = ctx.queryParam("firstName");
-     String lastName = ctx.queryParam("lastName");
-```
-
-In these code snippets, we have updated the `AuthController.java` and
-`UsersController.java` classes to validate the cache with the
-`If-Modified-Since` header.
-
-If you run your application and get a user or all users with the
-`If-Modified-Since` header, you will see that the response is cached with a
-`304 Not Modified` response. Not even the database is queried, more performance!
-
-### Validate the cache with the `If-Unmodified-Since` header
-
-Upddate the `UsersController.java` classe to validate the cache with the
-`If-Unmodified-Since` header:
-
-```diff
-diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-index b69cb4a..a5a3aee 100644
---- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/users/UsersController.java
-@@ -145,6 +145,15 @@ public class UsersController {
-   public void update(Context ctx) {
-     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
-
-+    // Get the last known modification date of the user
-+    LocalDateTime lastKnownModification =
-+            ctx.headerAsClass("If-Unmodified-Since", LocalDateTime.class).getOrDefault(null);
-+
-+    // Check if the user has been modified since the last known modification date
-+    if (lastKnownModification != null && !usersCache.get(id).equals(lastKnownModification)) {
-+      throw new PreconditionFailedResponse();
-+    }
-+
-     User updateUser =
-         ctx.bodyValidator(User.class)
-             .check(obj -> obj.firstName != null, "Missing first name")
-@@ -187,6 +196,15 @@ public class UsersController {
-   public void delete(Context ctx) {
-     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
-
-+    // Get the last known modification date of the user
-+    LocalDateTime lastKnownModification =
-+            ctx.headerAsClass("If-Unmodified-Since", LocalDateTime.class).getOrDefault(null);
-+
-+    // Check if the user has been modified since the last known modification date
-+    if (lastKnownModification != null && !usersCache.get(id).equals(lastKnownModification)) {
-+      throw new PreconditionFailedResponse();
-+    }
-+
-     if (!users.containsKey(id)) {
-       throw new NotFoundResponse();
-     }
-```
-
-In this code snippet, we have updated the `UsersController.java` class to
-validate the cache with the `If-Unmodified-Since` header.
-
-If you run your application and update or delete a user with an old
-`If-Unmodified-Since` header, you will see that the response is a
-`412 Precondition Failed` response. The client cannot update or delete the
-resource because the resource has been modified since the last time the client
-modified it.
+1. Use the `Map` to cache the results of your application
+2. Store results in the cache
+3. Return the `Last-Modified` header
+4. Validate the cache with the `If-Modified-Since` header
+5. Validate the cache with the `If-Unmodified-Since` header
 
 ### Test the caching system with curl
 
@@ -966,15 +1010,29 @@ This is an optional section. Feel free to skip it if you do not have time.
 ### What did you do and learn?
 
 In this chapter, you have learned about caching mechanisms that are offered by
-HTTP. You have discovered the expiration and validation caching models. You have
-implemented the validation model based on the `Last-Modified` header in your
-application to improve the performance of the system: if the data has not
-changed, the server can return a `304 Not Modified` response to the client
-without even querying the database and processing the request.
+HTTP.
 
-You have tested the caching system with curl to simulate multiple clients and
-see if the cache is working as expected. You have also tested the caching system
-with a browser to see if the cache is working as expected.
+You have discovered the expiration and validation caching models.
+
+You have implemented the validation model based on the `Last-Modified` header in
+your application to improve the performance of the system.
+
+You have tested the caching system with curl and a browser to simulate multiple
+clients and see if the cache is working as expected:
+
+- If you run your application to get a user or all users with the
+  `If-Modified-Since` header, the application will check the cache and response
+  with a `304 Not Modified` status code. Not even the database is queried, more
+  performance!
+- If you run your application to create a new user, the application will create
+  a new record in the cache, invalidate the `RESERVED_ID_TO_IDENTIFY_ALL_USERS`
+  magic ID cache, and response with a `201 Created` status code including the
+  new `Last-Modified` header
+- If you run your application to update or delete a user with an old
+  `If-Unmodified-Since` header, the application will check the check the cache
+  and response with a `412 Precondition Failed` status code - the client cannot
+  update or delete the resource because the resource has been modified since the
+  last time the client modified it
 
 ### Test your knowledge
 

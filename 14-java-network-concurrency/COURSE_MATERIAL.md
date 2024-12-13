@@ -62,7 +62,7 @@ only handle one client at a time. This is not very useful in a production
 environment.
 
 In this chapter, you will have a quick introduction to concurrency to handle
-multiple clients at the same time
+multiple clients at the same time.
 
 You will then learn how to implement and manage concurrency in Java network
 applications to allow the handling of multiple clients at the same time.
