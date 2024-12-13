@@ -40,7 +40,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [HTTP path parameters, query parameters and body](#http-path-parameters-query-parameters-and-body)
   - [HTTP headers](#http-headers)
   - [HTTP content negotiation](#http-content-negotiation)
-  - [HTTP sessions (stateless vs. stateful)](#http-sessions-stateless-vs-stateful)
+  - [HTTP sessions](#http-sessions)
 - [API design](#api-design)
   - [Simple APIs with CRUD operations](#simple-apis-with-crud-operations)
   - [REST APIs](#rest-apis)
@@ -569,6 +569,7 @@ Hello, world from a GET request method!
 Now, let's try to send a `POST` request to the server using curl:
 
 ```sh
+# Send a POST request to the server
 curl -X POST "http://localhost:8080"
 ```
 
@@ -939,6 +940,7 @@ public class Main {
 Now, let's try to send a `GET` request to the server using curl:
 
 ```sh
+# Send a GET request to the server
 curl -v http://localhost:8080
 ```
 
@@ -1046,6 +1048,7 @@ Run the application and open your browser at
 Let's try to send a `GET` request to the server using curl:
 
 ```sh
+# Send a GET request to the server
 curl http://localhost:8080/path-parameter-demo/Hello%20world
 ```
 
@@ -1073,6 +1076,7 @@ Let's try to send a `GET` request to the server using curl to display the
 response headers:
 
 ```sh
+# Send a GET request to the server
 curl -i http://localhost:8080/path-parameters-demo/path-parameter/not-found
 ```
 
@@ -1162,6 +1166,7 @@ Let's try to send a `GET` request to the server using curl to display the
 response headers:
 
 ```sh
+# Send a GET request to the server
 curl -i http://localhost:8080/query-parameters-demo
 ```
 
@@ -1219,6 +1224,7 @@ As this context responds to `POST` requests, you will have to use curl to send a
 `POST` request to the server (as your browser sends `GET` requests by default):
 
 ```sh
+# Send a POST request to the server with a body
 curl -X POST -d "Hello, world!" http://localhost:8080/body-demo
 ```
 
@@ -1233,6 +1239,7 @@ You just called `/body-demo` with data 'Hello, world!'!
 Let's display the request and response headers:
 
 ```sh
+# Send a POST request to the server with a body
 curl -i -v -X POST -d "Hello, world!" http://localhost:8080/body-demo
 ```
 
@@ -1390,6 +1397,7 @@ Now, try to access the URL <http://localhost:8080/content-negotiation-demo> with
 curl:
 
 ```sh
+# Send a GET request to the server
 curl -v -i http://localhost:8080/content-negotiation-demo
 ```
 
@@ -1406,6 +1414,7 @@ Let's specify the `Accept` header to tell the server that we accept the media
 type `text/plain`:
 
 ```sh
+# Send a GET request to the server with the `Accept` header
 curl -H "Accept: text/plain" http://localhost:8080/content-negotiation-demo
 ```
 
@@ -1418,6 +1427,7 @@ Hello, world!
 Let's display the request and response headers:
 
 ```sh
+# Send a GET request to the server with the `Accept` header
 curl -v -i -H "Accept: text/plain" http://localhost:8080/content-negotiation-demo
 ```
 
@@ -1451,105 +1461,59 @@ You can notice the client `Accept` header in the request headers and the
 This feature is very useful to serve different versions of a resource to
 different clients.
 
-### HTTP sessions (stateless vs. stateful)
+### HTTP sessions
 
-Stateless and stateful are two terms that are often used in computer science.
+As HTTP is based on the request-response model, each request is independent of
+the others. This is called a stateless protocol.
 
-A stateless application is an application that does not/cannot keep track of the
-state of the client between each request and/or whenever the application loses
-its state when it is restarted. This can happen in the following cases:
+This means that the server cannot know/identify who is the author of each
+request without additional information.
 
-- The application does not store any data on the disk or a database
-- The application stores the data in memory (RAM)
-- The application stores its data in a temporary storage (cache, etc.) that is
-  lost when the application is restarted
+Let's take an example:
 
-**Examples of stateless applications**:
+1. A first user access the homepage of a website
+2. A second user access the homepage of the same website
 
-- A vending machine doesn’t remember what you tried to buy earlier; it only
-  responds to your current input.
-- A calculator doesn’t remember the result of the previous calculation; it only
-  responds to the current input.
-- It’s like a food counter at a fast-food restaurant where they don’t remember
-  you. You have to give your full order with your ticket every time
-- A Docker container is stateless by default. When you restart a container, all
-  the data is lost unless you use a volume to store the data outside the
-  container
+For the time being, the server cannot know who is the author of each request.
 
-A stateful application is an application that keeps track of the state of the
-client between each request and/or whenever the application loses its state when
-it is restarted. This means that the application can track the user and know
-what the user did before and/or stores data on the disk or a database to be able
-to retrieve it when the application is restarted.
+In order to track the requests made by the same client, the server must be able
+to identify them. This is called a stateful protocol.
 
-**Examples of stateful applications**:
+Let's take an example:
 
-- A shopping cart on an e-commerce site remembers what items you’ve added.
-- A login system remembers that you’re logged in and doesn’t ask you to log in
-  again every time you visit a new page.
-- It’s like a waiter who remembers your order as you go through a multi-course
-  meal.
-- A database is stateful by default. When you restart a database, all the data
-  is still there
+1. One of the users wants to access their profile page
+2. The profile page is protected and only accessible to logged in users
+3. In order to access the profile page, the user must tell the server who they
+   are using a login form
+4. Using the login form, the user sends their credentials to the server
+5. The server will validate the credentials and send a response to the user with
+   a token. Otherwise it will send an error message to the user (such as a
+   `401 Unauthorized` status code)
+6. The user will send the token to the server with each future request
+7. The server will check if the token is valid and retrieve the user from the
+   database using the token
+8. The server will then send the profile page to the user if it can identify
+   them, otherwise it will send an error message
 
-This concept can be applied to network protocols such as HTTP as well.
+Thanks to the token, the server can identify the user and send them the profile
+page.
 
-**HTTP is a stateless protocol**: for each request, the server does not know who
-the client is or what the client did before. This means that the server does not
-keep track of the state of the client over time and there is no way to know who
-made a request.
+If the second user wants to access their profile page, they will have to log in
+as well. The server will send them a different token.
 
-We need to keep track of the state of the client in order to build applications
-that are stateful such as a login system, a shopping cart, etc.
+The server can then check if a token is present in the request and if it is
+valid. As each token is unique, the server can identify the user.
 
-Let's illustrate this with an example. Imagine that you have a website with a
-few pages that you can access:
-
-- A homepage (`/` - public)
-- A login page (`/login` - public)
-- A profile page (`/profile` - private)
-
-The profile page returns the information of the user. This page is private. This
-means that you need to log in to access it.
-
-In a stateful protocol, the server keeps track of the state of the client. This
-means that the server knows who you are. This means that the server knows what
-you did before:
-
-1. You arrive on the homepage. You can click on a link to access the login page.
-2. You fill in your username and password and you click on the "Login" button.
-3. The server checks your credentials and logs you in.
-4. You are now logged in. You can click on a link to access your profile page.
-5. The server knows who you are. The server knows that you are logged in. The
-   server can send you the profile page.
-
-HTTP is **not a stateful protocol**. This means that the server does not keep
-track of the state of the client.
-
-Using the same example as before, in a stateless protocol, the server does not
-know who you are. This means that the server does not know what you did before:
-
-1. You arrive on the homepage. You can click on a link to access the login page.
-2. You fill in your username and password and you click on the "Login" button.
-3. The server checks your credentials and logs you in.
-4. You are now logged in. You can click on a link to access your profile page.
-5. The server does not know who you are. The server does not know that you are
-   logged in. The server cannot send you the profile page.
-
-The example above is almost the same as the previous one. The only difference is
-that with HTTP, it is up to the developer to implement a way to keep track of
-the state of the client and send it to the server with each request.
-
-In order to achieve this, the server can use HTTP sessions. There are many ways
-to implement HTTP sessions. Here are two of them:
+With HTTP, the clients and servers can use HTTP sessions. There are many ways to
+implement HTTP sessions. Here are two of them:
 
 - Using a query parameter
-- Using cookies
+- Using a cookie
 
 #### HTTP sessions using a query parameter
 
 Using the previous example, the server can use a query parameter to keep track
-of the state of the client:
+of the client:
 
 1. Once a user is logged in, the server generates a random token and stores it
    in a database.
@@ -1573,10 +1537,10 @@ This is a very simple way to implement HTTP sessions. It is not very secure as
 the token is sent in clear text in the URL. This means that anyone can see the
 token and use it to access the profile page.
 
-#### HTTP sessions using cookies
+#### HTTP sessions using a cookie
 
 In a very similar way as the previous example, the server can use cookies to
-keep track of the state of the client.
+keep track of the client.
 
 Cookies are small pieces of data sent by the server to the client and sent back
 to the server with each request.
@@ -1588,7 +1552,7 @@ header.
 The MDN Web Docs has a very good documentation on cookies:
 <https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies>.
 
-The server can use cookies to keep track of the state of the client:
+The server can use cookies to keep track of the client:
 
 1. Once a user is logged in, the server generates a random token and stores it
    in a database.
@@ -1670,9 +1634,38 @@ allowed in cookies. See the MDN Web Docs documentation on cookies for more
 information:
 <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#cookie-namecookie-value>.
 
-Cookies are very useful to keep track of the state of the client. They are
-automatically sent by the browser with each request. There is no need to do
-anything.
+Cookies are very useful to keep track of the client. They are automatically sent
+by the browser with each request. There is no need to do anything.
+
+#### Do all websites use cookies?
+
+Depending on the application, using a query parameter or a cookie is not even
+necessary as not all applications need to keep track of the client.
+
+For example, a calculator application that waits for a calculation and directly
+sends the result does not need to keep track of the client:
+
+- Each request is independent of the others
+- The server can directly respond to each request
+
+The server does not have to know who is the author of the request: it can send
+the result directly to the client.
+
+In this case, the server does not need to use HTTP sessions and is, therefore,
+stateless.
+
+On the other hand, an e-commerce application where the user can add items to a
+shopping cart needs to keep track of the client:
+
+- The user can add items to the shopping cart
+- The user can remove items from the shopping cart
+- The user can see the shopping cart
+- The user can buy the items in the shopping cart
+
+The server must know who is the author of each request in order to maintain the
+shopping cart.
+
+In this case, the server must use HTTP sessions and is, therefore, stateful.
 
 ## API design
 
@@ -2036,13 +2029,15 @@ public class AuthController {
   }
 
   public void profile(Context ctx) {
-    String userId = ctx.cookie("user");
+    String userIdCookie = ctx.cookie("user");
 
-    if (userId == null) {
+    if (userIdCookie == null) {
       throw new UnauthorizedResponse();
     }
 
-    User user = users.get(Integer.parseInt(userId));
+    Integer userId = Integer.parseInt(userIdCookie);
+
+    User user = users.get(userId);
 
     if (user == null) {
       throw new UnauthorizedResponse();
@@ -2114,7 +2109,12 @@ should return an empty array.
 Let's try to create a new user using curl:
 
 ```sh
-curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}' http://localhost:8080/users
+# Create a new user
+curl -i \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}' \
+  http://localhost:8080/users
 ```
 
 The output should be similar to the following:
@@ -2125,14 +2125,19 @@ Date: Fri, 08 Dec 2023 10:48:15 GMT
 Content-Type: application/json
 Content-Length: 96
 
-{"id":0,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}
+{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}
 ```
 
 The user has been successfully created with ID `0` and a status code `201`.
 Let's try to create the same user again:
 
 ```sh
-curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}' http://localhost:8080/users
+# Create the same user again
+curl -i \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}' \
+  http://localhost:8080/users
 ```
 
 The output should be similar to the following:
@@ -2152,7 +2157,12 @@ code.
 Let's create a user with a missing field:
 
 ```sh
-curl -i -X POST -H "Content-Type: application/json" -d '{"firstName":"Johanna","lastName":"Dane","email":"johanna.dane@example.com"}' http://localhost:8080/users
+# Create a user with a missing field
+curl -i \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"firstName":"Johanna","lastName":"Dane","email":"johanna.dane@example.com"}' \
+  http://localhost:8080/users
 ```
 
 The output should be similar to the following:
@@ -2174,6 +2184,7 @@ Refresh the page at <http://localhost:8080/users>. You should see the user you
 have just created in an array. You can do the same with curl:
 
 ```sh
+# Get all users
 curl -i http://localhost:8080/users
 ```
 
@@ -2185,19 +2196,25 @@ Date: Fri, 08 Dec 2023 10:48:58 GMT
 Content-Type: application/json
 Content-Length: 194
 
-[{"id":0,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"},{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}]
+[{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"},{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}]
 ```
 
 Let's get the user we have just created (the same can be done in the browser):
 
 ```sh
-curl -i http://localhost:8080/users/0
+# Get the user with ID 1
+curl -i http://localhost:8080/users/1
 ```
 
 Let's try to update the user using curl:
 
 ```sh
-curl -i -X PUT -H "Content-Type: application/json" -d '{"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}' http://localhost:8080/users/0
+# Update the user with ID 1
+curl -i \
+  -X PUT \
+  -H "Content-Type: application/json" \
+  -d '{"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}' \
+  http://localhost:8080/users/1
 ```
 
 The output should be similar to the following:
@@ -2208,7 +2225,7 @@ Date: Fri, 08 Dec 2023 12:19:13 GMT
 Content-Type: application/json
 Content-Length: 95
 
-{"id":0,"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}
+{"id":1,"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}
 ```
 
 The user has been successfully updated with ID `0` and a status code `200`.
@@ -2216,7 +2233,12 @@ The user has been successfully updated with ID `0` and a status code `200`.
 Let's try to login the user using curl:
 
 ```sh
-curl -i -X POST -H "Content-Type: application/json" -d '{"email":"jane.doe@example.com","password":"secret"}' http://localhost:8080/login
+# Login the user with email and password
+curl -i \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"email":"jane.doe@example.com","password":"secret"}' \
+  http://localhost:8080/login
 ```
 
 The output should be similar to the following:
@@ -2237,6 +2259,7 @@ the server has set a cookie with the name `user` and the value `0`.
 Let's use the cookie to get the current user:
 
 ```sh
+# Get the current user using the cookie
 curl -i --cookie user=0 http://localhost:8080/profile
 ```
 
@@ -2251,12 +2274,13 @@ Date: Fri, 08 Dec 2023 12:23:21 GMT
 Content-Type: application/json
 Content-Length: 95
 
-{"id":0,"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}
+{"id":1,"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}
 ```
 
 Let's try to get the current user without the cookie:
 
 ```sh
+# Get the current user without the cookie
 curl -i http://localhost:8080/profile
 ```
 
@@ -2277,6 +2301,7 @@ code.
 Let's try to logout the user using curl:
 
 ```sh
+# Logout the user
 curl -i -X POST http://localhost:8080/logout
 ```
 
@@ -2303,7 +2328,8 @@ ensure the cookie is invalidated.
 Let's try to delete the user using curl:
 
 ```sh
-curl -i -X DELETE http://localhost:8080/users/0
+# Delete the user with ID 1
+curl -i -X DELETE http://localhost:8080/users/1
 ```
 
 The output should be similar to the following:
@@ -2624,7 +2650,8 @@ codes.
 You have learned how to send and get data to/from the server and about content
 negotiation.
 
-Using cookies, you have learned how to keep track of the state of the client.
+Using cookies (preferred) or query parameters (not recommended), you have
+learned how to keep track of the client.
 
 And finally, you have learned how to design and develop APIs with the HTTP
 protocol.
