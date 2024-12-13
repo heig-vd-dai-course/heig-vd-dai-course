@@ -1,0 +1,52 @@
+@startuml where-to-cache
+left to right direction
+skinparam packageStyle rectangle
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 120
+
+title "Where to cache?"
+
+rectangle "Clients LAN" as clientLan {
+
+    actor "Client" as client
+
+    note top of client
+        Private cache (your browser)
+    end note
+
+    rectangle "Forward proxy" as forwardProxy {
+        client -- (Exit the LAN)
+    }
+
+    note top of forwardProxy
+        Shared cache (internal)
+    end note
+}
+
+cloud "Internet" as internet {
+    (Exit the LAN) -- internet
+}
+
+rectangle "Servers LAN" as serverLan {
+
+    actor "Server" as server
+
+    rectangle "Reverse proxy" as reverseProxy {
+        internet -- (Enter the LAN)
+        (Enter the LAN) -- server
+    }
+
+    note top of reverseProxy
+        Shared cache (external)
+    end note
+
+
+    note top of server
+        Shared cache (your web application)
+    end note
+}
+
+@enduml

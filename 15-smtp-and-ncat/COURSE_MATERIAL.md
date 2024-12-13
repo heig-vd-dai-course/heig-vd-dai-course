@@ -604,8 +604,7 @@ You can use reactions to express your opinion on a comment!
 ## What will you do next?
 
 We are arriving at the end of the second part of the course. An evaluation will
-be done to check your understanding of all the content seen in this first
-second.
+be done to check your understanding of all the content seen in this second part.
 
 ## Additional resources
 

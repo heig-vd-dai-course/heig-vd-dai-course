@@ -345,7 +345,7 @@ More details for this section in the [course material][course-material].
 
 - The application must be written in Java, compatible with Java 21
 - The application must be built using Maven with the `maven-shade-plugin` plugin
-- The application must use the picocli dependency
+- The application must use the Javalin dependency
 - You can only use the Java classes seen in the course
 - Your application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word **slightly**, no
