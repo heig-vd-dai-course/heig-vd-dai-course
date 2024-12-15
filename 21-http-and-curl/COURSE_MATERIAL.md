@@ -1637,7 +1637,7 @@ information:
 Cookies are very useful to keep track of the client. They are automatically sent
 by the browser with each request. There is no need to do anything.
 
-#### Do all websites use cookies?
+#### Do all websites use sessions?
 
 Depending on the application, using a query parameter or a cookie is not even
 necessary as not all applications need to keep track of the client.

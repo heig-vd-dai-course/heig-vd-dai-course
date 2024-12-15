@@ -262,20 +262,20 @@ find other resources and alternatives as well.
 
 - Capacity of a system to handle a varying amount of work
 - Can be achieved by:
-  - Vertical scaling (scale up)
-  - Horizontal scaling (scale out)
-- Can be achieved by:
-  - Adding more resources
-  - Adding more servers
+  - **Vertical scaling** (adding more hardware resources to a server, also known
+    as _scale up_)
+  - **Horizontal scaling** (adding more servers to share the load, also known as
+    _scale out_)
 
 ![bg right:40%](https://images.unsplash.com/photo-1588315028888-0e1da9fa090f?fit=crop&h=720)
 
 ### Vertical scaling
 
-Add more resources to a server:
+Adding more resources to a server:
 
-- More RAM
-- More CPU
+- More/better RAM
+- More/better CPU
+- More/better storage
 - etc.
 
 Limited by the hardware: at a certain point, you cannot add more/better
@@ -289,7 +289,7 @@ Add more servers to a system and distribute the load between them.
 
 Limited by the software - your software must be able to run on multiple servers:
 
-- Backends/API accessing the same database(s)
+- Backends/APIs accessing the same database(s)
 - Frontends accessing backends/API
 
 ![bg right:40%](https://images.unsplash.com/photo-1491723203629-ac87f78dc19b?fit=crop&h=720)

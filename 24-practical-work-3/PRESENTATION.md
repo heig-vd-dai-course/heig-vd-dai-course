@@ -285,6 +285,26 @@ Conflict
 
 Leads to a `409` (Conflict) status code as we want to keep the names unique.
 
+---
+
+Get the schedules of the Baleinev hot wine week:
+
+```sh
+curl https://heig-vd-dai-course.duckdns.org/schedules
+```
+
+Output:
+
+```json
+[
+  { "id": 0, "day": "MONDAY", "start": [10, 0], "end": [18, 0] },
+  { "id": 1, "day": "TUESDAY", "start": [10, 0], "end": [18, 0] },
+  { "id": 2, "day": "WEDNESDAY", "start": [10, 0], "end": [18, 0] },
+  { "id": 3, "day": "THURSDAY", "start": [10, 0], "end": [22, 0] },
+  { "id": 4, "day": "FRIDAY", "start": [10, 0], "end": [18, 0] }
+]
+```
+
 ## Group composition
 
 <!-- _class: lead -->
