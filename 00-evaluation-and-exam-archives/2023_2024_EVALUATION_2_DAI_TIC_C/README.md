@@ -163,42 +163,42 @@ INVALID_COMMAND
 
 - `INVALID_COMMAND`: la commande est invalide
 
-### Section 4 - Exemples (2 points)
+## Section 4 - Exemples (2 points)
 
 Voici des diagrammes PlantUML pour illustrer les exemples de messages.
 
-#### Visualiser les catégories
+### Visualiser les catégories
 
 ![example-1](./images/question_1_example_1.png)
 
-#### Visualiser les produits
+### Visualiser les produits
 
 ![example-2](./images/question_1_example_2.png)
 
-#### Visualiser un produit
+### Visualiser un produit
 
 ![example-3](./images/question_1_example_3.png)
 
-#### Commander un produit
+### Commander un produit
 
 ![example-4](./images/question_1_example_4.png)
 
-#### Commande invalide
+### Commande invalide
 
 ![example-5](./images/question_1_example_5.png)
 
 Voici des diagrammes PlantUML pour illustrer les exemples de messages lorsque
 des erreurs surviennent.
 
-#### Visualiser les produits
+### Erreur lors de la visualisation des produits
 
 ![example-error-1](./images/question_1_example_error_1.png)
 
-#### Visualiser un produit
+### Erreur lors de la visualisation d'un produit
 
 ![example-error-2](./images/question_1_example_error_2.png)
 
-#### Commander un produit
+### Erreur lors de la commande d'un produit
 
 ![example-error-3](./images/question_1_example_error_3.png)
 
