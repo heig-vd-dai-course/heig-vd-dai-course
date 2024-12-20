@@ -96,7 +96,7 @@ output.
 
 whoami will be used to test various features of HTTP.
 
-Fot the time being, try to access the virtual machine from the Internet on ports
+For the time being, try to access the virtual machine from the Internet on ports
 80 and 443 using the public IP address of the virtual machine.
 
 You should notice that you have an error. This is because the virtual machine is
