@@ -1,0 +1,33 @@
+{
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
+  },
+  "cSpell.language": "en,fr",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80],
+  "files.insertFinalNewline": true,
+  "markdown.extension.toc.levels": "2..3",
+  "markdown.marp.breaks": "off",
+  "markdown.marp.enableHtml": true,
+  "markdownlint.config": {
+    "no-duplicate-heading": {
+      "siblings_only": true
+    },
+    "no-inline-html": false
+  },
+  "plantuml.render": "PlantUMLServer",
+  "plantuml.server": "http://localhost:8080",
+  "prettier.printWidth": 80,
+  "prettier.proseWrap": "always",
+  "prettier.tabWidth": 2,
+  "tinymist.formatterMode": "typstyle"
+}
