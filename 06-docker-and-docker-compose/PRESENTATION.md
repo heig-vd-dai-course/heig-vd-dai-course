@@ -40,7 +40,7 @@ style: |
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
     }
-headingDivider: 4
+headingDivider: 6
 -->
 
 [web]:

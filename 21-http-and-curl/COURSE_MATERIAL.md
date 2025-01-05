@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
-[illustration]:
-  https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # HTTP and curl - Course material
 

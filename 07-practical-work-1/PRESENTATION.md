@@ -40,7 +40,7 @@ style: |
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
     }
-headingDivider: 4
+headingDivider: 6
 -->
 
 [web]:
@@ -163,7 +163,7 @@ More details for this section in the [course material][course-material].
 
 ### Group composition
 
-- 2 students per group
+- 2 or 3 students per group
 - Create a GitHub Discussion to:
   - Announce your group members
   - Announce your idea (even a draft is fine)

@@ -1,6 +1,6 @@
-# Material for the teaching staff
+# Resources for the teaching staff
 
-This document and directory contains all the material for the teaching staff.
+This document and directory contains all the resources for the teaching staff.
 
 It is meant to be used as a reference for the teaching staff to prepare and give
 the course.
@@ -10,9 +10,11 @@ the course.
 - [Table of contents](#table-of-contents)
 - [Philosophy of the course](#philosophy-of-the-course)
 - [Before the course](#before-the-course)
-  - [Email sent before the 2023-2024 academic year](#email-sent-before-the-2023-2024-academic-year)
+  - [Email sent before the 2024-2025 academic year](#email-sent-before-the-2024-2025-academic-year)
 - [During the course](#during-the-course)
   - [Framaform for the feedback during the course](#framaform-for-the-feedback-during-the-course)
+  - [Mail sent for the evaluations](#mail-sent-for-the-evaluations)
+  - [Mail sent for the practical works](#mail-sent-for-the-practical-works)
   - [Mail sent before the exam](#mail-sent-before-the-exam)
 - [After the course](#after-the-course)
   - [Email sent after the 2023-2024 academic year](#email-sent-after-the-2023-2024-academic-year)
@@ -20,8 +22,8 @@ the course.
 ## Philosophy of the course
 
 Most of the course philosophy was described in a GitHub Discussion opened by a
-student from a parallel class (!) during my first year as a teacher in 2023. The
-discussion is available here:
+student from a parallel class (!) during my first year as a teacher in
+2023-2024. The discussion is available here:
 <https://github.com/orgs/heig-vd-dai-course/discussions/180>.
 
 The philosophy of the course is based on the following principles:
@@ -121,27 +123,39 @@ not give them the fish, I teach them how to fish.
   without the header and footer.
 - Create the feedback forms on [Framaform](https://framaforms.org/) for the
   feedback during the course (before the GAPS evaluations)
+- Hide (mark as _"outdated"_) all chapters feedback in
+  [GitHub Discussions](https://github.com/orgs/heig-vd-dai-course/discussions/categories/polls)
+- Reset the [organization README](https://github.com/heig-vd-dai-course/.github)
+  with the new information for the new academic year
 
-### Email sent before the 2023-2024 academic year
+### Email sent before the 2024-2025 academic year
 
 ```text
-[DAI 2023-2024] Informations générales sur le cours
+[DAI 2024-2025] Informations générales sur le cours
 
 Bonjour tout le monde,
 
 J'espère que vous avez passé un bel été et que vous vous sentez prêt-e-s pour cette nouvelle année qui va commencer.
 
-Je serai votre professeur pour le cours Développement d'Applications Internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver mardi pour la première leçon.
+Je serai votre enseignant pour le cours Développement d'Applications Internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver lundi pour la première leçon.
 
-Le cours aura lieu les mardis de 13:15 à 14:45 en salle B01a et de 16:35 à 18:05 en salle A05a.
+Le cours aura lieu les lundis de 8:30 à 12:00 en salle J01.
 
-Vous trouverez toutes les informations sur le cours dans cette organisation GitHub : https://github.com/heig-vd-dai-course.
+Vous trouverez toutes les informations sur le cours dans cette organisation GitHub avec son planning aux adresses suivantes :
 
-Pour les personnes curieuses qui souhaiteraient déjà explorer le contenu du cours, ne soyez pas surprises si certaines parties ne sont pas complètes ; nous sommes en train de finaliser le cours avec sa nouvelle structure.
+- Organisation GitHub - https://github.com/heig-vd-dai-course
+- Planning - https://github.com/orgs/heig-vd-dai-course/projects
 
-Pour les personnes sous Windows, je vous recommande vivement d'installer et configurer Windows Subsystem for Linux (WSL 2) ou GitBash pour suivre ce cours. L'un ou l'autre de ces outils sera utile pour certaines parties du cours et vous rencontrerez moins de soucis. Vous pouvez suivre le tutoriel suivant pour installer et configurer WSL 2 : https://learn.microsoft.com/en-us/windows/wsl/install ou GitBash: https://gitforwindows.org/.
+Certains chapitres sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné-e-s si vous voyez des changements dans les prochains jours et/ou au cours du semestre.
 
-Je vous souhaite une bonne fin d'après-midi et à bientôt,
+Pour vous préparer au mieux pour le début du cours, je vous demande de lire et suivre les ressources suivantes pour installer et configurer votre environnement de travail qui sera utilisé durant toute la durée du cours :
+
+- Set up a Windows development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md
+- Considerations for a development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md
+
+Nous nous attendons à ce que vous ayez lu et suivi ces ressources avant le début du premier cours. Si vous avez des questions ou des problèmes, n'hésitez pas à nous contacter.
+
+Je vous souhaite une bonne journée et à bientôt,
 Ludovic Delafontaine
 ```
 
@@ -157,9 +171,14 @@ Ludovic Delafontaine
 
 ### Framaform for the feedback during the course
 
+> [!TIP]
+>
+> To duplicate a form, access it, click on the _"Share"_ (_"Partager"_) button,
+> then access the link to clone the form.
+
 #### Title
 
-DAI 2023-2024 - Feedback N
+DAI 2024-2025 - Feedback N
 
 #### Description
 
@@ -169,36 +188,55 @@ vécu le cours jusqu'ici.
 Toutes les données sont anonymes et elles ne sont utilisées que pour améliorer
 le cours.
 
-Merci pour votre collaboration!
+Merci pour votre collaboration !
 
 #### Questions
 
-- J'ai moins apprécié et je propose... (champ texte)
-- J'ai particulièrement apprécié... (champ texte)
-- Le cours est
+- J'ai moins apprécié et je propose... (zone de texte)
+- J'ai particulièrement apprécié... (zone de texte)
+- Le cours est (boutons radio)
   - Trop théorique
   - Adapté
   - Trop pratique
-- Le rythme du cours est
+- Le rythme du cours est (boutons radio)
   - Trop lent
   - Adapté
   - Trop rapide
-- Les exercices pratiques sont
+- Les exercices pratiques sont (boutons radio)
   - Trop simples
   - Adaptés
   - Trop complexes
 - J'ai l'impression d'avoir appris des éléments qui me seront utiles dans ma
-  formation et pour mon futur
+  formation et pour mon futur (boutons radio)
   - Non
   - Plutôt non
   - Plutôt oui
   - Oui
-- Autres remarques et commentaires (champ texte)
+- Autres remarques et commentaires (zone de texte)
   - Description: Sentez-vous libre d'exprimer votre ressenti pour le cours. Si
     celui-ci vous a déplu, n'hésitez pas à nous le faire savoir pour qu'on
     puisse faire mieux dans le futur.
 
 ### Mail sent for the evaluations
+
+```text
+[DAI 2024-2025] Corrections évaluation N
+
+Bonjour,
+
+Vous trouverez en pièce jointe la correction de votre évaluation 2. La note associée a également été saisie sur GAPS.
+
+Veuillez m'excuser pour l'écriture des points à cause de mon bras. À la fin du document PDF, des grilles détaillant les points obtenus sont disponibles pour l'exercice 3 de la partie 1 et pour la partie 2 afin que ça soit plus clair pour tout le monde.
+
+Le corrigé officiel est disponible à l'adresse suivante : https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives.
+
+Je reste évidemment à disposition en cas de questions.
+
+Je profite de ce mail pour vous rappeler que vous avez la possibilité d'évaluer vos cours sur GAPS jusqu'à ce dimanche. Comme déjà discuté en cours, ces évaluations sont importantes pour moi (ainsi que Géraud et Hadrien) et j'apprécierais si vous pouvez le faire (si ce n'est pas déjà le cas). Nous prendrons le temps d'en discuter lors de la dernière séance de cours avec le récapitulatif du semestre et la préparation de l'examen.
+
+Je vous souhaite de très bonnes fêtes, une toute bonne année 2025 et nous nous retrouvons à la rentrée pour la dernière ligne droite du semestre.
+Ludovic Delafontaine
+```
 
 ```text
 [DAI 2023-2024] Corrections évaluation N
@@ -218,7 +256,7 @@ Ludovic Delafontaine et Hadrien Louis
 ### Mail sent for the practical works
 
 ```text
-[DAI 2023-2024] Retours sur le travail pratique N
+[DAI 2024-2025] Retours sur le travail pratique N
 
 Bonjour,
 
@@ -226,8 +264,12 @@ Vous trouverez en pièce jointe les retours que nous vous avons faits pour le tr
 
 La note a été saisie dans GAPS également.
 
-Nous vous souhaitons une bonne fin de journée et un bon week-end !
-Ludovic Delafontaine et Hadrien Louis
+Les corrections ont été effectuées par Hadrien (l'assistant du cours du lundi) et Géraud (l'assistant du cours du vendredi) pour l'entièreté des deux classes, pour assurer une correction uniforme entre celles-ci.
+
+Nous restons à votre disposition en cas de questions.
+
+Cordiales salutations,
+Ludovic Delafontaine, Hadrien Louis et Géraud Silvestri
 ```
 
 ### Mail sent before the exam
@@ -253,6 +295,15 @@ Ludovic Delafontaine et Hadrien Louis
 
 ## After the course
 
+- Export the Framafoms results to a CSV file
+  - Go to the form
+  - Click _"Téléchargement"_
+  - **Format d'export**: _"Texte délimité (.csv)"_
+  - **Format du texte délimité**: _"Virgule (,)"_
+  - **Format d'en-tête de colonne**: _"Étiquette"_
+  - **Composants d'export inclus**: All, except _Informations sur la soumission_
+  - You might need to clean/remove the first lines of the CSV files to avoid
+    empty headers
 - Create Git tags to archive the course material for the given year
   - For the `heig-vd-dai-course` repository - this will create a release with
     the PDFs of the course (course material and presentations)

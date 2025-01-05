@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/115
-[illustration]:
-  https://images.unsplash.com/photo-1506818144585-74b29c980d4b?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # SSH and SCP - Course material
 

@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
-[illustration]:
-  https://images.unsplash.com/photo-1529922331924-26e6a694629d?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Caching and performance - Course material
 

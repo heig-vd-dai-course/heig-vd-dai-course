@@ -11,7 +11,7 @@ Do not know where to start? Have a look at the
 
 ## Course planning and material
 
-This course is equivalent to 3 ECTS credits = ~75-90 hours of work.
+This course is equivalent to 3 ECTS credits (= ~75-90 hours of work):
 
 - 48 hours in class (= 64 periods of 45 minutes)
 - ~27-42 hours outside of the class - We try our best to ensure you do not have
@@ -67,7 +67,6 @@ The entire course planning for the semester is available at
 ### Conclusion (2 periods)
 
 - [27. Semester review and exam preparation (2 periods)](./27-semester-review-and-exam-preparation/README.md)
-  (WIP)
 
 ## GitHub Discussions
 
