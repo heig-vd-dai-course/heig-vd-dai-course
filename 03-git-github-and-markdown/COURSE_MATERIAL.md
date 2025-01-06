@@ -1230,7 +1230,7 @@ Share your profile in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2024-2025 - Check out my GitHub profile! - First name Last name
+- **Title**: [DAI 2024-2025] Check out my GitHub profile! - First name Last name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub profile README!
 
@@ -1266,7 +1266,8 @@ the future.
 Create a new issue in the <https://github.com/heig-vd-dai-course/.github>
 repository describing what you want to do:
 
-- **Title**: Add myself (First name Last name) to the list of students
+- **Title**: Add <First name> <Last name> to the list of students (replace
+  `<First name> <Last name>` with your information)
 - **Description**: I would like to add myself to the list of students in the
   GitHub organization README.
 

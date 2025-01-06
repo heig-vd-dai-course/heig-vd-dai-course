@@ -267,7 +267,7 @@ Using curl, you can also access the server:
 
 ```sh
 # Send a GET request to the server
-curl "http://localhost:8080"
+curl http://localhost:8080
 ```
 
 The output should be the same as in the browser.
@@ -570,7 +570,7 @@ Now, let's try to send a `POST` request to the server using curl:
 
 ```sh
 # Send a POST request to the server
-curl -X POST "http://localhost:8080"
+curl -X POST http://localhost:8080
 ```
 
 The `-X` option tells curl to use to set the HTTP method.
@@ -585,10 +585,10 @@ Try the other methods using curl:
 
 ```sh
 # Send a PATCH request to the server
-curl -X PATCH "http://localhost:8080"
+curl -X PATCH http://localhost:8080
 
 # Send a DELETE request to the server
-curl -X DELETE "http://localhost:8080"
+curl -X DELETE http://localhost:8080
 ```
 
 You should see the different responses.
@@ -668,7 +668,7 @@ You can reproduce this request using curl:
 
 ```sh
 # Send a GET request to GAPS
-curl -v "http://gaps.heig-vd.ch"
+curl -v http://gaps.heig-vd.ch
 ```
 
 The `-v` option tells curl to print the request headers.
@@ -804,7 +804,7 @@ You can reproduce this request using curl:
 
 ```sh
 # Send a GET request to GAPS
-curl -i "http://gaps.heig-vd.ch"
+curl -i http://gaps.heig-vd.ch
 ```
 
 The `-i` option tells curl to print the response headers.
@@ -978,7 +978,7 @@ Try the other methods using curl:
 
 ```sh
 # Send a POST request to the server
-curl -v -X POST "http://localhost:8080"
+curl -v -X POST http://localhost:8080
 
 # Send a PATCH request to the server
 curl -v -X PATCH http://localhost:8080
@@ -2123,12 +2123,14 @@ The output should be similar to the following:
 HTTP/1.1 201 Created
 Date: Fri, 08 Dec 2023 10:48:15 GMT
 Content-Type: application/json
-Content-Length: 96
+Content-Length: 95
 
 {"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}
 ```
 
-The user has been successfully created with ID `0` and a status code `201`.
+The user has been successfully created with ID `1` and the API returns a status
+code `201` (Created).
+
 Let's try to create the same user again:
 
 ```sh
@@ -2194,10 +2196,16 @@ The output should be similar to the following:
 HTTP/1.1 200 OK
 Date: Fri, 08 Dec 2023 10:48:58 GMT
 Content-Type: application/json
-Content-Length: 194
+Content-Length: 97
 
-[{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"},{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}]
+[{"id":1,"firstName":"John","lastName":"Doe","email":"john.doe@example.com","password":"secret"}]
 ```
+
+> [!NOTE]
+>
+> In a production application, the `password` field should not be returned to
+> the client. In the context of this course, we accept the current
+> implementation.
 
 Let's get the user we have just created (the same can be done in the browser):
 
@@ -2228,7 +2236,8 @@ Content-Length: 95
 {"id":1,"firstName":"Jane","lastName":"Doe","email":"jane.doe@example.com","password":"secret"}
 ```
 
-The user has been successfully updated with ID `0` and a status code `200`.
+The user with ID `1` has been successfully updated and the API returns a status
+code `200` (OK).
 
 Let's try to login the user using curl:
 
@@ -2244,23 +2253,22 @@ curl -i \
 The output should be similar to the following:
 
 ```text
-HTTP/1.1 200 OK
+HTTP/1.1 204 No Content
 Date: Fri, 08 Dec 2023 12:21:06 GMT
 Content-Type: text/plain
-Set-Cookie: user=0; Path=/
+Set-Cookie: user=1; Path=/
 Expires: Thu, 01 Jan 1970 00:00:00 GMT
-Content-Length: 0
 
 ```
 
 You can notice the `Set-Cookie` header in the response headers. This means that
-the server has set a cookie with the name `user` and the value `0`.
+the server has set a cookie with the name `user` and the value `1`.
 
 Let's use the cookie to get the current user:
 
 ```sh
 # Get the current user using the cookie
-curl -i --cookie user=0 http://localhost:8080/profile
+curl -i --cookie user=1 http://localhost:8080/profile
 ```
 
 The `--cookie` option allows to send a cookie with the request. A browser does
@@ -2341,8 +2349,8 @@ Content-Type: text/plain
 
 ```
 
-The user has been successfully deleted with ID `0` and a status code `204` (No
-Content).
+The user with ID `1` has been successfully deleted and the API returns a status
+code `204` (No Content).
 
 ### How to document an API
 
