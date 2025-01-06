@@ -167,8 +167,8 @@ More details for this section in the [course material][course-material].
 - Create a GitHub Discussion to:
   - Announce your group members
   - Announce your idea (even a draft is fine)
-- **Do it as soon as possible before next week!**
-  - This helps us to plan the presentations
+- **Please do it a before the next week**, otherwise you will be penalized (-0.2
+  point on the final grade)
 
 ![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
 
@@ -276,6 +276,19 @@ Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
 - This is a good practice to guarantee quality
 
 ![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
+
+### How and what to present
+
+You are free to present your work as you want. You can use slides, a live demo,
+a small theater piece, etc., however:
+
+- No need to remind us the objectives (we know them)
+- No need to present us the code (we will grade it later)
+- Focus your presentation on the _"what"_ and the _"how"_
+
+Aim to explain/pitch your project to someone that has a good technical
+understanding but has strictly no idea of your project and what it does and how
+you have done it.
 
 ## Submission
 

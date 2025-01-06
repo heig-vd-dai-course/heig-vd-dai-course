@@ -38,6 +38,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [External dependencies](#external-dependencies)
   - [Add members to your repository](#add-members-to-your-repository)
   - [Protect your main branch](#protect-your-main-branch)
+  - [How to present](#how-to-present)
 - [Submission](#submission)
 - [Presentations](#presentations)
   - [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
@@ -67,10 +68,10 @@ example, you can choose to transform a text file (find/replace/count number of
 occurrences/etc.), to grayscale a JPEG/PNG binary file manipulating its pixel
 values, add metadata to existing TIFF files, etc.
 
-Multiple groups can choose the same processing and you can share your
-methodology and take inspiration from/help each other. However, you are not
-allowed to plagiarize the code of another group. You will be penalized if you do
-so with 1 as the final grade.
+Multiple groups can choose the same idea and you can share your methodology and
+take inspiration from/help each other. However, you are not allowed to
+plagiarize the code of another group. You will be penalized if you do so with 1
+as the final grade.
 
 ## Objectives
 
@@ -80,25 +81,27 @@ so with 1 as the final grade.
 
 ## Group composition
 
-You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one.
+You will work in groups of two or three students. You can choose your
+partner(s). If you do not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2024-2025 - Practical work 1 - First name Last name member 1
-  and First name Last name member 2
+- **Title**: [DAI 2024-2025] Practical work 1 - First name Last name member 1,
+  First name Last name member 2 and First name Last name member 3 (if
+  applicable)
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> **Please do it a soon as possible**, even if you do not have a clear idea yet
-> as it will help us to plan the practical work presentations.
+> **Please do it a before the next week**, even if you do not have a clear idea
+> yet as it will help us to plan the practical work presentations.
 >
-> Please refer to the grading criteria to know what is expected from you.
+> **If you do not open the discussion before next week, you will be penalized
+> (-0.2 point on the final grade).**
 
 ## Idea validation
 
@@ -129,6 +132,9 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 2 - Git, GitHub and Markdown
 
+If your repository is private, you must add us as collaborators to your
+repository!
+
 | #   | Criterion                                                                                                                                                                                                                           | Points |
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
 | 4   | Issues are created all along the project to describe new features, elements to improve, etc. to plan work                                                                                                                           |    0.2 |
@@ -136,9 +142,9 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 | 6   | The issue, pull request and commit messages are descriptive so a new comer can understand what has been done                                                                                                                        |    0.2 |
 | 7   | The commits are signed to increase the security and the confidence of the project                                                                                                                                                   |    0.2 |
 | 8   | The repository contains a gitignore file to ignore all unwanted files (Maven output, IntelliJ IDEA files related to local computer, etc.) to keep the repository clean/small and to avoid security leaks                            |    0.2 |
-| 9   | The README is well structured and explains the purpose of your application so new users can understand it                                                                                                                           |    0.2 |
-| 10  | The README explains how to use your application with examples and outputs so a new user/developer can understand your application without having to run it locally                                                                  |    0.2 |
-| 11  | The README describes explicit commands to clone and build your application with Git and Maven so new developers can start and develop your project on their own computer                                                            |    0.2 |
+| 9   | The README is well structured and explains the purpose of your application with the authors' names so new users can understand it and know who is behind the application                                                            |    0.2 |
+| 10  | The README explains how to use your application with **explicit examples** and outputs so a new user/developer can understand your application without having to run it locally                                                     |    0.2 |
+| 11  | The README describes **explicit commands** to clone and build your application with Git and Maven so new developers can start and develop your project on their own computer                                                        |    0.2 |
 | 12  | The repository contains meaningful example files to allow new users/developers (such as the teaching staff) to try out your application locally - these files can be the same as the ones used in the examples and outputs snippets |    0.2 |
 
 ### Category 3 - Java, IntelliJ IDEA and Maven
@@ -152,14 +158,14 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 4 - Java IOs
 
-| #   | Criterion                                                                                                                                          | Points |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 17  | The CLI displays a comprehensive help message on how to use the application and displays errors on invalid/missing inputs and/or processing errors |    0.2 |
-| 18  | The CLI takes some mandatory arguments and other optional arguments for customization                                                              |    0.2 |
-| 19  | The CLI processes the files efficiently                                                                                                            |    0.2 |
-| 20  | The CLI processes the files so that they are compatible across operating systems/languages                                                         |    0.2 |
-| 21  | The CLI correctly manages resources in case a problem occurs when processing the files                                                             |    0.2 |
-| 22  | The CLI correctly processes the input file and writes the result in the output file with its execution time                                        |    0.2 |
+| #   | Criterion                                                                                                                                                               | Points |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 17  | The CLI displays a comprehensive help message on how to use the application and displays **explicit error messages** on invalid/missing inputs and/or processing errors |    0.2 |
+| 18  | The CLI offers at least two subcommands with mandatory and optional arguments for customization                                                                         |    0.2 |
+| 19  | The CLI processes the files efficiently                                                                                                                                 |    0.2 |
+| 20  | The CLI processes the files so that they are compatible across operating systems/languages                                                                              |    0.2 |
+| 21  | The CLI correctly manages resources in case a problem occurs when processing the files                                                                                  |    0.2 |
+| 22  | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s). The execution time is displayed in the console                            |    0.2 |
 
 ### Category 5 - Presentation and questions
 
@@ -175,7 +181,7 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 - The application must be built using Maven with the `maven-shade-plugin` plugin
 - The application must use the picocli dependency
 - You can only use the Java classes seen in the course to process the files (you
-  can use other libraries to help you once the files are opened) - See the
+  can use any other libraries to help you once the files are opened) - See the
   [External dependencies](#external-dependencies) section
 - Your application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word **slightly**, no
@@ -233,6 +239,23 @@ use signed pull requests to merge your work.
 You can check the official documentation to know how to protect your main branch
 on GitHub:
 <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>.
+
+### How and what to present
+
+You are free to present your work as you want. You can use slides, a live demo,
+a small theater piece.
+
+However, it is not necessary to remind us the objectives of the practical work:
+we know what you have to do but we do not know what you have done and how you
+have done it - focus on that.
+
+Focus your presentation on the _"what"_ and the _"how"_ and present the core
+aspects of your application: there is no need to present us the code as we will
+dig in deeper while grading your work. Present some code only if it is something
+critical and/or very unique/interesting to your project.
+
+Aim to explain/pitch your project to someone that has a good technical
+understanding but has strictly no idea of your project and what it does.
 
 ## Submission
 
