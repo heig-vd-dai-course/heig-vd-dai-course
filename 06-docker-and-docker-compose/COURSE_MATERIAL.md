@@ -982,7 +982,7 @@ organization: <https://github.com/orgs/heig-vd-dai-course/discussions>.
 
 Create a new discussion with the following information:
 
-- **Title**: DAI 2024-2025 - My Docker Compose application - First name Last
+- **Title**: [DAI 2024-2025] My Docker Compose application - First name Last
   Name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository with a screenshot of your

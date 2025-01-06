@@ -81,10 +81,11 @@ public key. Bob decrypts the message with his private key.
 If Bob wants to send a message to Alice, Bob encrypts the message with Alice's
 public key. Alice decrypts the message with their private key.
 
-If Bob wants to prove that she is the author of a message, Bob encrypts the
-message with their private key. Everyone can decrypt the message with Bob's
-public key. If the message can be decrypted, it means that Bob is the author of
-the message.
+If Bob wants to send a message to the rest of the world proving that only Bob
+was the author of the message, Bob encrypts the message with their private key.
+Bob can then send the message to whom suites best. The receipts can then decrypt
+the message with Bob's public key. If the message can be decrypted, it means
+that Bob is the author of the message.
 
 In the case of SSH and GPG, the public key is used to encrypt the data and the
 private key is used to decrypt the data.
