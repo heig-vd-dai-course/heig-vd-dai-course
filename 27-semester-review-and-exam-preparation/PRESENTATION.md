@@ -536,6 +536,8 @@ _paginate: false
   using the official resources to help for the BDR + DAI project:
   - <https://javalin.io/plugins/rendering>
   - <https://javalin.io/tutorials/>
+- I would love to go deeper on this topic but the time is limited. You will
+  learn more about this topic in future courses
 
 #### Web infrastructures
 
@@ -559,9 +561,7 @@ _paginate: false
 
 ##### Elements to improve for next year
 
-- Nothing much to improve in our opinion. I tried to improve the balance between
-  the theoretical/practical content and I think it is quite good now. Do you
-  agree?
+- Nothing much to improve in our opinion. Do you agree?
 
 #### Caching and performance
 
@@ -585,7 +585,9 @@ _paginate: false
 
 ##### Elements to improve for next year
 
-- Nothing much to improve in our opinion. Do you agree?
+- Improve diagrams with a database actor
+- Improve diagrams when the client asks for a content that has been changed for
+  the validation model examples
 
 #### Practical work 3
 
@@ -649,6 +651,23 @@ _paginate: false
   help management and access for everyone
 - Read proof all examples and normalize without the usage of interfaces but
   their concrete class implementation to avoid confusion
+- Try out a new structure for the calendar/planning:
+  [PR #560](https://github.com/heig-vd-dai-course/heig-vd-dai-course/pull/560)
+
+### Practical works
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+![bg opacity:0.1][illustration]
+
+#### Elements to improve for next year
+
+- Improve even further the deadlines and expectations related to the
+  submissions:
+  [PR #570](https://github.com/heig-vd-dai-course/heig-vd-dai-course/pull/570)
 
 ### GAPS evaluation
 
@@ -770,7 +789,20 @@ Do you have any questions?
 
 <!-- _class: lead -->
 
-### Conclusion
+---
+
+> This course defines the basics of network communication and how all these
+> communications are programmed.
+>
+> At the end of the course, you will know how to define, program and deploy
+> network applications, how to interact with them, and the different elements to
+> pay attention to make robust applications.
+>
+> Whether you are in software, security, data science, embedded or network, you
+> will have to deal with network applications (APIs, devices, etc.). This course
+> will give you a solid grounding in this world.
+
+### You did it! Congrats!
 
 You can be proud of yourself! You all did a great job! We had a blast following
 your progress during this semester.
