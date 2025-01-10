@@ -678,34 +678,6 @@ Let's check these _beautiful_ charts!
 <small>You can find all Framasoft and GAPS evaluations
 [on the repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/27-semester-review-and-exam-preparation).</small>
 
-#### _"J'ai moins apprécié et je propose..."_ (Résumé)
-
-**Évaluations**
-
-TODO
-
-**Travaux pratiques**
-
-TODO
-
-**Méthodologie et support de cours**
-
-TODO
-
-#### _"J'ai particulièrement apprécié..."_ (Résumé)
-
-**Évaluations**
-
-TODO
-
-**Travaux pratiques**
-
-TODO
-
-**Méthodologie et support de cours**
-
-TODO
-
 ## Taboo questions
 
 Here are some taboo questions we never take the time to discuss and I would like

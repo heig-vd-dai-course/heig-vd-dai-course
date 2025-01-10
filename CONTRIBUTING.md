@@ -32,9 +32,10 @@
      `npx prettier **/*.md --write --print-width 80 --prose-wrap always`
      command.
    - Ensure all local images are optimized:
-     - PNGs with the help of the `optipng *.png` command.
-     - JPGs with the help of the `jpegoptim *.jpg` command.
-     - PDFs with the help of the `ps2pdf *.pdf` command.
+     - PNGs with the help of the `optipng **/**/*.png` command.
+     - JPGs with the help of the `jpegoptim -s --all-progressive **/**/*.jpg`
+       command.
+     - PDFs with the help of the `ps2pdf <input>.pdf <output>.pdf` command.
 6. Push and open a pull request.
 7. Wait for the pull request to be reviewed and merged.
 
