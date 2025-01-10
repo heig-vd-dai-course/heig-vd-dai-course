@@ -5,8 +5,7 @@
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
-[illustration]:
-  https://images.unsplash.com/photo-1572901334602-f40b66a0c71c?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Practical work 3
 
