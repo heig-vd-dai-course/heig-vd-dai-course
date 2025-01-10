@@ -40,7 +40,7 @@ style: |
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
     }
-headingDivider: 4
+headingDivider: 6
 -->
 
 [web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
@@ -49,8 +49,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
-[illustration]:
-  https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
 [course-material-qr-code]:

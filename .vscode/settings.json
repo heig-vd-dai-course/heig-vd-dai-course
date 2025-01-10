@@ -5,6 +5,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
+  },
   "cSpell.language": "en,fr",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
@@ -12,7 +15,7 @@
   "editor.renderWhitespace": "all",
   "editor.rulers": [80],
   "files.insertFinalNewline": true,
-  // "markdown.extension.toc.levels": "2..3",
+  "markdown.extension.toc.levels": "2..3",
   "markdown.marp.breaks": "off",
   "markdown.marp.enableHtml": true,
   "markdownlint.config": {
@@ -25,5 +28,6 @@
   "plantuml.server": "http://localhost:8080",
   "prettier.printWidth": 80,
   "prettier.proseWrap": "always",
-  "prettier.tabWidth": 2
+  "prettier.tabWidth": 2,
+  "tinymist.formatterMode": "typstyle"
 }

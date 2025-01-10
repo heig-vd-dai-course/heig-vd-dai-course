@@ -14,10 +14,6 @@
 *.html
 *.pdf
 
-## Visual Studio Code
-/.devcontainer
-/.vscode
-
 ## Windows
 
 # Windows thumbnail cache files

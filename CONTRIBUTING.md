@@ -6,21 +6,18 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 1. Clone or fork the GitHub repository.
-2. Move the `.devcontainer` and `.vscode` folders from the
-   `99-material-for-the-teaching-staff` directory to the root level of the
-   repository.
-3. Open the project in Visual Studio Code.
-4. Visual Studio Code should prompt you to install the recommended extension
+2. Open the project in Visual Studio Code.
+3. Visual Studio Code should prompt you to install the recommended extension
    ([Visual Studio Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)).
    Install it. Other extensions will be installed automatically when you open
    the project in a Development Container.
-5. Press `Ctrl`+`Shift`+`P` to open the command palette and run the
+4. Press `Ctrl`+`Shift`+`P` to open the command palette and run the
    `Dev Containers: Reopen in Container` command.
-6. Visual Studio Code will build the Docker image and open the project in a
+5. Visual Studio Code will build the Docker image and open the project in a
    container with all the required tools installed (extensions and packages).
-7. Open the Markdown files in Visual Studio Code and press `Ctrl`+`Shift`+`V` to
+6. Open the Markdown files in Visual Studio Code and press `Ctrl`+`Shift`+`V` to
    preview the files.
-8. You are now ready to edit the Markdown files and commit your changes.
+7. You are now ready to edit the Markdown files and commit your changes.
 
 ## Making changes to the Git repository
 

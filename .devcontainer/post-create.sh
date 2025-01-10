@@ -1,0 +1,31 @@
+#!/usr/bin/env sh
+
+## Update packages list
+sudo apt update
+
+## Install packages to optimize images (jpegoptim, optipng)
+sudo apt install --yes jpegoptim optipng
+
+## Install packages to optimize documents (ps2pdf)
+sudo apt install --yes ghostscript
+
+## Install Typst
+wget https://github.com/typst/typst/releases/download/v0.12.0/typst-x86_64-unknown-linux-musl.tar.xz -O /tmp/typst.tar.xz
+
+sudo tar --extract --file /tmp/typst.tar.xz --strip-components=1 --directory /usr/local/bin
+
+rm /tmp/typst.tar.xz
+
+## Install Typst HEIG-VD template
+
+# Create the directory for the local packages
+mkdir -p ~/.local/share/typst/packages/local
+
+# Clone the repository
+git clone https://github.com/heig-vd-dai-course/heig-vd-dai-course-evaluation-and-exam-templates.git /tmp/heig-vd-dai-course-evaluation-and-exam-templates
+
+# Copy the template to the local packages directory
+cp -r /tmp/heig-vd-dai-course-evaluation-and-exam-templates/typst/heig-vd-evaluations-and-exams-template ~/.local/share/typst/packages/local
+
+# Remove the temporary directory
+rm -rf /tmp/heig-vd-dai-course-evaluation-and-exam-templates

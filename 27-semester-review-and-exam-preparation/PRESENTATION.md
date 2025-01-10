@@ -10,7 +10,7 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Semester review and exam preparation
 description: Semester review and exam preparation for the DAI course at HEIG-VD, Switzerland
 url: https://heig-vd-dai-course.github.io/heig-vd-dai-course/27-semester-review-and-exam-preparation/
-footer: '**HEIG-VD** - DAI Course 2023-2024 - CC BY-SA 4.0'
+footer: '**HEIG-VD** - DAI Course 2024-2025 - CC BY-SA 4.0'
 style: |
     :root {
         --color-background: #fff;
@@ -40,7 +40,7 @@ style: |
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
     }
-headingDivider: 4
+headingDivider: 6
 -->
 
 [web]:
@@ -49,8 +49,7 @@ headingDivider: 4
   https://heig-vd-dai-course.github.io/heig-vd-dai-course/27-semester-review-and-exam-preparation/27-semester-review-and-exam-preparation-presentation.pdf
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]:
-  https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 
 # Semester review and exam preparation
 
@@ -106,49 +105,96 @@ Let's have a look back on what **you** did during this semester.
 
 ![bg right:40%](https://images.unsplash.com/photo-1530124566582-a618bc2615dc?fit=crop&h=720)
 
-### Git, GitHub and Markdown
+### Introduction and course organization
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/README.md)
+Set up a Windows development environment <br>+<br> Considerations for a
+development environment
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?fit=crop&h=720)
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01-introduction-and-course-organization)
+
+**This chapter will not be in the exam!**
+
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/images/main-illustration.jpg?raw=true)
 
 #### Key points to remember for this chapter
 
-0. Set up your Git environment with SSH and signed commits
-1. Open an issue (written with Markdown) to discuss the feature
-2. Clone or fork the project with SSH and checkout to a new branch
-3. Make your changes, commit and push them as often as you want
-4. Resolve conflicts if any
-5. Create or update the pull request and add details if needed
-6. Other members review and approve if everything is OK
-7. The work is merged and you can delete the branch or the fork
+- Setting up a professional development environment can really help you be more
+  efficient
+- You have gained valuable Linux experience using WSL
+- For us, the usage of WSL was really positive:
+  - Less bugs/edge-cases
+  - Easy access to UNIX tools
+- While not always easy to setup, you did very well to use it efficiently
 
 #### Elements to improve for next year
 
-- For people on Windows, create a document to help set up a proper and working
-  environment (WSL2, Git, Java, Maven, SDKMAN!, etc.)
-- Add more information about SSH and signed commits maybe?
+- Nothing much to improve in our opinion. Do you agree?
 
-### Java, IntelliJ IDEA and Maven
+We would like to push these recommandations/tools in the very first weeks of
+your studies so you can use these tools from the beginning and in all courses.
+We will see if it is possible.
+
+### Part 1: Input/output processing
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/README.md)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02-introduction-to-part-1/images/main-illustration.jpg?raw=true)
+
+#### Git, GitHub and Markdown
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/03-git-github-and-markdown)
+
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/images/main-illustration.jpg?raw=true)
+
+##### Key points to remember for this chapter
+
+0. Set up your Git environment with SSH and signed commits
+1. Open an issue to discuss the feature (written in Markdown)
+2. Clone or fork the project with SSH and checkout to a new branch
+3. Make your changes, commit and push them as often as you want
+4. Resolve conflicts if any
+5. Create the pull request and add details if needed
+6. Other members review and approve if everything is OK
+7. The work is merged and you can delete the branch or the fork
+
+##### Elements to improve for next year
+
+- Add tips to validate the configuration of Git using the `~/.gitconfig` file
+- Simplify the process of adding students to the GitHub organization:
+  - Students open an issue
+  - We add them to the GitHub organization and the right team
+  - They create a pull request to add themselves to the list of students and we
+    merge if everything is OK
+- Move the forking process to the "_"Go further"_ section
+
+#### Java, IntelliJ IDEA and Maven
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04-java-intellij-idea-and-maven)
 
 **This chapter will not be in the exam!** The other classes did not study this
 topic as deeply as you did.
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/images/main-illustration.jpg?raw=true)
 
-#### Key points to remember for this chapter
+##### Key points to remember for this chapter
 
 - Java and the JVM
 - Maven as a build tool
@@ -159,29 +205,28 @@ topic as deeply as you did.
   - IntelliJ IDEA (and IDEs in general) configuration files
 - Managing multiple versions of Java/dependencies with SDKMAN!
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Make usage of picocli with a concret example (introduction to picocli and its
-  documentation) instead of Logback
-- Make usage of
-  [Spotless](https://github.com/diffplug/spotless/tree/main/plugin-maven) to
-  format the code for uniformity
+- Add a note regarding memory management with Java (garbage collector, etc.)
+- Make students install older LTS versions instead of newer, non-LTS versions so
+  they don't pollute their computer with unnecessary Java versions
+- More details on how picocli works maybe?
 
-### Java IOs
+#### Java IOs
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/README.md)
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/images/main-illustration.jpg?raw=true)
 
-#### Key points to remember for this chapter
+##### Key points to remember for this chapter
 
 - Java IOs classes and use cases (text files vs. binary files)
-- Those 🤬 charset encodings (Unicode vs. UTF-8, other charsets)
+- Those 🤬 charset encodings (Unicode vs. UTF-8 vs. other charsets)
 - Buffering and flushing
 - End of line characters (`\n`, `\r`, `\r\n`, etc.)
 - Dealing with exceptions (try-with-resources, etc.)
@@ -190,50 +235,90 @@ You **should always specify encodings and end of line characters explicitly** as
 the defaults are dependent on the platform your code is running on. Marking them
 explicitly will make your code **portable**.
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Add disclaimer about the `PrintWriter` class - it is not recommended to use it
-  as it swallows exceptions and does not throw them
+- Nothing much to improve in our opinion. Do you agree?
 
-### Practical work 1
+#### Docker and Docker Compose
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/README.md)
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1583736902935-6b52b2b2359e?fit=crop&h=720)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/images/main-illustration.jpg?raw=true)
 
-#### What you were ask to do
+##### Key points to remember for this chapter
+
+- Bare-metal vs. virtualization vs. containerization
+- Docker as a containerization tool
+  - Images
+  - Containers
+  - Registries
+  - Dockerfile files
+- Docker Compose as a tool to manage multiple containers
+  - Docker Compose files
+
+##### Elements to improve for next year
+
+- Add elements to publish ports with Docker (using the `-p`/`--publish`
+  parameters)
+
+It is still a quite difficult and abstract chapter to teach. We did try our best
+to give you all the elements needed to understand this topic incrementally so
+you would not be overwhelmed.
+
+#### Practical work 1
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/07-practical-work-1)
+
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/images/main-illustration.jpg?raw=true)
+
+##### What you were ask to do
 
 - A CLI to process files
 - Use Java, Maven and [picocli](https://picocli.info/)
 - You can choose what the CLI will do
-- Publish your CLI on GitHub
+- Practice a professional Git workflow and publish your CLI on GitHub for others
+  to discover and use
 
 We have seen some very interesting projects! Caesar cipher, image processing,
 JSON-XML convertor, etc.
 
 Do not hesitate to share your project and to continue to work on it!
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Nothing much to improve in my opinion. Do you agree?
+- More time for the presentations
 
-### Define an application protocol
+### Part 2: Network programming with TCP and UDP
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-define-an-application-protocol/README.md)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/10-introduction-to-part-2/images/main-illustration.jpg?raw=true)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720)
+#### Define an application protocol
 
-#### Key points to remember for this chapter
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-define-an-application-protocol/images/main-illustration.jpg?raw=true)
+
+##### Key points to remember for this chapter
 
 Defining an application protocol is **not an easy task**. There are many ways to
 do it, and there is no "one size fits all" solution. You should always keep in
@@ -248,71 +333,108 @@ mind the following points:
 ---
 
 3. Messages/actions - What are the messages/actions? What are the parameters?
-   What are the return values? What are the exceptions? - Always try to describe
-   these **for a given context**, not from each point of view (e.g. "_making an
-   order_" with the input/outputs from the client to the server and the
-   responses instead of "_the client sends these messages and the server replies
-   these messages with these outputs_"). It makes it _way_ easier to understand
-   and to implement.
+   What are the return values? What are the exceptions?
+
+   Always try to describe these **for a given context**, not from each point of
+   view (e.g. "_making an order_" with the input/outputs from the client to the
+   server and the responses instead of "_the client sends these messages and the
+   server replies these messages with these outputs_"). It makes it _way_ easier
+   to understand and to implement.
+
 4. Example diagrams - What are the examples of messages/actions? What are the
-   examples of exceptions? Illustrate your application protocol with diagrams
-   (UML, sequence, etc.) to make it easier to understand.
+   examples of exceptions? Illustrate your application protocol with diagrams to
+   make it easier to understand.
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Remove the exploration in details of known protocols (SMTP, POP3, IMAP, SSH,
-  etc.) and focus on the definition of an application protocol
-- Add more examples of application protocols (e.g. a protocol to order a pizza,
-  a protocol to play a game, etc.)
-- Add more examples of diagrams
+- Nothing much to improve in our opinion. Do you agree?
 
-This was a **very** difficult chapter to teach. I hope you understood the
-importance of defining an application protocol and how to do it. If you can, use
-an existing protocol instead of defining your own.
-
-### Docker and Docker Compose
+#### Java TCP programming
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/README.md)
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/12-java-tcp-programming)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?fit=crop&h=720)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-java-tcp-programming/images/main-illustration.jpg?raw=true)
 
-#### Key points to remember for this chapter
+##### Key points to remember for this chapter
 
-- Bare-metal vs. virtualization vs. containerization
-- Docker as a containerization tool
-  - Images
-  - Containers
-  - Registries
-  - Dockerfile files
-- Docker Compose as a tool to manage multiple containers
-  - Docker Compose files
+- TCP as a reliable protocol
+- TCP is unicast only
+- A client and a server communicate using `Socket` and `ServerSocket` classes on
+  a given port for a given host
+- Dealing with sockets' streams are the same as with files: buffering, flushing,
+  charsets, end of line characters, exceptions handling, etc.
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Move this chapter after the Java TCP programming chapter
-- More details on each line of the Dockerfile and Docker Compose file maybe?
-- Use more concrete examples instead of a generic Alpine image with greetings,
-  `tree` command with volumes and File Browser as a web application with ports
-  maybe? It is hard to think of a good example that is not too complex to
-  understand and not too simple to be useless.
+- Nothing much to improve in our opinion. Do you agree?
 
-### SMTP and Telnet
+#### Java UDP programming
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-smtp-and-ncat/README.md)
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-udp-programming)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-udp-programming/images/main-illustration.jpg?raw=true)
 
-#### Key points to remember for this chapter
+##### Key points to remember for this chapter
+
+- Differences between TCP and UDP
+- Reliability of UDP
+- Unicast, broadcast and multicast
+- A client/server (unicast) and or emitter/receiver (multicast) communicate with
+  the `DatagramSocket`, `DatagramPacket` and `MulticastSocket` classes
+- Messaging patterns
+- Service discovery protocols
+
+##### Elements to improve for next year
+
+- Nothing much to improve in our opinion. Do you agree?
+
+#### Java network concurrency
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/14-java-network-concurrency)
+
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-network-concurrency/images/main-illustration.jpg?raw=true)
+
+##### Key points to remember for this chapter
+
+- Concurrency allows to manage multiple task simultaneously
+- Java offers classes and data structures to manage concurrency
+- Multiple strategies exist to manage concurrency, with different trade-offs:
+  - Unlimited threads can use all the available resources
+  - Threadpools can set the maximum number of threads but need to calculate the
+    right amount to use resources efficiently
+  - Recommended: Threadpools for Java < 19 and VirtualThreads for Java > 19
+
+##### Elements to improve for next year
+
+- Nothing much to improve in our opinion. Do you agree?
+
+#### SMTP and ncat
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15-smtp-and-ncat)
+
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/images/main-illustration.jpg?raw=true)
+
+##### Key points to remember for this chapter
 
 - Differences between SMTP, POP3 and IMAP
 - SMTP security concerns
@@ -320,197 +442,115 @@ _paginate: false
   SMTP servers
 - Using a SMTP mock server to test your application
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Move this chapter after the Java TCP programming chapter
-- Make usage of [ncat](https://nmap.org/ncat/) (part of
-  [nmap](https://nmap.org/)) instead of Telnet - Rename the chapter to "SMTP and
-  ncat"
+- Move this chapter during the practical work 1 presentations
 
-### SSH and SCP
+#### Practical work 2
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/README.md)
+[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/16-practical-work-2)
 
-**This chapter will not be in the exam!** The other classes did not study this
-topic.
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2/images/main-illustration.jpg?raw=true)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1506818144585-74b29c980d4b?fit=crop&h=720)
+##### What you were ask to do
 
-#### Key points to remember for this chapter
-
-- SSH keys and how to clone/sign commits using Git
-- SSH keys and how to connect to a remote server
-- SCP and how to copy files to a remote server
-
-#### Elements to improve for next year
-
-- Maybe this chapter is too abstract at the time of the semester? Maybe it
-  should be moved to the end of the semester? With the web infrastructures
-  chapter?
-
-### Java TCP programming
-
-<!--
-_class: lead
-_paginate: false
--->
-
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13-java-tcp-programming/README.md)
-
-![bg opacity:0.1](https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720)
-
-#### Key points to remember for this chapter
-
-- TCP as a reliable protocol
-- Write a client and a server that communicate using `Socket` and `ServerSocket`
-  classes
-- Deal with sockets' streams (deal as with files - buffering, flushing,
-  charsets, end of line characters, exceptions handling, etc.)
-- Use an executor (`ThreadPool` is recommended but you should know other
-  executors and their pros and cons) to handle multiple clients
-
-#### Elements to improve for next year
-
-- Move this chapter right after the Define an application protocol chapter so
-  that the practical work can be done in parallel with the next chapters
-- Add details/examples on variable-length messages/actions (e.g. `readLine()`
-  vs. `read()` with a fixed buffer size)
-- Add a proper introduction to concurrency and its issues
-- Make an example built from scratch to show how to use the `Socket` and
-  `ServerSocket` classes with multiple clients (with `ThreadPool` executor) and
-  then show the examples for other implementations
-
-### Practical work 2
-
-<!--
-_class: lead
-_paginate: false
--->
-
-[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2/README.md)
-
-![bg opacity:0.1](https://images.unsplash.com/photo-1610633389918-7d5b62977dc3?fit=crop&h=720)
-
-#### What you were ask to do
-
-- A TCP network application with its own application protocol
+- A network application using TCP and/or UDP with its own application protocol
 - You can choose what the network application will do
-- Groups of two students
+- Your first experiments with Docker to publish your application to the GitHub
+  Container Registry
 
 We have seen some very interesting projects! Chat applications, hanging man
 (poor boy...) games, naval battle games, etc.
 
 Do not hesitate to share your project and to continue to work on it!
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Nothing much to improve in my opinion. Do you agree?
+- The usage of Docker for some applications was a bit hard. We might need to
+  improve the tips regarding this point.
 
-### Java UDP programming
-
-<!--
-_class: lead
-_paginate: false
--->
-
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-udp-programming/README.md)
-
-![bg opacity:0.1](https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720)
-
-#### Key points to remember for this chapter
-
-- Differences between TCP and UDP
-- Write a client/server (unicast) and or emitter/receiver (multicast) with the
-  `DatagramSocket`, `DatagramPacket` and `MulticastSocket` classes application
-- Reliability of UDP
-- Unicast, broadcast and multicast
-- Messaging patterns
-- Service discovery protocols
-
-#### Elements to improve for next year
-
-- Make an example built from scratch to show how to use the `DatagramSocket`,
-  `DatagramPacket` and `MulticastSocket` classes with multiple clients (with
-  `ThreadPool` executor) and then show the examples for other implementations
-- Add example for the request/response pattern with unicast for the practical
-  work
-
-This was a **very** difficult chapter to teach. I hope you understood the main
-differences between TCP and UDP and how to use UDP.
-
-### Practical work 3
+### Part 3: Network programming with HTTP
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/18-practical-work-3/README.md)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/19-introduction-to-part-3/images/main-illustration.jpg?raw=true)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1636357582639-27620e21d7c5?fit=crop&h=720)
-
-#### What you were ask to do
-
-- An UDP network application
-- You can choose what the network application will do
-- Share your application on GitHub with Docker and Docker Compose
-- Groups between 2 and 3 students
-
-We have seen some very interesting projects! Teletext application, multiplayer
-Pong game, Tower defense game, IoT logging system, etc.
-
-Do not hesitate to share your project and to continue to work on it!
-
-#### Elements to improve for next year
-
-- Improve the criteria for the evaluation of the practical work (some are too
-  vague)
-
-### HTTP and curl
+#### SSH and SCP
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-ssh-and-scp/README.md)
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/20-ssh-and-scp)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720)
+**This chapter will not be in the exam!** The other classes did not study this
+topic.
 
-#### Key points to remember for this chapter
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/images/main-illustration.jpg?raw=true)
+
+##### Key points to remember for this chapter
+
+- Acquire a real remote server on a cloud provider (Azure)
+- SSH keys and how to clone/sign commits using Git
+- SSH keys and how to connect to a remote server
+- SCP and how to copy files to a remote server
+
+##### Elements to improve for next year
+
+- Nothing much to improve in our opinion. Do you agree?
+
+#### HTTP and curl
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/21-http-and-curl)
+
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/images/main-illustration.jpg?raw=true)
+
+##### Key points to remember for this chapter
 
 - HTTP request methods and their response status codes
 - HTTP path parameters, query parameters and body
 - HTTP headers
 - HTTP content negotiation
 - Structure of a HTTP request/response (raw HTTP)
-- HTTP sessions (stateless vs. stateful)
-  - Using a query parameter or a cookie
+- HTTP sessions using a query parameter or a cookie
 - API design
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Nothing much to improve in my opinion. I tried to improve the balance between
-  the theoretical/practical content and I think it is quite good now. Do you
-  agree?
+- Add a bit of content regarding HTML, JavaScript and CSS
+- Refer to official documentation to generate full web applications (UI + API)
+  using the official resources to help for the BDR + DAI project:
+  - <https://javalin.io/plugins/rendering>
+  - <https://javalin.io/tutorials/>
+- I would love to go deeper on this topic but the time is limited. You will
+  learn more about this topic in future courses
 
-### Web infrastructures
+#### Web infrastructures
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/README.md)
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/22-web-infrastructures)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/images/main-illustration.jpg?raw=true)
 
-#### Key points to remember for this chapter
+##### Key points to remember for this chapter
 
 - Functional and non-functional requirements
 - How HTTP features can be used to build web infrastructures:
@@ -518,41 +558,64 @@ _paginate: false
   - Reverse proxy
   - System scaling
   - Load balancing
-  - Caching
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Nothing much to improve in my opinion. I tried to improve the balance between
-  the theoretical/practical content and I think it is quite good now. Do you
-  agree?
+- Nothing much to improve in our opinion. Do you agree?
 
-### Practical work 4
+#### Caching and performance
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/README.md)
+[Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/23-caching-and-performance)
 
-![bg opacity:0.1](https://images.unsplash.com/photo-1572901334602-f40b66a0c71c?fit=crop&h=720)
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/images/main-illustration.jpg?raw=true)
 
-#### What you were ask to do
+##### Key points to remember for this chapter
 
-- Get and access a virtual machine on our cloud with SSH
+- How HTTP features can be used to implement caching and improve performance of
+  web applications:
+  - Expiration model
+  - Validation model
+- Different types of cache
+- Where to cache
+
+##### Elements to improve for next year
+
+- Improve diagrams with a database actor
+- Improve diagrams when the client asks for a content that has been changed for
+  the validation model examples
+
+#### Practical work 3
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+[Find this practical work on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/24-practical-work-3)
+
+![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/images/main-illustration.jpg?raw=true)
+
+##### What you were ask to do
+
+- Acquire and configure a virtual machine on the cloud
 - Install Docker and Docker Compose on the virtual machine
 - Develop a simple CRUD API to manage resources
 - Deploy the applications (reverse proxy + CRUD API)
 - Access the applications from a (free) domain name
-- Groups of 4 students
+
+We have seen some very interesting projects! Pokédexes, GPG keys management,
+etc.
 
 Do not hesitate to share your project and to continue to work on it!
 
-#### Elements to improve for next year
+##### Elements to improve for next year
 
-- Make a common project with the BDR course to have a database to manage (and
-  make a more realist application) maybe?
-- Nothing else to improve in my opinion. I think it is the perfect practical
+- Nothing else to improve in our opinion. I think it is the perfect practical
   work to close the loop of the course. Do you agree?
 
 ### Evaluations
@@ -566,9 +629,10 @@ _paginate: false
 
 #### Elements to improve for next year
 
-- Most of them were too long (especially the first two)
-- Some questions were too specific
-- It was the most painful point, we will try to improve this!
+- We will allow two double-sided sheets (so four single-sided sheets) of
+  personal notes for each evaluation to avoid confusion on the number
+- Some evaluations were a bit too long. We will try to improve that in the
+  future
 
 ### Course materials
 
@@ -581,9 +645,29 @@ _paginate: false
 
 #### Elements to improve for next year
 
-- The PDF generation is okayish but not perfect
-- Make a better mix between theoretical and practical content (more like the
-  last two chapters)
+- Remove the PDFs generations to ensure all students use the latest available
+  course material on GitHub
+- Merge the code examples and solutions repositories in the main repository to
+  help management and access for everyone
+- Read proof all examples and normalize without the usage of interfaces but
+  their concrete class implementation to avoid confusion
+- Try out a new structure for the calendar/planning:
+  [PR #560](https://github.com/heig-vd-dai-course/heig-vd-dai-course/pull/560)
+
+### Practical works
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+![bg opacity:0.1][illustration]
+
+#### Elements to improve for next year
+
+- Improve even further the deadlines and expectations related to the
+  submissions:
+  [PR #570](https://github.com/heig-vd-dai-course/heig-vd-dai-course/pull/570)
 
 ### GAPS evaluation
 
@@ -591,82 +675,36 @@ _paginate: false
 
 Let's check these _beautiful_ charts!
 
-<small>You can find all GAPS evaluations
+<small>You can find all Framasoft and GAPS evaluations
 [on the repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/27-semester-review-and-exam-preparation).</small>
 
 #### _"J'ai moins apprécié et je propose..."_ (Résumé)
 
 **Évaluations**
 
-- Difficulté à réviser pour des tests théoriques.
-- Améliorer la durée des tests.
-- Clarifier les évaluations.
-- Réduire le nombre d'évaluations ou de laboratoires.
-- Suggestion d'autres formes d'évaluation (mini-évaluations similaires à des
-  entretiens d'embauche, deux évaluations mais avec des évaluations informatives
-  entre les deux, etc.).
-
----
+TODO
 
 **Travaux pratiques**
 
-- La liberté créative peut être décourageante, surtout si elle ne correspond pas
-  aux critères.
-- Ne voit pas l'intérêt de la partie orale après les labos, trouve les
-  présentations stressantes.
-- La quantité de travail dans les labos est jugée trop importante.
-- Suggestion d'une consigne de base pour tous, avec la possibilité de discuter
-  d'autres sujets.
-
----
+TODO
 
 **Méthodologie et support de cours**
 
-- Besoin d'explications détaillées sur les codes pratiques, sans y consacrer
-  trop de temps.
-- Préférence pour des cours plus concis et guidés, moins de texte pour une
-  assimilation plus efficace.
-- Le temps de travail semble excessif par rapport à la valeur perçue du cours.
-- Manque de préparation pratique malgré la présentation des concepts.
+TODO
 
 #### _"J'ai particulièrement apprécié..."_ (Résumé)
 
 **Évaluations**
 
-- Appréciation de la plateforme d'évaluation en ligne pour reproduire des
-  conditions réelles.
-- Soutien à l'idée d'avoir plus de tests, mais sur des sujets moins étendus.
+TODO
 
 **Travaux pratiques**
 
-- La possibilité de choisir ses projets est motivante.
-
----
-
-- Apprécie la présentation des labos, mettant en valeur le travail effectué et
-  développant les compétences en présentation.
-- Les labos sont bien appréciés.
-- Les évaluations pratiques, ainsi que leurs présentations, sont bien réalisées.
+TODO
 
 **Méthodologie et support de cours**
 
-- Soutien de l'idée d'avoir moins de théorie et plus de pratique pour un
-  apprentissage efficace.
-- Apprécie la présence des enseignants et de l'assistant, même en cas de
-  problèmes.
-
----
-
-- Excellentes explications fournies lors des questions.
-- Cours dispensé sur une plateforme professionnelle.
-- Appréciation des supports de cours, régulièrement mis à jour.
-- Appréciation d'avoir la structure et la planification du cours dès le début.
-- Appréciation de l'ambiance en classe, du confort ressenti, et de l'attention
-  portée à chacun-e.
-- Appréciation de l'écoute et de la prise en compte immédiate des remarques des
-  étudiant-e-s.
-- Appréciation de la possibilité de corriger des aspects dérangeants, soulignant
-  que le cours n'est pas figé et les enseignants accessibles.
+TODO
 
 ## Taboo questions
 
@@ -689,10 +727,10 @@ What you need to know for the exam
 
 **Where and when?**
 
-- **Date**: 07.02.2024 (Wednesday)
-- **Time**: 08:00
-- **Duration**: 1 hour
-- **Place(s)**: G01, J01 and H01
+- **Date**: 31.01.2025 (Friday)
+- **Time**: 08:30
+- **Duration**: 60 minutes
+- **Place(s)**: G01, H01, H02 and J01
 
 Find all examens on [SACHEM](https://sachem.heig-vd.ch/examens/actuel/).
 
@@ -707,7 +745,7 @@ semester (theoretical content, practical content and practical works).
 
 You will be asked to read/write/understand some code.
 
-You must be ready as there will be no time to lose.
+**You must be ready as there will be no time to lose.**
 
 ![bg right:40%][illustration]
 
@@ -738,7 +776,6 @@ All previous evaluations are available in the course repository:
 - [Evaluation 1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 - [Evaluation 2](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
 - [Evaluation 3](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/00-evaluation-and-exam-archives)
-- [Evaluation 4](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/25-evaluation-3)
 
 ![bg right:40%][illustration]
 
@@ -752,7 +789,20 @@ Do you have any questions?
 
 <!-- _class: lead -->
 
-### Conclusion
+---
+
+> This course defines the basics of network communication and how all these
+> communications are programmed.
+>
+> At the end of the course, you will know how to define, program and deploy
+> network applications, how to interact with them, and the different elements to
+> pay attention to make robust applications.
+>
+> Whether you are in software, security, data science, embedded or network, you
+> will have to deal with network applications (APIs, devices, etc.). This course
+> will give you a solid grounding in this world.
+
+### You did it! Congrats!
 
 You can be proud of yourself! You all did a great job! We had a blast following
 your progress during this semester.
@@ -771,8 +821,8 @@ Staying up to date is a challenge in the IT world. Here are some resources to
 help you with content related to this course:
 
 - <https://news.ycombinator.com/>
-- <https://www.reddit.com/r/homelab/>
 - <https://www.reddit.com/r/programming/>
+- <https://www.reddit.com/r/linux/>
 - <https://www.reddit.com/r/selfhosted/>
 - <https://github.com/awesome-selfhosted/awesome-selfhosted>
 
@@ -797,7 +847,21 @@ My personal closing remarks are the following:
 - **Always do what is good for you**! Health, relationships, friends are more
   important than work! You are more important than work!
 - **Always trust yourself and your guts**! Do what you think is right!
-- **Help others, be kind**: cooperation is better than competition!
+- **Help others, be kind**. Cooperation is better than competition!
+
+### Acknowledgements
+
+I would like to thank the following people for their help on this course (in no
+particular order):
+
+**Hadrien Louis** (2023-2025), **Géraud Silvestri** (2024-2025) and **Camille
+Koestli** (2024-2025) who helped me to prepare this course.
+
+**Juergen Ehrensberger** (2023-2025) for sharing the teaching with the other
+classes.
+
+And of course, **you**, for your participation and your interest in this course!
+It was a pleasure to teach you and I hope to see you again!
 
 ### Thank you, good luck, and farewell!
 
@@ -811,38 +875,5 @@ Apéro time! 🎉
   [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
 - Illustration by [Kenny Eliason](https://unsplash.com/@neonbrand) on
   [Unsplash](https://unsplash.com/photos/60krlMMeWxU)
-- Illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on
-  [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)
-- Illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
-- Illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin) on
-  [Unsplash](https://unsplash.com/photos/audio-mixer-set-4h0HqC3K4-c)
-- Illustration by
-  [Birmingham Museums Trust](https://unsplash.com/@birminghammuseumstrust) on
-  [Unsplash](https://unsplash.com/photos/ScZwMqoxcls)
-- Illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
-  [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
-- Illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
-  [Unsplash](https://unsplash.com/photos/xewrfLD8emE)
-
----
-
-- Illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska) on
-  [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
-- Illustration by [Mathew Schwartz](https://unsplash.com/@cadop) on
-  [Unsplash](https://unsplash.com/photos/sb7RUrRMaC4)
-- Illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
-  [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
-- Illustration by [Rafael Rex Felisilda](https://unsplash.com/@rafaelrex) on
-  [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
-- Illustration by
-  [Possessed Photography](https://unsplash.com/@possessedphotography) on
-  [Unsplash](https://unsplash.com/photos/tiNCpHudGrw)
-- Illustration by [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
-  [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)
-- Illustration by [Ashley Knedler](https://unsplash.com/@ashkned) on
-  [Unsplash](https://unsplash.com/photos/KvD36NRFjl4)
-- Illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
-  [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
-- Illustration by [Lāsma Artmane](https://unsplash.com/@lasmaa) on
-  [Unsplash](https://unsplash.com/photos/lighted-christmas-tree-surrounded-by-houses-5X8N9A2ruHM)
+- All other illustrations' sources are available in their respective course
+  materials

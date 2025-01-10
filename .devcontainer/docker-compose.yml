@@ -1,6 +1,6 @@
 services:
   devcontainer:
-    image: mcr.microsoft.com/devcontainers/javascript-node:20-bookworm
+    image: mcr.microsoft.com/devcontainers/base:bookworm
     volumes:
       - ../..:/workspaces:cached
     command: sleep infinity

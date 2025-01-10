@@ -40,7 +40,7 @@ style: |
     section:not([class=lead]) > p, blockquote {
         text-align: justify;
     }
-headingDivider: 4
+headingDivider: 6
 -->
 
 [web]:
@@ -50,8 +50,7 @@ headingDivider: 4
 [license]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
-[illustration]:
-  https://images.unsplash.com/photo-1529922331924-26e6a694629d?fit=crop&h=720
+[illustration]: ./images/main-illustration.jpg
 [course-material]:
   https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/COURSE_MATERIAL.md
 [course-material-qr-code]:

@@ -48,7 +48,7 @@ style: |
     .center {
         text-align: center;
     }
-headingDivider: 4
+headingDivider: 6
 -->
 
 [web]:

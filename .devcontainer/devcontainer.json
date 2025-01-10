@@ -3,6 +3,9 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "devcontainer",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -12,15 +15,19 @@
         "jebbs.plantuml",
         "marp-team.marp-vscode",
         "ms-vsliveshare.vsliveshare-pack",
-        "nvarner.typst-lsp",
+        "myriad-dreamin.tinymist",
         "redhat.vscode-yaml",
         "streetsidesoftware.code-spell-checker",
         "streetsidesoftware.code-spell-checker-french",
-        "tomoki1207.pdf"
-        // "yzhang.markdown-all-in-one"
+        "tomoki1207.pdf",
+        "yzhang.markdown-all-in-one"
       ]
     }
   },
+  // Map the user's SSH directory to the container for SSH signing
+  "mounts": [
+    "type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
+  ],
   // Execute the post-create.sh script once the container is created
   "postCreateCommand": "./.devcontainer/post-create.sh"
 }

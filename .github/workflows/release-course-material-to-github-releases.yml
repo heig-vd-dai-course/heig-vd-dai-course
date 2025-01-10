@@ -45,7 +45,7 @@ jobs:
           # rm --recursive 24-*
           # rm --recursive 25-*
           # rm --recursive 26-*
-          rm --recursive 99-material-for-the-teaching-staff
+          rm --recursive 99-resources-for-the-teaching-staff
 
       - name: Build course material content with Pandoc and weasyprint
         uses: docker://alpine:edge
