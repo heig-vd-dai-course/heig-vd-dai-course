@@ -268,11 +268,8 @@ stairs) on:
 We only have **6 minutes per group**. You decide what you want to show us and
 how you want to present it.
 
-**Come 5 minutes before your time slot** (mentioned in the presentation) with
-your computer. You will have access to a video projector.
-
-**Please state your group on GitHub Discussions before next week**. This will
-allow us to prepare the order of presentation.
+**Come 5 minutes before your time slot** with your computer. You will have
+access to a video projector.
 
 The order of presentation is random and is stated in the next tables:
 

@@ -415,16 +415,17 @@ More details for this section in the [course material][course-material].
 
 ### Presentations
 
-The practical work presentations will take place in **TBD** on:
+The practical work presentations will take place in **room B51a** (the same room
+as the first presentation) on:
 
 - DAI-TIC-B (Monday mornings): **20.01.2025**
 - DAI-TIC-C (Friday mornings): **24.01.2025**
 
-We only have **TBD minutes per group**. You decide what you want to show us and
-how you want to present it. **Come 5 minutes before your time slot** with your
-computer. You will have access to a beamer.
+We only have **7 minutes per group**. You decide what you want to show us and
+how you want to present it.
 
-**Please state your group on GitHub Discussions before next week.**
+**Come 5 minutes before your time slot** with your computer. You will have
+access to a video projector.
 
 ## Grades and feedback
 
