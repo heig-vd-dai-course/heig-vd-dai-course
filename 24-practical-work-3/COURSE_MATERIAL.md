@@ -282,8 +282,8 @@ The order of presentation is random and is stated in the next tables:
 
 | #   | Group                                                | Passage       |
 | --- | ---------------------------------------------------- | ------------- |
-| 1   | Alex Berberat, Lisa Gorgerat et Pierric Ripoll       | 08:19 - 08:26 |
-| 2   | Victor Nicolet, Colin Moschard                       | 08:28 - 08:35 |
+| 1   | Tristan Baud, Mario Ferreira and Mathieu Emery       | 08:19 - 08:26 |
+| 2   | Lestiboudois Maxime, Parisod Nathan and Surbeck Léon | 08:28 - 08:35 |
 | 3   | Gruber Adam - Pittet Axel                            | 08:37 - 08:44 |
 | 4   | Nathan Wulliamoz - Benjamin Kocher                   | 08:46 - 08:53 |
 | 5   | Rothen Evan, Thiébaud Jonathan                       | 08:55 - 09:02 |
@@ -291,11 +291,11 @@ The order of presentation is random and is stated in the next tables:
 | 7   | Leonard Cseres, Aude Laydu                           | 09:13 - 09:20 |
 | 8   | Drin Racaj, Nils Donatantonio, Esteban Giorgis       | 09:22 - 09:29 |
 | 9   | David Schildböck, Kénan Augsburger and Arno Tribolet | 09:31 - 09:38 |
-| 10  | Lestiboudois Maxime, Parisod Nathan and Surbeck Léon | 09:40 - 09:47 |
+| 10  | Alex Berberat, Lisa Gorgerat et Pierric Ripoll       | 09:40 - 09:47 |
 | 11  | Antoine Leresche & Robin Forestier                   | 09:49 - 09:56 |
 | 12  | Basile Buxtorf, Dorian Kury and Nicolas Carbonara    | 09:58 - 10:05 |
 | 13  | Mathéo Lopez, Emily Baquerizo, Kimberly Beyeler      | 10:07 - 10:14 |
-| 14  | Tristan Baud, Mario Ferreira and Mathieu Emery       | 10:16 - 10:23 |
+| 14  | Victor Nicolet, Colin Moschard                       | 10:16 - 10:23 |
 
 ### DAI-TIC-C (Friday mornings)
 
