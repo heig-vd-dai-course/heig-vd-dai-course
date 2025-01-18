@@ -24,7 +24,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
-- [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
@@ -66,8 +65,10 @@ application, a chess game, a shopping list, the simulation of an Internet of
 Things (IoT) network, etc. If you do not have any idea, come to see us and we
 can give you.
 
-Multiple groups can choose the same application protocol and you can share your
-methodology but please do not copy/paste code from other groups.
+Multiple groups can choose the same idea and you can share your methodology and
+take inspiration from/help each other. However, you are not allowed to
+plagiarize the code of another group. You will be penalized if you do so with 1
+as the final grade.
 
 ## Objectives
 
@@ -76,8 +77,6 @@ methodology but please do not copy/paste code from other groups.
   same time using the TCP and/or UDP protocol(s)
 - Package, publish and run a network application with Docker
 
-## Group composition
-
 You will work in groups of two or three students. You can choose your
 partner(s). If you do not have a partner, we will assign you one.
 
@@ -85,19 +84,20 @@ To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2024-2025 - Practical work 2 - First name Last name member 1,
+- **Title**: [DAI 2024-2025] Practical work 2 - First name Last name member 1,
   First name Last name member 2 and First name Last name member 3 (if
   applicable)
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> **Please do it a soon as possible**, even if you do not have a clear idea yet
-> as it will help us to plan the practical work presentations.
+> **Please do it a before the next week**, even if you do not have a clear idea
+> yet as it will help us to plan the practical work presentations.
 >
-> Please refer to the grading criteria to know what is expected from you.
+> **If you do not open the discussion before next week, you will be penalized
+> (-0.2 point on the final grade).**
 
 ## Idea validation
 
@@ -132,11 +132,14 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 1 - Git, GitHub and Markdown
 
-| #   | Criterion                                                                                                                                                                          | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 1   | The README is well structured and explains the purpose of your network application so new users can understand it                                                                  |    0.2 |
-| 2   | The README explains how to use your network application with examples and outputs so a new user/developer can understand your network application without having to run it locally |    0.2 |
-| 3   | The README describes explicit commands to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer   |    0.2 |
+If your repository is private, you must add us as collaborators to your
+repository!
+
+| #   | Criterion                                                                                                                                                                                       | Points |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 1   | The README is well structured and explains the purpose of your application with the authors' names so new users can understand it and know who is behind the application                        |    0.2 |
+| 2   | The README explains how to use your network application with **explicit examples** and outputs so a new user/developer can understand your network application without having to run it locally |    0.2 |
+| 3   | The README describes **explicit commands** to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer            |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
