@@ -1,6 +1,6 @@
 # Évaluation
 
-Cette évaluation porte sur les notions suivantes:
+Cette évaluation porte sur les notions suivantes :
 
 - HTTP et curl
 - Les infrastructures web

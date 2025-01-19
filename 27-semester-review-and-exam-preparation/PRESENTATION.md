@@ -189,9 +189,6 @@ _paginate: false
 
 [Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04-java-intellij-idea-and-maven)
 
-**This chapter will not be in the exam!** The other classes did not study this
-topic as deeply as you did.
-
 ![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/images/main-illustration.jpg?raw=true)
 
 ##### Key points to remember for this chapter
@@ -492,7 +489,7 @@ _paginate: false
 
 [Find this chapter on GitHub](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/20-ssh-and-scp)
 
-**This chapter will not be in the exam!** The other classes did not study this
+**This chapter will not be in the exam!** The other classe(s) did not study this
 topic.
 
 ![bg opacity:0.1](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/images/main-illustration.jpg?raw=true)
@@ -561,7 +558,7 @@ _paginate: false
 
 ##### Elements to improve for next year
 
-- Nothing much to improve in our opinion. Do you agree?
+- Improve the diagrams
 
 #### Caching and performance
 
@@ -615,24 +612,9 @@ Do not hesitate to share your project and to continue to work on it!
 
 ##### Elements to improve for next year
 
+- Better define the expectations between the DAI course and BDR course.
 - Nothing else to improve in our opinion. I think it is the perfect practical
   work to close the loop of the course. Do you agree?
-
-### Evaluations
-
-<!--
-_class: lead
-_paginate: false
--->
-
-![bg opacity:0.1][illustration]
-
-#### Elements to improve for next year
-
-- We will allow two double-sided sheets (so four single-sided sheets) of
-  personal notes for each evaluation to avoid confusion on the number
-- Some evaluations were a bit too long. We will try to improve that in the
-  future
 
 ### Course materials
 
@@ -653,6 +635,7 @@ _paginate: false
   their concrete class implementation to avoid confusion
 - Try out a new structure for the calendar/planning:
   [PR #560](https://github.com/heig-vd-dai-course/heig-vd-dai-course/pull/560)
+- Make usage of a quiz application to kickoff each course session
 
 ### Practical works
 
@@ -665,9 +648,28 @@ _paginate: false
 
 #### Elements to improve for next year
 
-- Improve even further the deadlines and expectations related to the
-  submissions:
+- Improve the deadlines and expectations related to the submissions:
   [PR #570](https://github.com/heig-vd-dai-course/heig-vd-dai-course/pull/570)
+- State the presentation time/question time more precisely
+- Add milestones from weeks to weeks to follow the advancement
+
+### Evaluations
+
+<!--
+_class: lead
+_paginate: false
+-->
+
+![bg opacity:0.1][illustration]
+
+#### Elements to improve for next year
+
+- We will allow two double-sided sheets (so four single-sided sheets) of
+  personal notes for each evaluation to avoid confusion on the number
+- Some evaluations were a bit too long. We will try to improve that in the
+  future
+- Some questions are still too vague
+- Some evaluations are still too long
 
 ### GAPS evaluation
 
@@ -678,16 +680,16 @@ Let's check these _beautiful_ charts!
 <small>You can find all Framasoft and GAPS evaluations
 [on the repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/27-semester-review-and-exam-preparation).</small>
 
-## Taboo questions
+## Remaining questions
 
-Here are some taboo questions we never take the time to discuss and I would like
-your opinion on them. There will be no judgement and no consequences. I just
-want to understand your point of view.
+Here are some remaining questions we never take the time to discuss and I would
+like your opinion on them. There will be no judgement and no consequences. I
+just want to understand your point of view.
 
-- Did you find the course too difficult?
+- Did you find the course too difficult or having too much content?
 - Did you feel the need to cheat during the semester?
 - Is there anything that you feel was not fair during the semester?
-- Do you have a taboo question you would like to ask?
+- Do you have a remaining question you would like to ask?
 
 ## Exam preparation
 
@@ -813,13 +815,13 @@ Thrive to learn more, and do not hesitate to share your knowledge with others.
 
 My personal closing remarks are the following:
 
-- **Always stay critical**! Don't believe everything you read or hear!
-- **Always ask yourself questions**! _Why?_ _How?_ _What?_ _Am I doing the right
-  thing for the right cause?_ _Do I listen to myself?_
-- **Always do what is good for you**! Health, relationships, friends are more
-  important than work! You are more important than work!
-- **Always trust yourself and your guts**! Do what you think is right!
-- **Help others, be kind**. Cooperation is better than competition!
+- **Always ask yourself the right questions**: _Why?_ _How?_ _What?_ _Am I doing
+  the right thing for the right cause?_ _Do I listen to myself?_
+- **Always do what is good for you**: Health, relationships, friends are more
+  important than work! _You_ are more important than work!
+- **Always trust yourself and your guts**: Do what you think is right!
+- **Help others, be kind**: Cooperation is better than competition!
+- **Stay critical**: Your opinion matters and can make a difference.
 
 ### Acknowledgements
 
