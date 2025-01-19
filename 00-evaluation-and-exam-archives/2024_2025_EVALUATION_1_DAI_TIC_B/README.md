@@ -1,6 +1,6 @@
 # DAI-TIC-B - Évaluation 1
 
-Cette évaluation porte sur les notions suivantes:
+Cette évaluation porte sur les notions suivantes :
 
 - Git, GitHub et Markdown
 - Java, IntelliJ IDEA et Maven

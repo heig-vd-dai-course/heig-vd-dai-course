@@ -1,6 +1,6 @@
 # Évaluation
 
-Cette évaluation porte sur les notions suivantes:
+Cette évaluation porte sur les notions suivantes :
 
 - Définir un protocol applicatif
 - SMTP et Telnet

@@ -1,6 +1,6 @@
-# Évaluation
+# DAI-TIC-C - Évaluation 2
 
-Cette évaluation porte sur les notions suivantes:
+Cette évaluation porte sur les notions suivantes :
 
 - Définir un protocol applicatif
 - Programmation TCP en Java
