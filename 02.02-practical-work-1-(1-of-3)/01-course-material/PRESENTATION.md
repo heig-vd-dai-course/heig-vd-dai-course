@@ -255,7 +255,7 @@ a small theater piece, etc., however:
 
 - No need to remind us the objectives (we know them)
 - No need to present us the code (we will grade it later)
-- Focus your presentation on the _"what"_ and the _"how"_
+- Focus your presentation on the _"what"_ and the _"why"_
 
 Aim to explain/pitch your project to someone that has a good technical
 understanding but has strictly no idea of your project and what it does and how
