@@ -16,16 +16,16 @@ sudo tar --extract --file /tmp/typst.tar.xz --strip-components=1 --directory /us
 
 rm /tmp/typst.tar.xz
 
-## Install Typst HEIG-VD template
+# ## Install Typst HEIG-VD template
 
-# Create the directory for the local packages
-mkdir -p ~/.local/share/typst/packages/local
+# # Create the directory for the local packages
+# mkdir -p ~/.local/share/typst/packages/local
 
-# Clone the repository
-git clone https://github.com/heig-vd-dai-course/heig-vd-dai-course-evaluation-and-exam-templates.git /tmp/heig-vd-dai-course-evaluation-and-exam-templates
+# # Clone the repository
+# git clone https://github.com/heig-vd-dai-course/heig-vd-dai-course-evaluation-and-exam-templates.git /tmp/heig-vd-dai-course-evaluation-and-exam-templates
 
-# Copy the template to the local packages directory
-cp -r /tmp/heig-vd-dai-course-evaluation-and-exam-templates/typst/heig-vd-evaluations-and-exams-template ~/.local/share/typst/packages/local
+# # Copy the template to the local packages directory
+# cp -r /tmp/heig-vd-dai-course-evaluation-and-exam-templates/typst/heig-vd-evaluations-and-exams-template ~/.local/share/typst/packages/local
 
-# Remove the temporary directory
-rm -rf /tmp/heig-vd-dai-course-evaluation-and-exam-templates
+# # Remove the temporary directory
+# rm -rf /tmp/heig-vd-dai-course-evaluation-and-exam-templates

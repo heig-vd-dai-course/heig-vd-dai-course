@@ -1,33 +1,40 @@
 {
-  "name": "HEIG-VD DAI Course Development Container",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "devcontainer",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "DavidAnson.vscode-markdownlint",
-        "esbenp.prettier-vscode",
-        "GitHub.copilot-chat",
-        "jebbs.plantuml",
-        "marp-team.marp-vscode",
-        "ms-vsliveshare.vsliveshare-pack",
-        "myriad-dreamin.tinymist",
-        "redhat.vscode-yaml",
-        "streetsidesoftware.code-spell-checker",
-        "streetsidesoftware.code-spell-checker-french",
-        "tomoki1207.pdf",
-        "yzhang.markdown-all-in-one"
-      ]
-    }
-  },
-  // Map the user's SSH directory to the container for SSH signing
-  "mounts": [
-    "type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
-  ],
-  // Execute the post-create.sh script once the container is created
-  "postCreateCommand": "./.devcontainer/post-create.sh"
+	"name": "HEIG-VD DAI Course Development Container",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "devcontainer",
+	"workspaceFolder": "/workspace",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/java:1": {
+			"jdkDistro": "tem",
+			// Prefer the Maven wrapper when available
+			"installMaven": true,
+			"version": 21
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"DavidAnson.vscode-markdownlint",
+				"esbenp.prettier-vscode",
+				"GitHub.copilot-chat",
+				"jebbs.plantuml",
+				"marp-team.marp-vscode",
+				"ms-vsliveshare.vsliveshare-pack",
+				"myriad-dreamin.tinymist",
+				"redhat.vscode-yaml",
+				"streetsidesoftware.code-spell-checker",
+				"streetsidesoftware.code-spell-checker-french",
+				"tomoki1207.pdf",
+				"vscjava.vscode-java-pack",
+				"yzhang.markdown-all-in-one"
+			]
+		}
+	},
+	// Map the user's SSH directory to the container for SSH signing
+	"mounts": [
+		"type=bind,source=${localEnv:HOME}/.ssh,target=${localEnv:HOME}/.ssh,type=bind,consistency=cached"
+	],
+	// Execute the post-create.sh script once the container is created
+	"postCreateCommand": ".devcontainer/post-create.sh"
 }
