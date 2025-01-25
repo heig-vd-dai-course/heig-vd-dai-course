@@ -125,56 +125,56 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 1 - Meta
 
-|   # | Criterion                                                                                                                                                                                               | Points |
-| --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-|   1 | The whole team contributes to the project and can explain it in details to share knowledge between the team                                                                                             |    0.2 |
-|   2 | A GitHub Discussion is opened during the first week of the project to explain the idea of the project so the teachers can validate the idea                                                             |    0.2 |
-|   3 | The GitHub Discussion is updated with the link to the repository and a related commit hash before the deadline - every 24 hours after the deadline will result in a -1 point penalty on the final grade |    0.2 |
+| #   | Criterion                                                                                                                                                                                               | Points |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+| 1   | The whole team contributes to the project and can explain it in details to share knowledge between the team                                                                                             |    0.2 |
+| 2   | A GitHub Discussion is opened during the first week of the project to explain the idea of the project so the teachers can validate the idea                                                             |    0.2 |
+| 3   | The GitHub Discussion is updated with the link to the repository and a related commit hash before the deadline - every 24 hours after the deadline will result in a -1 point penalty on the final grade |    0.2 |
 
 ### Category 2 - Git, GitHub and Markdown
 
 If your repository is private, you must add us as collaborators to your
 repository!
 
-|   # | Criterion                                                                                                                                                                                                                                           | Points |
-| --: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|   4 | Issues are created all along the project to describe new features, elements to improve, etc. to plan work                                                                                                                                           |    0.2 |
-|   5 | Pull requests are reviewed all along the project to integrate new work iteratively                                                                                                                                                                  |    0.2 |
-|   6 | The issue, pull request and commit messages are descriptive so a new comer can understand what has been done                                                                                                                                        |    0.2 |
-|   7 | The commits are signed to increase the security and the confidence of the project                                                                                                                                                                   |    0.2 |
-|   8 | The README has an introduction that explains the purpose of your application with the authors' names as well as all used dependencies so new users can understand the application purposes, know who is behind it and how the application was built |    0.2 |
-|   9 | The README explains how to use your application with **explicit examples and outputs** so a new user/developer can understand your application without having to run it locally                                                                     |    0.2 |
-|  10 | The README describes **explicit commands** to clone and build your application so new developers can start and develop your project on their own computer                                                                                           |    0.2 |
-|  11 | The repository contains meaningful example files to allow new users/developers (such as the teaching staff) to try out your application locally - these files can be the same as the ones used in the examples and outputs snippets                 |    0.2 |
+| #   | Criterion                                                                                                                                                                                                                                           | Points |
+| :-- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 4   | Issues are created all along the project to describe new features, elements to improve, etc. to plan work                                                                                                                                           |    0.2 |
+| 5   | Pull requests are reviewed all along the project to integrate new work iteratively                                                                                                                                                                  |    0.2 |
+| 6   | The issue, pull request and commit messages are descriptive so a new comer can understand what has been done                                                                                                                                        |    0.2 |
+| 7   | The commits are signed to increase the security and the confidence of the project                                                                                                                                                                   |    0.2 |
+| 8   | The README has an introduction that explains the purpose of your application with the authors' names as well as all used dependencies so new users can understand the application purposes, know who is behind it and how the application was built |    0.2 |
+| 9   | The README explains how to use your application with **explicit examples and outputs** so a new user/developer can understand your application without having to run it locally                                                                     |    0.2 |
+| 10  | The README describes **explicit commands** to clone and build your application so new developers can start and develop your project on their own computer                                                                                           |    0.2 |
+| 11  | The repository contains meaningful example files to allow new users/developers (such as the teaching staff) to try out your application locally - these files can be the same as the ones used in the examples and outputs snippets                 |    0.2 |
 
 ### Category 3 - Java, IntelliJ IDEA and Maven
 
-|   # | Criterion                                                                                                                                                                                          | Points |
-| --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|  12 | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase                                                    |    0.2 |
-|  13 | The codebase contains the two IntelliJ IDEA configuration files (_"Run the application"_ and _"Package application as JAR file"_) so developers can run and build the application within their IDE |    0.2 |
-|  14 | The codebase contains the Maven wrapper configuration file and scripts so developers can build the application without an IDE and without having to install Maven                                  |    0.2 |
-|  15 | The codebase is built with Maven and outputs an executable JAR file so the application can be ran everywhere Java is installed                                                                     |    0.2 |
-|  16 | The repository contains a gitignore file to ignore all unwanted files (Maven output, IntelliJ IDEA files related to local computer, etc.) to keep the repository clean and to avoid security leaks |    0.2 |
+| #   | Criterion                                                                                                                                                                                          | Points |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 12  | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase                                                    |    0.2 |
+| 13  | The codebase contains the two IntelliJ IDEA configuration files (_"Run the application"_ and _"Package application as JAR file"_) so developers can run and build the application within their IDE |    0.2 |
+| 14  | The codebase contains the Maven wrapper configuration file and scripts so developers can build the application without an IDE and without having to install Maven                                  |    0.2 |
+| 15  | The codebase is built with Maven and outputs an executable JAR file so the application can be ran everywhere Java is installed                                                                     |    0.2 |
+| 16  | The repository contains a gitignore file to ignore all unwanted files (Maven output, IntelliJ IDEA files related to local computer, etc.) to keep the repository clean and to avoid security leaks |    0.2 |
 
 ### Category 4 - Java IOs
 
-|   # | Criterion                                                                                                                         | Points |
-| --: | :-------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|  17 | The CLI offers at least two subcommands with comprehensive help messages using mandatory and optional arguments for customization |    0.2 |
-|  18 | The CLI processes the files efficiently                                                                                           |    0.2 |
-|  19 | The CLI processes the files so that they are compatible across operating systems/languages                                        |    0.2 |
-|  20 | The CLI correctly manages resources in case a problem occurs when processing the files                                            |    0.2 |
-|  21 | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s)                                      |    0.2 |
-|  22 | The CLI displays **explicit error messages** on invalid/missing inputs and/or processing errors                                   |    0.2 |
+| #   | Criterion                                                                                                                         | Points |
+| :-- | :-------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 17  | The CLI offers at least two subcommands with comprehensive help messages using mandatory and optional arguments for customization |    0.2 |
+| 18  | The CLI processes the files efficiently                                                                                           |    0.2 |
+| 19  | The CLI processes the files so that they are compatible across operating systems/languages                                        |    0.2 |
+| 20  | The CLI correctly manages resources in case a problem occurs when processing the files                                            |    0.2 |
+| 21  | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s)                                      |    0.2 |
+| 22  | The CLI displays **explicit error messages** on invalid/missing inputs and/or processing errors                                   |    0.2 |
 
 ### Category 5 - Presentation and questions
 
-|   # | Criterion                                                                                                                                                      | Points |
-| --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|  23 | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created and for which purpose |    0.2 |
-|  24 | A meaningful demo of the application is made to illustrate how the application works                                                                           |    0.2 |
-|  25 | The presentation is clear and well prepared, within the time limit, and everyone speaks during the presentation                                                |    0.2 |
+| #   | Criterion                                                                                                                                                      | Points |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 23  | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created and for which purpose |    0.2 |
+| 24  | A meaningful demo of the application is made to illustrate how the application works                                                                           |    0.2 |
+| 25  | The presentation is clear and well prepared, within the time limit, and everyone speaks during the presentation                                                |    0.2 |
 
 ## Constraints
 
