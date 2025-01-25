@@ -1,20 +1,13 @@
 #!/usr/bin/env sh
 
-## Error handling
-set -o errexit
-set -o pipefail
-set -o noclobber
-set -o nounset
-set -o functrace
-
 ## Variables
 WORKDIR=$(pwd)
 MARP_DOCKER_IMAGE="marpteam/marp-cli:v4.1.1"
 
 ## Script
-# Remove all previously generated presentations
-rm -f **/*-presentation.pdf || true
-rm -f **/index.html || true
+echo "Removing all previous generated presentations..."
+rm -f **/*/*-presentation.pdf || true
+rm -f **/*/index.html || true
 
 # Check if Marp is installed locally
 if command -v "marp-cli.js" > /dev/null 2>&1; then

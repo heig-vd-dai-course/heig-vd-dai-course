@@ -1,4 +1,4 @@
-name: HEIG-VD MVP Course GitHub Workflow
+name: HEIG-VD DAI Course GitHub Workflow
 
 # Allow one concurrent deployment
 concurrency:
@@ -7,10 +7,10 @@ concurrency:
 
 on:
   push:
-    # branches:
-    #   - main
-    # tags:
-    #   - "*"
+    branches:
+      - main
+    tags:
+      - "*"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages and to release to GitHub Releases
 permissions:
