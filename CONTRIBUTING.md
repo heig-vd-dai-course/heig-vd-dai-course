@@ -45,11 +45,11 @@ To generate diagrams, you can use the [PlantUML](https://plantuml.com/) local
 server.
 
 A local server is automatically available when using the Development Container
-at the following address: <http://localhost:8080/>.
+at the following address: <http://localhost:9090/>.
 
 ## Taking screenshots
 
-All window screenshots are taken with the `Screenshop.app` tool from Apple. You
+All window screenshots are taken with the `Screenshot.app` tool from Apple. You
 can open it with the `Command + Shift + 5` shortcut. **Show floating thumbnail**
 is enabled in the options.
 

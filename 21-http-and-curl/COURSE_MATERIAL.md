@@ -1820,7 +1820,7 @@ public class User {
   public String password;
 
   public User() {
-    // Empty constructor for serialisation/deserialization
+    // Empty constructor for serialization/deserialization
   }
 }
 ```
