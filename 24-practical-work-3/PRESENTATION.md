@@ -316,8 +316,8 @@ More details for this section in the [course material][course-material].
 - Create a GitHub Discussion to:
   - Announce your group members
   - Announce your idea (even a draft is fine)
-- **Do it as soon as possible before next week!**
-  - This helps us to plan the presentations
+- **Please do it a before the next week**, otherwise you will be penalized (-0.2
+  point on the final grade)
 
 ![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
 

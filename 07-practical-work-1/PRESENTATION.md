@@ -44,17 +44,17 @@ headingDivider: 6
 -->
 
 [web]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-practical-work-1/
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-practical-work-1/
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-practical-work-1/07-practical-work-1-presentation.pdf
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/07-practical-work-1/07-practical-work-1-presentation.pdf
 [license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5
 [illustration]: ./images/main-illustration.jpg
 [course-material]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
 [course-material-qr-code]:
-  https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/07-practical-work-1/COURSE_MATERIAL.md
 
 # Practical work 1
 
@@ -167,8 +167,8 @@ More details for this section in the [course material][course-material].
 - Create a GitHub Discussion to:
   - Announce your group members
   - Announce your idea (even a draft is fine)
-- **Do it as soon as possible before next week!**
-  - This helps us to plan the presentations
+- **Please do it a before the next week**, otherwise you will be penalized (-0.2
+  point on the final grade)
 
 ![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
 
@@ -264,6 +264,7 @@ Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
 
 - Add your team members to your repository as collaborators
 - This allows them to push directly to the repository
+- **If your project is private, do not forget to add the teaching staff!**
 
 ![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
 
@@ -276,6 +277,19 @@ Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
 - This is a good practice to guarantee quality
 
 ![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
+
+### How and what to present
+
+You are free to present your work as you want. You can use slides, a live demo,
+a small theater piece, etc., however:
+
+- No need to remind us the objectives (we know them)
+- No need to present us the code (we will grade it later)
+- Focus your presentation on the _"what"_ and the _"why"_
+
+Aim to explain/pitch your project to someone that has a good technical
+understanding but has strictly no idea of your project and what it does and how
+you have done it.
 
 ## Submission
 

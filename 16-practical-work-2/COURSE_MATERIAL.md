@@ -1,9 +1,9 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2/COURSE_MATERIAL.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-practical-work-2/16-practical-work-2-course-material.pdf
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-practical-work-2/16-practical-work-2-course-material.pdf
 [license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/117
 [illustration]: ./images/main-illustration.jpg
 
@@ -24,7 +24,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
-- [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
   - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
@@ -66,8 +65,10 @@ application, a chess game, a shopping list, the simulation of an Internet of
 Things (IoT) network, etc. If you do not have any idea, come to see us and we
 can give you.
 
-Multiple groups can choose the same application protocol and you can share your
-methodology but please do not copy/paste code from other groups.
+Multiple groups can choose the same idea and you can share your methodology and
+take inspiration from/help each other. However, you are not allowed to
+plagiarize the code of another group. You will be penalized if you do so with 1
+as the final grade.
 
 ## Objectives
 
@@ -76,8 +77,6 @@ methodology but please do not copy/paste code from other groups.
   same time using the TCP and/or UDP protocol(s)
 - Package, publish and run a network application with Docker
 
-## Group composition
-
 You will work in groups of two or three students. You can choose your
 partner(s). If you do not have a partner, we will assign you one.
 
@@ -85,19 +84,20 @@ To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2024-2025 - Practical work 2 - First name Last name member 1,
+- **Title**: [DAI 2024-2025] Practical work 2 - First name Last name member 1,
   First name Last name member 2 and First name Last name member 3 (if
   applicable)
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> **Please do it a soon as possible**, even if you do not have a clear idea yet
-> as it will help us to plan the practical work presentations.
+> **Please do it a before the next week**, even if you do not have a clear idea
+> yet as it will help us to plan the practical work presentations.
 >
-> Please refer to the grading criteria to know what is expected from you.
+> **If you do not open the discussion before next week, you will be penalized
+> (-0.2 point on the final grade).**
 
 ## Idea validation
 
@@ -132,11 +132,14 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 1 - Git, GitHub and Markdown
 
-| #   | Criterion                                                                                                                                                                          | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 1   | The README is well structured and explains the purpose of your network application so new users can understand it                                                                  |    0.2 |
-| 2   | The README explains how to use your network application with examples and outputs so a new user/developer can understand your network application without having to run it locally |    0.2 |
-| 3   | The README describes explicit commands to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer   |    0.2 |
+If your repository is private, you must add us as collaborators to your
+repository!
+
+| #   | Criterion                                                                                                                                                                                       | Points |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 1   | The README is well structured and explains the purpose of your application with the authors' names so new users can understand it and know who is behind the application                        |    0.2 |
+| 2   | The README explains how to use your network application with **explicit examples** and outputs so a new user/developer can understand your network application without having to run it locally |    0.2 |
+| 3   | The README describes **explicit commands** to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer            |    0.2 |
 
 ### Category 2 - Java, IntelliJ IDEA and Maven
 
@@ -184,18 +187,20 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 
 ### Category 7 - Presentation and questions
 
-| #   | Criterion                                                                                                                                                                | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-| 23  | The application is presented and a demo is made as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how |    0.2 |
-| 24  | The presentation is clear and well prepared - everyone speaks during the presentation                                                                                    |    0.2 |
-| 25  | The answers to the questions are correct                                                                                                                                 |    0.2 |
+| #   | Criterion                                                                                                                                                      | Points |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 23  | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created and for which purpose |    0.2 |
+| 24  | A meaningful demo of the application is made to illustrate how the application works                                                                           |    0.2 |
+| 25  | The presentation is clear and well prepared, within the time limit, and everyone speaks during the presentation                                                |    0.2 |
 
 ## Constraints
 
 - The application must be written in Java, compatible with Java 21
 - The application must be built using Maven with the `maven-shade-plugin` plugin
 - The application must use the picocli dependency
-- You can only use the Java classes seen in the course
+- You can only use the Java classes seen in the course to implement the network
+  application (you can use any other libraries for other aspects of the
+  application, such as UI, etc.)
 - Your application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word **slightly**, no
   need to shoot for the moon!)
