@@ -139,7 +139,7 @@ repository!
 | #   | Criterion                                                                                                                                                                                                                                           | Points |
 | :-- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
 | 4   | Issues are created all along the project to describe new features, elements to improve, etc. to plan work                                                                                                                                           |    0.2 |
-| 5   | Pull requests are reviewed all along the project to integrate new work iteratively                                                                                                                                                                  |    0.2 |
+| 5   | Pull requests are reviewed and merged all along the project to integrate new work iteratively                                                                                                                                                       |    0.2 |
 | 6   | The issue, pull request and commit messages are descriptive so a new comer can understand what has been done                                                                                                                                        |    0.2 |
 | 7   | The commits are signed to increase the security and the confidence of the project                                                                                                                                                                   |    0.2 |
 | 8   | The README has an introduction that explains the purpose of your application with the authors' names as well as all used dependencies so new users can understand the application purposes, know who is behind it and how the application was built |    0.2 |
@@ -220,16 +220,21 @@ If your implementation is too complex, we might penalize you.
 
 ### External dependencies
 
-You can use any other dependencies you want in your Maven project. You must
-however explain why and how you use it in your README.
+You can use any other dependencies you want in your Maven project with the
+dependencies available on the [Maven Repository](https://mvnrepository.com/) to
+help you build your application. You must however explain why and how you use it
+in your README.
 
 As mentioned in the [Constraints](#constraints) section, you cannot use an
-external dependency that manages the files for you (open/close).
+external dependency that manages the files for you (open/close the files).
 
 ### Add members to your repository
 
 You can add your team members to your repository as collaborators to allow them
 to push directly to the repository.
+
+**If your project is private, do not forget to add the teaching staff as
+collaborators to allow us to see your work!**
 
 ### Protect your main branch
 

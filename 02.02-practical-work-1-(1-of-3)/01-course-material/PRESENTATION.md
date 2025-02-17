@@ -235,6 +235,7 @@ Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
 
 - Add your team members to your repository as collaborators
 - This allows them to push directly to the repository
+- **If your project is private, do not forget to add the teaching staff!**
 
 ![bg right w:60%](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg)
 

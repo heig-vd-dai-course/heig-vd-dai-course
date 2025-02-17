@@ -188,18 +188,20 @@ repository!
 
 ### Category 7 - Presentation and questions
 
-| #   | Criterion                                                                                                                                                                | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-| 23  | The application is presented and a demo is made as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how |    0.2 |
-| 24  | The presentation is clear and well prepared - everyone speaks during the presentation                                                                                    |    0.2 |
-| 25  | The answers to the questions are correct                                                                                                                                 |    0.2 |
+| #   | Criterion                                                                                                                                                      | Points |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 23  | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created and for which purpose |    0.2 |
+| 24  | A meaningful demo of the application is made to illustrate how the application works                                                                           |    0.2 |
+| 25  | The presentation is clear and well prepared, within the time limit, and everyone speaks during the presentation                                                |    0.2 |
 
 ## Constraints
 
 - The application must be written in Java, compatible with Java 21
 - The application must be built using Maven with the `maven-shade-plugin` plugin
 - The application must use the picocli dependency
-- You can only use the Java classes seen in the course
+- You can only use the Java classes seen in the course to implement the network
+  application (you can use any other libraries for other aspects of the
+  application, such as UI, etc.)
 - Your application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word **slightly**, no
   need to shoot for the moon!)

@@ -210,11 +210,11 @@ repository!
 
 ### Category 9 - Presentation and questions
 
-| #   | Criterion                                                                                                                                                                    | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 23  | The web application is presented and a demo is made as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how |    0.2 |
-| 24  | The presentation is clear and well prepared - everyone speaks during the presentation                                                                                        |    0.2 |
-| 25  | The answers to the questions are correct                                                                                                                                     |    0.2 |
+| #   | Criterion                                                                                                                                                      | Points |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 23  | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created and for which purpose |    0.2 |
+| 24  | A meaningful demo of the application is made to illustrate how the application works                                                                           |    0.2 |
+| 25  | The presentation is clear and well prepared, within the time limit, and everyone speaks during the presentation                                                |    0.2 |
 
 ## Constraints
 
