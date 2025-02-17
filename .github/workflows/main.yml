@@ -87,19 +87,12 @@ jobs:
         with:
           name: course-presentations
 
-      - name: Calculate short SHA
-        run: echo "SHORT_SHA=${GITHUB_SHA::8}" >> $GITHUB_ENV
-
       - name: Release course presentations to GitHub Releases
         uses: softprops/action-gh-release@v2
         with:
           body: |
-            This new version contains the presentations in PDF format for the
-            [DAI](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573) course at
-            [HEIG-VD](https://heig-vd.ch), Switzerland.
+            This new version contains the presentations in PDF format for the [DAI](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573) course at [HEIG-VD](https://heig-vd.ch), Switzerland.
 
-            You can directly access the course material of this version with the following
-            link:
-            [Git commit SHA `${{ env.SHORT_SHA}}`](${{ github.event.repository.html_url }}/tree/${{ github.sha }}).
+            You can directly access the course material of this version with the following Git tag: [`${{ github.ref_name }}`](${{ github.event.repository.html_url }}/tree/${{ github.ref_name }}).
           files: |
             **/*/*-presentation.pdf
