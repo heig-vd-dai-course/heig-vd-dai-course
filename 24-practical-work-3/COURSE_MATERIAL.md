@@ -1,9 +1,9 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/24-practical-work-3/24-practical-work-3-course-material.pdf
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/24-practical-work-3/24-practical-work-3-course-material.pdf
 [license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
 [illustration]: ./images/main-illustration.jpg
 
@@ -96,19 +96,20 @@ To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2024-2025 - Practical work 3 - First name Last name member 1,
+- **Title**: [DAI 2024-2025] Practical work 3 - First name Last name member 1,
   First name Last name member 2 and First name Last name member 3 (if
   applicable)
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
   practical work
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> **Please do it a soon as possible**, even if you do not have a clear idea yet
-> as it will help us to plan the practical work presentations.
+> **Please do it a before the next week**, even if you do not have a clear idea
+> yet as it will help us to plan the practical work presentations.
 >
-> Please refer to the grading criteria to know what is expected from you.
+> **If you do not open the discussion before next week, you will be penalized
+> (-0.2 point on the final grade).**
 
 ## Idea validation
 
@@ -208,11 +209,11 @@ repository!
 
 ### Category 9 - Presentation and questions
 
-| #   | Criterion                                                                                                                                                                    | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 23  | The web application is presented and a demo is made as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how |    0.2 |
-| 24  | The presentation is clear and well prepared - everyone speaks during the presentation                                                                                        |    0.2 |
-| 25  | The answers to the questions are correct                                                                                                                                     |    0.2 |
+| #   | Criterion                                                                                                                                                      | Points |
+| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 23  | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created and for which purpose |    0.2 |
+| 24  | A meaningful demo of the application is made to illustrate how the application works                                                                           |    0.2 |
+| 25  | The presentation is clear and well prepared, within the time limit, and everyone speaks during the presentation                                                |    0.2 |
 
 ## Constraints
 
