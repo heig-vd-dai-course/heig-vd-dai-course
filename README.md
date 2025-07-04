@@ -1,121 +1,207 @@
-# HEIG-VD DAI Course [![License](https://img.shields.io/github/license/heig-vd-dai-course/heig-vd-dai-course)](./LICENSE.md)
+# HEIG-VD DAI Course
 
-The main repository to the
-[Développement d'applications internet (DAI) course](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
-at [HEIG-VD](https://heig-vd.ch), Switzerland!
+[![License](https://img.shields.io/github/license/heig-vd-dai-course/heig-vd-dai-course)](./LICENSE.md)
 
-## Getting started
+Welcome to the
+[Développement d'applications internet (DAI)](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
+teaching unit taught at
+[Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
+Switzerland!
+
+## 🎯 General objectives
+
+On completion of this course, the student will be able to:
+
+- Understand the principles of network communication and how to program
+  efficient network applications.
+- Use Java, Maven and Git/GitHub to develop network applications.
+- Define, implement and interact with various network applications using TCP,
+  UDP and HTTP protocols.
+- Deploy network applications in a containerized environment with Docker and
+  Docker Compose on a web infrastructure (servers, reverse proxies, caching,
+  etc.).
+
+Thanks to these skills, the student will be able to develop efficient and robust
+applications that can communicate over the network (for example, business
+applications, APIs, games, etc.).
+
+## ➡️ Getting started
 
 Do not know where to start? Have a look at the
 [Introduction and course organization](./01-introduction-and-course-organization/README.md)!
 
-## Course planning and material
+## 📅 Calendar
 
-This course is equivalent to 3 ECTS credits (= ~75-90 hours of work):
+This teaching unit is equivalent to three ECTS credits (~75-90 hours of work):
 
-- 48 hours in class (= 64 periods of 45 minutes)
+- 48 hours in class (= 64 periods of 45 minutes).
 - ~27-42 hours outside of the class - we try our best to ensure you do not have
-  to work that much outside of the class
+  to work that much outside of the class.
 
-64 periods in class are planned for this course, divided in 3 main parts:
+64 periods in class are planned for this course, divided in three main parts:
 
 - Part 1 - Input/output processing (18 periods)
 - Part 2 - Network programming with TCP and UDP (24 periods)
 - Part 3 - Network programming with HTTP (20 periods)
 
-The following table displays the course planning. It is subject to change. The
-week numbers are taken from the
+Details of each course within the teaching unit are available below. Each course
+is detailed with content, objectives, teaching and learning methods, and
+assessment methods.
+
+The week numbers are taken from the
 [_"HEIG-VD Calendrier académique"_](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-| Week                      | Course                                                                                                                                                                                                                                                                                                                           | Practical work                                               |
-| :------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
-| _To do before the course_ | _Considerations for a development environment_                                                                                                                                                                                                                                                                                   | _Set up a Windows development environment_                   |
-| 1                         | [Introduction and course organization](./01-introduction-and-course-organization/README.md)<br><br>[Introduction to part 1](./02-introduction-to-part-1/README.md)<br><br>[Git, GitHub and Markdown](./03-git-github-and-markdown/README.md)<br><br>[Java, IntelliJ IDEA and Maven](./04-java-intellij-idea-and-maven/README.md) | _No practical work_                                          |
-| 2                         | [Java IOs](./05-java-ios/README.md)                                                                                                                                                                                                                                                                                              | [Practical work 1 (1/4)](./07-practical-work-1/README.md)    |
-| 3                         | [Docker and Docker Compose](./06-docker-and-docker-compose/README.md)                                                                                                                                                                                                                                                            | [Practical work 1 (2/4)](./07-practical-work-1/README.md)    |
-| 4                         | 🚨 [Evaluation 1](./08-evaluation-1/README.md)                                                                                                                                                                                                                                                                                   | [Practical work 1 (3/4)](./07-practical-work-1/README.md)    |
-| 5                         | [Conclusion to part 1](./09-conclusion-to-part-1/README.md)<br><br>[Introduction to part 2](./10-introduction-to-part-2/README.md)<br><br>[SMTP and ncat](./15-smtp-and-ncat/README.md)                                                                                                                                          | 🚨 [Practical work 1 (4/4)](./07-practical-work-1/README.md) |
-| _Interdisciplinary week_  | _No course_                                                                                                                                                                                                                                                                                                                      | _No practical work_                                          |
-| 6                         | [Define an application protocol](./11-define-an-application-protocol/README.md)                                                                                                                                                                                                                                                  | [Practical work 2 (1/6)](./16-practical-work-2/README.md)    |
-| 7                         | [Java TCP programming](./12-java-tcp-programming/README.md)<br><br>[Java UDP programming](./13-java-udp-programming/README.md)                                                                                                                                                                                                   | [Practical work 2 (2/6)](./16-practical-work-2/README.md)    |
-| 8                         | _No course_                                                                                                                                                                                                                                                                                                                      | [Practical work 2 (3/6)](./16-practical-work-2/README.md)    |
-| 9                         | [Java network concurrency](./14-java-network-concurrency/README.md)                                                                                                                                                                                                                                                              | [Practical work 2 (4/6)](./16-practical-work-2/README.md)    |
-| 10                        | 🚨 [Evaluation 2](./17-evaluation-2/README.md)                                                                                                                                                                                                                                                                                   | [Practical work 2 (5/6)](./16-practical-work-2/README.md)    |
-| 11                        | [Conclusion to part 2](./18-conclusion-to-part-2/README.md)<br><br>[Introduction to part 3](./19-introduction-to-part-3/README.md)<br><br>[SSH and SCP](./20-ssh-and-scp/README.md)                                                                                                                                              | 🚨 [Practical work 2 (6/6)](./16-practical-work-2/README.md) |
-| 12                        | [HTTP and curl](./21-http-and-curl/README.md)                                                                                                                                                                                                                                                                                    | [Practical work 3 (1/4)](./24-practical-work-3/README.md)    |
-| 13                        | [Web infrastructures](./22-web-infrastructures/README.md)                                                                                                                                                                                                                                                                        | [Practical work 3 (2/4)](./24-practical-work-3/README.md)    |
-| _Holidays_                | _No course_                                                                                                                                                                                                                                                                                                                      | _No practical work_                                          |
-| _Holidays_                | _No course_                                                                                                                                                                                                                                                                                                                      | _No practical work_                                          |
-| 14                        | [Caching and performance](./23-caching-and-performance/README.md)                                                                                                                                                                                                                                                                | [Practical work 3 (3/4)](./24-practical-work-3/README.md)    |
-| 15                        | _No course_                                                                                                                                                                                                                                                                                                                      | 🚨 [Practical work 3 (4/4)](./24-practical-work-3/README.md) |
-| 16                        | 🚨 [Evaluation 3](./25-evaluation-3/README.md)<br><br>[Semester review and exam preparation](./27-semester-review-and-exam-preparation/README.md)                                                                                                                                                                                | _No practical work_                                          |
-| _Exam preparation_        | _No course_                                                                                                                                                                                                                                                                                                                      | _No practical work_                                          |
-| _Exam_                    | _No course_                                                                                                                                                                                                                                                                                                                      | _No practical work_                                          |
+| Week                                              | Content(s)                                                                                                                                                                                               | Redaction status[^redaction-status] |
+| :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------- |
+| [_Before the start of the semester_](#-course-00) | Set up a Windows development environment + Considerations for a development environment                                                                                                                  | 🔴 To do                            |
+| [1 (15.09. - 21.09.25)](#-course-01)              | Introduction and course organization + Introduction to part 1 - Input/output processing + Git, GitHub and Markdown + Java, IntelliJ IDEA and Maven                                                       | 🔴 To do                            |
+| [2 (22.09. - 28.09.25)](#-course-02)              | Java IOs + Practical work 1 - Input/output processing (1/3)                                                                                                                                              | 🔴 To do                            |
+| [3 (29.09. - 05.10.25)](#-course-03)              | Practical work 1 - Input/output processing (2/3)                                                                                                                                                         | 🔴 To do                            |
+| [4 (06.10. - 12.10.25)](#-course-04)              | Docker and Docker Compose + Practical work 1 - Input/output processing (3/3)                                                                                                                             | 🔴 To do                            |
+| 🚨 [5 (13.10. - 19.10.25)](#-course-05)           | Presentation of practical work 1 - Input/output processing + Conclusion to part 1 - Input/output processing + Introduction to part 2 - Network programming with TCP and UDP + SMTP and ncat              | 🔴 To do                            |
+| _Interdisciplinary week - 20.10. - 26.10.25_      | _No course_                                                                                                                                                                                              | 🔴 To do                            |
+| [6 (27.10. - 02.11.25)](#-course-06)              | Define an application protocol + Practical work 2 - Network programming with TCP and UDP (1/5)                                                                                                           | 🔴 To do                            |
+| [7 (03.11. - 09.11.25)](#-course-07)              | Java TCP programming + Practical work 2 - Network programming with TCP and UDP (2/5)                                                                                                                     | 🔴 To do                            |
+| [8 (10.11. - 16.11.25)](#-course-08)              | Java UDP programming + Practical work 2 - Network programming with TCP and UDP (3/5)                                                                                                                     | 🔴 To do                            |
+| [9 (17.11. - 23.11.25)](#-course-09)              | Java network concurrency + Practical work 2 - Network programming with TCP and UDP                                                                                                                       | 🔴 To do                            |
+| 🚨 [10 (24.11. - 30.11.25)](#-course-10)          | Evaluation 1 - Input/output processing + Network programming with TCP and UDP + Practical work 2 - Network programming with TCP and UDP (5/5)                                                            | 🔴 To do                            |
+| 🚨 [11 (01.12. - 07.12.25)](#-course-11)          | Presentation of practical work 2 - Network programming with TCP and UDP + Conclusion to part 2 - Network programming with TCP and UDP + Introduction to part 3 - Network programming with HTTP + SSH a + | 🔴 To do                            |
+| [12 (08.12. - 14.12.25)](#-course-12)             | HTTP and curl + Practical work 3 - Network programming with HTTP (1/4)                                                                                                                                   | 🔴 To do                            |
+| [13 (15.12. - 21.12.25)](#-course-13)             | Web infrastructures + Practical work 3 - Network programming with HTTP (2/4)                                                                                                                             | 🔴 To do                            |
+| _Holidays (22.12. - 28.12.25)_                    | _No course_                                                                                                                                                                                              | 🔴 To do                            |
+| _Holidays (29.12. - 04.01.26)_                    | _No course_                                                                                                                                                                                              | 🔴 To do                            |
+| [14 (05.01. - 11.01.26)](#-course-14)             | Caching and performance + Practical work 3 - Network programming with HTTP (3/4)                                                                                                                         | 🔴 To do                            |
+| 🚨 [15 (12.01. - 18.01.26)](#-course-15)          | Evaluation 2 - Network programming with HTTP + Practical work 3 - Network programming with HTTP (4/4)                                                                                                    | 🔴 To do                            |
+| 🚨 [16 (19.01. - 25.01.26)](#-course-16)          | Presentation of practical work 3 - Network programming with HTTP + Conclusion to part 3 - Network programming with HTTP + Semester review and exam preparation                                           | 🔴 To do                            |
+| _Exam preparation (26.01. - 01.02.26)_            | _No course_                                                                                                                                                                                              | 🔴 To do                            |
+| _Exam (02.02. - 08.02.26)_                        | _No course_                                                                                                                                                                                              | 🔴 To do                            |
 
-### Introduction
+## 🕛 Course 00
 
-- [1. Introduction and course organization](./01-introduction-and-course-organization/README.md)
+### Set up a Windows development environment
 
-### Part 1 - Input/output processing (18 periods)
+### Considerations for a development environment
 
-- [2. Introduction to part 1](./02-introduction-to-part-1/README.md)
-- [3. Git, GitHub and Markdown (2 periods)](./03-git-github-and-markdown/README.md)
-- [4. Java, IntelliJ IDEA and Maven (2 periods)](./04-java-intellij-idea-and-maven/README.md)
-- [5. Java IOs (2 periods)](./05-java-ios/README.md)
-- [6. Docker and Docker Compose (2 periods)](./06-docker-and-docker-compose/README.md)
-- [7. Practical work 1 (8 periods)](./07-practical-work-1/README.md)
-- [8. Evaluation 1 (2 periods)](./08-evaluation-1/README.md)
-- [9. Conclusion to part 1](./09-conclusion-to-part-1/README.md)
+## 🕐 Course 01
 
-### Part 2 - Network programming with TCP and UDP (24 periods)
+### Introduction and course organization
 
-- [10. Introduction to part 2](./10-introduction-to-part-2/README.md)
-- [11. Define an application protocol (2 periods)](./11-define-an-application-protocol/README.md)
-- [12. Java TCP programming (2 periods)](./12-java-tcp-programming/README.md)
-- [13. Java UDP programming (2 periods)](./13-java-udp-programming/README.md)
-- [14. Java network concurrency (2 periods)](./14-java-network-concurrency/README.md)
-- [15. SMTP and ncat (2 periods)](./15-smtp-and-ncat/README.md)
-- [16. Practical work 2 (12 periods)](./16-practical-work-2/README.md)
-- [17. Evaluation 2 (2 periods)](./17-evaluation-2/README.md)
-- [18. Conclusion to part 2](./18-conclusion-to-part-2/README.md)
+### Introduction to part 1 - Input/output processing
 
-### Part 3 - Network programming with HTTP (20 periods)
+### Git, GitHub and Markdown
 
-- [19. Introduction to part 3](./19-introduction-to-part-3/README.md)
-- [20. SSH and SCP (2 periods)](./20-ssh-and-scp/README.md)
-- [21. HTTP and curl (2 periods)](./21-http-and-curl/README.md)
-- [22. Web infrastructures (2 periods)](./22-web-infrastructures/README.md)
-- [23. Caching and performance (2 periods)](./23-caching-and-performance/README.md)
-- [24. Practical work 3 (10 periods)](./24-practical-work-3/README.md)
-- [25. Evaluation 3 (2 periods)](./25-evaluation-3/README.md)
-- [26. Conclusion to part 3](./26-conclusion-to-part-3/README.md)
+### Java, IntelliJ IDEA and Maven
 
-### Conclusion (2 periods)
+## 🕑 Course 02
 
-- [27. Semester review and exam preparation (2 periods)](./27-semester-review-and-exam-preparation/README.md)
+### Java IOs
 
-## GitHub Discussions
+### Practical work 1 - Input/output processing (1/3)
 
-GitHub Discussions are available at
-<https://github.com/orgs/heig-vd-dai-course/discussions>.
+## 🕒 Course 03
 
-## GitHub Teams
+### Practical work 1 - Input/output processing (2/3)
 
-GitHub Teams are available at
-<https://github.com/orgs/heig-vd-dai-course/teams>. The following teams are
-available:
+## 🕓 Course 04
 
-- Teaching staff (teachers and assistants)
-- Students (all students)
-- Old members (people who have completed the course)
+### Docker and Docker Compose
 
-## License
+### Practical work 1 - Input/output processing (3/3)
+
+## 🕔 Course 05
+
+### Presentation of practical work 1 - Input/output processing
+
+### Conclusion to part 1 - Input/output processing
+
+### Introduction to part 2 - Network programming with TCP and UDP
+
+### SMTP and ncat
+
+## 🕕 Course 06
+
+### Define an application protocol
+
+### Practical work 2 - Network programming with TCP and UDP (1/5)
+
+## 🕖 Course 07
+
+### Java TCP programming
+
+### Practical work 2 - Network programming with TCP and UDP (2/5)
+
+## 🕗 Course 08
+
+### Java UDP programming
+
+### Practical work 2 - Network programming with TCP and UDP (3/5)
+
+## 🕘 Course 09
+
+### Java network concurrency
+
+### Practical work 2 - Network programming with TCP and UDP (4/5)
+
+## 🕙 Course 10
+
+### Evaluation 1 - Input/output processing + Network programming with TCP and UDP
+
+### Practical work 2 - Network programming with TCP and UDP (5/5)
+
+## 🕚 Course 11
+
+### Presentation of practical work 2 - Network programming with TCP and UDP
+
+### Conclusion to part 2 - Network programming with TCP and UDP
+
+### Introduction to part 3 - Network programming with HTTP
+
+### SSH and SCP
+
+## 🕛 Course 12
+
+### HTTP and curl
+
+### Practical work 3 - Network programming with HTTP (1/4)
+
+## 🕜 Course 13
+
+### Web infrastructures
+
+### Practical work 3 - Network programming with HTTP (2/4)
+
+## 🕝 Course 14
+
+### Caching and performance
+
+### Practical work 3 - Network programming with HTTP (3/4)
+
+## 🕞 Course 15
+
+### Evaluation 2 - Network programming with HTTP
+
+### Practical work 3 - Network programming with HTTP (4/4)
+
+## 🕟 Course 16
+
+### Presentation of practical work 3 - Network programming with HTTP
+
+### Conclusion to part 3 - Network programming with HTTP
+
+### Semester review and exam preparation
+
+## 📜 License
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE.md)
 license.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please read the
 [`CONTRIBUTING.md`](./CONTRIBUTING.md) file for details.
+
+[^redaction-status]:
+
+🟢 Complete: the course is complete and ready for use. 🟡 In progress: the
+course is being written/updated. 🔴 To do: the course has not yet been written.
