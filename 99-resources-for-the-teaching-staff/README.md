@@ -17,7 +17,7 @@ the course.
   - [Mail sent for the practical works](#mail-sent-for-the-practical-works)
   - [Mail sent before the exam](#mail-sent-before-the-exam)
 - [After the course](#after-the-course)
-  - [Email sent after the 2023-2024 academic year](#email-sent-after-the-2023-2024-academic-year)
+  - [Email sent after the 2024-2025 academic year](#email-sent-after-the-2024-2025-academic-year)
 
 ## Philosophy of the course
 
@@ -123,10 +123,12 @@ not give them the fish, I teach them how to fish.
   without the header and footer.
 - Create the feedback forms on [Framaform](https://framaforms.org/) for the
   feedback during the course (before the GAPS evaluations)
+
 - Hide (mark as _"outdated"_) all chapters feedback in
   [GitHub Discussions](https://github.com/orgs/heig-vd-dai-course/discussions/categories/polls)
 - Reset the [organization README](https://github.com/heig-vd-dai-course/.github)
   with the new information for the new academic year
+- Prepare and print all payement sheets for the semester
 
 ### Email sent before the 2024-2025 academic year
 
@@ -135,7 +137,7 @@ not give them the fish, I teach them how to fish.
 
 Bonjour tout le monde,
 
-J'espère que vous avez passé un bel été et que vous vous sentez prêt-e-s pour cette nouvelle année qui va commencer.
+J'espère que vous avez passé un bel été et que vous vous sentez prêt.es pour cette nouvelle année qui va commencer.
 
 Je serai votre enseignant pour le cours Développement d'Applications Internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver lundi pour la première leçon.
 
@@ -146,7 +148,15 @@ Vous trouverez toutes les informations sur le cours dans cette organisation GitH
 - Organisation GitHub - https://github.com/heig-vd-dai-course
 - Planning - https://github.com/orgs/heig-vd-dai-course/projects
 
+<<<<<<< HEAD:99-resources-for-the-teaching-staff/README.md
 Certains chapitres sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné-e-s si vous voyez des changements dans les prochains jours et/ou au cours du semestre.
+=======
+<<<<<<< Updated upstream:99-material-for-the-teaching-staff/README.md
+Pour les personnes sous Windows, je vous recommande vivement d'installer et configurer Windows Subsystem for Linux (WSL 2) ou GitBash pour suivre ce cours. L'un ou l'autre de ces outils sera utile pour certaines parties du cours et vous rencontrerez moins de soucis. Vous pouvez suivre le tutoriel suivant pour installer et configurer WSL 2 : https://learn.microsoft.com/en-us/windows/wsl/install ou GitBash: https://gitforwindows.org/.
+=======
+Certains chapitres sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou au cours du semestre.
+>>>>>>> Stashed changes:99-resources-for-the-teaching-staff/README.md
+>>>>>>> 6b9e7ca (Add updated files for development environment):99-material-for-the-teaching-staff/README.md
 
 Pour vous préparer au mieux pour le début du cours, je vous demande de lire et suivre les ressources suivantes pour installer et configurer votre environnement de travail qui sera utilisé durant toute la durée du cours :
 
@@ -310,43 +320,44 @@ Ludovic Delafontaine et Hadrien Louis
   - For the `.github` repository
 - Lock and archive all GitHub Discussions for the given year
 - Lock and archive the planning in the course project for the given year
-- Remove the students from `.github` repository for a clean start next year
 - Move all members of the organization to the
   [`@old-members`](https://github.com/orgs/heig-vd-dai-course/teams/old-members)
   team
 - Send an email to all students to thank them for their participation with:
   - A link to both Git tags for a future reference
 
-### Email sent after the 2023-2024 academic year
+### Email sent after the 2024-2025 academic year
 
 ```text
-[DAI 2023-2024] Archives du cours et remerciements
+[DAI 2024-2025] Archives du cours et remerciements
 
 Bonjour tout le monde,
 
-J'espère que vous allez bien et que vous avez pu vous reposer après vos examens.
+J'espère que vous allez bien et que vous avez pu vous reposer après vos examens et profiter de la semaine de vacances.
 
-Dès la fin du mois de février, les machines virtuelles que vous avez utilisées pour le dernier travail pratique vont être détruites. Si vous avez des choses à récupérer dessus, vous avez jusqu'à la fin du mois pour le faire. Sachez aussi que vous pouvez reproduire ce genre d'infrastructure chez vous avec simplement un vieil ordinateur/un Raspberry Pi, installer Linux, Docker et Docker Compose dessus et vous pouvez avoir votre propre petit serveur pour héberger vos propres services. Vous êtes des expert-e-s maintenant ! 🙂
+J'ai oublié de vous transmettre dans les retours du travail pratique 3 que les machines virtuelles que vous avez utilisées sur Azure peuvent être détruites si vous souhaitez conserver les crédits (n'oubliez pas de sauvegarder les données importantes si vous en avez !). Sachez aussi que vous pouvez reproduire ce genre d'infrastructure chez vous avec simplement un vieil ordinateur/un Raspberry Pi, y installer Linux, Docker et Docker Compose et avoir votre propre petit serveur pour héberger vos propres services. Vous êtes des expert.es maintenant ! 🙂
 
 En parallèle, je vais archiver les discussions et le planning du cours DAI pour l'année prochaine. Je vais vous déplacer dans l'équipe "Old members" (https://github.com/orgs/heig-vd-dai-course/teams/old-members) afin que vous ne receviez plus de notifications dans le futur. Si vous préférez quitter l'organisation GitHub, cela ne me dérange pas.
 
-Si vous souhaitez retrouver l'état du cours tel qu'il était à la fin de celui-ci, vous pouvez vous référer aux tags suivants :
+Si vous souhaitez retrouver l'état du cours tel qu'il était à la fin de celui-ci, vous pouvez vous référer aux tags Git suivants :
 
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course/releases/tag/dai-2023-2024
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions/releases/tag/dai-2023-2024
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/releases/tag/dai-2023-2024
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content-template/releases/tag/dai-2023-2024
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template/releases/tag/dai-2023-2024
-- https://github.com/heig-vd-dai-course/.github/releases/tag/dai-2023-2024
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/dai-2024-2025
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/dai-2024-2025
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions/tree/dai-2024-2025
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content-template/tree/dai-2024-2025
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content-template/tree/dai-2024-2025
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template/tree/dai-2024-2025
+- https://github.com/heig-vd-dai-course/.github/tree/dai-2024-2025
+- https://github.com/orgs/heig-vd-dai-course/projects/2
 
 Vous pourrez ainsi toujours accéder aux versions passées et futures du cours pour retrouver des informations ou des exemples.
 
 Si vous avez des questions, des remarques ou des commentaires, n'hésitez pas à me contacter. Je suis toujours joignable, que ce soit pour le cours ou pour autre chose.
 
-Je tenais à profiter de ce mail pour sincèrement vous remercier pour votre participation et votre implication au cours. J'ai apprécié vous avoir eu comme étudiant-e-s et je considère avoir beaucoup appris de vous. J'espère que les éléments vus en cours vous seront utiles pour votre futur. Je vous encourage à continuer à vous former et à vous renseigner sur les sujets qui vous intéressent et à rester curieux-ses.
+Je tenais à profiter de ce mail pour sincèrement vous remercier pour votre participation et votre implication au cours. J'ai apprécié vous avoir eu comme étudiant.es et je considère avoir beaucoup appris de vous. J'espère que les éléments vus en cours vous seront utiles pour votre futur. Je vous encourage à continuer à vous former et à vous renseigner sur les sujets qui vous intéressent et à rester curieux.ses.
 
-Je parle en mon nom et aussi en celui d'Hadrien pour vous souhaiter une bonne continuation dans vos études et dans votre vie professionnelle. Nous vous souhaitons le meilleur pour la suite !
+Je parle en mon nom et aussi en celui de Géraud et d'Hadrien pour vous souhaiter une bonne continuation dans vos études et dans votre vie professionnelle. Nous vous souhaitons le meilleur pour la suite !
 
-Au plaisir de vous recroiser à l'occasion autour d'un café ou d'une bière (peut-être au Baleinev ?) !
-Ludovic Delafontaine et Hadrien Louis
+Au plaisir de vous recroiser,
+Ludovic Delafontaine, Géraud Silvestri et Hadrien Louis
 ```

@@ -1,0 +1,330 @@
+/*
+ * Custom Marp theme
+ *
+ * Inspired by https://github.com/marp-team/marp-core/blob/main/themes/README.md
+
+ * @theme custom-marp-theme
+ * @author L. Delafontaine
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css";
+
+/* Colors */
+
+:root {
+	--color-primary: #f96;
+	--color-secondary: #7d8ca3;
+	--color-normal: #333;
+	--color-dimmed: #888;
+	--color-background: #fff;
+	--color-code-background: #f6f8fa;
+	--color-code-foreground: #1f2328;
+	--color-table-stripe: #f6f8fa;
+	--color-table-border: #d1d9e0;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-secondary);
+	margin: 0.5em 0 0;
+	font-size: 1.5rem;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+	font-weight: inherit;
+	color: var(--color-primary);
+}
+
+h1::part(auto-scaling),
+h2::part(auto-scaling),
+h3::part(auto-scaling),
+h4::part(auto-scaling),
+h5::part(auto-scaling),
+h6::part(auto-scaling) {
+	max-height: 580px;
+}
+
+h1 a:link,
+h2 a:link,
+h3 a:link,
+h4 a:link,
+h5 a:link,
+h6 a:link {
+	text-decoration: none;
+}
+
+/* Header and footer */
+
+header,
+footer,
+section::after {
+	box-sizing: border-box;
+	font-size: 66%;
+	height: 70px;
+	line-height: 50px;
+	overflow: hidden;
+	padding: 10px 25px;
+	position: absolute;
+}
+
+header {
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+footer {
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* Paragraphs and lists */
+
+p,
+blockquote {
+	margin: 1em 0 0;
+}
+
+ul > li,
+ol > li {
+	margin: 0.3em 0 0;
+}
+ul > li > p,
+ol > li > p {
+	margin: 0.6em 0 0;
+}
+
+/* Code */
+
+code {
+	display: inline-block;
+	font-family: "Roboto Mono", monospace;
+	font-size: 0.8em;
+	letter-spacing: 0;
+	margin: -0.1em 0.15em;
+	padding: 0.1em 0.2em;
+	vertical-align: baseline;
+}
+
+pre {
+	display: block;
+	margin: 1em 0 0;
+	overflow: visible;
+}
+pre code {
+	box-sizing: border-box;
+	margin: 0;
+	min-width: 100%;
+	padding: 0.5em;
+	font-size: 0.7em;
+}
+pre::part(auto-scaling) {
+	max-height: calc(580px - 1em);
+}
+
+mark {
+	background: transparent;
+}
+
+section code {
+	background-color: var(--color-code-background);
+	color: var(--color-code-foreground);
+}
+
+section pre {
+	background-color: var(--color-code-background);
+	padding: 0.2em;
+}
+
+section pre > code {
+	background: transparent;
+}
+
+/* Table */
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: 1em 0 0;
+	width: 100%;
+}
+
+table th,
+table td {
+	padding: 0.2em 0.4em;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-table-border);
+}
+
+section table th,
+section table td {
+	border-color: var(--color-normal);
+}
+section table thead th {
+	background: var(--color-normal);
+	color: var(--color-background);
+}
+section table tbody > tr:nth-child(even) td,
+section table tbody > tr:nth-child(even) th {
+	background: var(--color-table-stripe, transparent);
+}
+
+/* Section */
+
+section {
+	background-color: var(--color-background);
+	color: var(--color-normal);
+	font-size: 35px;
+	font-family: Lato, "Avenir Next", Avenir, "Trebuchet MS", "Segoe UI",
+		sans-serif;
+	height: 720px;
+	line-height: 1.35;
+	letter-spacing: 1.25px;
+	padding: 70px;
+	width: 1280px;
+	word-wrap: break-word;
+}
+
+section:has(h1) {
+	padding: 50px;
+}
+
+section a,
+section mark {
+	color: var(--color-primary);
+}
+
+section header,
+section footer,
+section section::after,
+section blockquote::before,
+section blockquote::after {
+	color: var(--color-dimmed);
+}
+
+section:has(h1) > header {
+	display: none;
+}
+
+section > header {
+	font-size: 20px;
+}
+
+section.lead {
+	place-content: safe center center;
+	flex-flow: column nowrap;
+	align-items: stretch;
+}
+
+section.lead h1,
+section.lead h2,
+section.lead h3,
+section.lead h4,
+section.lead h5,
+section.lead h6,
+section.lead p {
+	text-align: center;
+}
+
+section.lead blockquote > h1,
+section.lead blockquote > h2,
+section.lead blockquote > h3,
+section.lead blockquote > h4,
+section.lead blockquote > h5,
+section.lead blockquote > h6,
+section.lead blockquote > p,
+section.lead ul > li > p,
+section.lead ol > li > p {
+	text-align: left;
+}
+
+section.lead table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section::after {
+	right: 0;
+	bottom: 0;
+	font-size: 80%;
+}
+section > *:first-child,
+section > header:first-child + * {
+	margin-top: 0;
+}
+
+section:not(.lead) > p,
+blockquote {
+	text-align: justify;
+}
+
+/* Blockquote */
+
+blockquote {
+	font-style: italic;
+	margin: 1em 0 0;
+	padding: 0 1em;
+	position: relative;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "“";
+	display: block;
+	font-family: "Times New Roman", serif;
+	font-weight: bold;
+	position: absolute;
+}
+
+blockquote::before {
+	top: 0;
+	left: 0;
+}
+
+blockquote::after {
+	right: 0;
+	bottom: 0;
+	transform: rotate(180deg);
+}
+
+blockquote > *:first-child {
+	margin-top: 0;
+}
+
+/* Custom classes */
+
+.columns-half {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+.center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
