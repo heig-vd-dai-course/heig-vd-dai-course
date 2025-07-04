@@ -1,3 +1,4 @@
-# Course 11
+# HEIG-VD DAI - Course 11
 
-This directory contains all content for the course 12.
+This directory contains all content for the course 11 of the DAI teaching unit
+at HEIG-VD.

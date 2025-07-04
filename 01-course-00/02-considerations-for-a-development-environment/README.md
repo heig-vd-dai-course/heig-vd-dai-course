@@ -1,11 +1,26 @@
 # Considerations for a development environment
 
+L. Delafontaine and H. Louis, with the help of GitHub Copilot.
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
+
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Do not store your projets' sources on a cloud provider](#do-not-store-your-projets-sources-on-a-cloud-provider)
+- [Use Git to synchronize your sources between your computer and the cloud](#use-git-to-synchronize-your-sources-between-your-computer-and-the-cloud)
+- [Take some time to organize your files on your computer](#take-some-time-to-organize-your-files-on-your-computer)
+- [Always open your project from your IDE](#always-open-your-project-from-your-ide)
+
+## Introduction
+
 Here are some considerations to take into account when setting up your
 development environment.
 
 This list is not exhaustive and you may have other preferences. Feel free to
 adapt it to your needs. However, these are some good practices that can help you
-to be more productive and encouter less issues.
+to be more productive and encounter less issues.
 
 ## Do not store your projets' sources on a cloud provider
 
@@ -39,7 +54,7 @@ Take some time to organize your files in a way that makes sense to you. Here is
 one proposition:
 
 ```text
-/home/USERNAME
+/home/<your-username>
 ├── heig-vd
 │   └── dai
 │       ├── course-material
@@ -67,3 +82,6 @@ potential of your IDE.
 Modern IDEs are powerful tools that can help you to be more productive. Take
 some time to learn how to use your IDE to its full potential to save time and be
 more efficient.
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md

@@ -1,6 +1,3 @@
-[license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-
 # Set up a Windows development environment
 
 L. Delafontaine and H. Louis, with the help of GitHub Copilot.
@@ -52,7 +49,7 @@ From our experience, software development on Windows can be more difficult than
 Linux or macOS.
 
 This guide will help you to set up a Linux environment on your Windows computer
-to be able to follow the course (and beyond).
+to be able to follow the teaching unit (and beyond).
 
 This guide is inspired from the following sources:
 
@@ -61,8 +58,8 @@ This guide is inspired from the following sources:
 
 If you have any issues with the below guide, check the
 [Troubleshooting](#troubleshooting) section. Feel free to ask for help if you
-are stuck but please, try the [Troubleshooting](#troubleshooting) section before
-coming to us.
+have issues but please, try the [Troubleshooting](#troubleshooting) section
+before coming to us.
 
 ## Update Windows
 
@@ -72,6 +69,9 @@ your Windows installation is up to date.
 You can check for updates by going to **Settings > Update & Security > Windows
 Update**.
 
+Install any available updates and restart your computer if necessary. You can
+now continue with the installation of the development environment.
+
 ## Install and configure Windows Subsystem for Linux (WSL)
 
 This section will guide you through the process of installing and configuring
@@ -79,9 +79,9 @@ Windows Subsystem for Linux (WSL) on your Windows installation.
 
 ### Install WSL
 
-WSL is a compatibility layer for running Linux binary executables natively on
-Windows. It is a very useful tool for developers who want to use Linux tools and
-utilities on Windows.
+Windows Subsystem for Linux (called _"WSL"_) is a compatibility layer for
+running Linux binary executables natively on Windows. It is a very useful tool
+for developers who want to use Linux tools and utilities on Windows.
 
 To install WSL, search "_PowerShell_" in the Start menu, right-click on it, and
 select _"Run as administrator"_ as shown in the following screenshot:
@@ -116,7 +116,11 @@ Restart your computer once the installation is complete.
 
 ### Update WSL
 
-WSL can still be in version 1 and must be updated to version 2.
+Computers can be shipped with WSL version 1 or 2. WSL version 2 is the latest
+version and is recommended. It provides better performance and more features
+than version 1.
+
+As WSL can still be in version 1, you must update it to version 2.
 
 To do so, open PowerShell as administrator as shown in the previous section and
 run the following command in the terminal:
@@ -178,12 +182,23 @@ openSUSE-Tumbleweed                    openSUSE Tumbleweed
 
 You can then install a Linux distribution of your choice from the above list. We
 recommend installing Ubuntu if you are not familiar with Linux as it is a very
-user-friendly distribution and is widely used. All commands in this course will
-be run in Ubuntu.
+user-friendly distribution and is widely used. All commands in this teaching
+unit will be run in Ubuntu.
+
+Using the list of available you have on your computer, identify the latest
+Ubuntu distribution available. In this example, the latest Ubuntu distribution
+is `Ubuntu-22.04`. **Yours will likely be more recent**.
+
+> [!IMPORTANT]
+>
+> Install the latest version of Ubuntu available in **your** list. The version
+> `Ubuntu-22.04` is the latest version at the time of writing this guide, but
+> yours should be more recent. Install the latest version available in **your**
+> list.
 
 ```powershell
 # Install Ubuntu
-wsl --install --distribution Ubuntu
+wsl --install --distribution Ubuntu-<latest-version>
 ```
 
 Once the installation is complete, you can set up a username and password for
@@ -289,7 +304,7 @@ Check the [Tips and tricks](#tips-and-tricks) section for more information.
 
 Windows has added an entry to the File Explorer sidebar for the Ubuntu
 distribution. You can access your Ubuntu files in the
-`\\wsl$\Ubuntu\home\YOUR_USERNAME` directory.
+`\\wsl$\Ubuntu-<your-version>\home\<your-username>` directory.
 
 > [!CAUTION]
 >
@@ -304,7 +319,8 @@ distribution. You can access your Ubuntu files in the
 
 ### Install Windows Terminal
 
-Windows comes with a terminal application called _"Command Prompt"_.
+Windows comes pre-installed with a terminal application called _"Command
+Prompt"_.
 
 It is a very basic terminal application that does not support many features that
 are available in modern terminal applications. Microsoft has developed a new
@@ -325,8 +341,8 @@ Install it and open it.
 
 ### Configure Windows Terminal
 
-By default, Windows Terminal will open PowerShell. Now that you have installed
-Windows Terminal, you can configure it to open WSL by default.
+By default, Windows Terminal will open PowerShell. You can configure it to open
+WSL by default.
 
 Access the settings by clicking on the down arrow in the title bar and selecting
 "Settings". Set the two following settings:
@@ -346,8 +362,15 @@ shells, and many other features.
 You now have access to a Linux distribution on your Windows machine. You can use
 it to run Linux commands and utilities on Windows.
 
-All future commands in this guide and course will be run in the Ubuntu terminal
-unless specified otherwise.
+**All future commands in this guide and teaching unit will be run in the Ubuntu
+terminal unless specified otherwise.**
+
+> [!IMPORTANT]
+>
+> **All future commands in this guide and teaching unit will be run in the
+> Ubuntu terminal unless specified otherwise.** Whenever you see a command in
+> the teaching unit, it is meant to be run in the Ubuntu terminal. No other
+> environment will be supported (GitBash, Cygwin, etc.).
 
 You can always open a PowerShell terminal by clicking on the down arrow in the
 title bar and selecting "Windows PowerShell".
@@ -386,9 +409,9 @@ running the commands:
 > [WinGet](https://learn.microsoft.com/windows/package-manager/),
 > [Chocolatey](https://chocolatey.org/) or [Scoop](https://scoop.sh/).
 >
-> These package managers are not required for this course but can be useful if
-> you want to easily install and update packages on Windows as you would on
-> Linux.
+> These package managers are not required for this teaching unit but can be
+> useful if you want to easily install and update packages on Windows as you
+> would on Linux.
 
 ```bash
 # Update the package list
@@ -421,7 +444,7 @@ is isolated from the rest of the system.
 > At the moment, only Windows Defender is supported. If you are using another
 > antivirus software, you will need to check the documentation of your antivirus
 > software to exclude WSL from it. The path to exclude if you have installed
-> Ubuntu as the main WSL distribution is `\\wsl$\Ubuntu`.
+> Ubuntu as the main WSL distribution is `\\wsl$\Ubuntu-<your-version>`.
 >
 > If you want to add your antivirus software to this guide, feel free to open an
 > issue and submit a pull request (more on this in a later course).
@@ -440,7 +463,7 @@ previous section:
 
 ```powershell
 # Exclude the WSL distribution from Windows Defender
-Add-MpPreference -ExclusionPath '\\wsl$\Ubuntu'
+Add-MpPreference -ExclusionPath '\\wsl$\Ubuntu-<your-version>'
 ```
 
 ![Exclude WSL distribution from Windows Defender](./images/windows-defender.png)
@@ -451,7 +474,7 @@ You should do this for each distribution you have installed.
 
 Before continuing with the installation and configuration of your Integrated
 Development Environment (IDE) and other tools, you should check the
-[Considerations for a development environment](./CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
+[Considerations for a development environment](../02-considerations-for-a-development-environment/README.md)
 guide.
 
 ## Validate the installation
@@ -469,19 +492,19 @@ You can use the following checklist to validate the installation:
 - [x] You can run Linux commands in the Ubuntu terminal.
 - [x] You have checked the [Tips and tricks](#tips-and-tricks) section.
 - [x] You have checked the
-      [Considerations for a development environment](./CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
+      [Considerations for a development environment](../02-considerations-for-a-development-environment/README.md)
       guide.
 - [x] You have now a sense of how to manage your personal files in WSL and how
       they differ from the ones in Windows.
 
 From now on, you can use WSL as your primary development environment for the
-rest of the course. We will expect you to use WSL in all the assignments and
-projects.
+rest of the teaching unit. We will expect you to use WSL in all the assignments
+and projects.
 
 > [!CAUTION]
 >
-> **All** commands that you will run in the course will be run in the Ubuntu
-> terminal unless specified otherwise.
+> **All** commands that you will run in the teaching unit will be run in the
+> Ubuntu terminal unless specified otherwise.
 >
 > No other environment will be supported (GitBash, Cygwin, etc.).
 
@@ -495,8 +518,8 @@ of your Integrated Development Environment (IDE) to access and use the WSL
 distribution.
 
 You should follow the instructions for the IDE that is recommended for the
-course you are following. Come back to this document once you are asked to use
-the provided IDE.
+teaching unit you are following. Come back to this document once you are asked
+to use the provided IDE.
 
 - [Install and configure IntelliJ IDEA to access WSL](#install-and-configure-intellij-idea-to-access-wsl)
 - _More IDEs to come soon_
@@ -505,9 +528,9 @@ the provided IDE.
 
 > [!NOTE]
 >
-> Follow these instructions when requested in the course. If you are following
-> this guide for the first time, you can skip this section and go straight to
-> the [Tips and tricks](#tips-and-tricks) section.
+> Follow these instructions when requested in the teaching unit. If you are
+> following this guide for the first time, you can skip this section and go
+> straight to the [Tips and tricks](#tips-and-tricks) section.
 
 _Inspired by the
 [How to use WSL development environment in JetBrains products by JetBrains](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
@@ -589,9 +612,9 @@ in the course material.
 > [!CAUTION]
 >
 > Always create your projects in your WSL home directory
-> (`\\wsl$\Ubuntu\home\USERNAME`) to avoid permission issues and odd file
-> behaviors. See the [Tips and tricks](#tips-and-tricks) section for more
-> information.
+> (`\\wsl$\Ubuntu-<your-version>\home\<your-username>`) to avoid permission
+> issues and odd file behaviors. See the [Tips and tricks](#tips-and-tricks)
+> section for more information.
 
 ![Create a new project in IntelliJ IDEA](./images/intellij-idea-new-project.png)
 
@@ -627,7 +650,7 @@ Explorer on Windows**. Use the Ubuntu terminal instead to avoid permission
 issues and odd file behaviors.
 
 Check the
-[Considerations for a development environment](./CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
+[Considerations for a development environment](../02-considerations-for-a-development-environment/README.md)
 guide for more details.
 
 ### Free up disk space
@@ -716,3 +739,6 @@ The exact location of the setting will depend on your motherboard manufacturer.
 
 You have to look for a setting called "Virtualization", "VT-x", "AMD-V", or
 something similar and enable it.
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
