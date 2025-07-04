@@ -1,0 +1,34 @@
+@startuml invalid-temperature-example
+
+title "Invalid temperature example"
+
+participant "Emitter 1" as e1
+participant "Emitter 2" as e2
+participant "Server" as s
+participant "Operator" as o
+
+== Emit invalid temperature ==
+
+e1 --> e1: <&clock> ... <&clock> ... <&clock> ...
+e1 -[#red]> s: TEMP Bedroom a
+
+note over s
+The server does
+not store the
+room's value.
+
+Nothing more
+happens.
+end note
+
+legend
+**Legend**
+
+Types of communication and patterns used in the application.
+
+| **Color** | **Type**  | **Pattern**      |
+| <#red>    | Multicast | Fire and forget  |
+| <#blue>   | Unicast   | Request-response |
+endlegend
+
+@enduml

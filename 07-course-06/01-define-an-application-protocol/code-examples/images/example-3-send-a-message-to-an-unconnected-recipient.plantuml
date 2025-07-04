@@ -1,0 +1,30 @@
+@startuml send-a-message-to-an-unconnected-recipient-example
+
+title "Send a message to an unconnected recipient example"
+
+participant "Client 1" as c1
+participant "Server" as s
+
+== Join the server ==
+
+note over c1, s
+The socket is instanciated and the connection is
+automatically established.
+end note
+
+c1->s : Establish connection
+c1<-->s : Connection established
+
+c1->s: JOIN alice
+s->c1: OK
+
+== List connected clients ==
+
+c1->s: LIST
+s->c1: CLIENTS alice
+
+== Send a message to an unconnected recipient ==
+
+c1->s: SEND bob Hello Bob!
+s->c1: ERROR 1
+@enduml

@@ -1,0 +1,19 @@
+server {
+	listen 80;
+	listen [::]:80;
+	server_name localhost;
+
+	access_log /var/log/nginx/localhost/access.log main;
+	error_log /var/log/nginx/localhost/error.log ${NGINX_LOG_LEVEL};
+
+	access_log /dev/stdout main;
+	error_log /dev/stderr ${NGINX_LOG_LEVEL};
+
+	location / {
+		root /usr/share/nginx/html;
+		index index.html index.htm;
+	}
+
+	error_page 404 /404.html;
+	error_page 500 502 503 504 /50x.html;
+}

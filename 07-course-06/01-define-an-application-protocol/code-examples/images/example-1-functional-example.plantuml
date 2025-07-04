@@ -1,0 +1,60 @@
+@startuml functional-example
+
+title "Functional example"
+
+participant "Client 1" as c1
+participant "Server" as s
+participant "Client 2" as c2
+
+== Join the server ==
+
+note over c1, c2
+The socket is instanciated and the connection is
+automatically established.
+end note
+
+c1->s : Establish connection
+c1<-->s : Connection established
+
+c1->s: JOIN alice
+s->c1: OK
+
+c2->s : Establish connection
+c2<-->s : Connection established
+
+c2->s: JOIN bob
+s->c2: OK
+
+== List connected clients ==
+
+c1->s: LIST
+s->c1: CLIENTS alice bob
+
+== Send a message ==
+
+c1->s: SEND bob Hello Bob!
+s->c1: OK
+
+== Receive a message ==
+
+s->c2: RECEIVE Hello Bob! alice
+
+== Quit ==
+
+note over c1, c2
+Just as for the connection establishment, no
+formal message is sent to the server when
+disconnecting.
+
+The socket is closed by the client and the
+connection is automatically closed.
+end note
+
+c1->c1: Close the connection
+c1<-->s: The connection is closed
+s->s: Remove Alice from users
+
+c2->c2: Close the connection
+c2<-->s: The connection is closed
+s->s: Remove Bob from users
+@enduml

@@ -1,0 +1,68 @@
+networks:
+  # We define a network for Traefik and all the services it will manage
+  traefik_network:
+    name: traefik_network
+
+services:
+  traefik:
+    image: traefik:${TRAEFIK_IMAGE_VERSION:-latest}
+    command:
+      ## Global
+      # Uncomment next line when testing
+      # - --log.level=DEBUG
+      - --api.dashboard=${TRAEFIK_ENABLE_DASHBOARD:-false}
+      ## Docker
+      # Use Docker as a provider
+      - --providers.docker=true
+      # Do not expose containers by default
+      - --providers.docker.exposedbydefault=false
+      ## Entrypoints
+      # Define an entrypoint for HTTP on port 80
+      - --entrypoints.http.address=:80
+      # Define an entrypoint for HTTPS on port 443
+      - --entrypoints.https.address=:443
+      # We redirect all HTTP traffic to HTTPS
+      - --entrypoints.http.http.redirections.entrypoint.to=https
+      - --entrypoints.http.http.redirections.entrypoint.scheme=https
+      - --entrypoints.http.http.redirections.entrypoint.permanent=true
+      # We enable TLS for all HTTPS traffic
+      - --entrypoints.https.http.tls=true
+      - --entrypoints.https.http.tls.certresolver=letsencrypt
+      ## Certificates
+      # We add Let's Encrypt as a default certificate resolver
+      # Uncomment next line when testing
+      # - --certificatesResolvers.letsencrypt.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
+      - --certificatesresolvers.letsencrypt.acme.email=${TRAEFIK_ACME_EMAIL}
+      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+      - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+    restart: unless-stopped
+    networks:
+      # Attach the Traefik container to the traefik network
+      - traefik_network
+    ports:
+      # Expose port 80 on the host for all incoming HTTP traffic
+      - 80:80
+      # Expose port 443 on the host for all incoming HTTPS traffic
+      - 443:443
+    volumes:
+      # This is needed for Traefik to be able to listen to the Docker events
+      # It allows Traefik to react almost immediately to changes in the
+      # containers it manages
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # This is needed for Traefik to be able to store the Let's Encrypt certificates
+      - ./letsencrypt:/letsencrypt
+    # Labels can be attached to containers for various customizations.
+    # In this case, the labels are to configure Traefik
+    labels:
+      ## Traefik
+      # Enable Traefik for this container
+      - traefik.enable=true
+      # Help Traefik find this container on the network
+      - traefik.docker.network=traefik_network
+      ## Routers
+      # The entrypoint of this container is HTTPS
+      - traefik.http.routers.traefik.entrypoints=https
+      # This container is accessible with the fully qualified domain name
+      - traefik.http.routers.traefik.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
+      # This is needed to access the Traefik dashboard
+      - traefik.http.routers.traefik.service=api@internal

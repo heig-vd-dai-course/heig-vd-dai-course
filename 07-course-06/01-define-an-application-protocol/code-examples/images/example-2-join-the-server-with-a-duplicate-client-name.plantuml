@@ -1,0 +1,29 @@
+@startuml join-the-server-with-a-duplicate-client-name-example
+
+title "Join the server with a duplicate client name"
+
+participant "Client 1" as c1
+participant "Server" as s
+participant "Client 2" as c2
+
+== Join the server ==
+
+note over c1, c2
+The socket is instanciated and the connection is
+automatically established.
+end note
+
+c1->s : Establish connection
+c1<-->s : Connection established
+
+c1->s: JOIN alice
+s->c1: OK
+
+== Join the server with a duplicate client name ==
+
+c2->s : Establish connection
+c2<-->s : Connection established
+
+c2->s: JOIN alice
+s->c2: ERROR 1
+@enduml

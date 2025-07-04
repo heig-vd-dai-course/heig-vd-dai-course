@@ -1,0 +1,32 @@
+@startuml send-a-message-that-is-too-long-example
+
+title "Send a message that is too long example"
+
+participant "Client 1" as c1
+participant "Server" as s
+participant "Client 2" as c2
+
+== Join the server ==
+
+note over c1, c2
+The socket is instanciated and the connection is
+automatically established.
+end note
+
+c1->s : Establish connection
+c1<-->s : Connection established
+
+c1->s: JOIN alice
+s->c1: OK
+
+c2->s : Establish connection
+c2<-->s : Connection established
+
+c2->s: JOIN bob
+s->c2: OK
+
+== Send a message that is too long ==
+
+c1->s: SEND bob Hello Bob! I hope you...\n(> 100 characters)
+s->c1: ERROR 2
+@enduml

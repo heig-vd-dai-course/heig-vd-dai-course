@@ -1,0 +1,11 @@
+services:
+  nginx:
+    image: nginx:1.27
+    environment:
+      - NGINX_LOG_LEVEL=error
+    ports:
+      - 8080:80
+    volumes:
+      - ./html:/usr/share/nginx/html
+      - ./logs:/var/log/nginx/localhost
+      - ./templates:/etc/nginx/templates
