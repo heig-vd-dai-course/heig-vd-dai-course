@@ -54,7 +54,7 @@ assessment methods.
 The week numbers are taken from the
 [_"HEIG-VD Calendrier académique"_](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-| Course                                            | Dates             | Part[^parts] | First two periods                        | Last two periods                             | Status[^status] |
+| Course                                            | Dates             | Part[^parts] | Content for the first two periods        | Content for the last two periods             | Status[^status] |
 | :------------------------------------------------ | :---------------- | -----------: | :--------------------------------------- | :------------------------------------------- | :-------------- |
 | [_Before the start of the semester_](#-course-00) |                   |              | Set up a Windows development environment | Considerations for a development environment | 🔴 To do        |
 | [1](#-course-01)                                  | 15.09. - 21.09.25 |            1 | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To do        |
@@ -205,15 +205,11 @@ Contributions are welcome! Please read the
 [`CONTRIBUTING.md`](./CONTRIBUTING.md) file for details.
 
 [^parts]:
-
-The course is divided into three main parts:
-
-- Part 1 - Input/output processing (18 periods).
-- Part 2 - Network programming with TCP and UDP (24 periods)
-- Part 3 - Network programming with HTTP (20 periods)
+    Part 1 - Input/output processing (18 periods). Part 2 - Network programming
+    with TCP and UDP (24 periods). Part 3 - Network programming with HTTP (20
+    periods)
 
 [^status]:
-
-🟢 Complete: the course is complete and ready for use. 🟡 In progress: the
-course is being written/updated. 🔴 To complete: the course needs to be
-written/updated
+    🟢 Complete: the course is complete and ready for use. 🟡 In progress: the
+    course is being written/updated. 🔴 To complete: the course needs to be
+    written/updated
