@@ -54,7 +54,7 @@ assessment methods.
 The week numbers are taken from the
 [_"HEIG-VD Calendrier académique"_](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-|               Course | Dates                              | Content for the first two periods        | Content for the last two periods             | Redaction status[^status] |
+|               Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
 | -------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :------------------------ |
 |     [0](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🔴 To do                  |
 |     [1](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To do                  |
