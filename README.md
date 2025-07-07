@@ -56,7 +56,7 @@ Dates are taken from the
 
 |               Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
 | -------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :------------------------ |
-|    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🔴 To complete            |
+|    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟡 In progress            |
 |    [01](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To complete            |
 |    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To complete            |
 |    [03](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To complete            |

@@ -474,7 +474,7 @@ You should do this for each distribution you have installed.
 
 Before continuing with the installation and configuration of your Integrated
 Development Environment (IDE) and other tools, you should check the
-[Considerations for a development environment](../02-considerations-for-a-development-environment/README.md)
+[Considerations for a development environment](../../00.02-considerations-for-a-development-environment/01-course-material/README.md)
 guide.
 
 ## Validate the installation
@@ -498,18 +498,12 @@ You can use the following checklist to validate the installation:
       they differ from the ones in Windows.
 
 From now on, you can use WSL as your primary development environment for the
-rest of the teaching unit. We will expect you to use WSL in all the assignments
-and projects.
+rest of the teaching unit. **We will expect you to use WSL in all the
+assignments and projects.**
 
-> [!CAUTION]
->
-> **All** commands that you will run in the teaching unit will be run in the
-> Ubuntu terminal unless specified otherwise.
->
-> No other environment will be supported (GitBash, Cygwin, etc.).
-
-The next sections will guide you through the installation and configuration of
-your Integrated Development Environment (IDE) and other tools.
+If this is the first time you are following this guide, you can close this
+document and come back to it once you are asked to use the provided IDE in the
+teaching unit. See you soon!
 
 ## Install and configure your IDE
 
