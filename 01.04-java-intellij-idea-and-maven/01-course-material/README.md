@@ -1,9 +1,9 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-course-material.pdf
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-course-material.pdf
 [license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
 [illustration]: ./images/main-illustration.jpg
 
@@ -1521,7 +1521,7 @@ Share your project in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2024-2025] My picocli project - First name Last Name
+- **Title**: [DAI 2025-2026] My picocli project - First name Last Name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository
 

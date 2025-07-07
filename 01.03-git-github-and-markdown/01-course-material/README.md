@@ -1,9 +1,9 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-course-material.pdf
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-course-material.pdf
 [license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
 [illustration]: ./images/main-illustration.jpg
 
@@ -1230,7 +1230,7 @@ Share your profile in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2024-2025] Check out my GitHub profile! - First name Last name
+- **Title**: [DAI 2025-2026] Check out my GitHub profile! - First name Last name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub profile README!
 
