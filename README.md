@@ -32,17 +32,17 @@ Do not know where to start? Have a look at the
 
 ## 📅 Program
 
-This teaching unit consists of 64 periods. These periods are divided in three
-main parts:
+This teaching unit consists of 64 periods, equivalent to three ECTS credits
+(~75-90 hours of work):
+
+- 64 periods of 45 minutes (= 48 hours in class).
+- ~27-42 hours outside of the class.
+
+Divided in three main parts:
 
 - Part 1 - Input/output processing (18 periods)
 - Part 2 - Network programming with TCP and UDP (24 periods)
 - Part 3 - Network programming with HTTP (20 periods)
-
-The teaching unit is equivalent to three ECTS credits (~75-90 hours of work):
-
-- 64 periods of 45 minutes (= 48 hours in class).
-- ~27-42 hours outside of the class.
 
 We try our best to ensure you do not have to work that much outside of the class
 but you should expect to spend some time on the course outside of the class.
