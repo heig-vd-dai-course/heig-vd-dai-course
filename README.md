@@ -83,13 +83,15 @@ Dates are taken from the
 
 ### Set up a Windows development environment
 
-- [Course material](./00.01-set-up-a-windows-development-environment/01-course-material/README.md)
+- Course material:
+  [Link to content](./00.01-set-up-a-windows-development-environment/01-course-material/README.md)
 
 [_See details_](./00.01-set-up-a-windows-development-environment/)
 
 ### Considerations for a development environment
 
-- [Course material](./00.02-considerations-for-a-development-environment/01-course-material/README.md)
+- Course material:
+  [Link to content](./00.02-considerations-for-a-development-environment/01-course-material/README.md)
 
 [_See details_](./00.02-considerations-for-a-development-environment/)
 
@@ -97,31 +99,37 @@ Dates are taken from the
 
 ### Introduction and course organization
 
-- [Course material](./01.01-introduction-and-course-organization/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./01.01-introduction-and-course-organization/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./01.01-introduction-and-course-organization/)
 
 ### Introduction to part 1 - Input/output processing
 
-- [Course material](./01.02-introduction-to-part-1-input-output-processing/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./01.02-introduction-to-part-1-input-output-processing/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./01.02-introduction-to-part-1-input-output-processing/)
 
 ### Git, GitHub and Markdown
 
-- [Course material](./01.03-git-github-and-markdown/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./01.03-git-github-and-markdown/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./01.03-git-github-and-markdown/)
 
 ### Java, IntelliJ IDEA and Maven
 
-- [Course material](./01.04-java-intellij-idea-and-maven/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](./01.04-java-intellij-idea-and-maven/02-code-examples/README.md)
-- [Solution](./01.04-java-intellij-idea-and-maven/03-solution/README.md)
+- Course material:
+  [Link to content](./01.04-java-intellij-idea-and-maven/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./01.04-java-intellij-idea-and-maven/02-code-examples/README.md)
+- Solution:
+  [Link to content](./01.04-java-intellij-idea-and-maven/03-solution/README.md)
 
 [_See details_](./01.04-java-intellij-idea-and-maven/)
 
@@ -129,17 +137,19 @@ Dates are taken from the
 
 ### Java IOs
 
-- [Course material](./02.01-java-ios/01-course-material/README.md) ·
-  [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](./02.01-java-ios/02-code-examples/README.md)
-- [Solution](./02.01-java-ios/03-solution/README.md)
+- Course material:
+  [Link to content](./02.01-java-ios/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples: [Link to content](./02.01-java-ios/02-code-examples/README.md)
+- Solution: [Link to content](./02.01-java-ios/03-solution/README.md)
 
 [_See details_](./02.01-java-ios/)
 
 ### Practical work 1 (1/3)
 
-- [Course material](<./02.02-practical-work-1-(1-of-3)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./02.02-practical-work-1-(1-of-3)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./02.02-practical-work-1-(1-of-3)/>)
 
@@ -147,8 +157,9 @@ Dates are taken from the
 
 ### Practical work 1 (2/3)
 
-- [Course material](<./03.01-practical-work-1-(2-of-3)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./03.01-practical-work-1-(2-of-3)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./03.01-practical-work-1-(2-of-3)/>)
 
@@ -156,17 +167,21 @@ Dates are taken from the
 
 ### Docker and Docker Compose
 
-- [Course material](./04.01-docker-and-docker-compose/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](./04.01-docker-and-docker-compose/02-code-examples/README.md)
-- [Solution](./04.01-docker-and-docker-compose/03-solution/README.md)
+- Course material:
+  [Link to content](./04.01-docker-and-docker-compose/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./04.01-docker-and-docker-compose/02-code-examples/README.md)
+- Solution:
+  [Link to content](./04.01-docker-and-docker-compose/03-solution/README.md)
 
 [_See details_](./04.01-docker-and-docker-compose/)
 
 ### Practical work 1 (3/3)
 
-- [Course material](<./04.02-practical-work-1-(3-of-3)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./04.02-practical-work-1-(3-of-3)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./04.02-practical-work-1-(3-of-3)/>)
 
@@ -175,31 +190,36 @@ Dates are taken from the
 ### Presentation of practical work 1
 
 - **🚨 Graded evaluation**
-- [Course material](./05.01-presentation-of-practical-work-1/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./05.01-presentation-of-practical-work-1/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./05.01-presentation-of-practical-work-1/)
 
 ### Conclusion to part 1 - Input/output processing
 
-- [Course material](./05.02-conclusion-to-part-1-input-output-processing/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./05.02-conclusion-to-part-1-input-output-processing/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./05.02-conclusion-to-part-1-input-output-processing/)
 
 ### Introduction to part 2 - Network programming with TCP and UDP
 
-- [Course material](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/)
 
 ### SMTP and ncat
 
-- [Course material](./05.04-smtp-and-ncat/01-course-material/README.md) ·
-  [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](./05.04-smtp-and-ncat/02-code-examples/README.md)
-- [Solution](./05.04-smtp-and-ncat/03-solution/README.md)
+- Course material:
+  [Link to content](./05.04-smtp-and-ncat/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./05.04-smtp-and-ncat/02-code-examples/README.md)
+- Solution: [Link to content](./05.04-smtp-and-ncat/03-solution/README.md)
 
 [_See details_](./05.04-smtp-and-ncat/)
 
@@ -207,17 +227,21 @@ Dates are taken from the
 
 ### Define an application protocol
 
-- [Course material](./06.01-define-an-application-protocol/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](./06.01-define-an-application-protocol/02-code-examples/README.md)
-- [Solution](./06.01-define-an-application-protocol/03-solution/README.md)
+- Course material:
+  [Link to content](./06.01-define-an-application-protocol/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./06.01-define-an-application-protocol/02-code-examples/README.md)
+- Solution:
+  [Link to content](./06.01-define-an-application-protocol/03-solution/README.md)
 
 [_See details_](./06.01-define-an-application-protocol/)
 
 ### Practical work 2 (1/5)
 
-- [Course material](<./06.02-practical-work-2-(1-of-5)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./06.02-practical-work-2-(1-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./06.02-practical-work-2-(1-of-5)/>)
 
@@ -225,17 +249,21 @@ Dates are taken from the
 
 ### Java TCP and UDP programming
 
-- [Course material](<./07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](<./07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples/README.md>)
-- [Solution](<./07.01-java-tcp-and-udp-programming-(1-of-2)/03-solution/README.md>)
+- Course material:
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples/README.md>)
+- Solution:
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/03-solution/README.md>)
 
 [_See details_](<./07.01-java-tcp-and-udp-programming-(1-of-2)/>)
 
 ### Practical work 2 (2/5)
 
-- [Course material](<./07.02-practical-work-2-(2-of-5)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./07.02-practical-work-2-(2-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./07.02-practical-work-2-(2-of-5)/>)
 
@@ -243,17 +271,21 @@ Dates are taken from the
 
 ### Java TCP and UDP programming
 
-- [Course material](<./08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](<./08.01-java-tcp-and-udp-programming-(2-of-2)/02-code-examples/README.md>)
-- [Solution](<./08.01-java-tcp-and-udp-programming-(2-of-2)/03-solution/README.md>)
+- Course material:
+  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/02-code-examples/README.md>)
+- Solution:
+  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/03-solution/README.md>)
 
 [_See details_](<./08.01-java-tcp-and-udp-programming-(2-of-2)/>)
 
 ### Practical work 2 (3/5)
 
-- [Course material](<./08.02-practical-work-2-(3-of-5)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./08.02-practical-work-2-(3-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./08.02-practical-work-2-(3-of-5)/>)
 
@@ -261,17 +293,21 @@ Dates are taken from the
 
 ### Java network concurrency
 
-- [Course material](./09.01-java-network-concurrency/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](./09.01-java-network-concurrency/02-code-examples/README.md)
-- [Solution](./09.01-java-network-concurrency/03-solution/README.md)
+- Course material:
+  [Link to content](./09.01-java-network-concurrency/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./09.01-java-network-concurrency/02-code-examples/README.md)
+- Solution:
+  [Link to content](./09.01-java-network-concurrency/03-solution/README.md)
 
 [_See details_](./09.01-java-network-concurrency/)
 
 ### Practical work 2 (4/5)
 
-- [Course material](<./09.02-practical-work-2-(4-of-5)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./09.02-practical-work-2-(4-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./09.02-practical-work-2-(4-of-5)/>)
 
@@ -280,16 +316,18 @@ Dates are taken from the
 ### Evaluation 1
 
 - **🚨 Graded evaluation**
-- [Course material](./10.01-evaluation-1/01-course-material/README.md) ·
-  [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Archives](./10.01-evaluation-1/02-archives/README.md)
+- Course material:
+  [Link to content](./10.01-evaluation-1/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Archives: [Link to content](./10.01-evaluation-1/02-archives/README.md)
 
 [_See details_](./10.01-evaluation-1/)
 
 ### Practical work 2 (5/5)
 
-- [Course material](<./10.02-practical-work-2-(5-of-5)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./10.02-practical-work-2-(5-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./10.02-practical-work-2-(5-of-5)/>)
 
@@ -298,29 +336,33 @@ Dates are taken from the
 ### Presentation of practical work 2
 
 - **🚨 Graded evaluation**
-- [Course material](./11.01-presentation-of-practical-work-2/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./11.01-presentation-of-practical-work-2/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./11.01-presentation-of-practical-work-2/)
 
 ### Conclusion to part 2 - Network programming with TCP and UDP
 
-- [Course material](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/)
 
 ### Introduction to part 3 - Network programming with HTTP
 
-- [Course material](./11.03-introduction-to-part-3-network-programming-with-http/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./11.03-introduction-to-part-3-network-programming-with-http/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./11.03-introduction-to-part-3-network-programming-with-http/)
 
 ### SSH and SCP
 
-- [Course material](./11.04-ssh-and-scp/01-course-material/README.md) ·
-  [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./11.04-ssh-and-scp/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./11.04-ssh-and-scp/)
 
@@ -328,16 +370,18 @@ Dates are taken from the
 
 ### HTTP and curl
 
-- [Course material](./12.01-http-and-curl/01-course-material/README.md) ·
-  [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Solution](./12.01-http-and-curl/02-solution/README.md)
+- Course material:
+  [Link to content](./12.01-http-and-curl/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Solution: [Link to content](./12.01-http-and-curl/02-solution/README.md)
 
 [_See details_](./12.01-http-and-curl/)
 
 ### Practical work 3 (1/4)
 
-- [Course material](<./12.02-practical-work-3-(1-of-4)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./12.02-practical-work-3-(1-of-4)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./12.02-practical-work-3-(1-of-4)/>)
 
@@ -345,16 +389,19 @@ Dates are taken from the
 
 ### Web infrastructures
 
-- [Course material](./13.01-web-infrastructures/01-course-material/README.md) ·
-  [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Code examples](./13.01-web-infrastructures/02-code-examples/README.md)
+- Course material:
+  [Link to content](./13.01-web-infrastructures/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./13.01-web-infrastructures/02-code-examples/README.md)
 
 [_See details_](./13.01-web-infrastructures/)
 
 ### Practical work 3 (2/4)
 
-- [Course material](<./13.02-practical-work-3-(2-of-4)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./13.02-practical-work-3-(2-of-4)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./13.02-practical-work-3-(2-of-4)/>)
 
@@ -362,16 +409,19 @@ Dates are taken from the
 
 ### Caching and performance
 
-- [Course material](./14.01-caching-and-performance/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Solution](./14.01-caching-and-performance/02-solution/README.md)
+- Course material:
+  [Link to content](./14.01-caching-and-performance/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Solution:
+  [Link to content](./14.01-caching-and-performance/02-solution/README.md)
 
 [_See details_](./14.01-caching-and-performance/)
 
 ### Practical work 3 (3/4)
 
-- [Course material](<./14.02-practical-work-3-(3-of-4)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./14.02-practical-work-3-(3-of-4)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./14.02-practical-work-3-(3-of-4)/>)
 
@@ -380,16 +430,18 @@ Dates are taken from the
 ### Evaluation 2
 
 - **🚨 Graded evaluation**
-- [Course material](./15.01-evaluation-2/01-course-material/README.md) ·
-  [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Archives](./15.01-evaluation-2/02-archives/README.md)
+- Course material:
+  [Link to content](./15.01-evaluation-2/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Archives: [Link to content](./15.01-evaluation-2/02-archives/README.md)
 
 [_See details_](./15.01-evaluation-2/)
 
 ### Practical work 3 (4/4)
 
-- [Course material](<./15.02-practical-work-3-(4-of-4)/01-course-material/README.md>)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](<./15.02-practical-work-3-(4-of-4)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](<./15.02-practical-work-3-(4-of-4)/>)
 
@@ -398,23 +450,27 @@ Dates are taken from the
 ### Presentation of practical work 3
 
 - **🚨 Graded evaluation**
-- [Course material](./16.01-presentation-of-practical-work-3/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./16.01-presentation-of-practical-work-3/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./16.01-presentation-of-practical-work-3/)
 
 ### Conclusion to part 3 - Network programming with HTTP
 
-- [Course material](./16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
+- Course material:
+  [Link to content](./16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
 [_See details_](./16.02-conclusion-to-part-3-network-programming-with-http/)
 
 ### Semester review and exam preparation
 
-- [Course material](./16.03-semester-review-and-exam-preparation/01-course-material/README.md)
-  · [Presentation (web)](#TODO) · [Presentation (PDF)](#TODO)
-- [Feedback (Framaforms + GAPS)](./16.03-semester-review-and-exam-preparation/02-feedback/README.md)
+- Course material:
+  [Link to content](./16.03-semester-review-and-exam-preparation/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Feedback (Framaforms + GAPS):
+  [Link to content](./16.03-semester-review-and-exam-preparation/02-feedback/README.md)
 
 [_See details_](./16.03-semester-review-and-exam-preparation/)
 
