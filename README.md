@@ -30,7 +30,7 @@ applications, APIs, games, etc.).
 Do not know where to start? Have a look at the
 [Introduction and course organization](./01-introduction-and-course-organization/README.md)!
 
-## 📅 Program[^program]
+## 📅 Program
 
 This teaching unit consists of 64 periods, equivalent to three ECTS credits
 (~75-90 hours of work):
@@ -38,7 +38,7 @@ This teaching unit consists of 64 periods, equivalent to three ECTS credits
 - 64 periods of 45 minutes (= 48 hours in class).
 - ~27-42 hours outside of the class.
 
-Divided in three main parts:
+These periods are divided in three main parts:
 
 - Part 1 - Input/output processing (18 periods)
 - Part 2 - Network programming with TCP and UDP (24 periods)
@@ -49,55 +49,55 @@ but you should expect to spend some time on the course outside of the class.
 
 Details of each course within the teaching unit are available below. Each course
 is detailed with content, objectives, teaching and learning methods, and
-assessment methods.
+assessment methods.[^program]
 
 Dates are taken from the
 [HEIG-VD academic calendar](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-|                      Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
-| --------------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :------------------------ |
-|    [00](#-course-00program) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟡 In progress            |
-|    [01](#-course-01program) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To complete            |
-|    [02](#-course-02program) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To complete            |
-|    [03](#-course-03program) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To complete            |
-|    [04](#-course-04program) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (3/3)                       | 🔴 To complete            |
-| 🚨 [05](#-course-05program) | 13.10. - 19.10.25                  | Presentation of practical work 1         | SMTP and ncat                                | 🔴 To complete            |
-|                           - | 20.10. - 26.10.25                  | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | 🔴 To complete            |
-|    [06](#-course-06program) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/5)                       | 🔴 To complete            |
-|    [07](#-course-07program) | 03.11. - 09.11.25                  | Java TCP and UDP programming (1/2)       | Practical work 2 (2/5)                       | 🔴 To complete            |
-|    [08](#-course-08program) | 10.11. - 16.11.25                  | Java TCP and UDP programming (2/2)       | Practical work 2 (3/5)                       | 🔴 To complete            |
-|    [09](#-course-09program) | 17.11. - 23.11.25                  | Java network concurrency                 | Practical work 2 (4/5)                       | 🔴 To complete            |
-| 🚨 [10](#-course-10program) | 24.11. - 30.11.25                  | Evaluation 1                             | Practical work 2 (5/5)                       | 🔴 To complete            |
-| 🚨 [11](#-course-11program) | 01.12. - 07.12.25                  | Presentation of practical work 2         | SSH and SCP                                  | 🔴 To complete            |
-|    [12](#-course-12program) | 08.12. - 14.12.25                  | HTTP and curl                            | Practical work 3 (1/4)                       | 🔴 To complete            |
-|    [13](#-course-13program) | 15.12. - 21.12.25                  | Web infrastructures                      | Practical work 3 (2/4)                       | 🔴 To complete            |
-|                           - | 22.12. - 28.12.25                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
-|                           - | 29.12. - 04.01.26                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
-|    [14](#-course-14program) | 05.01. - 11.01.26                  | Caching and performance                  | Practical work 3 (3/4)                       | 🔴 To complete            |
-| 🚨 [15](#-course-15program) | 12.01. - 18.01.26                  | Evaluation 2                             | Practical work 3 (4/4)                       | 🔴 To complete            |
-| 🚨 [16](#-course-16program) | 19.01. - 25.01.26                  | Presentation of practical work 3         | Semester review and exam preparation         | 🔴 To complete            |
-|                           - | 26.01. - 01.02.26                  | _Exam preparation_                       | _Exam preparation_                           | 🔴 To complete            |
-|                           - | 02.02. - 08.02.26                  | _Exam_                                   | _Exam_                                       | 🔴 To complete            |
+|               Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
+| -------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :------------------------ |
+|    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟡 In progress            |
+|    [01](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To complete            |
+|    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To complete            |
+|    [03](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To complete            |
+|    [04](#-course-04) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (3/3)                       | 🔴 To complete            |
+| 🚨 [05](#-course-05) | 13.10. - 19.10.25                  | Presentation of practical work 1         | SMTP and ncat                                | 🔴 To complete            |
+|                    - | 20.10. - 26.10.25                  | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | 🔴 To complete            |
+|    [06](#-course-06) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/5)                       | 🔴 To complete            |
+|    [07](#-course-07) | 03.11. - 09.11.25                  | Java TCP and UDP programming (1/2)       | Practical work 2 (2/5)                       | 🔴 To complete            |
+|    [08](#-course-08) | 10.11. - 16.11.25                  | Java TCP and UDP programming (2/2)       | Practical work 2 (3/5)                       | 🔴 To complete            |
+|    [09](#-course-09) | 17.11. - 23.11.25                  | Java network concurrency                 | Practical work 2 (4/5)                       | 🔴 To complete            |
+| 🚨 [10](#-course-10) | 24.11. - 30.11.25                  | Evaluation 1                             | Practical work 2 (5/5)                       | 🔴 To complete            |
+| 🚨 [11](#-course-11) | 01.12. - 07.12.25                  | Presentation of practical work 2         | SSH and SCP                                  | 🔴 To complete            |
+|    [12](#-course-12) | 08.12. - 14.12.25                  | HTTP and curl                            | Practical work 3 (1/4)                       | 🔴 To complete            |
+|    [13](#-course-13) | 15.12. - 21.12.25                  | Web infrastructures                      | Practical work 3 (2/4)                       | 🔴 To complete            |
+|                    - | 22.12. - 28.12.25                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
+|                    - | 29.12. - 04.01.26                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
+|    [14](#-course-14) | 05.01. - 11.01.26                  | Caching and performance                  | Practical work 3 (3/4)                       | 🔴 To complete            |
+| 🚨 [15](#-course-15) | 12.01. - 18.01.26                  | Evaluation 2                             | Practical work 3 (4/4)                       | 🔴 To complete            |
+| 🚨 [16](#-course-16) | 19.01. - 25.01.26                  | Presentation of practical work 3         | Semester review and exam preparation         | 🔴 To complete            |
+|                    - | 26.01. - 01.02.26                  | _Exam preparation_                       | _Exam preparation_                           | 🔴 To complete            |
+|                    - | 02.02. - 08.02.26                  | _Exam_                                   | _Exam_                                       | 🔴 To complete            |
 
-## 🕛 Course 00[^program]
+## 🕛 Course 00
 
-### Set up a Windows development environment
+### Set up a Windows development environment [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./00.01-set-up-a-windows-development-environment/01-course-material/README.md)
 
 [_See details_](./00.01-set-up-a-windows-development-environment/)
 
-### Considerations for a development environment
+### Considerations for a development environment [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./00.02-considerations-for-a-development-environment/01-course-material/README.md)
 
 [_See details_](./00.02-considerations-for-a-development-environment/)
 
-## 🕐 Course 01[^program]
+## 🕐 Course 01
 
-### Introduction and course organization
+### Introduction and course organization [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./01.01-introduction-and-course-organization/01-course-material/README.md)
@@ -105,7 +105,7 @@ Dates are taken from the
 
 [_See details_](./01.01-introduction-and-course-organization/)
 
-### Introduction to part 1 - Input/output processing
+### Introduction to part 1 - Input/output processing [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./01.02-introduction-to-part-1-input-output-processing/01-course-material/README.md)
@@ -113,7 +113,7 @@ Dates are taken from the
 
 [_See details_](./01.02-introduction-to-part-1-input-output-processing/)
 
-### Git, GitHub and Markdown
+### Git, GitHub and Markdown [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./01.03-git-github-and-markdown/01-course-material/README.md)
@@ -121,7 +121,7 @@ Dates are taken from the
 
 [_See details_](./01.03-git-github-and-markdown/)
 
-### Java, IntelliJ IDEA and Maven
+### Java, IntelliJ IDEA and Maven [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./01.04-java-intellij-idea-and-maven/01-course-material/README.md)
@@ -133,7 +133,7 @@ Dates are taken from the
 
 [_See details_](./01.04-java-intellij-idea-and-maven/)
 
-## 🕑 Course 02[^program]
+## 🕑 Course 02
 
 ### Java IOs
 
@@ -145,7 +145,7 @@ Dates are taken from the
 
 [_See details_](./02.01-java-ios/)
 
-### Practical work 1 (1/3)
+### Practical work 1 (1/3) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./02.02-practical-work-1-(1-of-3)/01-course-material/README.md>)
@@ -153,9 +153,9 @@ Dates are taken from the
 
 [_See details_](<./02.02-practical-work-1-(1-of-3)/>)
 
-## 🕒 Course 03[^program]
+## 🕒 Course 03
 
-### Practical work 1 (2/3)
+### Practical work 1 (2/3) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./03.01-practical-work-1-(2-of-3)/01-course-material/README.md>)
@@ -163,9 +163,9 @@ Dates are taken from the
 
 [_See details_](<./03.01-practical-work-1-(2-of-3)/>)
 
-## 🕓 Course 04[^program]
+## 🕓 Course 04
 
-### Docker and Docker Compose
+### Docker and Docker Compose [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./04.01-docker-and-docker-compose/01-course-material/README.md)
@@ -177,7 +177,7 @@ Dates are taken from the
 
 [_See details_](./04.01-docker-and-docker-compose/)
 
-### Practical work 1 (3/3)
+### Practical work 1 (3/3) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./04.02-practical-work-1-(3-of-3)/01-course-material/README.md>)
@@ -185,9 +185,9 @@ Dates are taken from the
 
 [_See details_](<./04.02-practical-work-1-(3-of-3)/>)
 
-## 🕔 Course 05[^program]
+## 🕔 Course 05
 
-### Presentation of practical work 1
+### Presentation of practical work 1 [🔼 Back to program](#-program)
 
 - **🚨 Graded evaluation**
 - Course material:
@@ -196,7 +196,7 @@ Dates are taken from the
 
 [_See details_](./05.01-presentation-of-practical-work-1/)
 
-### Conclusion to part 1 - Input/output processing
+### Conclusion to part 1 - Input/output processing [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./05.02-conclusion-to-part-1-input-output-processing/01-course-material/README.md)
@@ -204,7 +204,7 @@ Dates are taken from the
 
 [_See details_](./05.02-conclusion-to-part-1-input-output-processing/)
 
-### Introduction to part 2 - Network programming with TCP and UDP
+### Introduction to part 2 - Network programming with TCP and UDP [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
@@ -212,7 +212,7 @@ Dates are taken from the
 
 [_See details_](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/)
 
-### SMTP and ncat
+### SMTP and ncat [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./05.04-smtp-and-ncat/01-course-material/README.md)
@@ -223,9 +223,9 @@ Dates are taken from the
 
 [_See details_](./05.04-smtp-and-ncat/)
 
-## 🕕 Course 06[^program]
+## 🕕 Course 06
 
-### Define an application protocol
+### Define an application protocol [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./06.01-define-an-application-protocol/01-course-material/README.md)
@@ -237,7 +237,7 @@ Dates are taken from the
 
 [_See details_](./06.01-define-an-application-protocol/)
 
-### Practical work 2 (1/5)
+### Practical work 2 (1/5) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./06.02-practical-work-2-(1-of-5)/01-course-material/README.md>)
@@ -245,9 +245,9 @@ Dates are taken from the
 
 [_See details_](<./06.02-practical-work-2-(1-of-5)/>)
 
-## 🕖 Course 07[^program]
+## 🕖 Course 07
 
-### Java TCP and UDP programming
+### Java TCP and UDP programming [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/README.md>)
@@ -259,7 +259,7 @@ Dates are taken from the
 
 [_See details_](<./07.01-java-tcp-and-udp-programming-(1-of-2)/>)
 
-### Practical work 2 (2/5)
+### Practical work 2 (2/5) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./07.02-practical-work-2-(2-of-5)/01-course-material/README.md>)
@@ -267,9 +267,9 @@ Dates are taken from the
 
 [_See details_](<./07.02-practical-work-2-(2-of-5)/>)
 
-## 🕗 Course 08[^program]
+## 🕗 Course 08
 
-### Java TCP and UDP programming
+### Java TCP and UDP programming [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/README.md>)
@@ -281,7 +281,7 @@ Dates are taken from the
 
 [_See details_](<./08.01-java-tcp-and-udp-programming-(2-of-2)/>)
 
-### Practical work 2 (3/5)
+### Practical work 2 (3/5) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./08.02-practical-work-2-(3-of-5)/01-course-material/README.md>)
@@ -289,9 +289,9 @@ Dates are taken from the
 
 [_See details_](<./08.02-practical-work-2-(3-of-5)/>)
 
-## 🕘 Course 09[^program]
+## 🕘 Course 09
 
-### Java network concurrency
+### Java network concurrency [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./09.01-java-network-concurrency/01-course-material/README.md)
@@ -303,7 +303,7 @@ Dates are taken from the
 
 [_See details_](./09.01-java-network-concurrency/)
 
-### Practical work 2 (4/5)
+### Practical work 2 (4/5) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./09.02-practical-work-2-(4-of-5)/01-course-material/README.md>)
@@ -311,9 +311,9 @@ Dates are taken from the
 
 [_See details_](<./09.02-practical-work-2-(4-of-5)/>)
 
-## 🕙 Course 10[^program]
+## 🕙 Course 10
 
-### Evaluation 1
+### Evaluation 1 [🔼 Back to program](#-program)
 
 - **🚨 Graded evaluation**
 - Course material:
@@ -323,7 +323,7 @@ Dates are taken from the
 
 [_See details_](./10.01-evaluation-1/)
 
-### Practical work 2 (5/5)
+### Practical work 2 (5/5) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./10.02-practical-work-2-(5-of-5)/01-course-material/README.md>)
@@ -331,9 +331,9 @@ Dates are taken from the
 
 [_See details_](<./10.02-practical-work-2-(5-of-5)/>)
 
-## 🕚 Course 11[^program]
+## 🕚 Course 11
 
-### Presentation of practical work 2
+### Presentation of practical work 2 [🔼 Back to program](#-program)
 
 - **🚨 Graded evaluation**
 - Course material:
@@ -342,7 +342,7 @@ Dates are taken from the
 
 [_See details_](./11.01-presentation-of-practical-work-2/)
 
-### Conclusion to part 2 - Network programming with TCP and UDP
+### Conclusion to part 2 - Network programming with TCP and UDP [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
@@ -350,7 +350,7 @@ Dates are taken from the
 
 [_See details_](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/)
 
-### Introduction to part 3 - Network programming with HTTP
+### Introduction to part 3 - Network programming with HTTP [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./11.03-introduction-to-part-3-network-programming-with-http/01-course-material/README.md)
@@ -358,7 +358,7 @@ Dates are taken from the
 
 [_See details_](./11.03-introduction-to-part-3-network-programming-with-http/)
 
-### SSH and SCP
+### SSH and SCP [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./11.04-ssh-and-scp/01-course-material/README.md)
@@ -366,9 +366,9 @@ Dates are taken from the
 
 [_See details_](./11.04-ssh-and-scp/)
 
-## 🕛 Course 12[^program]
+## 🕛 Course 12
 
-### HTTP and curl
+### HTTP and curl [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./12.01-http-and-curl/01-course-material/README.md)
@@ -377,7 +377,7 @@ Dates are taken from the
 
 [_See details_](./12.01-http-and-curl/)
 
-### Practical work 3 (1/4)
+### Practical work 3 (1/4) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./12.02-practical-work-3-(1-of-4)/01-course-material/README.md>)
@@ -385,9 +385,9 @@ Dates are taken from the
 
 [_See details_](<./12.02-practical-work-3-(1-of-4)/>)
 
-## 🕐 Course 13[^program]
+## 🕐 Course 13
 
-### Web infrastructures
+### Web infrastructures [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./13.01-web-infrastructures/01-course-material/README.md)
@@ -397,7 +397,7 @@ Dates are taken from the
 
 [_See details_](./13.01-web-infrastructures/)
 
-### Practical work 3 (2/4)
+### Practical work 3 (2/4) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./13.02-practical-work-3-(2-of-4)/01-course-material/README.md>)
@@ -405,9 +405,9 @@ Dates are taken from the
 
 [_See details_](<./13.02-practical-work-3-(2-of-4)/>)
 
-## 🕑 Course 14[^program]
+## 🕑 Course 14
 
-### Caching and performance
+### Caching and performance [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./14.01-caching-and-performance/01-course-material/README.md)
@@ -417,7 +417,7 @@ Dates are taken from the
 
 [_See details_](./14.01-caching-and-performance/)
 
-### Practical work 3 (3/4)
+### Practical work 3 (3/4) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./14.02-practical-work-3-(3-of-4)/01-course-material/README.md>)
@@ -425,9 +425,9 @@ Dates are taken from the
 
 [_See details_](<./14.02-practical-work-3-(3-of-4)/>)
 
-## 🕒 Course 15[^program]
+## 🕒 Course 15
 
-### Evaluation 2
+### Evaluation 2 [🔼 Back to program](#-program)
 
 - **🚨 Graded evaluation**
 - Course material:
@@ -437,7 +437,7 @@ Dates are taken from the
 
 [_See details_](./15.01-evaluation-2/)
 
-### Practical work 3 (4/4)
+### Practical work 3 (4/4) [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](<./15.02-practical-work-3-(4-of-4)/01-course-material/README.md>)
@@ -445,9 +445,9 @@ Dates are taken from the
 
 [_See details_](<./15.02-practical-work-3-(4-of-4)/>)
 
-## 🕓 Course 16[^program]
+## 🕓 Course 16
 
-### Presentation of practical work 3
+### Presentation of practical work 3 [🔼 Back to program](#-program)
 
 - **🚨 Graded evaluation**
 - Course material:
@@ -456,7 +456,7 @@ Dates are taken from the
 
 [_See details_](./16.01-presentation-of-practical-work-3/)
 
-### Conclusion to part 3 - Network programming with HTTP
+### Conclusion to part 3 - Network programming with HTTP [🔼 Back to program](#-program)
 
 - Course material:
   [Link to content](./16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/README.md)
@@ -464,7 +464,7 @@ Dates are taken from the
 
 [_See details_](./16.02-conclusion-to-part-3-network-programming-with-http/)
 
-### Semester review and exam preparation
+### Semester review and exam preparation <small>[🔼 Back to program](#-program)</small>
 
 - Course material:
   [Link to content](./16.03-semester-review-and-exam-preparation/01-course-material/README.md)
