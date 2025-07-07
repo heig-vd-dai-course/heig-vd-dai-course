@@ -1,9 +1,13 @@
-# Contributing to the HEIG-VD DAI Course repository
+# HEIG-VD DAI Course - Contribution guide
+
+## Prerequisites
 
 - [Docker](https://www.docker.com/) with its
   [Docker Compose](https://docs.docker.com/compose/) plugin must be installed.
 - [Git](https://git-scm.com/) must be installed.
 - [Visual Studio Code](https://code.visualstudio.com/)
+
+## Clone and open the project
 
 1. Clone or fork the GitHub repository.
 2. Open the project in Visual Studio Code.
@@ -19,27 +23,24 @@
    preview the files.
 7. You are now ready to edit the Markdown files and commit your changes.
 
-## Making changes to the Git repository
+## Make changes to the Git repository
 
 1. Open an issue describing the changes you want to make.
 2. Clone/fork the GitHub repository.
-3. Create a new branch with the name of the issue you want to fix.
-4. Open the project in a container with the help of Visual Studio Code as
+3. Open the project in a container with the help of Visual Studio Code as
    described above.
-5. Edit the files and commit your changes.
-   - Ensure to format the Markdown files with Prettier before committing your
-     changes with the help of the
-     `npx prettier **/*.md --write --print-width 80 --prose-wrap always`
-     command.
-   - Ensure all local images are optimized:
-     - PNGs with the help of the `optipng **/**/*.png` command.
-     - JPGs with the help of the `jpegoptim -s --all-progressive **/**/*.jpg`
-       command.
-     - PDFs with the help of the `ps2pdf <input>.pdf <output>.pdf` command.
+4. Create a new branch with the name of the issue you want to fix.
+5. Edit the files and commit your changes:
+   - Ensure all PNGs are optimized with the `optipng *.png` command.
+   - Ensure all JPGs are optimized the `jpegoptim *.jpg` command.
+   - Ensure all PDFs are optimized with the help of the
+     `ps2pdf <input>.pdf <output>.pdf` command.
 6. Push and open a pull request.
 7. Wait for the pull request to be reviewed and merged.
 
-## PlantUML local server
+## Tips and tricks
+
+### PlantUML local server
 
 To generate diagrams, you can use the [PlantUML](https://plantuml.com/) local
 server.
@@ -47,7 +48,7 @@ server.
 A local server is automatically available when using the Development Container
 at the following address: <http://localhost:9090/>.
 
-## Taking screenshots
+### Taking screenshots
 
 All window screenshots are taken with the `Screenshot.app` tool from Apple. You
 can open it with the `Command + Shift + 5` shortcut. **Show floating thumbnail**
@@ -56,7 +57,7 @@ is enabled in the options.
 All application windows are of the same size (888x888) and are placed on the
 screen of the Mac Book Pro.
 
-### Safari
+#### Safari
 
 To set Safari to a specific size and position, you can use the following
 AppleScript:
@@ -78,7 +79,7 @@ As I (Ludovic) do not use Safari as my main browser, it is perfect for
 screenshots as it does not contain any personal information and/or bookmarks and
 extensions.
 
-### Terminal
+#### Terminal
 
 To set Terminal to a specific size and position, you can use the following
 AppleScript:
