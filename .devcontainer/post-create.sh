@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 
 ## Configure Bash aliases
 tee -a ~/.bash_aliases > /dev/null <<"EOF"
