@@ -99,6 +99,11 @@ footer {
 	bottom: 0;
 }
 
+footer a {
+	color: var(--color-dimmed);
+	text-decoration: none;
+}
+
 /* Paragraphs and lists */
 
 p,

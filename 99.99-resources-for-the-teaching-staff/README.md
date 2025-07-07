@@ -10,14 +10,14 @@ the course.
 - [Table of contents](#table-of-contents)
 - [Philosophy of the course](#philosophy-of-the-course)
 - [Before the course](#before-the-course)
-  - [Email sent before the 2024-2025 academic year](#email-sent-before-the-2024-2025-academic-year)
+  - [Email sent before the 2025-2026 academic year](#email-sent-before-the-2025-2026-academic-year)
 - [During the course](#during-the-course)
   - [Framaform for the feedback during the course](#framaform-for-the-feedback-during-the-course)
   - [Mail sent for the evaluations](#mail-sent-for-the-evaluations)
   - [Mail sent for the practical works](#mail-sent-for-the-practical-works)
   - [Mail sent before the exam](#mail-sent-before-the-exam)
 - [After the course](#after-the-course)
-  - [Email sent after the 2024-2025 academic year](#email-sent-after-the-2024-2025-academic-year)
+  - [Email sent after the 2025-2026 academic year](#email-sent-after-the-2025-2026-academic-year)
 
 ## Philosophy of the course
 
@@ -130,38 +130,27 @@ not give them the fish, I teach them how to fish.
   with the new information for the new academic year
 - Prepare and print all payement sheets for the semester
 
-### Email sent before the 2024-2025 academic year
+### Email sent before the 2025-2026 academic year
 
 ```text
-[DAI 2024-2025] Informations générales sur le cours
+[DAI 2025-2026] Informations générales sur l'unité d'enseignement
 
 Bonjour tout le monde,
 
 J'espère que vous avez passé un bel été et que vous vous sentez prêt.es pour cette nouvelle année qui va commencer.
 
-Je serai votre enseignant pour le cours Développement d'Applications Internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver lundi pour la première leçon.
+Je serai votre enseignant pour l'unité d'enseignement Développement d'applications internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver la semaine prochaine pour la première leçon.
 
 Le cours aura lieu les lundis de 8:30 à 12:00 en salle J01.
 
-Vous trouverez toutes les informations sur le cours dans cette organisation GitHub avec son planning aux adresses suivantes :
+Vous trouverez toutes les informations sur l'unité d'enseignement dans l'organisation GitHub suivante : https://github.com/heig-vd-dai-course
 
-- Organisation GitHub - https://github.com/heig-vd-dai-course
-- Planning - https://github.com/orgs/heig-vd-dai-course/projects
-
-<<<<<<< HEAD:99-resources-for-the-teaching-staff/README.md
-Certains chapitres sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné-e-s si vous voyez des changements dans les prochains jours et/ou au cours du semestre.
-=======
-<<<<<<< Updated upstream:99-material-for-the-teaching-staff/README.md
-Pour les personnes sous Windows, je vous recommande vivement d'installer et configurer Windows Subsystem for Linux (WSL 2) ou GitBash pour suivre ce cours. L'un ou l'autre de ces outils sera utile pour certaines parties du cours et vous rencontrerez moins de soucis. Vous pouvez suivre le tutoriel suivant pour installer et configurer WSL 2 : https://learn.microsoft.com/en-us/windows/wsl/install ou GitBash: https://gitforwindows.org/.
-=======
 Certains chapitres sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou au cours du semestre.
->>>>>>> Stashed changes:99-resources-for-the-teaching-staff/README.md
->>>>>>> 6b9e7ca (Add updated files for development environment):99-material-for-the-teaching-staff/README.md
 
 Pour vous préparer au mieux pour le début du cours, je vous demande de lire et suivre les ressources suivantes pour installer et configurer votre environnement de travail qui sera utilisé durant toute la durée du cours :
 
-- Set up a Windows development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md
-- Considerations for a development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md
+- Set up a Windows development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/609-add-links-to-main-readme/00.01-set-up-a-windows-development-environment/01-course-material
+- Considerations for a development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/609-add-links-to-main-readme/00.02-considerations-for-a-development-environment/01-course-material
 
 Nous nous attendons à ce que vous ayez lu et suivi ces ressources avant le début du premier cours. Si vous avez des questions ou des problèmes, n'hésitez pas à nous contacter.
 
@@ -188,7 +177,7 @@ Ludovic Delafontaine
 
 #### Title
 
-DAI 2024-2025 - Feedback N
+DAI 2025-2026 - Feedback N
 
 #### Description
 
@@ -230,7 +219,7 @@ Merci pour votre collaboration !
 ### Mail sent for the evaluations
 
 ```text
-[DAI 2024-2025] Corrections évaluation N
+[DAI 2025-2026] Corrections évaluation N
 
 Bonjour,
 
@@ -266,7 +255,7 @@ Ludovic Delafontaine et Hadrien Louis
 ### Mail sent for the practical works
 
 ```text
-[DAI 2024-2025] Retours sur le travail pratique N
+[DAI 2025-2026] Retours sur le travail pratique N
 
 Bonjour,
 
@@ -326,10 +315,10 @@ Ludovic Delafontaine et Hadrien Louis
 - Send an email to all students to thank them for their participation with:
   - A link to both Git tags for a future reference
 
-### Email sent after the 2024-2025 academic year
+### Email sent after the 2025-2026 academic year
 
 ```text
-[DAI 2024-2025] Archives du cours et remerciements
+[DAI 2025-2026] Archives du cours et remerciements
 
 Bonjour tout le monde,
 
@@ -341,13 +330,13 @@ En parallèle, je vais archiver les discussions et le planning du cours DAI pour
 
 Si vous souhaitez retrouver l'état du cours tel qu'il était à la fin de celui-ci, vous pouvez vous référer aux tags Git suivants :
 
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/dai-2024-2025
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/dai-2024-2025
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions/tree/dai-2024-2025
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content-template/tree/dai-2024-2025
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content-template/tree/dai-2024-2025
-- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template/tree/dai-2024-2025
-- https://github.com/heig-vd-dai-course/.github/tree/dai-2024-2025
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/dai-2025-2026
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/dai-2025-2026
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions/tree/dai-2025-2026
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content-template/tree/dai-2025-2026
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content-template/tree/dai-2025-2026
+- https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template/tree/dai-2025-2026
+- https://github.com/heig-vd-dai-course/.github/tree/dai-2025-2026
 - https://github.com/orgs/heig-vd-dai-course/projects/2
 
 Vous pourrez ainsi toujours accéder aux versions passées et futures du cours pour retrouver des informations ou des exemples.

@@ -1,9 +1,9 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-docker-and-docker-compose/06-docker-and-docker-compose-course-material.pdf
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-docker-and-docker-compose/06-docker-and-docker-compose-course-material.pdf
 [license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/113
 [illustration]: ./images/main-illustration.jpg
 
@@ -982,7 +982,7 @@ organization: <https://github.com/orgs/heig-vd-dai-course/discussions>.
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2024-2025] My Docker Compose application - First name Last
+- **Title**: [DAI 2025-2026] My Docker Compose application - First name Last
   Name
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository with a screenshot of your
