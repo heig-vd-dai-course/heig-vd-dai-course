@@ -1,4 +1,7 @@
 {
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[typst]": {
 		"editor.defaultFormatter": "myriad-dreamin.tinymist"
 	},
@@ -8,22 +11,22 @@
 	"editor.formatOnSave": true,
 	"editor.renderWhitespace": "all",
 	"editor.rulers": [80],
+	"files.encoding": "utf8",
+	"files.eol": "\n",
 	"files.insertFinalNewline": true,
 	"markdown.extension.toc.levels": "2..3",
 	"markdown.marp.breaks": "off",
 	"markdown.marp.html": "all",
+	"markdown.marp.themes": [".marp/theme.css"],
 	"markdownlint.config": {
 		"no-duplicate-heading": {
 			"siblings_only": true
 		},
 		"no-emphasis-as-heading": false,
 		"no-hard-tabs": false,
-		"no-inline-html": false
+		"no-inline-html": false,
+		"no-trailing-punctuation": false
 	},
 	"plantuml.render": "PlantUMLServer",
-	"plantuml.server": "http://localhost:9090",
-	"prettier.printWidth": 80,
-	"prettier.proseWrap": "always",
-	"prettier.tabWidth": 2,
-	"prettier.useTabs": true
+	"plantuml.server": "http://localhost:9090"
 }

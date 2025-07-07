@@ -1,0 +1,33 @@
+services:
+  writer:
+    image: ghcr.io/ludelafo/java-ios-docker
+    environment:
+      IMPLEMENTATION: BUFFERED_BINARY
+      SIZE: 100
+    # The `-c` flag is used to pass a command to the shell
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        java -jar /app/java-ios-1.0-SNAPSHOT.jar \
+          --implementation=$${IMPLEMENTATION} \
+          /data/$${SIZE}-bytes.bin \
+          write \
+          --size=$${SIZE}
+    volumes:
+      - .:/data
+
+  reader:
+    image: ghcr.io/ludelafo/java-ios-docker
+    environment:
+      - IMPLEMENTATION=BUFFERED_BINARY
+      - SIZE=100
+    # The `-c` flag is used to pass a command to the shell
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        java -jar /app/java-ios-1.0-SNAPSHOT.jar \
+          --implementation=BUFFERED_BINARY \
+          /data/$${SIZE}-bytes.bin \
+          read
+    volumes:
+      - .:/data

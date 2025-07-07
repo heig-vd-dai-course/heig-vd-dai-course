@@ -1,0 +1,25 @@
+networks:
+  traefik_network:
+    # We use an external network as it is created by Traefik
+    external: true
+
+services:
+  whoami-with-host-based-routing:
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    networks:
+      - traefik_network
+    # By using the `expose` key, we expose the port 80 of the container to the
+    # other containers in the same network without exposing it to the host
+    # machine
+    expose:
+      - 80
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      - traefik.docker.network=traefik_network
+      ## Routers
+      # ATTENTION: each container must have different routers' names.
+      # In this case, the routers' names for this service is `whoami-with-host-based-routing`.
+      # Other services must have different routers' names.
+      - traefik.http.routers.whoami-with-host-based-routing.entrypoints=https
+      - traefik.http.routers.whoami-with-host-based-routing.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)

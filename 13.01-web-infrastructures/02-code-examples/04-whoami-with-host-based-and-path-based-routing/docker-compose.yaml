@@ -1,0 +1,20 @@
+networks:
+  traefik_network:
+    external: true
+
+services:
+  whoami-with-host-based-and-path-based-routing:
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    networks:
+      - traefik_network
+    expose:
+      - 80
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      - traefik.docker.network=traefik_network
+      ## Routers
+      - traefik.http.routers.whoami-with-host-based-and-path-based-routing.entrypoints=https
+      # We use Host and PathPrefix rules at the same time
+      - traefik.http.routers.whoami-with-host-based-and-path-based-routing.rule=Host(`${WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME}`)
+        && PathPrefix(`/whoami`)

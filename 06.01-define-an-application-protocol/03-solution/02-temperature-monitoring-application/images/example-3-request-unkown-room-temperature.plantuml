@@ -1,0 +1,31 @@
+@startuml request-unkown-room-temperature
+
+title "Request unkown room temperature example"
+
+participant "Emitter 1" as e1
+participant "Emitter 2" as e2
+participant "Server" as s
+participant "Operator" as o
+
+== Emit temperature ==
+
+e1 --> e1: <&clock> ... <&clock> ... <&clock> ...
+e1 -[#red]> s: TEMP Kitchen 21.2
+s -> s: Store the room's temperature
+
+== Request temperature of an unknown room ==
+
+o -[#blue]> s: REQ_TEMP Garage
+s -[#blue]> o: ERROR 1
+
+legend
+**Legend**
+
+Types of communication and patterns used in the application.
+
+| **Color** | **Type**  | **Pattern**      |
+| <#red>    | Multicast | Fire and forget  |
+| <#blue>   | Unicast   | Request-response |
+endlegend
+
+@enduml

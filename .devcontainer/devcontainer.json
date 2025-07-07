@@ -1,6 +1,6 @@
 {
 	"name": "HEIG-VD DAI Course Development Container",
-	"dockerComposeFile": "docker-compose.yaml",
+	"dockerComposeFile": "compose.yaml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspace",
 	"features": {

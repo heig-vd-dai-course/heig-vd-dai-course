@@ -1,0 +1,38 @@
+networks:
+  traefik_network:
+    external: true
+
+services:
+  whoami-without-sticky-sessions:
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    networks:
+      - traefik_network
+    expose:
+      - 80
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      - traefik.docker.network=traefik_network
+      ## Routers
+      - traefik.http.routers.whoami-without-sticky-sessions.entrypoints=https
+      - traefik.http.routers.whoami-without-sticky-sessions.rule=Host(`${WHOAMI_1_FULLY_QUALIFIED_DOMAIN_NAME}`)
+
+  whoami-with-sticky-sessions:
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    networks:
+      - traefik_network
+    expose:
+      - 80
+    labels:
+      ## Traefik
+      - traefik.enable=true
+      - traefik.docker.network=traefik_network
+      ## Routers
+      - traefik.http.routers.whoami-with-sticky-sessions.entrypoints=https
+      - traefik.http.routers.whoami-with-sticky-sessions.rule=Host(`${WHOAMI_2_FULLY_QUALIFIED_DOMAIN_NAME}`)
+      ## Services
+      # We add the sticky session configuration
+      - traefik.http.services.whoami-with-sticky-sessions.loadbalancer.sticky=true
+      # We can also configure the cookie name and its options (useful for multiple services)
+      - traefik.http.services.whoami-with-sticky-sessions.loadbalancer.sticky.cookie.name=whoami_cookie
+      - traefik.http.services.whoami-with-sticky-sessions.loadbalancer.sticky.cookie.httpOnly=true

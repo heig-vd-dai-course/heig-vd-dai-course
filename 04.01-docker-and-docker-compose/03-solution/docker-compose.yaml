@@ -1,0 +1,23 @@
+services:
+  writer:
+    image: ghcr.io/ludelafo/java-ios-docker
+    # Command can be written in a single line as an array (as here) or as a list
+    command:
+      [
+        "--implementation=BUFFERED_BINARY",
+        "/data/100-bytes.bin",
+        "write",
+        "--size=100",
+      ]
+    volumes:
+      - .:/data
+
+  reader:
+    image: ghcr.io/ludelafo/java-ios-docker
+    # Command can be written in a single line as an array or as a list (as here)
+    command:
+      - --implementation=BUFFERED_BINARY
+      - /data/100-bytes.bin
+      - read
+    volumes:
+      - .:/data

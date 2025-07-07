@@ -1,95 +1,529 @@
-# HEIG-VD DAI Course [![License](https://img.shields.io/github/license/heig-vd-dai-course/heig-vd-dai-course)](./LICENSE.md)
+# HEIG-VD DAI Course
 
-The main repository to the
-[Développement d'applications internet (DAI) course](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
-at [HEIG-VD](https://heig-vd.ch), Switzerland!
+[![License](https://img.shields.io/github/license/heig-vd-dai-course/heig-vd-dai-course)](./LICENSE.md)
 
-## Getting started
+Welcome to the
+[Développement d'applications internet (DAI)](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
+teaching unit taught at
+[Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
+Switzerland!
+
+## 🎯 General objectives
+
+On completion of this course, the student will be able to:
+
+- Understand the principles of network communication and how to program
+  efficient network applications.
+- Use Java, Maven and Git/GitHub to develop network applications.
+- Define, implement and interact with various network applications using TCP,
+  UDP and HTTP protocols.
+- Deploy network applications in a containerized environment with Docker and
+  Docker Compose on a web infrastructure (servers, reverse proxies, caching,
+  etc.).
+
+Thanks to these skills, the student will be able to develop efficient and robust
+applications that can communicate over the network (for example, business
+applications, APIs, games, etc.).
+
+## ➡️ Getting started
 
 Do not know where to start? Have a look at the
 [Introduction and course organization](./01-introduction-and-course-organization/README.md)!
 
-## Course planning and material
+## 📅 Program
 
-This course is equivalent to 3 ECTS credits (= ~75-90 hours of work):
+This teaching unit consists of 64 periods, equivalent to three ECTS credits
+(~75-90 hours of work):
 
-- 48 hours in class (= 64 periods of 45 minutes)
-- ~27-42 hours outside of the class - We try our best to ensure you do not have
-  to work that much outside of the class
+- 64 periods of 45 minutes (= 48 hours in class).
+- ~27-42 hours outside of the class.
 
-64 periods in class are planned for this course, divided in 3 main parts:
+These periods are divided in three main parts:
 
 - Part 1 - Input/output processing (18 periods)
 - Part 2 - Network programming with TCP and UDP (24 periods)
 - Part 3 - Network programming with HTTP (20 periods)
 
-The entire course planning for the semester is available at
-<https://github.com/orgs/heig-vd-dai-course/projects>.
+We try our best to ensure you do not have to work that much outside of the class
+but you should expect to spend some time on the course outside of the class.
 
-### Introduction
+Details of each course within the teaching unit are available below. Each course
+is detailed with content, objectives, teaching and learning methods, and
+assessment methods.[^program]
 
-- [1. Introduction and course organization](./01-introduction-and-course-organization/README.md)
+Dates are taken from the
+[HEIG-VD academic calendar](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-### Part 1 - Input/output processing (18 periods)
+|               Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
+| -------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :------------------------ |
+|    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟡 In progress            |
+|    [01](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To complete            |
+|    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To complete            |
+|    [03](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To complete            |
+|    [04](#-course-04) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (3/3)                       | 🔴 To complete            |
+| 🚨 [05](#-course-05) | 13.10. - 19.10.25                  | Presentation of practical work 1         | SMTP and ncat                                | 🔴 To complete            |
+|                    - | 20.10. - 26.10.25                  | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | 🔴 To complete            |
+|    [06](#-course-06) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/5)                       | 🔴 To complete            |
+|    [07](#-course-07) | 03.11. - 09.11.25                  | Java TCP and UDP programming (1/2)       | Practical work 2 (2/5)                       | 🔴 To complete            |
+|    [08](#-course-08) | 10.11. - 16.11.25                  | Java TCP and UDP programming (2/2)       | Practical work 2 (3/5)                       | 🔴 To complete            |
+|    [09](#-course-09) | 17.11. - 23.11.25                  | Java network concurrency                 | Practical work 2 (4/5)                       | 🔴 To complete            |
+| 🚨 [10](#-course-10) | 24.11. - 30.11.25                  | Evaluation 1                             | Practical work 2 (5/5)                       | 🔴 To complete            |
+| 🚨 [11](#-course-11) | 01.12. - 07.12.25                  | Presentation of practical work 2         | SSH and SCP                                  | 🔴 To complete            |
+|    [12](#-course-12) | 08.12. - 14.12.25                  | HTTP and curl                            | Practical work 3 (1/4)                       | 🔴 To complete            |
+|    [13](#-course-13) | 15.12. - 21.12.25                  | Web infrastructures                      | Practical work 3 (2/4)                       | 🔴 To complete            |
+|                    - | 22.12. - 28.12.25                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
+|                    - | 29.12. - 04.01.26                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
+|    [14](#-course-14) | 05.01. - 11.01.26                  | Caching and performance                  | Practical work 3 (3/4)                       | 🔴 To complete            |
+| 🚨 [15](#-course-15) | 12.01. - 18.01.26                  | Evaluation 2                             | Practical work 3 (4/4)                       | 🔴 To complete            |
+| 🚨 [16](#-course-16) | 19.01. - 25.01.26                  | Presentation of practical work 3         | Semester review and exam preparation         | 🔴 To complete            |
+|                    - | 26.01. - 01.02.26                  | _Exam preparation_                       | _Exam preparation_                           | 🔴 To complete            |
+|                    - | 02.02. - 08.02.26                  | _Exam_                                   | _Exam_                                       | 🔴 To complete            |
 
-- [2. Introduction to part 1](./02-introduction-to-part-1/README.md)
-- [3. Git, GitHub and Markdown (2 periods)](./03-git-github-and-markdown/README.md)
-- [4. Java, IntelliJ IDEA and Maven (2 periods)](./04-java-intellij-idea-and-maven/README.md)
-- [5. Java IOs (2 periods)](./05-java-ios/README.md)
-- [6. Docker and Docker Compose (2 periods)](./06-docker-and-docker-compose/README.md)
-- [7. Practical work 1 (8 periods)](./07-practical-work-1/README.md)
-- [8. Evaluation 1 (2 periods)](./08-evaluation-1/README.md)
-- [9. Conclusion to part 1](./09-conclusion-to-part-1/README.md)
+## 🕛 Course 00
 
-### Part 2 - Network programming with TCP and UDP (24 periods)
+### Set up a Windows development environment
 
-- [10. Introduction to part 2](./10-introduction-to-part-2/README.md)
-- [11. Define an application protocol (2 periods)](./11-define-an-application-protocol/README.md)
-- [12. Java TCP programming (2 periods)](./12-java-tcp-programming/README.md)
-- [13. Java UDP programming (2 periods)](./13-java-udp-programming/README.md)
-- [14. Java network concurrency (2 periods)](./14-java-network-concurrency/README.md)
-- [15. SMTP and ncat (2 periods)](./15-smtp-and-ncat/README.md)
-- [16. Practical work 2 (12 periods)](./16-practical-work-2/README.md)
-- [17. Evaluation 2 (2 periods)](./17-evaluation-2/README.md)
-- [18. Conclusion to part 2](./18-conclusion-to-part-2/README.md)
+- Course material:
+  [Link to content](./00.01-set-up-a-windows-development-environment/01-course-material/README.md)
 
-### Part 3 - Network programming with HTTP (20 periods)
+[_See details_](./00.01-set-up-a-windows-development-environment/) ·
+[_Jump back to program_](#-program)
 
-- [19. Introduction to part 3](./19-introduction-to-part-3/README.md)
-- [20. SSH and SCP (2 periods)](./20-ssh-and-scp/README.md)
-- [21. HTTP and curl (2 periods)](./21-http-and-curl/README.md)
-- [22. Web infrastructures (2 periods)](./22-web-infrastructures/README.md)
-- [23. Caching and performance (2 periods)](./23-caching-and-performance/README.md)
-- [24. Practical work 3 (10 periods)](./24-practical-work-3/README.md)
-- [25. Evaluation 3 (2 periods)](./25-evaluation-3/README.md)
-- [26. Conclusion to part 3](./26-conclusion-to-part-3/README.md)
+### Considerations for a development environment
 
-### Conclusion (2 periods)
+- Course material:
+  [Link to content](./00.02-considerations-for-a-development-environment/01-course-material/README.md)
 
-- [27. Semester review and exam preparation (2 periods)](./27-semester-review-and-exam-preparation/README.md)
+[_See details_](./00.02-considerations-for-a-development-environment/) ·
+[_Jump back to program_](#-program)
 
-## GitHub Discussions
+## 🕐 Course 01
 
-GitHub Discussions are available at
-<https://github.com/orgs/heig-vd-dai-course/discussions>.
+### Introduction and course organization
 
-## GitHub Teams
+- Course material:
+  [Link to content](./01.01-introduction-and-course-organization/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
 
-GitHub Teams are available at
-<https://github.com/orgs/heig-vd-dai-course/teams>. The following teams are
-available:
+[_See details_](./01.01-introduction-and-course-organization/) ·
+[_Jump back to program_](#-program)
 
-- Teaching staff (teachers and assistants)
-- Students (all students)
-- Old members (people who have completed the course)
+### Introduction to part 1 - Input/output processing
 
-## License
+- Course material:
+  [Link to content](./01.02-introduction-to-part-1-input-output-processing/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./01.02-introduction-to-part-1-input-output-processing/) ·
+[_Jump back to program_](#-program)
+
+### Git, GitHub and Markdown
+
+- Course material:
+  [Link to content](./01.03-git-github-and-markdown/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./01.03-git-github-and-markdown/) ·
+[_Jump back to program_](#-program)
+
+### Java, IntelliJ IDEA and Maven
+
+- Course material:
+  [Link to content](./01.04-java-intellij-idea-and-maven/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./01.04-java-intellij-idea-and-maven/02-code-examples/README.md)
+- Solution:
+  [Link to content](./01.04-java-intellij-idea-and-maven/03-solution/README.md)
+
+[_See details_](./01.04-java-intellij-idea-and-maven/) ·
+[_Jump back to program_](#-program)
+
+## 🕑 Course 02
+
+### Java IOs
+
+- Course material:
+  [Link to content](./02.01-java-ios/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples: [Link to content](./02.01-java-ios/02-code-examples/README.md)
+- Solution: [Link to content](./02.01-java-ios/03-solution/README.md)
+
+[_See details_](./02.01-java-ios/) · [_Jump back to program_](#-program)
+
+### Practical work 1 (1/3)
+
+- Course material:
+  [Link to content](<./02.02-practical-work-1-(1-of-3)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./02.02-practical-work-1-(1-of-3)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕒 Course 03
+
+### Practical work 1 (2/3)
+
+- Course material:
+  [Link to content](<./03.01-practical-work-1-(2-of-3)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./03.01-practical-work-1-(2-of-3)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕓 Course 04
+
+### Docker and Docker Compose
+
+- Course material:
+  [Link to content](./04.01-docker-and-docker-compose/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./04.01-docker-and-docker-compose/02-code-examples/README.md)
+- Solution:
+  [Link to content](./04.01-docker-and-docker-compose/03-solution/README.md)
+
+[_See details_](./04.01-docker-and-docker-compose/) ·
+[_Jump back to program_](#-program)
+
+### Practical work 1 (3/3)
+
+- Course material:
+  [Link to content](<./04.02-practical-work-1-(3-of-3)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./04.02-practical-work-1-(3-of-3)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕔 Course 05
+
+### Presentation of practical work 1
+
+- **🚨 Graded evaluation**
+- Course material:
+  [Link to content](./05.01-presentation-of-practical-work-1/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./05.01-presentation-of-practical-work-1/) ·
+[_Jump back to program_](#-program)
+
+### Conclusion to part 1 - Input/output processing
+
+- Course material:
+  [Link to content](./05.02-conclusion-to-part-1-input-output-processing/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./05.02-conclusion-to-part-1-input-output-processing/) ·
+[_Jump back to program_](#-program)
+
+### Introduction to part 2 - Network programming with TCP and UDP
+
+- Course material:
+  [Link to content](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/)
+· [_Jump back to program_](#-program)
+
+### SMTP and ncat
+
+- Course material:
+  [Link to content](./05.04-smtp-and-ncat/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./05.04-smtp-and-ncat/02-code-examples/README.md)
+- Solution: [Link to content](./05.04-smtp-and-ncat/03-solution/README.md)
+
+[_See details_](./05.04-smtp-and-ncat/) · [_Jump back to program_](#-program)
+
+## 🕕 Course 06
+
+### Define an application protocol
+
+- Course material:
+  [Link to content](./06.01-define-an-application-protocol/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./06.01-define-an-application-protocol/02-code-examples/README.md)
+- Solution:
+  [Link to content](./06.01-define-an-application-protocol/03-solution/README.md)
+
+[_See details_](./06.01-define-an-application-protocol/) ·
+[_Jump back to program_](#-program)
+
+### Practical work 2 (1/5)
+
+- Course material:
+  [Link to content](<./06.02-practical-work-2-(1-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./06.02-practical-work-2-(1-of-5)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕖 Course 07
+
+### Java TCP and UDP programming
+
+- Course material:
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples/README.md>)
+- Solution:
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/03-solution/README.md>)
+
+[_See details_](<./07.01-java-tcp-and-udp-programming-(1-of-2)/>) ·
+[_Jump back to program_](#-program)
+
+### Practical work 2 (2/5)
+
+- Course material:
+  [Link to content](<./07.02-practical-work-2-(2-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./07.02-practical-work-2-(2-of-5)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕗 Course 08
+
+### Java TCP and UDP programming
+
+- Course material:
+  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/02-code-examples/README.md>)
+- Solution:
+  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/03-solution/README.md>)
+
+[_See details_](<./08.01-java-tcp-and-udp-programming-(2-of-2)/>) ·
+[_Jump back to program_](#-program)
+
+### Practical work 2 (3/5)
+
+- Course material:
+  [Link to content](<./08.02-practical-work-2-(3-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./08.02-practical-work-2-(3-of-5)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕘 Course 09
+
+### Java network concurrency
+
+- Course material:
+  [Link to content](./09.01-java-network-concurrency/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./09.01-java-network-concurrency/02-code-examples/README.md)
+- Solution:
+  [Link to content](./09.01-java-network-concurrency/03-solution/README.md)
+
+[_See details_](./09.01-java-network-concurrency/) ·
+[_Jump back to program_](#-program)
+
+### Practical work 2 (4/5)
+
+- Course material:
+  [Link to content](<./09.02-practical-work-2-(4-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./09.02-practical-work-2-(4-of-5)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕙 Course 10
+
+### Evaluation 1
+
+- **🚨 Graded evaluation**
+- Course material:
+  [Link to content](./10.01-evaluation-1/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Archives: [Link to content](./10.01-evaluation-1/02-archives/README.md)
+
+[_See details_](./10.01-evaluation-1/) · [_Jump back to program_](#-program)
+
+### Practical work 2 (5/5)
+
+- Course material:
+  [Link to content](<./10.02-practical-work-2-(5-of-5)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./10.02-practical-work-2-(5-of-5)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕚 Course 11
+
+### Presentation of practical work 2
+
+- **🚨 Graded evaluation**
+- Course material:
+  [Link to content](./11.01-presentation-of-practical-work-2/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./11.01-presentation-of-practical-work-2/) ·
+[_Jump back to program_](#-program)
+
+### Conclusion to part 2 - Network programming with TCP and UDP
+
+- Course material:
+  [Link to content](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/)
+· [_Jump back to program_](#-program)
+
+### Introduction to part 3 - Network programming with HTTP
+
+- Course material:
+  [Link to content](./11.03-introduction-to-part-3-network-programming-with-http/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./11.03-introduction-to-part-3-network-programming-with-http/) ·
+[_Jump back to program_](#-program)
+
+### SSH and SCP
+
+- Course material:
+  [Link to content](./11.04-ssh-and-scp/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./11.04-ssh-and-scp/) · [_Jump back to program_](#-program)
+
+## 🕛 Course 12
+
+### HTTP and curl
+
+- Course material:
+  [Link to content](./12.01-http-and-curl/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Solution: [Link to content](./12.01-http-and-curl/02-solution/README.md)
+
+[_See details_](./12.01-http-and-curl/) · [_Jump back to program_](#-program)
+
+### Practical work 3 (1/4)
+
+- Course material:
+  [Link to content](<./12.02-practical-work-3-(1-of-4)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./12.02-practical-work-3-(1-of-4)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕐 Course 13
+
+### Web infrastructures
+
+- Course material:
+  [Link to content](./13.01-web-infrastructures/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Code examples:
+  [Link to content](./13.01-web-infrastructures/02-code-examples/README.md)
+
+[_See details_](./13.01-web-infrastructures/) ·
+[_Jump back to program_](#-program)
+
+### Practical work 3 (2/4)
+
+- Course material:
+  [Link to content](<./13.02-practical-work-3-(2-of-4)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./13.02-practical-work-3-(2-of-4)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕑 Course 14
+
+### Caching and performance
+
+- Course material:
+  [Link to content](./14.01-caching-and-performance/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Solution:
+  [Link to content](./14.01-caching-and-performance/02-solution/README.md)
+
+[_See details_](./14.01-caching-and-performance/) ·
+[_Jump back to program_](#-program)
+
+### Practical work 3 (3/4)
+
+- Course material:
+  [Link to content](<./14.02-practical-work-3-(3-of-4)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./14.02-practical-work-3-(3-of-4)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕒 Course 15
+
+### Evaluation 2
+
+- **🚨 Graded evaluation**
+- Course material:
+  [Link to content](./15.01-evaluation-2/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Archives: [Link to content](./15.01-evaluation-2/02-archives/README.md)
+
+[_See details_](./15.01-evaluation-2/) · [_Jump back to program_](#-program)
+
+### Practical work 3 (4/4)
+
+- Course material:
+  [Link to content](<./15.02-practical-work-3-(4-of-4)/01-course-material/README.md>)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](<./15.02-practical-work-3-(4-of-4)/>) ·
+[_Jump back to program_](#-program)
+
+## 🕓 Course 16
+
+### Presentation of practical work 3
+
+- **🚨 Graded evaluation**
+- Course material:
+  [Link to content](./16.01-presentation-of-practical-work-3/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./16.01-presentation-of-practical-work-3/) ·
+[_Jump back to program_](#-program)
+
+### Conclusion to part 3 - Network programming with HTTP
+
+- Course material:
+  [Link to content](./16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+
+[_See details_](./16.02-conclusion-to-part-3-network-programming-with-http/) ·
+[_Jump back to program_](#-program)
+
+### Semester review and exam preparation
+
+- Course material:
+  [Link to content](./16.03-semester-review-and-exam-preparation/01-course-material/README.md)
+- Presentation: [Web](#TODO) · [PDF](#TODO)
+- Feedback (Framaforms + GAPS):
+  [Link to content](./16.03-semester-review-and-exam-preparation/02-feedback/README.md)
+
+[_See details_](./16.03-semester-review-and-exam-preparation/) ·
+[_Jump back to program_](#-program)
+
+## 📜 License
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International](./LICENSE.md)
 license.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please read the
 [`CONTRIBUTING.md`](./CONTRIBUTING.md) file for details.
+
+[^status]:
+    🟢 Complete: the course is complete and ready for use. 🟡 In progress: the
+    course is being written/updated. 🔴 To complete: the course needs to be
+    written/updated
+
+[^program]:
+    The program is subject to change. We will do our best to inform you in
+    advance if there are any changes.

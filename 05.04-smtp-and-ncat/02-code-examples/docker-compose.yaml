@@ -1,0 +1,11 @@
+services:
+  mailpit:
+    # Use the version set in the `.env` file, or default to the latest version
+    image: axllent/mailpit:${MAILPIT_IMAGE_VERSION:-latest}
+    # If the container stops, restart it automatically
+    restart: unless-stopped
+    ports:
+      # Instead of using the default 25 port, we use 1025 to avoid conflicts
+      - 1025:1025
+      # The web interface is available on port 8025
+      - 8025:8025

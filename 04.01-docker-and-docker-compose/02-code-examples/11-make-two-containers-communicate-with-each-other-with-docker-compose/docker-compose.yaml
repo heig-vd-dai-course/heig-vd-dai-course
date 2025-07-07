@@ -1,0 +1,20 @@
+networks:
+  my-network:
+
+services:
+  ncat-server:
+    hostname: my-server
+    image: ncat
+    command:
+      - -l
+      - "1234"
+    networks:
+      - my-network
+
+  ncat-client:
+    image: ncat
+    command:
+      - my-server
+      - "1234"
+    networks:
+      - my-network
