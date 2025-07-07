@@ -52,21 +52,21 @@ is detailed with content, objectives, teaching and learning methods, and
 assessment methods.
 
 Dates are taken from the
-[_"HEIG-VD Calendrier académique"_](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
+[HEIG-VD academic calendar](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
 |               Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
 | -------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :------------------------ |
-|     [0](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🔴 To complete            |
-|     [1](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To complete            |
-|     [2](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To complete            |
-|     [3](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To complete            |
-|     [4](#-course-04) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (3/3)                       | 🔴 To complete            |
-|  🚨 [5](#-course-05) | 13.10. - 19.10.25                  | Presentation of practical work 1         | SMTP and ncat                                | 🔴 To complete            |
+|    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🔴 To complete            |
+|    [01](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To complete            |
+|    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To complete            |
+|    [03](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To complete            |
+|    [04](#-course-04) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (3/3)                       | 🔴 To complete            |
+| 🚨 [05](#-course-05) | 13.10. - 19.10.25                  | Presentation of practical work 1         | SMTP and ncat                                | 🔴 To complete            |
 |                    - | 20.10. - 26.10.25                  | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | 🔴 To complete            |
-|     [6](#-course-06) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/5)                       | 🔴 To complete            |
-|     [7](#-course-07) | 03.11. - 09.11.25                  | Java TCP programming                     | Practical work 2 (2/5)                       | 🔴 To complete            |
-|     [8](#-course-08) | 10.11. - 16.11.25                  | Java UDP programming                     | Practical work 2 (3/5)                       | 🔴 To complete            |
-|     [9](#-course-09) | 17.11. - 23.11.25                  | Java network concurrency                 | Practical work 2 (4/5)                       | 🔴 To complete            |
+|    [06](#-course-06) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/5)                       | 🔴 To complete            |
+|    [07](#-course-07) | 03.11. - 09.11.25                  | Java TCP programming                     | Practical work 2 (2/5)                       | 🔴 To complete            |
+|    [08](#-course-08) | 10.11. - 16.11.25                  | Java UDP programming                     | Practical work 2 (3/5)                       | 🔴 To complete            |
+|    [09](#-course-09) | 17.11. - 23.11.25                  | Java network concurrency                 | Practical work 2 (4/5)                       | 🔴 To complete            |
 | 🚨 [10](#-course-10) | 24.11. - 30.11.25                  | Evaluation 1                             | Practical work 2 (5/5)                       | 🔴 To complete            |
 | 🚨 [11](#-course-11) | 01.12. - 07.12.25                  | Presentation of practical work 2         | SSH and SCP                                  | 🔴 To complete            |
 |    [12](#-course-12) | 08.12. - 14.12.25                  | HTTP and curl                            | Practical work 3 (1/4)                       | 🔴 To complete            |
@@ -81,17 +81,41 @@ Dates are taken from the
 
 ## 🕛 Course 00
 
+[_See details_](./01-set-up-a-windows-development-environment+considerations-for-a-development-environment/)
+
 ### Set up a Windows development environment
+
+- Guide:
+  [Course material](./01-set-up-a-windows-development-environment+considerations-for-a-development-environment/01-set-up-a-windows-development-environment/README.md)
 
 ### Considerations for a development environment
 
+- Guide:
+  [Course material](./01-set-up-a-windows-development-environment+considerations-for-a-development-environment/02-considerations-for-a-development-environment/README.md)
+
 ## 🕐 Course 01
 
+[_See details_](./02-git-github-and-markdown+java-intellij-idea-and-maven/)
+
 ### Introduction and course organization
+
+- Theory:
+  [Course material](./02-git-github-and-markdown+java-intellij-idea-and-maven/01-introduction-and-course-organization/README.md)
+  ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf)
 
 ### Introduction to part 1 - Input/output processing
 
 ### Git, GitHub and Markdown
+
+- Theory:
+  [Course material](./02-git-github-and-markdown+java-intellij-idea-and-maven/01-introduction-and-course-organization/README.md)
+  ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf)
 
 ### Java, IntelliJ IDEA and Maven
 
