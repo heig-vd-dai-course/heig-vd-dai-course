@@ -30,7 +30,7 @@ applications, APIs, games, etc.).
 Do not know where to start? Have a look at the
 [Introduction and course organization](./01-introduction-and-course-organization/README.md)!
 
-## 📅 Program
+## 📅 Program[^program]
 
 This teaching unit consists of 64 periods, equivalent to three ECTS credits
 (~75-90 hours of work):
@@ -54,32 +54,32 @@ assessment methods.
 Dates are taken from the
 [HEIG-VD academic calendar](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
-|               Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
-| -------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :------------------------ |
-|    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟡 In progress            |
-|    [01](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To complete            |
-|    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To complete            |
-|    [03](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To complete            |
-|    [04](#-course-04) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (3/3)                       | 🔴 To complete            |
-| 🚨 [05](#-course-05) | 13.10. - 19.10.25                  | Presentation of practical work 1         | SMTP and ncat                                | 🔴 To complete            |
-|                    - | 20.10. - 26.10.25                  | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | 🔴 To complete            |
-|    [06](#-course-06) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/5)                       | 🔴 To complete            |
-|    [07](#-course-07) | 03.11. - 09.11.25                  | Java TCP and UDP programming (1/2)       | Practical work 2 (2/5)                       | 🔴 To complete            |
-|    [08](#-course-08) | 10.11. - 16.11.25                  | Java TCP and UDP programming (2/2)       | Practical work 2 (3/5)                       | 🔴 To complete            |
-|    [09](#-course-09) | 17.11. - 23.11.25                  | Java network concurrency                 | Practical work 2 (4/5)                       | 🔴 To complete            |
-| 🚨 [10](#-course-10) | 24.11. - 30.11.25                  | Evaluation 1                             | Practical work 2 (5/5)                       | 🔴 To complete            |
-| 🚨 [11](#-course-11) | 01.12. - 07.12.25                  | Presentation of practical work 2         | SSH and SCP                                  | 🔴 To complete            |
-|    [12](#-course-12) | 08.12. - 14.12.25                  | HTTP and curl                            | Practical work 3 (1/4)                       | 🔴 To complete            |
-|    [13](#-course-13) | 15.12. - 21.12.25                  | Web infrastructures                      | Practical work 3 (2/4)                       | 🔴 To complete            |
-|                    - | 22.12. - 28.12.25                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
-|                    - | 29.12. - 04.01.26                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
-|    [14](#-course-14) | 05.01. - 11.01.26                  | Caching and performance                  | Practical work 3 (3/4)                       | 🔴 To complete            |
-| 🚨 [15](#-course-15) | 12.01. - 18.01.26                  | Evaluation 2                             | Practical work 3 (4/4)                       | 🔴 To complete            |
-| 🚨 [16](#-course-16) | 19.01. - 25.01.26                  | Presentation of practical work 3         | Semester review and exam preparation         | 🔴 To complete            |
-|                    - | 26.01. - 01.02.26                  | _Exam preparation_                       | _Exam preparation_                           | 🔴 To complete            |
-|                    - | 02.02. - 08.02.26                  | _Exam_                                   | _Exam_                                       | 🔴 To complete            |
+|                      Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
+| --------------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :------------------------ |
+|    [00](#-course-00program) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟡 In progress            |
+|    [01](#-course-01program) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To complete            |
+|    [02](#-course-02program) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To complete            |
+|    [03](#-course-03program) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To complete            |
+|    [04](#-course-04program) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (3/3)                       | 🔴 To complete            |
+| 🚨 [05](#-course-05program) | 13.10. - 19.10.25                  | Presentation of practical work 1         | SMTP and ncat                                | 🔴 To complete            |
+|                           - | 20.10. - 26.10.25                  | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | 🔴 To complete            |
+|    [06](#-course-06program) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/5)                       | 🔴 To complete            |
+|    [07](#-course-07program) | 03.11. - 09.11.25                  | Java TCP and UDP programming (1/2)       | Practical work 2 (2/5)                       | 🔴 To complete            |
+|    [08](#-course-08program) | 10.11. - 16.11.25                  | Java TCP and UDP programming (2/2)       | Practical work 2 (3/5)                       | 🔴 To complete            |
+|    [09](#-course-09program) | 17.11. - 23.11.25                  | Java network concurrency                 | Practical work 2 (4/5)                       | 🔴 To complete            |
+| 🚨 [10](#-course-10program) | 24.11. - 30.11.25                  | Evaluation 1                             | Practical work 2 (5/5)                       | 🔴 To complete            |
+| 🚨 [11](#-course-11program) | 01.12. - 07.12.25                  | Presentation of practical work 2         | SSH and SCP                                  | 🔴 To complete            |
+|    [12](#-course-12program) | 08.12. - 14.12.25                  | HTTP and curl                            | Practical work 3 (1/4)                       | 🔴 To complete            |
+|    [13](#-course-13program) | 15.12. - 21.12.25                  | Web infrastructures                      | Practical work 3 (2/4)                       | 🔴 To complete            |
+|                           - | 22.12. - 28.12.25                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
+|                           - | 29.12. - 04.01.26                  | _No course: holidays_                    | _No course: holidays_                        | 🔴 To complete            |
+|    [14](#-course-14program) | 05.01. - 11.01.26                  | Caching and performance                  | Practical work 3 (3/4)                       | 🔴 To complete            |
+| 🚨 [15](#-course-15program) | 12.01. - 18.01.26                  | Evaluation 2                             | Practical work 3 (4/4)                       | 🔴 To complete            |
+| 🚨 [16](#-course-16program) | 19.01. - 25.01.26                  | Presentation of practical work 3         | Semester review and exam preparation         | 🔴 To complete            |
+|                           - | 26.01. - 01.02.26                  | _Exam preparation_                       | _Exam preparation_                           | 🔴 To complete            |
+|                           - | 02.02. - 08.02.26                  | _Exam_                                   | _Exam_                                       | 🔴 To complete            |
 
-## 🕛 Course 00
+## 🕛 Course 00[^program]
 
 ### Set up a Windows development environment
 
@@ -95,7 +95,7 @@ Dates are taken from the
 
 [_See details_](./00.02-considerations-for-a-development-environment/)
 
-## 🕐 Course 01
+## 🕐 Course 01[^program]
 
 ### Introduction and course organization
 
@@ -133,7 +133,7 @@ Dates are taken from the
 
 [_See details_](./01.04-java-intellij-idea-and-maven/)
 
-## 🕑 Course 02
+## 🕑 Course 02[^program]
 
 ### Java IOs
 
@@ -153,7 +153,7 @@ Dates are taken from the
 
 [_See details_](<./02.02-practical-work-1-(1-of-3)/>)
 
-## 🕒 Course 03
+## 🕒 Course 03[^program]
 
 ### Practical work 1 (2/3)
 
@@ -163,7 +163,7 @@ Dates are taken from the
 
 [_See details_](<./03.01-practical-work-1-(2-of-3)/>)
 
-## 🕓 Course 04
+## 🕓 Course 04[^program]
 
 ### Docker and Docker Compose
 
@@ -185,7 +185,7 @@ Dates are taken from the
 
 [_See details_](<./04.02-practical-work-1-(3-of-3)/>)
 
-## 🕔 Course 05
+## 🕔 Course 05[^program]
 
 ### Presentation of practical work 1
 
@@ -223,7 +223,7 @@ Dates are taken from the
 
 [_See details_](./05.04-smtp-and-ncat/)
 
-## 🕕 Course 06
+## 🕕 Course 06[^program]
 
 ### Define an application protocol
 
@@ -245,7 +245,7 @@ Dates are taken from the
 
 [_See details_](<./06.02-practical-work-2-(1-of-5)/>)
 
-## 🕖 Course 07
+## 🕖 Course 07[^program]
 
 ### Java TCP and UDP programming
 
@@ -267,7 +267,7 @@ Dates are taken from the
 
 [_See details_](<./07.02-practical-work-2-(2-of-5)/>)
 
-## 🕗 Course 08
+## 🕗 Course 08[^program]
 
 ### Java TCP and UDP programming
 
@@ -289,7 +289,7 @@ Dates are taken from the
 
 [_See details_](<./08.02-practical-work-2-(3-of-5)/>)
 
-## 🕘 Course 09
+## 🕘 Course 09[^program]
 
 ### Java network concurrency
 
@@ -311,7 +311,7 @@ Dates are taken from the
 
 [_See details_](<./09.02-practical-work-2-(4-of-5)/>)
 
-## 🕙 Course 10
+## 🕙 Course 10[^program]
 
 ### Evaluation 1
 
@@ -331,7 +331,7 @@ Dates are taken from the
 
 [_See details_](<./10.02-practical-work-2-(5-of-5)/>)
 
-## 🕚 Course 11
+## 🕚 Course 11[^program]
 
 ### Presentation of practical work 2
 
@@ -366,7 +366,7 @@ Dates are taken from the
 
 [_See details_](./11.04-ssh-and-scp/)
 
-## 🕛 Course 12
+## 🕛 Course 12[^program]
 
 ### HTTP and curl
 
@@ -385,7 +385,7 @@ Dates are taken from the
 
 [_See details_](<./12.02-practical-work-3-(1-of-4)/>)
 
-## 🕐 Course 13
+## 🕐 Course 13[^program]
 
 ### Web infrastructures
 
@@ -405,7 +405,7 @@ Dates are taken from the
 
 [_See details_](<./13.02-practical-work-3-(2-of-4)/>)
 
-## 🕑 Course 14
+## 🕑 Course 14[^program]
 
 ### Caching and performance
 
@@ -425,7 +425,7 @@ Dates are taken from the
 
 [_See details_](<./14.02-practical-work-3-(3-of-4)/>)
 
-## 🕒 Course 15
+## 🕒 Course 15[^program]
 
 ### Evaluation 2
 
@@ -445,7 +445,7 @@ Dates are taken from the
 
 [_See details_](<./15.02-practical-work-3-(4-of-4)/>)
 
-## 🕓 Course 16
+## 🕓 Course 16[^program]
 
 ### Presentation of practical work 3
 
@@ -489,3 +489,7 @@ Contributions are welcome! Please read the
     🟢 Complete: the course is complete and ready for use. 🟡 In progress: the
     course is being written/updated. 🔴 To complete: the course needs to be
     written/updated
+
+[^program]:
+    The program is subject to change. We will do our best to inform you in
+    advance if there are any changes.
