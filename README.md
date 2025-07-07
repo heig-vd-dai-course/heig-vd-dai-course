@@ -64,8 +64,8 @@ Dates are taken from the
 | 🚨 [05](#-course-05) | 13.10. - 19.10.25                  | Presentation of practical work 1         | SMTP and ncat                                | 🔴 To complete            |
 |                    - | 20.10. - 26.10.25                  | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | 🔴 To complete            |
 |    [06](#-course-06) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/5)                       | 🔴 To complete            |
-|    [07](#-course-07) | 03.11. - 09.11.25                  | Java TCP programming                     | Practical work 2 (2/5)                       | 🔴 To complete            |
-|    [08](#-course-08) | 10.11. - 16.11.25                  | Java UDP programming                     | Practical work 2 (3/5)                       | 🔴 To complete            |
+|    [07](#-course-07) | 03.11. - 09.11.25                  | Java TCP and UDP programming (1/2)       | Practical work 2 (2/5)                       | 🔴 To complete            |
+|    [08](#-course-08) | 10.11. - 16.11.25                  | Java TCP and UDP programming (2/2)       | Practical work 2 (3/5)                       | 🔴 To complete            |
 |    [09](#-course-09) | 17.11. - 23.11.25                  | Java network concurrency                 | Practical work 2 (4/5)                       | 🔴 To complete            |
 | 🚨 [10](#-course-10) | 24.11. - 30.11.25                  | Evaluation 1                             | Practical work 2 (5/5)                       | 🔴 To complete            |
 | 🚨 [11](#-course-11) | 01.12. - 07.12.25                  | Presentation of practical work 2         | SSH and SCP                                  | 🔴 To complete            |
@@ -81,12 +81,12 @@ Dates are taken from the
 
 ## 🕛 Course 00
 
-[_See details_](./01-set-up-a-windows-development-environment+considerations-for-a-development-environment/)
-
 ### Set up a Windows development environment
 
 - Guide:
   [Course material](./01-set-up-a-windows-development-environment+considerations-for-a-development-environment/01-set-up-a-windows-development-environment/README.md)
+
+[_See details_](./01-set-up-a-windows-development-environment+considerations-for-a-development-environment/)
 
 ### Considerations for a development environment
 
