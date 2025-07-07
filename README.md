@@ -51,7 +51,7 @@ Details of each course within the teaching unit are available below. Each course
 is detailed with content, objectives, teaching and learning methods, and
 assessment methods.
 
-The week numbers are taken from the
+Dates are taken from the
 [_"HEIG-VD Calendrier académique"_](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
 
 |               Course | Dates                              | Main content for the first two periods   | Main content for the last two periods        | Redaction status[^status] |
@@ -167,25 +167,25 @@ The week numbers are taken from the
 
 ### Practical work 3 - Network programming with HTTP (1/4)
 
-## 🕜 Course 13
+## 🕐 Course 13
 
 ### Web infrastructures
 
 ### Practical work 3 - Network programming with HTTP (2/4)
 
-## 🕝 Course 14
+## 🕑 Course 14
 
 ### Caching and performance
 
 ### Practical work 3 - Network programming with HTTP (3/4)
 
-## 🕞 Course 15
+## 🕒 Course 15
 
 ### Evaluation 2 - Network programming with HTTP
 
 ### Practical work 3 - Network programming with HTTP (4/4)
 
-## 🕟 Course 16
+## 🕓 Course 16
 
 ### Presentation of practical work 3 - Network programming with HTTP
 
