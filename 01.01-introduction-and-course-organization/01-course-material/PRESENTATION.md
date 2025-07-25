@@ -10,14 +10,6 @@ author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Introduction and course organization
 description: Introduction and course organization for the DAI course at HEIG-VD, Switzerland
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
-    .three-columns {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-    }
-    .center {
-        text-align: center;
-    }
 headingDivider: 6
 -->
 
@@ -104,17 +96,17 @@ Friday mornings
 
 <!-- _class: lead -->
 
-### What does GAPS say
+### What does GAPS say (1/5)
 
 - [Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
 - [Descriptif de module](https://gaps.heig-vd.ch/consultation/fiches/mv/mv.php?id=1905)
 - [Programme de formation](https://gaps.heig-vd.ch/consultation/teachingplans/)
-- 3 ECTS credits = ~75-90 hours
-  - 48 hours in class (= 64 periods of 45 minutes)
+- 3 ECTS credits = ~75-90 hours:
+  - 64 periods of 45 minutes (= 48 hours in class).
   - ~27-42 hours outside of the class - We try our best to ensure you do not
-    have to work that much outside of the class
+    have to work that much outside of the class.
 
----
+### What does GAPS say (2/5)
 
 > **Connaissances préalables recommandées**
 >
@@ -127,7 +119,7 @@ Friday mornings
 > Les unités d'enseignement PRG2, RXI et POO permettent d'acquerir ces
 > connaissances.
 
----
+### What does GAPS say (3/5)
 
 > **Objectifs**
 >
@@ -139,7 +131,7 @@ Friday mornings
 > - être capable d'implémenter un client et un serveur en utilisant l'API Socket
 >   dans différents langages ;
 
----
+### What does GAPS say (4/5)
 
 > **Protocole HTTP**
 >
@@ -148,13 +140,13 @@ Friday mornings
 >   reverse proxy et plusieurs serveurs ;
 > - être capable d'implémenter le protocole en utilisant l'API Socket ;
 
----
+### What does GAPS say (5/5)
 
 > **Protocoles de messagerie**
 >
 > - connaître les principaux protocoles relatifs à la messagerie électronique ;
 > - être capable d'implémenter un client de messagerie simple ;
-
+>
 > **Protocoles de transfert de fichiers et d'accès à distance**
 >
 > - connaître les protocoles de transfert de fichiers et d'accès à distance,
@@ -164,10 +156,10 @@ Friday mornings
 
 You will learn the following topics during this course:
 
-- Network programming (inputs/outputs, encodings, TCP and UDP)
-- Application-level protocols (SMTP, SSH, HTTP and your own)
-- Web infrastructures (reverse proxy, load balancer, sticky sessions)
-- How to read and write technical documentation
+- Network programming (inputs/outputs, encodings, TCP and UDP).
+- Application-level protocols (SMTP, SSH, HTTP and your own).
+- Web infrastructures (reverse proxy, load balancer, sticky sessions).
+- How to read and write technical documentation.
 
 At the end of the course, you will be able to create applications that can
 communicate over the network!
@@ -176,12 +168,12 @@ communicate over the network!
 
 You will learn the following technologies during this course:
 
-- Git and GitHub
-- Markdown
-- Java for network programming
-- Docker & Docker Compose
-- Network utilities
-- The terminal :heart:
+- Git and GitHub.
+- Markdown.
+- Java for network programming.
+- Docker & Docker Compose.
+- Network utilities.
+- The terminal. :heart:
 
 ![bg right:40%](https://images.unsplash.com/photo-1530124566582-a618bc2615dc?fit=crop&h=720)
 
@@ -198,55 +190,48 @@ Whether you are in software, security, data science, embedded or network, you
 will have to deal with network applications (APIs, devices, etc.). This course
 will give you a solid grounding in this world.
 
-## Course planning - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
+## Program - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
 
-64 periods are planned for this course, divided in 3 main parts:
+64 periods are planned for this teaching unit, divided in 3 main parts:
 
-- Part 1 - Input/output processing (18 periods)
-- Part 2 - Network programming with TCP and UDP (24 periods)
-- Part 3 - Network programming with HTTP (20 periods)
+- Part 1 - Input/output processing (18 periods).
+- Part 2 - Network programming with TCP and UDP (24 periods).
+- Part 3 - Network programming with HTTP (20 periods).
 
-The entire course planning for the semester is available at
-<https://github.com/orgs/heig-vd-dai-course/projects>.
-
----
-
-**The planning is subject to change**. We will do our best to inform you in
-advance if there are any changes.
-
-_Set the **Start date** and the **End date** fields as shown to display the
-course planning correctly!_
-
-![bg right 90%](images/course-planning.png)
+The entire teaching unit program for the semester is available at
+<https://github.com/heig-vd-dai-course/heig-vd-dai-course#-program>. **The
+program is subject to change**. We will do our best to inform you in advance if
+there are any changes.
 
 ## Course sequence
 
-1. Overview of the subject meant to be short and concise (us)
-   - Sessions of 20-30 minutes - Dynamic and interactive
-2. Practice the content with theoretical and practical parts (you)
-   - Prepare you for the practical work - We are available to help
-3. Practical work (you)
-   - Freedom of the subject - The course materials help you
-4. Feedback and discussions (you - very important to us)
-   - You will be able to give feedback and help us improve the course
+1. Overview of the subject meant to be short and concise.
+   - Sessions of 20-30 minutes (short and concise).
+2. Practice the content with theoretical and practical parts.
+   - These help you prepare you for the practical works.
+3. Practical works
+   - Freedom of the subject, you can choose what you want to do.
+4. Feedback and discussions (very important to us).
+   - You will be able to give feedback and help us improve the course.
 
-## Evaluation
+## Grading (1/2)
 
-- 3 practical works (20%) - done in groups
-- 3 evaluations (30%) - done individually
-- 1 exam (50%) - done individually
+You will be graded on the following elements:
+
+- 3 practical works (20%) - done in groups.
+- 2 evaluations (30%) - done individually.
+- 1 exam (50%) - done individually.
 
 ![bg right:40%](https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?fit=crop&h=720)
 
----
+## Grading (2/2)
 
 You can change groups between practical works.
 
 We will try our best to give you your grades and feedback as quickly as possible
 so you can improve for the next work.
 
-We can be flexible on the deadlines if you have a good reason. Please let us
-know as soon as possible if you have any difficulties.
+We can be flexible on the deadlines if you have a good reason.
 
 ![bg right:40%](https://images.unsplash.com/photo-1532943126512-e2bcf68a488c?fit=crop&h=720)
 
@@ -255,9 +240,9 @@ know as soon as possible if you have any difficulties.
 Feel free to use any of these communication channels for any kind of questions
 related to the course:
 
-- GitHub Discussions (you will experiment these very soon)
-- In person
-- Email
+- GitHub Discussions (you will experiment these very soon).
+- In person.
+- Email:
   - [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
   - [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
   - [geraud.silvestri@master.hes-so.ch](mailto:geraud.silvestri@master.hes-so.ch)
@@ -267,29 +252,13 @@ related to the course:
 **Everything** will be on the GitHub organization created for this course:
 <https://github.com/heig-vd-dai-course>.
 
-More specifically, the course material is available in the
-[`heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
-Git repository.
-
 We will not use Microsoft Teams nor CyberLearn. We want to keep it simple and
 efficient for you, and for us. One place to find it all.
 
 We accept issues and pull requests if you spot anything weird! 🙂
 
----
-
-The course material is available in several formats:
-
-- **Markdown format** (recommended). You can read it directly on GitHub or on
-  your computer with your favorite text editor.
-- **PDF format**. We are aware that the generated PDFs are not perfect, sorry
-  about that.
-
-These formats are generated from the same source files. There are no differences
-between them. Use the one you prefer!
-
-Chapters marked as _"work in progress (WIP)"_ in the main README file are still
-in review and might change.
+_Do not try to contact us on Microsoft Teams or CyberLearn, we will surely not
+answer!_
 
 ## Our wishes for this course
 
@@ -297,51 +266,49 @@ in review and might change.
 
 ### What we want this course to be
 
-- A place to learn
-- A place to experiment and where it is OK to make mistakes
-- A place to share and discuss
-- A place where you are able to do things and master them
-- A place where you can express your opinion
+- A place to learn.
+- A place to experiment and where it is OK to make mistakes.
+- A place to share and discuss.
+- A place where you are able to do things and master them.
+- A place where you can express your opinion.
 - It is OK if you are not feeling well. We are here if you need to talk.
 
-➡️ A place where you do not loose your time (efficient and useful)
+➡️ A place where you do not loose your time (efficient and useful).
 
 ### What we don't want this course to be
 
-- A place you don't want to come
-- A place you don't feel comfortable/safe
-- A place where you can't ask questions and/or do mistakes
-- A place where you can't take anything away
+- A place you don't want to come.
+- A place you don't feel comfortable/safe.
+- A place where you can't ask questions and/or do mistakes.
+- A place where you can't take anything away.
 
 ➡️ If you have a problem with the course, we will do our best to fix it.
 
 We will take presences during this course. If you are done, you are free to go.
 However, we would appreciate if you try to help your classmates instead!
 
-### Responsibilities and expectations
+### Responsibilities and expectations (1/2)
 
 **The teaching staff responsibilities**
 
-- You have acquired the necessary knowledge of this course
-- You are prepared for the professional world
-- You are able to work on your own, and in a team
-- Your feedback is taken into account
-- We are available to help you and answer your questions
-- We try to give you accurate and useful feedback for you to improve
+- You have acquired the necessary knowledge of this course.
+- You are prepared for the professional world.
+- You are able to work on your own, and in a team.
+- Your feedback is taken into account.
+- We are available to help you and answer your questions.
+- We try to give you accurate and useful feedback for you to improve.
 
----
+### Responsibilities and expectations (2/2)
 
 **Your responsibilities**
 
-- Read and understand the course material
-- Do the practical content given in the course material
-- You can give feedback and suggestions
+- Read and understand the course material.
+- Do the practical content given in the course material.
+- You can give feedback and suggestions.
 - You are responsible for your own learning:
-  - If you have any questions, ask them
-  - If you have any difficulties, let us know
-  - If you have any suggestions, share them
-
-**Let's work together to give you the best course possible.**
+  - If you have any questions, ask them.
+  - If you have any difficulties, let us know.
+  - If you have any suggestions, share them.
 
 ## _"Un cours en anglais..?"_
 
@@ -361,12 +328,12 @@ etc.), **except during evaluations and the exam**. You will be able to use these
 in the real world, so better learn how to use them now. However, they are here
 to help you, not to do the work for you:
 
-- You **must be able to explain what you did and why you did it**
-- You **must state when you used external help (tools and sources)**
+- You **must be able to explain what you did and why you did it**.
+- You **must state when you used external help (tools and sources)**.
 - You **must be able to do the work on your own.** These tools come and go ($$$,
   end of life, etc.), you should not entirely rely on them.
 
-## _"Linux, macOS or Windows?"_
+## _"Linux, macOS or Windows?"_ (1/3)
 
 The HEIG-VD recommends Windows for your studies. This is mostly because other
 departments heavily rely on Windows-only products.
@@ -376,7 +343,7 @@ Linux or macOS.
 
 ![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
 
----
+## _"Linux, macOS or Windows?"_ (2/3)
 
 If you are on Windows, follow the guide we created to set up a development
 environment with Windows Subsystem for Linux (WSL):
@@ -385,23 +352,10 @@ environment with Windows Subsystem for Linux (WSL):
 This guide will help you to set up a Linux environment on your Windows computer
 to be able to follow the course (and beyond).
 
-![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
+If you are on macOS, we recommend you to install [Homebrew](https://brew.sh/)
+and use it to install the tools we will use during this course.
 
----
-
-If you are on macOS, we recommend you to install Homebrew and use it to install
-the tools we will use during this course.
-
-You can install Homebrew by following the instructions on the
-[Homebrew website](https://brew.sh/).
-
-You can always install Linux on your computer if you want to.
-[Ubuntu](https://ubuntu.com/), [Debian](https://www.debian.org/), or
-[Fedora](https://fedoraproject.org/) are recommended.
-
-![bg right:40%](https://images.unsplash.com/photo-1580780965002-6ca357516eb1?fit=crop&h=720)
-
----
+## _"Linux, macOS or Windows?"_ (3/3)
 
 Whatever operating system you are using, **you should read the
 [_Considerations for a development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
