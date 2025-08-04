@@ -16,7 +16,8 @@ class(es):
 
 **Teaching staff**
 
--
+- Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo)
+- Hadrien Louis [@hadrienlouis](https://github.com/hadrylouis)
 
 **Students**
 
