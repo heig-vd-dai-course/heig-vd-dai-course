@@ -47,9 +47,9 @@ These periods are divided in three main parts:
 We try our best to ensure you do not have to work that much outside of the class
 but you should expect to spend some time on the course outside of the class.
 
-Details of each course within the teaching unit are available below. Each course
-is detailed with content, objectives, teaching and learning methods, and
-assessment methods.[^program]
+Details of each course within the teaching unit are available below[^program].
+Each course is detailed with content, objectives, teaching and learning methods,
+and evaluation methods.
 
 Dates are taken from the
 [HEIG-VD academic calendar](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
@@ -87,7 +87,7 @@ Dates are taken from the
   [Link to content](./00.01-set-up-a-windows-development-environment/01-course-material/README.md)
 
 [See details](./00.01-set-up-a-windows-development-environment/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Considerations for a development environment
 
@@ -95,17 +95,11 @@ Dates are taken from the
   [Link to content](./00.02-considerations-for-a-development-environment/01-course-material/README.md)
 
 [See details](./00.02-considerations-for-a-development-environment/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕐 Course 01
 
 ### Introduction and course organization
-
-<p class="text-right">
-  <a href=#-program>
-    Jump back to Program
-  </a>
-</p>
 
 - Course material:
   [Link to content](./01.01-introduction-and-course-organization/01-course-material/README.md)
@@ -114,7 +108,8 @@ Dates are taken from the
   ·
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.01-introduction-and-course-organization/01-course-material/01.01-introduction-and-course-organization-presentation.pdf)
 
-[See details](./01.01-introduction-and-course-organization/)
+[See details](./01.01-introduction-and-course-organization/) ·
+[Jump back to Program](#-program)
 
 ### Introduction to part 1 - Input/output processing
 
@@ -126,7 +121,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.02-introduction-to-part-1-input-output-processing/01-course-material/01.02-introduction-to-part-1-input-output-processing-presentation.pdf)
 
 [See details](./01.02-introduction-to-part-1-input-output-processing/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Git, GitHub and Markdown
 
@@ -138,7 +133,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
 
 [See details](./01.03-git-github-and-markdown/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Java, IntelliJ IDEA and Maven
 
@@ -152,7 +147,7 @@ Dates are taken from the
   [Link to content](./01.04-java-intellij-idea-and-maven/02-solution/README.md)
 
 [See details](./01.04-java-intellij-idea-and-maven/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕑 Course 02
 
@@ -167,7 +162,7 @@ Dates are taken from the
 - Code examples: [Link to content](./02.01-java-ios/02-code-examples/README.md)
 - Solution: [Link to content](./02.01-java-ios/03-solution/README.md)
 
-[See details](./02.01-java-ios/) · [Jump back to program](#-program)
+[See details](./02.01-java-ios/) · [Jump back to Program](#-program)
 
 ### Practical work 1 (1/3)
 
@@ -179,7 +174,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-3)/01-course-material/02.02-practical-work-1-(1-of-3)-presentation.pdf>)
 
 [See details](<./02.02-practical-work-1-(1-of-3)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕒 Course 03
 
@@ -193,7 +188,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.01-practical-work-1-(2-of-3)/01-course-material/03.01-practical-work-1-(2-of-3)-presentation.pdf>)
 
 [See details](<./03.01-practical-work-1-(2-of-3)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕓 Course 04
 
@@ -211,7 +206,7 @@ Dates are taken from the
   [Link to content](./04.01-docker-and-docker-compose/03-solution/README.md)
 
 [See details](./04.01-docker-and-docker-compose/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 1 (3/3)
 
@@ -223,7 +218,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.02-practical-work-1-(3-of-3)/01-course-material/04.02-practical-work-1-(3-of-3)-presentation.pdf>)
 
 [See details](<./04.02-practical-work-1-(3-of-3)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕔 Course 05
 
@@ -237,7 +232,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.02-conclusion-to-part-1-input-output-processing/01-course-material/05.02-conclusion-to-part-1-input-output-processing-presentation.pdf)
 
 [See details](./05.02-conclusion-to-part-1-input-output-processing/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Introduction to part 2 - Network programming with TCP and UDP
 
@@ -249,7 +244,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/05.03-introduction-to-part-2-network-programming-with-tcp-and-udp-presentation.pdf)
 
 [See details](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/)
-· [Jump back to program](#-program)
+· [Jump back to Program](#-program)
 
 ### SMTP and ncat
 
@@ -263,7 +258,7 @@ Dates are taken from the
   [Link to content](./05.04-smtp-and-ncat/02-code-examples/README.md)
 - Solution: [Link to content](./05.04-smtp-and-ncat/03-solution/README.md)
 
-[See details](./05.04-smtp-and-ncat/) · [Jump back to program](#-program)
+[See details](./05.04-smtp-and-ncat/) · [Jump back to Program](#-program)
 
 ### Presentation of practical work 1
 
@@ -276,7 +271,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.01-presentation-of-practical-work-1/01-course-material/05.01-presentation-of-practical-work-1-presentation.pdf)
 
 [See details](./05.01-presentation-of-practical-work-1/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕕 Course 06
 
@@ -294,7 +289,7 @@ Dates are taken from the
   [Link to content](./06.01-define-an-application-protocol/03-solution/README.md)
 
 [See details](./06.01-define-an-application-protocol/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 2 (1/5)
 
@@ -306,7 +301,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-5)/01-course-material/06.02-practical-work-2-(1-of-5)-presentation.pdf>)
 
 [See details](<./06.02-practical-work-2-(1-of-5)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕖 Course 07
 
@@ -324,7 +319,7 @@ Dates are taken from the
   [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/03-solution/README.md>)
 
 [See details](<./07.01-java-tcp-and-udp-programming-(1-of-2)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 2 (2/5)
 
@@ -336,7 +331,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.02-practical-work-2-(2-of-5)/01-course-material/07.02-practical-work-2-(2-of-5)-presentation.pdf>)
 
 [See details](<./07.02-practical-work-2-(2-of-5)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕗 Course 08
 
@@ -354,7 +349,7 @@ Dates are taken from the
   [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/03-solution/README.md>)
 
 [See details](<./08.01-java-tcp-and-udp-programming-(2-of-2)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 2 (3/5)
 
@@ -366,7 +361,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.02-practical-work-2-(3-of-5)/01-course-material/08.02-practical-work-2-(3-of-5)-presentation.pdf>)
 
 [See details](<./08.02-practical-work-2-(3-of-5)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕘 Course 09
 
@@ -384,7 +379,7 @@ Dates are taken from the
   [Link to content](./09.01-java-network-concurrency/03-solution/README.md)
 
 [See details](./09.01-java-network-concurrency/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 2 (4/5)
 
@@ -396,7 +391,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.02-practical-work-2-(4-of-5)/01-course-material/09.02-practical-work-2-(4-of-5)-presentation.pdf>)
 
 [See details](<./09.02-practical-work-2-(4-of-5)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕙 Course 10
 
@@ -411,7 +406,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.01-evaluation-1/01-course-material/10.01-evaluation-1-presentation.pdf)
 - Archives: [Link to content](./10.01-evaluation-1/02-archives/README.md)
 
-[See details](./10.01-evaluation-1/) · [Jump back to program](#-program)
+[See details](./10.01-evaluation-1/) · [Jump back to Program](#-program)
 
 ### Practical work 2 (5/5)
 
@@ -423,7 +418,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.02-practical-work-2-(5-of-5)/01-course-material/10.02-practical-work-2-(5-of-5)-presentation.pdf>)
 
 [See details](<./10.02-practical-work-2-(5-of-5)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕚 Course 11
 
@@ -437,7 +432,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp-presentation.pdf)
 
 [See details](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/)
-· [Jump back to program](#-program)
+· [Jump back to Program](#-program)
 
 ### Introduction to part 3 - Network programming with HTTP
 
@@ -449,7 +444,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.03-introduction-to-part-3-network-programming-with-http/01-course-material/11.03-introduction-to-part-3-network-programming-with-http-presentation.pdf)
 
 [See details](./11.03-introduction-to-part-3-network-programming-with-http/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### SSH and SCP
 
@@ -460,7 +455,7 @@ Dates are taken from the
   ·
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.04-ssh-and-scp/01-course-material/11.04-ssh-and-scp-presentation.pdf)
 
-[See details](./11.04-ssh-and-scp/) · [Jump back to program](#-program)
+[See details](./11.04-ssh-and-scp/) · [Jump back to Program](#-program)
 
 ### Presentation of practical work 2
 
@@ -473,7 +468,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.01-presentation-of-practical-work-2/01-course-material/11.01-presentation-of-practical-work-2-presentation.pdf)
 
 [See details](./11.01-presentation-of-practical-work-2/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕛 Course 12
 
@@ -487,7 +482,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/12.01-http-and-curl-presentation.pdf)
 - Solution: [Link to content](./12.01-http-and-curl/02-solution/README.md)
 
-[See details](./12.01-http-and-curl/) · [Jump back to program](#-program)
+[See details](./12.01-http-and-curl/) · [Jump back to Program](#-program)
 
 ### Practical work 3 (1/4)
 
@@ -499,7 +494,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-4)/01-course-material/12.02-practical-work-3-(1-of-4)-presentation.pdf>)
 
 [See details](<./12.02-practical-work-3-(1-of-4)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕐 Course 13
 
@@ -514,7 +509,7 @@ Dates are taken from the
 - Code examples:
   [Link to content](./13.01-web-infrastructures/02-code-examples/README.md)
 
-[See details](./13.01-web-infrastructures/) · [Jump back to program](#-program)
+[See details](./13.01-web-infrastructures/) · [Jump back to Program](#-program)
 
 ### Practical work 3 (2/4)
 
@@ -526,7 +521,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.02-practical-work-3-(2-of-4)/01-course-material/13.02-practical-work-3-(2-of-4)-presentation.pdf>)
 
 [See details](<./13.02-practical-work-3-(2-of-4)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕑 Course 14
 
@@ -542,7 +537,7 @@ Dates are taken from the
   [Link to content](./14.01-caching-and-performance/02-solution/README.md)
 
 [See details](./14.01-caching-and-performance/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 3 (3/4)
 
@@ -554,7 +549,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.02-practical-work-3-(3-of-4)/01-course-material/14.02-practical-work-3-(3-of-4)-presentation.pdf>)
 
 [See details](<./14.02-practical-work-3-(3-of-4)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕒 Course 15
 
@@ -569,7 +564,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.01-evaluation-2/01-course-material/15.01-evaluation-2-presentation.pdf)
 - Archives: [Link to content](./15.01-evaluation-2/02-archives/README.md)
 
-[See details](./15.01-evaluation-2/) · [Jump back to program](#-program)
+[See details](./15.01-evaluation-2/) · [Jump back to Program](#-program)
 
 ### Practical work 3 (4/4)
 
@@ -581,7 +576,7 @@ Dates are taken from the
   [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.02-practical-work-3-(4-of-4)/01-course-material/15.02-practical-work-3-(4-of-4)-presentation.pdf>)
 
 [See details](<./15.02-practical-work-3-(4-of-4)/>) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 🕓 Course 16
 
@@ -596,7 +591,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.01-presentation-of-practical-work-3/01-course-material/16.01-presentation-of-practical-work-3-presentation.pdf)
 
 [See details](./16.01-presentation-of-practical-work-3/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Conclusion to part 3 - Network programming with HTTP
 
@@ -608,7 +603,7 @@ Dates are taken from the
   [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/16.02-conclusion-to-part-3-network-programming-with-http-presentation.pdf)
 
 [See details](./16.02-conclusion-to-part-3-network-programming-with-http/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ### Semester review and exam preparation
 
@@ -622,7 +617,7 @@ Dates are taken from the
   [Link to content](./16.03-semester-review-and-exam-preparation/02-feedback/README.md)
 
 [See details](./16.03-semester-review-and-exam-preparation/) ·
-[Jump back to program](#-program)
+[Jump back to Program](#-program)
 
 ## 📜 License
 
