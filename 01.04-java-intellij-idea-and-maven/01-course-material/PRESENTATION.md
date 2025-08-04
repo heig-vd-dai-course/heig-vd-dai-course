@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI Course - Java, IntelliJ IDEA and Maven
 description: Java, IntelliJ IDEA and Maven for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
@@ -37,7 +37,8 @@ _paginate: false
 
 [Web][web] · [PDF][pdf]
 
-<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
@@ -45,11 +46,11 @@ _paginate: false
 
 ## Objectives
 
-- Learn why Java is a popular programming language
-- Manage multiple Java versions with SDKMAN!
-- Develop Java apps with IntelliJ IDEA and Maven
-- Manage dependencies with Maven
-- Develop essential skills for professional Java development
+- Learn why Java is a popular programming language.
+- Manage multiple Java versions with SDKMAN!.
+- Develop Java apps with IntelliJ IDEA and Maven.
+- Manage dependencies with Maven.
+- Develop essential skills for professional Java development.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 

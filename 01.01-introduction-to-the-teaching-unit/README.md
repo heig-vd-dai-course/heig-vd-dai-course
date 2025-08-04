@@ -1,4 +1,4 @@
-# Introduction to part 2 - Network programming with TCP and UDP
+# Introduction to the teaching unit
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
@@ -10,17 +10,17 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - Objectives, teaching and learning methods, and evaluation methods:
   [Link to content](.)
 - Course material: [Link to content](./01-course-material/README.md) ·
-  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.02-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/index.html)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/)
   ·
-  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.02-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/05.02-introduction-to-part-2-network-programming-with-tcp-and-udp-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf)
 
 ## Objectives
 
 By the end of this course, students should be able to:
 
-- Have an overview of the second part of the course.
-- Understand the objectives of the second part of the course.
-- List the organizational details of the second part of the course.
+- List the objectives of the teaching unit.
+- List the organizational details of the teaching unit.
+- List the evaluation methods.
 
 ## Teaching and learning methods
 

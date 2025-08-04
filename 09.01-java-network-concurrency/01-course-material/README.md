@@ -1,9 +1,9 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-network-concurrency/COURSE_MATERIAL.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-network-concurrency/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-network-concurrency/14-java-network-concurrency-course-material.pdf
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/14-java-network-concurrency/14-java-network-concurrency-course-material.pdf
 [license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/453
 [illustration]: ./images/main-illustration.jpg
 
@@ -13,7 +13,8 @@
 
 [Markdown][markdown] · [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of GitHub Copilot.
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
 
 Based on the original course by O. Liechti and J. Ehrensberger.
 
