@@ -333,9 +333,14 @@ blockquote > *:first-child {
 }
 
 .center {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	text-align: center;
+}
+
+.rounded {
+	margin: 1em 0 0;
+	border-radius: 50%;
+}
+
+.rounded img {
+	border-radius: 50%;
 }

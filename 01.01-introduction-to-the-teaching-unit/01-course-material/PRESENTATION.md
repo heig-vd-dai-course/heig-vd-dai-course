@@ -7,38 +7,34 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Introduction and course organization
-description: Introduction and course organization for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+title: HEIG-VD DAI Course - Introduction to the teaching unit
+description: Introduction to the teaching unit for the DAI course at HEIG-VD, Switzerland
+header: "**Course 01 - Introduction to the teaching unit**"
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [illustration]: ./images/main-illustration.jpg
 
-# Introduction and course organization
+# Introduction to the teaching unit
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
+<https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.01-introduction-to-the-teaching-unit>
 
-[Web][web] · [PDF][pdf]
-
-<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
 ![bg opacity:0.1][illustration]
 
-## Welcome to the Développement d'applications internet (DAI) course!
+## Welcome to the Développement d'applications internet (DAI) teaching unit!
 
 <!-- _class: lead -->
 
@@ -54,7 +50,7 @@ Delafontaine**
 Both classes
 </small>
 
-![w:200](./images/ludovic-delafontaine.png)
+<img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
 
 [Mail](mailto:ludovic.delafontaine@heig-vd.ch) ·
 [GitHub](https://github.com/ludelafo)
@@ -69,7 +65,7 @@ Louis**
 Monday mornings
 </small>
 
-![w:200](./images/hadrien-louis.png)
+<img src="https://avatars.githubusercontent.com/u/26306723?v=4" alt="Hadrien Louis" width="200" class="rounded">
 
 [Mail](mailto:hadrien.louis@heig-vd.ch) ·
 [GitHub](https://github.com/hadrylouis)
@@ -84,7 +80,7 @@ Silvestri**
 Friday mornings
 </small>
 
-![w:200](./images/geraud-silvestri.png)
+<img src="https://avatars.githubusercontent.com/u/57666873?v=4" alt="Géraud Silvestri" width="200" class="rounded">
 
 [Mail](mailto:geraud.silvestri@master.hes-so.ch) ·
 [GitHub](https://github.com/GeraudSilvestri)
@@ -101,7 +97,7 @@ Friday mornings
 - [Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
 - [Descriptif de module](https://gaps.heig-vd.ch/consultation/fiches/mv/mv.php?id=1905)
 - [Programme de formation](https://gaps.heig-vd.ch/consultation/teachingplans/)
-- 3 ECTS credits = ~75-90 hours:
+- Three (3) ECTS credits (~75-90 hours of work):
   - 64 periods of 45 minutes (= 48 hours in class).
   - ~27-42 hours outside of the class - We try our best to ensure you do not
     have to work that much outside of the class.
@@ -157,7 +153,7 @@ Friday mornings
 You will learn the following topics during this course:
 
 - Network programming (inputs/outputs, encodings, TCP and UDP).
-- Application-level protocols (SMTP, SSH, HTTP and your own).
+- Application-level protocols (SMTP, SSH, HTTP, and your own).
 - Web infrastructures (reverse proxy, load balancer, sticky sessions).
 - How to read and write technical documentation.
 

@@ -1,7 +1,14 @@
 # Set up a Windows development environment
 
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
+
 ## Resources
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](.)
 - Course material: [Link to content](./01-course-material/README.md)
 
 ## Objectives
@@ -29,6 +36,10 @@ The evaluation does not result in a grade.
 Each person is free to manage their time as they wish. However, it is
 recommended for the following course to:
 
-- Finish the
+- Review/read this course material.
+- Apply the
   [_"Install and configure Windows Subsystem for Linux (WSL)"_](./01-course-material/README.md#install-and-configure-windows-subsystem-for-linux-wsl)
-  section of the course material.
+  section to your development environment.
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
