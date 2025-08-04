@@ -93,6 +93,11 @@ header {
 	top: 0;
 }
 
+header a {
+	color: var(--color-dimmed);
+	text-decoration: none;
+}
+
 footer {
 	left: 0;
 	right: 0;

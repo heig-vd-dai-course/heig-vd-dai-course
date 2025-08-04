@@ -8,6 +8,33 @@ teaching unit taught at
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
 Switzerland!
 
+As of the fall semester 2025-2026, the teaching is taught the following
+class(es):
+
+<details>
+<summary>DAI-TIC-C (Wednesday mornings - 08:30-12:00 - J01)</summary>
+
+**Teaching staff**
+
+-
+
+**Students**
+
+<!--
+READ ME PLEASE
+
+Add your name in the list in alphabetical order (by last name) in this format:
+
+- First name Last name [@GitHub username](https://github.com/<username>)
+
+It helps us (the teaching staff) searching for someone when grading your work
+and answering your questions. Thanks!
+-->
+
+-
+
+</details>
+
 ## 🎯 General objectives
 
 On completion of this course, the student will be able to:

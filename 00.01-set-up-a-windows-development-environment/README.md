@@ -36,7 +36,7 @@ The evaluation does not result in a grade.
 Each person is free to manage their time as they wish. However, it is
 recommended for the following course to:
 
-- Review/read this course material.
+- Read this course material again (if necessary).
 - Apply the
   [_"Install and configure Windows Subsystem for Linux (WSL)"_](./01-course-material/README.md#install-and-configure-windows-subsystem-for-linux-wsl)
   section to your development environment.

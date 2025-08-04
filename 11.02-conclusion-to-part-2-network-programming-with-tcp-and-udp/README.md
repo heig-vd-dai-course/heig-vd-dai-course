@@ -39,7 +39,7 @@ The evaluation does not result in a grade.
 Each person is free to manage their time as they wish. However, it is
 recommended for the following course to:
 
-- Review/read this course material.
+- Read this course material again (if necessary).
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md

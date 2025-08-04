@@ -36,7 +36,7 @@ The evaluation does not result in a grade.
 Each person is free to manage their time as they wish. However, it is
 recommended for the following course to:
 
-- Review/read this course material.
+- Read this course material again (if necessary).
 - Apply the considerations to your development environment.
 
 [license]:
