@@ -9,23 +9,19 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - Objectives, teaching and learning methods, and evaluation methods:
   [Link to content](.)
-- Course material: [Link to content](./01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/index.html)
+- Course material: [Link to content](./01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
 
 ## Objectives
 
 By the end of this course, students should be able to:
 
-- Understand Git, GitHub, and Markdown.
-- Develop crucial collaboration skills.
-- Emphasize the significance of documentation for code usability and project
-  visibility.
+- Understand how to use Git, GitHub and Markdown.
 - Create and manage repositories on GitHub.
 - Write and format documentation using Markdown.
-- Collaborate effectively using Git and GitHub.
+- Share and collaborate effectively using Git and GitHub and their features.
 
 ## Teaching and learning methods
 
@@ -37,7 +33,13 @@ The teaching and learning methods used to facilitate the course are as follows:
 
 ## Evaluation methods
 
-There is no evaluation for this course.
+The evaluation is based on the following criteria:
+
+- Ability to execute the tasks at hand.
+
+Feedback is provided as follows:
+
+- A feedback on the GitHub Discussion or the pull request (PR).
 
 The evaluation does not result in a grade.
 
@@ -46,7 +48,7 @@ The evaluation does not result in a grade.
 Each person is free to manage their time as they wish. However, it is
 recommended for the following course to:
 
-- Review/read this course material.
+- Read this course material again (if necessary).
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md

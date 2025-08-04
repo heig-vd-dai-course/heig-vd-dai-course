@@ -32,10 +32,10 @@ _paginate: false
 
 ## Objectives
 
-- Understand Git, GitHub, and Markdown
-- Develop crucial collaboration skills
-- Emphasize the significance of documentation for code usability and project
-  visibility
+- Understand how to use Git, GitHub and Markdown.
+- Create and manage repositories on GitHub.
+- Write and format documentation using Markdown.
+- Share and collaborate effectively using Git and GitHub and their features.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 

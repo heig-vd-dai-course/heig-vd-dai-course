@@ -46,11 +46,11 @@ _paginate: false
 
 ## Objectives
 
-- Learn why Java is a popular programming language
-- Manage multiple Java versions with SDKMAN!
-- Develop Java apps with IntelliJ IDEA and Maven
-- Manage dependencies with Maven
-- Develop essential skills for professional Java development
+- Learn why Java is a popular programming language.
+- Manage multiple Java versions with SDKMAN!.
+- Develop Java apps with IntelliJ IDEA and Maven.
+- Manage dependencies with Maven.
+- Develop essential skills for professional Java development.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 

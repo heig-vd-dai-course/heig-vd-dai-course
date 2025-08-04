@@ -9,11 +9,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - Objectives, teaching and learning methods, and evaluation methods:
   [Link to content](..)
-- Course material: [Link to content](./01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/index.html)
+- Course material: [Link to content](./01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
 
 ## Table of contents
 
@@ -174,13 +173,10 @@ Discussions.
 
 In short, by the end of this chapter, you will be able to:
 
-- Understand Git, GitHub, and Markdown.
-- Develop crucial collaboration skills.
-- Emphasize the significance of documentation for code usability and project
-  visibility.
+- Understand how to use Git, GitHub and Markdown.
 - Create and manage repositories on GitHub.
 - Write and format documentation using Markdown.
-- Collaborate effectively using Git and GitHub.
+- Share and collaborate effectively using Git and GitHub and their features.
 
 ## Git
 
@@ -1850,7 +1846,8 @@ Git was not able to merge the changes automatically. This is called a _"merge
 conflict"_. This happens when two or more people make changes to the same file
 at the same time.
 
-Open the file in your favorite IDE and you should see the conflict.
+Open the file in your favorite IDE and you should see the conflict (search for
+`<<<<<<<` characters).
 
 The `HEAD` part is the content of the current branch. The
 `this-branch-will-create-a-conflict` part is the content of the branch you are
