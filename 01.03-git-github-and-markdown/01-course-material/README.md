@@ -982,8 +982,8 @@ user.email=ludovic.delafontaine@gmail.com
 user.name=Ludovic Delafontaine
 ```
 
-**If you do not have this output, it means that your Git configuration is not
-correct.** Read the previous sections to ensure that you have followed the
+**If you do not have this output, it means that your Git configuration is
+incorrect.** Read the previous sections to ensure that you have followed the
 instructions correctly.
 
 #### Test the configuration
@@ -1072,8 +1072,8 @@ gpg.format=ssh
 commit.gpgsign=true
 ```
 
-**If you do not have this output, it means that your Git configuration is not
-correct.** Read the previous sections to ensure that you have followed the
+**If you do not have this output, it means that your Git configuration is
+incorrect.** Read the previous sections to ensure that you have followed the
 instructions correctly.
 
 ### Add yourself to the list of students in the GitHub repository
@@ -1301,11 +1301,15 @@ Once you have pushed your changes, you can open a pull request to merge your
 changes into the main branch.
 
 To open a pull request, go to the **Pull requests** tab of the repository and
-click on the **New pull request** button.
+click on the **New pull request** button as shown in the following screenshot:
+
+![Open a pull request (1/2)](./images/github-open-pull-request-1.png)
 
 The title of the pull request should be filled automatically with the message of
 the last commit. We consider this to be a bad practice. Instead,rename the pull
-request to the title of the issue you created earlier.
+request to the title of the issue you created earlier:
+
+![Open a pull request (2/2)](./images/github-open-pull-request-2.png)
 
 Once the description is filled, click on the **Create pull request** button.
 
@@ -1327,7 +1331,9 @@ to the pull request if you want to discuss something with the maintainers.
 
 Once the pull request is created, you can review it to ensure that everything is
 correct. You can check the changes you made, the files that were modified, and
-the commit history.
+the commit history:
+
+![Review the pull request](./images/github-review-pull-request.png)
 
 You can also add comments to the pull request to discuss the changes with the
 maintainers. This is a good practice to discuss the changes before merging them.
@@ -1349,7 +1355,11 @@ needed.
 > [!IMPORTANT]
 >
 > The review can take a few days. Please be patient. Come back to this section
-> once the review is done.
+> once the review is done. For the time being, you can start the
+> [Create your own profile README](#create-your-own-profile-readme) section.
+>
+> Once the teaching staff has reviewed your work, you can continue with the next
+> sections.
 
 <details>
 <summary>Checklist for the maintainers</summary>
@@ -1448,7 +1458,7 @@ You are now ready to work professionally with Git and GitHub!
 
 ### Create your own profile README
 
-Let's see how Git works in practice by creating you own profile README on
+Let's see more deeply how Git works by creating you own profile README on
 GitHub.
 
 This will allow you to create your first repository and to learn how to use Git
@@ -1460,7 +1470,7 @@ interests.
 
 An example of a profile README is shown in the following screenshot:
 
-![LeaVerou's GitHub profile](./images/github-profile-leaverou.png)
+![LeaVerou's GitHub profile](./images/github-profile-benphelps.png)
 
 #### Create a new repository
 
@@ -1473,17 +1483,16 @@ An example of a new repository creation is shown in the following screenshot:
 ![Screenshot of a new repository creation](./images/github-new-repository.png)
 
 Once you have created your repository though the GitHub interface, you should
-notice it contains a few files. Your repository should be different from the one
-shown in the screenshot above.
+notice it contains a few files.
 
 However, as your repository was initialized with a README file, it already
 contains a commit. You can see the commit history by clicking on the **Commits**
 link in the repository menu.
 
-You can also see the commit hash (`20f8741`) and the author of the commit
+You can also see the commit hash (`61f7174`) and the author of the commit
 (`ludelafo`), as shown in the following screenshot:
 
-![Screenshot of a commit in a repository](./images/github-commit-history.png)
+![Commit history](./images/github-commit-history.png)
 
 If you click on the commit hash, you will see the details of the commit with all
 the changes made in the commit.
@@ -1773,9 +1782,8 @@ profile README!
 In the next section, you will intentionally create a conflict to learn how to
 resolve it.
 
-Checkout to a new branch and change the title of the `.profile/README.md` file
-to `# This change is made on the branch 'this-branch-will-create-a-conflict'`
-and commit:
+Checkout to a new branch and change a content of the `README.md` file. Remember
+the line(s) you have changed (you will need it later) and commit:
 
 ```sh
 # Checkout to a new branch
@@ -1784,40 +1792,38 @@ git checkout -b this-branch-will-create-a-conflict
 # Make your changes
 
 # Add the staged files to the staging area
-git add profile/README.md
+git add README.md
 
 # Commit the changes
 git commit -m "This change was done on branch 'this-branch-will-create-a-conflict'"
 ```
 
-Checkout to the branch you created earlier and try to merge the branch you just
-created:
-
-```sh
-# Checkout to the branch you created earlier
-git checkout add-myself-to-the-list-of-students
-```
-
 > [!TIP]
 >
-> You might notice you did not use the `-b` argument when checking out to the
-> branch you created earlier. This is because the branch already exists. If you
-> try to checkout to a branch that does not exist, you will need to use the `-b`
-> argument.
+> You might notice the use of the `-b` argument when checking out to the branch.
+> This is because the branch does not already exists. If you try to checkout to
+> a branch that does not exist, you will need to use the `-b` argument to create
+> it.
 
-Change the title of the `.profile/README.md` file to
-`# This change is made on the branch 'add-myself-to-the-list-of-students'` and
-commit the changes:
+Checkout to the main branch and make some changes to the `README.md` file.
+Change the same line(s) number(s) you changed in the
+`this-branch-will-create-a-conflict` branch but with a different content
+(remember the line(s) you have changed). Commit the changes:
 
 ```sh
+# Checkout to a new branch
+git checkout main
+
+# Make your changes
+
 # Add the staged files to the staging area
-git add profile/README.md
+git add README.md
 
 # Commit the changes
-git commit -m "This change was done on branch 'add-myself-to-the-list-of-students'"
+git commit -m "This change was done on branch 'main'"
 ```
 
-Merge the branch you just created:
+Now, try to merge the branch you just created:
 
 ```sh
 # Merge the branch you just created
@@ -1828,21 +1834,20 @@ git merge this-branch-will-create-a-conflict
 >
 > `git merge` will merge the changes from the branch you are merging into the
 > current branch. In this case, you are merging the changes from the
-> `change-title-of-readme-file` branch into the
-> `add-myself-to-the-list-of-students`.
+> `change-title-of-readme-file` branch into the `main` branch.
 
 You should see the following error:
 
 ```text
-Auto-merging profile/README.md
-CONFLICT (content): Merge conflict in profile/README.md
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 #### Resolve the conflict
 
-Git was not able to merge the changes automatically. This is called a **merge
-conflict**. This happens when two or more people make changes to the same file
+Git was not able to merge the changes automatically. This is called a _"merge
+conflict"_. This happens when two or more people make changes to the same file
 at the same time.
 
 Open the file in your favorite IDE and you should see the conflict.
@@ -1851,17 +1856,14 @@ The `HEAD` part is the content of the current branch. The
 `this-branch-will-create-a-conflict` part is the content of the branch you are
 trying to merge.
 
-Replace the whole content back to its original state:
-
-```markdown
-# HEIG-VD DAI Course
-```
+Replace the whole content back to its original state (or the state you want to
+keep).
 
 Once you are done, add the file to the staging area and commit the changes:
 
 ```sh
 # Add the staged files to the staging area
-git add profile/README.md
+git add README.md
 
 # Commit the changes
 git commit -m "Resolve the merge conflict"
@@ -1884,7 +1886,7 @@ git log
 You should see the commits you made:
 
 ```text
-commit 27fabbdb3b808bf3b32d25e72a388dc60c5bca24 (HEAD -> add-myself-to-the-list-of-students)
+commit 27fabbdb3b808bf3b32d25e72a388dc60c5bca24 (HEAD -> main)
 Merge: 9061c5f eca5084
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Sep 12 16:26:38 2023 +0200
@@ -1895,7 +1897,7 @@ commit 9061c5f37e41ea3664e1be4541af66b50444c64b
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Sep 12 16:23:57 2023 +0200
 
-    This change was done on branch 'add-myself-to-the-list-of-students'
+    This change was done on branch 'main'
 
 commit eca508463561e2f426eabec56a0208635c0b938c (this-branch-will-create-a-conflict)
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
@@ -1907,7 +1909,7 @@ commit 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb (origin/main, main)
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Mon Sep 4 14:39:51 2023 +0200
 
-    Add myself to the list of students
+    [Other changes made before the conflict]
 ```
 
 The commit hashes are unique identifiers for each commit. They will, of course,
@@ -1935,8 +1937,8 @@ git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 In this section, you have learned how to create a repository, clone it locally,
 make changes, commit them and push them to the repository.
 
-You have also learned how to share your profile README in the GitHub
-Discussions.
+You have also learned how to share your profile README in the GitHub Discussions
+and resolve merge conflicts.
 
 Feel free to update your profile README as you learn new things!
 
@@ -1944,8 +1946,9 @@ Feel also free to open any GitHub Discussions to ask questions or to share
 interesting content!
 
 The GitHub Discussions are a great way to interact with your peers and to learn
-new things. This is where official announcements will be made. You should
-receive notifications when a new discussion is created and you are mentioned.
+new things. This is where official announcements for the teaching unit will be
+made. You should receive notifications when a new discussion is created and you
+are mentioned.
 
 ### Go further
 
