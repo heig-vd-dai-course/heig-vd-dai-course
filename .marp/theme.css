@@ -320,9 +320,15 @@ blockquote > *:first-child {
 
 /* Custom classes */
 
-.columns-half {
+.two-columns {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
+.three-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: 1rem;
 }
 

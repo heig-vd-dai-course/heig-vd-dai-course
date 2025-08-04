@@ -12,6 +12,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Use Git to synchronize your sources between your computer and the cloud](#use-git-to-synchronize-your-sources-between-your-computer-and-the-cloud)
 - [Take some time to organize your files on your computer](#take-some-time-to-organize-your-files-on-your-computer)
 - [Always open your project from your IDE](#always-open-your-project-from-your-ide)
+- [Validate the considerations](#validate-the-considerations)
 
 ## Introduction
 
@@ -57,9 +58,11 @@ one proposition:
 /home/<your-username>
 ├── heig-vd
 │   └── dai
-│       ├── course-material
-│       │   ├── 01-introduction-and-course-organization
-│       │   ├── 02-introduction-to-part-1
+│       ├── heig-vd-dai-course (clone of this repository)
+│       │   ├── 00.01-set-up-a-windows-development-environment
+│       │   ├── 00.02-considerations-for-a-development-environment
+│       │   ├── 01.01-introduction-and-course-organization
+│       │   ├── 01.02-introduction-to-part-1
 │       │   └── ...
 │       └── practical-works
 │           ├── practical-work-1
@@ -82,6 +85,20 @@ potential of your IDE.
 Modern IDEs are powerful tools that can help you to be more productive. Take
 some time to learn how to use your IDE to its full potential to save time and be
 more efficient.
+
+## Validate the considerations
+
+It is important to validate the considerations mentioned in this document to
+ensure that your development environment is set up effectively. Here are some
+steps you can take to validate these considerations:
+
+- [x] Review your file organization and structure.
+- [x] Ensure that you are using Git for version control.
+- [x] Check that you are not storing project sources on cloud providers.
+- [x] Make sure you are opening your project from your IDE.
+
+By following these steps, you can ensure that your development environment is
+set up effectively and that you are following best practices.
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md

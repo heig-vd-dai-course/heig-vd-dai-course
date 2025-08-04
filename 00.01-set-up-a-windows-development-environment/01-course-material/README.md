@@ -13,15 +13,17 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Install WSL](#install-wsl)
   - [Update WSL](#update-wsl)
   - [Install a Linux distribution](#install-a-linux-distribution)
+  - [Update Ubuntu](#update-ubuntu)
+  - [Getting familiar with Linux](#getting-familiar-with-linux)
 - [Install and configure Windows Terminal](#install-and-configure-windows-terminal)
   - [Install Windows Terminal](#install-windows-terminal)
   - [Configure Windows Terminal](#configure-windows-terminal)
-- [Update Ubuntu](#update-ubuntu)
+- [Accessing your files in WSL from Windows and from Ubuntu](#accessing-your-files-in-wsl-from-windows-and-from-ubuntu)
 - [Exclude WSL from your antivirus software](#exclude-wsl-from-your-antivirus-software)
   - [Exclude WSL from Windows Defender](#exclude-wsl-from-windows-defender)
 - [Check the _Considerations for a development environment_ guide](#check-the-considerations-for-a-development-environment-guide)
 - [Validate the installation](#validate-the-installation)
-- [Install and configure your IDE](#install-and-configure-your-ide)
+- [Install and configure your Integrated Development Environment (IDE)](#install-and-configure-your-integrated-development-environment-ide)
   - [Install and configure IntelliJ IDEA to access WSL](#install-and-configure-intellij-idea-to-access-wsl)
 - [Tips and tricks](#tips-and-tricks)
   - [Do not manipulate your files from the File Explorer on Windows](#do-not-manipulate-your-files-from-the-file-explorer-on-windows)
@@ -49,7 +51,7 @@ From our experience, software development on Windows can be more difficult than
 Linux or macOS.
 
 This guide will help you to set up a Linux environment on your Windows computer
-to be able to follow the teaching unit (and beyond).
+to be able to follow this teaching unit (and beyond).
 
 This guide is inspired from the following sources:
 
@@ -69,8 +71,16 @@ your Windows installation is up to date.
 You can check for updates by going to **Settings > Update & Security > Windows
 Update**.
 
-Install any available updates and restart your computer if necessary. You can
-now continue with the installation of the development environment.
+Install any available updates and restart your computer if necessary.
+
+You can now continue with the installation of the development environment.
+
+Do note that the support for Windows 10 version ends on October 14, 2025. You
+should consider upgrading to Windows 11 or Linux if you are still using
+Windows 10.
+
+If you have trouble upgrading to Windows 11, come see the teaching staff. We
+might have some solutions for you.
 
 ## Install and configure Windows Subsystem for Linux (WSL)
 
@@ -83,8 +93,8 @@ Windows Subsystem for Linux (called _"WSL"_) is a compatibility layer for
 running Linux binary executables natively on Windows. It is a very useful tool
 for developers who want to use Linux tools and utilities on Windows.
 
-To install WSL, search "_PowerShell_" in the Start menu, right-click on it, and
-select _"Run as administrator"_ as shown in the following screenshot:
+To install WSL, search _"**PowerShell**"_ in the Start menu, right-click on it,
+and select _"**Run as administrator**"_ as shown in the following screenshot:
 
 ![Run PowerShell as administrator](./images/run-powershell-as-administrator.png)
 
@@ -103,13 +113,21 @@ wsl --install --no-distribution
 The output should be similar to this:
 
 ```text
-Installing: Virtual Machine Platform
-Virtual Machine Platform has been installed.
-Installing: Windows Subsystem for Linux
-Windows Subsystem for Linux has been installed.
-Installing: Windows Subsystem for Linux
-Windows Subsystem for Linux has been installed.
+Downloading: Windows Subsystem for Linux 2.5.9
+Installing: Windows Subsystem for Linux 2.5.9
+Windows Subsystem for Linux 2.5.9 has been installed.
+Installing Windows optional component: VirtualMachinePlatform
+
+Deployment Image Servicing and Management tool
+Version: 10.0.26100.1150
+
+Image Version: 10.0.26100.4770
+
+Enabling feature(s)
+[==========================100.0%==========================]
+The operation completed successfully.
 The requested operation is successful. Changes will not be effective until the system is rebooted.
+The operation completed successfully.
 ```
 
 Restart your computer once the installation is complete.
@@ -162,22 +180,29 @@ The output should be similar to this:
 
 ```text
 The following is a list of valid distributions that can be installed.
-Install using 'wsl --install -d <Distro>'.
+Install using 'wsl.exe --install <Distro>'.
 
-NAME                                   FRIENDLY NAME
-Ubuntu                                 Ubuntu
-Debian                                 Debian GNU/Linux
-kali-linux                             Kali Linux Rolling
-Ubuntu-18.04                           Ubuntu 18.04 LTS
-Ubuntu-20.04                           Ubuntu 20.04 LTS
-Ubuntu-22.04                           Ubuntu 22.04 LTS
-OracleLinux_7_9                        Oracle Linux 7.9
-OracleLinux_8_7                        Oracle Linux 8.7
-OracleLinux_9_1                        Oracle Linux 9.1
-openSUSE-Leap-15.5                     openSUSE Leap 15.5
-SUSE-Linux-Enterprise-Server-15-SP4    SUSE Linux Enterprise Server 15 SP4
-SUSE-Linux-Enterprise-15-SP5           SUSE Linux Enterprise 15 SP5
-openSUSE-Tumbleweed                    openSUSE Tumbleweed
+NAME                            FRIENDLY NAME
+AlmaLinux-8                     AlmaLinux OS 8
+AlmaLinux-9                     AlmaLinux OS 9
+AlmaLinux-Kitten-10             AlmaLinux OS Kitten 10
+AlmaLinux-10                    AlmaLinux OS 10
+Debian                          Debian GNU/Linux
+FedoraLinux-42                  Fedora Linux 42
+SUSE-Linux-Enterprise-15-SP6    SUSE Linux Enterprise 15 SP6
+SUSE-Linux-Enterprise-15-SP7    SUSE Linux Enterprise 15 SP7
+Ubuntu                          Ubuntu
+Ubuntu-24.04                    Ubuntu 24.04 LTS
+archlinux                       Arch Linux
+kali-linux                      Kali Linux Rolling
+openSUSE-Tumbleweed             openSUSE Tumbleweed
+openSUSE-Leap-15.6              openSUSE Leap 15.6
+Ubuntu-18.04                    Ubuntu 18.04 LTS
+Ubuntu-20.04                    Ubuntu 20.04 LTS
+Ubuntu-22.04                    Ubuntu 22.04 LTS
+OracleLinux_7_9                 Oracle Linux 7.9
+OracleLinux_8_10                Oracle Linux 8.10
+OracleLinux_9_5                 Oracle Linux 9.5
 ```
 
 You can then install a Linux distribution of your choice from the above list. We
@@ -187,14 +212,18 @@ unit will be run in Ubuntu.
 
 Using the list of available you have on your computer, identify the latest
 Ubuntu distribution available. In this example, the latest Ubuntu distribution
-is `Ubuntu-22.04`. **Yours will likely be more recent**.
+is `Ubuntu-24.04`. **Yours might be more recent**.
 
 > [!IMPORTANT]
 >
 > Install the latest version of Ubuntu available in **your** list. The version
-> `Ubuntu-22.04` is the latest version at the time of writing this guide, but
-> yours should be more recent. Install the latest version available in **your**
-> list.
+> `Ubuntu-24.04` is the latest version at the time of writing this guide, but
+> yours might be more recent. Install the latest version available in **your**
+> list by replacing `<latest-version>` with the version you have in your list.
+>
+> **Do not install the `Ubuntu` distribution without a version number**. It
+> might install an older version of Ubuntu. Always use the versioned
+> distribution name.
 
 ```powershell
 # Install Ubuntu
@@ -209,8 +238,8 @@ the Ubuntu distribution.
 > While setting up your password, **it is expected that you will not see any
 > characters on the screen**. This is a security feature of the terminal. Even
 > though you do not see the characters you type (e.g., `p@ssw0rd`), they are
-> still being entered. So, make sure to remember your password as you will need
-> it later.
+> still being entered. Make sure to remember your password as you will need it
+> later.
 
 We recommend using the same username and password as your Windows account for
 simplicity.
@@ -221,167 +250,23 @@ will be able to run Linux commands in the terminal.
 The output should be similar to this:
 
 ```text
-Installing: Ubuntu
-Ubuntu has been installed.
-Launching Ubuntu...
-Installing, this may take a few minutes...
-Please create a default UNIX user account. The username does not need to match your Windows username.
-For more information visit: https://aka.ms/wslusers
-Enter new UNIX username: ludelafo
+Downloading: Ubuntu 24.04 LTS
+Installing: Ubuntu 24.04 LTS
+Distribution successfully installed. It can be launched via 'wsl.exe -d Ubuntu-24.04'
+Launching Ubuntu-24.04...
+Provisioning the new WSL instance Ubuntu-24.04
+This might take a while...
+Create a default Unix user account: ludelafo
 New password:
 Retype new password:
 passwd: password updated successfully
-Installation successful!
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
-Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.10.102.1-microsoft-standard-WSL2 x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-This message is shown once a day. To disable it please create the
-/home/ludelafo/.hushlogin file.
-ludelafo@win-10:~$
+ludelafo@WINDOWS-11:/mnt/c/WINDOWS/system32$
 ```
 
-To exit the Ubuntu terminal, you can run the following command:
-
-```bash
-# Exit the Ubuntu terminal
-exit
-```
-
-WSL is now installed and configured on your Windows machine. You can use it to
-run Linux commands and utilities on Windows.
-
-Here is a summary of the most useful commands to know when you use on Linux:
-
-```sh
-# List files and directories
-ls
-
-# Change directory
-cd <directory>
-
-# Print the working directory
-pwd
-
-# Create a directory
-mkdir <directory>
-
-# Remove a file
-rm <file>
-
-# Remove a directory
-rm -r <directory>
-
-# Copy a file
-cp <source> <destination>
-
-# Copy a directory
-cp -r <source> <destination>
-
-# Move a file
-mv <source> <destination>
-
-# Print the content of a file
-cat <file>
-
-# Print the content of a file with pagination
-less <file>
-```
-
-When you access the Ubuntu terminal, you will be in the home directory of your
-Ubuntu user. Your Ubuntu home directory is located in the `/home` directory. The
-`~` symbol represents the home directory of your Ubuntu user.
-
-You can access your Windows files in the `/mnt` directory. For example, you can
-access your Windows `C:\Users` drive in the `/mnt/c/Users` directory, however,
-we do not recommend to manipulate your files from the File Explorer on Windows.
-Check the [Tips and tricks](#tips-and-tricks) section for more information.
-
-Windows has added an entry to the File Explorer sidebar for the Ubuntu
-distribution. You can access your Ubuntu files in the
-`\\wsl$\Ubuntu-<your-version>\home\<your-username>` directory.
-
-> [!CAUTION]
->
-> We highly recommend to **never manipulate your files from the File Explorer on
-> Windows**. Use the Ubuntu terminal instead to avoid permission issues and odd
-> file behaviors. See the [Tips and tricks](#tips-and-tricks) section for more
-> information.
-
-![Access Ubuntu files in File Explorer](./images/wsl-file-browser-ubuntu.png)
-
-## Install and configure Windows Terminal
-
-### Install Windows Terminal
-
-Windows comes pre-installed with a terminal application called _"Command
-Prompt"_.
-
-It is a very basic terminal application that does not support many features that
-are available in modern terminal applications. Microsoft has developed a new
-terminal application called Windows Terminal that is available for Windows 10+
-users.
-
-The Windows Terminal is a new, modern, fast, efficient, powerful, and productive
-terminal application for users of command-line tools and shells like Command
-Prompt, PowerShell, and WSL.
-
-You can download it from the Microsoft Store:
-[Windows Terminal](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701) or
-from the GitHub releases page:
-[Windows Terminal Releases](https://github.com/microsoft/terminal/releases)
-(download the `.msixbundle` file).
-
-Install it and open it.
-
-### Configure Windows Terminal
-
-By default, Windows Terminal will open PowerShell. You can configure it to open
-WSL by default.
-
-Access the settings by clicking on the down arrow in the title bar and selecting
-"Settings". Set the two following settings:
-
-- **Default profile**: Ubuntu
-- **Default terminal application**: Windows Terminal
-
-Press **Save** to save the settings.
-
-![Configure Windows Terminal](./images/windows-terminal-configure.png)
-
-Close Windows Terminal and open it again. It should now open Ubuntu by default.
-
-You now have a modern terminal application that supports multiple tabs, multiple
-shells, and many other features.
-
-You now have access to a Linux distribution on your Windows machine. You can use
-it to run Linux commands and utilities on Windows.
-
-**All future commands in this guide and teaching unit will be run in the Ubuntu
-terminal unless specified otherwise.**
-
-> [!IMPORTANT]
->
-> **All future commands in this guide and teaching unit will be run in the
-> Ubuntu terminal unless specified otherwise.** Whenever you see a command in
-> the teaching unit, it is meant to be run in the Ubuntu terminal. No other
-> environment will be supported (GitBash, Cygwin, etc.).
-
-You can always open a PowerShell terminal by clicking on the down arrow in the
-title bar and selecting "Windows PowerShell".
-
-You can run a PowerShell terminal as administrator by clicking on the down arrow
-in the title bar and selecting "Windows PowerShell" while holding the `Ctrl`
-key.
-
-![Open PowerShell](./images/windows-terminal-open-powershell.png)
-
-## Update Ubuntu
+### Update Ubuntu
 
 Before starting the installation of the development environment, make sure that
 your Ubuntu installation is up to date. You can update Ubuntu by running the
@@ -425,6 +310,156 @@ Press `y` when prompted to confirm the upgrade.
 
 All packages will be upgraded to the latest version.
 
+### Getting familiar with Linux
+
+As you will use WSL as your primary development environment for the rest of the
+teaching unit, it is important to get familiar with Linux commands and how to
+manage your files in WSL.
+
+You can run Linux commands in the Ubuntu terminal. Here are some basic commands
+to get you started:
+
+```sh
+# List files and directories
+ls
+
+# Change directory
+cd <directory>
+
+# Switch to parent directory
+cd ..
+
+# Print the working directory
+pwd
+
+# Create an empty file
+touch <file>
+
+# Remove a file
+rm <file>
+
+# Create a directory
+mkdir <directory>
+
+# Remove a directory
+rm -r <directory>
+
+# Copy a file
+cp <source> <destination>
+
+# Copy a directory
+cp -r <source> <destination>
+
+# Move a file
+mv <source> <destination>
+
+# Display the help for a command
+man <command>
+
+# Print the content of a file
+cat <file>
+
+# Print the content of a file with pagination
+less <file>
+
+# Exit the Ubuntu terminal
+exit
+```
+
+Take some time to familiarize yourself with these commands. You can find more
+information about these commands by running `man <command>` in the terminal.
+
+WSL is now installed and configured on your Windows machine. You can use it to
+run Linux commands and utilities on Windows.
+
+## Install and configure Windows Terminal
+
+### Install Windows Terminal
+
+Windows comes pre-installed with a terminal application called _"**Command
+Prompt**"_.
+
+It is a very basic terminal application that does not support many features that
+are available in modern terminal applications. Microsoft has developed a new
+terminal application called Windows Terminal that is available for Windows 10+
+users.
+
+The Windows Terminal is a new, modern, fast, efficient, powerful, and productive
+terminal application for users of command-line tools and shells like Command
+Prompt, PowerShell, and WSL.
+
+You can download it from the Microsoft Store:
+[Windows Terminal](https://www.microsoft.com/p/windows-terminal/9n0dx20hk701).
+
+Install it and open it.
+
+### Configure Windows Terminal
+
+By default, Windows Terminal will open PowerShell. You can configure it to open
+WSL by default.
+
+Access the settings by clicking on the down arrow in the title bar and selecting
+_"Settings"_. Set the two following settings:
+
+- **Default profile**: `Ubuntu-<your-version>`.
+- **Default terminal application**: Windows Terminal
+
+Press **Save** to save the settings.
+
+![Configure Windows Terminal](./images/configure-windows-terminal.png)
+
+Close Windows Terminal and open it again. It should now open Ubuntu by default.
+
+You now have a modern terminal application that supports multiple tabs, multiple
+shells, and many other features.
+
+You now have access to a Linux distribution on your Windows machine. You can use
+it to run Linux commands and utilities on Windows.
+
+**All future commands in this guide and teaching unit will be run in the Ubuntu
+terminal unless specified otherwise**.
+
+> [!IMPORTANT]
+>
+> **All future commands in this guide and teaching unit will be run in the
+> Ubuntu terminal unless specified otherwise**. Whenever you see a command in
+> this teaching unit, it is meant to be run in the Ubuntu terminal. No other
+> environment will be supported (GitBash, Cygwin, etc.).
+
+You can always open a PowerShell terminal by clicking on the down arrow in the
+title bar and selecting _"Windows PowerShell"_.
+
+You can run a PowerShell terminal as administrator by clicking on the down arrow
+in the title bar and selecting _"Windows PowerShell"_ while holding the `Ctrl`
+key.
+
+![Open PowerShell](./images/windows-terminal-open-powershell.png)
+
+## Accessing your files in WSL from Windows and from Ubuntu
+
+When you access the Ubuntu terminal, you will be in the home directory of your
+Ubuntu user. Your Ubuntu home directory is located in the `/home` directory. The
+home directory is usually shortened to `~`. The `~` symbol represents the home
+directory of your Ubuntu user.
+
+You can access your Windows files in the `/mnt` directory. For example, you can
+access your Windows `C:\Users` drive in the `/mnt/c/Users` directory, however,
+we do not recommend to manipulate your files from the File Explorer on Windows.
+Check the [Tips and tricks](#tips-and-tricks) section for more information.
+
+Windows has added an entry to the File Explorer sidebar for the Ubuntu
+distribution. You can access your Ubuntu files in the
+`\\wsl$\Ubuntu-<your-version>\home\<your-username>` directory.
+
+> [!CAUTION]
+>
+> We highly recommend to **never manipulate your files from the File Explorer on
+> Windows**. Use the Ubuntu terminal instead to avoid permission issues and odd
+> file behaviors. See the [Tips and tricks](#tips-and-tricks) section for more
+> information.
+
+![Access Ubuntu files in File Explorer](./images/wsl-file-browser-ubuntu.png)
+
 ## Exclude WSL from your antivirus software
 
 The following section will guide you through the process of excluding the WSL
@@ -433,8 +468,7 @@ distribution from your antivirus software.
 This is an important step to improve the performance of WSL and avoid any issues
 with your Integrated Development Environment (IDE).
 
-It will also allow you to use WSL with your preferred Integrated Development
-Environment (IDE) without any issues.
+It will also allow you to use WSL with your preferred IDE without any issues.
 
 This should not expose your system to any security risks as the WSL distribution
 is isolated from the rest of the system.
@@ -472,8 +506,8 @@ You should do this for each distribution you have installed.
 
 ## Check the _Considerations for a development environment_ guide
 
-Before continuing with the installation and configuration of your Integrated
-Development Environment (IDE) and other tools, you should check the
+Before continuing with the installation and configuration of your IDE and other
+tools, you should check the
 [Considerations for a development environment](../../00.02-considerations-for-a-development-environment/01-course-material/README.md)
 guide.
 
@@ -499,13 +533,12 @@ You can use the following checklist to validate the installation:
 
 From now on, you can use WSL as your primary development environment for the
 rest of the teaching unit. **We will expect you to use WSL in all the
-assignments and projects.**
+assignments and projects**.
 
-If this is the first time you are following this guide, you can close this
-document and come back to it once you are asked to use the provided IDE in the
-teaching unit. See you soon!
+**If this is the first time you are following this guide, skip this section and
+go straight to the [Tips and tricks](#tips-and-tricks) section**.
 
-## Install and configure your IDE
+## Install and configure your Integrated Development Environment (IDE)
 
 The following sections will guide you through the installation and configuration
 of your Integrated Development Environment (IDE) to access and use the WSL
@@ -586,6 +619,9 @@ previous section:
 Get-NetFirewallProfile -Name Public | Get-NetFirewallRule | where DisplayName -ILike "IntelliJ IDEA*" | Disable-NetFirewallRule
 ```
 
+The following screenshot shows the Windows Firewall settings where you can check
+that the rule has been created:
+
 ![Allow IntelliJ IDEA access to WSL](./images/windows-firewall.png)
 
 #### Create a new project in IntelliJ IDEA
@@ -594,8 +630,8 @@ Get-NetFirewallProfile -Name Public | Get-NetFirewallRule | where DisplayName -I
 >
 > If you have any issues with the following instructions, please check that you
 > have excluded WSL from Windows Defender. It is a known issue that Windows
-> Defender can block IntelliJ IDEA from accessing WSL:
-> [Impossible to configure SDK on windows with WSL](https://youtrack.jetbrains.com/issue/IDEA-273533/Impossible-to-configure-SDK-on-windows-with-WSL).
+> Defender can block IntelliJ IDEA from accessing WSL (based on the
+> [JetBrains Issues tracker](https://youtrack.jetbrains.com/issue/IDEA-273533/Impossible-to-configure-SDK-on-windows-with-WSL)).
 
 Once you create a new project, IntelliJ IDEA should automatically detect the
 Java and Maven installations in WSL.
@@ -644,14 +680,15 @@ Explorer on Windows**. Use the Ubuntu terminal instead to avoid permission
 issues and odd file behaviors.
 
 Check the
-[Considerations for a development environment](../02-considerations-for-a-development-environment/README.md)
+[Considerations for a development environment](../../00.02-considerations-for-a-development-environment/01-course-material/README.md)
 guide for more details.
 
 ### Free up disk space
 
 By default, WSL disk space will grow as you use it but not shrink when space is
 freed. You can automatically shrink the image when files are removed by running
-the following command in a PowerShell terminal:
+the following command in a PowerShell terminal as administrator (based on the
+following [StackExchange answer](https://superuser.com/a/1612289)):
 
 ```powershell
 # Stop the WSL service
@@ -660,8 +697,6 @@ wsl --shutdown
 # Optimize the WSL disk space
 wsl --manage Ubuntu --set-sparse true
 ```
-
-Based on the following [StackExchange answer](https://superuser.com/a/1612289).
 
 ## Troubleshooting
 
@@ -731,8 +766,8 @@ Then, you can check if virtualization is enabled in your BIOS/UEFI settings.
 
 The exact location of the setting will depend on your motherboard manufacturer.
 
-You have to look for a setting called "Virtualization", "VT-x", "AMD-V", or
-something similar and enable it.
+You have to look for a setting called _"Virtualization"_, _"VT-x"_, _"AMD-V"_,
+or something similar and enable it.
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
