@@ -8,7 +8,7 @@ teaching unit taught at
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
 Switzerland!
 
-As of the fall semester 2025-2026, the teaching is taught to the following
+As of the fall semester 2025-2026, the teaching unit is taught to the following
 class(es):
 
 <details>
