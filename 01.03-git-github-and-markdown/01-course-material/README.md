@@ -1,5 +1,7 @@
 # Git, GitHub and Markdown
 
+![Main illustration](./images/main-illustration.jpg)
+
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
 
@@ -9,7 +11,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - Objectives, teaching and learning methods, and evaluation methods:
   [Link to content](..)
-- Course material: [Link to content](./01-course-material/README.md) ·
+- Course material: [Link to content](../01-course-material/README.md) ·
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
@@ -171,7 +173,7 @@ of the course organization will also allow you to be notified by the teachers
 when something important happens through the use of GitHub Teams and GitHub
 Discussions.
 
-In short, by the end of this chapter, you will be able to:
+In short, by the end of this course, you will be able to:
 
 - Understand how to use Git, GitHub and Markdown.
 - Create and manage repositories on GitHub.
@@ -400,15 +402,24 @@ GitHub also provides a wiki for each repository, a project board to manage
 tasks, an issue tracker to report bugs and a pull request system to review and
 merge changes.
 
+Issues are used to track bugs, tasks, or feature requests. They can be assigned
+to a user, labeled, and commented on.
+
+Pull requests are used to propose changes to a repository. They can be reviewed
+and discussed before being merged into the target branch.
+
+Forks are used to create a copy of a repository in your own account. This is
+often used to propose changes to a repository when you do not have write access
+to it.
+
 Contributing to a project hosted on GitHub is done by cloning the repository (or
-forking the repository if you are not part of the organization), making changes
+forking the repository if you are not part of the repository), making changes
 and opening a _"pull request"_ to merge the changes back into the original
 repository.
 
 Once a branch is ready to be merged into the target branch, it is good practice
 to open a pull request (or a _"merge request"_ in other systems, such as
-GitLab). A pull request is a request to merge a branch into another. It is a way
-to discuss the changes before merging them.
+GitLab).
 
 Reviewing a pull request is done by commenting on the changes. The reviewer can
 ask for changes to be made before merging the branch or can approve the changes.
@@ -1466,7 +1477,7 @@ interests.
 
 An example of a profile README is shown in the following screenshot:
 
-![LeaVerou's GitHub profile](./images/github-profile-benphelps.png)
+![LeaVerou's GitHub profile](./images/github-profile-tiredofit.png)
 
 #### Create a new repository
 
@@ -1768,7 +1779,7 @@ Create a new discussion with the following information:
 - **Title**: [DAI 2025-2026] Check out my GitHub profile! - <first name> <last
   name> (replace `<first name>` and `<last name>` with your information)
 - **Category**: Show and tell
-- **Description**: The link to your GitHub profile README!
+- **Description**: The link to your GitHub profile README
 
 This will notify us that you have completed this section and we will check your
 profile README!
@@ -1967,7 +1978,10 @@ profile as a computer scientist engineer.
 Finally, you have added yourself to the list of students in the GitHub
 organization using the _"**Issues** > **Pull requests (PRs)** > **Review** >
 **Merge**"_ workflow, enabling you to contribute to other projects in the
-future.
+future. For instance, you can contribute to the
+[heig-vd-dai-course](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+Git repository by opening issues and/or by creating pull requests to improve the
+content of the course if you find mistakes or if you have suggestions.
 
 Git is a valuable tool for collaborative work but we only scratched the surface.
 Refer to the resources for more useful content!
@@ -2023,7 +2037,8 @@ In the next chapter, you will learn the following topics:
 
 _Resources are here to help you. They are not mandatory to read._
 
-- _None yet_
+- [Learn Git Branching](https://learngitbranching.js.org/) - _"[...] the most
+  visual and interactive way to learn Git on the web."_
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 

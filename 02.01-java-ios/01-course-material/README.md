@@ -116,7 +116,7 @@ run the code examples.
 
 As a quick reminder, you can run the code examples using the following command:
 
-```bash
+```sh
 # Compile the code example
 javac HelloWorld.java
 

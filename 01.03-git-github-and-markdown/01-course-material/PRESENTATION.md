@@ -7,14 +7,14 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Git, GitHub and Markdown
+title: HEIG-VD DAI - Git, GitHub and Markdown
 description: Git, GitHub and Markdown for the DAI course at HEIG-VD, Switzerland
 header: '[**Git, GitHub and Markdown**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.03-git-github-and-markdown)'
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-# HEIG-VD DAI Course - Git, GitHub and Markdown
+# HEIG-VD DAI - Git, GitHub and Markdown
 
 <!--
 _class: lead
@@ -128,8 +128,8 @@ still use it everywhere (even on a server).**
 
 <!-- _class: lead -->
 
-More details for this section in the [course][course]. You can find other
-resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### GitHub
 
@@ -192,8 +192,8 @@ The whole process would be as follow:
 
 <!-- _class: lead -->
 
-More details for this section in the [course][course]. You can find other
-resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Markdown
 
@@ -263,7 +263,7 @@ Do you have any questions?
 
 ➡️ [Find the course on GitHub][course].
 
-**Do not hesitate to help each other if you have any difficulties!**
+**Do not hesitate to help each other! There's no need to rush!**
 
 ![bg right w:75%][course-qr-code]
 

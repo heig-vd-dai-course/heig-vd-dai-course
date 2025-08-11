@@ -20,7 +20,7 @@ server before the client for example).
 
 To run the examples, you can use the following commands:
 
-```bash
+```sh
 # Compile the example
 javac <ExampleName>.java
 

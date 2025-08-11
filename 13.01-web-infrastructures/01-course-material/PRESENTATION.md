@@ -7,22 +7,12 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Web infrastructures
+title: HEIG-VD DAI - Web infrastructures
 description: Web infrastructures for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+header: '[**Web infrastructures**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13.01-web-infrastructures)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
-
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-web-infrastructures/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/22-web-infrastructures/22-web-infrastructures-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/122
-[illustration]: ./images/main-illustration.jpg
-[course-material]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/22-web-infrastructures/COURSE_MATERIAL.md
 
 # Web infrastructures
 
@@ -31,9 +21,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
-
-[Web][web] · [PDF][pdf]
+[Link to the course][course]
 
 <small>L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -57,13 +45,13 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Prepare and setup your environment
 
 **Take 20 minutes to set up your environment using the [course
-material][course-material]**:
+material][course]**:
 
 - Clone the code examples repository on the virtual machine
 - Validate you have access to the virtual machine from the Internet on ports 80
@@ -77,8 +65,8 @@ This will allow to run the examples along the theory in this chapter.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Functional and non-functional requirements
 
@@ -118,8 +106,8 @@ Examples of **non-functional requirements**:
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Web infrastructure definition
 
@@ -137,8 +125,8 @@ of web applications.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### The `Host` header
 
@@ -163,8 +151,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Forward proxy and reverse proxy
 
@@ -208,8 +196,8 @@ find other resources and alternatives as well.
 
 ### Experiment with Traefik
 
-**Take 20 minutes to experiment with Traefik using the [course
-material][course-material] and the
+**Take 20 minutes to experiment with Traefik using the [course material][course]
+and the
 [code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**:
 
 - Run the _"whoami with host-based routing"_ example
@@ -223,8 +211,8 @@ You should have a better understanding of how Traefik works.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### System scalability
 
@@ -288,8 +276,8 @@ Out of scope for this course, but here are some tools you can use:
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Load balancing
 
@@ -328,8 +316,8 @@ help of a cookie.
 
 ---
 
-**Take 20 minutes to experiment with Traefik using the [course
-material][course-material] and the
+**Take 20 minutes to experiment with Traefik using the [course material][course]
+and the
 [code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**:
 
 - Run the _"whoami with host-based routing and sticky sessions"_ example
@@ -393,3 +381,10 @@ You will start the practical work!
   [Unsplash](https://unsplash.com/photos/assorted-box-lot-pdFMl6enmeo)
 - Illustration by [Markus Spiske](https://unsplash.com/@markusspiske) on
   [Unsplash](https://unsplash.com/photos/a-toy-tractor-and-rocks-CBtiTnW_6Kk)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13.01-web-infrastructures
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/122
+[illustration]: ./images/main-illustration.jpg

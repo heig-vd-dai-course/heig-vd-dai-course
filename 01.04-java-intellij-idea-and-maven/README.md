@@ -8,15 +8,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 ## Resources
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](./01.04-java-intellij-idea-and-maven/)
-- Course material:
-  [Link to content](./01.04-java-intellij-idea-and-maven/01-course-material/README.md)
-  ·
+  [Link to content](.)
+- Course material: [Link to content](./01-course-material/README.md) ·
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/01.04-java-intellij-idea-and-maven-presentation.pdf)
-- Solution:
-  [Link to content](./01.04-java-intellij-idea-and-maven/02-solution/README.md)
+- Solution: [Link to content](./02-solution/README.md)
 
 ## Objectives
 

@@ -7,34 +7,21 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - HTTP and curl
+title: HEIG-VD DAI - HTTP and curl
 description: HTTP and curl for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+header: '[**HTTP and curl**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/12.01-http-and-curl)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/21-http-and-curl-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
-[illustration]: ./images/main-illustration.jpg
-[course-material]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
-[course-material-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
-
-# HTTP and curl
+# HEIG-VD DAI - HTTP and curl
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
-
-[Web][web] · [PDF][pdf]
+[Link to the course][course]
 
 <small>L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -60,8 +47,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Disclaimer
 
@@ -78,8 +65,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### curl
 
@@ -104,8 +91,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### HTTP
 
@@ -423,8 +410,8 @@ In this case, the server must use HTTP sessions and is, therefore, stateful.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### API design
 
@@ -554,14 +541,17 @@ Do you have any questions?
 
 ![bg right contain](./images/what-will-you-do.png)
 
-### Find the practical content
+### Now it's your turn!
 
-<!-- _class: lead -->
+- Read the course material.
+- Do the practical content.
+- Ask questions if you have any.
 
-You can find the practical content for this chapter on
-[GitHub][course-material].
+➡️ [Find the course on GitHub][course].
 
-![bg right w:75%][course-material-qr-code]
+**Do not hesitate to help each other! There's no need to rush!**
+
+![bg right w:75%][course-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -611,3 +601,12 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/silver-skeleton-key-on-black-surface-0juktkOTkpU)
 - Illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
   [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/12.01-http-and-curl
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
+[illustration]: ./images/main-illustration.jpg
+[course-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md

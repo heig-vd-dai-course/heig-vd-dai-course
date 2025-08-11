@@ -1,13 +1,14 @@
-package ch.heigvd.dai;
+package ch.heigvd;
 
-import ch.heigvd.dai.commands.Goodbye;
-import ch.heigvd.dai.commands.Hello;
+import ch.heigvd.commands.Goodbye;
+import ch.heigvd.commands.Hello;
 import java.io.File;
 import picocli.CommandLine;
 
 @CommandLine.Command(
     description = "A small CLI with subcommands to demonstrate picocli.",
     version = "1.0.0",
+    showDefaultValues = true,
     subcommands = {
       Hello.class,
       Goodbye.class,
@@ -18,7 +19,7 @@ public class Main {
 
   @CommandLine.Parameters(
       index = "0",
-      description = "The name of the user (default: ${DEFAULT-VALUE}).",
+      description = "The name of the user.",
       defaultValue = "World")
   protected String name;
 
@@ -27,8 +28,8 @@ public class Main {
   }
 
   public static void main(String[] args) {
+    // Source: https://stackoverflow.com/a/11159435
     String jarFilename =
-        // Source: https://stackoverflow.com/a/11159435
         new File(Main.class.getProtectionDomain().getCodeSource().getLocation().getPath())
             .getName();
 

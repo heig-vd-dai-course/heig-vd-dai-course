@@ -25,7 +25,7 @@ They are ordered by complexity. You should explore them in the following order:
 
 To run the examples, you can use the following commands:
 
-```bash
+```sh
 # Compile the example
 javac <ExampleName>.java
 

@@ -7,34 +7,16 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - SMTP and ncat
+title: HEIG-VD DAI - SMTP and ncat
 description: SMTP and ncat for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+header: '[**SMTP and ncat**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05.03-smtp-and-ncat)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/15-smtp-and-ncat-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/114
-[illustration]: ./images/main-illustration.jpg
-[course-material]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/COURSE_MATERIAL.md
-[course-material-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/COURSE_MATERIAL.md
+# HEIG-VD DAI - SMTP and ncat
 
-# SMTP and ncat
-
-<!--
-_class: lead
-_paginate: false
--->
-
-<https://github.com/heig-vd-dai-course>
-
-[Web][web] · [PDF][pdf]
+[Link to the course][course]
 
 <small>L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -60,8 +42,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Electronic messaging protocols: SMTP, POP3 and IMAP
 
@@ -101,8 +83,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### DNS records related to email
 
@@ -116,8 +98,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Security concerns and spam
 
@@ -133,8 +115,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### A focus on the SMTP protocol
 
@@ -163,8 +145,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### ncat
 
@@ -193,14 +175,17 @@ Do you have any questions?
 
 ![bg right w:90%](./images/what-will-you-do.png)
 
-### Find the practical content
+### Now it's your turn!
 
-<!-- _class: lead -->
+- Read the course material.
+- Do the practical content.
+- Ask questions if you have any.
 
-You can find the practical content for this chapter on
-[GitHub][course-material].
+➡️ [Find the course on GitHub][course].
 
-![bg right w:75%][course-material-qr-code]
+**Do not hesitate to help each other! There's no need to rush!**
+
+![bg right w:75%][course-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -235,3 +220,12 @@ More details will be given in the next chapter.
   [Unsplash](https://unsplash.com/photos/brown-eggs-on-white-textile-LUYD2b7MNrg)
 - Illustration by [MChe Lee](https://unsplash.com/@mclee) on
   [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05.03-smtp-and-ncat
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/114
+[illustration]: ./images/main-illustration.jpg
+[course-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05.03-smtp-and-ncat

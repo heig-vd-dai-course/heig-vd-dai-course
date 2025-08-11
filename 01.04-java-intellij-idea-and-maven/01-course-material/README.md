@@ -1,27 +1,25 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
-[illustration]: ./images/main-illustration.jpg
+# Java, IntelliJ IDEA and Maven
 
-# Java, IntelliJ IDEA and Maven - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/01.04-java-intellij-idea-and-maven-presentation.pdf)
+- Solution: [Link to content](../02-solution/README.md)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Java](#java)
@@ -31,14 +29,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Compiling and running Java programs](#compiling-and-running-java-programs)
   - [Summary](#summary)
   - [Alternatives](#alternatives)
-  - [Resources](#resources)
+  - [Resources](#resources-1)
 - [IntelliJ IDEA](#intellij-idea)
   - [Community Edition and Ultimate Edition](#community-edition-and-ultimate-edition)
   - [JetBrains Toolbox App](#jetbrains-toolbox-app)
   - [Configuration files and Git](#configuration-files-and-git)
   - [Summary](#summary-1)
   - [Alternatives](#alternatives-1)
-  - [Resources](#resources-1)
+  - [Resources](#resources-2)
 - [Maven](#maven)
   - [Maven project structure](#maven-project-structure)
   - [`pom.xml` file](#pomxml-file)
@@ -47,7 +45,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Maven wrapper](#maven-wrapper)
   - [Summary](#summary-2)
   - [Alternatives](#alternatives-2)
-  - [Resources](#resources-2)
+  - [Resources](#resources-3)
   - [Cheat sheet](#cheat-sheet)
 - [Practical content](#practical-content)
   - [Install SDKMAN!](#install-sdkman)
@@ -75,7 +73,13 @@ Java applications.
 These skills are essential to develop Java applications in a professional
 environment to share them with other developers.
 
-Let's get started!
+In short, by the end of this course, you should be able to:
+
+- Learn why Java is a popular programming language.
+- Manage multiple Java versions with SDKMAN!.
+- Develop Java apps with IntelliJ IDEA and Maven.
+- Manage dependencies with Maven.
+- Develop essential skills for professional Java development.
 
 ## Java
 
@@ -94,43 +98,52 @@ applications.
 
 ### Java virtual machine
 
-Java is a **compiled** language, meaning that the source code is compiled to
-bytecode, which is then executed by a **Java virtual machine (JVM)**.
+Java is a compiled language, meaning that the source code is compiled to
+bytecode, which is then executed by a Java virtual machine (JVM).
 
-Java is intended to be **portable**, meaning that compiled Java code can run on
-all platforms that support Java, without the need for recompilation, thanks to
+Java is intended to be portable, meaning that compiled Java code can run on all
+platforms that support Java, without the need for recompilation, all thanks to
 the JVM.
 
 ### JVM versions
 
-Many implementations of the JVM exist, targeting **different hardware and
-software environments and/or specific optimizations** for a given platform
-and/or use-case.
+Many implementations of the JVM exist, targeting different hardware and software
+environments and/or specific optimizations for a given platform and/or use-case.
 
-In order to install Java on your computer, you may find the **JDK (Java
-Development Kit)** or the **JRE (Java Runtime Environment)** packages.
+In order to install Java on your computer, you may find the JDK (Java
+Development Kit) or the JRE (Java Runtime Environment) packages.
 
 If you want to develop Java applications, you will need the JDK. If you want to
 run Java applications, you will need the JRE.
 
 ### Java versions and version managers
 
-Java has various **versions**, each with its **own set of features and
-improvements**. The latest Long term support (LTS) version is **Java 21**.
+Java has various versions, each with its own set of features and improvements.
+The latest Long term support (LTS) version is Java 21.
 
-As projects can use different versions of Java, it is common to use a **version
-manager** such as [SDKMAN!](https://sdkman.io/) or [asdf](https://asdf-vm.com/).
+As projects can use different versions of Java, it is common to use a version
+manager such as [SDKMAN!](https://sdkman.io/) or [asdf](https://asdf-vm.com/).
 
-Version managers allow you to **install and switch between different versions of
-Java**.
+Version managers allow you to install and switch between different versions of
+Java.
 
-While working on a project, you should **use the same version of Java as the
-other developers** to ensure that the project compiles and runs correctly.
+While working on a project, you should use the same version of Java as the other
+developers to ensure that the project compiles and runs correctly.
 
 You can develop Java applications using a text editor and the command line, but
-it is more convenient to use an **Integrated Development Environment (IDE)**.
+it is more convenient to use an Integrated Development Environment (IDE).
 
 ### Compiling and running Java programs
+
+Given a Java source file named `HelloWorld.java`:
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello DAI students!");
+    }
+}
+```
 
 A (simple) Java application can be compiled using the `javac` command:
 
@@ -152,8 +165,8 @@ Output:
 Hello DAI students!
 ```
 
-A Java application can be packaged into a **JAR (Java ARchive)** file, which is
-a **ZIP file** containing the compiled bytecode and other resources.
+A Java application can be packaged into a JAR (Java ARchive) file, which is a
+ZIP file containing the compiled bytecode and other resources.
 
 A JAR file can be executed using the `java` command:
 
@@ -170,8 +183,8 @@ These options can tweak the performance of the JVM, depending on the
 application.
 
 As many Java applications depend on external libraries, it is common to use a
-**dependency manager** such as **[Maven](https://maven.apache.org/)** or
-**[Gradle](https://gradle.org/)**.
+dependency manager such as [Maven](https://maven.apache.org/) or
+[Gradle](https://gradle.org/).
 
 ### Summary
 
@@ -215,11 +228,11 @@ many other programming languages.
 
 ### Community Edition and Ultimate Edition
 
-IntelliJ IDEA is available in two editions: the **Community Edition** (free and
-open-source) and the **Ultimate Edition** (proprietary).
+IntelliJ IDEA is available in two editions: the Community Edition (free and
+open-source) and the Ultimate Edition (proprietary).
 
-You are eligible for a **free student license** for the Ultimate Edition, which
-you can obtain by following the instructions on the
+You are eligible for a free student license for the Ultimate Edition, which you
+can obtain by following the instructions on the
 [JetBrains Student License](https://www.jetbrains.com/community/education/#students)
 page.
 
@@ -228,8 +241,8 @@ another IDE if you prefer, but we have great experience with IntelliJ IDEA.
 
 ### JetBrains Toolbox App
 
-The **JetBrains Toolbox App** is a desktop application that allows you to
-**install and manage multiple JetBrains IDEs**.
+The JetBrains Toolbox App is a desktop application that allows you to install
+and manage various JetBrains IDEs.
 
 It is a convenient way to install and update IntelliJ IDEA and other JetBrains
 IDEs in a single place.
@@ -239,13 +252,13 @@ IDEs in a single place.
 When creating a new project, IntelliJ IDEA will create a `.idea` directory
 containing the project configuration files.
 
-Some of these files must be **ignored** by Git, as they contain **local
+Some of these files must be ignored by Git, as they contain **local
 configuration** that is specific to your computer.
 
-Other files must be **committed** to Git, as they contain **project
-configuration** that is shared between all developers.
+Other files must be committed to Git, as they contain **project configuration**
+that is shared between all developers.
 
-This allows you to **share the project configuration** with other developers, so
+This allows you to share the project configuration with other developers, so
 that they can open the project in their instance of IntelliJ IDEA and have the
 same configuration as you and ensure that the project compiles and runs
 correctly.
@@ -289,65 +302,65 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 >
 > <https://maven.apache.org/>
 
-Maven is a **dependency manager** for Java projects. It is used to **manage
-external libraries** (also called **dependencies**) used by your application.
-Maven is a **command-line tool**. It can be used using the `mvn` command.
+Maven is a dependency manager for Java projects. It is used to manage external
+libraries (also called _"dependencies"_) used by your application. Maven is a
+command-line tool. It can be used using the `mvn` command.
 
-Maven is also a **build automation tool**. It is used to **compile** your
-application, **run** your unit tests, **package** your application, etc.
+Maven is also a build automation tool. It is used to compile your application,
+run your unit tests, package your application, etc.
 
 ### Maven project structure
 
-Maven defines a **standard directory structure** for Java projects, so that all
+Maven defines a standard directory structure for Java projects, so that all
 developers can find the source code, unit tests, etc. in the same place. It
-**standardizes the build process** of your application, so that all developers
-can build the project in the same way.
+standardizes the build process of your application, so that all developers can
+build the project in the same way.
 
 When creating a new project in IntelliJ IDEA, you can choose between different
-**project templates**.
+project templates.
 
-In this course, you will use the **Maven** project template.
+In this course, you will use the Maven project template.
 
-IntelliJ IDEA will automatically create a **Maven project structure** for you,
-with the following files:
+IntelliJ IDEA will automatically create a Maven project structure for you, with
+the following files:
 
-- `pom.xml`: the **Project Object Model (POM)** file, which is the core of a
+- **`pom.xml`**: the Project Object Model (POM) file, which is the core of a
   Maven project.
-- `src/main/java`: the **source code** of your application.
-- `src/test/java`: the **unit tests** of your application.
+- **`src/main/java`**: the source code of your application.
+- **`src/test/java`**: the unit tests of your application.
 
 ### `pom.xml` file
 
-The `pom.xml` file contains the **configuration** of your Maven project.
+The `pom.xml` file contains the configuration of your Maven project.
 
-It also contains the **build configuration** of your application, which defines
-how your application is compiled, tested, packaged, etc.
+It also contains the build configuration of your application, which defines how
+your application is compiled, tested, packaged, etc.
 
-It contains the **dependencies** of your application, which are **external
+It contains the dependencies of your application, which are **external
 libraries** used by your application.
 
-The `pom.xml` file is **shared** between all developers, so that they can
-**compile** and **run** the application in the same way.
+The `pom.xml` file is shared between all developers, so that they can compile
+and run the application in the same way.
 
 The standard `pom.xml` file contains the following sections (among others):
 
-- `groupId`: the name of the organization that created the project. It defines
-  the **namespace** of the project.
-- `artifactId`: the name of the project.
-- `version`: the version of the project.
-- `packaging`: the packaging type of the project.
-- `name` and `description`: the name and description of the project.
-- `dependencies`: the dependencies of the project.
+- **`groupId`**: the name of the organization that created the project. It
+  defines the namespace of the project.
+- **`artifactId`**: the name of the project.
+- **`version`**: the version of the project.
+- **`packaging`**: the packaging type of the project.
+- **`name`** and **`description`**: the name and description of the project.
+- **`dependencies`**: the dependencies of the project.
 
-The `artifactId`, `version` and `packaging` sets the **name of the JAR file**.
+The `artifactId`, `version` and `packaging` sets the name of the JAR file.
 
 ### Maven lifecycle
 
-Maven defines a **standard build process** for Java projects, called the **Maven
+Maven defines a standard build process for Java projects, called the **Maven
 lifecycle**.
 
-The Maven lifecycle is composed of **phases**. Each phase is composed of
-**plugin goals**.
+The Maven lifecycle is composed of phases. Each phase is composed of plugin
+goals.
 
 For example, the `compile` phase is composed of the `compiler:compile` plugin
 goal and the `package` phase is composed of the `jar:jar` and
@@ -355,16 +368,15 @@ goal and the `package` phase is composed of the `jar:jar` and
 
 ### Maven Repository
 
-The [Maven Repository](https://mvnrepository.com/) is a **public repository** of
-**Java libraries**. It contains many libraries that you can use in your
-projects.
+The [Maven Repository](https://mvnrepository.com/) is a public repository of
+Java libraries. It contains many libraries that you can use in your projects.
 
-You can search for a library and copy the **dependency declaration** to your
+You can search for a library and copy the dependency declaration to your
 `pom.xml` file.
 
 For example, the following dependency declaration adds the
-**[picocli](https://mvnrepository.com/artifact/info.picocli/picocli/4.7.6)**
-library to your project:
+[picocli](https://mvnrepository.com/artifact/info.picocli/picocli/4.7.6) library
+to your project:
 
 ```xml
 <!-- https://mvnrepository.com/artifact/info.picocli/picocli -->
@@ -375,10 +387,13 @@ library to your project:
 </dependency>
 ```
 
+This allows you to use the classes and methods provided by the picocli library
+in your application.
+
 ### Maven wrapper
 
-Maven offers what is called the **Maven wrapper**. This wrapper is a **script**
-(a shell script on Linux and macOS and a Batch script on Windows) that will
+Maven offers what is called the _"Maven wrapper"_. This wrapper is a script (a
+shell script on Linux and macOS and a Batch script on Windows) that will
 download and run Maven for you, even if you do not have Maven installed on your
 computer.
 
@@ -386,14 +401,14 @@ These scripts can be committed to any Git repository, shared with your team and
 used on any platform without the need to have Maven installed beforehand. You
 can then use the wrapper script to download and run Maven.
 
-The Maven wrapper defines the **version of Maven** to use, so that all
-developers use the same version of Maven.
+The Maven wrapper defines the version of Maven to use, so that all developers
+use the same version of Maven.
 
-The Maven wrapper and its configuration file are **committed** to Git but the
-Maven executable file is **ignored** by Git.
+The Maven wrapper and its configuration file are committed to Git but the Maven
+executable file is ignored by Git.
 
-A new developer can then **run** the Maven wrapper to **download** and
-**execute** Maven, ensuring that all developers use the same version of Maven.
+A new developer can then run the Maven wrapper to download and execute Maven,
+ensuring that all developers use the same version of Maven.
 
 This a considered good practice to ensure that all developers use the same
 version of Maven and that the project can be built and run correctly.
@@ -455,7 +470,7 @@ mvn dependency:go-offline clean compile package
 > [!NOTE]
 >
 > If you are on Windows, you must follow the extra steps of the
-> [_Set up a Windows development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md#install-and-configure-intellij-idea-to-access-wsl)
+> [_Set up a Windows development environment_](../../00.01-set-up-a-windows-development-environment/01-course-material/README.md#configure-intellij-idea-terminal-to-use-wsl)
 > guide to correctly configure the following tools with the Windows Subsystem
 > for Linux (WSL).
 
@@ -475,34 +490,39 @@ on your system: <https://sdkman.io/>.
 >
 > Use `apt` to install them by running the following command in the terminal:
 >
-> ```bash
+> ```sh
 > # Install the missing packages for SDKMAN!
 > sudo apt install <name of the missing package>
 > ```
 
 #### Check the installation
 
-Open a terminal and type `sdk version`.
+Open a new terminal and type `sdk version`.
 
 The output should be similar to this:
 
 ```text
 SDKMAN!
-script: 5.18.2
-core: 0.4.6
+script: 5.20.0
+core: 0.7.4 (linux x86_64)
 ```
 
 ### Install Java
 
-In this section, you will install the latest version available as well as the
-latest Long term support (LTS) version of Java and switch between them using
-SDKMAN!.
+In this section, you will install two Java versions on your computer with
+SDKMAN!:
 
-#### Install the latest version of Java
+1. The latest Long term support (LTS) version of Java.
+2. The previous LTS version of Java.
 
-Using SDKMAN!, it is very easy to install the latest version of Java.
+This will allow you to work on projects using different versions of Java and
+switch between them easily using SDKMAN!.
 
-Start by listing the available versions of Java:
+#### Install the latest LTS version of Java
+
+Using SDKMAN!, it is very easy to install various versions of Java.
+
+Start by listing all the available versions of Java:
 
 ```sh
 # List all available versions of Java
@@ -520,48 +540,40 @@ Available Java Versions for Linux 64bit
 
 ...
 
- GraalVM Oracle|     | 24.ea.3      | graal   |            | 24.ea.3-graal
-               |     | 24.ea.1      | graal   |            | 24.ea.1-graal
-               |     | 23.ea.17     | graal   |            | 23.ea.17-graal
-               |     | 23.ea.16     | graal   |            | 23.ea.16-graal
-               |     | 22.0.2       | graal   |            | 22.0.2-graal
-               |     | 22.0.1       | graal   |            | 22.0.1-graal
-               |     | 21.0.4       | graal   |            | 21.0.4-graal
-               |     | 21.0.3       | graal   |            | 21.0.3-graal
-               |     | 17.0.12      | graal   |            | 17.0.12-graal
-               |     | 17.0.11      | graal   |            | 17.0.11-graal
+ GraalVM CE    |     | 24.0.2       | graalce |            | 24.0.2-graalce
+               |     | 24.0.1       | graalce |            | 24.0.1-graalce
+               |     | 24           | graalce |            | 24-graalce
+               |     | 23.0.2       | graalce |            | 23.0.2-graalce
+               |     | 21.0.2       | graalce |            | 21.0.2-graalce
+               |     | 17.0.9       | graalce |            | 17.0.9-graalce
 
 ...
 
- Oracle        |     | 22.0.2       | oracle  |            | 22.0.2-oracle
-               |     | 22.0.1       | oracle  |            | 22.0.1-oracle
-               |     | 21.0.4       | oracle  |            | 21.0.4-oracle
-               |     | 21.0.3       | oracle  |            | 21.0.3-oracle
-               |     | 17.0.12      | oracle  |            | 17.0.12-oracle
-               |     | 17.0.11      | oracle  |            | 17.0.11-oracle
+ Oracle        |     | 24.0.2       | oracle  |            | 24.0.2-oracle
+               |     | 24.0.1       | oracle  |            | 24.0.1-oracle
+               |     | 24           | oracle  |            | 24-oracle
+               |     | 23.0.2       | oracle  |            | 23.0.2-oracle
+               |     | 22.0.2       | oracle  |            | 22.0.2-oracle
+               |     | 21.0.8       | oracle  |            | 21.0.8-oracle
 
 ...
 
- Temurin       |     | 22.0.2       | tem     |            | 22.0.2-tem
-               |     | 22.0.1       | tem     |            | 22.0.1-tem
-               |     | 21.0.4       | tem     |            | 21.0.4-tem
-               |     | 21.0.3       | tem     |            | 21.0.3-tem
-               |     | 17.0.12      | tem     |            | 17.0.12-tem
-               |     | 17.0.11      | tem     |            | 17.0.11-tem
-               |     | 11.0.24      | tem     |            | 11.0.24-tem
-               |     | 11.0.23      | tem     |            | 11.0.23-tem
-               |     | 8.0.422      | tem     |            | 8.0.422-tem
-               |     | 8.0.412      | tem     |            | 8.0.412-tem
+ Temurin       |     | 24.0.2       | tem     |            | 24.0.2-tem
+               |     | 24.0.1       | tem     |            | 24.0.1-tem
+               |     | 24           | tem     |            | 24-tem
+               |     | 23.0.2       | tem     |            | 23.0.2-tem
+               |     | 21.0.8       | tem     |            | 21.0.8-tem
+               |     | 21.0.7       | tem     |            | 21.0.7-tem
 
 ...
 
 ================================================================================
-Omit Identifier to install default version 21.0.4-tem:
+Omit Identifier to install default version 21.0.8-tem:
     $ sdk install java
 Use TAB completion to discover available versions
     $ sdk install java [TAB]
 Or install a specific version by Identifier:
-    $ sdk install java 21.0.4-tem
+    $ sdk install java 21.0.8-tem
 Hit Q to exit this list view
 ================================================================================
 ```
@@ -576,50 +588,59 @@ optimizations for a given platform and/or use-case.
 > [Which Version of JDK Should I Use?](https://whichjdk.com/). It is a very
 > useful website to help you choose the right version of Java for your project.
 
-To install the latest version of Java Temurin, use the following command:
-
-```sh
-# Install the latest version of Java Temurin
-sdk install java 22.0.2-tem
-```
-
-In this example, we install the latest version of Java Temurin, which is Java
-22.0.2. It might be different (updated) when you follow this course.
-
-Set this version as the default version of Java while installing it.
-
-You can then check the current used version of Java using the following command:
-
-```sh
-# Check the current used version of Java
-java --version
-```
-
-The output should be similar to this:
-
-```text
-openjdk 22.0.2 2024-07-16
-OpenJDK Runtime Environment Temurin-22.0.2+9 (build 22.0.2+9)
-OpenJDK 64-Bit Server VM Temurin-22.0.2+9 (build 22.0.2+9, mixed mode, sharing)
-```
-
-#### Install the latest LTS version of Java
-
-Now, you will install the latest Long term support (LTS) version of Java, which
-is the version that is expected to be used for the remaining of this course.
-
-By default, SDKMAN! will install the latest version of Java Temurin, which is
-the **Adoptium Eclipse Temurin** JVM, a recognized and trusted distribution of
-OpenJDK.
-
-To install the latest LTS version of Java Temurin, use the following command:
+To install the latest LTS version of Java Temurin, use the following command
+(update the version number if needed):
 
 ```sh
 # Install the latest LTS version of Java Temurin
-sdk install java
+sdk install 21.0.8-tem
 ```
 
-Set this version as the default version of Java while installing it.
+In this example, we are installing the 21.0.8 version of Java Temurin. It might
+be different (updated) when you follow this course.
+
+You can now check the current used version of Java using the following command:
+
+```sh
+# Check the current used version of Java
+java --version
+```
+
+The output should be similar to this:
+
+```text
+openjdk 21 2023-09-19 LTS
+OpenJDK Runtime Environment Temurin-21+35 (build 21+35-LTS)
+OpenJDK 64-Bit Server VM Temurin-21+35 (build 21+35-LTS, mixed mode, sharing)
+```
+
+You should notice that the version of Java is now 21, powered by the Adoptium
+Eclipse Temurin JVM, a recognized and trusted distribution of OpenJDK.
+
+#### Install the previous LTS version of Java
+
+Now, you will install the previous LTS version of Java. As it is very common to
+work on projects that uses older LTS versions of Java, it is important to know
+how to install and switch between different versions of Java.
+
+Using the [Which Version of JDK Should I Use?](https://whichjdk.com/) website,
+you can see that the previous LTS version of Java is Java 17.
+
+Use the previous command to list all the available versions of Java and install
+the previous LTS version of Java. Set this version as the default version of
+Java while installing it.
+
+<details>
+<summary>Show me the answer!</summary>
+
+Install Java 17 using the following command:
+
+```sh
+# Install Java 17
+sdk install java 17.0.16-tem
+```
+
+</details>
 
 You can then check the current used version of Java using the following command:
 
@@ -631,24 +652,30 @@ java --version
 The output should be similar to this:
 
 ```text
-openjdk 21.0.4 2024-07-16 LTS
-OpenJDK Runtime Environment Temurin-21.0.4+7 (build 21.0.4+7-LTS)
-OpenJDK 64-Bit Server VM Temurin-21.0.4+7 (build 21.0.4+7-LTS, mixed mode, sharing)
+openjdk 17.0.16 2025-07-15
+OpenJDK Runtime Environment Temurin-17.0.16+8 (build 17.0.16+8)
+OpenJDK 64-Bit Server VM Temurin-17.0.16+8 (build 17.0.16+8, mixed mode, sharing)
 ```
+
+Notice that the version of Java is now 17, powered by the Adoptium Eclipse
+Temurin JVM.
+
+As we have set this version as the default version of Java while installing it,
+this version will be used by default when opening a new terminal session.
 
 #### Switch between Java versions
 
 You can switch between different versions of Java using the following command:
 
 ```sh
-# List installed versions of Java
+# List installed versions of Java (check the `Use` and `Status` columns)
 sdk list java
 
-# Switch to a specific version of Java
-sdk use java 22.0.2-tem
+# Switch to a specific version of Java for the current terminal session
+sdk use java 21.0.8-tem
 ```
 
-This will set version 22.0.2 of Java Temurin as the current version of Java **in
+This will set version 21 of Java Temurin as the current version of Java **for
 the current terminal session**.
 
 This can be useful to switch to a specific version of Java for a specific
@@ -660,11 +687,12 @@ You can set the default version of Java using the following command:
 
 ```sh
 # Set the default version of Java
-sdk default java 21.0.4-tem
+sdk default java 21.0.8-tem
 ```
 
 This will ensure the latest LTS version of Java Temurin is used by default when
-opening a new terminal session.
+opening a new terminal session. It is the version that is expected to be used
+for the remaining of this teaching unit.
 
 ### Install Maven
 
@@ -692,18 +720,19 @@ mvn --version
 The output should be similar to this:
 
 ```text
-Apache Maven 3.9.8 (36645f6c9b5079805ea5009217e36f2cffd34256)
+Apache Maven 3.9.10 (5f519b97e944483d878815739f519b2eade0a91d)
 Maven home: /home/ludelafo/.sdkman/candidates/maven/current
-Java version: 21.0.4, vendor: Eclipse Adoptium, runtime: /home/ludelafo/.sdkman/candidates/java/21.0.4-tem
+Java version: 21.0.8, vendor: Eclipse Adoptium, runtime: /home/ludelafo/.sdkman/candidates/java/21.0.8-tem
 Default locale: en, platform encoding: UTF-8
-OS name: "linux", version: "5.15.153.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+OS name: "linux", version: "6.6.87.2-microsoft-standard-wsl2", arch: "amd64", family: "unix"
 ```
 
 ### Install and configure IntelliJ IDEA
 
-In this section, you will install and configure IntelliJ IDEA Ultimate Edition.
+In this section, you will install and configure IntelliJ IDEA (Community Edition
+or Ultimate Edition).
 
-#### Enable the IntelliJ student license
+#### Enable the IntelliJ student license (optional)
 
 Follow the official documentation to enable the IntelliJ student license:
 <https://www.jetbrains.com/community/education/#students>.
@@ -721,11 +750,11 @@ Follow the official documentation to enable the IntelliJ student license:
 Go to the official website and follow the instructions on how to install
 IntelliJ Toolbox App on your system: <https://www.jetbrains.com/toolbox/app>.
 
-#### Enable the student license in IntelliJ Toolbox App
+#### Enable the student license in IntelliJ Toolbox App (optional)
 
 Open IntelliJ Toolbox App and login with your JetBrains account.
 
-#### Install IntelliJ IDEA Ultimate Edition
+#### Install IntelliJ IDEA (Community Edition or Ultimate Edition)
 
 > [!NOTE]
 >
@@ -749,18 +778,19 @@ following screenshot:
 
 > [!IMPORTANT]
 >
-> As mentioned in the course material, always use the LTS version of Java. As
-> you have now multiple versions of Java installed on your machine, always check
-> the version of Java used when creating a new project and use the LTS version.
+> As mentioned in the course material, always use the latest LTS version of
+> Java. As you have now multiple versions of Java installed on your machine,
+> always check the version of Java used when creating a new project and use the
+> latest LTS version.
 >
 > Set the artifact ID and group ID as shown in the screenshot as well.
 
 #### Run the Java project from IntelliJ IDEA
 
-Open the `Main` file. Press the "Run" button in the toolbar to run the Maven
+Open the `Main` file. Press the **Play** button in the toolbar to run the Maven
 project.
 
-The output should be `Hello World!` in the "Run" tab.
+The output should be `Hello World!` in the **Run** tab.
 
 #### Initialize the Maven wrapper
 
@@ -782,9 +812,9 @@ mvn wrapper:wrapper
 This will create the Maven wrapper files in your project:
 
 ```text
-.
-├── .mvn
-│   └── wrapper
+./
+├── .mvn/
+│   └── wrapper/
 │       └── maven-wrapper.properties
 ├── mvnw
 └── mvnw.cmd
@@ -812,17 +842,21 @@ project.
 
 #### Update the `pom.xml` file to generate a JAR file
 
-Maven uses the `pom.xml` file to define the **build process** of your
-application.
+Maven uses the `pom.xml` file to define the build process of your application.
 
-Maven has a plugin called `maven-jar-plugin` that can be used to **generate a
-JAR file** from your application.
+Maven has a plugin called `maven-jar-plugin` that can be used to generate a JAR
+file from your application.
 
 > [!IMPORTANT]
 >
 > Use the latest stable version of the `maven-jar-plugin` available on the Maven
 > Repository:
 > <https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin>.
+
+> [!IMPORTANT]
+>
+> Do not blindly copy-paste snippets from this teaching unit. Check the changes
+> and adapt them to your project.
 
 Add the following configuration to the `pom.xml` file:
 
@@ -831,7 +865,7 @@ Add the following configuration to the `pom.xml` file:
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ch.heigvd.dai</groupId>
+  <groupId>ch.heigvd</groupId>
   <artifactId>java-intellij-idea-and-maven</artifactId>
   <version>1.0-SNAPSHOT</version>
 
@@ -849,7 +883,7 @@ Add the following configuration to the `pom.xml` file:
           <archive>
             <manifest>
               <!-- Update the path to the main class if needed -->
-              <mainClass>ch.heigvd.dai.Main</mainClass>
+              <mainClass>ch.heigvd.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -887,7 +921,15 @@ Run the JAR file using the `java` command:
 java -jar target/java-intellij-idea-and-maven-1.0-SNAPSHOT.jar
 ```
 
-The output should be `Hello World!`.
+The output should be similar to this:
+
+```text
+Hello and welcome!i = 1
+i = 2
+i = 3
+i = 4
+i = 5
+```
 
 Congratulations! You have successfully created and run your first Maven project!
 
@@ -898,7 +940,7 @@ they have Java installed.
 #### Create and store IntelliJ IDEA Run/Debug configurations
 
 Running Maven commands from the command line is not very convenient. You can
-store the Maven configuration as an IntelliJ IDEA Run/Debug configuration.
+store the Maven configuration as **IntelliJ IDEA Run/Debug configurations**.
 
 This will allow you to run Maven commands from IntelliJ IDEA, without having to
 open a terminal.
@@ -906,40 +948,47 @@ open a terminal.
 Other developers will also be able to run Maven commands from IntelliJ IDEA, as
 the Run/Debug configurations can be committed to Git.
 
-In the "Run" tab, click on the "Edit Configurations..." button.
+Right next to the **Current File**, click on the **Arrow** > **Edit
+Configurations...**.
 
-Click on the "+" button and select "Maven".
+Click on the **+** button and select **Maven**.
 
-Fill the form as shown in the following screenshot to create the "Package
-application as JAR file" Run/Debug configuration:
+Fill the form as shown in the following screenshot to create the _Package
+application as JAR file_ Run/Debug configuration:
 
 ![Store the Maven configuration](images/intellij-store-the-maven-configuration.png)
 
 Notice the **Run** command: `dependency:go-offline clean compile package`.
 
-This will **download the dependencies**, **delete** the compiled classes,
-**compile** the source code and **package** the application.
+This will:
+
+1. Download the dependencies.
+2. Delete the compiled classes.
+3. Compile the source code.
+4. Package the application.
 
 By checking the **Store as project file** checkbox, the Run/Debug configuration
 will be stored in the `.idea` directory, which can be committed to Git.
 
 Make usage of the Maven wrapper by modifying the **Maven option**.
 
-Save the configuration and run it by pressing the "Run" button in the toolbar.
+Save the configuration and run it by pressing the **Play** button in the
+toolbar.
 
 The output should be similar to the previous execution of Maven.
 
-Do the same to run the application: in the "Run" tab, click on the "Edit
-Configurations..." button.
+Do the same to run the application: right next to the **Package application as
+JAR file**, click on the **Arrow** > **Edit Configurations...**.
 
-Click on the "+" button and select "Application".
+Click on the **+** button and select **Application**.
 
-Fill the form as shown in the following screenshot to create the "Run the
-application" Run/Debug configuration:
+Fill the form as shown in the following screenshot to create the _Run the
+application_ Run/Debug configuration:
 
 ![Store the Application configuration](images/intellij-store-the-application-configuration.png)
 
-Save the configuration and run it by pressing the "Run" button in the toolbar.
+Save the configuration and run it by pressing the **Play** button in the
+toolbar.
 
 The output should be similar to the first execution of the application.
 
@@ -957,7 +1006,7 @@ library to create command-line applications.
 >
 > <https://picocli.info/>
 
-It is a modern library for building powerful, user-friendly, command line
+picocli is a modern library for building powerful, user-friendly, command line
 applications in Java.
 
 Use the latest stable version of picocli available on the Maven Repository
@@ -968,7 +1017,7 @@ Use the latest stable version of picocli available on the Maven Repository
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ch.heigvd.dai</groupId>
+  <groupId>ch.heigvd</groupId>
   <artifactId>java-intellij-idea-and-maven</artifactId>
   <version>1.0-SNAPSHOT</version>
 
@@ -981,7 +1030,7 @@ Use the latest stable version of picocli available on the Maven Repository
     <dependency>
       <groupId>info.picocli</groupId>
       <artifactId>picocli</artifactId>
-      <version>4.7.6</version>
+      <version>4.7.7</version>
     </dependency>
   </dependencies>
 
@@ -1005,13 +1054,13 @@ Use the latest stable version of picocli available on the Maven Repository
 > It will be included in the JAR file generated by Maven.
 >
 > You can find more information about this in
-> [this StackOverflow answer](https://stackoverflow.com/a/52119718)
+> [this StackOverflow answer](https://stackoverflow.com/a/52119718).
 
 Update the `src/main/java/ch/heigvd/Main.java` file to create a `hello` command
 with picocli:
 
 ```java
-package ch.heigvd.dai;
+package ch.heigvd;
 
 import java.util.concurrent.Callable;
 import picocli.CommandLine;
@@ -1020,12 +1069,13 @@ import picocli.CommandLine;
     name = "hello",
     description = "Print a 'Hello World!' type of message.",
     version = "1.0.0",
+    showDefaultValues = true,
     mixinStandardHelpOptions = true)
 class Main implements Callable<Integer> {
 
   @CommandLine.Parameters(
       index = "0",
-      description = "The name of the user (default: World).",
+      description = "The name of the user.",
       defaultValue = "World")
   protected String name;
 
@@ -1076,7 +1126,7 @@ It does not work! The output is an error message:
 
 ```text
 Exception in thread "main" java.lang.NoClassDefFoundError: picocli/CommandLine
-        at ch.heigvd.dai.Main.main(Main.java:28)
+        at ch.heigvd.Main.main(Main.java:27)
 Caused by: java.lang.ClassNotFoundException: picocli.CommandLine
         at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
         at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
@@ -1105,7 +1155,7 @@ Replace the previous `maven-jar-plugin` section with the following:
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ch.heigvd.dai</groupId>
+  <groupId>ch.heigvd</groupId>
   <artifactId>java-intellij-idea-and-maven</artifactId>
   <version>1.0-SNAPSHOT</version>
 
@@ -1133,7 +1183,7 @@ Replace the previous `maven-jar-plugin` section with the following:
             <configuration>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>ch.heigvd.dai.Main</mainClass>
+                  <mainClass>ch.heigvd.Main</mainClass>
                 </transformer>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
                   <resource>MANIFEST.MF</resource>
@@ -1148,9 +1198,9 @@ Replace the previous `maven-jar-plugin` section with the following:
 </project>
 ```
 
-This plugin will intervene in the `package` phase of the Maven lifecycle. It
-will execute the `shade` goal, which will transform the JAR file to include the
-dependencies.
+This plugin will intervene in the `package` phase of the Maven lifecycle. The
+plugin will execute the `shade` goal, which will transform the JAR file to
+include the dependencies.
 
 A goal is a specific command that can be executed by a plugin.
 
@@ -1189,8 +1239,9 @@ transitive dependencies.
 > also why we need to use a plugin to include the dependencies in the JAR file.
 >
 > We will not go any deeper in this topic in this course. You will learn more
-> about this in other future courses. Our goal here is to give you the tools to
-> develop Java applications and share them with other developers easily.
+> about this in other future teaching units. Our goal here is to give you the
+> tools to develop Java applications and share them with other developers
+> easily.
 
 Run the JAR file using the `java` command in the terminal as seen before.
 
@@ -1213,7 +1264,8 @@ The output should be similar to this:
 ```text
 Usage: hello [-hV] <name>
 Print a 'Hello World!' type of message.
-      <name>      The name of the user (default: World).
+      <name>      The name of the user.
+                    Default: World
   -h, --help      Show this help message and exit.
   -V, --version   Print version information and exit.
 ```
@@ -1231,13 +1283,13 @@ java -jar target/java-intellij-idea-and-maven-1.0-SNAPSHOT.jar "DAI student"
 Let's improve our picocli CLI by refactoring our Maven project to add two
 subcommands: `hello` and `goodbye`.
 
-Create a new class called `Hello` in the `ch.heigvd.dai.commands` package
-(`src/main/java/ch/heigvd/dai/commands/Hello.java`) with the following content:
+Create a new class called `Hello` in the `ch.heigvd.commands` package
+(`src/main/java/ch/heigvd/commands/Hello.java`) with the following content:
 
 ```java
-package ch.heigvd.dai.commands;
+package ch.heigvd.commands;
 
-import ch.heigvd.dai.Main;
+import ch.heigvd.Main;
 import java.util.concurrent.Callable;
 import picocli.CommandLine;
 
@@ -1248,7 +1300,7 @@ public class Hello implements Callable<Integer> {
 
   @CommandLine.Option(
       names = {"-g", "--greetings"},
-      description = "The greetings to address the user (default: Hello).",
+      description = "The greetings to address the user.",
       defaultValue = "Hello")
   protected String greetings;
 
@@ -1261,19 +1313,19 @@ public class Hello implements Callable<Integer> {
 ```
 
 The `@CommandLine.ParentCommand` annotation is used to define a parent command.
-It allows you to access the parent command from a subcommand.
+It allows you to access a parent command from a subcommand.
 
 The `@CommandLine.Option` annotation is used to define what picocli calls an
 option. An option is a command-line argument that starts with a dash (`-`) or
 double dash (`--`).
 
-Create a new class called `Goodbye` in the `ch.heigvd.dai.commands` package
-(`src/main/java/ch/heigvd/dai/commands/Goodbye.java`) with the follwing content:
+Create a new class called `Goodbye` in the `ch.heigvd.commands` package
+(`src/main/java/ch/heigvd/commands/Goodbye.java`) with the follwing content:
 
 ```java
-package ch.heigvd.dai.commands;
+package ch.heigvd.commands;
 
-import ch.heigvd.dai.Main;
+import ch.heigvd.Main;
 import java.util.concurrent.Callable;
 import picocli.CommandLine;
 
@@ -1284,7 +1336,7 @@ public class Goodbye implements Callable<Integer> {
 
   @CommandLine.Option(
       names = {"-f", "--farewells"},
-      description = "The farewells to address the user (default: Goodbye).",
+      description = "The farewells to address the user.",
       defaultValue = "Goodbye")
   protected String farewells;
 
@@ -1299,16 +1351,17 @@ public class Goodbye implements Callable<Integer> {
 Update the `Main` class to make usage of these two subcommands:
 
 ```java
-package ch.heigvd.dai;
+package ch.heigvd;
 
-import ch.heigvd.dai.commands.Goodbye;
-import ch.heigvd.dai.commands.Hello;
+import ch.heigvd.commands.Goodbye;
+import ch.heigvd.commands.Hello;
 import java.io.File;
 import picocli.CommandLine;
 
 @CommandLine.Command(
     description = "A small CLI with subcommands to demonstrate picocli.",
     version = "1.0.0",
+    showDefaultValues = true,
     subcommands = {
       Hello.class,
       Goodbye.class,
@@ -1319,7 +1372,7 @@ public class Main {
 
   @CommandLine.Parameters(
       index = "0",
-      description = "The name of the user (default: World).",
+      description = "The name of the user.",
       defaultValue = "World")
   protected String name;
 
@@ -1328,8 +1381,8 @@ public class Main {
   }
 
   public static void main(String[] args) {
+    // Source: https://stackoverflow.com/a/11159435
     String jarFilename =
-        // Source: https://stackoverflow.com/a/11159435
         new File(Main.class.getProtectionDomain().getCodeSource().getLocation().getPath())
             .getName();
 
@@ -1338,6 +1391,7 @@ public class Main {
     System.exit(exitCode);
   }
 }
+
 ```
 
 The `subcommands` allows to specify the subcommands of the main command.
@@ -1354,50 +1408,88 @@ Run the JAR file using the `java` command in the terminal as seen before.
 The output should be similar to this:
 
 ```text
+Missing required subcommand
 Usage: java-intellij-idea-and-maven-1.0-SNAPSHOT.jar [-hV] <name> [COMMAND]
 A small CLI with subcommands to demonstrate picocli.
-      <name>      The name of the user (default: World).
+      <name>      The name of the user.
+                    Default: World
   -h, --help      Show this help message and exit.
   -V, --version   Print version information and exit.
 Commands:
   hello    Print a 'Hello World!' type of message.
   goodbye  Print a 'Goodbye World!' type of message.
+
 ```
 
-Try to execute the `hello` command with a positional parameter and an option:
+Try to execute the `hello` command:
+
+```sh
+# Run the `hello` command
+java -jar target/java-intellij-idea-and-maven-1.0-SNAPSHOT.jar hello
+```
+
+The output should be similar to this:
+
+```text
+Hello World!
+```
+
+Execute the `hello` command with a positional parameter and an option:
 
 ```sh
 # Use a custom name and greetings
-java -jar target/java-intellij-idea-and-maven-1.0-SNAPSHOT.jar "DAI student" hello --greetings "Bonjour"
+java -jar target/java-intellij-idea-and-maven-1.0-SNAPSHOT.jar "étudiant.e de DAI" hello --greetings "Bonjour"
 ```
 
 The output should be similar to this:
 
 ```text
-Bonjour DAI student!
+Bonjour étudiant.e de DAI!
 ```
 
-Try to execute the `goodbye` command with a positional parameter and an option:
+Just as the `hello` command, try to execute the `goodbye` command:
+
+```sh
+# Run the `goodbye` command
+java -jar target/java-intellij-idea-and-maven-1.0-SNAPSHOT.jar goodbye
+```
+
+The output should be similar to this:
+
+```text
+Goodbye World!
+```
+
+Execute the `goodbye` command with a positional parameter:
 
 ```sh
 # Use a custom name and farewells
-java -jar target/java-intellij-idea-and-maven-1.0-SNAPSHOT.jar "DAI student" goodbye --farewells "Au revoir"
+java -jar target/java-intellij-idea-and-maven-1.0-SNAPSHOT.jar "étudiant.e DAI" goodbye --farewells "Au revoir"
 ```
 
 The output should be similar to this:
 
 ```text
-Au revoir DAI student!
+Au revoir étudiant.e DAI!
 ```
 
 picocli enables you to create powerful, user-friendly, command line applications
 in Java with subcommands, options, positional parameters, help messages, etc.
 
+picocli will be used in most of the practical works of this teaching unit. Take
+some time to explore the official documentation: <https://picocli.info/>.
+
+The documentation of picocli is very well written and you will find many
+examples to help you to create your own command-line applications. We have only
+scratched the surface of what picocli can do in the context of this course. Feel
+free to explore the documentation to learn more and familiarize yourself with
+this library!
+
 Now let's commit the project to Git and share it with other developers.
 
 #### Initialize a local Git repository
 
-Open a terminal within IntelliJ IDEA and initialize a local Git repository:
+In a terminal within IntelliJ IDEA, initialize a local Git repository:
 
 ```sh
 # Initialize a local Git repository with a branch called `main`
@@ -1409,7 +1501,7 @@ git init --initial-branch=main
 By default, IntelliJ IDEA did create a `.gitignore` file and a
 `.idea/.gitignore` file containing the files to be ignored by Git.
 
-If you open these files, you will notice that it contains many files and
+If you open these files, you will notice that they contain many files and
 directories that are specific to IntelliJ IDEA, but also for other IDEs and
 specific configurations.
 
@@ -1425,7 +1517,6 @@ Open the `.gitignore` file update the content to the following:
 
 ```sh
 ## IntelliJ IDEA
-
 # General
 .idea/libraries/
 .idea/shelf/
@@ -1445,21 +1536,17 @@ Open the `.gitignore` file update the content to the following:
 .idea/dataSources.local.xml
 
 ## Linux
-
 # Temporary files
 *~
 
 ## macOS
-
 # Files created by macOS Finder
 .DS_Store
 
 ## Maven
-.mvn/wrapper/maven-wrapper.jar
 target/
 
 ## Windows
-
 # Windows thumbnail cache files
 Thumbs.db
 
@@ -1469,18 +1556,27 @@ Thumbs.db
 
 Delete the `.idea/.gitignore` file.
 
-Notice that we have added the `target/` directory and the Maven wrapper JAR file
-to the gitignore file. This will prevent these binary files from being committed
-to Git.
+Notice that we have added the `target/` directory to the gitignore file. This
+will prevent these binary files from being committed to Git.
 
 #### Add a README
 
 Add a `README.md` file to explain what the project is, how to build it and how
 to run it.
 
+> [!NOTE]
+>
+> A README file is a good practice to explain what the project is about and how
+> to use it. It is often the first file that a developer will look at when
+> discovering a new project.
+>
+> Take some time to write a good README file. It will be useful for you and for
+> other developers.
+
 #### Create a GitHub repository
 
-Create a new GitHub repository as seen in a previous chapter.
+Create a new GitHub repository as seen in the course
+[Git, GitHub and Markdown](../../01.03-git-github-and-markdown/).
 
 > [!WARNING]
 >
@@ -1494,7 +1590,7 @@ push the project to GitHub:
 
 ```sh
 # Add the remote repository
-git remote add origin <URL_TO_YOUR_GITHUB_REPOSITORY>
+git remote add origin <url to your github repository>
 
 # Add the files to the staging area
 git add .
@@ -1522,7 +1618,8 @@ Share your project in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2025-2026] My picocli project - First name Last Name
+- **Title**: [DAI 2025-2026] My picocli project - <first name> <last
+  name> (replace `<first name>` and `<last name>` with your information)
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository
 
@@ -1530,7 +1627,7 @@ This will notify us that you have completed the exercise. We can then check your
 work and provide feedback if we see any issues.
 
 You can compare your solution with the official one stated in the
-[Solution](#solution) section, however, **we highly recommend you to try to
+[Solution](#solution) section. However, **we highly recommend you to try to
 complete the practical content by yourself first to learn the most**.
 
 ### Go further
@@ -1546,6 +1643,9 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 Spotless is a code formatter that can be used to format your code automatically.
 
+It allows to format your code according to a set of rules, such as the Google
+Java Format, ensuring that your code is consistent and easy to read.
+
 Add the Spotless Maven plugin to the `pom.xml` file:
 
 ```xml
@@ -1553,7 +1653,7 @@ Add the Spotless Maven plugin to the `pom.xml` file:
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ch.heigvd.dai</groupId>
+  <groupId>ch.heigvd</groupId>
   <artifactId>java-intellij-idea-and-maven</artifactId>
   <version>1.0-SNAPSHOT</version>
 
@@ -1573,7 +1673,7 @@ Add the Spotless Maven plugin to the `pom.xml` file:
       <plugin>
         <groupId>com.diffplug.spotless</groupId>
         <artifactId>spotless-maven-plugin</artifactId>
-        <version>2.43.0</version>
+        <version>2.46.1</version>
         <configuration>
           <pom>
             <sortPom>
@@ -1582,7 +1682,9 @@ Add the Spotless Maven plugin to the `pom.xml` file:
             </sortPom>
           </pom>
           <java>
-            <googleJavaFormat/>
+            <googleJavaFormat>
+              <formatJavadoc>true</formatJavadoc>
+            </googleJavaFormat>
             <importOrder/>
             <removeUnusedImports/>
             <formatAnnotations/>
@@ -1623,8 +1725,8 @@ To manually check the formatting issues, you can use the `spotless:check` goal:
 ```
 
 The settings given in this course are settings that we judge to be good for this
-course. Feel free to explore the documentation to learn more about the different
-settings available.
+teaching unit. Feel free to explore the documentation to learn more about the
+different settings available.
 
 It will format your Java files as well as your `pom.xml` file automatically.
 
@@ -1633,27 +1735,18 @@ It will format your Java files as well as your `pom.xml` file automatically.
 ### What did you do and learn?
 
 In this chapter, you have installed and configured Java, IntelliJ IDEA and
-Maven. You have created a Java project with Maven, added a dependency to a Maven
-project, and built a JAR that you can execute everywhere. You have learned how
-these tools can help you to develop Java applications and share them with other
-developers.
+Maven. You have created a Java project with Maven, added a dependency (such as
+[picocli](https://picocli.info/))to a Maven project, and built a JAR that you
+can execute everywhere. You have learned how these tools can help you to develop
+Java applications and share them with other developers.
 
 Dependencies management is a very important (yet tricky) topic. In the context
-of this course, you will not go any deeper as you will cover in other future
-courses.
+of this teaching unit, you will not go any deeper as you will cover this aspect
+in other future teaching units.
 
-In this course, you will use the **[picocli](https://picocli.info/)** library to
-create command-line applications for most of your practical works. It is a
-modern library for building powerful, user-friendly, command line applications
-in Java with subcommands, options, positional parameters, help messages, etc.
-
-The documentation of picocli is very well written and you will find many
-examples to help you to create your own command-line applications. We have only
-scratched the surface of what picocli can do in the context of this course. Feel
-free to explore the documentation to learn more.
-
-In this chapter, you have also learned how to use Git to version your project
-and share it with other developers.
+You have also learned how to use Git to version your project and share it with
+other developers with GitHub and a good README file for others to understand
+what your project is about.
 
 ### Test your knowledge
 
@@ -1681,10 +1774,9 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Java IOs: input/output processing
-  - How to read and write files?
-  - Why is encoding important?
-  - How to deal with exceptions?
+- How to read and write files?
+- Why is encoding important?
+- How to deal with exceptions?
 
 ## Additional resources
 
@@ -1700,8 +1792,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
-repository.
+[`solution`](../02-solution/README.md) directory of this course.
 
 If you have any questions about the solution, feel free to open an issue to
 discuss it!
@@ -1710,3 +1801,7 @@ discuss it!
 
 - Main illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
   [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
