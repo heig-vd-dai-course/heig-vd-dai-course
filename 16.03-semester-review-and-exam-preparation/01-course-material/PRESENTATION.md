@@ -7,9 +7,9 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Semester review and exam preparation
+title: HEIG-VD DAI - Semester review and exam preparation
 description: Semester review and exam preparation for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
@@ -32,7 +32,8 @@ _paginate: false
 
 [Web][web] · [PDF][pdf]
 
-<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
@@ -75,7 +76,7 @@ Let's have a look back on what **you** did during this semester.
 
 ![bg right:40%](https://images.unsplash.com/photo-1530124566582-a618bc2615dc?fit=crop&h=720)
 
-### Introduction and course organization
+### Introduction to the teaching unit
 
 <!--
 _class: lead

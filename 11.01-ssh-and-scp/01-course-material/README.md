@@ -1,9 +1,9 @@
 [markdown]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/COURSE_MATERIAL.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/COURSE_MATERIAL.md
 [pdf]:
-  https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-ssh-and-scp/20-ssh-and-scp-course-material.pdf
+	https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-ssh-and-scp/20-ssh-and-scp-course-material.pdf
 [license]:
-  https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/115
 [illustration]: ./images/main-illustration.jpg
 
@@ -13,7 +13,8 @@
 
 [Markdown][markdown] · [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of GitHub Copilot.
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
@@ -423,15 +424,15 @@ see an error message warning you that the fingerprint has changed.
 >
 > ```json
 > {
->   "value": [
->     {
->       "code": "ProvisioningState/succeeded",
->       "displayStatus": "Provisioning succeeded",
->       "level": "Info",
->       "message": "Enable succeeded: \n[stdout]\n256 SHA256:mpdGi2XQsOV6FXJ33Uqvow9/ZP6VLwSuDghJJehzRCg root@heig-vd-dai-course-vm (ECDSA)\n3072 SHA256:BezFAeGxQWe13HR5b/KccM73p1pwivSwjFJIimIAk0o root@heig-vd-dai-course-vm (RSA)\n256 SHA256:Xl0X5kv+aeZV28XA9iJ/L+geFVVvOvG4foRixbGRYnY root@heig-vd-dai-course-vm (ED25519)\n\n[stderr]\n",
->       "time": null
->     }
->   ]
+> 	"value": [
+> 		{
+> 			"code": "ProvisioningState/succeeded",
+> 			"displayStatus": "Provisioning succeeded",
+> 			"level": "Info",
+> 			"message": "Enable succeeded: \n[stdout]\n256 SHA256:mpdGi2XQsOV6FXJ33Uqvow9/ZP6VLwSuDghJJehzRCg root@heig-vd-dai-course-vm (ECDSA)\n3072 SHA256:BezFAeGxQWe13HR5b/KccM73p1pwivSwjFJIimIAk0o root@heig-vd-dai-course-vm (RSA)\n256 SHA256:Xl0X5kv+aeZV28XA9iJ/L+geFVVvOvG4foRixbGRYnY root@heig-vd-dai-course-vm (ED25519)\n\n[stderr]\n",
+> 			"time": null
+> 		}
+> 	]
 > }
 > ```
 >

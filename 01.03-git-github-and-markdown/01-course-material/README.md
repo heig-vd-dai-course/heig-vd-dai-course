@@ -1,28 +1,26 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/03-git-github-and-markdown/03-git-github-and-markdown-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2
-[illustration]: ./images/main-illustration.jpg
+# Git, GitHub and Markdown
 
-# Git, GitHub and Markdown - Course material
+![Main illustration](./images/main-illustration.jpg)
 
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
-
-L. Delafontaine and H. Louis, with the help of GitHub Copilot.
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
-- [Introduction to your first chapter](#introduction-to-your-first-chapter)
+- [Introduction to your first course](#introduction-to-your-first-course)
 - [Objectives](#objectives)
 - [Git](#git)
   - [Architecture](#architecture)
@@ -34,7 +32,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Summary](#summary)
   - [Cheat sheet](#cheat-sheet)
   - [Alternatives](#alternatives)
-  - [Resources](#resources)
+  - [Resources](#resources-1)
 - [GitHub](#github)
   - [Social platform](#social-platform)
   - [Free features and PRO features](#free-features-and-pro-features)
@@ -42,21 +40,21 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Issues, pull requests and forks](#issues-pull-requests-and-forks)
   - [Summary](#summary-1)
   - [Alternatives](#alternatives-1)
-  - [Resources](#resources-1)
+  - [Resources](#resources-2)
 - [Markdown](#markdown)
   - [Markdown and output formats](#markdown-and-output-formats)
   - [Syntax](#syntax)
   - [Specifications](#specifications)
   - [Summary](#summary-2)
   - [Alternatives](#alternatives-2)
-  - [Resources](#resources-2)
+  - [Resources](#resources-3)
 - [Practical content](#practical-content)
   - [Create and configure your GitHub account](#create-and-configure-your-github-account)
   - [Install and configure Git](#install-and-configure-git)
   - [Enable SSH authentication](#enable-ssh-authentication)
   - [Sign commits with SSH](#sign-commits-with-ssh)
+  - [Add yourself to the list of students in the GitHub repository](#add-yourself-to-the-list-of-students-in-the-github-repository)
   - [Create your own profile README](#create-your-own-profile-readme)
-  - [Add yourself to the list of students in the GitHub organization](#add-yourself-to-the-list-of-students-in-the-github-organization)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -66,19 +64,19 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Additional resources](#additional-resources)
 - [Sources](#sources)
 
-## Introduction to your first chapter
+## Introduction to your first course
 
-Welcome to the first chapter of the course!
+Welcome to the first course of the teaching unit!
 
-Each of the chapter of this course will follow quite the same structure:
+Each of the courses of this teaching unit will follow quite the same structure:
 
-- A short introduction to the topic with its objectives ;
-- A theoretical part to explain the topic ;
-- A practical part to apply what you learned ;
+- A short introduction to the topic with its objectives;
+- A theoretical part to explain the topic;
+- A practical part to apply what you learned;
 - A conclusion part to summarize what you did and learned and to test your
-  knowledge ;
+  knowledge;
 - A quick feedback section to let us know if it was easy or hard and how we can
-  improve ;
+  improve;
 - Additional resources to go further as well as the sources used to create the
   chapter.
 
@@ -86,7 +84,7 @@ This allows you to start with whatever works better for you: the theoretical
 followed by the practical, or the practical followed with the theoretical part
 in parallel.
 
-While reading the chapters, you might find what is called _"adminitions"_ or
+While reading the chapters, you might find what is called _"admonitions"_ or
 _"alerts"_.
 
 They look like this:
@@ -131,7 +129,7 @@ We try our best to keep the content as up-to-date as possible. If you find
 something that is not up-to-date, do not hesitate to open a discussion, an
 issue, a pull request to fix it.
 
-What you see and do in a current chapter might be used in a future chapter.
+What you see and do in a current course might be used in a future course.
 
 This is why it is important to follow the steps and to understand what you are
 doing. You must keep the code you write, the documentation you create and the
@@ -175,6 +173,13 @@ of the course organization will also allow you to be notified by the teachers
 when something important happens through the use of GitHub Teams and GitHub
 Discussions.
 
+In short, by the end of this course, you will be able to:
+
+- Understand how to use Git, GitHub and Markdown.
+- Create and manage repositories on GitHub.
+- Write and format documentation using Markdown.
+- Share and collaborate effectively using Git and GitHub and their features.
+
 ## Git
 
 > Git is a free and open source distributed version control system (VCS)
@@ -189,48 +194,48 @@ among programmers during software development.
 
 ### Architecture
 
-Git is a client-server system, where the server is called a **repository** and
-the clients are called **clones**.
+Git is a client-server system, where the server is called a _"repository"_ and
+the clients are called _"clones"_.
 
 The repository is the single source of truth, and the clones are the local
 copies of the repository.
 
-Git is a **distributed** VCS, which means that each clone is a full copy of the
+Git is a distributed VCS, which means that each clone is a full copy of the
 repository. This allows to work offline.
 
 ### Commits, hashes and tags
 
-Git uses **commits** to track changes. A commit is a snapshot of the repository
-at a given time. Each commit has a unique identifier, called a **hash**. The
-hash is computed from the content of the commit, so it is impossible to modify a
-commit without changing its hash.
+Git uses _"commits"_ to track changes. A commit is a snapshot of the repository
+at a given time. Each commit has a unique identifier, called a hash. The hash is
+computed from the content of the commit, so it is impossible to modify a commit
+without changing its hash.
 
-Commits can be **tagged** to create a reference to a commit. This is often used
-to mark a commit as a release.
+Commits can be tagged to create a reference to a commit. This is often used to
+mark a commit as a release.
 
-Commits can be **signed** to prove that the commit was made by a specific
-person. This is done for security reasons. It means that the commit was signed
-by the author and adds a layer of security to the commit and confidence to the
-users of the repository.
+Commits can be signed to prove that the commit was made by a specific person.
+This is done for security reasons. It means that the commit was signed by the
+author and adds a layer of security to the commit and confidence to the users of
+the repository.
 
 ### Branches
 
-Git uses **branches** to track different versions of the repository. The default
+Git uses _"branches"_ to track different versions of the repository. The default
 branch is often called `main` (the legacy name was `master`).
 
-Each branch has a name and a pointer to a commit. The pointer is called a
-**head**. The head of the main branch is called `HEAD`.
+Each branch has a name and a pointer to a commit. The pointer is called a head.
+The head of the main branch is called `HEAD`.
 
 Often, when implementing a new feature, a new branch is created. This is done by
 creating a new branch from the main branch.
 
-Once you made all the changes, the modified files are **staged** and a new
-commit is created. The commit is then **pushed** to the repository.
+Once you made all the changes, the modified files are _"staged"_ and a new
+commit is created. The commit is then pushed to the repository.
 
-Commits can be compared to see the **differences** between the staged files and
-the working directory. This is done by comparing the files with the last commit.
+Commits can be compared to see the differences between the staged files and the
+working directory. This is done by comparing the files with the last commit.
 
-Commits can be **pulled** from the repository into the current branch.
+Commits can be pulled from the repository into the current branch.
 
 ### Merging branches
 
@@ -243,20 +248,20 @@ There are three main ways to merge branches:
   the default behavior of Git.
 - **Rebase**: append the source branch to the target branch so no new commits
   are created. This is a more advanced technique.
-- **Squash**: Combine multiple commits into a single one to reduce the number of
+- **Squash**: combine multiple commits into a single one to reduce the number of
   commits in a branch.
 
 ### Conflicts
 
-Working collaboratively can lead to **conflicts**. Conflicts happen when two or
+Working collaboratively can lead to _"conflicts"_. Conflicts happen when two or
 more people make changes to the same file at the same time. Git is able to
 detect conflicts and will ask the user to resolve them.
 
 ### Ignore files
 
-Files can be **ignored** by Git. This is done by creating a `.gitignore` file at
-the root of the repository. This allows to avoid committing files that should
-not be committed, such as IDE configuration files.
+Files can be ignored by Git. This is done by creating a `.gitignore` file at the
+root of the repository. This allows to avoid committing files that should not be
+committed, such as IDE configuration files.
 
 We encourage you **not** to use gitignore generators (such as
 <https://gitignore.io/>), as they often add too many files to the ignore list.
@@ -286,12 +291,12 @@ More information about gitignore can be found in the official documentation:
 
 ### Summary
 
-- Git is a distributed VCS
-- Git uses commits to track changes
-- Git uses branches to track different versions of the repository
-- Git can pull changes from a branch into another
-- Git can merge, rebase or squash branches/commits
-- Git can detect and resolve conflicts
+- Git is a distributed VCS.
+- Git uses commits to track changes.
+- Git uses branches to track different versions of the repository.
+- Git can pull changes from a branch into another.
+- Git can merge, rebase or squash branches/commits.
+- Git can detect and resolve conflicts.
 
 We encourage you to learn how to use Git from the command line, so you can still
 use it everywhere (even on a server).
@@ -369,23 +374,23 @@ place where many companies host their private repositories.
 
 ### Social platform
 
-GitHub is a **social** platform. It allows to **follow** other users and to
-**star** repositories. It also allows to **fork** repositories, which means to
-create a copy of a repository in your own account.
+GitHub is a social platform. It allows to follow other users and to star
+repositories. It also allows to fork repositories, which means to create a copy
+of a repository in your own account.
 
 ### Free features and PRO features
 
 GitHub offers features on top of Git. Some features are only available for
 public repositories. To enable them for private repositories, you need to
-upgrade to a **PRO** account, which is not free.
+upgrade to a PRO account, which is not free.
 
-As a HEIG-VD student, you can get a **PRO** account for free with the
+As a HEIG-VD student, you can get a PRO account for free with the
 [GitHub Global Campus for students](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-students)
 program.
 
 ### Users and organizations
 
-Repositories can be owned by a **user** or by an **organization**.
+Repositories can be owned by a _"user"_ or by an _"organization"_.
 
 An organization can have multiple members, and repositories can be shared
 between members. It is a good practice to create an organization for a project
@@ -393,27 +398,33 @@ that will be worked on by multiple people.
 
 ### Issues, pull requests and forks
 
-GitHub also provides a **wiki** for each repository, a **project board** to
-manage tasks, an **issue tracker** to report bugs and a **pull request** system
-to review and merge changes.
+GitHub also provides a wiki for each repository, a project board to manage
+tasks, an issue tracker to report bugs and a pull request system to review and
+merge changes.
 
-Contributing to a project hosted on GitHub is done by **forking** the
-repository, making changes and opening a **pull request** to merge the changes
-back into the original repository.
+Issues are used to track bugs, tasks, or feature requests. They can be assigned
+to a user, labeled, and commented on.
 
-Forking is only needed if you are not a member of the repository or
-organization.
+Pull requests are used to propose changes to a repository. They can be reviewed
+and discussed before being merged into the target branch.
+
+Forks are used to create a copy of a repository in your own account. This is
+often used to propose changes to a repository when you do not have write access
+to it.
+
+Contributing to a project hosted on GitHub is done by cloning the repository (or
+forking the repository if you are not part of the repository), making changes
+and opening a _"pull request"_ to merge the changes back into the original
+repository.
 
 Once a branch is ready to be merged into the target branch, it is good practice
-to open a **pull request** (or a **merge request** on GitLab). A pull request is
-a request to merge a branch into another. It is a way to discuss the changes
-before merging them.
+to open a pull request (or a _"merge request"_ in other systems, such as
+GitLab).
 
-Reviewing a pull request is done by **commenting** on the changes. The reviewer
-can ask for changes to be made before merging the branch or can approve the
-changes.
+Reviewing a pull request is done by commenting on the changes. The reviewer can
+ask for changes to be made before merging the branch or can approve the changes.
 
-Once the pull request is approved, the branch can be **merged** into the target
+Once the pull request is approved, the branch can be merged into the target
 branch.
 
 By default, GitHub does not delete the branch once it is merged. You might want
@@ -424,19 +435,19 @@ avoids to cumulate out-dated branches in your repository.
 
 The whole process would be as follow:
 
-1. Open an issue to discuss the feature (optional, but recommended)
-2. Clone or fork the project and checkout to a new branch
-3. Make your changes, commit and push them as often as you want
-4. Create the pull request
-5. The maintainers review and merge if OK
-6. You can delete the branch or the fork
+1. Open an issue to discuss the feature (optional, but recommended).
+2. Clone or fork the project and checkout to a new branch.
+3. Make your changes, commit and push them as often as you want.
+4. Create the pull request.
+5. The maintainers review and merge if OK.
+6. You can delete the branch or the fork.
 
 ### Alternatives
 
 _Alternatives are here for general knowledge. No need to learn them._
 
-- [GitLab](https://gitlab.com/) - My personal favorite
-- [Bitbucket](https://bitbucket.org/) - My least favorite
+- [GitLab](https://gitlab.com/) - Ludovic's personal favorite
+- [Bitbucket](https://bitbucket.org/) - Ludovic's least favorite
 - [Gitea](https://gitea.io/) - Very good self-hosted alternative
 - [Forgejo](https://forgejo.org/) - A community owned soft fork of Gitea with
   upcoming support of [forge federations](https://forgefed.org/) (see more with
@@ -523,10 +534,30 @@ This is `inline code`.
 > This is a quote
 ```
 
+<details>
+<summary>Display the results</summary>
+
+_This is italic_ and _this as well_.
+
+**This is bold** and **this as well**.
+
+This is ~~strikethrough~~.
+
+This is `inline code`.
+
+> This is a quote
+
+</details>
+
 #### Code blocks
 
-Code blocks can highlight code syntax for many languages. Horizontal rules can
-be used to separate sections with `---`.
+Code blocks can highlight code syntax for many languages. They are very useful
+to write code snippets in documentation, README files, etc. To create a code
+block, use three backticks (```). The language can be specified after the
+opening backticks to enable syntax highlighting.
+
+The language name is optional, but it is recommended to use it to enable syntax
+highlighting.
 
 ````markdown
 ```java
@@ -541,6 +572,23 @@ console.log("Hello World!");
 print("Hello World!")
 ```
 ````
+
+<details>
+<summary>Display the results</summary>
+
+```java
+System.out.println("Hello World!");
+```
+
+```javascript
+console.log("Hello World!");
+```
+
+```python
+print("Hello World!")
+```
+
+</details>
 
 #### Unordered lists
 
@@ -560,23 +608,49 @@ List two
 - Item 3
 ```
 
+<details>
+<summary>Display the results</summary>
+
+List one
+
+- Item 1
+- Item 2
+- Item 3
+
+List two
+
+- Item 1
+- Item 2
+- Item 3
+
+</details>
+
 #### Ordered lists
 
-Ordered lists can be created using numbers followed by a `.` character. Only the
-first number matters, the rest can be anything (but it is not recommended for
-readability).
+Ordered lists can be created using numbers followed by a `.` character.
 
 ```markdown
 1. Item 1
 2. Item 2
 3. Item 3
-4. Still item 4
-5. Still item 5
 ```
+
+<details>
+<summary>Display the results</summary>
+
+1. Item 1
+2. Item 2
+3. Item 3
+
+</details>
 
 #### Links
 
 Links can link to local files, headings, or references.
+
+A link can have a text and a URL. The text is optional, but it is recommended to
+use it to make the link more readable. The URL can be a local file, a web page,
+or a reference to a link defined elsewhere in the document.
 
 ```markdown
 [GitHub](https://github.com/)
@@ -592,19 +666,43 @@ Links can link to local files, headings, or references.
 [heig-vd]: https://heig-vd.ch
 ```
 
+<details>
+<summary>Display the results</summary>
+
+[GitHub](https://github.com/)
+
+<https://gitlab.com>
+
+[`README.md`](./README.md)
+
+[Jump to "Markdown"](#markdown)
+
+[HEIG-VD][heig-vd]
+
+[heig-vd]: https://heig-vd.ch
+
+</details>
+
 #### Images
 
 Images can be added using the same syntax as links, but with a `!` character in
 front of the link. The text field will be used as the alt text for accessibility
-and SEO. An optional title can be set with `""` characters.
+and SEO.
 
 ```markdown
-![](https://my-website.com/assets/logo.png)
+![](https://avatars.githubusercontent.com/u/200201006?s=200&v=4)
 
-![A landscape of the Alps](./images/alps.jpeg)
-
-![A schema describing the Git workflow](./images/schema.svg "Git workflow")
+![The main illustration of this course](./images/main-illustration.jpg)
 ```
+
+<details>
+<summary>Display the results</summary>
+
+![](https://avatars.githubusercontent.com/u/200201006?s=200&v=4)
+
+![The main illustration of this course](./images/main-illustration.jpg)
+
+</details>
 
 #### Tables
 
@@ -619,6 +717,31 @@ text alignment can be specified using `:` characters.
 | Cell 4   |  Cell 5  |   Cell 6 |
 ```
 
+<details>
+<summary>Display the results</summary>
+
+| Header 1 | Header 2 | Header 3 |
+| -------- | :------: | -------: |
+| Cell 1   |  Cell 2  |   Cell 3 |
+| Cell 4   |  Cell 5  |   Cell 6 |
+
+</details>
+
+#### Horizontal rules
+
+Horizontal rules can be used to separate sections with `---`.
+
+```markdown
+---
+```
+
+<details>
+<summary>Display the results</summary>
+
+---
+
+</details>
+
 #### HTML
 
 HTML can be used in Markdown files. This allows to create more complex
@@ -627,32 +750,30 @@ covered in this course and I would not recommend it as the goal of Markdown is
 to be simple.
 
 If you have a look at the source code of this document (the Markdown version on
-GitHub), you will see that it is written in Markdown and that it uses HTML to
-create the slides with the help of [Marp](https://marp.app/).
+GitHub), you will see that it is written in Markdown and some elements are
+written in HTML.
 
-#### "Hacky" tips
-
-You can use HTML comments to hide content from the Markdown parser. The same can
-be achieved using a link-reference.
-
-```markdown
+```html
 <!-- This is a comment -->
 
-[This is a comment]: #
+<details>
+	<summary>Toggle to view content</summary>
+
+	My content is hidden until you click on the summary.
+</details>
 ```
 
-New lines can be added between two lines with two spaces at the end of the line
-or by using a backslash at the end of a line.
+<details>
+<summary>Display the results</summary>
 
-```markdown
-<!-- You might want to highlight these lines to see the double spaces -->
+<details>
+<summary>Toggle to view content</summary>
 
-A line  
-Another line
+My content is hidden until you click on the summary.
 
-A line\
-Another line
-```
+</details>
+
+</details>
 
 ### Specifications
 
@@ -670,15 +791,15 @@ example:
 
 ### Summary
 
-- Markdown is easy to learn and use
-- Markdown can be used to create documentation
-- Markdown can be used to create slides
+- Markdown is easy to learn and use.
+- Markdown can be used to create documentation.
+- Markdown can be used to create slides.
 - Markdown can be exported to many formats:
   - For example, the presentations of this course are exported to Web and PDF
-    with the help of [Marp](https://marp.app/)
+    with the help of [Marp](https://marp.app/).
   - For example, the course materials of this course are exported to PDF with
     the help of [Pandoc](https://pandoc.org/) and
-    [weasyprint](https://weasyprint.org/)
+    [weasyprint](https://weasyprint.org/).
 
 ### Alternatives
 
@@ -691,6 +812,8 @@ _Alternatives are here for general knowledge. No need to learn them._
   you need to write a scientific paper and/or your bachelor/master thesis as it
   is the standard in the scientific community and much more powerful than
   Markdown.
+- [Typst](https://typst.app/) - A new and modern alternative to LaTeX that is
+  gaining popularity. It is still in beta, but it is worth keeping an eye on it.
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -711,7 +834,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 GitHub is a social platform, home for many open source projects. You will use it
 to publish your work and to collaborate with your team. It is a great visibility
-tool for your (future) career.
+tool for your career.
 
 In this section, you will create and configure your GitHub account. If you
 already have one, ensure that it is properly configured. Please avoid the use of
@@ -752,7 +875,7 @@ Follow the official documentation to enable your PRO account:
 ### Install and configure Git
 
 Git will be used for the rest of the course to work collaboratively and to
-submit your practical work. It is important to have it installed and configured
+submit your practical works. It is important to have it installed and configured
 properly.
 
 In this section, you will install Git on your system. If you already have it,
@@ -761,8 +884,12 @@ please check that it is up to date.
 #### Install Git
 
 Go to the official website and follow the instructions on how to install Git on
-your system: <https://git-scm.com/downloads>. As you are using a Windows
-Subsystem for Linux (WSL), you can follow the instructions for Linux (Ubuntu).
+your system: <https://git-scm.com/downloads>.
+
+> [!CAUTION]
+>
+> As you are using a Windows Subsystem for Linux (WSL), you must follow the
+> instructions for Linux (Ubuntu).
 
 #### Check the installation
 
@@ -810,10 +937,11 @@ In this section you will enable SSH authentication on your GitHub account.
 
 #### Generate a SSH key
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> Follow the Linux instructions on the GitHub documentation! By default, the
-> Windows instructions are shown if you are on Windows.
+> As you are using a Windows Subsystem for Linux (WSL), you must follow the
+> instructions for Linux (Ubuntu). By default, the Windows instructions are
+> shown if you are on Windows.
 
 Follow the official documentation to generate a SSH key:
 <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>.
@@ -831,14 +959,39 @@ Follow the official documentation to generate a SSH key:
 
 #### Add the public SSH key to your GitHub account
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> Follow the Linux instructions on the GitHub documentation! By default, the
-> Windows instructions are shown if you are on Windows.
+> As you are using a Windows Subsystem for Linux (WSL), you must follow the
+> instructions for Linux (Ubuntu). By default, the Windows instructions are
+> shown if you are on Windows.
 
 Follow the official documentation to add the public SSH key to your GitHub
 account:
-<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>
+<https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>.
+
+#### Validate the Git configuration
+
+You can check that your Git configuration is correct by running the following
+command:
+
+```sh
+# Check the Git configuration
+git config --list
+```
+
+This command reads the Git configuration (stored in `~/.gitconfig`) and displays
+it in the terminal.
+
+The output should be similar to this:
+
+```text
+user.email=ludovic.delafontaine@gmail.com
+user.name=Ludovic Delafontaine
+```
+
+**If you do not have this output, it means that your Git configuration is
+incorrect.** Read the previous sections to ensure that you have followed the
+instructions correctly.
 
 #### Test the configuration
 
@@ -862,8 +1015,6 @@ shown in the following screenshot:
 > By default, GitHub will show you the HTTPS URL. You need to click on the
 > **SSH** tab to see the SSH URL.
 
-Let's switch to a bit of theory now!
-
 ### Sign commits with SSH
 
 Signing commits is a good practice to prove that you are the author of a commit.
@@ -873,10 +1024,11 @@ In this section, you will sign all your commits with SSH (source:
 
 #### Add a new SSH signing key to your GitHub account
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> Follow the Linux instructions on the GitHub documentation! By default, the
-> Windows instructions are shown if you are on Windows.
+> As you are using a Windows Subsystem for Linux (WSL), you must follow the
+> instructions for Linux (Ubuntu). By default, the Windows instructions are
+> shown if you are on Windows.
 
 Follow the official documentation to add a new SSH signing key to your GitHub
 account:
@@ -890,10 +1042,11 @@ account:
 
 #### Tell Git to sign commits with SSH
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
-> Follow the Linux instructions on the GitHub documentation! By default, the
-> Windows instructions are shown if you are on Windows.
+> As you are using a Windows Subsystem for Linux (WSL), you must follow the
+> instructions for Linux (Ubuntu). By default, the Windows instructions are
+> shown if you are on Windows.
 
 Follow the official documentation to tell Git about your SSH key:
 <https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key#telling-git-about-your-ssh-key>.
@@ -904,17 +1057,415 @@ Git can sign commits on demand or automatically. It is more convenient to sign
 commits automatically.
 
 You can enable signing commits automatically by setting the `commit.gpgSign`
-configuration to `true`
-([source](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)).
+configuration to `true` (source:
+<https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits>).
 
 ```sh
 # Enable commit signing
 git config --global commit.gpgSign true
 ```
 
+#### Validate the Git configuration
+
+You can check that your Git configuration as mentioned in the previous section.
+
+The output should be similar to this:
+
+```text
+user.email=ludovic.delafontaine@gmail.com
+user.name=Ludovic Delafontaine
+user.signingkey=/home/ludelafo/.ssh/id_ed25519
+gpg.format=ssh
+commit.gpgsign=true
+```
+
+**If you do not have this output, it means that your Git configuration is
+incorrect.** Read the previous sections to ensure that you have followed the
+instructions correctly.
+
+### Add yourself to the list of students in the GitHub repository
+
+In this section, you will add yourself to the list of students in the GitHub
+repository using a workflow we have named the _"**Issues** > **Pull requests
+(PRs)** > **Review** > **Merge**"_ workflow. This will allow you to exercise an
+efficient Git workflow that you will use throughout the course for your
+practical works with the rest of your team.
+
+#### Create a new issue
+
+Create a new issue in the
+<https://github.com/heig-vd-dai-course/heig-vd-dai-course> repository describing
+what you want to do:
+
+- **Title**: Add <first name> <last name> to the list of students (replace
+  `<first name> <last name>` with your information)
+- **Description**: I would like to add myself to the list of students in the
+  GitHub repository.
+
+> [!TIP]
+>
+> While totally optional, it is good practice to create an issue before starting
+> to work on any new feature.
+>
+> It allows to discuss the feature with the maintainers of the project. Maybe
+> the maintainers have some ideas on how to implement the feature or maybe the
+> feature is already planned and you can help them!
+>
+> This avoids to waste time on a feature that will not be implemented or two
+> people working on the same feature at the same time.
+
+Once the issue is created, the teaching staff will be notified. If everything is
+fine, they will:
+
+1. Add you as a collaborator to the GitHub organization.
+2. Assign you the issue once you have accepted the invitation to collaborate.
+3. You can start working on it by adding yourself to the list of students.
+
+<details>
+<summary>Checklist for the maintainers</summary>
+
+Check the following elements:
+
+- [x] Add the student as a collaborator to the GitHub organization.
+- [x] Assign the student to the right team.
+- [x] Assign the issue to the student.
+
+</details>
+
+#### Wait and accept the invitation to collaborate
+
+Once the issue is created, the teaching staff will review it and add you as a
+member of the GitHub organization.
+
+You should receive an email notification to accept the invitation to collaborate
+on the repository.
+
+Accept the invitation to collaborate on the repository.
+
+The teaching staff will reply to your issue to let you know that you have been
+added as a collaborator.
+
+> [!NOTE]
+>
+> Adding you as a collaborator to the GitHub organization and assigning you the
+> issue is done by the teaching staff. It is not done automatically when you
+> create the issue.
+>
+> As it can take some time for the teaching staff to review the issue and add
+> you as a collaborator, please be patient. For the time being, you can start
+> the [Create your own profile README](#create-your-own-profile-readme) section.
+>
+> Once the teaching staff has added you as a collaborator, you can continue with
+> the next sections.
+
+#### Change the membership visibility of the organization (optional)
+
+If you want, you can change the visibility of your membership in the GitHub
+organization. You can choose between public and private.
+
+You can do so by going in the settings of the organization and then in the
+**Membership** tab.
+
+This will allow other users to see your membership in the organization. They
+will be able to see your username and the date you joined the organization.
+
+This is totally optional. You can keep your membership private if you want.
+
+#### Create a branch from the issue
+
+Once the issue has been assigned to you, you can start working on it.
+
+Adding features to a repository can be done by creating a new branch.
+
+A branch is a separate version of the repository that allows you to work on a
+feature without affecting the main branch (usually called `main`).
+
+A branch can be created locally (from your computer) or remotely (on the
+server). A branch can start from the main branch or from any another branch.
+
+GitHub has a feature to create a branch directly from an issue. This is a
+convenient way to create a branch for an issue. It will automatically create a
+branch with the name of the issue.
+
+Create a new branch from the issue by clicking on the **Create a branch** link
+(bottom right) in the issue page as shown in the following screenshot:
+
+![Create a branch from an issue (1/2)](./images/github-create-a-branch-from-issue-1.png)
+
+This will open a dialog to create a new branch. The branch name will be
+generated by GitHub based on the issue title.
+
+The branch source allows you to choose the branch from which the new branch will
+be created. By default, it is set to the `main` branch.
+
+Leave all the fields as they are and click on the **Create branch** button:
+
+![Create a branch from an issue (2/2)](./images/github-create-a-branch-from-issue-2.png)
+
+#### Clone the repository locally
+
+If you have not done it yet, clone the repository locally to get the latest
+changes. If you have already cloned the repository, you can skip this step.
+
+#### Checkout to the new branch
+
+Once the branch is created from GitHub, you can checkout to it. This will switch
+your local repository to the new branch. You can do this by running the
+following command in your terminal:
+
+```sh
+# Get the latest changes from the remote repository
+git fetch
+
+# Checkout to the new branch
+git checkout <branch-name>
+```
+
+#### Add yourself to the list of students
+
+Add yourself to the list of students in the main `README.md` file.
+
+Please add yourself in alphabetical order (by last name) as mentioned in the
+HTML comment in the README file to the class you belong to:
+
+```markdown
+- First name Last name [@username](https://github.com/<username>)
+```
+
+> [!IMPORTANT]
+>
+> As little as it seems, it is important to respect the alphabetical order. It
+> helps us (the teaching staff) searching for someone when grading your work and
+> answering your questions. Thanks!
+>
+> Do not remove the HTML comments in the README file.
+
+> [!NOTE]
+>
+> If you are on WSL, you can exceptionally edit the `README.md` file directly
+> through the Windows File Explorer by accessing the WSL filesystem. If you have
+> cloned the repository without paying attention of the current directory you
+> were in, you should find it in the `/home/<username>` directory.
+
+#### Commit your changes
+
+Now that you have added yourself to the list of students, you can commit your
+changes.
+
+You can check the status of your repository to see the changes you made:
+
+```sh
+# Check the status of the repository
+git status
+```
+
+You should see that the `README.md` file has been modified.
+
+You can also check the differences between the working directory and the staging
+area:
+
+```sh
+# Check the differences between the working directory and the staging area
+git diff README.md
+```
+
+You should see the changes you made to the `README.md` file.
+
+If you are happy with your changes, you can add them to the staging area with
+the following command:
+
+```sh
+# Add the staged files to the staging area
+git add README.md
+```
+
+Commit the changes with an appropriate message:
+
+```sh
+# Commit the changes
+git commit -m "Add myself to the list of students"
+```
+
+> [!TIP]
+>
+> There is not a clear convention on how to write commit messages. The most
+> important thing is to be consistent. We have found using an infinitive verb
+> followed by a short description of the changes to be a good practice.
+
+#### Push your changes
+
+Now that you have committed your changes, you can push them to the remote
+repository. This will update the branch you created earlier on GitHub.
+
+```sh
+# Push the changes to the remote repository
+git push
+```
+
+#### Open a pull request
+
+Once you have pushed your changes, you can open a pull request to merge your
+changes into the main branch.
+
+To open a pull request, go to the **Pull requests** tab of the repository and
+click on the **New pull request** button as shown in the following screenshot:
+
+![Open a pull request (1/2)](./images/github-open-pull-request-1.png)
+
+The title of the pull request should be filled automatically with the message of
+the last commit. We consider this to be a bad practice. Instead,rename the pull
+request to the title of the issue you created earlier:
+
+![Open a pull request (2/2)](./images/github-open-pull-request-2.png)
+
+Once the description is filled, click on the **Create pull request** button.
+
+> [!TIP]
+>
+> If your pull request is not ready yet, you can mark it as a draft by clicking
+> on the **Create draft pull request** button. This creates a draft pull request
+> that informs the maintainers the work you want to add is not ready yet. When
+> you are ready, you can mark it as ready by clicking on the **Ready for
+> review** button.
+
+Once the pull request is created, you might want to continue to work on the pull
+request.
+
+You can do so by pushing new commits to the branch. You can also add a comment
+to the pull request if you want to discuss something with the maintainers.
+
+#### Review the pull request
+
+Once the pull request is created, you can review it to ensure that everything is
+correct. You can check the changes you made, the files that were modified, and
+the commit history:
+
+![Review the pull request](./images/github-review-pull-request.png)
+
+You can also add comments to the pull request to discuss the changes with the
+maintainers. This is a good practice to discuss the changes before merging them.
+
+#### Ask for a review from the teaching staff
+
+Once you are ready, add a comment with the usernames of the
+[Teaching staff](https://github.com/heig-vd-dai-course#teaching-staff) team to
+let them know that your pull request is ready for review.
+
+This will notify the teaching staff that you want them to review your pull
+request.
+
+#### Wait for review from the maintainers
+
+The maintainers will review your pull request and might ask for changes if
+needed.
+
+> [!IMPORTANT]
+>
+> The review can take a few days. Please be patient. Come back to this section
+> once the review is done. For the time being, you can start the
+> [Create your own profile README](#create-your-own-profile-readme) section.
+>
+> Once the teaching staff has reviewed your work, you can continue with the next
+> sections.
+
+<details>
+<summary>Checklist for the maintainers</summary>
+
+Check the following elements:
+
+- [x] The student is in the list of students.
+- [x] The student is in alphabetical order.
+- [x] The GitHub profile is mentioned next to the name of the student.
+- [x] The issue is linked to the pull request, if not, link it yourself as the
+      student do not have the rights to do so.
+
+If they are conflicts because the students are editing the same lines, fix the
+conflict yourself so the students can focus on the content. You can use the
+GitHub web interface. Please be aware that GitHub can take some time to update
+the changes even though you have resolved the conflict.
+
+</details>
+
+#### Make changes if needed
+
+The maintainers might ask for changes. If they do, you will need to make the
+changes locally, commit them and push them to the repository.
+
+You can comment the pull request to let the maintainers know that you have made
+the changes and that they can review it again.
+
+Wait for the maintainers to review your changes again. They might ask for
+further changes or approve the pull request.
+
+#### Check the results
+
+Once the pull request is approved and merged, you can check the results on the
+repository README. You should see your name in the list of students! Congrats!
+
+#### Fetch the remote changes
+
+Fetch the changes to your local repository:
+
+```sh
+# Pull the changes
+git fetch
+```
+
+Fetching will download the changes from the remote repository without the files.
+
+It will display if new branches have been created or if new commits have been
+added to existing branches.
+
+#### Checkout to the main branch
+
+Checkout to the main branch:
+
+```sh
+# Checkout to the main branch
+git checkout main
+```
+
+#### Pull the changes
+
+Pull the upstream changes to your local repository:
+
+```sh
+# Pull the changes
+git pull
+```
+
+Now files will be downloaded to your local repository. Maybe some of your peers
+have added themselves to the list of students!
+
+You are now ready to start the cycle again!
+
+You can optionally delete the branch you created earlier:
+
+```sh
+# Delete the branch
+git branch -d <name of the branch>
+```
+
+This will delete the branch locally.
+
+#### Summary
+
+In this section, you have learned how to open an issue, create an issue, clone
+the repository locally, create a new branch, make changes, commit them, push
+them to the repository, create a pull request, wait for review, make changes if
+needed and check the results. You have also learned how to fetch and pull
+changes from a remote repository.
+
+There are many ways to contribute to a project. This is just one of them that we
+find easy to understand and to use.
+
+Feel free to contribute to other projects using this workflow!
+
+You are now ready to work professionally with Git and GitHub!
+
 ### Create your own profile README
 
-Let's see how Git works in practice by creating you own profile README on
+Let's see more deeply how Git works by creating you own profile README on
 GitHub.
 
 This will allow you to create your first repository and to learn how to use Git
@@ -926,7 +1477,7 @@ interests.
 
 An example of a profile README is shown in the following screenshot:
 
-![Screenshot of a profile README](./images/github-profile-benphelps.png)
+![LeaVerou's GitHub profile](./images/github-profile-tiredofit.png)
 
 #### Create a new repository
 
@@ -939,17 +1490,16 @@ An example of a new repository creation is shown in the following screenshot:
 ![Screenshot of a new repository creation](./images/github-new-repository.png)
 
 Once you have created your repository though the GitHub interface, you should
-notice it contains a few files. Your repository should be different from the one
-shown in the screenshot above.
+notice it contains a few files.
 
 However, as your repository was initialized with a README file, it already
-contains a commit. You can see the commit history by clicking on the "Commits"
+contains a commit. You can see the commit history by clicking on the **Commits**
 link in the repository menu.
 
-You can also see the commit hash (`20f8741`) and the author of the commit
+You can also see the commit hash (`61f7174`) and the author of the commit
 (`ludelafo`), as shown in the following screenshot:
 
-![Screenshot of a commit in a repository](./images/github-commit-history.png)
+![Commit history](./images/github-commit-history.png)
 
 If you click on the commit hash, you will see the details of the commit with all
 the changes made in the commit.
@@ -966,14 +1516,14 @@ Clone your repository locally.
 
 ```sh
 # Clone the repository using SSH
-git clone YOUR_GITHUB_PROFILE_README_SSH_URL
+git clone <your github profile repository ssh url>
 ```
 
 Using the terminal, navigate to the directory of the repository.
 
 ```sh
 # Navigate to the repository directory
-cd YOUR_REPOSITORY_NAME
+cd <your github profile repository name>
 ```
 
 View the list of branches in the repository.
@@ -1011,7 +1561,6 @@ Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Jul 23 17:28:45 2024 +0200
 
     Initial commit
-
 ```
 
 To quit the log, press `q`.
@@ -1019,8 +1568,8 @@ To quit the log, press `q`.
 The commit hash is `20f87413aef2fe9ef296767e6db839b722b83532`. The commit was
 made by `Ludovic Delafontaine` on `Tue Jul 23 17:28:45 2024 +0200`.
 
-At the moment, the 20f87413 commit is the HEAD of the main branch, it means that
-it is the last commit of the main branch.
+At the moment, the `20f87413` commit is the HEAD of the main branch, it means
+that it is the last commit of the main branch.
 
 #### Fill your profile
 
@@ -1032,7 +1581,7 @@ using Markdown using your favorite text editor.
 > Exceptionally, you can edit the `README.md` file directly through the Windows
 > File Explorer by accessing the WSL filesystem. If you have cloned the
 > repository without paying attention of the current directory you were in, you
-> can find it in the `/home/<user>` directory.
+> can find it in the `/home/<your username>` directory.
 
 Feel free to be creative! You can add images, links, tables, etc.
 
@@ -1116,18 +1665,18 @@ Changes to be committed:
 If multiple files were modified, you would only see the files that were added to
 the staging area in the list of changes to be committed.
 
-Commit the changes with an appropriate message.
+Commit the changes with an appropriate message:
+
+```sh
+# Commit the changes
+git commit -m "Update profile README"
+```
 
 > [!TIP]
 >
 > There is not a clear convention on how to write commit messages. The most
 > important thing is to be consistent. We have found using an infinitive verb
 > followed by a short description of the changes to be a good practice.
-
-```sh
-# Commit the changes
-git commit -m "Update profile README"
-```
 
 Check the log to see the new commit.
 
@@ -1150,7 +1699,6 @@ Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Jul 23 17:28:45 2024 +0200
 
     Initial commit
-
 ```
 
 You can notice that the new commit `2ea9f1c4` is the HEAD of the local `main`
@@ -1186,7 +1734,6 @@ Writing objects: 100% (3/3), 581 bytes | 581.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To github.com:heig-vd-dai-course/new-repository-demo.git
    20f8741..2ea9f1c  main -> main
-
 ```
 
 The output shows that the changes were pushed to the `main` branch of the remote
@@ -1218,7 +1765,6 @@ Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Jul 23 17:28:45 2024 +0200
 
     Initial commit
-
 ```
 
 The `2ea9f1c4` commit is now the HEAD of all branches.
@@ -1230,144 +1776,21 @@ Share your profile in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2025-2026] Check out my GitHub profile! - First name Last name
+- **Title**: [DAI 2025-2026] Check out my GitHub profile! - <first name> <last
+  name> (replace `<first name>` and `<last name>` with your information)
 - **Category**: Show and tell
-- **Description**: The link to your GitHub profile README!
+- **Description**: The link to your GitHub profile README
 
 This will notify us that you have completed this section and we will check your
 profile README!
-
-#### Summary
-
-In this section, you have learned how to create a repository, clone it locally,
-make changes, commit them and push them to the repository.
-
-You have also learned how to share your profile README in the GitHub
-Discussions.
-
-Feel free to update your profile README as you learn new things!
-
-Feel also free to open any GitHub Discussions to ask questions or to share
-interesting content!
-
-The GitHub Discussions are a great way to interact with your peers and to learn
-new things. This is where official announcements will be made. You should
-receive notifications when a new discussion is created and you are mentioned.
-
-### Add yourself to the list of students in the GitHub organization
-
-In this section, you will add yourself to the list of students in the GitHub
-organization README using a workflow we have named the Issue, Fork and Pull
-request (PR) workflow. This will allow you to contribute to other projects in
-the future.
-
-#### Create a new issue
-
-Create a new issue in the <https://github.com/heig-vd-dai-course/.github>
-repository describing what you want to do:
-
-- **Title**: Add <First name> <Last name> to the list of students (replace
-  `<First name> <Last name>` with your information)
-- **Description**: I would like to add myself to the list of students in the
-  GitHub organization README.
-
-> [!TIP]
->
-> While totally optional, it is good practice to create an issue before starting
-> to work on any new feature. It allows to discuss the feature with the
-> maintainers of the project. Maybe the maintainers have some ideas on how to
-> implement the feature or maybe the feature is already planned and you can help
-> them! This avoids to waste time on a feature that will not be implemented or
-> two people working on the same feature at the same time.
-
-#### Fork the repository
-
-The main repository is protected and you will not be able to push changes
-directly to it. You will need to fork the repository and open a pull request.
-
-Fork the repository using the **Fork** button in the top right corner of the
-repository page as shown in the following screenshot:
-
-![Screenshot of the .github repository](./images/github-fork-the-repository.png)
-
-You will be asked to choose where to fork the repository. Choose your own
-account. You can change the name of the repository if you want.
-
-#### Clone the repository locally
-
-Forking the repository will create a copy of the repository in your own account.
-
-Clone the repository locally and open it in your favorite text editor.
-
-#### Create a new branch
-
-Create a new branch to add yourself to the list of students:
-
-> [!TIP]
->
-> As for the commit messages, there is not a clear convention on how to name
-> branches. We have found using an infinitive verb followed by a short
-> description of the changes to be a good practice.
-
-```sh
-git checkout -b add-myself-to-the-list-of-students
-```
-
-Display the branches to see the new branch:
-
-```sh
-# View the list of all branches
-git branch -a
-```
-
-#### Add yourself to the list
-
-Add yourself to the list of students in the `profile/README.md` file. Please add
-yourself in alphabetical order (by last name) as mentioned in the HTML comment
-in the README file in the class you belong to.
-
-> [!IMPORTANT]
->
-> As little as it seems, it is important to respect the alphabetical order. It
-> helps us (the teaching staff) searching for someone when grading your work and
-> answering your questions. Thanks!
->
-> Do not remove the HTML comments in the README file.
-
-> [!NOTE]
->
-> If you are on WSL, you can exceptionally edit the `README.md` file directly
-> through the Windows File Explorer by accessing the WSL filesystem. If you have
-> cloned the repository without paying attention of the current directory you
-> were in, you should find it in the `/home/<username>` directory.
-
-```markdown
-- First name Last name [@username](https://github.com/<username>)
-```
-
-#### Commit your changes
-
-Check the staging area and the differences between the working directory and the
-staging area as seen in the previous section.
-
-If you are happy with your changes, commit your changes:
-
-```sh
-# Add the staged files to the staging area
-git add profile/README.md
-
-# Commit the changes
-git commit -m "Add myself to the list of students"
-```
 
 #### Intentionally create a conflict
 
 In the next section, you will intentionally create a conflict to learn how to
 resolve it.
 
-Checkout to a new branch and change the title of the `.profile/README.md` file
-to `# This change is made on the branch 'this-branch-will-create-a-conflict'`
-and commit:
+Checkout to a new branch and change a content of the `README.md` file. Remember
+the line(s) you have changed (you will need it later) and commit:
 
 ```sh
 # Checkout to a new branch
@@ -1376,40 +1799,38 @@ git checkout -b this-branch-will-create-a-conflict
 # Make your changes
 
 # Add the staged files to the staging area
-git add profile/README.md
+git add README.md
 
 # Commit the changes
 git commit -m "This change was done on branch 'this-branch-will-create-a-conflict'"
 ```
 
-Checkout to the branch you created earlier and try to merge the branch you just
-created:
-
-```sh
-# Checkout to the branch you created earlier
-git checkout add-myself-to-the-list-of-students
-```
-
 > [!TIP]
 >
-> You might notice you did not use the `-b` argument when checking out to the
-> branch you created earlier. This is because the branch already exists. If you
-> try to checkout to a branch that does not exist, you will need to use the `-b`
-> argument.
+> You might notice the use of the `-b` argument when checking out to the branch.
+> This is because the branch does not already exists. If you try to checkout to
+> a branch that does not exist, you will need to use the `-b` argument to create
+> it.
 
-Change the title of the `.profile/README.md` file to
-`# This change is made on the branch 'add-myself-to-the-list-of-students'` and
-commit the changes:
+Checkout to the main branch and make some changes to the `README.md` file.
+Change the same line(s) number(s) you changed in the
+`this-branch-will-create-a-conflict` branch but with a different content
+(remember the line(s) you have changed). Commit the changes:
 
 ```sh
+# Checkout to a new branch
+git checkout main
+
+# Make your changes
+
 # Add the staged files to the staging area
-git add profile/README.md
+git add README.md
 
 # Commit the changes
-git commit -m "This change was done on branch 'add-myself-to-the-list-of-students'"
+git commit -m "This change was done on branch 'main'"
 ```
 
-Merge the branch you just created:
+Now, try to merge the branch you just created:
 
 ```sh
 # Merge the branch you just created
@@ -1420,40 +1841,37 @@ git merge this-branch-will-create-a-conflict
 >
 > `git merge` will merge the changes from the branch you are merging into the
 > current branch. In this case, you are merging the changes from the
-> `change-title-of-readme-file` branch into the
-> `add-myself-to-the-list-of-students`.
+> `change-title-of-readme-file` branch into the `main` branch.
 
 You should see the following error:
 
 ```text
-Auto-merging profile/README.md
-CONFLICT (content): Merge conflict in profile/README.md
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 #### Resolve the conflict
 
-Git was not able to merge the changes automatically. This is called a **merge
-conflict**. This happens when two or more people make changes to the same file
+Git was not able to merge the changes automatically. This is called a _"merge
+conflict"_. This happens when two or more people make changes to the same file
 at the same time.
 
-Open the file in your favorite IDE and you should see the conflict.
+Open the file in your favorite IDE and you should see the conflict (search for
+`<<<<<<<` characters).
 
 The `HEAD` part is the content of the current branch. The
 `this-branch-will-create-a-conflict` part is the content of the branch you are
 trying to merge.
 
-Replace the whole content back to its original state:
-
-```markdown
-# HEIG-VD DAI Course
-```
+Replace the whole content back to its original state (or the state you want to
+keep).
 
 Once you are done, add the file to the staging area and commit the changes:
 
 ```sh
 # Add the staged files to the staging area
-git add profile/README.md
+git add README.md
 
 # Commit the changes
 git commit -m "Resolve the merge conflict"
@@ -1476,7 +1894,7 @@ git log
 You should see the commits you made:
 
 ```text
-commit 27fabbdb3b808bf3b32d25e72a388dc60c5bca24 (HEAD -> add-myself-to-the-list-of-students)
+commit 27fabbdb3b808bf3b32d25e72a388dc60c5bca24 (HEAD -> main)
 Merge: 9061c5f eca5084
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Sep 12 16:26:38 2023 +0200
@@ -1487,7 +1905,7 @@ commit 9061c5f37e41ea3664e1be4541af66b50444c64b
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Tue Sep 12 16:23:57 2023 +0200
 
-    This change was done on branch 'add-myself-to-the-list-of-students'
+    This change was done on branch 'main'
 
 commit eca508463561e2f426eabec56a0208635c0b938c (this-branch-will-create-a-conflict)
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
@@ -1499,7 +1917,7 @@ commit 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb (origin/main, main)
 Author: Ludovic Delafontaine <ludovic.delafontaine@gmail.com>
 Date:   Mon Sep 4 14:39:51 2023 +0200
 
-    Add myself to the list of students
+    [Other changes made before the conflict]
 ```
 
 The commit hashes are unique identifiers for each commit. They will, of course,
@@ -1522,281 +1940,23 @@ git reset --hard 7cfbc3c4d50e353e66cb235b06bf4376e69b3ddb
 > commits were pushed to the remote repository, you would need to use
 > `git revert` instead.
 
-#### Get latest changes from the upstream `main` branch
-
-As maintainers might have added new students to the list of students, you will
-need to get the latest changes from the upstream `main` branch.
-
-Follow the official documentation to add the upstream remote:
-<https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork>.
-
-Then, pull the changes from the upstream `main` branch:
-
-```sh
-# Check if changes were made to the upstream branch
-git fetch upstream
-```
-
-Checkout to the local `main` branch:
-
-```sh
-# Checkout to the main branch
-git checkout main
-```
-
-Pull the changes from the upstream `main` branch:
-
-```sh
-# Pull the changes from the upstream main branch
-git merge upstream/main
-```
-
-Checkout to the branch you created earlier:
-
-```sh
-# Checkout to the branch you created earlier
-git checkout add-myself-to-the-list-of-students
-```
-
-Merge the local `main` branch into the branch you created earlier:
-
-```sh
-# Merge the main branch into the branch you created earlier
-git merge main
-```
-
-More information in the official documentation:
-<https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-branch-from-the-command-line>.
-
-#### Push your changes
-
-Push your changes to the repository. This will create a new branch in your
-remote repository.
-
-```sh
-# Push the changes to the repository
-git push --set-upstream origin add-myself-to-the-list-of-students
-```
-
-#### Create a pull request
-
-Create a pull request by clicking on the **Contribute** button in your
-repository page.
-
-> [!TIP]
->
-> If the notification does not appear, you can create a pull request by clicking
-> on the **Pull requests** tab and then on the **New pull request** button.
-> Select the branches you want to merge and click on the **Create pull request**
-> button.
-
-The title of the pull request should be filled automatically with the message of
-the last commit. We consider this to be a bad practice. Instead,rename the pull
-request to something meaningful. The title of the issue you created earlier is a
-good candidate as it describes what you want to do.
-
-> [!IMPORTANT]
->
-> You must allow maintainers to update the pull request. This is needed to
-> resolve conflicts. If you do not allow maintainers to update the pull request,
-> you will need to resolve the conflicts yourself.
->
-> Check the **Allow edits by maintainers** checkbox.
-
-Fill the description with `#<number of the issue you created earlier>`,
-`Fixes #<number of the issue you created earlier>`, or
-`Closes #<number of the issue you created earlier>`. This will automatically
-link the issue to the pull request.
-
-Once the description is filled, click on the **Create pull request** button.
-
-You might want to continue to work on the pull request. You can do so by pushing
-new commits to the branch. You can also add a comment to the pull request if you
-want to discuss something with the maintainers.
-
-> [!TIP]
->
-> If your pull request is not ready yet, you can mark it as a draft by clicking
-> on the **Mark as draft** button. This will inform the maintainers that the
-> pull request is not ready yet and that they should not review it yet. When you
-> are ready, you can mark it as ready by clicking on the **Ready for review**
-> button.
-
-Once you are ready, mark the pull request as ready.
-
-Add a comment with the usernames of the
-[Teaching staff](https://github.com/heig-vd-dai-course#teaching-staff) team to
-let them know that your pull request is ready for review. Add a link to the
-issue as well if you did not link it in the description.
-
-#### Wait for review
-
-The maintainers will review your pull request and will ask for changes if
-needed.
-
-> [!IMPORTANT]
->
-> The review can take a few day. Please be patient. Come back to this section
-> once the review is done. If another chapter is available, you can start it.
-
-They will then add you as a member of the GitHub organization and will add you
-to the `[@students](https://github.com/orgs/heig-vd-dai-course/teams/students)`
-team.
-
-> [!NOTE]
->
-> You might not be able to see the list of students mentioned in the previous
-> section. You will be able to see it once you have joined the GitHub
-> organization as well as all other teams:
-> <https://github.com/orgs/heig-vd-dai-course/teams>.
-
-<details>
-<summary>Checklist for the maintainers</summary>
-
-Check the following elements:
-
-- [x] The student is in the list of students
-- [x] The student is in alphabetical order
-- [x] The GitHub profile is mentioned next to the name of the student
-- [x] The issue is linked to the pull request, if not, link it yourself as the
-      student do not have the rights to do so
-- [x] Add the student to the GitHub organization
-
-If they are conflicts because the students are editing the same lines, fix the
-conflict yourself so the students can focus on the content. You can use the
-GitHub web interface. Please be aware that GitHub can take some time to update
-the changes even though you have resolved the conflict.
-
-If students have submitted their pull request from their `main` branch, review
-it but add the following comment on the pull request:
-
-```text
-You have submitted the PR from the `main` branch of your fork. In the future, please switch to another branch as [mentioned in the practical content](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/03-git-github-and-markdown/COURSE_MATERIAL.md#create-a-new-branch) so you can always pull changes from the upstream `main` branch (`heig-vd-dai-course:main`) without any conflicts.
-```
-
-Add the student to the GitHub organization and the right team.
-
-</details>
-
-#### Make changes if needed
-
-The maintainers might ask for changes. If they do, you will need to make the
-changes locally, commit them and push them to the repository.
-
-> [!TIP]
->
-> If you need to sign all the previous commits you did, you can use `git log`
-> and the following command to sign all the commits after the commit hash
-> mentioned ([source](https://stackoverflow.com/a/54987693)):
->
-> ```sh
-> # Sign all commits after the commit hash
-> git rebase --exec "git commit --amend --no-edit -n -S" -i <hash of the previous commit>
->
-> # Force push the changes
-> git push --force
-> ```
-
-#### Accept the invitation
-
-Once the pull request is approved, you will receive an invitation to join the
-GitHub organization. Accept the invitation so you are part of the course and we
-can notify all the students at the same time using GitHub Discussions.
-
-> [!IMPORTANT]
->
-> You must accept the invitation to be part of the GitHub organization. If you
-> do not accept the invitation, you will not receive notifications from the
-> teaching staff when announcements are made.
-
-#### Check the results
-
-Once the pull request is approved and merged, you can check the results on the
-organization README. You should see your name in the list of students! You can
-now fetch the changes to your local repository.
-
-#### Change the membership visibility of the organization (optional)
-
-If you want, you can change the visibility of your membership in the GitHub
-organization. You can choose between public and private.
-
-You can do so by going in the settings of the organization and then in the
-**Membership** tab.
-
-This will allow other users to see your membership in the organization. They
-will be able to see your username and the date you joined the organization.
-
-This is totally optional. You can keep your membership private if you want.
-
-#### Fetch the changes
-
-Fetch the changes to your local repository:
-
-```sh
-# Pull the changes
-git fetch
-```
-
-Fetching will download the changes from the remote repository without the files.
-
-It will display if new branches have been created or if new commits have been
-added to existing branches.
-
-#### Checkout to the main branch
-
-Checkout to the main branch:
-
-```sh
-# Checkout to the main branch
-git checkout main
-```
-
-#### Pull the changes
-
-Pull the upstream changes to your local repository:
-
-```sh
-# Pull the changes
-git pull upstream main
-```
-
-Now files will be downloaded to your local repository. Maybe some of your peers
-have added themselves to the list of students!
-
-You are now ready to start the cycle again!
-
-You can optionally delete the branch you created earlier:
-
-```sh
-# Delete the branch
-git branch -d add-myself-to-the-list-of-students
-```
-
-This will delete the branch locally.
-
-#### Delete the fork (optional)
-
-You can delete the fork you created earlier if you want **after the pull request
-has been merged to the main repository**.
-
-You can go in the settings of your repository and **General > Danger zone**.
-This will not delete the repository in the organization nor the changes you
-made.
-
 #### Summary
 
-In this section, you have learned how to open an issue, create an issue, fork a
-repository, clone it locally, create a new branch, make changes, commit them,
-push them to the repository, create a pull request, wait for review, make
-changes if needed and check the results. You have also learned how to fetch and
-pull changes from a remote repository.
+In this section, you have learned how to create a repository, clone it locally,
+make changes, commit them and push them to the repository.
 
-There are many ways to contribute to a project. This is just one of them that we
-find easy to understand and to use.
+You have also learned how to share your profile README in the GitHub Discussions
+and resolve merge conflicts.
 
-Feel free to contribute to other projects using this workflow!
+Feel free to update your profile README as you learn new things!
 
-You are now ready to work professionally with Git and GitHub!
+Feel also free to open any GitHub Discussions to ask questions or to share
+interesting content!
+
+The GitHub Discussions are a great way to interact with your peers and to learn
+new things. This is where official announcements for the teaching unit will be
+made. You should receive notifications when a new discussion is created and you
+are mentioned.
 
 ### Go further
 
@@ -1816,8 +1976,12 @@ created your own GitHub account and profile README for your future social
 profile as a computer scientist engineer.
 
 Finally, you have added yourself to the list of students in the GitHub
-organization using the issue, fork and pull request workflow, enabling you to
-contribute to other projects in the future.
+organization using the _"**Issues** > **Pull requests (PRs)** > **Review** >
+**Merge**"_ workflow, enabling you to contribute to other projects in the
+future. For instance, you can contribute to the
+[heig-vd-dai-course](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+Git repository by opening issues and/or by creating pull requests to improve the
+content of the course if you find mistakes or if you have suggestions.
 
 Git is a valuable tool for collaborative work but we only scratched the surface.
 Refer to the resources for more useful content!
@@ -1873,7 +2037,8 @@ In the next chapter, you will learn the following topics:
 
 _Resources are here to help you. They are not mandatory to read._
 
-- _None yet_
+- [Learn Git Branching](https://learngitbranching.js.org/) - _"[...] the most
+  visual and interactive way to learn Git on the web."_
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -1881,3 +2046,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 - Main illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on
   [Unsplash](https://unsplash.com/photos/wX2L8L-fGeA)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/2

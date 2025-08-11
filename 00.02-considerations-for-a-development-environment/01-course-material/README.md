@@ -1,11 +1,19 @@
 # Considerations for a development environment
 
-L. Delafontaine and H. Louis, with the help of GitHub Copilot.
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md)
+
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Do not store your projets' sources on a cloud provider](#do-not-store-your-projets-sources-on-a-cloud-provider)
@@ -55,18 +63,24 @@ Take some time to organize your files in a way that makes sense to you. Here is
 one proposition:
 
 ```text
-/home/<your-username>
-├── heig-vd
-│   └── dai
-│       ├── heig-vd-dai-course (clone of this repository)
-│       │   ├── 00.01-set-up-a-windows-development-environment
-│       │   ├── 00.02-considerations-for-a-development-environment
-│       │   ├── 01.01-introduction-and-course-organization
-│       │   ├── 01.02-introduction-to-part-1
+/home/<your-username>/
+├── heig-vd/
+│   └── dai/
+│       ├── heig-vd-dai-course/ (clone of this repository)
+│       │   ├── 00.01-set-up-a-windows-development-environment/
+│       │   │   └── ...
+│       │   ├── 00.02-considerations-for-a-development-environment/
+│       │   │   └── ...
+│       │   ├── 01.01-introduction-to-the-teaching-unit/
+│       │   │   └── ...
+│       │   ├── 01.02-introduction-to-part-1/
+│       │   │   └── ...
 │       │   └── ...
-│       └── practical-works
-│           ├── practical-work-1
-│           ├── practical-work-2
+│       └── practical-works/
+│           ├── practical-work-1/
+│           │   └── ...
+│           ├── practical-work-2/
+│           │   └── ...
 │           └── ...
 └── ...
 ```

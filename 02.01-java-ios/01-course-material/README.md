@@ -13,7 +13,8 @@
 
 [Markdown][markdown] · [PDF][pdf]
 
-L. Delafontaine and H. Louis, with the help of GitHub Copilot.
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
 
 Based on the original course by O. Liechti and J. Ehrensberger.
 
@@ -115,7 +116,7 @@ run the code examples.
 
 As a quick reminder, you can run the code examples using the following command:
 
-```bash
+```sh
 # Compile the code example
 javac HelloWorld.java
 

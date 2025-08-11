@@ -1,11 +1,19 @@
 # Set up a Windows development environment
 
-L. Delafontaine and H. Louis, with the help of GitHub Copilot.
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md)
+
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Update Windows](#update-windows)
@@ -298,7 +306,7 @@ running the commands:
 > useful if you want to easily install and update packages on Windows as you
 > would on Linux.
 
-```bash
+```sh
 # Update the package list
 sudo apt update
 
@@ -449,7 +457,7 @@ Check the [Tips and tricks](#tips-and-tricks) section for more information.
 
 Windows has added an entry to the File Explorer sidebar for the Ubuntu
 distribution. You can access your Ubuntu files in the
-`\\wsl$\Ubuntu-<your-version>\home\<your-username>` directory.
+`\\wsl.localhost\Ubuntu-<your-version>\home\<your-username>` directory.
 
 > [!CAUTION]
 >
@@ -478,7 +486,8 @@ is isolated from the rest of the system.
 > At the moment, only Windows Defender is supported. If you are using another
 > antivirus software, you will need to check the documentation of your antivirus
 > software to exclude WSL from it. The path to exclude if you have installed
-> Ubuntu as the main WSL distribution is `\\wsl$\Ubuntu-<your-version>`.
+> Ubuntu as the main WSL distribution is
+> `\\wsl.localhost\Ubuntu-<your-version>`.
 >
 > If you want to add your antivirus software to this guide, feel free to open an
 > issue and submit a pull request (more on this in a later course).
@@ -497,7 +506,7 @@ previous section:
 
 ```powershell
 # Exclude the WSL distribution from Windows Defender
-Add-MpPreference -ExclusionPath '\\wsl$\Ubuntu-<your-version>'
+Add-MpPreference -ExclusionPath '\\wsl.localhost\Ubuntu-<your-version>'
 ```
 
 ![Exclude WSL distribution from Windows Defender](./images/windows-defender.png)
@@ -642,17 +651,15 @@ in the course material.
 > [!CAUTION]
 >
 > Always create your projects in your WSL home directory
-> (`\\wsl$\Ubuntu-<your-version>\home\<your-username>`) to avoid permission
-> issues and odd file behaviors. See the [Tips and tricks](#tips-and-tricks)
-> section for more information.
+> (`\\wsl.localhost\Ubuntu-<your-version>\home\<your-username>`) to avoid
+> permission issues and odd file behaviors. See the
+> [Tips and tricks](#tips-and-tricks) section for more information.
 
 ![Create a new project in IntelliJ IDEA](./images/intellij-idea-new-project.png)
 
 Once you build an IntelliJ IDEA project, you might be prompted to allow it
 through the Windows Firewall. Make sure to allow it on both private and public
 networks.
-
-![Allow IntelliJ IDEA through the Windows Firewall](./images/intellij-idea-firewall.png)
 
 #### Configure IntelliJ IDEA terminal to use WSL
 
@@ -665,7 +672,7 @@ default by following these steps:
 1. Open the IntelliJ IDEA settings by clicking on **File > Settings**.
 2. Go to **Tools > Terminal**.
 3. Set the **Shell path** to the WSL distribution with
-   `wsl.exe --distribution Ubuntu` as shown in the following screenshot:
+   `wsl.exe -d Ubuntu-<your version>` as shown in the following screenshot:
    ![Configure IntelliJ IDEA terminal to use WSL](./images/intellij-idea-terminal-settings.png)
 
 ## Tips and tricks

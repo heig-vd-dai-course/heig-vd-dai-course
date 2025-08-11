@@ -8,6 +8,34 @@ teaching unit taught at
 [Haute Ecole d'Ingénierie et de Gestion du Canton de Vaud (HEIG-VD)](https://heig-vd.ch),
 Switzerland!
 
+As of the fall semester 2025-2026, the teaching is taught to the following
+class(es):
+
+<details>
+<summary>DAI-TIC-C (Wednesday mornings - 08:30-12:00 - J01)</summary>
+
+**Teaching staff**
+
+- Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo)
+- Hadrien Louis [@hadrienlouis](https://github.com/hadrylouis)
+
+**Students**
+
+<!--
+READ ME PLEASE
+
+Add your name in the list in alphabetical order (by last name) in this format:
+
+- First name Last name [@GitHub username](https://github.com/<username>)
+
+It helps us (the teaching staff) searching for someone when grading your work
+and answering your questions. Thanks!
+-->
+
+-
+
+</details>
+
 ## 🎯 General objectives
 
 On completion of this course, the student will be able to:
@@ -28,11 +56,11 @@ applications, APIs, games, etc.).
 ## ➡️ Getting started
 
 Do not know where to start? Have a look at the
-[Introduction and course organization](#introduction-and-course-organization)!
+[Introduction to the teaching unit](#introduction-to-the-teaching-unit)!
 
 ## 📅 Program
 
-This teaching unit consists of 64 periods, equivalent to three ECTS credits
+This teaching unit consists of 64 periods, equivalent to three (3) ECTS credits
 (~75-90 hours of work):
 
 - 64 periods of 45 minutes (= 48 hours in class).
@@ -56,9 +84,9 @@ Dates are taken from the
 
 |               Course | Dates                              | First part[^first-part]                  | Second part[^second-part]                    | Status[^status] |
 | -------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :-------------- |
-|    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟡 In progress  |
-|    [01](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🔴 To do        |
-|    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🔴 To do        |
+|    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟢 Ready        |
+|    [01](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🟢 Ready        |
+|    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/3)                       | 🟡 In progress  |
 |    [03](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/3)                   | Practical work 1 (2/3)                       | 🔴 To do        |
 |    [04](#-course-04) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (3/3)                       | 🔴 To do        |
 | 🚨 [05](#-course-05) | 13.10. - 19.10.25                  | SMTP and ncat                            | Presentation of practical work 1             | 🔴 To do        |
@@ -83,314 +111,337 @@ Dates are taken from the
 
 ### Set up a Windows development environment
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./00.01-set-up-a-windows-development-environment/)
 - Course material:
   [Link to content](./00.01-set-up-a-windows-development-environment/01-course-material/README.md)
 
-[See details](./00.01-set-up-a-windows-development-environment/) ·
 [Jump back to Program](#-program)
 
 ### Considerations for a development environment
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./00.02-considerations-for-a-development-environment/)
 - Course material:
   [Link to content](./00.02-considerations-for-a-development-environment/01-course-material/README.md)
 
-[See details](./00.02-considerations-for-a-development-environment/) ·
 [Jump back to Program](#-program)
 
 ## 🕐 Course 01
 
-### Introduction and course organization
+### Introduction to the teaching unit
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./01.01-introduction-to-the-teaching-unit/)
 - Course material:
-  [Link to content](./01.01-introduction-and-course-organization/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.01-introduction-and-course-organization/01-course-material/index.html)
+  [Link to content](./01.01-introduction-to-the-teaching-unit/01-course-material/README.md)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.01-introduction-and-course-organization/01-course-material/01.01-introduction-and-course-organization-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.01-introduction-to-the-teaching-unit/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.01-introduction-to-the-teaching-unit/01-course-material/01.01-introduction-to-the-teaching-unit-presentation.pdf)
 
-[See details](./01.01-introduction-and-course-organization/) ·
 [Jump back to Program](#-program)
 
 ### Introduction to part 1 - Input/output processing
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./01.02-introduction-to-part-1-input-output-processing/)
 - Course material:
   [Link to content](./01.02-introduction-to-part-1-input-output-processing/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.02-introduction-to-part-1-input-output-processing/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.02-introduction-to-part-1-input-output-processing/01-course-material/01.02-introduction-to-part-1-input-output-processing-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.02-introduction-to-part-1-input-output-processing/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.02-introduction-to-part-1-input-output-processing/01-course-material/01.02-introduction-to-part-1-input-output-processing-presentation.pdf)
 
-[See details](./01.02-introduction-to-part-1-input-output-processing/) ·
 [Jump back to Program](#-program)
 
 ### Git, GitHub and Markdown
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./01.03-git-github-and-markdown/)
 - Course material:
   [Link to content](./01.03-git-github-and-markdown/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.03-git-github-and-markdown/01-course-material/01.03-git-github-and-markdown-presentation.pdf)
 
-[See details](./01.03-git-github-and-markdown/) ·
 [Jump back to Program](#-program)
 
 ### Java, IntelliJ IDEA and Maven
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./01.04-java-intellij-idea-and-maven/)
 - Course material:
   [Link to content](./01.04-java-intellij-idea-and-maven/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/01.04-java-intellij-idea-and-maven-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/01.04-java-intellij-idea-and-maven-presentation.pdf)
 - Solution:
   [Link to content](./01.04-java-intellij-idea-and-maven/02-solution/README.md)
 
-[See details](./01.04-java-intellij-idea-and-maven/) ·
 [Jump back to Program](#-program)
 
 ## 🕑 Course 02
 
 ### Java IOs
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./02.01-java-ios/)
 - Course material:
-  [Link to content](./02.01-java-ios/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.01-java-ios/01-course-material/index.html)
+  [Link to content](./02.01-java-ios/01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.01-java-ios/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.01-java-ios/01-course-material/02.01-java-ios-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.01-java-ios/01-course-material/02.01-java-ios-presentation.pdf)
 - Code examples: [Link to content](./02.01-java-ios/02-code-examples/README.md)
 - Solution: [Link to content](./02.01-java-ios/03-solution/README.md)
 
-[See details](./02.01-java-ios/) · [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 1 (1/3)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./02.02-practical-work-1-(1-of-3)/>)
 - Course material:
   [Link to content](<./02.02-practical-work-1-(1-of-3)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-3)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-3)/01-course-material/02.02-practical-work-1-(1-of-3)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-3)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-3)/01-course-material/02.02-practical-work-1-(1-of-3)-presentation.pdf>)
 
-[See details](<./02.02-practical-work-1-(1-of-3)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕒 Course 03
 
 ### Practical work 1 (2/3)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./03.01-practical-work-1-(2-of-3)/>)
 - Course material:
   [Link to content](<./03.01-practical-work-1-(2-of-3)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.01-practical-work-1-(2-of-3)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.01-practical-work-1-(2-of-3)/01-course-material/03.01-practical-work-1-(2-of-3)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.01-practical-work-1-(2-of-3)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.01-practical-work-1-(2-of-3)/01-course-material/03.01-practical-work-1-(2-of-3)-presentation.pdf>)
 
-[See details](<./03.01-practical-work-1-(2-of-3)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕓 Course 04
 
 ### Docker and Docker Compose
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./04.01-docker-and-docker-compose/)
 - Course material:
   [Link to content](./04.01-docker-and-docker-compose/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/04.01-docker-and-docker-compose-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/04.01-docker-and-docker-compose-presentation.pdf)
 - Code examples:
   [Link to content](./04.01-docker-and-docker-compose/02-code-examples/README.md)
 - Solution:
   [Link to content](./04.01-docker-and-docker-compose/03-solution/README.md)
 
-[See details](./04.01-docker-and-docker-compose/) ·
 [Jump back to Program](#-program)
 
 ### Practical work 1 (3/3)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./04.02-practical-work-1-(3-of-3)/>)
 - Course material:
   [Link to content](<./04.02-practical-work-1-(3-of-3)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.02-practical-work-1-(3-of-3)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.02-practical-work-1-(3-of-3)/01-course-material/04.02-practical-work-1-(3-of-3)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.02-practical-work-1-(3-of-3)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.02-practical-work-1-(3-of-3)/01-course-material/04.02-practical-work-1-(3-of-3)-presentation.pdf>)
 
-[See details](<./04.02-practical-work-1-(3-of-3)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕔 Course 05
 
 ### Conclusion to part 1 - Input/output processing
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./05.01-conclusion-to-part-1-input-output-processing/)
 - Course material:
-  [Link to content](./05.02-conclusion-to-part-1-input-output-processing/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.02-conclusion-to-part-1-input-output-processing/01-course-material/index.html)
+  [Link to content](./05.01-conclusion-to-part-1-input-output-processing/01-course-material/README.md)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.02-conclusion-to-part-1-input-output-processing/01-course-material/05.02-conclusion-to-part-1-input-output-processing-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.01-conclusion-to-part-1-input-output-processing/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.01-conclusion-to-part-1-input-output-processing/01-course-material/05.01-conclusion-to-part-1-input-output-processing-presentation.pdf)
 
-[See details](./05.02-conclusion-to-part-1-input-output-processing/) ·
 [Jump back to Program](#-program)
 
 ### Introduction to part 2 - Network programming with TCP and UDP
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./05.02-introduction-to-part-2-network-programming-with-tcp-and-udp/)
 - Course material:
-  [Link to content](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/index.html)
+  [Link to content](./05.02-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/05.03-introduction-to-part-2-network-programming-with-tcp-and-udp-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.02-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.02-introduction-to-part-2-network-programming-with-tcp-and-udp/01-course-material/05.02-introduction-to-part-2-network-programming-with-tcp-and-udp-presentation.pdf)
 
-[See details](./05.03-introduction-to-part-2-network-programming-with-tcp-and-udp/)
-· [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### SMTP and ncat
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./05.03-smtp-and-ncat/)
 - Course material:
-  [Link to content](./05.04-smtp-and-ncat/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.04-smtp-and-ncat/01-course-material/index.html)
+  [Link to content](./05.03-smtp-and-ncat/01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.04-smtp-and-ncat/01-course-material/05.04-smtp-and-ncat-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/05.03-smtp-and-ncat-presentation.pdf)
 - Code examples:
-  [Link to content](./05.04-smtp-and-ncat/02-code-examples/README.md)
-- Solution: [Link to content](./05.04-smtp-and-ncat/03-solution/README.md)
+  [Link to content](./05.03-smtp-and-ncat/02-code-examples/README.md)
+- Solution: [Link to content](./05.03-smtp-and-ncat/03-solution/README.md)
 
-[See details](./05.04-smtp-and-ncat/) · [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### Presentation of practical work 1
 
 - **🚨 Graded evaluation**
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./05.04-presentation-of-practical-work-1/)
 - Course material:
-  [Link to content](./05.01-presentation-of-practical-work-1/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.01-presentation-of-practical-work-1/01-course-material/index.html)
+  [Link to content](./05.04-presentation-of-practical-work-1/01-course-material/README.md)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.01-presentation-of-practical-work-1/01-course-material/05.01-presentation-of-practical-work-1-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.04-presentation-of-practical-work-1/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.04-presentation-of-practical-work-1/01-course-material/05.04-presentation-of-practical-work-1-presentation.pdf)
 
-[See details](./05.01-presentation-of-practical-work-1/) ·
 [Jump back to Program](#-program)
 
 ## 🕕 Course 06
 
 ### Define an application protocol
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./06.01-define-an-application-protocol/)
 - Course material:
   [Link to content](./06.01-define-an-application-protocol/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/06.01-define-an-application-protocol-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/06.01-define-an-application-protocol-presentation.pdf)
 - Code examples:
   [Link to content](./06.01-define-an-application-protocol/02-code-examples/README.md)
 - Solution:
   [Link to content](./06.01-define-an-application-protocol/03-solution/README.md)
 
-[See details](./06.01-define-an-application-protocol/) ·
 [Jump back to Program](#-program)
 
 ### Practical work 2 (1/5)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./06.02-practical-work-2-(1-of-5)/>)
 - Course material:
   [Link to content](<./06.02-practical-work-2-(1-of-5)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-5)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-5)/01-course-material/06.02-practical-work-2-(1-of-5)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-5)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-5)/01-course-material/06.02-practical-work-2-(1-of-5)-presentation.pdf>)
 
-[See details](<./06.02-practical-work-2-(1-of-5)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕖 Course 07
 
 ### Java TCP and UDP programming
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/>)
 - Course material:
   [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/07.01-java-tcp-and-udp-programming-(1-of-2)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/07.01-java-tcp-and-udp-programming-(1-of-2)-presentation.pdf>)
 - Code examples:
   [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples/README.md>)
 - Solution:
   [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/03-solution/README.md>)
 
-[See details](<./07.01-java-tcp-and-udp-programming-(1-of-2)/>) ·
 [Jump back to Program](#-program)
 
 ### Practical work 2 (2/5)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./07.02-practical-work-2-(2-of-5)/>)
 - Course material:
   [Link to content](<./07.02-practical-work-2-(2-of-5)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.02-practical-work-2-(2-of-5)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.02-practical-work-2-(2-of-5)/01-course-material/07.02-practical-work-2-(2-of-5)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.02-practical-work-2-(2-of-5)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.02-practical-work-2-(2-of-5)/01-course-material/07.02-practical-work-2-(2-of-5)-presentation.pdf>)
 
-[See details](<./07.02-practical-work-2-(2-of-5)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕗 Course 08
 
 ### Java TCP and UDP programming
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/>)
 - Course material:
   [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/08.01-java-tcp-and-udp-programming-(2-of-2)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/08.01-java-tcp-and-udp-programming-(2-of-2)-presentation.pdf>)
 - Code examples:
   [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/02-code-examples/README.md>)
 - Solution:
   [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/03-solution/README.md>)
 
-[See details](<./08.01-java-tcp-and-udp-programming-(2-of-2)/>) ·
 [Jump back to Program](#-program)
 
 ### Practical work 2 (3/5)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./08.02-practical-work-2-(3-of-5)/>)
 - Course material:
   [Link to content](<./08.02-practical-work-2-(3-of-5)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.02-practical-work-2-(3-of-5)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.02-practical-work-2-(3-of-5)/01-course-material/08.02-practical-work-2-(3-of-5)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.02-practical-work-2-(3-of-5)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.02-practical-work-2-(3-of-5)/01-course-material/08.02-practical-work-2-(3-of-5)-presentation.pdf>)
 
-[See details](<./08.02-practical-work-2-(3-of-5)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕘 Course 09
 
 ### Java network concurrency
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./09.01-java-network-concurrency/)
 - Course material:
   [Link to content](./09.01-java-network-concurrency/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.01-java-network-concurrency/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.01-java-network-concurrency/01-course-material/09.01-java-network-concurrency-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.01-java-network-concurrency/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.01-java-network-concurrency/01-course-material/09.01-java-network-concurrency-presentation.pdf)
 - Code examples:
   [Link to content](./09.01-java-network-concurrency/02-code-examples/README.md)
 - Solution:
   [Link to content](./09.01-java-network-concurrency/03-solution/README.md)
 
-[See details](./09.01-java-network-concurrency/) ·
 [Jump back to Program](#-program)
 
 ### Practical work 2 (4/5)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./09.02-practical-work-2-(4-of-5)/>)
 - Course material:
   [Link to content](<./09.02-practical-work-2-(4-of-5)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.02-practical-work-2-(4-of-5)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.02-practical-work-2-(4-of-5)/01-course-material/09.02-practical-work-2-(4-of-5)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.02-practical-work-2-(4-of-5)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.02-practical-work-2-(4-of-5)/01-course-material/09.02-practical-work-2-(4-of-5)-presentation.pdf>)
 
-[See details](<./09.02-practical-work-2-(4-of-5)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕙 Course 10
@@ -398,157 +449,169 @@ Dates are taken from the
 ### Evaluation 1
 
 - **🚨 Graded evaluation**
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./10.01-evaluation-1/)
 - Course material:
-  [Link to content](./10.01-evaluation-1/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.01-evaluation-1/01-course-material/index.html)
+  [Link to content](./10.01-evaluation-1/01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.01-evaluation-1/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.01-evaluation-1/01-course-material/10.01-evaluation-1-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.01-evaluation-1/01-course-material/10.01-evaluation-1-presentation.pdf)
 - Archives: [Link to content](./10.01-evaluation-1/02-archives/README.md)
 
-[See details](./10.01-evaluation-1/) · [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 2 (5/5)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./10.02-practical-work-2-(5-of-5)/>)
 - Course material:
   [Link to content](<./10.02-practical-work-2-(5-of-5)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.02-practical-work-2-(5-of-5)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.02-practical-work-2-(5-of-5)/01-course-material/10.02-practical-work-2-(5-of-5)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.02-practical-work-2-(5-of-5)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.02-practical-work-2-(5-of-5)/01-course-material/10.02-practical-work-2-(5-of-5)-presentation.pdf>)
 
-[See details](<./10.02-practical-work-2-(5-of-5)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕚 Course 11
 
 ### Conclusion to part 2 - Network programming with TCP and UDP
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./11.01-conclusion-to-part-2-network-programming-with-tcp-and-udp/)
 - Course material:
-  [Link to content](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/index.html)
+  [Link to content](./11.01-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/README.md)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.01-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.01-conclusion-to-part-2-network-programming-with-tcp-and-udp/01-course-material/11.01-conclusion-to-part-2-network-programming-with-tcp-and-udp-presentation.pdf)
 
-[See details](./11.02-conclusion-to-part-2-network-programming-with-tcp-and-udp/)
-· [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### Introduction to part 3 - Network programming with HTTP
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./11.02-introduction-to-part-3-network-programming-with-http/)
 - Course material:
-  [Link to content](./11.03-introduction-to-part-3-network-programming-with-http/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.03-introduction-to-part-3-network-programming-with-http/01-course-material/index.html)
+  [Link to content](./11.02-introduction-to-part-3-network-programming-with-http/01-course-material/README.md)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.03-introduction-to-part-3-network-programming-with-http/01-course-material/11.03-introduction-to-part-3-network-programming-with-http-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.02-introduction-to-part-3-network-programming-with-http/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.02-introduction-to-part-3-network-programming-with-http/01-course-material/11.02-introduction-to-part-3-network-programming-with-http-presentation.pdf)
 
-[See details](./11.03-introduction-to-part-3-network-programming-with-http/) ·
 [Jump back to Program](#-program)
 
 ### SSH and SCP
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./11.03-ssh-and-scp/)
 - Course material:
-  [Link to content](./11.04-ssh-and-scp/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.04-ssh-and-scp/01-course-material/index.html)
+  [Link to content](./11.03-ssh-and-scp/01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.03-ssh-and-scp/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.04-ssh-and-scp/01-course-material/11.04-ssh-and-scp-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.03-ssh-and-scp/01-course-material/11.03-ssh-and-scp-presentation.pdf)
 
-[See details](./11.04-ssh-and-scp/) · [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### Presentation of practical work 2
 
 - **🚨 Graded evaluation**
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./11.04-presentation-of-practical-work-2/)
 - Course material:
-  [Link to content](./11.01-presentation-of-practical-work-2/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.01-presentation-of-practical-work-2/01-course-material/index.html)
+  [Link to content](./11.04-presentation-of-practical-work-2/01-course-material/README.md)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.01-presentation-of-practical-work-2/01-course-material/11.01-presentation-of-practical-work-2-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.04-presentation-of-practical-work-2/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.04-presentation-of-practical-work-2/01-course-material/11.04-presentation-of-practical-work-2-presentation.pdf)
 
-[See details](./11.01-presentation-of-practical-work-2/) ·
 [Jump back to Program](#-program)
 
 ## 🕛 Course 12
 
 ### HTTP and curl
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./12.01-http-and-curl/)
 - Course material:
-  [Link to content](./12.01-http-and-curl/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/index.html)
+  [Link to content](./12.01-http-and-curl/01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/12.01-http-and-curl-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/12.01-http-and-curl-presentation.pdf)
 - Solution: [Link to content](./12.01-http-and-curl/02-solution/README.md)
 
-[See details](./12.01-http-and-curl/) · [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 3 (1/4)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./12.02-practical-work-3-(1-of-4)/>)
 - Course material:
   [Link to content](<./12.02-practical-work-3-(1-of-4)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-4)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-4)/01-course-material/12.02-practical-work-3-(1-of-4)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-4)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-4)/01-course-material/12.02-practical-work-3-(1-of-4)-presentation.pdf>)
 
-[See details](<./12.02-practical-work-3-(1-of-4)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕐 Course 13
 
 ### Web infrastructures
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./13.01-web-infrastructures/)
 - Course material:
-  [Link to content](./13.01-web-infrastructures/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.01-web-infrastructures/01-course-material/index.html)
+  [Link to content](./13.01-web-infrastructures/01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.01-web-infrastructures/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.01-web-infrastructures/01-course-material/13.01-web-infrastructures-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.01-web-infrastructures/01-course-material/13.01-web-infrastructures-presentation.pdf)
 - Code examples:
   [Link to content](./13.01-web-infrastructures/02-code-examples/README.md)
 
-[See details](./13.01-web-infrastructures/) · [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 3 (2/4)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./13.02-practical-work-3-(2-of-4)/>)
 - Course material:
   [Link to content](<./13.02-practical-work-3-(2-of-4)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.02-practical-work-3-(2-of-4)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.02-practical-work-3-(2-of-4)/01-course-material/13.02-practical-work-3-(2-of-4)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.02-practical-work-3-(2-of-4)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.02-practical-work-3-(2-of-4)/01-course-material/13.02-practical-work-3-(2-of-4)-presentation.pdf>)
 
-[See details](<./13.02-practical-work-3-(2-of-4)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕑 Course 14
 
 ### Caching and performance
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./14.01-caching-and-performance/)
 - Course material:
   [Link to content](./14.01-caching-and-performance/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/14.01-caching-and-performance-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/14.01-caching-and-performance-presentation.pdf)
 - Solution:
   [Link to content](./14.01-caching-and-performance/02-solution/README.md)
 
-[See details](./14.01-caching-and-performance/) ·
 [Jump back to Program](#-program)
 
 ### Practical work 3 (3/4)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./14.02-practical-work-3-(3-of-4)/>)
 - Course material:
   [Link to content](<./14.02-practical-work-3-(3-of-4)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.02-practical-work-3-(3-of-4)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.02-practical-work-3-(3-of-4)/01-course-material/14.02-practical-work-3-(3-of-4)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.02-practical-work-3-(3-of-4)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.02-practical-work-3-(3-of-4)/01-course-material/14.02-practical-work-3-(3-of-4)-presentation.pdf>)
 
-[See details](<./14.02-practical-work-3-(3-of-4)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕒 Course 15
@@ -556,26 +619,28 @@ Dates are taken from the
 ### Evaluation 2
 
 - **🚨 Graded evaluation**
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./15.01-evaluation-2/)
 - Course material:
-  [Link to content](./15.01-evaluation-2/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.01-evaluation-2/01-course-material/index.html)
+  [Link to content](./15.01-evaluation-2/01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.01-evaluation-2/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.01-evaluation-2/01-course-material/15.01-evaluation-2-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.01-evaluation-2/01-course-material/15.01-evaluation-2-presentation.pdf)
 - Archives: [Link to content](./15.01-evaluation-2/02-archives/README.md)
 
-[See details](./15.01-evaluation-2/) · [Jump back to Program](#-program)
+[Jump back to Program](#-program)
 
 ### Practical work 3 (4/4)
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](<./15.02-practical-work-3-(4-of-4)/>)
 - Course material:
   [Link to content](<./15.02-practical-work-3-(4-of-4)/01-course-material/README.md>)
-- Presentation:
-  [Web](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.02-practical-work-3-(4-of-4)/01-course-material/index.html>)
   ·
-  [PDF](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.02-practical-work-3-(4-of-4)/01-course-material/15.02-practical-work-3-(4-of-4)-presentation.pdf>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.02-practical-work-3-(4-of-4)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.02-practical-work-3-(4-of-4)/01-course-material/15.02-practical-work-3-(4-of-4)-presentation.pdf>)
 
-[See details](<./15.02-practical-work-3-(4-of-4)/>) ·
 [Jump back to Program](#-program)
 
 ## 🕓 Course 16
@@ -583,40 +648,43 @@ Dates are taken from the
 ### Presentation of practical work 3
 
 - **🚨 Graded evaluation**
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./16.01-presentation-of-practical-work-3/)
 - Course material:
   [Link to content](./16.01-presentation-of-practical-work-3/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.01-presentation-of-practical-work-3/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.01-presentation-of-practical-work-3/01-course-material/16.01-presentation-of-practical-work-3-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.01-presentation-of-practical-work-3/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.01-presentation-of-practical-work-3/01-course-material/16.01-presentation-of-practical-work-3-presentation.pdf)
 
-[See details](./16.01-presentation-of-practical-work-3/) ·
 [Jump back to Program](#-program)
 
 ### Conclusion to part 3 - Network programming with HTTP
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./16.02-conclusion-to-part-3-network-programming-with-http/)
 - Course material:
   [Link to content](./16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/16.02-conclusion-to-part-3-network-programming-with-http-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.02-conclusion-to-part-3-network-programming-with-http/01-course-material/16.02-conclusion-to-part-3-network-programming-with-http-presentation.pdf)
 
-[See details](./16.02-conclusion-to-part-3-network-programming-with-http/) ·
 [Jump back to Program](#-program)
 
 ### Semester review and exam preparation
 
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](./16.03-semester-review-and-exam-preparation/)
 - Course material:
   [Link to content](./16.03-semester-review-and-exam-preparation/01-course-material/README.md)
-- Presentation:
-  [Web](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.03-semester-review-and-exam-preparation/01-course-material/index.html)
   ·
-  [PDF](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.03-semester-review-and-exam-preparation/01-course-material/16.03-semester-review-and-exam-preparation-presentation.pdf)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.03-semester-review-and-exam-preparation/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.03-semester-review-and-exam-preparation/01-course-material/16.03-semester-review-and-exam-preparation-presentation.pdf)
 - Feedback (Framaforms + GAPS):
   [Link to content](./16.03-semester-review-and-exam-preparation/02-feedback/README.md)
 
-[See details](./16.03-semester-review-and-exam-preparation/) ·
 [Jump back to Program](#-program)
 
 ## 📜 License

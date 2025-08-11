@@ -7,37 +7,24 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Java, IntelliJ IDEA and Maven
+title: HEIG-VD DAI - Java, IntelliJ IDEA and Maven
 description: Java, IntelliJ IDEA and Maven for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+header: '[**Java, IntelliJ IDEA and Maven**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.04-java-intellij-idea-and-maven)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/04-java-intellij-idea-and-maven/04-java-intellij-idea-and-maven-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
-[illustration]: ./images/main-illustration.jpg
-[course-material]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
-[course-material-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/04-java-intellij-idea-and-maven/COURSE_MATERIAL.md
-
-# Java, IntelliJ IDEA and Maven
+# HEIG-VD DAI - Java, IntelliJ IDEA and Maven
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
+[Link to the course][course]
 
-[Web][web] · [PDF][pdf]
-
-<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
@@ -45,11 +32,11 @@ _paginate: false
 
 ## Objectives
 
-- Learn why Java is a popular programming language
-- Manage multiple Java versions with SDKMAN!
-- Develop Java apps with IntelliJ IDEA and Maven
-- Manage dependencies with Maven
-- Develop essential skills for professional Java development
+- Learn why Java is a popular programming language.
+- Manage multiple Java versions with SDKMAN!.
+- Develop Java apps with IntelliJ IDEA and Maven.
+- Manage dependencies with Maven.
+- Develop essential skills for professional Java development.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -57,59 +44,76 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Java
 
-- General-purpose, object-oriented language
-- Write once, run anywhere (WORA)
-- Created by James Gosling, 1995 at Sun Microsystems
+- General-purpose, object-oriented language.
+- Write once, run anywhere (WORA).
+- Created by James Gosling, 1995 at Sun Microsystems.
 - The documentation seems scary but you will get used to it and it is very
-  useful
+  useful.
 
 ![bg right h:60%](https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg)
 
 ### Java virtual machine
 
-- Compiles source code to bytecode
-- Executes in Java virtual machine (JVM)
-- Where a JVM exists, Java can run (most of the time)
+- Compiles source code to bytecode.
+- Executes the bytecode in the Java virtual machine (JVM).
+- Where a JVM exists, Java can run (most of the time).
 
-![bg right contain](./images/java-api-specification.png)
+![bg  right w:85%](./images/java-api-specification.png)
 
 ### JVM versions
 
-- Multiple implementations exist
-- Can target different platforms and/or specific features
-- JDK for development, JRE for running
-- Eclipse Temurin is recommended
+- Multiple implementations exist.
+- Can target different platforms and/or specific features.
+- JDK for development, JRE for running.
+- Eclipse Temurin is recommended.
 
-![bg right contain](./images/which-version-of-jdk-should-i-use.png)
+![bg  right w:85%](./images/which-version-of-jdk-should-i-use.png)
 
 ### Java versions and version managers
 
-- Java 21 is the latest LTS
-- You can use [SDKMAN!](https://sdkman.io/) to manage multipe versions of Java
-- Match versions for project consistency
+- Java 21 is the latest LTS.
+- You can use [SDKMAN!](https://sdkman.io/) to manage multipe versions of Java.
+- Match versions for project consistency.
 
 ![bg right w:80%](https://sdkman.io/assets/img/sdk-man-small-pattern.svg)
 
-### Compiling and running Java programs
+### Compiling and running Java programs (1/3)
 
-- Compile manually with `javac` command
+Given the following `HelloWorld.java` file:
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+### Compiling and running Java programs (2/3)
+
+You can compile and run Java programs in multiple ways:
+
+- Compile manually with the `javac` command:
 
   ```sh
   javac HelloWorld.java
   ```
 
-- Execute with `java` command
+- Execute with the `java` command:
 
   ```sh
   java HelloWorld
   ```
 
-- Modern way: package into JAR files with the help of Maven
+### Compiling and running Java programs (3/3)
+
+- Modern way: package into JAR files with the help of Maven and run with the
+  `java -jar` command:
 
   ```sh
   java -Xmx1024M -Xms1024M -jar minecraft_server.1.20.1.jar nogui
@@ -129,41 +133,41 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### IntelliJ IDEA
 
-- IDE for (Java) software development
-- Developed by JetBrains
-- Works on Windows, macOS, Linux
-- Quite a standard in the industry
+- IDE for (Java) software development.
+- Developed by JetBrains.
+- Works on Windows, macOS, Linux.
+- Quite a standard in the industry.
 
 ![bg right w:60%](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg)
 
 ### Community Edition and Ultimate Edition
 
-- Community (free) and Ultimate (paid)
+- Community (free) and Ultimate (paid).
 - Free student license available - you can get it!
-- The Community Edition is sufficient for this course
+- The Community Edition is sufficient for this course.
 
-![bg right contain](./images/intellij-community-and-ultimate-edition.png)
+![bg  right w:85%](./images/intellij-community-and-ultimate-edition.png)
 
 ### JetBrains Toolbox App
 
-- Manage multiple JetBrains IDEs
-- Install and update in one place
-- Optional but very useful
+- Manage multiple JetBrains IDEs.
+- Install and update in one place.
+- Optional but very useful.
 
 ![bg right w:60%](https://resources.jetbrains.com/storage/products/company/brand/logos/Toolbox_icon.svg)
 
 ### Configuration files and Git
 
-- `.idea` directory for project config
-- Allow to share project settings between developers
-- Some files must be ignored to avoid issue (local config) in Git
+- `.idea` directory for project config.
+- Allow to share project settings between developers.
+- Some files must be ignored to avoid issue (local config) in Git.
 
-![bg right contain](./images/gitignore-example.png)
+![bg  right w:85%](./images/gitignore-example.png)
 
 ### Summary
 
@@ -181,66 +185,66 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Maven
 
-- Maintained by Apache Software Foundation
-- Software project management tool
-- Manages dependencies
-- Build automation tool
-- Allows to define a standard project structure
+- Maintained by Apache Software Foundation.
+- Software project management tool.
+- Manages dependencies.
+- Build automation tool.
+- Allows to define a standard project structure.
 
 ![bg right w:80%](https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg)
 
 ### Maven project structure
 
-- Standardized directory structure
+- Standardized directory structure:
   - `src/main/java`
   - `src/main/resources`
   - `src/test/java`
-- Simplifies build process with conventions
+- Simplifies build process with conventions.
 
-![bg right contain](./images/maven-project-structure.png)
+![bg  right w:85%](./images/maven-project-structure.png)
 
 ### `pom.xml` file
 
-- Configuration and build settings
-- Shared among developers
+- Configuration and build settings.
+- Shared among developers.
 - Defines dependencies and plugins:
-  - Plugins extend Maven functionality
-  - Dependencies are external libraries
+  - Plugins extend Maven functionality.
+  - Dependencies are external libraries.
 
-![bg right contain](./images/maven-pom-file.png)
+![bg  right w:85%](./images/maven-pom-file.png)
 
 ### Maven lifecycle
 
-- Maven defines build process
-- Composed of phases and goals
-- Phases load plugin goals
-- Goals execute tasks on your project (e.g., compile, test, package)
+- Maven defines build process.
+- Composed of phases and goals.
+- Phases load plugin goals.
+- Goals execute tasks on your project (e.g., compile, test, package).
 
-![bg right contain](./images/maven-lifecycle.png)
+![bg  right w:85%](./images/maven-lifecycle.png)
 
 ### Maven Repository
 
-- Public repository of Java libraries
-- Maven can download dependencies automatically
-- You can publish your own libraries
+- Public repository of Java libraries.
+- Maven can download dependencies automatically.
+- You can publish your own libraries.
 - Many libraries available such as picocli, a library for building CLI
-  applications
+  applications.
 
-![bg right contain](./images/maven-repository.png)
+![bg  right w:85%](./images/maven-repository.png)
 
 ### Maven wrapper
 
-- Allows to use Maven without installing it
-- Wrapper script downloads Maven
-- Ensures consistent Maven version
-- Use `mvnw` or `mvnw.cmd` instead of `mvn`
+- Allows to use Maven without installing it.
+- Wrapper script downloads Maven.
+- Ensures consistent Maven version.
+- Use `mvnw` or `mvnw.cmd` instead of `mvn`.
 
-![bg right contain](./images/maven-wrapper.png)
+![bg  right w:85%](./images/maven-wrapper.png)
 
 ### Summary
 
@@ -263,21 +267,24 @@ Do you have any questions?
 
 ### What will you do?
 
-- Install and configure SDKMAN!, Java, Maven and IntelliJ IDEA
+- Install and configure SDKMAN!, Java, Maven and IntelliJ IDEA.
 - Create and run a small CLI application with picocli, an external Maven
-  dependency
-- Publish your project on GitHub
+  dependency.
+- Publish your project on GitHub.
 
 ![bg right w:90%](./images/what-will-you-do.png)
 
-### Find the practical content
+### Now it's your turn!
 
-<!-- _class: lead -->
+- Read the course material.
+- Do the practical content.
+- Ask questions if you have any.
 
-You can find the practical content for this chapter on
-[GitHub][course-material].
+➡️ [Find the course on GitHub][course].
 
-![bg right w:75%][course-material-qr-code]
+**Do not hesitate to help each other! There's no need to rush!**
+
+![bg right w:75%][course-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -315,3 +322,12 @@ In the next chapter, you will learn the following topics:
 - Maven logo by [Apache Software Foundation](https://maven.apache.org/)
 - Illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
   [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.04-java-intellij-idea-and-maven
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/3
+[illustration]: ./images/main-illustration.jpg
+[course-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.04-java-intellij-idea-and-maven

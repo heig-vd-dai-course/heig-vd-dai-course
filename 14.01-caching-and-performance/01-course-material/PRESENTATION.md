@@ -7,37 +7,24 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Caching and performance
+title: HEIG-VD DAI - Caching and performance
 description: Caching and performance for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+header: '[**Caching and performance**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/14.01-caching-and-performance)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-and-performance/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-and-performance/23-caching-and-performance-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
-[illustration]: ./images/main-illustration.jpg
-[course-material]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/COURSE_MATERIAL.md
-[course-material-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/COURSE_MATERIAL.md
-
-# Caching and performance
+# HEIG-VD DAI - Caching and performance
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
+[Link to the course][course]
 
-[Web][web] · [PDF][pdf]
-
-<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
 
@@ -58,8 +45,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Caching
 
@@ -113,8 +100,8 @@ caches that are used by multiple clients.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Managing cache with HTTP
 
@@ -226,8 +213,8 @@ same time:
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Managing cache with proxies
 
@@ -243,8 +230,8 @@ this course.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Managing cache with key-value stores
 
@@ -272,14 +259,17 @@ Do you have any questions?
 
 ![bg right w:90%](./images/what-will-you-do.png)
 
-### Find the practical content
+### Now it's your turn!
 
-<!-- _class: lead -->
+- Read the course material.
+- Do the practical content.
+- Ask questions if you have any.
 
-You can find the practical content for this chapter on
-[GitHub][course-material].
+➡️ [Find the course on GitHub][course].
 
-![bg right w:75%][course-material-qr-code]
+**Do not hesitate to help each other! There's no need to rush!**
+
+![bg right w:75%][course-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -320,3 +310,12 @@ More details will be given in the next chapter.
   [Unsplash](https://unsplash.com/photos/a-person-pointing-at-a-large-display-of-pictures-9D6UlCW38Ss)
 - Illustration by [MChe Lee](https://unsplash.com/@mclee) on
   [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/14.01-caching-and-performance
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
+[illustration]: ./images/main-illustration.jpg
+[course-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/14.01-caching-and-performance

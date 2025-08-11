@@ -7,54 +7,42 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Introduction and course organization
-description: Introduction and course organization for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+title: HEIG-VD DAI - Introduction to the teaching unit
+description: Introduction to the teaching unit for the DAI course at HEIG-VD, Switzerland
+header: "[**Introduction to the teaching unit**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.01-introduction-to-the-teaching-unit)"
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]: ./images/main-illustration.jpg
-
-# Introduction and course organization
+# HEIG-VD DAI - Introduction to the teaching unit
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
+[Link the course][course]
 
-[Web][web] · [PDF][pdf]
-
-<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
 ![bg opacity:0.1][illustration]
 
-## Welcome to the Développement d'applications internet (DAI) course!
+## Welcome to the Développement d'applications internet (DAI) teaching unit!
 
 <!-- _class: lead -->
 
 ## Who are we?
 
-<div class="three-columns center">
+<div class="two-columns center">
 <div>
 
 **Ludovic  
 Delafontaine**
 
-<small>
-Both classes
-</small>
-
-![w:200](./images/ludovic-delafontaine.png)
+<img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
 
 [Mail](mailto:ludovic.delafontaine@heig-vd.ch) ·
 [GitHub](https://github.com/ludelafo)
@@ -65,29 +53,10 @@ Both classes
 **Hadrien  
 Louis**
 
-<small>
-Monday mornings
-</small>
-
-![w:200](./images/hadrien-louis.png)
+<img src="https://avatars.githubusercontent.com/u/26306723?v=4" alt="Hadrien Louis" width="200" class="rounded">
 
 [Mail](mailto:hadrien.louis@heig-vd.ch) ·
 [GitHub](https://github.com/hadrylouis)
-
-</div>
-<div>
-
-**Géraud  
-Silvestri**
-
-<small>
-Friday mornings
-</small>
-
-![w:200](./images/geraud-silvestri.png)
-
-[Mail](mailto:geraud.silvestri@master.hes-so.ch) ·
-[GitHub](https://github.com/GeraudSilvestri)
 
 </div>
 </div>
@@ -101,7 +70,7 @@ Friday mornings
 - [Fiche d'unité](https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573)
 - [Descriptif de module](https://gaps.heig-vd.ch/consultation/fiches/mv/mv.php?id=1905)
 - [Programme de formation](https://gaps.heig-vd.ch/consultation/teachingplans/)
-- 3 ECTS credits = ~75-90 hours:
+- Three (3) ECTS credits (~75-90 hours of work):
   - 64 periods of 45 minutes (= 48 hours in class).
   - ~27-42 hours outside of the class - We try our best to ensure you do not
     have to work that much outside of the class.
@@ -157,12 +126,13 @@ Friday mornings
 You will learn the following topics during this course:
 
 - Network programming (inputs/outputs, encodings, TCP and UDP).
-- Application-level protocols (SMTP, SSH, HTTP and your own).
+- Application-level protocols (SMTP, SSH, HTTP, and your own).
 - Web infrastructures (reverse proxy, load balancer, sticky sessions).
 - How to read and write technical documentation.
 
 At the end of the course, you will be able to create applications that can
-communicate over the network!
+communicate over the network (for example, business applications, APIs, games,
+etc.)!
 
 ### Technologies
 
@@ -190,7 +160,7 @@ Whether you are in software, security, data science, embedded or network, you
 will have to deal with network applications (APIs, devices, etc.). This course
 will give you a solid grounding in this world.
 
-## Program - [Calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)
+## Program (1/2)
 
 64 periods are planned for this teaching unit, divided in 3 main parts:
 
@@ -199,9 +169,18 @@ will give you a solid grounding in this world.
 - Part 3 - Network programming with HTTP (20 periods).
 
 The entire teaching unit program for the semester is available at
-<https://github.com/heig-vd-dai-course/heig-vd-dai-course#-program>. **The
-program is subject to change**. We will do our best to inform you in advance if
-there are any changes.
+<https://github.com/heig-vd-dai-course/heig-vd-dai-course#-program>.
+
+## Program (2/2)
+
+Dates are based on the
+[HEIG-VD calendar](https://heig-vd.ch/formation/bachelor/calendrier-academique/).
+
+**The program is subject to change**.
+
+We will do our best to inform you in advance if there are any changes.
+
+![bg right 85%](images/program.png)
 
 ## Course sequence
 
@@ -209,7 +188,7 @@ there are any changes.
    - Sessions of 20-30 minutes (short and concise).
 2. Practice the content with theoretical and practical parts.
    - These help you prepare you for the practical works.
-3. Practical works
+3. Practical works.
    - Freedom of the subject, you can choose what you want to do.
 4. Feedback and discussions (very important to us).
    - You will be able to give feedback and help us improve the course.
@@ -245,7 +224,6 @@ related to the course:
 - Email:
   - [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
   - [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
-  - [geraud.silvestri@master.hes-so.ch](mailto:geraud.silvestri@master.hes-so.ch)
 
 ## Where to find the course material
 
@@ -257,8 +235,8 @@ efficient for you, and for us. One place to find it all.
 
 We accept issues and pull requests if you spot anything weird! 🙂
 
-_Do not try to contact us on Microsoft Teams or CyberLearn, we will surely not
-answer!_
+_**Do not try to contact us on Microsoft Teams or CyberLearn, we will surely not
+answer!**_
 
 ## Our wishes for this course
 
@@ -267,7 +245,7 @@ answer!_
 ### What we want this course to be
 
 - A place to learn.
-- A place to experiment and where it is OK to make mistakes.
+- A place to experiment where it is OK to make mistakes.
 - A place to share and discuss.
 - A place where you are able to do things and master them.
 - A place where you can express your opinion.
@@ -303,7 +281,7 @@ However, we would appreciate if you try to help your classmates instead!
 **Your responsibilities**
 
 - Read and understand the course material.
-- Do the practical content given in the course material.
+- Do the practical contents given in the course materials.
 - You can give feedback and suggestions.
 - You are responsible for your own learning:
   - If you have any questions, ask them.
@@ -321,17 +299,32 @@ If you have any difficulties with English, please let us know.
 
 ![bg right:40%](https://images.unsplash.com/photo-1617292797716-ec3000a44093?fit=crop&h=720)
 
-## _"What about ChatGPT, GitHub Copilot, etc.?"_
+## _"What about ChatGPT, Copilot, etc.?"_ (1/2)
 
 **You can use all the tools you want** (personal notes, Internet, AI tools,
 etc.), **except during evaluations and the exam**. You will be able to use these
-in the real world, so better learn how to use them now. However, they are here
-to help you, not to do the work for you:
+in the real world, so better learn how to use them now.
+
+However, in our experience, these tools are not reliable enough to be used
+without supervision. They can help you, but they are not a replacement for your
+own knowledge and skills.
+
+Focus on understanding the concepts and principles behind the tasks you are
+working. Once you are confident with the concepts, you can use these tools to
+help you with the implementation.
+
+## _"What about ChatGPT, Copilot, etc.?"_ (2/2)
+
+Few rules regarding the use of these tools:
 
 - You **must be able to explain what you did and why you did it**.
-- You **must state when you used external help (tools and sources)**.
-- You **must be able to do the work on your own.** These tools come and go ($$$,
+- You **must state when you used external help** (tools and sources).
+- You **must be able to do the work on your own**. These tools come and go ($$$,
   end of life, etc.), you should not entirely rely on them.
+
+**Your personal and scientific integrity is at stake.** If we have some doubts
+about your work, we will ask you to explain it to us. You might be penalized if
+something is suspicious.
 
 ## _"Linux, macOS or Windows?"_ (1/3)
 
@@ -368,8 +361,8 @@ will make you more productive and efficient.
 
 ## _"I have an ARM computer, is this an issue?"_
 
-If you have an ARM computer (Apple Silicon M1/M2/M3 for example), some parts of
-the course might be a bit more tricky. We will try our best to test all our
+If you have an ARM computer (Apple Silicon M1/M2/M3/M4 for example), some parts
+of the course might be a bit more tricky. We will try our best to test all our
 course material but we cannot guarantee that everything will work as expected on
 the first try.
 
@@ -396,3 +389,9 @@ Do you have any questions?
   [Unsplash](https://unsplash.com/photos/UMC5sfWci78)
 - Illustration by [Brett Jordan](https://unsplash.com/@brett_jordan) on
   [Unsplash](https://unsplash.com/photos/2a24_pZeXq8)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.01-introduction-to-the-teaching-unit
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[illustration]: ./images/main-illustration.jpg

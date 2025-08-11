@@ -138,7 +138,7 @@ sert-il ? Donnez un example commenté.
    votre dépôt. Par exemple, pour ignorer tous les fichiers `.jar` dans le
    dossier `target` :
 
-   ```bash
+   ```sh
    target/*.jar
    ```
 
@@ -263,7 +263,7 @@ compilé, lorsque vous le lancez, l'erreur suivante s'affiche. Donner la/les
 causes du/des problèmes et la/les éventuelles solutions ou vérifications à
 faire.
 
-```bash
+```sh
 $> mvn dependency:resolve clean compile package
 $> java -jar target/cli-example-1.0-SNAPSHOT.jar
 

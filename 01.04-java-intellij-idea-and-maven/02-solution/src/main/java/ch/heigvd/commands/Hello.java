@@ -1,6 +1,6 @@
-package ch.heigvd.dai.commands;
+package ch.heigvd.commands;
 
-import ch.heigvd.dai.Main;
+import ch.heigvd.Main;
 import java.util.concurrent.Callable;
 import picocli.CommandLine;
 
@@ -11,7 +11,7 @@ public class Hello implements Callable<Integer> {
 
   @CommandLine.Option(
       names = {"-g", "--greetings"},
-      description = "The greetings to address the user (default: ${DEFAULT-VALUE}).",
+      description = "The greetings to address the user.",
       defaultValue = "Hello")
   protected String greetings;
 

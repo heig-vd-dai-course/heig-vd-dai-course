@@ -7,32 +7,24 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: 'HEIG-VD DAI Course - Introduction to part 1: Input/output processing'
+title: 'HEIG-VD DAI - Introduction to part 1: Input/output processing'
 description: 'Introduction to part 1: Input/output processing for the DAI course at HEIG-VD, Switzerland'
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+header: '[**Introduction to part 1: Input/output processing**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.02-introduction-to-part-1-input-output-processing)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-introduction-to-part-1/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/02-introduction-to-part-1/02-introduction-to-part-1-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]: ./images/main-illustration.jpg
-
-# Introduction to part 1: Input/output processing
+# HEIG-VD DAI - Introduction to part 1: Input/output processing
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
+[Link to the course][course]
 
-[Web][web] · [PDF][pdf]
-
-<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>This work is licensed under the [CC BY-SA 4.0][license] license.</small>
 
@@ -89,3 +81,9 @@ But for this, you will need some tools and some knowledge.
   [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
 - Illustration by [Jared Erondu](https://unsplash.com/@erondu) on
   [Unsplash](https://unsplash.com/photos/j4PaE7E2_Ws)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.02-introduction-to-part-1-input-output-processing
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[illustration]: ./images/main-illustration.jpg

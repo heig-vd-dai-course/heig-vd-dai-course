@@ -7,36 +7,24 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI Course - Java IOs
+title: HEIG-VD DAI - Java IOs
 description: Java IOs for the DAI course at HEIG-VD, Switzerland
-footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI Course 2025-2026](https://github.com/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
+header: '[**Java IOs**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/02.01-java-ios)'
+footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-[web]: https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
-[illustration]: ./images/main-illustration.jpg
-[course-material]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
-[course-material-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
-
-# Java IOs
+# HEIG-VD DAI - Java IOs
 
 <!--
 _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
+[Link to the course][course]
 
-[Web][web] · [PDF][pdf]
-
-<small>L. Delafontaine and H. Louis, with the help of GitHub Copilot.</small>
+<small>L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).</small>
 
 <small>Based on the original course by O. Liechti and J. Ehrensberger.</small>
 
@@ -57,8 +45,8 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Check and run the code examples
 
@@ -74,8 +62,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Sources, streams and sinks of data
 
@@ -90,8 +78,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### The Java IO API
 
@@ -108,8 +96,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Types of data
 
@@ -126,8 +114,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Processing binary data with the Java IO API
 
@@ -284,8 +272,8 @@ The same applies for writing:
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Processing text data with the Java IO API
 
@@ -523,8 +511,8 @@ public static void tryWithResourcesExample() {
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### When to use which IO?
 
@@ -534,8 +522,8 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Common pitfalls
 
@@ -566,14 +554,17 @@ Benchmark the different types of streams you have learned:
 
 ![bg right w:80%](./images/what-will-you-do.png)
 
-### Find the practical content
+### Now it's your turn!
 
-<!-- _class: lead -->
+- Read the course material.
+- Do the practical content.
+- Ask questions if you have any.
 
-You can find the practical content for this chapter on
-[GitHub][course-material].
+➡️ [Find the course on GitHub][course].
 
-![bg right w:75%][course-material-qr-code]
+**Do not hesitate to help each other! There's no need to rush!**
+
+![bg right w:75%][course-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -610,3 +601,12 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/urs_y9NwFcc)
 - Illustration by [Sigmund](https://unsplash.com/@sigmund) on
   [Unsplash](https://unsplash.com/photos/By-tZImt0Ms)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/02.01-java-ios
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
+[illustration]: ./images/main-illustration.jpg
+[course-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
