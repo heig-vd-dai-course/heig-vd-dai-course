@@ -22,6 +22,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
+- [Demo](#demo)
+- [See the result](#see-the-result)
 - [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
@@ -30,20 +32,21 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Category 3 - Java IOs](#category-3---java-ios)
   - [Category 4 - Presentation and questions](#category-4---presentation-and-questions)
 - [Constraints](#constraints)
+- [Submission](#submission)
+- [Presentations](#presentations)
+- [Grades and feedback](#grades-and-feedback)
 - [Tips](#tips)
   - [The Unix philosophy and the KISS principle](#the-unix-philosophy-and-the-kiss-principle)
   - [External dependencies](#external-dependencies)
   - [Add members to your repository](#add-members-to-your-repository)
   - [Protect your main branch](#protect-your-main-branch)
-- [Submission](#submission)
-- [Presentations](#presentations)
-- [Grades and feedback](#grades-and-feedback)
+  - [How and what to present](#how-and-what-to-present)
 - [Milestones](#milestones)
   - [Milestone 1/5](#milestone-15)
   - [Milestone 2/5](#milestone-25)
   - [Milestone 3/5](#milestone-35)
   - [Milestone 4/5](#milestone-45)
-  - [Milestone 5/5 - Presentations](#milestone-55---presentations)
+  - [Milestone 5/5 (presentations)](#milestone-55-presentations)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [Sources](#sources)
 
@@ -75,32 +78,106 @@ so.
 
 ## Objectives
 
-- Create a CLI to process files with Java IOs
-- Practice Java, Maven and [picocli](https://picocli.info/)
-- Practice a Git workflow to share your work with your team
+- Create a CLI to process files.
+- Practice Java IOs.
+- Practice Java, Maven and [picocli](https://picocli.info/).
+- Practice a Git workflow to share your work with your team.
+
+## Demo
+
+### Compile and run the CLI
+
+Compile the project:
+
+```sh
+./mvnw clean package
+```
+
+Run the CLI without any arguments:
+
+```sh
+java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar
+```
+
+### Run the CLI
+
+```text
+Missing required options: '--input=<inputFile>', '--output=<outputFile>'
+Usage: practical-work-1-demo-1.0-SNAPSHOT.jar [-hV] -i=<inputFile>
+       [-I=<inputEncoding>] -o=<outputFile> [-O=<outputEncoding>] [COMMAND]
+Process an input file and return a result.
+  -h, --help                Show this help message and exit.
+  -i, --input=<inputFile>   The input file.
+  -I, --input-encoding=<inputEncoding>
+                            The input file encoding (default: UTF-8).
+  -o, --output=<outputFile> The output file.
+  -O, --output-encoding=<outputEncoding>
+                            The output file encoding (default: UTF-8).
+  -V, --version             Print version information and exit.
+Commands:
+  uppercase  Converts the input file to uppercase.
+  lowercase  Converts the input file to lowercase.
+```
+
+Run the CLI with the `uppercase` command:
+
+```sh
+java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
+  --input input.txt \
+  --output output.txt \
+  uppercase
+```
+
+You can also specify the encoding of the input and output files:
+
+```sh
+java -jar target/practical-work-1-demo-1.0-SNAPSHOT.jar \
+  --input input.txt --input-encoding UTF-8 \
+  --output output.txt --output-encoding US-ASCII \
+  uppercase
+```
+
+### See the results
+
+Input file:
+
+```text
+$ cat input.txt
+Bonjour, comment ça va aujourd'hui ?
+```
+
+Output file:
+
+```text
+$ cat output.txt
+BONJOUR, COMMENT ?A VA AUJOURD'HUI ?
+```
+
+Why is the `ç` not converted to uppercase?
 
 ## Group composition
 
-You will work in groups of two students. You can choose your partner. If you do
-not have a partner, we will assign you one.
+You will work in groups of two (2) to three (3) students. You can choose your
+partner(s). If you do not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2025-2026 - Practical work 1 - First name Last name member 1
-  and First name Last name member 2
+- **Title**: DAI 2025-2026 - Practical work 1 - <first name member 1> <last name
+  member 1>, <first name member 2> <last name member 2> and <first name member
+  3> <last name member 3> (if applicable)
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
-  practical work
+  practical work.
 
 > [!CAUTION]
 >
 > **You must do it before next week**, even if you do not have a clear idea yet
 > as it will help us to plan the practical work presentations.
 >
-> Please refer to the [Constraints](#constraints) to know what is expected from
-> you.
+> Please refer to the [Constraints](#constraints) section to know what is
+> expected from you.
 
 ## Idea validation
 
@@ -115,9 +192,12 @@ ideas.
 
 ## Grading criteria
 
-- 0 point - The work is insufficient
-- 0.1 point - The work is done
-- 0.2 point - The work is well done (without the need of being perfect)
+- **0 point** - The work is missing, off-topic, or shows a very limited
+  understanding of the subject.
+- **0.1 point** - The work shows partial understanding: some key elements are
+  missing, unclear, or poorly implemented.
+- **0.2 point** - The work is complete, accurate, and shows a clear and thorough
+  understanding of the subject.
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
 
@@ -173,83 +253,29 @@ to your repository!
 
 The practical work must comply with the following rules:
 
-- The whole team must contribute to the project and be able to explain it in
-  details.
+- The whole team must contribute to the project and all members must be able to
+  explain it in details if asked.
 - A GitHub Discussion must be opened during the first week of the project to
   explain the idea of the project so the teachers can validate the idea.
 - The GitHub Discussion must be updated with the link to the repository and a
   related commit hash before the deadline - every 24 hours after the deadline
   will result in a -1 point penalty on the final grade.
-- The application must be written in Java and built with Maven as an executable
-  JAR file.
-- The application must use the picocli dependency.
 - The application must use Java classes seen in the course to process the files
   (you can use other libraries to help you once the files are opened) - See the
   [External dependencies](#external-dependencies) section.
 - The application must be slightly more complex and slightly different than the
-  examples presented during the course (we emphasize the word **slightly**, no
-  need to shoot for the moon!).
-- You have stated your sources if you have used code from the Internet or from
-  AI tools (such as GitHub Copilot, ChatGPT, etc.) and why in your README.
+  examples presented during the course (we emphasize the word _slightly_, no
+  need to shoot for the moon).
+- You must state your sources if you have used elements that you are not the
+  author (code from the Internet, code generated from AI tools, etc.). You must
+  also state for which usage you did use the source(s)/tool(s) in your README.
+  If you plagiarize the code of another group, you will receive a penalty of 1
+  point on the final grade for all groups involved.
 
 > [!CAUTION]
 >
 > Failure to comply with these constraints may result in serious penalties, up
 > to -1 point penalty on the final grade _**for each criterion not met**_.
-
-## Tips
-
-### The Unix philosophy and the KISS principle
-
-> The Unix philosophy, originated by Ken Thompson, is a set of cultural norms
-> and philosophical approaches to minimalist, modular software development. It
-> is based on the experience of leading developers of the Unix operating system.
->
-> <https://en.wikipedia.org/wiki/Unix_philosophy>
-
-The Unix philosophy is a set of rules that defines how Unix programs should be
-designed. It is used to define the Unix operating system and the programs that
-are used on this operating system.
-
-The Unix philosophy can be defined by the following rules, among others:
-
-- Write programs that do one thing and do it well.
-- Write programs to work together.
-- Write programs to handle text streams, because that is a universal interface.
-
-You can inspire yourself from the Unix philosophy to define your own
-applications.
-
-The KISS principle summarizes the Unix philosophy in a simple sentence: _Keep it
-simple, silly!_
-
-Sometimes it is better to use a simple solution than a complex one.
-
-If your implementation is too complex, we might penalize you.
-
-### External dependencies
-
-You can use any other dependencies you want in your Maven project. You must
-however explain why and how you use it in your README.
-
-As mentioned in the [Constraints](#constraints) section, you cannot use an
-external dependency that manages the files for you (open/close the files).
-
-### Add members to your repository
-
-You can add your team members to your repository as collaborators to allow them
-to push directly to the repository as seen in the
-[Git, GitHub and Markdown](../../01.03-git-github-and-markdown/) course.
-
-### Protect your main branch
-
-You can protect the `main` branch of your repository to prevent any push on it
-and force signed commits from team members. This will force all team members to
-use signed pull requests and reviews before merging their work.
-
-You can check the official documentation to know how to protect your main branch
-on GitHub:
-<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>.
 
 ## Submission
 
@@ -266,7 +292,7 @@ You must update the GitHub Discussion you created previously with the following
 information:
 
 - **Description**: The link to your repository as well as the commit hash you
-  want to submit
+  want to submit.
 
 > [!CAUTION]
 >
@@ -371,10 +397,77 @@ Cordialement,
 
 </details>
 
+## Tips
+
+### The Unix philosophy and the KISS principle
+
+> The Unix philosophy, originated by Ken Thompson, is a set of cultural norms
+> and philosophical approaches to minimalist, modular software development. It
+> is based on the experience of leading developers of the Unix operating system.
+>
+> <https://en.wikipedia.org/wiki/Unix_philosophy>
+
+The Unix philosophy is a set of rules that defines how Unix programs should be
+designed. It is used to define the Unix operating system and the programs that
+are used on this operating system.
+
+The Unix philosophy can be defined by the following rules, among others:
+
+- Write programs that do one thing and do it well.
+- Write programs to work together.
+- Write programs to handle text streams, because that is a universal interface.
+
+You can inspire yourself from the Unix philosophy to define your own
+applications.
+
+The KISS principle summarizes the Unix philosophy in a simple sentence: _Keep it
+simple, silly!_
+
+Sometimes it is better to use a simple solution than a complex one.
+
+If your implementation is too complex, we might penalize you.
+
+### External dependencies
+
+You can use any other dependencies you want in your Maven project. You must
+however explain why and how you use it in your README.
+
+As mentioned in the [Constraints](#constraints) section, you cannot use an
+external dependency that manages the files for you (open/close the files).
+
+### Add members to your repository
+
+You can add your team members to your repository as collaborators to allow them
+to push directly to the repository as seen in the
+[Git, GitHub and Markdown](../../01.03-git-github-and-markdown/) course.
+
+### Protect your main branch
+
+You can protect the `main` branch of your repository to prevent any push on it
+and force signed commits from team members. This will force all team members to
+use signed pull requests and reviews before merging their work.
+
+You can check the official documentation to know how to protect your main branch
+on GitHub:
+<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>.
+
+### How and what to present
+
+You are free to present your work as you want. You can use slides, a live demo,
+a small theater piece, etc., however:
+
+- No need to remind us the objectives (we know them).
+- No need to present us the code (we will grade it later).
+- Focus your presentation on the _"what"_ and the _"why"_.
+
+Aim to explain/pitch your project to someone that has a good technical
+understanding but has strictly no idea of your project and what it does and how
+you have done it.
+
 ## Milestones
 
-This practical work is divided into four work sessions of 90 minutes + a
-presentation session
+This practical work is divided into five (5) sessions (four (4) work sessions of
+90 minutes + one (1) presentation session).
 
 As it can sometimes be difficult to know if we are on the right track (_"Am I
 behind or ahead in my work?"_), we have defined the following milestones to help
@@ -387,36 +480,37 @@ You are free to manage your time as you wish.
 
 ### Milestone 1/5
 
-- You have decided with your team what you want to do for this practical work.
-- You have created a GitHub Discussion to announce your group and your idea.
-- You have created a GitHub repository for your practical work.
-- You have added your team members to your repository as collaborators.
-- You have added the teaching staff as collaborators to your repository (if it
-  is private).
-- You have initialized your IntelliJ IDEA project/Maven project with the
-  necessary files.
+- [x] You have decided with your team what you want to do for this practical
+      work.
+- [x] You have created a GitHub Discussion to announce your group and your idea.
+- [x] You have created a GitHub repository for your practical work.
+- [x] You have added your team members to your repository as collaborators.
+- [x] You have added the teaching staff as collaborators to your repository (if
+      it is private).
+- [x] You have initialized your IntelliJ IDEA project/Maven project with the
+      necessary files.
 
 ### Milestone 2/5
 
-- You have started to implement the CLI with at least two subcommands.
+- [x] You have started to implement the CLI with at least two subcommands.
 
 ### Milestone 3/5
 
-- You have started to implement implemented the CLI to process files with Java
-  IOs.
+- [x] You have started to implement the CLI to process files with Java IOs.
 
 ### Milestone 4/5
 
-- You have almost finished implementing the CLI to process files with Java IOs.
-- You have added the necessary documentation to your README.
+- [x] You have almost finished implementing the CLI to process files with Java
+      IOs.
+- [x] You have added the necessary documentation to your README.
 
-### Milestone 5/5 - Presentations
+### Milestone 5/5 (presentations)
 
-- You have committed your final code to your repository.
-- You have updated the GitHub Discussion with the link to your repository and
-  the commit hash you want to submit.
-- You have prepared your presentation and your demo.
-- You have tested your application and your demo.
+- [x] You have committed your final code to your repository.
+- [x] You have updated the GitHub Discussion with the link to your repository
+      and the commit hash you want to submit.
+- [x] You have prepared your presentation and your demo.
+- [x] You have tested your application and your demo.
 
 ## Finished? Was it easy? Was it hard?
 

@@ -217,26 +217,26 @@ Dates are taken from the
 ### Practical work 1 (2/5)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./03.01-practical-work-1-(2-of-5)/>)
+  [Link to content](<./02.02-practical-work-1-(1-of-5)/>)
 - Course material:
-  [Link to content](<./03.01-practical-work-1-(2-of-5)/01-course-material/README.md>)
+  [Link to content](<./02.02-practical-work-1-(1-of-5)/01-course-material/README.md#milestone-25>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.01-practical-work-1-(2-of-5)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/index.html#milestone-25>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.01-practical-work-1-(2-of-5)/01-course-material/03.01-practical-work-1-(2-of-5)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/02.02-practical-work-1-(1-of-5)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
 ### Practical work 1 (3/5)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./03.02-practical-work-1-(3-of-5)/>)
+  [Link to content](<./02.02-practical-work-1-(1-of-5)/>)
 - Course material:
-  [Link to content](<./03.02-practical-work-1-(3-of-5)/01-course-material/README.md>)
+  [Link to content](<./02.02-practical-work-1-(1-of-5)/01-course-material/README.md#milestone-35>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.02-practical-work-1-(3-of-5)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/index.html#milestone-35>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/03.02-practical-work-1-(3-of-5)/01-course-material/03.02-practical-work-1-(3-of-5)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/02.02-practical-work-1-(1-of-5)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -262,13 +262,13 @@ Dates are taken from the
 ### Practical work 1 (4/5)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./04.02-practical-work-1-(4-of-5)/>)
+  [Link to content](<./02.02-practical-work-1-(1-of-5)/>)
 - Course material:
-  [Link to content](<./04.02-practical-work-1-(4-of-5)/01-course-material/README.md>)
+  [Link to content](<./02.02-practical-work-1-(1-of-5)/01-course-material/README.md#milestone-45>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.02-practical-work-1-(4-of-5)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/index.html#milestone-45>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.02-practical-work-1-(4-of-5)/01-course-material/04.02-practical-work-1-(4-of-5)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/02.02-practical-work-1-(1-of-5)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -319,13 +319,13 @@ Dates are taken from the
 
 - **🚨 Graded evaluation**
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./05.04-practical-work-1-(5-of-5)/>)
+  [Link to content](<./02.02-practical-work-1-(1-of-5)/>)
 - Course material:
-  [Link to content](<./05.04-practical-work-1-(5-of-5)/01-course-material/README.md>)
+  [Link to content](<./02.02-practical-work-1-(1-of-5)/01-course-material/README.md#milestone-55>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.04-practical-work-1-(5-of-5)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/index.html#milestone-55>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.04-practical-work-1-(5-of-5)/01-course-material/05.04-practical-work-1-(5-of-5)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/02.02-practical-work-1-(1-of-5)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -383,13 +383,13 @@ Dates are taken from the
 ### Practical work 2 (2/6)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./07.02-practical-work-2-(2-of-6)/>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/>)
 - Course material:
-  [Link to content](<./07.02-practical-work-2-(2-of-6)/01-course-material/README.md>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/01-course-material/README.md#milestone-26>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.02-practical-work-2-(2-of-6)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/index.html#milestone-26>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.02-practical-work-2-(2-of-6)/01-course-material/07.02-practical-work-2-(2-of-6)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/06.02-practical-work-2-(1-of-6)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -415,13 +415,13 @@ Dates are taken from the
 ### Practical work 2 (3/6)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./08.02-practical-work-2-(3-of-6)/>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/>)
 - Course material:
-  [Link to content](<./08.02-practical-work-2-(3-of-6)/01-course-material/README.md>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/01-course-material/README.md#milestone-36>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.02-practical-work-2-(3-of-6)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/index.html#milestone-36>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.02-practical-work-2-(3-of-6)/01-course-material/08.02-practical-work-2-(3-of-6)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/06.02-practical-work-2-(1-of-6)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -447,13 +447,13 @@ Dates are taken from the
 ### Practical work 2 (4/6)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./09.02-practical-work-2-(4-of-6)/>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/>)
 - Course material:
-  [Link to content](<./09.02-practical-work-2-(4-of-6)/01-course-material/README.md>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/01-course-material/README.md#milestone-46>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.02-practical-work-2-(4-of-6)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/index.html#milestone-46>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.02-practical-work-2-(4-of-6)/01-course-material/09.02-practical-work-2-(4-of-6)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/06.02-practical-work-2-(1-of-6)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -476,13 +476,13 @@ Dates are taken from the
 ### Practical work 2 (5/6)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./10.02-practical-work-2-(5-of-6)/>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/>)
 - Course material:
-  [Link to content](<./10.02-practical-work-2-(5-of-6)/01-course-material/README.md>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/01-course-material/README.md#milestone-56>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.02-practical-work-2-(5-of-6)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/index.html#milestone-56>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.02-practical-work-2-(5-of-6)/01-course-material/10.02-practical-work-2-(5-of-6)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/06.02-practical-work-2-(1-of-6)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -530,13 +530,13 @@ Dates are taken from the
 
 - **🚨 Graded evaluation**
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./11.04-practical-work-2-(6-of-6)/>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/>)
 - Course material:
-  [Link to content](<./11.04-practical-work-2-(6-of-6)/01-course-material/README.md>)
+  [Link to content](<./06.02-practical-work-2-(1-of-6)/01-course-material/README.md#milestone-66>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.04-practical-work-2-(6-of-6)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/index.html#milestone-66>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.04-practical-work-2-(6-of-6)/01-course-material/11.04-practical-work-2-(6-of-6)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.02-practical-work-2-(1-of-6)/01-course-material/06.02-practical-work-2-(1-of-6)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -587,13 +587,13 @@ Dates are taken from the
 ### Practical work 3 (2/5)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./13.02-practical-work-3-(2-of-5)/>)
+  [Link to content](<./12.02-practical-work-3-(1-of-5)/>)
 - Course material:
-  [Link to content](<./13.02-practical-work-3-(2-of-5)/01-course-material/README.md>)
+  [Link to content](<./12.02-practical-work-3-(1-of-5)/01-course-material/README.md#milestone-25>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.02-practical-work-3-(2-of-5)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/index.html#milestone-25>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.02-practical-work-3-(2-of-5)/01-course-material/13.02-practical-work-3-(2-of-5)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/12.02-practical-work-3-(1-of-5)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -617,13 +617,13 @@ Dates are taken from the
 ### Practical work 3 (3/5)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./14.02-practical-work-3-(3-of-5)/>)
+  [Link to content](<./12.02-practical-work-3-(1-of-5)/>)
 - Course material:
-  [Link to content](<./14.02-practical-work-3-(3-of-5)/01-course-material/README.md>)
+  [Link to content](<./12.02-practical-work-3-(1-of-5)/01-course-material/README.md#milestone-35>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.02-practical-work-3-(3-of-5)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/index.html#milestone-35>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.02-practical-work-3-(3-of-5)/01-course-material/14.02-practical-work-3-(3-of-5)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/12.02-practical-work-3-(1-of-5)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -646,13 +646,13 @@ Dates are taken from the
 ### Practical work 3 (4/5)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./15.02-practical-work-3-(4-of-5)/>)
+  [Link to content](<./12.02-practical-work-3-(1-of-5)/>)
 - Course material:
-  [Link to content](<./15.02-practical-work-3-(4-of-5)/01-course-material/README.md>)
+  [Link to content](<./12.02-practical-work-3-(1-of-5)/01-course-material/README.md#milestone-45>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.02-practical-work-3-(4-of-5)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/index.html#milestone-45>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/15.02-practical-work-3-(4-of-5)/01-course-material/15.02-practical-work-3-(4-of-5)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/12.02-practical-work-3-(1-of-5)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 
@@ -662,13 +662,13 @@ Dates are taken from the
 
 - **🚨 Graded evaluation**
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./16.01-practical-work-3-(5-of-5)/>)
+  [Link to content](<./12.02-practical-work-3-(1-of-5)/>)
 - Course material:
-  [Link to content](<./16.01-practical-work-3-(5-of-5)/01-course-material/README.md>)
+  [Link to content](<./12.02-practical-work-3-(1-of-5)/01-course-material/README.md#milestone-55>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.01-practical-work-3-(5-of-5)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/index.html#milestone-55>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.01-practical-work-3-(5-of-5)/01-course-material/16.01-practical-work-3-(5-of-5)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/12.02-practical-work-3-(1-of-5)-presentation.pdf>)
 
 [Jump back to Program](#-program)
 

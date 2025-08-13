@@ -73,10 +73,10 @@ shopping list, a web application that allows you to manage your tasks, a web
 application that allows you to manage your notes, etc. If you do not have any
 idea, come to see us and we can give you.
 
-Multiple groups can choose the same idea and you can share your methodology and
-take inspiration from/help each other. However, you are not allowed to
-plagiarize the code of another group. You will be penalized if you do so with 1
-as the final grade.
+Multiple groups can choose the same processing and you can share your
+methodology and take inspiration from/help each other. However, you are not
+allowed to plagiarize the code of another group. You will be penalized if you do
+so.
 
 ## Objectives
 

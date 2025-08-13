@@ -66,10 +66,10 @@ application, a chess game, a shopping list, the simulation of an Internet of
 Things (IoT) network, etc. If you do not have any idea, come to see us and we
 can give you.
 
-Multiple groups can choose the same idea and you can share your methodology and
-take inspiration from/help each other. However, you are not allowed to
-plagiarize the code of another group. You will be penalized if you do so with 1
-as the final grade.
+Multiple groups can choose the same processing and you can share your
+methodology and take inspiration from/help each other. However, you are not
+allowed to plagiarize the code of another group. You will be penalized if you do
+so.
 
 ## Objectives
 
@@ -90,15 +90,15 @@ information:
   3> <last name member 3> (if applicable)
 - **Category**: Show and tell
 - **Description**: A quick description of what you will achieve during this
-  practical work
+  practical work.
 
 > [!CAUTION]
 >
-> **Please do it a before the next week**, even if you do not have a clear idea
-> yet as it will help us to plan the practical work presentations.
+> **You must do it before next week**, even if you do not have a clear idea yet
+> as it will help us to plan the practical work presentations.
 >
-> **If you do not open the discussion before next week, you will be penalized
-> (-0.2 point on the final grade).**
+> Please refer to the [Constraints](#constraints) section to know what is
+> expected from you.
 
 ## Idea validation
 
@@ -113,9 +113,12 @@ ideas.
 
 ## Grading criteria
 
-- 0 point - The work is insufficient
-- 0.1 point - The work is done
-- 0.2 point - The work is well done (without the need of being perfect)
+- 0 points - The work is missing, off-topic, or shows a very limited
+  understanding of the subject.
+- 0.1 point - The work shows partial understanding: some key elements are
+  missing, unclear, or poorly developed.
+- 0.2 points - The work is complete, accurate, and shows a clear and thorough
+  understanding of the subject.
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
 
