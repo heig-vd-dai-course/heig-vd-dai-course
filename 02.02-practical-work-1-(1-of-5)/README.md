@@ -34,13 +34,12 @@ The teaching and learning methods used to facilitate the course are as follows:
 The evaluation is based on the following criteria:
 
 - Ability to work in a team.
-- Ability to share your work with your team.
 - Ability to execute the tasks at hand.
 
 Feedback is provided as follows:
 
-- A feedback on the GitHub Discussion or the pull request (PR).
-- The solution of the practical content.
+- An email with the grading grid accompanied with comments.
+- Results discussion and questions (if requested).
 
 🚨 **The evaluation results in a grade** (33% of all practical works grade).
 

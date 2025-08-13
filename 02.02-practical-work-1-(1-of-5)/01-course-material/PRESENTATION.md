@@ -164,7 +164,7 @@ More details for this section in the [course material][course].
 
 ### Grading criteria
 
-Based on grading criteria of 25 criteria and a three-point scale:
+Based on 25 criteria and a three-point scale:
 
 - **0 point** - The work is missing, off-topic, or shows a very limited
   understanding of the subject.
