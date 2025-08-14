@@ -269,8 +269,8 @@ The practical work must comply with the following rules:
 - You must state your sources if you have used elements that you are not the
   author (code from the Internet, code generated from AI tools, etc.). You must
   also state for which usage you did use the source(s)/tool(s) in your README.
-  If you plagiarize the code of another group, you will receive a penalty of 1
-  point on the final grade for all groups involved.
+  If you plagiarize the code of another group, all groups involved will receive
+  a grade of 1.
 
 > [!CAUTION]
 >
