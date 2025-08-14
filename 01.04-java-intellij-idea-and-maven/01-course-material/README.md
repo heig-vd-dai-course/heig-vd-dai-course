@@ -15,7 +15,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/01.04-java-intellij-idea-and-maven-presentation.pdf)
-- Solution: [Link to content](../02-solution/README.md)
+- Solution: [Link to content](../02-solution/)
 
 ## Table of contents
 
@@ -27,6 +27,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [JVM versions](#jvm-versions)
   - [Java versions and version managers](#java-versions-and-version-managers)
   - [Compiling and running Java programs](#compiling-and-running-java-programs)
+  - [Garbage collection](#garbage-collection)
   - [Summary](#summary)
   - [Alternatives](#alternatives)
   - [Resources](#resources-1)
@@ -140,7 +141,9 @@ Given a Java source file named `HelloWorld.java`:
 ```java
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello DAI students!");
+        String message = "Hello, world!";
+
+        System.out.println(message);
     }
 }
 ```
@@ -162,7 +165,7 @@ java HelloWorld
 Output:
 
 ```text
-Hello DAI students!
+Hello, world!
 ```
 
 A Java application can be packaged into a JAR (Java ARchive) file, which is a
@@ -185,6 +188,17 @@ application.
 As many Java applications depend on external libraries, it is common to use a
 dependency manager such as [Maven](https://maven.apache.org/) or
 [Gradle](https://gradle.org/).
+
+### Garbage collection
+
+Java has automatic memory management, meaning that the programmer does not need
+to manually allocate and free memory as in languages such as C or C++.
+
+The garbage collector (also called _"GC"_) is a background process that runs
+periodically to free memory by removing objects that are no longer referenced.
+
+When an object is no longer referenced (e.g. out of scope or set to `null`), it
+becomes eligible for garbage collection.
 
 ### Summary
 
@@ -1792,7 +1806,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`solution`](../02-solution/README.md) directory of this course.
+[`solution`](../02-solution/) directory of this repository.
 
 If you have any questions about the solution, feel free to open an issue to
 discuss it!

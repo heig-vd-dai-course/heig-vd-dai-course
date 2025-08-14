@@ -23,7 +23,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 - [Demo](#demo)
-- [See the result](#see-the-result)
+  - [Compile and run the CLI](#compile-and-run-the-cli)
+  - [Run the CLI](#run-the-cli)
+  - [See the results](#see-the-results)
 - [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
@@ -62,9 +64,10 @@ In this practical work, you will create a CLI using
 
 The CLI will take an input file and an output file as arguments. It will also
 take optional arguments to customize the CLI (such as the input file encoding
-and the output file encoding - the default being UTF-8 for example). The CLI
-will process the input file and write the result in the output file. It will
-display a message on success and a message on failure.
+and the output file encoding - the default being UTF-8 for example - and/or the
+end of line character(s)). The CLI will process the input file and write the
+result in the output file. It will display a message on success and a message on
+failure.
 
 You have the freedom to define what the CLI will do. You can be creative! For
 example, you can choose to transform a text file (find/replace/count number of
@@ -236,7 +239,7 @@ to your repository!
 | --- | ---------------------------------------------------------------------------------------------------------------------------------- | -----: |
 | 17  | The CLI offers at least two subcommands with comprehensive help messages using mandatory and optional arguments for customization. |    0.2 |
 | 18  | The CLI processes the files efficiently.                                                                                           |    0.2 |
-| 19  | The CLI processes the files so that they are compatible across operating systems/languages.                                        |    0.2 |
+| 19  | The CLI processes the files so that they are compatible across operating systems and languages.                                    |    0.2 |
 | 20  | The CLI correctly manages resources in case a problem occurs when processing the files.                                            |    0.2 |
 | 21  | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s).                                      |    0.2 |
 | 22  | The CLI displays explicit error messages[^explicit-error-messages] on invalid/missing inputs and/or processing errors.             |    0.2 |

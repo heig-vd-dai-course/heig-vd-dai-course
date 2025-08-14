@@ -22,7 +22,8 @@ class BinaryBufferReadFileExample {
       System.out.print(b);
     }
 
-    // Closing the BufferedInputStream automatically closes the FileInputStream
+    // Closing the BufferedInputStream automatically
+    // closes the FileInputStream
     bis.close();
   }
 }

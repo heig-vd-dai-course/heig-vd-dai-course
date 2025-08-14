@@ -1,6 +1,6 @@
-package ch.heigvd.dai.ios.text;
+package ch.heigvd.ios.text;
 
-import ch.heigvd.dai.ios.Writable;
+import ch.heigvd.ios.Writable;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 

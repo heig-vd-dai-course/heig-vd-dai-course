@@ -34,10 +34,10 @@ _paginate: false
 
 ## Objectives
 
-- Know the different types of data (binary vs. text)
-- Understand the abstract notion of sources, streams and sink
-- Use the different IO types for different use-cases
-- Use the Java IO API to read and write files
+- Differentiate the different types of data (binary vs. text).
+- Understand the abstract notion of sources, streams and sinks.
+- Use the different IO types for different use-cases.
+- Use the Java IO API to read and write files.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -48,13 +48,23 @@ _paginate: false
 More details for this section in the [course material][course]. You can find
 other resources and alternatives as well.
 
+### Clone the main repository
+
+- Clone the
+  [`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+  repository locally.
+- Open the repository in your favorite IDE.
+- Navigate to the `02.01-java-ios` directory.
+
+![bg right w:80%](./images/code-examples-github-repository.png)
+
 ### Check and run the code examples
 
-- Check the
-  [code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-- Run the code examples
-- Help to understand the concepts
-- Play with the code examples
+All code examples are in the `02-code-examples` directory:
+
+- Run the code examples.
+- It will help you to understand the concepts.
+- Play with the code examples.
 
 ![bg right w:80%](./images/code-examples-github-repository.png)
 
@@ -67,10 +77,10 @@ other resources and alternatives as well.
 
 ### Sources, streams and sinks of data
 
-- Abstraction of data flow
-- Source: where data comes from (input)
-- Sink: where data goes to (output)
-- Stream: data flows between source and sink
+- Abstraction of data flow.
+- Source: where data comes from (input).
+- Sink: where data goes to (output).
+- Stream: data flows between source and sink.
 
 ![bg right:40%](https://images.unsplash.com/photo-1543674892-7d64d45df18b?fit=crop&h=720)
 
@@ -83,12 +93,12 @@ other resources and alternatives as well.
 
 ### The Java IO API
 
-- Part of `java.base` module
-  - `java.io` package
-  - `java.nio` package
+- Part of `java.base` module:
+  - `java.io` package.
+  - `java.nio` package.
 - Different classes for different IO types:
-  - Binary data
-  - Text data
+  - Binary data.
+  - Text data.
 
 ![bg right contain](./images/the-java-io-api.png)
 
@@ -102,11 +112,11 @@ other resources and alternatives as well.
 ### Types of data
 
 - Two types of data:
-  - Binary
-  - Text
+  - Binary.
+  - Text.
 - Both are `0`s and `1`s - the difference is in interpretation:
-  - Binary data - raw data
-  - Text data - interpretation
+  - Binary data - raw data.
+  - Text data - interpretation.
 
 ![bg right:45% w:90%](./images/processing-binary-data-vs-text-data.png)
 
@@ -120,17 +130,17 @@ other resources and alternatives as well.
 ### Processing binary data with the Java IO API
 
 - Most basic type of data processing:
-  1. Open a file
-  2. Read/write/modify the bytes as they are
-  3. Close the file
+  1. Open a file.
+  2. Read/write/modify the bytes as they are.
+  3. Close the file.
 
 ![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ### Reading binary data
 
-- Most simple way is to read byte by byte (not efficient)
-- `InputStream` and `FileInputStream` classes are used to read binary data
-- Let's have a look at the code example `BinaryReadFileExample`
+- Most simple way is to read byte by byte (not efficient).
+- `InputStream` and `FileInputStream` classes are used to read binary data.
+- Let's have a look at the example `BinaryReadFileExample`.
 
 ![bg right:45% w:90%](./images/processing-binary-data.png)
 
@@ -155,9 +165,9 @@ class BinaryReadFileExample {
 
 ### Writing binary data
 
-- Most simple way is to write byte by byte (not efficient)
-- `OutputStream` and `FileOutputStream` classes are used to write binary data
-- Let's have a look at the code example `BinaryWriteFileExample`
+- Most simple way is to write byte by byte (not efficient).
+- `OutputStream` and `FileOutputStream` classes are used to write binary data.
+- Let's have a look at the example `BinaryWriteFileExample`.
 
 ![bg right:45% w:90%](./images/processing-binary-data.png)
 
@@ -181,8 +191,8 @@ class BinaryWriteFileExample {
 ### Reading and writing binary data with buffers
 
 - Reading and writing byte by byte is not efficient: each `read()` or `write()`
-  call results in a system call every time
-- Buffers can be used to read write multiple bytes at once
+  call results in a system call every time.
+- Buffers can be used to read write multiple bytes at once.
 
 ![bg right:45% w:90%](./images/processing-binary-data.png)
 
@@ -190,9 +200,9 @@ class BinaryWriteFileExample {
 
 Use a buffer to read multiple bytes at once:
 
-1. First time, a system call is made to read a block of data
-2. Subsequent reads are done from the buffer
-3. When the buffer is empty, a new block is read
+1. First time, a system call is made to read a block of data.
+2. Subsequent reads are done from the buffer.
+3. When the buffer is empty, a new block is read.
 
 ![bg right:45% w:90%](./images/processing-binary-data.png)
 
@@ -200,21 +210,21 @@ Use a buffer to read multiple bytes at once:
 
 The same applies for writing:
 
-1. First time, a buffer is created
-2. Data is written to the buffer
-3. When the buffer is full, a system call is made to write the block
-4. The buffer is then emptied
-5. Bytes can remain in the buffer
-   - A flush might be needed to empty the buffer
+1. First time, a buffer is created.
+2. Data is written to the buffer.
+3. When the buffer is full, a system call is made to write the block.
+4. The buffer is then emptied.
+5. Bytes can remain in the buffer.
+   - A flush might be needed to empty the buffer.
 
 ![bg right:45% w:90%](./images/processing-binary-data.png)
 
 ---
 
 - `BufferedInputStream` and `BufferedOutputStream` classes are used to
-  read/write binary data with buffers
-- Let's have a look at the code examples `BinaryBufferReadFileExample` and
-  `BinaryBufferWriteFileExample`
+  read/write binary data with buffers.
+- Let's have a look at the examples `BinaryBufferReadFileExample` and
+  `BinaryBufferWriteFileExample`.
 
 ![bg right:45% w:90%](./images/processing-binary-data.png)
 
@@ -233,7 +243,8 @@ The same applies for writing:
      }
 
 -    fis.close();
-+    // Closing the BufferedInputStream automatically closes the FileInputStream
++    // Closing the BufferedInputStream automatically
++    // closes the FileInputStream
 +    bis.close();
    }
 ```
@@ -259,14 +270,14 @@ The same applies for writing:
 
 ### A quick note on little endian vs. big endian
 
-- Little endian: least significant byte first
-- Big endian: most significant byte first
-- Java uses big endian by default
+- Little endian: least significant byte first.
+- Big endian: most significant byte first.
+- Java uses big endian by default.
 - The class `ByteBuffer` can be used to convert between the two (not covered in
-  this course)
-- Example: `12345678`
-  - Little endian: `0x78 0x56 0x34 0x12`
-  - Big endian: `0x12 0x34 0x56 0x78`
+  this course).
+- Example: `12345678`:
+  - Little endian: `0x78 0x56 0x34 0x12`.
+  - Big endian: `0x12 0x34 0x56 0x78`.
 
 ## Processing text data with the Java IO API
 
@@ -277,62 +288,62 @@ other resources and alternatives as well.
 
 ### Processing text data with the Java IO API
 
-- Text data: interpretation of binary data
-- Different character encodings
-- Different end of line characters
-- Different IO classes for text data
+- Text data: interpretation of binary data.
+- Different character encodings.
+- Different end of line characters.
+- Different IO classes for text data.
 
 ![bg right:45% w:90%](./images/processing-text-data.png)
 
 ### Ancestor of character representations: ASCII
 
-- ASCII: 128 binary values
-- Mapping binary to characters
-- Published in 1963 and meant for English
+- ASCII: 128 binary values.
+- Mapping binary to characters.
+- Published in 1963 and meant for English.
 
 ![bg right w:90%](https://upload.wikimedia.org/wikipedia/commons/c/cf/USASCII_code_chart.png)
 
 ### Extended ASCII: codes pages
 
-- Extended ASCII (code pages)
-- Support for more characters using the remaining 128 values
+- Extended ASCII (code pages).
+- Support for more characters using the remaining 128 values.
 
 ![bg right w:80%](https://upload.wikimedia.org/wikipedia/commons/a/ac/Latin-1-infobox.svg)
 
 ### Unicode
 
-- Unicode: solves ASCII limitations
-- Standard to support all languages
+- Unicode: solves ASCII limitations.
+- Standard to support all languages.
 - Different implementations:
-  - UTF-8
-  - UTF-16
-  - UTF-32
+  - UTF-8.
+  - UTF-16.
+  - UTF-32.
 
 ![bg right contain](./images/unicode-website.png)
 
 ### UTF-8
 
-- UTF-8: variable-length encoding
-- Most common Unicode implementation
-- ASCII compatible
-- Quite the standard for web and software development
+- UTF-8: variable-length encoding.
+- Most common Unicode implementation.
+- ASCII compatible.
+- Quite the standard for web and software development.
 
 ![bg right contain](./images/utf-8-wikipedia-article.png)
 
 ### What happens if you ignore the character encoding?
 
-- Not stored in the file itself
-- Misinterpretation leads to issues
-- Check, compile and run the `TextCharacterEncodingsExample` code example!
+- Not stored in the file itself.
+- Misinterpretation leads to issues.
+- Check, compile and run the `TextCharacterEncodingsExample` example!
 
 ![bg right:40% w:80%](https://upload.wikimedia.org/wikipedia/commons/7/7f/Replacement_character.svg)
 
 ### Reading and writing text data
 
-- `Reader` and `Writer` classes are used to read/write text data
+- `Reader` and `Writer` classes are used to read/write text data.
 - **Always specify the encoding!** If not set, it can be incompatible with other
-  systems
-- Let's have a look at the code example `TextReadAndWriteFileExample`
+  systems.
+- Let's have a look at the example `TextReadAndWriteFileExample`.
 
 ![bg right:45% w:90%](./images/processing-text-data.png)
 
@@ -360,10 +371,10 @@ class TextReadAndWriteFileExample {
 ---
 
 - Just like with binary data, reading and writing text data byte by byte is not
-  efficient
+  efficient.
 - `BufferedReader` and `BufferedWriter` classes are used to read/write text data
-  with buffers
-- Let's have a look at the code example `TextBufferReadAndWriteFileExample`
+  with buffers.
+- Let's have a look at the example `TextBufferReadAndWriteFileExample`.
 
 ![bg right:45% w:90%](./images/processing-text-data.png)
 
@@ -396,9 +407,11 @@ class TextReadAndWriteFileExample {
 
 ### End of line characters
 
-- Different end of line characters on different systems
-  - Unix/Linux/macOS: `\n`, called _"Line feed"_ (`LF`)
-  - Windows: `\r\n`, called _"Carriage Return + Line feed"_ (`CR`+`LF`)
+Different on different each system:
+
+- Linux/macOS: `\n` (`LF`).
+- Windows: `\r\n` (`CR`+`LF`).
+- **Always specify the end of line characters** (just as with the encoding)!
 
 ![bg right w:90%](https://devblogs.microsoft.com/wp-content/uploads/sites/33/2019/02/Notepad-before.png)
 
@@ -433,12 +446,12 @@ class TextEndOfLineCharactersExample {
 
 ### Dealing with errors
 
-- All kinds of errors can occur when reading/writing files
-- Files must be properly opened and closed
-- Ensure no files are corrupted
+- All kinds of errors can occur when reading/writing files.
+- Files must be properly opened and closed.
+- Ensure no files are corrupted.
 - Two main ways to handle exceptions:
-  - `try-catch-finally` blocks
-  - `try-with-resources` blocks
+  - `try-catch-finally` blocks.
+  - `try-with-resources` blocks.
 
 ![bg right:40%](https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?fit=crop&h=720)
 
@@ -516,7 +529,7 @@ other resources and alternatives as well.
 
 ### When to use which IO?
 
-![bg w:80%](./images/when-to-use-which-io.png)
+![bg w:85%](./images/when-to-use-which-io.png)
 
 ## Common pitfalls
 
@@ -527,13 +540,13 @@ other resources and alternatives as well.
 
 ### Common pitfalls
 
-- Not using buffers
-- Not closing the streams
-- Not handling exceptions properly
-- Not specifying the character encoding
-- Not specifying the end of line characters
-- Do not use `PrintWriter` - it swallows exceptions
-- Do not use `System.lineSeparator()` - it is platform dependent
+- Not using buffers.
+- Not closing the streams.
+- Not handling exceptions properly.
+- Not specifying the character encoding.
+- Not specifying the end of line characters.
+- Do not use `PrintWriter` - it swallows exceptions.
+- Do not use `System.lineSeparator()` - it is platform dependent.
 
 ## Questions
 
@@ -549,8 +562,8 @@ Do you have any questions?
 
 Benchmark the different types of streams you have learned:
 
-- Assemble all the code examples to satisfy the use-cases
-- Run some benchmarks to determine the best IOs for the given use-cases
+- Assemble all the code examples to satisfy the use-cases.
+- Run some benchmarks to determine the best IOs for the given use-cases.
 
 ![bg right w:80%](./images/what-will-you-do.png)
 
@@ -582,7 +595,7 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Docker and Docker Compose: how to containerize your applications
+- Docker and Docker Compose - How to containerize your applications:
   - What is an image?
   - What is a container?
   - How to try out new software without installing it?

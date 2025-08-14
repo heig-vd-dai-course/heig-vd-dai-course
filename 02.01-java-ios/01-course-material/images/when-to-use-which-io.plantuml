@@ -1,63 +1,70 @@
-@startuml java-io-decision-tree
+@startuml java-ios-decision-tree
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+
+title "Java IOs - Decision Tree"
+
 start
 
-if (Binary or Text?) then (binary)
-  :Binary Input and Output;
-  :**Java IO abstract class**
+if (Binary or Text?) then (Binary)
+  :**Java IO abstract classes**
 
-  InputStream - Read byte stream
-  OutputStream - Write byte stream;
+  **""InputStream""** - Read byte streams
+  **""OutputStream""** - Write byte streams;
 
   split
-    :**File read and write**
+    :**Files**
 
-    FileInputStream
-    FileOutputStream;
+    **""FileInputStream""** - Read
+    **""FileOutputStream""** - Write;
   split again
-    :**Arrays of bytes read and write**
+    :**Array of bytes**
 
-    ByteArrayInputStream
-    ByteArrayOutputStream;
+    **""ByteArrayInputStream""** - Read
+    **""ByteArrayOutputStream""** - Write;
   end split
 
   :**Buffering**
 
-  BufferedInputStream(...)
-  BufferedOutputStream(...);
+  **""BufferedInputStream(...)""** - Read
+  **""BufferedOutputStream(...)""** - Write;
 
-else (text)
-  :Text Input And Output;
-  : **Java IO abstract class**
+else (Text)
+  : **Java IO abstract classes**
 
-  Reader - Read characters
-  Writer - Write characters;
+  **""Reader""** - Read characters
+  **""Writer""** - Write characters;
 
   split
-    :**File read and write**
+    :**Files**
 
-    FileReader
-    FileWriter;
+    **""FileReader""** - Read
+    **""FileWriter""** - Write;
 
   split again
-    :**Strings read and write**
+    :**Strings**
 
-    StringReader
-    StringWriter;
+    **""StringReader""** - Read
+    **""StringWriter""** - Write;
   split again
-    :**Arrays of chars read and write**
+    :**Array of chars**
 
-    CharArrayReader
-    CharArrayWriter;
+    **""CharArrayReader""** - Read
+    **""CharArrayWriter""** - Write;
   split again
-    :**Text from Binary**
-    InputStreamReader - Convert bytes to chars
-    OutputStreamWriter - Convert chars to bytes;
+    :**Text from binary**
+
+    **""InputStreamReader""** - Bytes to chars
+    **""OutputStreamWriter""** - Chars to bytes;
   end split
 
   :**Buffering**
 
-  BufferedReader(...)
-  BufferedWriter(...);
+  **""BufferedReader(...)""** - Read
+  **""BufferedWriter(...)""** - Write;
 
 endif
 stop

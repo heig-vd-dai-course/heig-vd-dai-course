@@ -1,6 +1,6 @@
-package ch.heigvd.dai.ios.binary;
+package ch.heigvd.ios.binary;
 
-import ch.heigvd.dai.ios.Writable;
+import ch.heigvd.ios.Writable;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
