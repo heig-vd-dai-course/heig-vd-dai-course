@@ -197,9 +197,9 @@ We will do our best to inform you in advance if there are any changes.
 
 You will be graded on the following elements:
 
-- 3 practical works (20%) - done in groups.
-- 2 evaluations (30%) - done individually.
-- 1 exam (50%) - done individually.
+- Three (3) practical works (20%) - done in groups.
+- Two (2) evaluations (30%) - done individually.
+- One (1) exam (50%) - done individually.
 
 ![bg right:40%](https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?fit=crop&h=720)
 

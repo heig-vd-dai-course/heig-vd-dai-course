@@ -84,7 +84,8 @@ containers and registries.
 
 You will then use Docker and Docker Compose to build, publish, and run
 applications in containers so you can run them and share them with others
-without the need to install anything else than Docker and Docker Compose.
+without the need to install anything else than Docker and Docker Compose on the
+target machine.
 
 As this chapter is quite abstract, you will first setup your environment to be
 able to run some code examples along with the theory.

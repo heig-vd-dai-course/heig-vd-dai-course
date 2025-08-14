@@ -52,6 +52,8 @@ Each person is free to manage their time as they wish. However, it is
 recommended for the following course to:
 
 - Read this course material again (if necessary).
+- Finish the practical content of this course material.
+- Give your feedback on the course using the related GitHub Discussion.
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
