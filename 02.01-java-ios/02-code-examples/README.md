@@ -3,6 +3,8 @@
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
 
+Based on the original course by O. Liechti and J. Ehrensberger.
+
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Resources
@@ -19,9 +21,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 ## Code examples
 
 This repository contains several examples of Java IOs implementations.
-
-Some of these examples are based on the original course by O. Liechti and J.
-Ehrensberger.
 
 We recommend you to try each example and understand how it works.
 

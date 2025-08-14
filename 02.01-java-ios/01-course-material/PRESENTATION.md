@@ -53,6 +53,7 @@ other resources and alternatives as well.
 - Clone the
   [`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
   repository locally.
+- Open the repository in your favorite IDE.
 - Navigate to the `02.01-java-ios` directory.
 
 ![bg right w:80%](./images/code-examples-github-repository.png)
