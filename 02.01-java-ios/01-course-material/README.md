@@ -1,17 +1,6 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/05-java-ios/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/05-java-ios/05-java-ios-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4
-[illustration]: ./images/main-illustration.jpg
+# Java IOs
 
-# Java IOs - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
@@ -20,13 +9,25 @@ Based on the original course by O. Liechti and J. Ehrensberger.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.01-java-ios/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.01-java-ios/01-course-material/02.01-java-ios-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
+- Solution: [Link to content](../03-solution/)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
+  - [Clone the main repository](#clone-the-main-repository)
+  - [Open the repository in your IDE](#open-the-repository-in-your-ide)
   - [Check and run the code examples](#check-and-run-the-code-examples)
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
 - [The Java IO API](#the-java-io-api)
@@ -80,49 +81,57 @@ able to run some code examples along with the theory.
 These skills are essential to be able to process data from the network later on
 this course!
 
+In short, by the end of this course, you should be able to:
+
+- Differentiate the different types of data (binary vs. text).
+- Understand the abstract notion of sources, streams and sinks.
+- Use the different IO types for different use-cases.
+- Use the Java IO API to read and write files.
+
 Let's get started!
 
 ## Prepare and setup your environment
 
-### Check and run the code examples
-
-In this section, you will clone the code examples repository to check and run
-the code examples along with the theory.
-
-#### Clone the repository
+### Clone the main repository
 
 Clone the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository to get the code examples.
+[`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+repository if you have not done it yet. This repository contains all the course
+material, including the code examples and the practical content.
 
-#### Access the code examples in your terminal
+### Open the repository in your IDE
 
-Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
-directory.
+Open the `heig-vd-dai-course` repository in your favorite IDE.
 
-As a quick reminder, these commands can help you to navigate in the terminal:
+### Check and run the code examples
 
-- `ls` to list the files and directories in the current directory
-- `cd directory` to navigate to the `directory` directory
-- `cd ..` to navigate to the parent directory
-- `pwd` to print the current directory
-- `clear` to clear the terminal
-- `exit` to exit the terminal
+Check out the `README.md` file to learn how to run the code examples. Open a
+terminal and navigate to the
+`heig-vd-dai-course/02.01-java-ios/02-code-examples` directory.
 
-#### Explore and run the code examples
+> [!TIP]
+>
+> As a quick reminder, these commands can help you to navigate in the terminal:
+>
+> - `ls` to list the files and directories in the current directory
+> - `cd directory` to navigate to the `directory` directory
+> - `cd ..` to navigate to the parent directory
+> - `pwd` to print the current directory
+> - `clear` to clear the terminal
+> - `exit` to exit the terminal
 
-In the `05-java-ios` directory, check out the `README.md` file to learn how to
-run the code examples.
-
-As a quick reminder, you can run the code examples using the following command:
-
-```sh
-# Compile the code example
-javac HelloWorld.java
-
-# Run the code example
-java HelloWorld
-```
+> [!TIP]
+>
+> As a quick reminder, you can run the code examples using the following
+> commands:
+>
+> ```sh
+> # Compile the code example
+> javac HelloWorld.java
+>
+> # Run the code example
+> java HelloWorld
+> ```
 
 You now have everything you need to run the code examples. Let's dive into the
 theory!
@@ -132,19 +141,19 @@ theory!
 Whenever you deal with data, you need to read data from a source and write it to
 a destination.
 
-An abstraction of this process is called **sources, streams and sinks of data**.
+An abstraction of this process is called sources, streams and sinks of data.
 
-A **stream** is a way to read or write data from a **source** to a **sink**.
+A stream is a way to read or write data from a source to a sink.
 
-A **source of data** is **where the data comes from**. It can be a file, a
-network connection, a keyboard, etc. A common term for a source of data is
-something that **produces** data (**a producer**).
+A source of data is where the data comes from. It can be a file, a network
+connection, a keyboard, etc. A common term for a source of data is something
+that produces data (a _producer_).
 
-A **sink of data** is **where the data goes**. It can be another file, a network
+A sink of data is where the data goes. It can be another file, a network
 connection, a screen, etc. A common term for a sink of data is something that
-**consumes** data (**a consumer**).
+consumes data (a _consumer_).
 
-A **stream** is **a way to read or write data** from a source to a sink.
+A stream is a way to read or write data from a source to a sink.
 
 ## The Java IO API
 
@@ -153,15 +162,15 @@ separated in modules. The Java IO API is part of the `java.base` module.
 
 In the `java.base` module, there are two main packages to read and write data:
 
-- `java.io`: the standard Java IO API
-- `java.nio`: the Java NIO API
+- `java.io`: the standard Java IO API.
+- `java.nio`: the Java NIO API.
 
-The `java.io` package is called **Java IO API** or the **standard Java IO API**.
+The `java.io` package is called the _Java IO API_ or the _standard Java IO API_.
 
-The **Java NIO API** was introduced in Java 1.4. It is a more modern API that
-can be more efficient and more flexible than the Java IO API in some use-case.
-It is also more complex to use and is meant for more advanced use cases (writing
-scalable servers for example). We will not cover this API in this course.
+The _Java NIO API_ was introduced in Java 1.4. It is a more modern API that can
+be more efficient and more flexible than the Java IO API in some use-case. It is
+also more complex to use and is meant for more advanced use cases (writing
+scalable servers for example). We will not cover this API in this teaching unit.
 
 ## Types of data
 
@@ -189,9 +198,9 @@ with to use the right tools to read or write the data.
 
 Binary data processing is the most basic type of data processing:
 
-1. You open a file
+1. You open a file.
 2. You read/write/modify the bytes as they are (e.g. copy to another file).
-3. You close the file
+3. You close the file.
 
 You do not have to interpret the bytes, you just use them as they are.
 
@@ -205,8 +214,8 @@ This is done using the `InputStream` class. The `InputStream` class is an
 abstract class that is the superclass of all classes representing an input
 stream of bytes (e.g. `FileInputStream`).
 
-Open the `BinaryReadFileExample.java` file in the `05-java-ios` directory to see
-how to read binary data byte by byte.
+Open the `BinaryReadFileExample.java` file to see how to read binary data byte
+by byte.
 
 The following line opens a file for reading binary data. It will attempt to open
 the file `binary-file.bin` in the current directory:
@@ -217,7 +226,11 @@ InputStream fis = new FileInputStream("binary-file.bin");
 
 As this file is not yet created, the program will throw a
 `FileNotFoundException` exception if you try to execute the program. This is
-normal. You will create this file and run the program later.
+normal.
+
+An exception is a way to signal that something went wrong and should be handled.
+In this case, it is expected as the file does not exist yet. You will create
+this file and run the program later.
 
 The following line reads data from the file byte by byte:
 
@@ -259,8 +272,8 @@ This is done using the `OutputStream` class. The `OutputStream` class is an
 abstract class that is the superclass of all classes representing an output
 stream of bytes.
 
-Open the `BinaryWriteFileExample.java` file in the `05-java-ios` directory to
-see how to write binary data byte by byte.
+Open the `BinaryWriteFileExample.java` file to see how to write binary data byte
+by byte.
 
 The following line opens a file for writing binary data. It will attempt to open
 the file `binary-file.bin` in the current directory:
@@ -326,8 +339,8 @@ The `BufferedInputStream` class is a subclass of the `InputStream` class that
 adds buffering to the input stream. The `BufferedOutputStream` class is a
 subclass of the `OutputStream` class that adds buffering to the output stream.
 
-Open the `BinaryBufferReadFileExample.java` file in the `05-java-ios` directory
-to see how to read binary data with buffers.
+Open the `BinaryBufferReadFileExample.java` file to see how to read binary data
+with buffers.
 
 Here are the changes between the `BinaryReadFileExample.java` file and the
 `BinaryBufferReadFileExample.java` file:
@@ -362,8 +375,8 @@ Compile and execute the `BinaryBufferReadFileExample.java` file. This will read
 the content of the file `binary-file.bin` and print the file content to the
 console.
 
-Open the `BinaryBufferWriteFileExample.java` file in the `05-java-ios` directory
-to see how to write binary data with buffers.
+Open the `BinaryBufferWriteFileExample.java` file to see how to write binary
+data with buffers.
 
 Here are the changes between the `BinaryWriteFileExample.java` file and the
 `BinaryBufferWriteFileExample.java` file:
@@ -466,9 +479,9 @@ Common code pages are **ISO-8859-1** (also called **Latin-1**), **ISO-8859-15**
 issues of ASCII and code pages** that could not support all specificities of all
 languages:
 
-- Languages with more than 256 characters (like Chinese)
-- Languages with more than one alphabet (like Serbian)
-- Languages with more than one writing system (like Chinese or Japanese)
+- Languages with more than 256 characters (like Chinese).
+- Languages with more than one alphabet (like Serbian).
+- Languages with more than one writing system (like Chinese or Japanese).
 
 The Unicode specification defines 1,112,064 characters.
 
@@ -523,9 +536,8 @@ A good example is when you open a text file encoded in UTF-8 with a text editor
 that does not support UTF-8. The text editor will try to interpret the file as
 ASCII and will display the wrong characters (`Ã©` instead of `é` for example).
 
-Open the `TextCharacterEncodingsExample.java` file in the `05-java-ios`
-directory to see how to encode and decode characters with different character
-encodings.
+Open the `TextCharacterEncodingsExample.java` file to see how to encode and
+decode characters with different character encodings.
 
 Compile and execute the `TextCharacterEncodingsExample.java` file. This will
 print the word "student" encoded in different character encodings for different
@@ -552,8 +564,8 @@ This is done using the `Reader` and `Writer` classes:
 - The `Writer` class is an abstract class that is the superclass of all classes
   representing an output stream of characters (e.g. `FileWriter`).
 
-Open the `TextReadAndWriteFileExample.java` file in the `05-java-ios` directory
-to see how to read and write text data.
+Open the `TextReadAndWriteFileExample.java` file to see how to read and write
+text data.
 
 The following line opens a file for reading text data. It will attempt to open
 the file `TextReadAndWriteFileExample.java` (the current file) in the current
@@ -598,8 +610,8 @@ reader.close();
 Just as with binary data, reading and writing text data byte by byte is not
 efficient. You can use a buffer to read and write text data more efficiently.
 
-Open the `TextBufferReadAndWriteFileExample.java` file in the `05-java-ios`
-directory to see how to read and write text data with buffers.
+Open the `TextBufferReadAndWriteFileExample.java` file to see how to read and
+write text data with buffers.
 
 Here are the changes between the `TextReadAndWriteFileExample.java` file and the
 `TextBufferReadAndWriteFileExample.java` file:
@@ -662,8 +674,8 @@ The end of line character is a special character that marks the end of a line.
 
 There are different end of line characters depending on the operating system:
 
-- Unix/Linux/macOS: `'\n'`, called _"Line feed"_ (`LF`)
-- Windows: `'\r\n'`, called _"Carriage Return + Line feed"_ (`CR`+`LF`)
+- Linux/macOS: `'\n'`, called _"Line feed"_ (`LF`).
+- Windows: `'\r\n'`, called _"Carriage Return + Line feed"_ (`CR`+`LF`).
 
 When you read a text file line by line, the string you get will **not** contain
 the end of line character(s).
@@ -671,8 +683,8 @@ the end of line character(s).
 When you write a string to a file, you have to add the end of line character(s)
 yourself if you want to write a new line.
 
-Open the `TextEndOfLineCharactersExample.java` file in the `05-java-ios`
-directory to see how to read and write text data with end of line characters.
+Open the `TextEndOfLineCharactersExample.java` file to see how to read and write
+text data with end of line characters.
 
 The following line opens a file for writing text data. It will attempt to open
 the file `TextEndOfLineCharactersExample.java` (the current file) in the current
@@ -725,8 +737,9 @@ line character(s).
 
 While the `System.lineSeparator()` method returns the end of line character(s)
 for the current operating system, it is better to set a constant for the end of
-line character(s) in your program. This way, you can control the end of line
-character(s) and make sure that the file is written correctly for all systems.
+line character(s) in your program or allow to set it from a command line
+parameter. This way, you can control the end of line character(s) and make sure
+that the file is written correctly for the target operating system.
 
 ### Dealing with errors
 
@@ -757,8 +770,8 @@ might be down, the connection might be lost, etc.
 
 You will have to manage these errors when you will work with the network.
 
-Open the `DealingWithErrorsExample.java` file in the `05-java-ios` directory to
-see how to handle errors when reading and writing data.
+Open the `DealingWithErrorsExample.java` file to see how to handle errors when
+reading and writing data.
 
 The following function is a bad example of how to handle errors when reading and
 writing binary data:
@@ -897,7 +910,8 @@ not to use the `PrintWriter` class in this course. It is better to use the
 You might also encounter the `System.lineSeparator()` method. The
 `System.lineSeparator()` method returns the end of line character(s) for the
 current operating system. As it is a system-dependent property, it is better to
-set a constant for the end of line character(s) in your program.
+set a constant or ask the user for the wanted end of line character(s) in your
+program.
 
 ## Practical content
 
@@ -933,14 +947,14 @@ you.
 You will benchmark the different types of streams to see which one is the most
 efficient for your use case:
 
-- Open a binary file for byte per byte reading
-- Write a binary file for byte per byte writing
-- Open a binary file for buffer reading
-- Write a binary file for buffer writing
-- Open a text file for byte per byte reading
-- Write a text file for byte per byte writing
-- Open a text file for buffer reading
-- Write a text file for buffer writing
+- Open a binary file for byte per byte reading.
+- Write a binary file for byte per byte writing.
+- Open a binary file for buffer reading.
+- Write a binary file for buffer writing.
+- Open a text file for byte per byte reading.
+- Write a text file for byte per byte writing.
+- Open a text file for buffer reading.
+- Write a text file for buffer writing.
 
 You will then execute your CLI tool to write data of a certain size and read
 them back to compare the execution time.
@@ -1034,7 +1048,7 @@ You can use reactions to express your opinion on a comment!
 
 In the next chapter, you will learn the following topics:
 
-- Docker and Docker Compose: how to containerize your applications
+- Docker and Docker Compose - How to containerize your applications:
   - What is an image?
   - What is a container?
   - How to try out new software without installing it?
@@ -1050,8 +1064,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
-repository.
+[`03-solution`](../03-solution/README.md) directory of this repository.
 
 If you have any questions about the solution, feel free to open an issue to
 discuss it!
@@ -1061,6 +1074,6 @@ discuss it!
 - Main illustration by [Martijn Baudoin](https://unsplash.com/@martijnbaudoin)
   on [Unsplash](https://unsplash.com/photos/audio-mixer-set-4h0HqC3K4-c)
 
-```
-
-```
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/4

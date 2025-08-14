@@ -86,9 +86,9 @@ Dates are taken from the
 | -------------------: | :--------------------------------- | :--------------------------------------- | :------------------------------------------- | :-------------- |
 |    [00](#-course-00) | _Before the start of the semester_ | Set up a Windows development environment | Considerations for a development environment | 🟢 Ready        |
 |    [01](#-course-01) | 15.09. - 21.09.25                  | Git, GitHub and Markdown                 | Java, IntelliJ IDEA and Maven                | 🟢 Ready        |
-|    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/5)                       | 🟡 In progress  |
-|    [03](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/5)                   | Practical work 1 (3/5)                       | 🔴 To do        |
-|    [04](#-course-04) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (4/5)                       | 🔴 To do        |
+|    [02](#-course-02) | 22.09. - 28.09.25                  | Java IOs                                 | Practical work 1 (1/5)                       | 🟢 Ready        |
+|    [03](#-course-03) | 29.09. - 05.10.25                  | Practical work 1 (2/5)                   | Practical work 1 (3/5)                       | 🟢 Ready        |
+|    [04](#-course-04) | 06.10. - 12.10.25                  | Docker and Docker Compose                | Practical work 1 (4/5)                       | 🟡 In progress  |
 | 🚨 [05](#-course-05) | 13.10. - 19.10.25                  | SMTP and ncat                            | Practical work 1 (5/5) - Presentations       | 🔴 To do        |
 |                    - | 20.10. - 26.10.25                  | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | -               |
 |    [06](#-course-06) | 27.10. - 02.11.25                  | Define an application protocol           | Practical work 2 (1/6)                       | 🔴 To do        |
@@ -178,8 +178,7 @@ Dates are taken from the
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.04-java-intellij-idea-and-maven/01-course-material/01.04-java-intellij-idea-and-maven-presentation.pdf)
-- Solution:
-  [Link to content](./01.04-java-intellij-idea-and-maven/02-solution/README.md)
+- Solution: [Link to content](./01.04-java-intellij-idea-and-maven/02-solution/)
 
 [Jump back to Program](#-program)
 
@@ -194,8 +193,8 @@ Dates are taken from the
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.01-java-ios/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.01-java-ios/01-course-material/02.01-java-ios-presentation.pdf)
-- Code examples: [Link to content](./02.01-java-ios/02-code-examples/README.md)
-- Solution: [Link to content](./02.01-java-ios/03-solution/README.md)
+- Code examples: [Link to content](./02.01-java-ios/02-code-examples/)
+- Solution: [Link to content](./02.01-java-ios/03-solution/)
 
 [Jump back to Program](#-program)
 
@@ -253,9 +252,8 @@ Dates are taken from the
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/04.01-docker-and-docker-compose-presentation.pdf)
 - Code examples:
-  [Link to content](./04.01-docker-and-docker-compose/02-code-examples/README.md)
-- Solution:
-  [Link to content](./04.01-docker-and-docker-compose/03-solution/README.md)
+  [Link to content](./04.01-docker-and-docker-compose/02-code-examples/)
+- Solution: [Link to content](./04.01-docker-and-docker-compose/03-solution/)
 
 [Jump back to Program](#-program)
 
@@ -309,9 +307,8 @@ Dates are taken from the
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/05.03-smtp-and-ncat-presentation.pdf)
-- Code examples:
-  [Link to content](./05.03-smtp-and-ncat/02-code-examples/README.md)
-- Solution: [Link to content](./05.03-smtp-and-ncat/03-solution/README.md)
+- Code examples: [Link to content](./05.03-smtp-and-ncat/02-code-examples/)
+- Solution: [Link to content](./05.03-smtp-and-ncat/03-solution/)
 
 [Jump back to Program](#-program)
 
@@ -342,9 +339,9 @@ Dates are taken from the
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/06.01-define-an-application-protocol-presentation.pdf)
 - Code examples:
-  [Link to content](./06.01-define-an-application-protocol/02-code-examples/README.md)
+  [Link to content](./06.01-define-an-application-protocol/02-code-examples/)
 - Solution:
-  [Link to content](./06.01-define-an-application-protocol/03-solution/README.md)
+  [Link to content](./06.01-define-an-application-protocol/03-solution/)
 
 [Jump back to Program](#-program)
 
@@ -438,9 +435,8 @@ Dates are taken from the
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.01-java-network-concurrency/01-course-material/09.01-java-network-concurrency-presentation.pdf)
 - Code examples:
-  [Link to content](./09.01-java-network-concurrency/02-code-examples/README.md)
-- Solution:
-  [Link to content](./09.01-java-network-concurrency/03-solution/README.md)
+  [Link to content](./09.01-java-network-concurrency/02-code-examples/)
+- Solution: [Link to content](./09.01-java-network-concurrency/03-solution/)
 
 [Jump back to Program](#-program)
 
@@ -551,7 +547,7 @@ Dates are taken from the
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/12.01-http-and-curl-presentation.pdf)
-- Solution: [Link to content](./12.01-http-and-curl/02-solution/README.md)
+- Solution: [Link to content](./12.01-http-and-curl/02-solution/)
 
 [Jump back to Program](#-program)
 
@@ -580,7 +576,7 @@ Dates are taken from the
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/13.01-web-infrastructures/01-course-material/13.01-web-infrastructures-presentation.pdf)
 - Code examples:
-  [Link to content](./13.01-web-infrastructures/02-code-examples/README.md)
+  [Link to content](./13.01-web-infrastructures/02-code-examples/)
 
 [Jump back to Program](#-program)
 
@@ -609,8 +605,7 @@ Dates are taken from the
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/14.01-caching-and-performance-presentation.pdf)
-- Solution:
-  [Link to content](./14.01-caching-and-performance/02-solution/README.md)
+- Solution: [Link to content](./14.01-caching-and-performance/02-solution/)
 
 [Jump back to Program](#-program)
 

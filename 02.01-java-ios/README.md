@@ -1,0 +1,4 @@
+- Differentiate the different types of data (binary vs. text).
+- Understand the abstract notion of sources, streams and sinks.
+- Use the different IO types for different use-cases.
+- Use the Java IO API to read and write files.
