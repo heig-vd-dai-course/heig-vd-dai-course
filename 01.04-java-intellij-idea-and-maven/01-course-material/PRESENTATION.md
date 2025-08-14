@@ -126,7 +126,7 @@ You can compile and run Java programs in multiple ways:
 - Java has automatic memory management: we do not need to manually manage memory
   as in C or C++.
 - The garbage collector (also called _"GC"_) runs periodically to free memory.
-- Eligible when an object is no longer referenced (out of scope or `null`)
+- Eligible when an object is no longer referenced (out of scope or `null`).
 
 ![bg right:40%](https://images.unsplash.com/photo-1528190336454-13cd56b45b5a?fit=crop&h=720)
 
