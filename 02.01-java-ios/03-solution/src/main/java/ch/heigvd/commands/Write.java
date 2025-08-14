@@ -1,10 +1,10 @@
-package ch.heigvd.dai.commands;
+package ch.heigvd.commands;
 
-import ch.heigvd.dai.ios.Writable;
-import ch.heigvd.dai.ios.binary.BinaryFileWriter;
-import ch.heigvd.dai.ios.binary.BufferedBinaryFileWriter;
-import ch.heigvd.dai.ios.text.BufferedTextFileWriter;
-import ch.heigvd.dai.ios.text.TextFileWriter;
+import ch.heigvd.ios.Writable;
+import ch.heigvd.ios.binary.BinaryFileWriter;
+import ch.heigvd.ios.binary.BufferedBinaryFileWriter;
+import ch.heigvd.ios.text.BufferedTextFileWriter;
+import ch.heigvd.ios.text.TextFileWriter;
 import java.util.concurrent.Callable;
 import picocli.CommandLine;
 

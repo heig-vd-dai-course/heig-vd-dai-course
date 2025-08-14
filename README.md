@@ -373,7 +373,7 @@ Dates are taken from the
 - Code examples:
   [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples/README.md>)
 - Solution:
-  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/03-solution/README.md>)
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/03-solution/>)
 
 [Jump back to Program](#-program)
 
@@ -405,7 +405,7 @@ Dates are taken from the
 - Code examples:
   [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/02-code-examples/README.md>)
 - Solution:
-  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/03-solution/README.md>)
+  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/03-solution/>)
 
 [Jump back to Program](#-program)
 
@@ -717,9 +717,9 @@ directory. These can help you to prepare the teaching unit.
     advance if there are any changes.
 
 [^first-part]:
-    The **main** content of the the first part of the course. It usually last
-    two periods (2 x 45 minutes). However, it can be longer or shorter depending
-    on the complexity of the topics covered and the pace of the students.
+    The **main** content of the first part of the course. It usually last two
+    periods (2 x 45 minutes). However, it can be longer or shorter depending on
+    the complexity of the topics covered and the pace of the students.
 
 [^second-part]:
     The **main** content of the second part of the course. It usually lasts two

@@ -141,7 +141,9 @@ Given a Java source file named `HelloWorld.java`:
 ```java
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello DAI students!");
+        String message = "Hello, world!";
+
+        System.out.println(message);
     }
 }
 ```
@@ -163,7 +165,7 @@ java HelloWorld
 Output:
 
 ```text
-Hello DAI students!
+Hello, world!
 ```
 
 A Java application can be packaged into a JAR (Java ARchive) file, which is a
@@ -189,7 +191,14 @@ dependency manager such as [Maven](https://maven.apache.org/) or
 
 ### Garbage collection
 
-TODO
+Java has automatic memory management, meaning that the programmer does not need
+to manually allocate and free memory as in languages such as C or C++.
+
+The garbage collector (also called _"GC"_) is a background process that runs
+periodically to free memory by removing objects that are no longer referenced.
+
+When an object is no longer referenced (e.g. out of scope or set to `null`), it
+becomes eligible for garbage collection.
 
 ### Summary
 

@@ -423,11 +423,11 @@ console.
 
 ### A quick note on little endian vs. big endian
 
-When working with binary data, you need to know if the data is encoded in
-**little endian** or in **big endian**.
+When working with binary data, you need to know if the data is encoded in little
+endian or in big endian.
 
-**Little endian** means that the least significant byte is stored first. **Big
-endian** means that the most significant byte is stored first.
+Little endian means that the least significant byte is stored first. Big endian
+means that the most significant byte is stored first.
 
 For example, the number `0x12345678` is stored as `0x78 0x56 0x34 0x12` in
 little endian and as `0x12 0x34 0x56 0x78` in big endian.
@@ -452,7 +452,7 @@ encodings.
 
 ### Ancestor of character representations: ASCII
 
-The **American Standard Code for Information Interchange (ASCII)** is one of the
+The American Standard Code for Information Interchange (ASCII) is one of the
 first character encodings. It is a character encoding that maps 128 binary
 values to 128 characters. For example, the binary data `01000001` is mapped to
 the character `A`.
@@ -466,17 +466,16 @@ As ASCII is a very limited character encoding (only 8 bits, leaving 128 other
 possible values), many other character encodings were created to support more
 characters and languages.
 
-These extended ASCII character encodings are called **code pages**. They were
-then standardized by the **International Organization for Standardization
-(ISO)**.
+These extended ASCII character encodings are called code pages. They were then
+standardized by the International Organization for Standardization (ISO).
 
-Common code pages are **ISO-8859-1** (also called **Latin-1**), **ISO-8859-15**
-(also called **Latin-9**), **Windows-1252** (also called **CP1252**), etc.
+Common code pages are ISO-8859-1 (also called Latin-1), ISO-8859-15 (also called
+Latin-9), Windows-1252 (also called CP1252), etc.
 
 ### Unicode
 
-**Unicode** is a newer character encoding standard that was meant to **solve the
-issues of ASCII and code pages** that could not support all specificities of all
+Unicode is a newer character encoding standard that was meant to solve the
+issues of ASCII and code pages that could not support all specificities of all
 languages:
 
 - Languages with more than 256 characters (like Chinese).
@@ -485,18 +484,17 @@ languages:
 
 The Unicode specification defines 1,112,064 characters.
 
-This is enough to **support all languages in the world** as well as emojis (for
-our greatest pleasure... 🥲).
+This is enough to support all languages in the world as well as emojis (for our
+greatest pleasure... 🥲).
 
-Implementations of the Unicode standard are called **Unicode Transformation
-Formats (UTF)**. The most common implementations is **UTF-8**.
+Implementations of the Unicode standard are called Unicode Transformation
+Formats (UTF). The most common implementations is UTF-8.
 
 ### UTF-8
 
-**UTF-8** is a variable-length character encoding that uses 1 to 4 bytes to
-encode a character. It is the most common implementation of the Unicode
-standard. It is the default character encoding on the Internet and many other
-applications.
+UTF-8 is a variable-length character encoding that uses 1 to 4 bytes to encode a
+character. It is the most common implementation of the Unicode standard. It is
+the default character encoding on the Internet and many other applications.
 
 UTF-8 is backward compatible with ASCII. This means that if you have a file
 encoded in ASCII, it is also encoded in UTF-8.
@@ -667,8 +665,8 @@ file content to the file `TextReadAndWriteFileExample.txt`.
 
 ### End of line characters
 
-Another important thing to know when dealing with text files is the **end of
-line character**.
+Another important thing to know when dealing with text files is the end of line
+character.
 
 The end of line character is a special character that marks the end of a line.
 
@@ -924,16 +922,12 @@ of streams to see which one is the most efficient for different use cases.
 
 ### Create and clone the repository
 
-You can create a new GitHub project using the template we have prepared for you.
+You can create a new GitHub repository using the template we have prepared for
+you.
 
 When you create a new repository, you can choose to use a template. Select the
 `heig-vd-dai-course/heig-vd-dai-course-java-ios-practical-content` template as
 shown in the following screenshot:
-
-> [!WARNING]
->
-> Please make sure that the repository owner is your personal GitHub account and
-> not the `heig-vd-dai-course` organization.
 
 ![Create the new repository from the template](./images/create-and-clone-the-template-repository.png)
 
@@ -942,10 +936,11 @@ Clone the repository locally.
 ### Implement the different types of streams
 
 Take some time to explore the codebase from the template we have prepared for
-you.
+you. Try to understand how the code is structured and what each file does.
+Package the application and run it to see how it works.
 
-You will benchmark the different types of streams to see which one is the most
-efficient for your use case:
+Your job is to benchmark the different types of streams to see which one is the
+most efficient for your use case:
 
 - Open a binary file for byte per byte reading.
 - Write a binary file for byte per byte writing.
@@ -956,13 +951,16 @@ efficient for your use case:
 - Open a text file for buffer reading.
 - Write a text file for buffer writing.
 
-You will then execute your CLI tool to write data of a certain size and read
-them back to compare the execution time.
+For this, you must update the diverse classes in the
+`src/main/java/ch/heigvd/ios` directory of your repository.
 
 Read the course material carefully to find the right classes to use. You can
 also have a look at the Java documentation to find more details on the right
 classes to use and how to use them:
 <https://docs.oracle.com/en/java/javase/21/docs/api/>.
+
+You will then execute your CLI tool to write data of a certain size and read
+them back to compare the execution time.
 
 ### Compare the results
 
@@ -977,10 +975,11 @@ Share your results in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2025-2026] - Java IOs benchmarking - First name Last Name
+- **Title**: [DAI 2025-2026] - Java IOs benchmarking - <first name> <last
+  name> (replace `<first name>` and `<last name>` with your information)
 - **Category**: Show and tell
 - **Description**: The link to your GitHub repository, the results of your
-  benchmarking in Markdown table and add your conclusions to the following
+  benchmarking in a Markdown table and your conclusions to the following
   questions:
   - Which type of stream is the most efficient for each use case?
   - Why is it more efficient than the other types of streams?
@@ -1064,7 +1063,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`03-solution`](../03-solution/README.md) directory of this repository.
+[`solution`](../03-solution/) directory of this repository.
 
 If you have any questions about the solution, feel free to open an issue to
 discuss it!
