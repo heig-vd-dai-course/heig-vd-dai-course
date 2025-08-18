@@ -106,11 +106,11 @@ information:
 
 > [!CAUTION]
 >
-> **Please do it a before the next week**, even if you do not have a clear idea
-> yet as it will help us to plan the practical work presentations.
+> **You must do it before next week**, even if you do not have a clear idea yet
+> as it will help us to plan the practical work presentations.
 >
-> **If you do not open the discussion before next week, you will be penalized
-> (-0.2 point on the final grade).**
+> Please refer to the [Constraints](#constraints) section to know what is
+> expected from you.
 
 ## Idea validation
 

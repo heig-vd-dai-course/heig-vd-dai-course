@@ -283,12 +283,12 @@ More details for this section in the [course material][course-material].
 
 ### Group composition
 
-- 2 or 3 students per group
+- Two (2) or three (3) students per group.
 - Create a GitHub Discussion to:
-  - Announce your group members
-  - Announce your idea (even a draft is fine)
-- **Please do it a before the next week**, otherwise you will be penalized (-0.2
-  point on the final grade)
+  - Announce your group members.
+  - Announce your idea (even a draft is fine).
+- **You must do it before next week**, otherwise you will be penalized (check
+  the [Constraints](#constraints) for details).
 
 ![bg right:40%](https://images.unsplash.com/photo-1491911923017-19f90d8d7f83?fit=crop&h=720)
 
@@ -300,10 +300,10 @@ More details for this section in the [course material][course-material].
 
 ### Idea validation
 
-- You must state your idea on your GitHub Discussion
-- We might ask you to change your idea if it is too simple or too complex
-- We will help you to find a good idea if needed
-- **Do it as soon as possible before next week!**
+- You must state your idea on your GitHub Discussion.
+- We might ask you to change your idea if it is too simple or too complex.
+- We will help you to find a good idea if needed.
+- **You must do it before next week!**
 
 ![bg right:40%](https://images.unsplash.com/photo-1543075137-5a97903aaa7a?fit=crop&h=720)
 

@@ -23,7 +23,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 - [Demo](#demo)
-- [See the result](#see-the-result)
+  - [Compile and run the CLI](#compile-and-run-the-cli)
+  - [Run the CLI](#run-the-cli)
+  - [See the results](#see-the-results)
 - [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
@@ -68,8 +70,10 @@ display a message on success and a message on failure.
 
 You have the freedom to define what the CLI will do. You can be creative! For
 example, you can choose to transform a text file (find/replace/count number of
-occurrences/etc.), to grayscale a JPEG/PNG binary file manipulating its pixel
-values, add metadata to existing TIFF files, etc.
+occurrences/etc.), process images (grayscale, transform, scale), add metadata to
+pictures, apply cryptographic transformations (encrypt/decrypt/sign/verify),
+process audio files (convert sample rates, change the volume, apply effects like
+reverb), etc.
 
 Multiple groups can choose the same processing and you can share your
 methodology and take inspiration from/help each other. However, you are not
@@ -232,14 +236,14 @@ to your repository!
 
 ### Category 3 - Java IOs
 
-| #   | Criterion                                                                                                                          | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 17  | The CLI offers at least two subcommands with comprehensive help messages using mandatory and optional arguments for customization. |    0.2 |
-| 18  | The CLI processes the files efficiently.                                                                                           |    0.2 |
-| 19  | The CLI processes the files so that they are compatible across operating systems/languages.                                        |    0.2 |
-| 20  | The CLI correctly manages resources in case a problem occurs when processing the files.                                            |    0.2 |
-| 21  | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s).                                      |    0.2 |
-| 22  | The CLI displays explicit error messages[^explicit-error-messages] on invalid/missing inputs and/or processing errors.             |    0.2 |
+| #   | Criterion                                                                                                                                | Points |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 17  | The CLI offers at least two distinct commands with comprehensive help messages using mandatory and optional arguments for customization. |    0.2 |
+| 18  | The CLI processes the files efficiently.                                                                                                 |    0.2 |
+| 19  | The CLI processes the files so that they are compatible across operating systems/languages.                                              |    0.2 |
+| 20  | The CLI correctly manages resources in case a problem occurs when processing the files.                                                  |    0.2 |
+| 21  | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s).                                            |    0.2 |
+| 22  | The CLI displays explicit error messages[^explicit-error-messages] on invalid/missing inputs and/or processing errors.                   |    0.2 |
 
 ### Category 4 - Presentation and questions
 
@@ -453,16 +457,16 @@ on GitHub:
 
 ### How and what to present
 
-You are free to present your work as you want. You can use slides, a live demo,
-a small theater piece, etc., however:
+You are free to present your work as you want. You can use slides, poster, a
+small theater piece, etc. However:
 
 - No need to remind us the objectives (we know them).
-- No need to present us the code (we will grade it later).
+- No need to present us the code if not relevant (we will grade it later - OK if
+  interesting, complex, or tricky (= relevant)).
 - Focus your presentation on the _"what"_ and the _"why"_.
 
 Aim to explain/pitch your project to someone that has a good technical
-understanding but has strictly no idea of your project and what it does and how
-you have done it.
+understanding but who has no idea about your project.
 
 ## Milestones
 
