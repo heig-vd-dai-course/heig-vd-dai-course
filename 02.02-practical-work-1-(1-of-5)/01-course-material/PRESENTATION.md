@@ -36,8 +36,8 @@ _paginate: false
 - Practice Java IOs.
 - Practice Java, Maven and [picocli](https://picocli.info/).
 - Practice a Git workflow to share your work with your team.
-- You can choose what the CLI will do (you can be creative! - extract metrics
-  from a text file, grayscale a JPEG file, etc.)
+- You can choose what the CLI will do (you can be creative! - manipulate text,
+  images, audio, cryptographic transformations, etc. for example).
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -318,16 +318,16 @@ Do not be Numérobis from the movie _Astérix et Obélix : Mission Cléopâtre_!
 
 ### How and what to present
 
-You are free to present your work as you want. You can use slides, a live demo,
-a small theater piece, etc., however:
+You are free to present your work as you want. You can use slides, poster, a
+small theater piece, etc. However:
 
-- No need to remind us the objectives (we know them)
-- No need to present us the code (we will grade it later)
-- Focus your presentation on the _"what"_ and the _"why"_
+- No need to remind us the objectives (we know them).
+- No need to present us the code if not relevant (we will grade it later - OK if
+  interesting, complex, or tricky (= relevant)).
+- Focus your presentation on the _"what"_ and the _"why"_.
 
 Aim to explain/pitch your project to someone that has a good technical
-understanding but has strictly no idea of your project and what it does and how
-you have done it.
+understanding but who has no idea about your project.
 
 ## Questions
 

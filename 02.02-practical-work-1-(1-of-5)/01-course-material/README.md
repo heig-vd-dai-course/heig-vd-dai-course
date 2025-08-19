@@ -64,15 +64,16 @@ In this practical work, you will create a CLI using
 
 The CLI will take an input file and an output file as arguments. It will also
 take optional arguments to customize the CLI (such as the input file encoding
-and the output file encoding - the default being UTF-8 for example - and/or the
-end of line character(s)). The CLI will process the input file and write the
-result in the output file. It will display a message on success and a message on
-failure.
+and the output file encoding - the default being UTF-8 for example). The CLI
+will process the input file and write the result in the output file. It will
+display a message on success and a message on failure.
 
 You have the freedom to define what the CLI will do. You can be creative! For
 example, you can choose to transform a text file (find/replace/count number of
-occurrences/etc.), to grayscale a JPEG/PNG binary file manipulating its pixel
-values, add metadata to existing TIFF files, etc.
+occurrences/etc.), process images (grayscale, transform, scale), add metadata to
+pictures, apply cryptographic transformations (encrypt/decrypt/sign/verify),
+process audio files (convert sample rates, change the volume, apply effects like
+reverb), etc.
 
 Multiple groups can choose the same processing and you can share your
 methodology and take inspiration from/help each other. However, you are not
@@ -235,14 +236,14 @@ to your repository!
 
 ### Category 3 - Java IOs
 
-| #   | Criterion                                                                                                                          | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 17  | The CLI offers at least two subcommands with comprehensive help messages using mandatory and optional arguments for customization. |    0.2 |
-| 18  | The CLI processes the files efficiently.                                                                                           |    0.2 |
-| 19  | The CLI processes the files so that they are compatible across operating systems and languages.                                    |    0.2 |
-| 20  | The CLI correctly manages resources in case a problem occurs when processing the files.                                            |    0.2 |
-| 21  | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s).                                      |    0.2 |
-| 22  | The CLI displays explicit error messages[^explicit-error-messages] on invalid/missing inputs and/or processing errors.             |    0.2 |
+| #   | Criterion                                                                                                                                | Points |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+| 17  | The CLI offers at least two distinct commands with comprehensive help messages using mandatory and optional arguments for customization. |    0.2 |
+| 18  | The CLI processes the files efficiently.                                                                                                 |    0.2 |
+| 19  | The CLI processes the files so that they are compatible across operating systems and languages.                                          |    0.2 |
+| 20  | The CLI correctly manages resources in case a problem occurs when processing the files.                                                  |    0.2 |
+| 21  | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s).                                            |    0.2 |
+| 22  | The CLI displays explicit error messages[^explicit-error-messages] on invalid/missing inputs and/or processing errors.                   |    0.2 |
 
 ### Category 4 - Presentation and questions
 
@@ -272,8 +273,8 @@ The practical work must comply with the following rules:
 - You must state your sources if you have used elements that you are not the
   author (code from the Internet, code generated from AI tools, etc.). You must
   also state for which usage you did use the source(s)/tool(s) in your README.
-  If you plagiarize the code of another group, you will receive a penalty of 1
-  point on the final grade for all groups involved.
+  If you plagiarize the code of another group, all groups involved will receive
+  a grade of 1.
 
 > [!CAUTION]
 >
@@ -456,16 +457,16 @@ on GitHub:
 
 ### How and what to present
 
-You are free to present your work as you want. You can use slides, a live demo,
-a small theater piece, etc., however:
+You are free to present your work as you want. You can use slides, poster, a
+small theater piece, etc. However:
 
 - No need to remind us the objectives (we know them).
-- No need to present us the code (we will grade it later).
+- No need to present us the code if not relevant (we will grade it later - OK if
+  interesting, complex, or tricky (= relevant)).
 - Focus your presentation on the _"what"_ and the _"why"_.
 
 Aim to explain/pitch your project to someone that has a good technical
-understanding but has strictly no idea of your project and what it does and how
-you have done it.
+understanding but who has no idea about your project.
 
 ## Milestones
 
