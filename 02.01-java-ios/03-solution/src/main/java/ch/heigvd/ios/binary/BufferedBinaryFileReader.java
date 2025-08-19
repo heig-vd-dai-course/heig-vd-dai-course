@@ -1,6 +1,6 @@
-package ch.heigvd.dai.ios.binary;
+package ch.heigvd.ios.binary;
 
-import ch.heigvd.dai.ios.Readable;
+import ch.heigvd.ios.Readable;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;

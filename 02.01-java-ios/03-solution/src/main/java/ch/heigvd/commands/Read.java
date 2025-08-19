@@ -1,10 +1,10 @@
-package ch.heigvd.dai.commands;
+package ch.heigvd.commands;
 
-import ch.heigvd.dai.ios.Readable;
-import ch.heigvd.dai.ios.binary.BinaryFileReader;
-import ch.heigvd.dai.ios.binary.BufferedBinaryFileReader;
-import ch.heigvd.dai.ios.text.BufferedTextFileReader;
-import ch.heigvd.dai.ios.text.TextFileReader;
+import ch.heigvd.ios.Readable;
+import ch.heigvd.ios.binary.BinaryFileReader;
+import ch.heigvd.ios.binary.BufferedBinaryFileReader;
+import ch.heigvd.ios.text.BufferedTextFileReader;
+import ch.heigvd.ios.text.TextFileReader;
 import java.util.concurrent.Callable;
 import picocli.CommandLine;
 

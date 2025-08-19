@@ -89,7 +89,9 @@ Given the following `HelloWorld.java` file:
 ```java
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        String message = "Hello, World!";
+
+        System.out.println(message);
     }
 }
 ```
@@ -118,6 +120,15 @@ You can compile and run Java programs in multiple ways:
   ```sh
   java -Xmx1024M -Xms1024M -jar minecraft_server.1.20.1.jar nogui
   ```
+
+### Garbage collection
+
+- Java has automatic memory management: we do not need to manually manage memory
+  as in C or C++.
+- The garbage collector (also called _"GC"_) runs periodically to free memory.
+- Eligible when an object is no longer referenced (out of scope or `null`).
+
+![bg right:40%](https://images.unsplash.com/photo-1528190336454-13cd56b45b5a?fit=crop&h=720)
 
 ### Summary
 
@@ -317,11 +328,11 @@ In the next chapter, you will learn the following topics:
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Java logo by [Java](https://www.java.com/)
 - SDKMAN! logo by [SDKMAN!](https://sdkman.io/)
+- Illustration by [Jilbert Ebrahimi](https://unsplash.com/@jilburr) on
+  [Unsplash](https://unsplash.com/photos/black-plastic-garbage-bin-with-wheels-beside-wall-b0p818k8Ok8)
 - IntelliJ IDEA and Intellij Toolbox logos by
   [JetBrains](https://www.jetbrains.com/)
 - Maven logo by [Apache Software Foundation](https://maven.apache.org/)
-- Illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
 
 [course]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.04-java-intellij-idea-and-maven

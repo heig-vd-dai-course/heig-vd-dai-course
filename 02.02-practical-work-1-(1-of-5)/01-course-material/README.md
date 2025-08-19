@@ -240,7 +240,7 @@ to your repository!
 | --- | ---------------------------------------------------------------------------------------------------------------------------------------- | -----: |
 | 17  | The CLI offers at least two distinct commands with comprehensive help messages using mandatory and optional arguments for customization. |    0.2 |
 | 18  | The CLI processes the files efficiently.                                                                                                 |    0.2 |
-| 19  | The CLI processes the files so that they are compatible across operating systems/languages.                                              |    0.2 |
+| 19  | The CLI processes the files so that they are compatible across operating systems and languages.                                          |    0.2 |
 | 20  | The CLI correctly manages resources in case a problem occurs when processing the files.                                                  |    0.2 |
 | 21  | The CLI correctly processes the input file(s) and writes the result(s) to the output file(s).                                            |    0.2 |
 | 22  | The CLI displays explicit error messages[^explicit-error-messages] on invalid/missing inputs and/or processing errors.                   |    0.2 |
