@@ -55,6 +55,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Sign commits with SSH](#sign-commits-with-ssh)
   - [Add yourself to the list of students in the GitHub repository](#add-yourself-to-the-list-of-students-in-the-github-repository)
   - [Create your own profile README](#create-your-own-profile-readme)
+  - [Explore the teaching unit repository](#explore-the-teaching-unit-repository)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
@@ -1229,7 +1230,7 @@ Please add yourself in alphabetical order (by last name) as mentioned in the
 HTML comment in the README file to the class you belong to:
 
 ```markdown
-- First name Last name [@username](https://github.com/<username>)
+- <first name> <last name> [@<username>](https://github.com/<username>)
 ```
 
 > [!IMPORTANT]
@@ -1402,6 +1403,26 @@ further changes or approve the pull request.
 Once the pull request is approved and merged, you can check the results on the
 repository README. You should see your name in the list of students! Congrats!
 
+#### Delete the branch on the remote repository
+
+Once a pull request is merged, the branch is not needed anymore. You should
+delete it on the remote repository by clicking on the **Delete branch** button
+in the pull request page.
+
+However, you should notice that the branch has been deleted automatically by
+GitHub.
+
+This is an option we have enabled in the repository settings to keep the
+repository clean.
+
+By default, branches are not deleted automatically and you should delete them
+yourself once a pull request is merged. This avoids to have obsolete branches in
+the repository.
+
+To enable this option in your own repositories you can check the official
+documentation here:
+<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches>.
+
 #### Fetch the remote changes
 
 Fetch the changes to your local repository:
@@ -1477,7 +1498,7 @@ interests.
 
 An example of a profile README is shown in the following screenshot:
 
-![LeaVerou's GitHub profile](./images/github-profile-tiredofit.png)
+![tiredofit's GitHub profile](./images/github-profile-tiredofit.png)
 
 #### Create a new repository
 
@@ -1957,6 +1978,13 @@ The GitHub Discussions are a great way to interact with your peers and to learn
 new things. This is where official announcements for the teaching unit will be
 made. You should receive notifications when a new discussion is created and you
 are mentioned.
+
+### Explore the teaching unit repository
+
+Take some time to explore the
+[`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+repository. Familiarize yourself with the structure of the repository and the
+content as this will accompany you throughout the entire semester.
 
 ### Go further
 

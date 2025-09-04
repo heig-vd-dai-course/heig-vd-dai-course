@@ -12,7 +12,7 @@ As of the fall semester 2025-2026, the teaching unit is taught to the following
 class(es):
 
 <details>
-<summary>DAI-TIC-C (Wednesday mornings - 08:30-12:00 - J01)</summary>
+<summary>DAI-TIC-C (Wednesday mornings - 08:30-12:00 - C37)</summary>
 
 **Teaching staff**
 
@@ -32,7 +32,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
--
+- <first name> <last name> [@<username>](https://github.com/<username>)
 
 </details>
 
