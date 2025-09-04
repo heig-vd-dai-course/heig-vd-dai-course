@@ -15,7 +15,6 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css";
 
 /* Colors */
-
 :root {
 	--color-primary: #f96;
 	--color-secondary: #7d8ca3;
@@ -29,7 +28,6 @@
 }
 
 /* Headings */
-
 h1,
 h2,
 h3,
@@ -74,7 +72,6 @@ h6 a:link {
 }
 
 /* Header and footer */
-
 header,
 footer,
 section::after {
@@ -110,7 +107,6 @@ footer a {
 }
 
 /* Paragraphs and lists */
-
 p,
 blockquote {
 	margin: 1em 0 0;
@@ -126,7 +122,6 @@ ol > li > p {
 }
 
 /* Code */
-
 code {
 	display: inline-block;
 	font-family: "Roboto Mono", monospace;
@@ -172,7 +167,6 @@ section pre > code {
 }
 
 /* Table */
-
 table {
 	border-spacing: 0;
 	border-collapse: collapse;
@@ -202,7 +196,6 @@ section table tbody > tr:nth-child(even) th {
 }
 
 /* Section */
-
 section {
 	background-color: var(--color-background);
 	color: var(--color-normal);
@@ -291,7 +284,6 @@ blockquote {
 }
 
 /* Blockquote */
-
 blockquote {
 	font-style: italic;
 	margin: 1em 0 0;
@@ -324,7 +316,6 @@ blockquote > *:first-child {
 }
 
 /* Custom classes */
-
 .two-columns {
 	display: grid;
 	grid-template-columns: 1fr 1fr;

@@ -4,8 +4,18 @@ skinparam maxMessageSize 150
 skinparam noteTextAlignment center
 skinparam sequenceMessageAlign direction
 skinparam wrapWidth 250
+autonumber
 
-title "Expiration model"
+!$TITLE = "Expiration model"
+!$ONE_PAGE = 0
+
+!if ($ONE_PAGE)
+  ignore newpage
+!else
+  right footer $TITLE (%page%/%lastpage%) 
+!endif
+
+title $TITLE
 
 participant "Client" as client
 participant "Server" as server
@@ -30,7 +40,9 @@ Cache-Control: max-age=3600
 end note
 server -> client: Response
 
-...
+... <&clock> Time flows... ...
+
+newpage $TITLE
 
 == Requests before 22 Feb 2022, 23:22:00 ==
 
@@ -42,7 +54,9 @@ end note
 
 client -> client
 
-...
+... <&clock> Time flows... ...
+
+newpage $TITLE
 
 == Requests after 22 Feb 2022, 23:22:00 ==
 
