@@ -106,29 +106,26 @@ not give them the fish, I teach them how to fish.
 ## Before the course
 
 - Follow the [`CONTRIBUTING.md`](../CONTRIBUTING.md) guide to setup your
-  environment
+  environment.
 - Review the semester review, the GAPS evaluations and the feedbacks from the
-  students in the
-  [`semester-review-and-exam-preparation`](../27-semester-review-and-exam-preparation)
-  directory and the remaining GitHub Issues and Discussions.
-- Update the course material and the presentations from the feedback
-- Review the slides and the course sequence
-- Create a new planning in the course project
+  [semester reviews](../16.03-semester-review-and-exam-preparation/02-feedback/)
+  and the remaining GitHub Issues and Discussions.
+- Update the course material and the presentations from the feedback.
+- Review the slides and the course sequence.
 - Send an email to all students to remind them of the course with:
-  - A link to this GitHub organization
-  - When and where the course will take place
-- Add the evaluations and practical works to [GAPS](https://gaps.heig-vd.ch/)
+  - A link to this GitHub organization.
+  - When and where the course will take place.
+- Add the evaluations and practical works to [GAPS](https://gaps.heig-vd.ch/).
 - Print the absence sheet ("Feuille de présence") on
   [GAPS](https://gaps.heig-vd.ch/). Select printable format and print the PDF
   without the header and footer.
 - Create the feedback forms on [Framaform](https://framaforms.org/) for the
-  feedback during the course (before the GAPS evaluations)
-
+  feedback during the course (before the GAPS evaluations).
 - Hide (mark as _"outdated"_) all chapters feedback in
   [GitHub Discussions](https://github.com/orgs/heig-vd-dai-course/discussions/categories/polls)
 - Reset the [organization README](https://github.com/heig-vd-dai-course/.github)
-  with the new information for the new academic year
-- Prepare and print all payement sheets for the semester
+  with the new information for the new academic year.
+- Prepare and print all payement sheets for the semester.
 
 ### Email sent before the 2025-2026 academic year
 
@@ -137,7 +134,7 @@ Bonjour tout le monde,
 
 J'espère que vous avez passé un bel été et que vous vous sentez prêt.es pour cette nouvelle année qui va commencer.
 
-Je serai votre enseignant pour l'unité d'enseignement Développement d'applications internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver la semaine prochaine pour la première leçon.
+Je serai votre enseignant pour l'unité d'enseignement Développement d'applications internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver la semaine prochaine pour le premier cours.
 
 L'unité d'enseignement aura lieu les mercredis de 8:30 à 12:00 en salle C37.
 
@@ -153,6 +150,20 @@ Pour vous préparer au mieux à l'unité d'enseignement, je vous demande de lire
 **Nous nous attendons à ce que vous ayez lu et suivi ces ressources avant le début du premier cours.** Si vous avez des questions ou des problèmes, n'hésitez pas à nous contacter.
 
 Je vous souhaite une bonne journée et à bientôt,
+Ludovic Delafontaine
+```
+
+For people that join the course later during the semester (e.g. after the
+add/drop period), you can send them the following email:
+
+```text
+Bonjour Hadrien,
+
+Je me permets de vous écrire car j'ai vu que vous avez rejoint mon cours de DAI ces derniers jours.
+
+Je vous transmets le mail que j'ai fait parvenir en début de semaine passée concernant le cours de DAI avec les informations générales de celui-ci.
+
+Nous restons à votre disposition au besoin et je vous souhaite une excellente rentrée,
 Ludovic Delafontaine
 ```
 
