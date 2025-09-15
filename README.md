@@ -12,14 +12,18 @@ As of the fall semester 2025-2026, the teaching unit is taught to the following
 class(es):
 
 <details>
-<summary>DAI-TIC-C (Wednesday mornings - 08:30-12:00 - C37)</summary>
+<summary>DAI-TIC-C (Wednesdays - 08:30-12:00 - C37)</summary>
 
-**Teaching staff**
+## 🚀 DAI-TIC-C
+
+Wednesdays - 08:30-12:00 - C37
+
+### Teaching staff
 
 - Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo)
 - Hadrien Louis [@hadrylouis](https://github.com/hadrylouis)
 
-**Students**
+### Students
 
 <!--
 READ ME PLEASE
@@ -35,15 +39,20 @@ and answering your questions. Thanks!
 - <first name> <last name> [@<username>](https://github.com/<username>)
 
 </details>
-<details>
-<summary>DAI-TIC-A (Thursday mornings - 8:30-10:00 - B23 + 16:30-18:00 - K01)</summary>
 
-**Teaching staff**
+<details>
+<summary>DAI-TIC-A (Thursdays - 8:30-10:00 - B23 + 16:30-18:00 - K01)</summary>
+
+## 🚀 DAI-TIC-A
+
+Thursdays - 08:30-10:00 - B23 + 16:30-18:00 - K01
+
+### Teaching staff
 
 - Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo)
 - Gaétan Zwick [@Ga-3tan](https://github.com/Ga-3tan)
 
-**Students**
+### Students
 
 <!--
 READ ME PLEASE
