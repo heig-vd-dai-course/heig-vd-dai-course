@@ -328,6 +328,12 @@ blockquote > *:first-child {
 	gap: 1rem;
 }
 
+.four-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 1rem;
+}
+
 .center {
 	text-align: center;
 }

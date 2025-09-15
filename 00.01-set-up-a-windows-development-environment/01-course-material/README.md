@@ -545,7 +545,9 @@ rest of the teaching unit. **We will expect you to use WSL in all the
 assignments and projects**.
 
 **If this is the first time you are following this guide, skip this section and
-go straight to the [Tips and tricks](#tips-and-tricks) section**.
+go straight to the [Tips and tricks](#tips-and-tricks) section.** You will come
+back to this guide in a later course to finalize the configuration of your
+Windows development environment.
 
 ## Install and configure your Integrated Development Environment (IDE)
 
@@ -566,7 +568,9 @@ to use the provided IDE.
 >
 > Follow these instructions when requested in the teaching unit. If you are
 > following this guide for the first time, you can skip this section and go
-> straight to the [Tips and tricks](#tips-and-tricks) section.
+> straight to the [Tips and tricks](#tips-and-tricks) section. You will come
+> back to this guide in a later course to finalize the configuration of your
+> Windows development environment.
 
 _Inspired by the
 [How to use WSL development environment in JetBrains products by JetBrains](https://www.jetbrains.com/help/idea/how-to-use-wsl-development-environment-in-product.html)
@@ -574,28 +578,28 @@ guide._
 
 #### Install SDKMAN! in WSL
 
-Install SDKMAN! as mentioned in the course material. Install it in your Ubuntu
-distribution.
+Install SDKMAN! as mentioned in the course material of the Java, IntelliJ IDEA
+and Maven course. Install it in your Ubuntu distribution.
 
 #### Install Java in WSL
 
-Install Java as mentioned in the course material. Install it in your Ubuntu
-distribution.
+Install Java as mentioned in the course material of the Java, IntelliJ IDEA and
+Maven course. Install it in your Ubuntu distribution.
 
 #### Install Maven in WSL
 
-Install Maven as mentioned in the course material. Install it in your Ubuntu
-distribution.
+Install Maven as mentioned in the course material of the Java, IntelliJ IDEA and
+Maven course. Install it in your Ubuntu distribution.
 
 #### Install IntelliJ Toolbox App on Windows
 
-Install IntelliJ IDEA as mentioned in the course material. Install it on your
-Windows.
+Install IntelliJ IDEA as mentioned in the course material of the Java, IntelliJ
+IDEA and Maven course. Install it on your Windows.
 
 #### Install IntelliJ IDEA on Windows
 
-Install IntelliJ IDEA as mentioned in the course material. Install it on your
-Windows.
+Install IntelliJ IDEA as mentioned in the course material of the Java, IntelliJ
+IDEA and Maven course. Install it on your Windows.
 
 #### Configure Windows Firewall to allow IntelliJ IDEA to access WSL
 

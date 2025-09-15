@@ -283,7 +283,7 @@ The practical work must comply with the following rules:
 
 ## Submission
 
-Your work is due as follow:
+Your work is due as follows:
 
 - DAI-TIC-C (Friday mornings): **TBD**
 

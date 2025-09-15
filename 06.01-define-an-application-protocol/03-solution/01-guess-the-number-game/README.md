@@ -93,7 +93,7 @@ GUESS <number>
   server
 - `CORRECT`: the number sent by the client is equal to the one of the server
 - `ERROR <code>`: an error occurred while sending the message. The error code is
-  an integer between 1 and 2 inclusive. The error codes are as follow:
+  an integer between 1 and 2 inclusive. The error codes are as follows:
   - 1: the number is not between the bounds
   - 2: the guess is not a number
 
@@ -111,7 +111,7 @@ RESTART
 
 - `OK`: the server is ready to start a new game and await a `GUESS`
 - `ERROR <code>`: an error occurred while sending the message. The error code is
-  an integer between 1 and 1 inclusive. The error code is as follow:
+  an integer between 1 and 1 inclusive. The error code is as follows:
   - 1: a guessing game is already in session
 
 ### Quit
@@ -136,7 +136,7 @@ client.
 #### Response
 
 - `ERROR <code>`: an error occurred while sending the message. The error code is
-  an integer between -1 and -1 inclusive. The error code is as follow:
+  an integer between -1 and -1 inclusive. The error code is as follows:
   - -1: invalid message
 
 ## Section 4 - Examples

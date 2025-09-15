@@ -17,7 +17,32 @@ class(es):
 **Teaching staff**
 
 - Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo)
-- Hadrien Louis [@hadrienlouis](https://github.com/hadrylouis)
+- Hadrien Louis [@hadrylouis](https://github.com/hadrylouis)
+
+**Students**
+
+<!--
+READ ME PLEASE
+
+Add your name in the list in alphabetical order (by last name) in this format:
+
+- First name Last name [@GitHub username](https://github.com/<username>)
+
+It helps us (the teaching staff) searching for someone when grading your work
+and answering your questions. Thanks!
+-->
+
+- <first name> <last name> [@<username>](https://github.com/<username>)
+
+</details>
+
+<details>
+<summary>DAI-TIC-A (Thursday mornings - 8:30-10:00 - B23 + 16:30-18:00 - K01)</summary>
+
+**Teaching staff**
+
+- Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo)
+- Gaétan Zwick [@Ga-3tan](https://github.com/Ga-3tan)
 
 **Students**
 

@@ -103,7 +103,7 @@ REQ_TEMP <room>
 - `TEMP <temperature>`: the temperature of the room in Celsius (a floating-point
   number)
 - `ERROR <code>`: an error occurred during the request. The error code is an
-  integer between 1 and 1 inclusive. The error codes are as follow:
+  integer between 1 and 1 inclusive. The error codes are as follows:
   - 1: the room was not found
 
 ### Invalid message
@@ -114,7 +114,7 @@ error message to the operator.
 #### Response
 
 - `ERROR <code>`: an error occurred while sending the message. The error code is
-  an integer between -1 and -1 inclusive. The error code is as follow:
+  an integer between -1 and -1 inclusive. The error code is as follows:
   - -1: invalid message
 
 ## Section 4 - Examples

@@ -46,7 +46,7 @@ evaluation.
 The evaluation will last **60 minutes** and the questions will be in French. You
 can answer them in French or English.
 
-The evaluation dates will be as follow:
+The evaluation dates will be as follows:
 
 - DAI-TIC-B (Monday mornings): **25.11.2024**
 - DAI-TIC-C (Friday mornings): **29.11.2024**

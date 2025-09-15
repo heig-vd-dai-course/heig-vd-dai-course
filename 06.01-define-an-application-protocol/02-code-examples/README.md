@@ -100,7 +100,7 @@ JOIN <name>
 
 - `OK`: the client has been granted access to the server
 - `ERROR <code>`: an error occurred during the join. The error code is an
-  integer between 1 and 1 inclusive. The error codes are as follow:
+  integer between 1 and 1 inclusive. The error codes are as follows:
   - 1: the client's name is already in use
 
 ### List connected clients
@@ -135,7 +135,7 @@ SEND <recipient> <message>
 
 - `OK`: the message has been successfully sent
 - `ERROR <code>`: an error occurred while sending the message. The error code is
-  an integer between 1 and 2 inclusive. The error codes are as follow:
+  an integer between 1 and 2 inclusive. The error codes are as follows:
   - 1: the recipient is not connected
   - 2: the message exceeds 100 characters
 
