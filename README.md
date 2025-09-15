@@ -35,7 +35,6 @@ and answering your questions. Thanks!
 - <first name> <last name> [@<username>](https://github.com/<username>)
 
 </details>
-
 <details>
 <summary>DAI-TIC-A (Thursday mornings - 8:30-10:00 - B23 + 16:30-18:00 - K01)</summary>
 
