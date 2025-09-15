@@ -39,8 +39,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Troubleshooting](#troubleshooting)
   - [Check your Windows build number](#check-your-windows-build-number)
   - [Check for Windows updates](#check-for-windows-updates)
-  - [Check if WSL is enabled](#check-if-wsl-is-enabled)
-  - [Check if the Virtual Machine Platform is enabled](#check-if-the-virtual-machine-platform-is-enabled)
+  - [Check if all required Windows features are enabled](#check-if-all-required-windows-features-are-enabled)
   - [Enable virtualization](#enable-virtualization)
 
 ## Introduction
@@ -743,7 +742,7 @@ version.
 You can check if your Windows installation is up to date by going to
 **Settings > Update & Security > Windows Update**.
 
-### Check if WSL is enabled
+### Check if all required Windows features are enabled
 
 You can check if WSL is available on your Windows installation by running the
 following command in a PowerShell terminal as administrator as seen in the
@@ -761,8 +760,6 @@ If WSL is not available, you will need to enable it using the following command:
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-### Check if the Virtual Machine Platform is enabled
-
 You can check if the Virtual Machine Platform is enabled by running the
 following command in a PowerShell terminal as administrator as seen in the
 previous section:
@@ -770,6 +767,14 @@ previous section:
 ```powershell
 # Check if the Virtual Machine Platform is enabled
 dism.exe /online /get-features | Select-String "VirtualMachinePlatform" -Context 1
+```
+
+If the Virtual Machine Platform is not enabled, you will need to enable it using
+the following command:
+
+```powershell
+# Enable the Virtual Machine Platform
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 ### Enable virtualization
