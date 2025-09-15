@@ -240,7 +240,7 @@ materials).
 
 ## Submission
 
-Your work is due as follow:
+Your work is due as follows:
 
 - DAI-TIC-B (Monday mornings): **19.01.2025 23:59**
 - DAI-TIC-C (Friday mornings): **23.01.2025 23:59**

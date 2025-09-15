@@ -219,7 +219,7 @@ More details for this section in the [course material][course].
 
 ### Submission
 
-Your work is due as follow:
+Your work is due as follows:
 
 - DAI-TIC-C (Friday mornings): **TBD**
 

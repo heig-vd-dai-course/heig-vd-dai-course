@@ -36,11 +36,15 @@ _paginate: false
 
 ## Who are we?
 
-<div class="two-columns center">
+<div class="three-columns center">
 <div>
 
 **Ludovic  
 Delafontaine**
+
+<small>
+Both classes
+</small>
 
 <img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
 
@@ -53,10 +57,28 @@ Delafontaine**
 **Hadrien  
 Louis**
 
+<small>
+Wednesdays' class
+</small>
+
 <img src="https://avatars.githubusercontent.com/u/26306723?v=4" alt="Hadrien Louis" width="200" class="rounded">
 
 [Mail](mailto:hadrien.louis@heig-vd.ch) ·
 [GitHub](https://github.com/hadrylouis)
+
+</div>
+<div>
+
+**Gaétan  
+Zwick**
+
+<small>
+Thursdays' class
+</small>
+
+<img src="https://avatars.githubusercontent.com/u/18684767?v=4" alt="Gaétan Zwick" width="200" class="rounded">
+
+[Mail](mailto:gaetan.zwick@heig-vd.ch) · [GitHub](https://github.com/Ga-3tan)
 
 </div>
 </div>

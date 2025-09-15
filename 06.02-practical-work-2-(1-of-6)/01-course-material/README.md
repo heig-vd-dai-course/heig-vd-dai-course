@@ -307,7 +307,7 @@ systems without any issues.
 
 ## Submission
 
-Your work is due as follow:
+Your work is due as follows:
 
 - DAI-TIC-C (Friday mornings): **05.12.2024 23:59**
 - DAI-TIC-B (Monday mornings): **08.12.2024 23:59**

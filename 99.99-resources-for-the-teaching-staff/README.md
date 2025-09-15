@@ -75,7 +75,7 @@ Some tools and methodologies helped me to achieve this (in alphabetical order):
   extensible code editor as discussed in the
   [`CONTRIBUTING.md`](../CONTRIBUTING.md) guide
 
-The idea behind the short presentations + course material is as follow: I can
+The idea behind the short presentations + course material is as follows: I can
 quickly present the big picture through slides that try to illustrate the topic
 I want to talk about. It gives an overview, the big picture that **students need
 to go deeper by themselves**. Then, students switch to a course material where
@@ -106,55 +106,64 @@ not give them the fish, I teach them how to fish.
 ## Before the course
 
 - Follow the [`CONTRIBUTING.md`](../CONTRIBUTING.md) guide to setup your
-  environment
+  environment.
 - Review the semester review, the GAPS evaluations and the feedbacks from the
-  students in the
-  [`semester-review-and-exam-preparation`](../27-semester-review-and-exam-preparation)
-  directory and the remaining GitHub Issues and Discussions.
-- Update the course material and the presentations from the feedback
-- Review the slides and the course sequence
-- Create a new planning in the course project
+  [semester reviews](../16.03-semester-review-and-exam-preparation/02-feedback/)
+  and the remaining GitHub Issues and Discussions.
+- Update the course material and the presentations from the feedback.
+- Review the slides and the course sequence.
 - Send an email to all students to remind them of the course with:
-  - A link to this GitHub organization
-  - When and where the course will take place
-- Add the evaluations and practical works to [GAPS](https://gaps.heig-vd.ch/)
+  - A link to this GitHub organization.
+  - When and where the course will take place.
+- Add the evaluations and practical works to [GAPS](https://gaps.heig-vd.ch/).
 - Print the absence sheet ("Feuille de présence") on
   [GAPS](https://gaps.heig-vd.ch/). Select printable format and print the PDF
   without the header and footer.
 - Create the feedback forms on [Framaform](https://framaforms.org/) for the
-  feedback during the course (before the GAPS evaluations)
-
+  feedback during the course (before the GAPS evaluations).
 - Hide (mark as _"outdated"_) all chapters feedback in
   [GitHub Discussions](https://github.com/orgs/heig-vd-dai-course/discussions/categories/polls)
 - Reset the [organization README](https://github.com/heig-vd-dai-course/.github)
-  with the new information for the new academic year
-- Prepare and print all payement sheets for the semester
+  with the new information for the new academic year.
+- Prepare and print all payement sheets for the semester.
 
 ### Email sent before the 2025-2026 academic year
 
 ```text
-[DAI 2025-2026] Informations générales sur l'unité d'enseignement
-
 Bonjour tout le monde,
 
 J'espère que vous avez passé un bel été et que vous vous sentez prêt.es pour cette nouvelle année qui va commencer.
 
-Je serai votre enseignant pour l'unité d'enseignement Développement d'applications internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver la semaine prochaine pour la première leçon.
+Je serai votre enseignant pour l'unité d'enseignement Développement d'applications internet (DAI) et Hadrien Louis (en copie) sera l'assistant de ce cours. Nous nous réjouissons de vous retrouver la semaine prochaine pour le premier cours.
 
-Le cours aura lieu les lundis de 8:30 à 12:00 en salle J01.
+L'unité d'enseignement aura lieu les mercredis de 8:30 à 12:00 en salle C37.
 
-Vous trouverez toutes les informations sur l'unité d'enseignement dans l'organisation GitHub suivante : https://github.com/heig-vd-dai-course
+Vous trouverez toutes les informations sur l'unité d'enseignement dans le dépôt GitHub suivant : https://github.com/heig-vd-dai-course/heig-vd-dai-course#heig-vd-dai-course.
 
-Certains chapitres sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou au cours du semestre.
+Certains cours sont encore en cours de relecture et de mise à jour. Pas que vous soyez étonné.es si vous voyez des changements dans les prochains jours et/ou au cours du semestre.
 
-Pour vous préparer au mieux pour le début du cours, je vous demande de lire et suivre les ressources suivantes pour installer et configurer votre environnement de travail qui sera utilisé durant toute la durée du cours :
+Pour vous préparer au mieux à l'unité d'enseignement, je vous demande de lire et suivre les ressources suivantes pour installer et configurer votre environnement de travail qui sera utilisé durant tout le semestre :
 
-- Set up a Windows development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/609-add-links-to-main-readme/00.01-set-up-a-windows-development-environment/01-course-material
-- Considerations for a development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/609-add-links-to-main-readme/00.02-considerations-for-a-development-environment/01-course-material
+- Set up a Windows development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/00.01-set-up-a-windows-development-environment/01-course-material/README.md
+- Considerations for a development environment - https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/00.02-considerations-for-a-development-environment/01-course-material/README.md
 
-Nous nous attendons à ce que vous ayez lu et suivi ces ressources avant le début du premier cours. Si vous avez des questions ou des problèmes, n'hésitez pas à nous contacter.
+**Nous nous attendons à ce que vous ayez lu et suivi ces ressources avant le début du premier cours.** Si vous avez des questions ou des problèmes, n'hésitez pas à nous contacter.
 
 Je vous souhaite une bonne journée et à bientôt,
+Ludovic Delafontaine
+```
+
+For people that join the course later during the semester (e.g. after the
+add/drop period), you can send them the following email:
+
+```text
+Bonjour Hadrien,
+
+Je me permets de vous écrire car j'ai vu que vous avez rejoint mon cours de DAI ces derniers jours.
+
+Je vous transmets le mail que j'ai fait parvenir en début de semaine passée concernant le cours de DAI avec les informations générales de celui-ci.
+
+Nous restons à votre disposition au besoin et je vous souhaite une excellente rentrée,
 Ludovic Delafontaine
 ```
 

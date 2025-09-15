@@ -631,7 +631,7 @@ is important to understand the structure of a HTTP request and response.
 
 #### Structure of a HTTP request
 
-A HTTP request is structured as follow:
+A HTTP request is structured as follows:
 
 ```text
 <HTTP method> <URL> HTTP/<HTTP version>
@@ -744,7 +744,7 @@ earlier:
 
 #### Structure of a HTTP response
 
-A HTTP response is structured as follow:
+A HTTP response is structured as follows:
 
 ```text
 HTTP/<HTTP version> <HTTP status code> <HTTP status message>

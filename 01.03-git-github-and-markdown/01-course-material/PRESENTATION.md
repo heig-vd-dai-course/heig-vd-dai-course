@@ -179,7 +179,7 @@ other resources and alternatives as well.
 
 ### Summary
 
-The whole process would be as follow:
+The whole process would be as follows:
 
 1. Open an issue to discuss the feature (optional, but recommended).
 2. Clone or fork the project and checkout to a new branch.

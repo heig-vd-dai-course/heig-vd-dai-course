@@ -1191,7 +1191,7 @@ dependencies, the source code and the build tools, even if they are not needed
 anymore.
 
 You can use multi-stage builds to reduce the size of the final image. The
-process would be as follow:
+process would be as follows:
 
 1. Start from a base image named `builder`.
 2. Install the dependencies to build your application.
