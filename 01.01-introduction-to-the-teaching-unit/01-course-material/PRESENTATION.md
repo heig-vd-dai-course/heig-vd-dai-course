@@ -42,9 +42,7 @@ _paginate: false
 **Ludovic  
 Delafontaine**
 
-<small>
-Classes A and C
-</small>
+<p class="margin-0"><small>Classes A and C</small></p>
 
 <img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
 
@@ -57,9 +55,7 @@ Classes A and C
 **Hadrien  
 Louis**
 
-<small>
-Wednesdays' class (C)
-</small>
+<p class="margin-0"><small>Wednesdays' class (C)</small></p>
 
 <img src="https://avatars.githubusercontent.com/u/26306723?v=4" alt="Hadrien Louis" width="200" class="rounded">
 
@@ -72,9 +68,7 @@ Wednesdays' class (C)
 **Gaétan  
 Zwick**
 
-<small>
-Thursdays' class (A)
-</small>
+<p class="margin-0"><small>Thursdays' class (A)</small></p>
 
 <img src="https://avatars.githubusercontent.com/u/18684767?v=4" alt="Gaétan Zwick" width="200" class="rounded">
 
@@ -91,9 +85,7 @@ Thursdays' class (A)
 **Olivier  
 Tischhauser**
 
-<small>
-Class B
-</small>
+<p class="margin-0"><small>Class B</small></p>
 
 <img src="https://avatars.githubusercontent.com/u/1734990?v=4" alt="Olivier Tischhauser" width="200" class="rounded">
 
@@ -103,12 +95,10 @@ Class B
 </div>
 <div>
 
-**Ylli 
+**Ylli  
 Fazlija**
 
-<small>
-Wednesdays' class (B)
-</small>
+<p class="margin-0"><small>Wednesdays' class (B)</small></p>
 
 <img src="https://avatars.githubusercontent.com/u/58257915?v=4" alt="Ylli Fazlija" width="200" class="rounded">
 
