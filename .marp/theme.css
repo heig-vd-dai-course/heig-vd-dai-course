@@ -346,3 +346,7 @@ blockquote > *:first-child {
 .rounded img {
 	border-radius: 50%;
 }
+
+.margin-0 {
+	margin: 0;
+}
