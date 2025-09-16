@@ -34,7 +34,7 @@ _paginate: false
 
 <!-- _class: lead -->
 
-## Who are we?
+## Who are we? (1/2)
 
 <div class="three-columns center">
 <div>
@@ -83,7 +83,7 @@ Thursdays' class (A)
 </div>
 </div>
 
-## Who are we? (continued)
+## Who are we? (2/2)
 
 <div class="two-columns center">
 <div>
