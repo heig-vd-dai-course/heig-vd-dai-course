@@ -1349,7 +1349,7 @@ maintainers. This is a good practice to discuss the changes before merging them.
 #### Ask for a review from the teaching staff
 
 Once you are ready, add a comment with the usernames of the
-[Teaching staff](https://github.com/heig-vd-dai-course#teaching-staff) team to
+[Teaching staff](https://github.com/orgs/heig-vd-dai-course/teams/teaching-staff) team to
 let them know that your pull request is ready for review.
 
 This will notify the teaching staff that you want them to review your pull

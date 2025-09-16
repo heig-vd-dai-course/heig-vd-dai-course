@@ -1750,7 +1750,7 @@ It will format your Java files as well as your `pom.xml` file automatically.
 
 In this chapter, you have installed and configured Java, IntelliJ IDEA and
 Maven. You have created a Java project with Maven, added a dependency (such as
-[picocli](https://picocli.info/))to a Maven project, and built a JAR that you
+[picocli](https://picocli.info/)) to a Maven project, and built a JAR that you
 can execute everywhere. You have learned how these tools can help you to develop
 Java applications and share them with other developers.
 
