@@ -6,8 +6,8 @@ MARP_DOCKER_IMAGE="marpteam/marp-cli:v4.1.1"
 
 ## Script
 echo "Removing all previous generated presentations..."
-rm -f **/*-presentation.pdf || true
-rm -f **/index.html || true
+rm -f **/**/*-presentation.pdf || true
+rm -f **/**/index.html || true
 
 # Check if Marp is installed locally
 if command -v "marp-cli.js" > /dev/null 2>&1; then

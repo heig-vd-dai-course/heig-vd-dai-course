@@ -10,9 +10,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - Objectives, teaching and learning methods, and evaluation methods:
   [Link to content](.)
 - Course material: [Link to content](./01-course-material/README.md) ·
-  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.01-introduction-to-the-teaching-unit/01-course-material/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01-introduction-and-course-organization/01-introduction-and-course-organization-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/01.01-introduction-to-the-teaching-unit/01-course-material/01.01-introduction-to-the-teaching-unit-presentation.pdf)
 
 ## Objectives
 

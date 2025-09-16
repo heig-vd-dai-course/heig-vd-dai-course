@@ -3,7 +3,7 @@
 _Some of these examples are based on the original course by O. Liechti and J.
 Ehrensberger._
 
-This repository contains several examples of TCP client/server applications that
+this directory contains several examples of TCP client/server applications that
 demonstrate different ways to handle concurrency.
 
 We recommend you to try each example and understand how it works.

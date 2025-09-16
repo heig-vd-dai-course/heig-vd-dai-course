@@ -1,6 +1,6 @@
 # SMTP and ncat
 
-This repository contains a simple example of how to send an email using the SMTP
+this directory contains a simple example of how to send an email using the SMTP
 protocol with a mock server.
 
 ## Usage

@@ -241,16 +241,29 @@ We can be flexible on the deadlines if you have a good reason.
 Feel free to use any of these communication channels for any kind of questions
 related to the course:
 
+<div class="two-columns">
+<div>
+
 - GitHub Discussions (you will experiment these very soon).
 - In person.
-- Email:
-  - [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
-  - [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
+- Email. Do not forget to put all the teaching staff in copy (CC) of your email!
+
+</div>
+<div>
+
+- [ludovic.delafontaine@heig-vd.ch](mailto:ludovic.delafontaine@heig-vd.ch)
+- [olivier.tischhauser@heig-vd.ch](mailto:olivier.tischhauser@heig-vd.ch)
+- [hadrien.louis@heig-vd.ch](mailto:hadrien.louis@heig-vd.ch)
+- [gaetan.zwick@heig-vd.ch](mailto:gaetan.zwick@heig-vd.ch)
+- [ylli.fazlija@heig-vd.ch](mailto:ylli.fazlija@heig-vd.ch)
+
+</div>
+</div>
 
 ## Where to find the course material
 
-**Everything** will be on the GitHub organization created for this course:
-<https://github.com/heig-vd-dai-course>.
+**Everything** will be on the GitHub organization created for this teaching
+unit: <https://github.com/heig-vd-dai-course>.
 
 We will not use Microsoft Teams nor CyberLearn. We want to keep it simple and
 efficient for you, and for us. One place to find it all.
