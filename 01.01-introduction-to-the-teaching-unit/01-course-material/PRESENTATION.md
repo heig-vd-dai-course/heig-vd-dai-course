@@ -43,7 +43,7 @@ _paginate: false
 Delafontaine**
 
 <small>
-Both classes
+Classes A and C
 </small>
 
 <img src="https://avatars.githubusercontent.com/u/5037444?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
@@ -58,7 +58,7 @@ Both classes
 Louis**
 
 <small>
-Wednesdays' class
+Wednesdays' class (C)
 </small>
 
 <img src="https://avatars.githubusercontent.com/u/26306723?v=4" alt="Hadrien Louis" width="200" class="rounded">
@@ -73,12 +73,47 @@ Wednesdays' class
 Zwick**
 
 <small>
-Thursdays' class
+Thursdays' class (A)
 </small>
 
 <img src="https://avatars.githubusercontent.com/u/18684767?v=4" alt="Gaétan Zwick" width="200" class="rounded">
 
 [Mail](mailto:gaetan.zwick@heig-vd.ch) · [GitHub](https://github.com/Ga-3tan)
+
+</div>
+</div>
+
+## Who are we? (continued)
+
+<div class="two-columns center">
+<div>
+
+**Olivier  
+Tischhauser**
+
+<small>
+Class B
+</small>
+
+<img src="https://avatars.githubusercontent.com/u/1734990?v=4" alt="Olivier Tischhauser" width="200" class="rounded">
+
+[Mail](mailto:olivier.tischhauser@heig-vd.ch) ·
+[GitHub](https://github.com/binaerbaum)
+
+</div>
+<div>
+
+**Ylli 
+Fazlija**
+
+<small>
+Wednesdays' class (A)
+</small>
+
+<img src="https://avatars.githubusercontent.com/u/58257915?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
+
+[Mail](mailto:ylli.fazlija@heig-vd.ch) ·
+[GitHub](https://github.com/FazlijaYlli)
 
 </div>
 </div>
