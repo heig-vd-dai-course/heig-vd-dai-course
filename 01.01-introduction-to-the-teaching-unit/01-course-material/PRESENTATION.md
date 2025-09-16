@@ -110,7 +110,7 @@ Fazlija**
 Wednesdays' class (B)
 </small>
 
-<img src="https://avatars.githubusercontent.com/u/58257915?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
+<img src="https://avatars.githubusercontent.com/u/58257915?v=4" alt="Ylli Fazlija" width="200" class="rounded">
 
 [Mail](mailto:ylli.fazlija@heig-vd.ch) ·
 [GitHub](https://github.com/FazlijaYlli)
