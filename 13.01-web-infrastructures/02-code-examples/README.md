@@ -1,6 +1,6 @@
 # Web infrastructures
 
-This repository contains several examples of web infrastructures.
+this directory contains several examples of web infrastructures.
 
 We recommend you to try each example and understand how it works.
 

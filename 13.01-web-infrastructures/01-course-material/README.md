@@ -78,7 +78,7 @@ In this section, you will clone the
 repository on the virtual machine your created the the
 [SSH and SCP chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/20-ssh-and-scp).
 
-This repository contains code examples that you will run to validate your
+This directory contains code examples that you will run to validate your
 understanding of the theory.
 
 Clone the repository as seen in previous chapters. **This time, clone it with

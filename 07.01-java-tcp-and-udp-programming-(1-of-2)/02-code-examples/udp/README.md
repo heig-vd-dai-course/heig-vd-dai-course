@@ -1,6 +1,6 @@
 # Java UDP programming
 
-This repository contains several examples of UDP emitters/receivers and
+this directory contains several examples of UDP emitters/receivers and
 clients/servers applications.
 
 We recommend you to try each example and understand how it works.

@@ -1,6 +1,6 @@
 # Docker and Docker Compose
 
-This repository contains several examples of Docker and Docker Compose files.
+this directory contains several examples of Docker and Docker Compose files.
 They are ordered by complexity. You should explore them in the following order:
 
 - [Basic Dockerfile](./01-basic-dockerfile)
