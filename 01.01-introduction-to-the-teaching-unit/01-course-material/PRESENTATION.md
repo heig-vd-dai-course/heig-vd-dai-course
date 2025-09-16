@@ -107,7 +107,7 @@ Class B
 Fazlija**
 
 <small>
-Wednesdays' class (A)
+Wednesdays' class (B)
 </small>
 
 <img src="https://avatars.githubusercontent.com/u/58257915?v=4" alt="Ludovic Delafontaine" width="200" class="rounded">
