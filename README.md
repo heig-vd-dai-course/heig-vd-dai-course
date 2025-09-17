@@ -44,7 +44,6 @@ and answering your questions. Thanks!
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
-- Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
@@ -78,7 +77,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- <first name> <last name> [@<username>](https://github.com/<username>)
+- Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
 
 </details>
 
