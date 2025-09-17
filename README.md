@@ -37,6 +37,7 @@ and answering your questions. Thanks!
 -->
 
 - <first name> <last name> [@<username>](https://github.com/<username>)
+- Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 
 </details>
 
