@@ -400,7 +400,7 @@ Linux or macOS.
 
 If you are on Windows, follow the guide we created to set up a development
 environment with Windows Subsystem for Linux (WSL):
-[_Set up a Windows development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/SET_UP_A_WINDOWS_DEVELOPMENT_ENVIRONMENT.md).
+[_Set up a Windows development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/00.01-set-up-a-windows-development-environment/).
 
 This guide will help you to set up a Linux environment on your Windows computer
 to be able to follow the course (and beyond).
@@ -411,7 +411,7 @@ and use it to install the tools we will use during this course.
 ## _"Linux, macOS or Windows?"_ (3/3)
 
 Whatever operating system you are using, **you should read the
-[_Considerations for a development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/01-introduction-and-course-organization/CONSIDERATIONS_FOR_A_DEVELOPMENT_ENVIRONMENT.md)
+[_Considerations for a development environment_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/00.02-considerations-for-a-development-environment/)
 guide**.
 
 This guide will help you to set up your development environment in a way that
