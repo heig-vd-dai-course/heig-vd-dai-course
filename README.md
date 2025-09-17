@@ -66,6 +66,8 @@ Wednesdays - 13:00-16:15 - J04
 
 ### Students
 
+- Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
+
 <!--
 READ ME PLEASE
 
