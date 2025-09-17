@@ -79,7 +79,7 @@ and answering your questions. Thanks!
 
 - <first name> <last name> [@<username>](https://github.com/<username>)
 
-Louis Garcia [@loueyyyy](https://github.com)
+Louis Garcia [@loueyyyy](https://github.com/loueyyyy)
 
 </details>
 
