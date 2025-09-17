@@ -43,7 +43,6 @@ and answering your questions. Thanks!
 - Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
-- Louis Garcia [@loueyyyy](https://github.com/loueyyyy)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
@@ -79,6 +78,8 @@ and answering your questions. Thanks!
 -->
 
 - <first name> <last name> [@<username>](https://github.com/<username>)
+
+Louis Garcia [@loueyyyy](https://github.com)
 
 </details>
 
