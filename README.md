@@ -77,7 +77,11 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- \<first name\> \<last name\> [@<username>](https://github.com/<username>)
+- Arnaud Bersier [@Aber37](https://github.com/Aber37)
+- Marc Ischi [@Ischim](https://github.com/Ischim)
+- Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
+- Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
+- Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
 
