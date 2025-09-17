@@ -36,7 +36,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- François BERNARD DE COURVILLE [@fr2c](https://github.com/fr2c)
+- François Bernard de Courville [@fr2c](https://github.com/fr2c)
 
 </details>
 
