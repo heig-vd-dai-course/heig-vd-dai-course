@@ -44,6 +44,7 @@ and answering your questions. Thanks!
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
+- Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Nathan Stampfli [@Nathan-Stampfli] (https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 
