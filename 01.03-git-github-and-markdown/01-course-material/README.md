@@ -1798,9 +1798,9 @@ Share your profile in the GitHub Discussions of this organization:
 Create a new discussion with the following information:
 
 - **Title**: [DAI 2025-2026 Class \<class ID\>] Check out my GitHub profile! -
-  \<first name\> \<last name\> (replace `\<class ID\>`, `<first name>` and
-  `<last name>` with your information, where `\<class ID\>` is either `A`, `B`
-  or `C` depending on your class).
+  \<first name\> \<last name\> (replace `<class ID>`, `<first name>` and
+  `<last name>` with your information, where `<class ID>` is either `A`, `B` or
+  `C` depending on your class).
 - **Category**: Show and tell.
 - **Description**: The link to your GitHub profile README.
 
