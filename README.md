@@ -36,7 +36,18 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
+- Koray Akgul [@korayadige](https://github.com/korayadige)
+- Gabriel Bader [@Ayc3s](https://github.com/Ayc3s)
+- Léo Bernard [@Aryeth](https://github.com/Aryeth)
+- François Bernard de Courville [@fr2c](https://github.com/fr2c)
+- Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
+- Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
+- Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
+- Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
+- Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
+- Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
+- Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 
 </details>
 
