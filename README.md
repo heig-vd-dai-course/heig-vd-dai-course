@@ -42,6 +42,7 @@ and answering your questions. Thanks!
 - François Bernard de Courville [@fr2c](https://github.com/fr2c)
 - Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
+- Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
