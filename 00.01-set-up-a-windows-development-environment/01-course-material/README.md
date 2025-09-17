@@ -37,7 +37,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Do not manipulate your files from the File Explorer on Windows](#do-not-manipulate-your-files-from-the-file-explorer-on-windows)
   - [Free up disk space](#free-up-disk-space)
 - [Troubleshooting](#troubleshooting)
-  - [Error 403](#error-403)
+  - [Error 403 when updating or installing WSL](#error-403-when-updating-or-installing-wsl)
   - [Check your Windows build number](#check-your-windows-build-number)
   - [Check for Windows updates](#check-for-windows-updates)
   - [Check if all required Windows features are enabled](#check-if-all-required-windows-features-are-enabled)
@@ -733,7 +733,7 @@ stuck but we will not help you if you have not tried the following steps.
 > please ask for help. We might have to update this guide with more
 > troubleshooting steps.
 
-### Error 403
+### Error 403 when updating or installing WSL
 
 If you get an error 403 when trying to install WSL, it is likely that your
 network is blocking the download of the WSL package. You can try to connect to
