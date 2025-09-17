@@ -7,7 +7,7 @@
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/113
 [illustration]: ./images/main-illustration.jpg
 
-# Docker and Docker Compose - Course material
+# Docker and Docker Compose
 
 <https://github.com/heig-vd-dai-course>
 
@@ -984,11 +984,13 @@ organization: <https://github.com/orgs/heig-vd-dai-course/discussions>.
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2025-2026] My Docker Compose application - First name Last
-  Name
-- **Category**: Show and tell
+- **Title**: [DAI 2025-2026 Class \<class ID\>] My Docker Compose application -
+  \<first name\> \<last name\> (replace `\<class ID\>`, `<first name>` and
+  `<last name>` with your information, where `\<class ID\>` is either `A`, `B`
+  or `C` depending on your class).
+- **Category**: Show and tell.
 - **Description**: The link to your GitHub repository with a screenshot of your
-  Docker image published on GitHub Container Registry
+  Docker image published on GitHub Container Registry.
 
 This will notify us that you have completed the exercise and we can check your
 work.
