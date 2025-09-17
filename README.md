@@ -36,8 +36,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- <first name> <last name> [@<username>](https://github.com/<username>)
-
+- Gabriel Bader [@Ayc3s](https://github.com/Ayc3s)
 </details>
 
 <details>
