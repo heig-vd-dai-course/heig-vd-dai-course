@@ -66,7 +66,6 @@ Wednesdays - 13:00-16:15 - J04
 
 ### Students
 
-- Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 <!--
 READ ME PLEASE
 
@@ -78,7 +77,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- <first name> <last name> [@<username>](https://github.com/<username>)
+- Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 
 </details>
 
