@@ -607,7 +607,7 @@ To install the latest LTS version of Java Temurin, use the following command
 
 ```sh
 # Install the latest LTS version of Java Temurin
-sdk install 21.0.8-tem
+sdk install java 21.0.8-tem
 ```
 
 In this example, we are installing the 21.0.8 version of Java Temurin. It might
