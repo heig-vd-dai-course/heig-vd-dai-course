@@ -41,6 +41,7 @@ and answering your questions. Thanks!
 - Léo Bernard [@Aryeth](https://github.com/Aryeth)
 - François Bernard de Courville [@fr2c](https://github.com/fr2c)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
+- Theo Bensaci [@TheoBensaci](https://github.com/TheoBensaci)
 
 </details>
 
