@@ -1098,7 +1098,7 @@ Create a new issue in the
 <https://github.com/heig-vd-dai-course/heig-vd-dai-course> repository describing
 what you want to do:
 
-- **Title**: Add <first name> <last name> to the list of students (replace
+- **Title**: Add \<first name\> \<last name\> to the list of students (replace
   `<first name> <last name>` with your information)
 - **Description**: I would like to add myself to the list of students in the
   GitHub repository.
@@ -1797,8 +1797,8 @@ Share your profile in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2025-2026] Check out my GitHub profile! - <first name> <last
-  name> (replace `<first name>` and `<last name>` with your information)
+- **Title**: [DAI 2025-2026] Check out my GitHub profile! - \<first name\> \<last
+  name\> (replace `<first name>` and `<last name>` with your information)
 - **Category**: Show and tell
 - **Description**: The link to your GitHub profile README
 
