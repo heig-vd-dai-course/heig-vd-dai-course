@@ -49,7 +49,6 @@ and answering your questions. Thanks!
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
-- Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
 
@@ -78,7 +77,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- <first name> <last name> [@<username>](https://github.com/<username>)
+- Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
 
