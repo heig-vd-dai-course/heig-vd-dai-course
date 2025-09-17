@@ -38,6 +38,7 @@ and answering your questions. Thanks!
 
 - Koray Akgul [@korayadige](https://github.com/korayadige)
 - Gabriel Bader [@Ayc3s](https://github.com/Ayc3s)
+- François Bernard de Courville [@fr2c](https://github.com/fr2c)
 
 </details>
 
