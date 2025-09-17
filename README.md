@@ -43,6 +43,7 @@ and answering your questions. Thanks!
 - Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
+- Nathan Stampfli [@Nathan-Stampfli] (https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 
 </details>
