@@ -46,7 +46,8 @@ and answering your questions. Thanks!
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
-- Nathan Stampfli [@Nathan-Stampfli] (https://github.com/Nathan-Stampfli)
+- Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
+- Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 
 </details>
