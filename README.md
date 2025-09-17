@@ -45,7 +45,7 @@ and answering your questions. Thanks!
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
-- Nathan Stampfli [@Nathan-Stampfli] (https://github.com/Nathan-Stampfli)
+- Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 
 </details>
