@@ -65,6 +65,7 @@ Wednesdays - 13:00-16:15 - J04
 - Olivier Tischhauser [@binaerbaum](https://github.com/binaerbaum)
 - Ylli Fazlija [@FazlijaYlli](https://github.com/FazlijaYlli)
 
+
 ### Students
 
 <!--
@@ -78,7 +79,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- <first name> <last name> [@<username>](https://github.com/<username>)
+- Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
 
 </details>
 
