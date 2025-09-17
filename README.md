@@ -24,6 +24,7 @@ Wednesdays - 08:30-12:00 - C37
 - Hadrien Louis [@hadrylouis](https://github.com/hadrylouis)
 
 ### Students
+- Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 
 <!--
 READ ME PLEASE
