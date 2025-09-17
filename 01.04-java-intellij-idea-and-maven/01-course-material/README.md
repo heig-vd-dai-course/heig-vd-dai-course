@@ -1632,10 +1632,12 @@ Share your project in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2025-2026] My picocli project - <first name> <last
-  name> (replace `<first name>` and `<last name>` with your information)
-- **Category**: Show and tell
-- **Description**: The link to your GitHub repository
+- **Title**: [DAI 2025-2026 Class \<class ID\>] My picocli project - \<first
+  name\> \<last name\> (replace `<class ID>`, `<first name>` and `<last name>`
+  with your information, where `<class ID>` is either `A`, `B` or `C` depending
+  on your class).
+- **Category**: Show and tell.
+- **Description**: The link to your GitHub repository.
 
 This will notify us that you have completed the exercise. We can then check your
 work and provide feedback if we see any issues.
