@@ -78,6 +78,7 @@ and answering your questions. Thanks!
 -->
   
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
+- Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
