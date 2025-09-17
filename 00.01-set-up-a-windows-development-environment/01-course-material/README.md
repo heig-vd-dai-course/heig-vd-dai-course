@@ -535,7 +535,7 @@ You can use the following checklist to validate the installation:
 - [x] You can run Linux commands in the Ubuntu terminal.
 - [x] You have checked the [Tips and tricks](#tips-and-tricks) section.
 - [x] You have checked the
-      [Considerations for a development environment](../02-considerations-for-a-development-environment/README.md)
+      [Considerations for a development environment](../../00.02-considerations-for-a-development-environment/01-course-material/README.md)
       guide.
 - [x] You have now a sense of how to manage your personal files in WSL and how
       they differ from the ones in Windows.
