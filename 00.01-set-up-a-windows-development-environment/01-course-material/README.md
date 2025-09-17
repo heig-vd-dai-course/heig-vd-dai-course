@@ -564,7 +564,7 @@ to use the provided IDE.
 
 ### Install and configure IntelliJ IDEA to access WSL
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > Follow these instructions when requested in the teaching unit. If you are
 > following this guide for the first time, you can skip this section and go
