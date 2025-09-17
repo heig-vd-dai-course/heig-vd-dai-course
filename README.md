@@ -39,6 +39,8 @@ and answering your questions. Thanks!
 - <first name> <last name> [@<username>](https://github.com/<username>)
 
 </details>
+- Koray Akgul [@korayadige](https://github.com/korayadige)
+
 
 <details>
 <summary>DAI-TIC-B (Wednesdays - 13:00-16:15 - J04)</summary>
