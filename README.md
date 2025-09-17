@@ -77,6 +77,8 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
+- Marc Ischi [@Ischim](https://github.com/Ischim)
+
 - <first name> <last name> [@<username>](https://github.com/<username>)
 
 </details>
