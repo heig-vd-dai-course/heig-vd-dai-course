@@ -76,7 +76,8 @@ Add your name in the list in alphabetical order (by last name) in this format:
 It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
-
+  
+- Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
