@@ -37,6 +37,7 @@ and answering your questions. Thanks!
 -->
 
 - <first name> <last name> [@<username>](https://github.com/<username>)
+- François BERNARD DE COURVILLE [@fr2c](https://github.com/fr2c)
 
 </details>
 
