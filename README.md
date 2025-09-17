@@ -49,6 +49,7 @@ and answering your questions. Thanks!
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
+- Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
 
