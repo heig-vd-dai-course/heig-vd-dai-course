@@ -97,7 +97,6 @@ Thursdays - 08:30-10:00 - B23 + 16:30-18:00 - K01
 ### Teaching staff
 
 - Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo)
-- Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Gaétan Zwick [@Ga-3tan](https://github.com/Ga-3tan)
 
 ### Students
@@ -113,7 +112,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- \<first name\> \<last name\> [@<username>](https://github.com/<username>)
+- Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 
 </details>
 
