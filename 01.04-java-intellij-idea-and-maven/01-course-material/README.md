@@ -972,9 +972,10 @@ application as JAR file_ Run/Debug configuration:
 
 > [!WARNING]
 >
-> It seems that IntelliJ IDEA does not support using the Maven wrapper on their
-> latest version (2025.xx) at the project configuration level. Thus, the
-> configuration pictured below will not work correctly.
+> It seems that IntelliJ IDEA does not allow to select _"Use Maven wrapper"_
+> from the list as shown below on their latest version (2025.xx) at the project
+> configuration level. Thus, the configuration pictured below will not work
+> correctly.
 >
 > If you encounter issues, these solutions are possible:
 >
