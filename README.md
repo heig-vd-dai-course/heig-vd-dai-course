@@ -49,7 +49,6 @@ and answering your questions. Thanks!
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
-- Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
 
 </details>
 
@@ -112,6 +111,9 @@ Add your name in the list in alphabetical order (by last name) in this format:
 It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
+
+- Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
+
 
 - \<first name\> \<last name\> [@<username>](https://github.com/<username>)
 
