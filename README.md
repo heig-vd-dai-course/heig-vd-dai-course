@@ -116,6 +116,7 @@ and answering your questions. Thanks!
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
+- Robiel Tesfazghi [@robielTes](https://github.com/robielTes)
 
 </details>
 
