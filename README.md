@@ -113,6 +113,7 @@ and answering your questions. Thanks!
 -->
 
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
+- Maksym Makovskyi [@maxmakovskiy](https://github.com/maxmakovskiy)
 
 </details>
 
