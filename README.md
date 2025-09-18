@@ -112,7 +112,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- \<first name\> \<last name\> [@<username>](https://github.com/<username>)
+- Simão Romano Schindler [@SchindlerSimao](https://github.com/SchindlerSimao)
 
 </details>
 
