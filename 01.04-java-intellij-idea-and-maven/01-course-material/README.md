@@ -973,22 +973,20 @@ application as JAR file_ Run/Debug configuration:
 > [!WARNING]
 >
 > It seems that IntelliJ IDEA does not support using the Maven wrapper on their
-> latest version (2025.xx). Thus, the configuration pictured below will not work
-> correctly.
+> latest version (2025.xx) at the project configuration level. Thus, the
+> configuration pictured below will not work correctly.
 >
-> The following bug reports seem related to this (as per our findings in
-> September 2025):
->
-> - <https://youtrack.jetbrains.com/issue/IDEA-370490/Maven-on-WSL-cant-run-maven-goal-with-not-default-runner.-The-JAVAHOME-environment-variable-is-not-defined-correctly>
-> - <https://youtrack.jetbrains.com/issue/IDEA-368924/Maven-on-WSL-cant-perform-tasks.-No-such-file-or-directory>
->
-> If you encounter issues, three solutions are possible:
+> If you encounter issues, these solutions are possible:
 >
 > 1. Use an older version of IntelliJ IDEA (2024.xx).
-> 2. Use the installed version of Maven instead of the Maven wrapper by ignoring
+> 2. Set the settings at the IDE level (File > Settings... > Build, Execution,
+>    Deployment > Build Tools > Maven) to use the Maven wrapper by default
+>    instead of the project configuration level (keep the _Inherit from
+>    settings_ checkbox checked).
+> 3. Use the installed version of Maven instead of the Maven wrapper by ignoring
 >    this verify specific configuration (keep the _Inherit from settings_
 >    checkbox checked).
-> 3. Update the Run/Debug configuration manually to use the Maven wrapper by
+> 4. Update the Run/Debug configuration manually to use the Maven wrapper by
 >    saving the configuration as it is and modifying the file
 >    `.idea/runConfigurations/Package_application_as_JAR_file.xml` as follows
 >    (untested, the error might still show up in your IDE but it should work on
@@ -1026,6 +1024,14 @@ application as JAR file_ Run/Debug configuration:
 >
 > The only thing to do is wait for JetBrains to fix this issue in a future
 > version of IntelliJ IDEA.
+>
+> The following bug reports seem related to this (as per our findings in
+> September 2025):
+>
+> - <https://youtrack.jetbrains.com/issue/IDEA-370490/Maven-on-WSL-cant-run-maven-goal-with-not-default-runner.-The-JAVAHOME-environment-variable-is-not-defined-correctly>
+> - <https://youtrack.jetbrains.com/issue/IDEA-368924/Maven-on-WSL-cant-perform-tasks.-No-such-file-or-directory>
+>
+> Sorry for the inconvenience and thank you for your understanding.
 
 ![Store the Maven configuration](images/intellij-store-the-maven-configuration.png)
 
