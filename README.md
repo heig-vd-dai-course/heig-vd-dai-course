@@ -114,6 +114,8 @@ and answering your questions. Thanks!
 
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Pei-Wen Liao[@FeliciaCoding](https://github.com/FeliciaCoding)
+- Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
+
 
 </details>
 
