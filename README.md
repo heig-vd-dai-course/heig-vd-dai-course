@@ -42,7 +42,6 @@ and answering your questions. Thanks!
 - François Bernard de Courville [@fr2c](https://github.com/fr2c)
 - Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
-- Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
@@ -79,6 +78,7 @@ and answering your questions. Thanks!
 -->
 
 - Arnaud Bersier [@Aber37](https://github.com/Aber37)
+- Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
 - Marc Ischi [@Ischim](https://github.com/Ischim)
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
