@@ -40,6 +40,7 @@ and answering your questions. Thanks!
 - Gabriel Bader [@Ayc3s](https://github.com/Ayc3s)
 - Léo Bernard [@Aryeth](https://github.com/Aryeth)
 - François Bernard de Courville [@fr2c](https://github.com/fr2c)
+- Louis Bindschedler [Parityyy](https://github.com/Parityyy)
 - Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
