@@ -112,7 +112,10 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
+- Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
+- Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Simão Romano Schindler [@SchindlerSimao](https://github.com/SchindlerSimao)
+- Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
 
 </details>
 
