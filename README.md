@@ -47,7 +47,6 @@ and answering your questions. Thanks!
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
-- Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 
@@ -98,6 +97,7 @@ Thursdays - 08:30-10:00 - B23 + 16:30-18:00 - K01
 ### Teaching staff
 
 - Ludovic Delafontaine [@ludelafo](https://github.com/ludelafo)
+- Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Gaétan Zwick [@Ga-3tan](https://github.com/Ga-3tan)
 
 ### Students
