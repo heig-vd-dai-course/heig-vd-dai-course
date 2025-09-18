@@ -47,6 +47,7 @@ and answering your questions. Thanks!
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
+- Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 
@@ -112,7 +113,10 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
+- Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
+- Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
+- Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
 
 </details>
 
