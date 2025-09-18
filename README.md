@@ -113,6 +113,7 @@ and answering your questions. Thanks!
 -->
 
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
+- Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
 
 </details>
 
