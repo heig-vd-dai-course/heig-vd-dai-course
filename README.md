@@ -113,6 +113,7 @@ and answering your questions. Thanks!
 -->
 
 - \<first name\> \<last name\> [@<username>](https://github.com/<username>)
+- Christopher Pardo [@ChristopherPardo] (https://github.com/ChristopherPardo)
 
 </details>
 
