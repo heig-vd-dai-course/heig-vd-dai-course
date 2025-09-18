@@ -973,8 +973,11 @@ application as JAR file_ Run/Debug configuration:
 > [!WARNING]
 >
 > It seems that IntelliJ IDEA does not support using the Maven wrapper on their
-> latest version (2025.xx) as pictured below. The following bug reports seem
-> related to this (as per our findings in September 2025):
+> latest version (2025.xx). Thus, the configuration pictured below will not work
+> correctly.
+>
+> The following bug reports seem related to this (as per our findings in
+> September 2025):
 >
 > - <https://youtrack.jetbrains.com/issue/IDEA-370490/Maven-on-WSL-cant-run-maven-goal-with-not-default-runner.-The-JAVAHOME-environment-variable-is-not-defined-correctly>
 > - <https://youtrack.jetbrains.com/issue/IDEA-368924/Maven-on-WSL-cant-perform-tasks.-No-such-file-or-directory>
@@ -982,12 +985,14 @@ application as JAR file_ Run/Debug configuration:
 > If you encounter issues, three solutions are possible:
 >
 > 1. Use an older version of IntelliJ IDEA (2024.xx).
-> 2. Use the installed version of Maven instead of the Maven wrapper.
-> 3. Update the Run/Debug configuration manually to use the Maven wrapper as
->    shown in the screenshot below by saving the configuration and modifying the
->    file `.idea/runConfigurations/Package_application_as_JAR_file.xml` as
->    follows (untested, the error might still show up in your IDE but it should
->    work on the teaching staff's computers):
+> 2. Use the installed version of Maven instead of the Maven wrapper by ignoring
+>    this verify specific configuration (keep the _Inherit from settings_
+>    checkbox checked).
+> 3. Update the Run/Debug configuration manually to use the Maven wrapper by
+>    saving the configuration as it is and modifying the file
+>    `.idea/runConfigurations/Package_application_as_JAR_file.xml` as follows
+>    (untested, the error might still show up in your IDE but it should work on
+>    the teaching staff's computers):
 >
 >    ```diff
 >      <component name="ProjectRunConfigurationManager">
