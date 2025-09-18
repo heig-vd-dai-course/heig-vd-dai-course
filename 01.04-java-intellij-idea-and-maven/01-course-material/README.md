@@ -1048,7 +1048,8 @@ This will:
 By checking the **Store as project file** checkbox, the Run/Debug configuration
 will be stored in the `.idea` directory, which can be committed to Git.
 
-Make usage of the Maven wrapper by modifying the **Maven option**.
+Make usage of the Maven wrapper by modifying the **Maven option** (please see
+the warning above if you encounter issues).
 
 Save the configuration and run it by pressing the **Play** button in the
 toolbar.
