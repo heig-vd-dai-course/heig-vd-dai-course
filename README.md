@@ -45,7 +45,6 @@ and answering your questions. Thanks!
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
-- Jules Rossier [@julesrossier](https://github.com/julesrossier)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
@@ -113,7 +112,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- \<first name\> \<last name\> [@<username>](https://github.com/<username>)
+- Jules Rossier [@julesrossier](https://github.com/julesrossier)
 
 </details>
 
