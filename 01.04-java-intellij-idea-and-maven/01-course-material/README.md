@@ -970,6 +970,70 @@ Click on the **+** button and select **Maven**.
 Fill the form as shown in the following screenshot to create the _Package
 application as JAR file_ Run/Debug configuration:
 
+> [!WARNING]
+>
+> It seems that IntelliJ IDEA does not allow to select _"Use Maven wrapper"_
+> from the list as shown below on their latest version (2025.xx) at the project
+> configuration level. Thus, the configuration pictured below will not work
+> correctly.
+>
+> If you encounter issues, these solutions are possible:
+>
+> 1. Use an older version of IntelliJ IDEA (2024.xx).
+> 2. Set the settings at the IDE level (File > Settings... > Build, Execution,
+>    Deployment > Build Tools > Maven) to use the Maven wrapper by default
+>    instead of the project configuration level (keep the _Inherit from
+>    settings_ checkbox checked).
+> 3. Use the installed version of Maven instead of the Maven wrapper by ignoring
+>    this verify specific configuration (keep the _Inherit from settings_
+>    checkbox checked).
+> 4. Update the Run/Debug configuration manually to use the Maven wrapper by
+>    saving the configuration as it is and modifying the file
+>    `.idea/runConfigurations/Package_application_as_JAR_file.xml` as follows
+>    (untested, the error might still show up in your IDE but it should work on
+>    the teaching staff's computers):
+>
+>    ```diff
+>      <component name="ProjectRunConfigurationManager">
+>        <configuration default="false" name="Package application as JAR file" type="MavenRunConfiguration" factoryName="Maven">
+>          <MavenSettings>
+>    -      <option name="myGeneralSettings" />
+>    +      <option name="myGeneralSettings">
+>    +        <MavenGeneralSettings>
+>    +          <option name="alwaysUpdateSnapshots" value="false" />
+>    +          <option name="checksumPolicy" value="NOT_SET" />
+>    +          <option name="customMavenHome" />
+>    +          <option name="emulateTerminal" value="false" />
+>    +          <option name="failureBehavior" value="NOT_SET" />
+>    +          <option name="localRepository" value="" />
+>    +          <option name="mavenHome" value="Use Maven wrapper" />
+>    +          <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+>    +          <option name="nonRecursive" value="false" />
+>    +          <option name="outputLevel" value="INFO" />
+>    +          <option name="printErrorStackTraces" value="false" />
+>    +          <option name="showDialogWithAdvancedSettings" value="false" />
+>    +          <option name="threads" />
+>    +          <option name="useMavenConfig" value="true" />
+>    +          <option name="userSettingsFile" value="" />
+>    +          <option name="workOffline" value="false" />
+>    +        </MavenGeneralSettings>
+>    +      </option>
+>            <option name="myRunnerSettings" />
+>            <option name="myRunnerParameters">
+>              <MavenRunnerParameters>
+>    ```
+>
+> The only thing to do is wait for JetBrains to fix this issue in a future
+> version of IntelliJ IDEA.
+>
+> The following bug reports seem related to this (as per our findings in
+> September 2025):
+>
+> - <https://youtrack.jetbrains.com/issue/IDEA-370490/Maven-on-WSL-cant-run-maven-goal-with-not-default-runner.-The-JAVAHOME-environment-variable-is-not-defined-correctly>
+> - <https://youtrack.jetbrains.com/issue/IDEA-368924/Maven-on-WSL-cant-perform-tasks.-No-such-file-or-directory>
+>
+> Sorry for the inconvenience and thank you for your understanding.
+
 ![Store the Maven configuration](images/intellij-store-the-maven-configuration.png)
 
 Notice the **Run** command: `dependency:go-offline clean compile package`.
@@ -984,7 +1048,8 @@ This will:
 By checking the **Store as project file** checkbox, the Run/Debug configuration
 will be stored in the `.idea` directory, which can be committed to Git.
 
-Make usage of the Maven wrapper by modifying the **Maven option**.
+Make usage of the Maven wrapper by modifying the **Maven option** (please see
+the warning above if you encounter issues).
 
 Save the configuration and run it by pressing the **Play** button in the
 toolbar.
@@ -1632,10 +1697,12 @@ Share your project in the GitHub Discussions of this organization:
 
 Create a new discussion with the following information:
 
-- **Title**: [DAI 2025-2026] My picocli project - <first name> <last
-  name> (replace `<first name>` and `<last name>` with your information)
-- **Category**: Show and tell
-- **Description**: The link to your GitHub repository
+- **Title**: [DAI 2025-2026 Class \<class ID\>] My picocli project - \<first
+  name\> \<last name\> (replace `<class ID>`, `<first name>` and `<last name>`
+  with your information, where `<class ID>` is either `A`, `B` or `C` depending
+  on your class).
+- **Category**: Show and tell.
+- **Description**: The link to your GitHub repository.
 
 This will notify us that you have completed the exercise. We can then check your
 work and provide feedback if we see any issues.
