@@ -120,6 +120,7 @@ and answering your questions. Thanks!
 - Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
+- Maksym Makovskyi [@maxmakovskiy](https://github.com/maxmakovskiy)
 - Quentin Michon [@QuentinMichon](https://github.com/QuentinMichon)
 - Christopher Pardo [@ChristopherPardo] (https://github.com/ChristopherPardo)
 - Simão Romano Schindler [@SchindlerSimao](https://github.com/SchindlerSimao)
