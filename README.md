@@ -83,6 +83,7 @@ and answering your questions. Thanks!
 - Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
 - Marc Ischi [@Ischim](https://github.com/Ischim)
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
+- Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                      
