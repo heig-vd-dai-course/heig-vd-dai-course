@@ -45,7 +45,6 @@ and answering your questions. Thanks!
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
-- Charles Perfect [@CharlesPerfect](https://github.com/CharlesPerfect)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
@@ -83,7 +82,7 @@ and answering your questions. Thanks!
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
-- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                      
+- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
@@ -113,7 +112,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-- \<first name\> \<last name\> [@<username>](https://github.com/<username>)
+- Charles Perfect [@CharlesPerfect](https://github.com/CharlesPerfect)
 
 </details>
 
