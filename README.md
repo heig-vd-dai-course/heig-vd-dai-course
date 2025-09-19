@@ -82,7 +82,7 @@ and answering your questions. Thanks!
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
-- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                      
+- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
@@ -113,9 +113,6 @@ and answering your questions. Thanks!
 -->
 
 - Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
-
-
-- \<first name\> \<last name\> [@<username>](https://github.com/<username>)
 
 </details>
 
