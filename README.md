@@ -38,10 +38,10 @@ and answering your questions. Thanks!
 
 - Koray Akgul [@korayadige](https://github.com/korayadige)
 - Gabriel Bader [@Ayc3s](https://github.com/Ayc3s)
+- Theo Bensaci [@TheoBensaci](https://github.com/TheoBensaci)
 - Léo Bernard [@Aryeth](https://github.com/Aryeth)
 - François Bernard de Courville [@fr2c](https://github.com/fr2c)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
-- Theo Bensaci [@TheoBensaci](https://github.com/TheoBensaci)
 
 </details>
 
