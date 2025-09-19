@@ -87,7 +87,7 @@ and answering your questions. Thanks!
 - Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
-- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                      
+- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
@@ -117,6 +117,7 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
+- Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Quentin Michon [@QuentinMichon](https://github.com/QuentinMichon)
