@@ -130,6 +130,7 @@ and answering your questions. Thanks!
 - Jules Rossier [@julesrossier](https://github.com/julesrossier)
 - Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
 - Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
+- Colin Stefani [@colinstfni](https://github.com/colinstfni)
 
 </details>
 
