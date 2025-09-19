@@ -121,6 +121,7 @@ and answering your questions. Thanks!
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Quentin Michon [@QuentinMichon](https://github.com/QuentinMichon)
+- Christopher Pardo [@ChristopherPardo] (https://github.com/ChristopherPardo)
 - Simão Romano Schindler [@SchindlerSimao](https://github.com/SchindlerSimao)
 - Jules Rossier [@julesrossier](https://github.com/julesrossier)
 - Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
