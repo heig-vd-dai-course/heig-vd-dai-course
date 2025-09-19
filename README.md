@@ -81,6 +81,7 @@ and answering your questions. Thanks!
 
 - Arnaud Bersier [@Aber37](https://github.com/Aber37)
 - Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
+- Louis Garcia [@loueyyyy](https://github.com/loueyyyy)
 - Marc Ischi [@Ischim](https://github.com/Ischim)
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 - Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
