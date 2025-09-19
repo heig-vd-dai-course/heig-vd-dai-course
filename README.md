@@ -38,6 +38,7 @@ and answering your questions. Thanks!
 
 - Koray Akgul [@korayadige](https://github.com/korayadige)
 - Gabriel Bader [@Ayc3s](https://github.com/Ayc3s)
+- Theo Bensaci [@TheoBensaci](https://github.com/TheoBensaci)
 - Léo Bernard [@Aryeth](https://github.com/Aryeth)
 - François Bernard de Courville [@fr2c](https://github.com/fr2c)
 - Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
@@ -47,6 +48,7 @@ and answering your questions. Thanks!
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
+- Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 
@@ -78,11 +80,14 @@ and answering your questions. Thanks!
 -->
 
 - Arnaud Bersier [@Aber37](https://github.com/Aber37)
+- Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
+- Louis Garcia [@loueyyyy](https://github.com/loueyyyy)
 - Marc Ischi [@Ischim](https://github.com/Ischim)
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
+- Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
-- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                      
+- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
@@ -112,8 +117,15 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
+- Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
+- Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Maksym Makovskyi [@maxmakovskiy](https://github.com/maxmakovskiy)
+- Quentin Michon [@QuentinMichon](https://github.com/QuentinMichon)
+- Christopher Pardo [@ChristopherPardo] (https://github.com/ChristopherPardo)
+- Simão Romano Schindler [@SchindlerSimao](https://github.com/SchindlerSimao)
+- Jules Rossier [@julesrossier](https://github.com/julesrossier)
+- Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
 
 </details>
 
