@@ -46,6 +46,7 @@ and answering your questions. Thanks!
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
+- Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
 - Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
@@ -66,6 +67,7 @@ Wednesdays - 13:00-16:15 - J04
 - Olivier Tischhauser [@binaerbaum](https://github.com/binaerbaum)
 - Ylli Fazlija [@FazlijaYlli](https://github.com/FazlijaYlli)
 
+
 ### Students
 
 <!--
@@ -79,6 +81,9 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
+<<<<<<< HEAD
+- Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
+=======
 - Arnaud Bersier [@Aber37](https://github.com/Aber37)
 - Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
 - Louis Garcia [@loueyyyy](https://github.com/loueyyyy)
@@ -89,6 +94,7 @@ and answering your questions. Thanks!
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
+>>>>>>> a52e98840973bc52f4daf4ef58f35bcea6af724f
 
 </details>
 
