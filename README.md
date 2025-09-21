@@ -124,6 +124,7 @@ and answering your questions. Thanks!
 - Pei-Wen Liao[@FeliciaCoding](https://github.com/FeliciaCoding)
 - Maksym Makovskyi [@maxmakovskiy](https://github.com/maxmakovskiy)
 - Quentin Michon [@QuentinMichon](https://github.com/QuentinMichon)
+- Luis Oswaldo [@foswaldo](https://github.com/foswaldo)
 - Christopher Pardo [@ChristopherPardo](https://github.com/ChristopherPardo)
 - Charles Perfect [@CharlesPerfect](https://github.com/CharlesPerfect)
 - Simão Romano Schindler [@SchindlerSimao](https://github.com/SchindlerSimao)
