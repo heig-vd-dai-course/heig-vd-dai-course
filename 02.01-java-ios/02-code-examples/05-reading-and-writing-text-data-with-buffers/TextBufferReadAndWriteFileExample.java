@@ -9,10 +9,10 @@ import java.nio.charset.StandardCharsets;
 class TextBufferReadAndWriteFileExample {
 
   public static void main(String[] args) throws IOException {
-    Reader reader = new FileReader("TextReadAndWriteFileExample.java", StandardCharsets.UTF_8);
+    Reader reader = new FileReader("TextBufferReadAndWriteFileExample.java", StandardCharsets.UTF_8);
     BufferedReader br = new BufferedReader(reader);
 
-    Writer writer = new FileWriter("TextReadAndWriteFileExample.txt", StandardCharsets.UTF_8);
+    Writer writer = new FileWriter("TextBufferReadAndWriteFileExample.txt", StandardCharsets.UTF_8);
     BufferedWriter bw = new BufferedWriter(writer);
 
     // -1 indicates the end of the file
