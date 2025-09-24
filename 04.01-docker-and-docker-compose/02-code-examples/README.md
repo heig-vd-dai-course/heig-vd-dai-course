@@ -28,7 +28,7 @@ They are ordered by complexity. You should explore them in the following order:
 2. [Dockerfile with command](./02-dockerfile-with-command)
 3. [Dockerfile with entrypoint and command](./03-dockerfile-with-entrypoint-and-command)
 4. [Dockerfile with run and copy commands](./04-dockerfile-with-run-and-copy-commands)
-5. [Dockerfile with build arguments](./05-dockerfile-with-build-arguments)
+5. [Docker run with ports](./05-docker-run-with-ports)
 6. [Basic Docker Compose](./06-basic-docker-compose)
 7. [Docker Compose with ports](./07-docker-compose-with-ports)
 8. [Docker Compose with volumes](./08-docker-compose-with-volumes)

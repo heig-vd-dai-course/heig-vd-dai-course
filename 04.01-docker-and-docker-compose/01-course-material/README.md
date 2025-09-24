@@ -497,7 +497,7 @@ Check the code examples in the
 - Dockerfile with command.
 - Dockerfile with entrypoint and command.
 - Dockerfile with run and copy commands.
-- Dockerfile with build arguments.
+- Docker run with ports.
 
 Carefully read the README files to understand how to run them and what they do.
 

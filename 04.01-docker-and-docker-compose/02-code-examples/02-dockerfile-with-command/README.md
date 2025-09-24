@@ -7,7 +7,7 @@ This Dockerfile example uses one new instruction:
 The `CMD` instruction specifies the default command to run when the container
 starts. It can be overridden by passing a command to the `docker run` command.
 
-In this example, we use the `debian:12` image. It means that the Docker image
+In this example, we use the `debian:13` image. It means that the Docker image
 will be based on the Debian image and have all the tools and libraries provided
 by this image, such as `bash` as the default shell and `apt` to install new
 packages.

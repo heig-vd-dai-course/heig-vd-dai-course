@@ -1,5 +1,5 @@
 # Base image
-FROM fedora:40
+FROM fedora:42
 
 # Working directory
 WORKDIR /app

@@ -1,4 +1,4 @@
-@startuml
+@startuml client-server-workflow
 hide footbox
 
 participant "TCP Server" as server
