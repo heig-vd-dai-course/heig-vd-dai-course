@@ -50,7 +50,6 @@ and answering your questions. Thanks!
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
-- Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
 - Abram Zweifel [@Abram0303](https://github.com/Abram0303)
@@ -91,7 +90,7 @@ and answering your questions. Thanks!
 - Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
-- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                
+- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
