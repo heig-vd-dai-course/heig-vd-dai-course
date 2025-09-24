@@ -53,6 +53,7 @@ and answering your questions. Thanks!
 - Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
+- Abram Zweifel [@Abram0303](https://github.com/Abram0303)
 
 </details>
 
