@@ -327,9 +327,9 @@ access to a video projector.
 <!--
 The order of presentation is random and is stated in the next tables:
 
-- DAI-TIC-C (Wednesday mornings)(#dai-tic-c-wednesday-mornings)
-- DAI-TIC-B (Wednesday afternoons)(#dai-tic-b-wednesday-afternoons)
-- DAI-TIC-A (Thursdays)(#dai-tic-a-thursdays)
+- DAI-TIC-C [(Wednesday mornings)](#dai-tic-c-wednesday-mornings)
+- DAI-TIC-B [(Wednesday afternoons)](#dai-tic-b-wednesday-afternoons)
+- DAI-TIC-A [(Thursdays)](#dai-tic-a-thursdays)
 
 ### DAI-TIC-C (Wednesday mornings)
 
