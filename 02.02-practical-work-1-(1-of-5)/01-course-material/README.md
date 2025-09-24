@@ -287,7 +287,9 @@ The practical work must comply with the following rules:
 
 Your work is due as follows:
 
-- DAI-TIC-C (Friday mornings): **TBD**
+- DAI-TIC-C (Wednesdays morning): **Tuesday 14.10.25 at 23h59**
+- DAI-TIC-B (Wednesdays afternoon): **Tuesday 14.10.25 at 23h59**
+- DAI-TIC-A (Thursdays): **Wednesday 15.10.25 at 23h59**
 
 > [!CAUTION]
 >
@@ -308,24 +310,25 @@ information:
 
 ## Presentations
 
-The practical work presentations will take place in **room TBD** (next to the
-stairs) on:
+The practical work presentations will take place on:
 
-- DAI-TIC-C (Friday mornings): **TBD**
+- DAI-TIC-C (Wednesdays morning): **Wednesday 15.10.25** starting at **10h30** in room **C37**
+- DAI-TIC-B (Wednesdays afternoon): **Wednesday 15.10.25** starting at **14h45** in room **J04**
+- DAI-TIC-A (Thursdays): **Thursday 16.10.25** starting at **15h30** in room **K01**
+
+The exact schedule will be communicated once the groups are known.
 
 We only have **TBD minutes per group**. You decide what you want to show us and
 how you want to present it.
 
-**Come 5 minutes before your time slot** with your computer. You will have
-access to a video projector.
-
 <!--
 The order of presentation is random and is stated in the next tables:
 
-- [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
-- [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
+- DAI-TIC-C (Wednesday mornings)(#dai-tic-c-wednesday-mornings)
+- DAI-TIC-B (Wednesday afternoons)(#dai-tic-b-wednesday-afternoons)
+- DAI-TIC-A (Thursdays)(#dai-tic-a-thursdays)
 
-### DAI-TIC-B (Monday mornings)
+### DAI-TIC-C (Wednesday mornings)
 
 | #   | Group | Passage |
 | --- | ----- | ------- |
@@ -348,7 +351,7 @@ The order of presentation is random and is stated in the next tables:
 | 17  | TBD   | TDB     |
 | 18  | TBD   | TDB     |
 
-### DAI-TIC-C (Friday mornings)
+### DAI-TIC-B (Wednesday afternoons)
 
 | #   | Group | Passage |
 | --- | ----- | ------- |
@@ -368,6 +371,20 @@ The order of presentation is random and is stated in the next tables:
 | 14  | TBD   | TDB     |
 | 15  | TBD   | TDB     |
 | 16  | TBD   | TDB     |
+
+### DAI-TIC-A (Thursdays)
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
 -->
 
 ## Grades and feedback
