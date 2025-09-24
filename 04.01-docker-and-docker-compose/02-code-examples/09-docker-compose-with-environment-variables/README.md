@@ -20,7 +20,7 @@ port, the server's name, or the server's root directory.
 Using a custom template file in the `templates` directory, the
 `templates/default.conf.template` file is used to generate the
 `/etc/nginx/conf.d/default.conf` file with the environment variables set in the
-`docker-compose.yaml` file as per the
+`compose.yaml` file as per the
 [official nginx Docker image documentation](https://hub.docker.com/_/nginx).
 
 This configuration changes the log files' location and loggers' level in the
@@ -62,7 +62,7 @@ the invalid pages that are access from bots, users, etc. on our web server), you
 can set the log level to `crit` to only display critical messages.
 
 Stop the container and change the `NGINX_LOG_LEVEL` environment variable in the
-`docker-compose.yaml` file to `crit`.
+`compose.yaml` file to `crit`.
 
 Delete the `logs` directory with the following command to ensure that the logs
 are updated:

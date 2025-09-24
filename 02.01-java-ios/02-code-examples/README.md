@@ -20,7 +20,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Code examples
 
-this directory contains several examples of Java IOs implementations.
+This directory contains several examples of Java IOs implementations.
 
 We recommend you to try each example and understand how it works.
 
