@@ -88,6 +88,7 @@ and answering your questions. Thanks!
 - Marc Ischi [@Ischim](https://github.com/Ischim)
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 - Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
+- Arnaut Leyre [@Arnaut](https://github.com/Arnaut)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
