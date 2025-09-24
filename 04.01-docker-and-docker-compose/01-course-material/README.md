@@ -85,6 +85,13 @@ applications in containers so you can run them and share them with others
 without the need to install anything else than Docker and Docker Compose on the
 target machine.
 
+In short, by the end of this course, you should be able to:
+
+- Learn the differences between bare metal, virtualization and containerization.
+- Learn how the OCI specification defines images, containers, and registries.
+- Learn how to use Docker and Docker Compose to build, publish, and run
+  applications in containers.
+
 As this chapter is quite abstract, you will first setup your environment to be
 able to run some code examples along with the theory.
 
