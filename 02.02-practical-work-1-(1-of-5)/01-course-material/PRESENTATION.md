@@ -237,7 +237,7 @@ the [course material][course].
 
 More details for this section in the [course material][course].
 
-### Presentations
+### Presentations (1/2)
 
 The practical work presentations will take place on:
 
@@ -246,6 +246,8 @@ The practical work presentations will take place on:
 - DAI-TIC-A: **Thursday 16.10.25** in room **K01**
 
 The exact schedule will be communicated once the groups are known.
+
+### Presentations (2/2)
 
 We only have **TBD minutes per group**. You decide what you want to show us and
 how you want to present it.
