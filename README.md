@@ -45,6 +45,7 @@ and answering your questions. Thanks!
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
 - Romain Durussel [@romain-drsl](https://github.com/romain-drsl)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
+- Sofian Ethenoz [@SofianEthenoz](https://github.com/SofianEthenoz)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
