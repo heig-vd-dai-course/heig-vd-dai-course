@@ -68,7 +68,6 @@ Wednesdays - 13:00-16:15 - J04
 - Olivier Tischhauser [@binaerbaum](https://github.com/binaerbaum)
 - Ylli Fazlija [@FazlijaYlli](https://github.com/FazlijaYlli)
 
-
 ### Students
 
 <!--
@@ -82,8 +81,6 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-
-
 - Arnaud Bersier [@Aber37](https://github.com/Aber37)
 - Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
 - Tiago Filipe Ferreira Costa [@tfHEIG](https://github.com/tfHEIG)
@@ -96,7 +93,6 @@ and answering your questions. Thanks!
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
-
 
 </details>
 
