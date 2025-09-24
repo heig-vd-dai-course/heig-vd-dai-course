@@ -287,8 +287,8 @@ The practical work must comply with the following rules:
 
 Your work is due as follows:
 
-- DAI-TIC-C (Wednesdays morning): **Tuesday 14.10.25 at 23h59**
-- DAI-TIC-B (Wednesdays afternoon): **Tuesday 14.10.25 at 23h59**
+- DAI-TIC-C (Wednesday mornings): **Tuesday 14.10.25 at 23h59**
+- DAI-TIC-B (Wednesday afternoons): **Tuesday 14.10.25 at 23h59**
 - DAI-TIC-A (Thursdays): **Wednesday 15.10.25 at 23h59**
 
 > [!CAUTION]
@@ -312,8 +312,8 @@ information:
 
 The practical work presentations will take place on:
 
-- DAI-TIC-C (Wednesdays morning): **Wednesday 15.10.25** starting at **10h30** in room **C37**
-- DAI-TIC-B (Wednesdays afternoon): **Wednesday 15.10.25** starting at **14h45** in room **J04**
+- DAI-TIC-C (Wednesday mornings): **Wednesday 15.10.25** starting at **10h30** in room **C37**
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 15.10.25** starting at **14h45** in room **J04**
 - DAI-TIC-A (Thursdays): **Thursday 16.10.25** starting at **15h30** in room **K01**
 
 The exact schedule will be communicated once the groups are known.
