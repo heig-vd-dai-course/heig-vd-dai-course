@@ -321,6 +321,9 @@ The exact schedule will be communicated once the groups are known.
 We only have **TBD minutes per group**. You decide what you want to show us and
 how you want to present it.
 
+**Come 5 minutes before your time slot** with your computer. You will have
+access to a video projector.
+
 <!--
 The order of presentation is random and is stated in the next tables:
 
