@@ -41,7 +41,6 @@ and answering your questions. Thanks!
 - Theo Bensaci [@TheoBensaci](https://github.com/TheoBensaci)
 - Léo Bernard [@Aryeth](https://github.com/Aryeth)
 - François Bernard de Courville [@fr2c](https://github.com/fr2c)
-- Thomas Boltshauser [@Thomas-boltshauser](https://github.com/Thomas-boltshauser)
 - Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
 - Romain Durussel [@romain-drsl](https://github.com/romain-drsl)
@@ -121,6 +120,7 @@ and answering your questions. Thanks!
 -->
 
 - Gianni Bee [@GinByte](https://github.com/GinByte)
+- Thomas Boltshauser [@Thomas-boltshauser](https://github.com/Thomas-boltshauser)
 - Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
