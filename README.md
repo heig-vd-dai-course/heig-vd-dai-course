@@ -45,7 +45,6 @@ and answering your questions. Thanks!
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
-- Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
@@ -79,15 +78,15 @@ It helps us (the teaching staff) searching for someone when grading your work
 and answering your questions. Thanks!
 -->
 
-<<<<<<< HEAD
-- Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
-=======
+
+
 - Arnaud Bersier [@Aber37](https://github.com/Aber37)
 - Marc Ischi [@Ischim](https://github.com/Ischim)
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
+- Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
->>>>>>> a52e98840973bc52f4daf4ef58f35bcea6af724f
+
 
 </details>
 
