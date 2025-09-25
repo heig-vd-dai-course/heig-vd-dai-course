@@ -138,6 +138,7 @@ and answering your questions. Thanks!
 - Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
 - Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Colin Stefani [@colinstfni](https://github.com/colinstfni)
+- Guo Yu Wu [@AlterSpectre](https://github.com/AlterSpectre)
 
 </details>
 
