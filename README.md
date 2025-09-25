@@ -129,6 +129,7 @@ and answering your questions. Thanks!
 - Thomas Boltshauser [@Thomas-boltshauser](https://github.com/Thomas-boltshauser)
 - Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
+- Sofia Henriques Garfo [@aihxpos111](https://github.com/aihxpos111)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Pei-Wen Liao [@FeliciaCoding](https://github.com/FeliciaCoding)
 - Maksym Makovskyi [@maxmakovskiy](https://github.com/maxmakovskiy)
