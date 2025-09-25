@@ -273,10 +273,11 @@ The OCI specification defines the following terms (among others):
 
 - Image: a read-only template with instructions for creating a container.
 - Container: a runnable instance of an image.
-- Registry: a service that stores images . A container image is a package that
-  contains everything needed to run an application. It contains the application
-  and all its dependencies. It also contains metadata about the image, such as
-  the author, the version, the description, etc.
+- Registry: a service that stores images.
+- A container image is a package that contains everything needed to run an
+  application. It contains the application and all its dependencies. It also
+  contains metadata about the image, such as the author, the version, the
+  description, etc.
 
 A container image is immutable. It cannot be modified. If you want to modify a
 container image, you need to create a new image.
