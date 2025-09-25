@@ -90,6 +90,8 @@ and answering your questions. Thanks!
 - Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
 - Arnaut Leyre [@Arnaut](https://github.com/Arnaut)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
+- Thibault Matthey [@ThibaultMHEIG](https://github.com/ThibaultMheig)
+- Laszlo Meylan [@LaszloMeylan] (https://github.com/LaszloMeylan) 
 - Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
@@ -123,9 +125,12 @@ and answering your questions. Thanks!
 -->
 
 - Gianni Bee [@GinByte](https://github.com/GinByte)
+- Louis Bindschedler [@Parityyy](https://github.com/Parityyy)
 - Kym Bolomey [@k-bool](https://github.com/k-bool)
+- Thomas Boltshauser [@Thomas-boltshauser](https://github.com/Thomas-boltshauser)
 - Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
+- Sofia Henriques Garfo [@aihxpos111](https://github.com/aihxpos111)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
 - Pei-Wen Liao [@FeliciaCoding](https://github.com/FeliciaCoding)
 - Maksym Makovskyi [@maxmakovskiy](https://github.com/maxmakovskiy)
@@ -133,11 +138,13 @@ and answering your questions. Thanks!
 - Luis Oswaldo [@foswaldo](https://github.com/foswaldo)
 - Christopher Pardo [@ChristopherPardo](https://github.com/ChristopherPardo)
 - Charles Perfect [@CharlesPerfect](https://github.com/CharlesPerfect)
+- Paul Reynard [@reynardpaul](https://github.com/reynardpaul)
 - Simão Romano Schindler [@SchindlerSimao](https://github.com/SchindlerSimao)
 - Jules Rossier [@julesrossier](https://github.com/julesrossier)
 - Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
 - Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Colin Stefani [@colinstfni](https://github.com/colinstfni)
+- Robiel Tesfazghi [@robielTes](https://github.com/robielTes)
 - Guo Yu Wu [@AlterSpectre](https://github.com/AlterSpectre)
 
 </details>
