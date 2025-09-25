@@ -124,6 +124,7 @@ and answering your questions. Thanks!
 -->
 
 - Gianni Bee [@GinByte](https://github.com/GinByte)
+- Louis Bindschedler [@Parityyy](https://github.com/Parityyy)
 - Kym Bolomey [@k-bool](https://github.com/k-bool)
 - Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
