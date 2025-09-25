@@ -47,6 +47,7 @@ and answering your questions. Thanks!
 - Sofian Ethenoz [@SofianEthenoz](https://github.com/SofianEthenoz)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
+- Sofia Henriques Garfo [@aihxpos111](https://github.com/aihxpos111)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
