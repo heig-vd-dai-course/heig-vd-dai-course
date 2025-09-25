@@ -138,6 +138,7 @@ and answering your questions. Thanks!
 - Luis Oswaldo [@foswaldo](https://github.com/foswaldo)
 - Christopher Pardo [@ChristopherPardo](https://github.com/ChristopherPardo)
 - Charles Perfect [@CharlesPerfect](https://github.com/CharlesPerfect)
+- Paul Reynard [@reynardpaul](https://github.com/reynardpaul)
 - Simão Romano Schindler [@SchindlerSimao](https://github.com/SchindlerSimao)
 - Jules Rossier [@julesrossier](https://github.com/julesrossier)
 - Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
