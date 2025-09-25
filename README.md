@@ -44,14 +44,16 @@ and answering your questions. Thanks!
 - Maikol Correia Da Silva [@Maikol-Da-Silva](https://github.com/Maikol-Da-Silva)
 - Alberto de Sousa Lopes [Albe-E](https://github.com/Alb-E)
 - Romain Durussel [@romain-drsl](https://github.com/romain-drsl)
+- Sofian Ethenoz [@SofianEthenoz](https://github.com/SofianEthenoz)
 - Nolan Evard [@Tigid0u](https://github.com/Tigid0u)
 - Victor Giordani [@VictorGTheCoder](https://github.com/VictorGTheCoder)
+- Thibault Matthey [@ThibaultMHEIG](https://github.com/ThibaultMheig)
 - Yann Mermoud [@YannMermoud](https://github.com/YannMermoud)
 - Mouhamed Abdallah Sakho [@mouhamed-sakho](https://github.com/mouhamed-sakho)
 - Mauro Santos [@MauroWasTaken](https://github.com/MauroWasTaken)
-- Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Nathan Stampfli [@Nathan-Stampfli](https://github.com/Nathan-Stampfli)
 - Pierre Thiébaud [@WTHIJ](https://github.com/WTHIJ)
+- Abram Zweifel [@Abram0303](https://github.com/Abram0303)
 
 </details>
 
@@ -87,9 +89,11 @@ and answering your questions. Thanks!
 - Marc Ischi [@Ischim](https://github.com/Ischim)
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 - Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
+- Arnaut Leyre [@Arnaut](https://github.com/Arnaut)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
+- Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
-- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)                                                
+- Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
 </details>
@@ -120,11 +124,13 @@ and answering your questions. Thanks!
 -->
 
 - Gianni Bee [@GinByte](https://github.com/GinByte)
+- Louis Bindschedler [@Parityyy](https://github.com/Parityyy)
+- Kym Bolomey [@k-bool](https://github.com/k-bool)
 - Thomas Boltshauser [@Thomas-boltshauser](https://github.com/Thomas-boltshauser)
 - Quentin Eschmann [@QuentinEschmann](https://github.com/QuentinEschmann)
 - Benoit Essinger [@EssingerBenoit](https://github.com/EssingerBenoit)
 - Tadeusz Kondracki [@GlysVenture](https://github.com/GlysVenture)
-- Pei-Wen Liao[@FeliciaCoding](https://github.com/FeliciaCoding)
+- Pei-Wen Liao [@FeliciaCoding](https://github.com/FeliciaCoding)
 - Maksym Makovskyi [@maxmakovskiy](https://github.com/maxmakovskiy)
 - Quentin Michon [@QuentinMichon](https://github.com/QuentinMichon)
 - Luis Oswaldo [@foswaldo](https://github.com/foswaldo)
@@ -135,6 +141,7 @@ and answering your questions. Thanks!
 - Aymeric Siegenthaler [@aymcorp](https://github.com/aymcorp)
 - Yanni Skawronski [@yanniSkawronski](https://github.com/yanniSkawronski)
 - Colin Stefani [@colinstfni](https://github.com/colinstfni)
+- Robiel Tesfazghi [@robielTes](https://github.com/robielTes) 
 
 </details>
 
