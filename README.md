@@ -135,6 +135,7 @@ and answering your questions. Thanks!
 - Pei-Wen Liao [@FeliciaCoding](https://github.com/FeliciaCoding)
 - Maksym Makovskyi [@maxmakovskiy](https://github.com/maxmakovskiy)
 - Quentin Michon [@QuentinMichon](https://github.com/QuentinMichon)
+- Fateme Pirhayati [@Luffy-sudo-fateme](https://github.com/Luffy-sudo-fateme)
 - Luis Oswaldo [@foswaldo](https://github.com/foswaldo)
 - Christopher Pardo [@ChristopherPardo](https://github.com/ChristopherPardo)
 - Charles Perfect [@CharlesPerfect](https://github.com/CharlesPerfect)
