@@ -161,7 +161,7 @@ other resources and alternatives as well.
 - Build a Docker image.
 - Based on an existing image.
 - Defines a set of instructions to build the image.
-- Written in plain text.
+- Written in plain text with a few keywords to define the instructions.
 
 ![bg right contain](./images/dockerfile-specification.png)
 
@@ -184,22 +184,37 @@ other resources and alternatives as well.
 
 ### Docker Compose
 
-- Can be used to deploy a multi-container application.
-- Can be committed with the application.
+- Can be used to deploy a multi-container application (called a _"stack"_).
+- Can be committed to Git.
 - Can be used to deploy the application on any Docker host.
-- Easy to use.
+- Much easier than plain Docker commands.
 
 ![bg right w:60%](https://github.com/docker/compose/raw/main/logo.png)
 
-### Docker Compose specification
+### Docker Compose specification (1/2)
 
-- Defines the application.
-  - Services: containers.
-  - Volumes: shared directories.
-  - Networks: network communication.
-- Written in YAML.
+- Defines the stack:
+  - Services: containers that can interact together.
+  - Volumes: shared directories to store data.
+  - Networks: network communications between services.
 
 ![bg right contain](./images/docker-compose-specification.png)
+
+### Docker Compose specification (2/2)
+
+- A Docker Compose file is written in YAML:
+  - `compose.yaml` (new standard)
+  - `docker-compose.yaml` (old standard).
+
+![bg right contain](./images/docker-compose-specification.png)
+
+### Docker Compose v1 vs. Docker Compose v2
+
+- Docker Compose v1 written in Python (`docker-compose`)
+- Docker Compose v2 written in Go (`docker compose`)
+- Docker Compose v1 is deprecated
+
+![bg right contain](./images/docker-compose-v1-vs-v2.png)
 
 ### Code examples
 
@@ -216,9 +231,9 @@ Check the code examples in the
 - Docker Compose allows to define a multi-container Docker application in a
   Docker Compose file.
 - A Docker Compose file can consist of a set of services, volumes and networks
-  called a "stack".
-- A Docker Compose file (`docker-compose.yaml`) can be easily shared and
-  versioned with the application.
+  called a _"stack"_.
+- A Docker Compose file (`compose.yaml`) can be easily shared and versioned with
+  the application.
 
 ## Questions
 
@@ -264,17 +279,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-We are arriving at the end of the first part of the course.
-
-An evaluation will be done to check your understanding of all the content seen
-in this first part.
-
-More details will be given in the next chapter.
-
-![bg right:40%](https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720)
-
 ## Sources
 
 - Main illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
@@ -287,8 +291,6 @@ More details will be given in the next chapter.
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [Scott Webb](https://unsplash.com/@scottwebb) on
   [Unsplash](https://unsplash.com/photos/yekGLpc3vro)
-- Illustration by [MChe Lee](https://unsplash.com/@mclee) on
-  [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
 
 [course]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04.01-docker-and-docker-compose
