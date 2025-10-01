@@ -1,4 +1,4 @@
-@startuml a-focus-on-the-smtp-protocol
+@startuml smtp-protocol-diagram
 skinparam boxPadding 100
 skinparam maxMessageSize 150
 skinparam noteTextAlignment center
