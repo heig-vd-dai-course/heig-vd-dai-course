@@ -178,21 +178,11 @@ other resources and alternatives as well.
 - The server responds with a status code.
 - The client can send the next command.
 
-![bg right contain](./images/a-focus-on-the-smtp-protocol-1.png)
+![bg right contain](./images/smtp-protocol.png)
 
 ---
 
-- `HELO` /`EHLO`
-- `MAIL FROM`
-- `RCPT TO`
-- `DATA`
-  - `Subject:`
-  - `From:`
-  - `To:`
-  - End by `.`
-- `QUIT`
-
-![bg right:70% h:80%](./images/a-focus-on-the-smtp-protocol-2.png)
+![bg h:80%](./images/smtp-protocol-diagram.png)
 
 ## ncat
 
@@ -203,9 +193,9 @@ other resources and alternatives as well.
 
 ### ncat
 
-- ncat is network utility for reading from and writing to network connections
-- It is used to connect to a remote server (SMTP, HTTP, ...)
-- We will use it to interact with a SMTP server
+- ncat is network utility for reading from and writing to network connections.
+- It is used to connect to a remote server (SMTP, HTTP, ...).
+- We will use it to interact with a SMTP server.
 
 ![bg right contain](./images/ncat.png)
 
