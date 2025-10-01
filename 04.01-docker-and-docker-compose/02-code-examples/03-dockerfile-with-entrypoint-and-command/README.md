@@ -13,7 +13,7 @@ to the `docker run` command, a manual override is needed.
 The `CMD` instruction is then passed as arguments to the `ENTRYPOINT`
 instruction.
 
-In this example, we use the `fedora:40` image. It means that the Docker image
+In this example, we use the `fedora:42` image. It means that the Docker image
 will be based on the Fedora image and have all the tools and libraries provided
 by this image, such as `bash` as the default shell and `dnf` to install new
 packages.
@@ -47,11 +47,12 @@ You can then override the default command by passing a command to the
 
 ```sh
 # Run the Docker container with a custom command
-docker run --rm dockerfile-with-command "Hello, DAI student!"
+docker run --rm dockerfile-with-entrypoint-and-command "Hello, DAI student!"
 ```
 
-Notice how you did not have to pass the `echo` command to the `docker run` as it
-is set as the default command in the `ENTRYPOINT` instruction.
+Notice how you did not have to pass the `echo` command as previous example? This
+is thanks to the default command in the `ENTRYPOINT` instruction. New arguments
+are simply appended to it.
 
 To override the default command, you need to pass the `--entrypoint` flag to the
 `docker run` command:

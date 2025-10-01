@@ -36,6 +36,21 @@ To run the Docker container, run the following command:
 docker run --rm -it basic-dockerfile /bin/bash
 ```
 
+The `--rm` flag tells Docker to remove the container once it is stopped.
+
+The `-it` flags tell Docker to run the container in interactive mode and
+allocate a pseudo-TTY, which allows you to interact with the container via the
+terminal.
+
+The `/bin/bash` command tells Docker to run the `bash` shell inside the
+container.
+
+Once inside the container, you should see a prompt similar to the following:
+
+```sh
+root@<container-id>:/app#
+```
+
 Run the following command to check the working directory:
 
 ```sh
@@ -48,6 +63,10 @@ The output should be similar to the following:
 ```text
 /app
 ```
+
+Success! The working directory is set to `/app` as specified in the Dockerfile.
+You can now run any command inside the container. These commands will be
+executed in the isolated environment of the container.
 
 Exit the container by running the following command:
 

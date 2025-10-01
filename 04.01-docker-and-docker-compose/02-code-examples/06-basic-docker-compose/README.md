@@ -1,6 +1,6 @@
 # Basic Docker Compose
 
-This Docker Compose example uses one service, a simple hello-world service that
+This Docker Compose example uses one service, a simple hello-world service, that
 prints a message to the console.
 
 It uses two important keys:

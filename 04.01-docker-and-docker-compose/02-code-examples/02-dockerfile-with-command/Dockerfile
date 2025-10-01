@@ -1,5 +1,5 @@
 # Base image
-FROM debian:12
+FROM debian:13
 
 # Working directory
 WORKDIR /app
