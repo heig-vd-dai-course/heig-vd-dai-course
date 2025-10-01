@@ -2,6 +2,7 @@
 	"name": "HEIG-VD DAI Course Development Container",
 	"dockerComposeFile": "compose.yaml",
 	"service": "devcontainer",
+	"runServices": ["plantuml"],
 	"workspaceFolder": "/workspace",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {},

@@ -349,16 +349,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-- Learn the different ways to manage multiple clients at the same time with
-  concurrency
-- Update the two network applications to handle multiple clients (optional):
-  - The _"Guess the number"_ game
-  - The _"Temperature monitoring"_ application
-
-![bg right:40%](https://images.unsplash.com/photo-1628440167042-197d8eb88929?fit=crop&h=720)
-
 ## Sources
 
 - Main illustration by

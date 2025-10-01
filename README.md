@@ -209,9 +209,9 @@ Dates are taken from the
 |    [02](#-course-02) | 22.09. - 28.09.25         | Java IOs                                 | Practical work 1 (1/5)                       | 🟢 Ready        |
 |    [03](#-course-03) | 29.09. - 05.10.25         | Practical work 1 (2/5)                   | Practical work 1 (3/5)                       | 🟢 Ready        |
 |    [04](#-course-04) | 06.10. - 12.10.25         | Docker and Docker Compose                | Practical work 1 (4/5)                       | 🟢 Ready        |
-| 🚨 [05](#-course-05) | 13.10. - 19.10.25         | SMTP and ncat                            | Practical work 1 (5/5) - Presentations       | 🟡 In progress  |
+| 🚨 [05](#-course-05) | 13.10. - 19.10.25         | SMTP and ncat                            | Practical work 1 (5/5) - Presentations       | 🟢 Ready        |
 |                    - | 20.10. - 26.10.25         | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | -               |
-|    [06](#-course-06) | 27.10. - 02.11.25         | Define an application protocol           | Practical work 2 (1/6)                       | 🔴 To do        |
+|    [06](#-course-06) | 27.10. - 02.11.25         | Define an application protocol           | Practical work 2 (1/6)                       | 🟡 In progress  |
 |    [07](#-course-07) | 03.11. - 09.11.25         | Java TCP and UDP programming (1/2)       | Practical work 2 (2/6)                       | 🔴 To do        |
 |    [08](#-course-08) | 10.11. - 16.11.25         | Java TCP and UDP programming (2/2)       | Practical work 2 (3/6)                       | 🔴 To do        |
 |    [09](#-course-09) | 17.11. - 23.11.25         | Java network concurrency                 | Practical work 2 (4/6)                       | 🔴 To do        |
@@ -428,7 +428,6 @@ Dates are taken from the
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/05.03-smtp-and-ncat-presentation.pdf)
 - Code examples: [Link to content](./05.03-smtp-and-ncat/02-code-examples/)
-- Solution: [Link to content](./05.03-smtp-and-ncat/03-solution/)
 
 [Jump back to Program](#-program)
 

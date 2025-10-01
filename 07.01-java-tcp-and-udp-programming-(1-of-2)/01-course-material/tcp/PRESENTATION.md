@@ -319,17 +319,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Java UDP programming
-  - How does it compare to TCP?
-  - How to create efficient UDP network applications
-  - Implement the _"Temperature monitoring"_ application using UDP (optional)
-
-![bg right:40%](https://images.unsplash.com/photo-1578054041218-5ee0003926dd?fit=crop&h=720)
-
 ## Sources
 
 - Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on

@@ -1,7 +1,6 @@
 services:
   mailpit:
-    # Use the version set in the `.env` file, or default to the latest version
-    image: axllent/mailpit:${MAILPIT_IMAGE_VERSION:-latest}
+    image: axllent/mailpit:v1.27
     # If the container stops, restart it automatically
     restart: unless-stopped
     ports:

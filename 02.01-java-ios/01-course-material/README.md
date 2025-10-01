@@ -28,7 +28,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
   - [Clone or fetch latest changes from the main repository to get the code examples](#clone-or-fetch-latest-changes-from-the-main-repository-to-get-the-code-examples)
   - [Open the repository in your IDE](#open-the-repository-in-your-ide)
-  - [Check and run the code examples](#check-and-run-the-code-examples)
+  - [Access the code examples in your terminal](#access-the-code-examples-in-your-terminal)
+  - [Explore and run the code examples](#explore-and-run-the-code-examples)
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
 - [The Java IO API](#the-java-io-api)
 - [Types of data](#types-of-data)
@@ -58,7 +59,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-- [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
 - [Solution](#solution)
 - [Sources](#sources)
@@ -1065,15 +1065,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Docker and Docker Compose - How to containerize your applications:
-  - What is an image?
-  - What is a container?
-  - How to try out new software without installing it?
 
 ## Additional resources
 
