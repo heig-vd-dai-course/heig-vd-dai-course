@@ -168,10 +168,12 @@ To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: DAI 2025-2026 - Practical work 1 - <first name member 1> <last name
-  member 1>, <first name member 2> <last name member 2> and <first name member
-  3> <last name member 3> (if applicable)
-- **Category**: Show and tell
+- **Title**: [DAI 2025-2026 Class \<class ID \>] Practical work 1 - \<first name
+  member 1\> \<last name member 1\>, \<first name member 2\> \<last name member
+  2\> and \<first name member 3\> \<last name member 3\> (if applicable)
+  (replace `<class ID>`, `<first name>` and `<last name>` with your information,
+  where `<class ID>` is either `A`, `B` or `C` depending on your class).
+- **Category**: Show and tell.
 - **Description**: A quick description of what you will achieve during this
   practical work.
 
@@ -285,7 +287,9 @@ The practical work must comply with the following rules:
 
 Your work is due as follows:
 
-- DAI-TIC-C (Friday mornings): **TBD**
+- DAI-TIC-C (Wednesday mornings): **Tuesday 14.10.25 at 23h59**
+- DAI-TIC-B (Wednesday afternoons): **Tuesday 14.10.25 at 23h59**
+- DAI-TIC-A (Thursdays): **Wednesday 15.10.25 at 23h59**
 
 > [!CAUTION]
 >
@@ -306,10 +310,13 @@ information:
 
 ## Presentations
 
-The practical work presentations will take place in **room TBD** (next to the
-stairs) on:
+The practical work presentations will take place on:
 
-- DAI-TIC-C (Friday mornings): **TBD**
+- DAI-TIC-C (Wednesday mornings): **Wednesday 15.10.25** starting at **10h30** in room **C37**
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 15.10.25** starting at **14h45** in room **J04**
+- DAI-TIC-A (Thursdays): **Thursday 16.10.25** starting at **15h30** in room **K01**
+
+The exact schedule will be communicated once the groups are known.
 
 We only have **TBD minutes per group**. You decide what you want to show us and
 how you want to present it.
@@ -320,10 +327,11 @@ access to a video projector.
 <!--
 The order of presentation is random and is stated in the next tables:
 
-- [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
-- [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
+- [DAI-TIC-C (Wednesday mornings)](#dai-tic-c-wednesday-mornings)
+- [DAI-TIC-B (Wednesday afternoons)](#dai-tic-b-wednesday-afternoons)
+- [DAI-TIC-A (Thursdays)](#dai-tic-a-thursdays)
 
-### DAI-TIC-B (Monday mornings)
+### DAI-TIC-C (Wednesday mornings)
 
 | #   | Group | Passage |
 | --- | ----- | ------- |
@@ -346,7 +354,7 @@ The order of presentation is random and is stated in the next tables:
 | 17  | TBD   | TDB     |
 | 18  | TBD   | TDB     |
 
-### DAI-TIC-C (Friday mornings)
+### DAI-TIC-B (Wednesday afternoons)
 
 | #   | Group | Passage |
 | --- | ----- | ------- |
@@ -366,6 +374,20 @@ The order of presentation is random and is stated in the next tables:
 | 14  | TBD   | TDB     |
 | 15  | TBD   | TDB     |
 | 16  | TBD   | TDB     |
+
+### DAI-TIC-A (Thursdays)
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
 -->
 
 ## Grades and feedback

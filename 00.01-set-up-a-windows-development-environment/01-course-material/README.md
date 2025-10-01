@@ -37,6 +37,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Do not manipulate your files from the File Explorer on Windows](#do-not-manipulate-your-files-from-the-file-explorer-on-windows)
   - [Free up disk space](#free-up-disk-space)
 - [Troubleshooting](#troubleshooting)
+  - [Error 403 when updating or installing WSL](#error-403-when-updating-or-installing-wsl)
   - [Check your Windows build number](#check-your-windows-build-number)
   - [Check for Windows updates](#check-for-windows-updates)
   - [Check if all required Windows features are enabled](#check-if-all-required-windows-features-are-enabled)
@@ -155,6 +156,14 @@ run the following command in the terminal:
 # Check for WSL updates
 wsl --update --web-download
 ```
+
+> [!TIP]
+>
+> Getting an error 403 when trying to install WSL? It is likely that your
+> network is blocking the download of the WSL package. You can try to connect to
+> another network (e.g., your mobile phone hotspot) to bypass the network
+> restrictions. If you want, you can ignore this error and continue with the
+> installation.
 
 If there are updates available, you will be prompted to download and install
 them.
@@ -723,6 +732,14 @@ stuck but we will not help you if you have not tried the following steps.
 > installation. If you are still having issues after following the steps below,
 > please ask for help. We might have to update this guide with more
 > troubleshooting steps.
+
+### Error 403 when updating or installing WSL
+
+If you get an error 403 when trying to install WSL, it is likely that your
+network is blocking the download of the WSL package. You can try to connect to
+another network (e.g., your mobile phone hotspot) to bypass the network
+restrictions. If you want, you can ignore this error and continue with the
+installation.
 
 ### Check your Windows build number
 

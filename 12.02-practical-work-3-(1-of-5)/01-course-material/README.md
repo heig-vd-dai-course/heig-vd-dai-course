@@ -97,12 +97,14 @@ To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: [DAI 2025-2026] Practical work 2 - <first name member 1> <last name
-  member 1>, <first name member 2> <last name member 2> and <first name member
-  3> <last name member 3> (if applicable)
-- **Category**: Show and tell
+- **Title**: [DAI 2025-2026 Class \<class ID \>] Practical work 3 - \<first name
+  member 1\> \<last name member 1\>, \<first name member 2\> \<last name member
+  2\> and \<first name member 3\> \<last name member 3\> (if applicable)
+  (replace `<class ID>`, `<first name>` and `<last name>` with your information,
+  where `<class ID>` is either `A`, `B` or `C` depending on your class).
+- **Category**: Show and tell.
 - **Description**: A quick description of what you will achieve during this
-  practical work
+  practical work.
 
 > [!CAUTION]
 >
