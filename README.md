@@ -93,7 +93,7 @@ and answering your questions. Thanks!
 - Arnaut Leyre [@Arnaut](https://github.com/Arnaut)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Thibault Matthey [@ThibaultMHEIG](https://github.com/ThibaultMheig)
-- Laszlo Meylan [@LaszloMeylan] (https://github.com/LaszloMeylan)
+- Laszlo Meylan [@LaszloMeylan](https://github.com/LaszloMeylan)
 - Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
