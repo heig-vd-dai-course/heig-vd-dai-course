@@ -1,6 +1,6 @@
 # SMTP and ncat
 
-this directory contains a simple example of how to send an email using the SMTP
+This directory contains a simple example of how to send an email using the SMTP
 protocol with a mock server.
 
 ## Usage
@@ -24,3 +24,10 @@ java SmtpClientExample
 
 Access the Mailpit web interface at <http://localhost:8025>. You should see the
 email sent by the Java client.
+
+To stop the Mailpit server, run:
+
+```sh
+# Stop the Mailpit server
+docker compose down
+```

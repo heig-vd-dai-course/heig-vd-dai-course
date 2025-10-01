@@ -2,7 +2,7 @@
 
 ## Variables
 WORKDIR=$(pwd)
-MARP_DOCKER_IMAGE="marpteam/marp-cli:v4.1.1"
+MARP_DOCKER_IMAGE="marpteam/marp-cli:v4.2.3"
 
 ## Script
 echo "Removing all previous generated presentations..."

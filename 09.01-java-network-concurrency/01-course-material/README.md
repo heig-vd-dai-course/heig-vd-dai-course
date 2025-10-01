@@ -51,7 +51,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-- [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
 - [Solution](#solution)
 - [Sources](#sources)
@@ -557,16 +556,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Learn about electronic mail protocols
-- Experiment with the SMTP protocol
-  - Start a local SMTP server for testing
-  - Send an email using ncat
-  - Send an email using a SMTP client written in Java
 
 ## Additional resources
 
