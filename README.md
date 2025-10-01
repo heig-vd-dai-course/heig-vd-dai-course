@@ -82,6 +82,7 @@ and answering your questions. Thanks!
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
+- Audrey Mauroux [@aelm2412](https://github.com/aelm2412)
 
 </details>
 
