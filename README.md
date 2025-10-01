@@ -86,6 +86,7 @@ and answering your questions. Thanks!
 - Samuel Dos Santos [@Samurai-05](https://github.com/Samurai-05)
 - Tiago Filipe Ferreira Costa [@tfHEIG](https://github.com/tfHEIG)
 - Louis Garcia [@loueyyyy](https://github.com/loueyyyy)
+- Pierre Gellet [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Julien Gorgerat [@GilleanTobin](https://github.com/GilleanTobin)
 - Marc Ischi [@Ischim](https://github.com/Ischim)
 - Yuuta Jorand [@hydrogene09](https://github.com/hydrogene09)
@@ -96,7 +97,7 @@ and answering your questions. Thanks!
 - Thibault Matthey [@ThibaultMHEIG](https://github.com/ThibaultMheig)
 - Laszlo Meylan [@LaszloMeylan](https://github.com/LaszloMeylan)
 - Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
-- Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
+- Mirco Profico [@mircoprofico](https://github.com/mircoprofico)
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
