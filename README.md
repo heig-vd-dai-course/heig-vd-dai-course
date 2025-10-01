@@ -92,12 +92,14 @@ and answering your questions. Thanks!
 - Fabien Léger [@Schokiiiiiiii](https://github.com/Schokiiiiiiii)
 - Arnaut Leyre [@Arnaut](https://github.com/Arnaut)
 - Agron Markaj [@markaj-agron](https://github.com/markaj-agron)
+- Audrey Mauroux [@aelm2412](https://github.com/aelm2412)
 - Thibault Matthey [@ThibaultMHEIG](https://github.com/ThibaultMheig)
 - Laszlo Meylan [@LaszloMeylan](https://github.com/LaszloMeylan)
 - Jonathan Nicolet [@NicoletJonathan](https://github.com/NicoletJonathan)
 - Gellet Pierre [@IbuprofenLover](https://github.com/IbuprofenLover)
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
+
 
 </details>
 
