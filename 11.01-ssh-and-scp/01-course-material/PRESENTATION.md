@@ -161,15 +161,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Learn how to use HTTP, a high-level protocol for the web
-- Create your own simple web API with CRUD operations with Java
-
-![bg right:40%](https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720)
-
 ## Sources
 
 - Main illustration by [Mathew Schwartz](https://unsplash.com/@cadop) on

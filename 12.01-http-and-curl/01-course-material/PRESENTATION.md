@@ -565,17 +565,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Web infrastructures
-  - How to run and maintain web applications on the Internet?
-  - How to scale web applications?
-  - How to secure web applications?
-
-![bg right:40%](https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720)
-
 ## Sources
 
 - Main illustration by [Ashley Knedler](https://unsplash.com/@ashkned) on

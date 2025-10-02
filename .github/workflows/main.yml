@@ -11,6 +11,8 @@ on:
       - main
     tags:
       - "*"
+    paths:
+      - "**/**/PRESENTATION.md"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages and to release to GitHub Releases
 permissions:
@@ -26,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build presentations with Marp
-        uses: docker://marpteam/marp-cli:v4.1.1
+        uses: docker://marpteam/marp-cli:v4.2.3
         with:
           entrypoint: sh
           args: build-all-presentations.sh

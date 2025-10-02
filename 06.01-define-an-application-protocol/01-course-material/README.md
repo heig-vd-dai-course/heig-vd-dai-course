@@ -24,11 +24,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
-- [A quick reminder about networking](#a-quick-reminder-about-networking)
-  - [The Internet Protocol (IP)](#the-internet-protocol-ip)
-  - [The Domain Name System (DNS)](#the-domain-name-system-dns)
-  - [Common DNS records](#common-dns-records)
-  - [Reserved ports](#reserved-ports)
 - [What is an application protocol](#what-is-an-application-protocol)
 - [How is structured an application protocol](#how-is-structured-an-application-protocol)
 - [How to define an application protocol](#how-to-define-an-application-protocol)
@@ -46,7 +41,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-- [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
 - [Solution](#solution)
 - [Sources](#sources)
@@ -67,123 +61,6 @@ chapters, you will learn how to interact with well known application protocols.
 > While quite short, this chapter is one of the most important in the course. It
 > will help you to understand how applications communicate with each other and
 > how to define your own application protocol for others to use.
-
-## A quick reminder about networking
-
-### The Internet Protocol (IP)
-
-Each computer connected to the Internet has an
-[IP (Internet Protocol) address](https://en.wikipedia.org/wiki/IP_address). This
-IP address is used to identify the computer on the Internet. It is a unique
-address. As [IPv4](https://en.wikipedia.org/wiki/Internet_Protocol_version_4)
-addresses are limited, there are
-[NAT (Network Address Translation)](https://en.wikipedia.org/wiki/Network_address_translation)
-routers that allow to share a single IP address between multiple computers. This
-is why [IPv6](https://en.wikipedia.org/wiki/IPv6) was created.
-
-### The Domain Name System (DNS)
-
-The [Domain Name System (DNS)](https://en.wikipedia.org/wiki/Domain_Name_System)
-is a system that allows to map a domain name to an IP address. For example, the
-domain name `heig-vd.ch` is mapped to the IP address `193.134.223.20`.
-
-You can check this by running the following command with
-[nslookup](https://en.wikipedia.org/wiki/Nslookup):
-
-```sh
-nslookup heig-vd.ch
-```
-
-The output should be similar to the following:
-
-```text
-Server:         8.8.8.8
-Address:        8.8.8.8#53
-
-Non-authoritative answer:
-Name:   heig-vd.ch
-Address: 193.134.223.20
-```
-
-Note the `Address` line. It is the IP mapping the DNS record.
-
-The current DNS server used to resolve the DNS query is `8.8.8.8`.
-
-When you browse the web, your browser will use the DNS to find the IP address of
-the web server. Then, it will use the IP address to request the content of the
-web page on the web server.
-
-### Common DNS records
-
-The DNS holds what are called DNS records. These records are used to map a
-domain name to an IP address. There are many types of DNS records. The most
-common ones are:
-
-- `NS`: This record specifies the name servers for a given domain name.
-- `CNAME`: This record specifies an alias for a given domain name.
-- `A`: This record specifies the IP address of a given domain name (IPv4).
-- `AAAA`: This record specifies the IP address of a given domain name (IPv6).
-
-In this course, you will learn to use a few of these records in future chapters.
-
-### Reserved ports
-
-In computer networking, a port is a communication endpoint. At the software
-level, within an operating system, a port is a logical construct that identifies
-a specific process or a type of network service. Ports are identified for each
-protocol and address combination by 16-bit unsigned numbers, commonly known as
-the port number.
-
-A possible analogy is this: an IP address is like a street address, and a port
-is like an apartment number. The IP address identifies the computer, and the
-port number identifies the specific process running on that computer.
-
-Using 16-bit unsigned numbers, the maximum number of ports is 65536. However,
-not all ports can be used by anyone. Some ports are reserved for specific
-protocols.
-
-The first 0 to 1023 ports are called well-known ports. These ports are reserved
-for specific protocols. Using these ports might require special privileges on
-Unix systems.
-
-Here is a list of examples for common well-known ports:
-
-- `20` and `21`: FTP
-- `22`: SSH
-- `23`: Telnet
-- `25`, `465` and `587`: SMTP
-- `53`: DNS
-- `80` and `443`: HTTP/HTTPS
-- `110` and `995`: POP3
-- `123`: NTP
-- `143` and `993`: IMAP
-
-The next 1024 to 49151 ports are called registered ports. Some ports are
-officially registered by the IANA (Internet Assigned Numbers Authority) and some
-are not. They can be used by anyone.
-
-Here is a list of examples for common registered ports:
-
-- `3306`: MySQL
-- `5000–5500`: League of Legends
-- `5432`: PostgreSQL
-- `6379`: Redis
-- `8080`: HTTP alternative port
-- `25565`: Minecraft
-- `27017`: MongoDB
-
-The last 49152 to 65535 ports are called dynamic ports. They are usually used
-for private, customized services, or for temporary purposes. These ports cannot
-be registered and can be used by anyone.
-
-Here is a list of examples for common dynamic ports:
-
-- `51820`: WireGuard
-- `64738`: Mumble
-
-Wikipedia has a
-[list of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
-that you can use to find the port number of a specific protocol.
 
 ## What is an application protocol
 
@@ -527,15 +404,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Java TCP programming
-  - How to create a TCP server
-  - How to create a TCP client
-  - Implement the _"Guess the number"_ game using TCP
 
 ## Additional resources
 

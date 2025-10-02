@@ -17,6 +17,9 @@ sudo apt install --yes jpegoptim optipng
 # Install packages to optimize documents (ps2pdf)
 sudo apt install --yes ghostscript
 
+# Install network utilities (dig, nslookup, ping, ncat)
+sudo apt install --yes dnsutils iputils-ping ncat
+
 # Install Typst
 wget https://github.com/typst/typst/releases/download/v0.12.0/typst-x86_64-unknown-linux-musl.tar.xz -O /tmp/typst.tar.xz
 
