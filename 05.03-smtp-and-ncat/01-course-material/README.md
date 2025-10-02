@@ -18,7 +18,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/04.01-docker-and-docker-compose-presentation.pdf)
 - Code examples: [Link to content](../02-code-examples/)
-- Solution: [Link to content](../03-solution/)
 
 ## Table of contents
 
