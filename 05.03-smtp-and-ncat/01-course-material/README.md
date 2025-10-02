@@ -420,6 +420,13 @@ systems.
 
 Install ncat using the package manager of your operating system:
 
+> [!NOTE]
+>
+> Remember: if you use WSL, you need to install ncat in your WSL distribution.
+> You can use any Linux distribution you want. The commands below are for
+> Ubuntu. If you use another distribution, please adapt the commands
+> accordingly.
+
 ```sh
 # Install ncat on Ubuntu
 sudo apt install ncat
