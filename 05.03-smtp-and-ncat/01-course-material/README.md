@@ -14,9 +14,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - Objectives, teaching and learning methods, and evaluation methods:
   [Link to content](..)
 - Course material: [Link to content](../01-course-material/README.md) ·
-  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/index.html)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/04.01-docker-and-docker-compose-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/05.03-smtp-and-ncat-presentation.pdf)
 - Code examples: [Link to content](../02-code-examples/)
 
 ## Table of contents
