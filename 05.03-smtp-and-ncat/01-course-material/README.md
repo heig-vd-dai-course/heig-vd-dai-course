@@ -1,17 +1,6 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/15-smtp-and-ncat-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/114
-[illustration]: ./images/main-illustration.jpg
+# SMTP and ncat
 
-# SMTP and ncat - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
@@ -20,10 +9,20 @@ Based on the original course by O. Liechti and J. Ehrensberger.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/04.01-docker-and-docker-compose-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
+- Solution: [Link to content](../03-solution/)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [A quick reminder about networking](#a-quick-reminder-about-networking)
@@ -40,7 +39,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [A focus on the SMTP protocol](#a-focus-on-the-smtp-protocol)
 - [ncat](#ncat)
   - [Alternatives](#alternatives)
-  - [Resources](#resources)
+  - [Resources](#resources-1)
 - [Practical content](#practical-content)
   - [Install and configure ncat](#install-and-configure-ncat)
   - [Start Mailpit](#start-mailpit)
@@ -786,3 +785,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 - Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
   on [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/114
