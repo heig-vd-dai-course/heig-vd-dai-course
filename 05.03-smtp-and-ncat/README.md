@@ -31,7 +31,7 @@ By the end of this course, students should be able to:
 
 The teaching and learning methods used to facilitate the course are as follows:
 
-- Masterful presentation.
+- Lecture.
 - Group discussions.
 - Independent work.
 
@@ -43,8 +43,7 @@ The evaluation is based on the following criteria:
 
 Feedback is provided as follows:
 
-- A feedback on the GitHub Discussion or the pull request (PR).
-- The solution of the practical content.
+- No formal feedback is provided.
 
 The evaluation does not result in a grade.
 
