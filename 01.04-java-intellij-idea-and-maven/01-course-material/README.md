@@ -74,7 +74,7 @@ Java applications.
 These skills are essential to develop Java applications in a professional
 environment to share them with other developers.
 
-In short, by the end of this course, you should be able to:
+In a nutshell, by the end of this course, you should be able to:
 
 - Learn why Java is a popular programming language.
 - Manage multiple Java versions with SDKMAN!.

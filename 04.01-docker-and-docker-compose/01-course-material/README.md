@@ -85,7 +85,7 @@ applications in containers so you can run them and share them with others
 without the need to install anything else than Docker and Docker Compose on the
 target machine.
 
-In short, by the end of this course, you should be able to:
+In a nutshell, by the end of this course, you should be able to:
 
 - Learn the differences between bare metal, virtualization and containerization.
 - Learn how the OCI specification defines images, containers, and registries.
@@ -272,12 +272,13 @@ specification is implemented by Docker, but also by other container engines.
 The OCI specification defines the following terms (among others):
 
 - Image: a read-only template with instructions for creating a container.
-- Container: a runnable instance of an image.
+- Container: a running instance of an image.
 - Registry: a service that stores images.
-- A container image is a package that contains everything needed to run an
-  application. It contains the application and all its dependencies. It also
-  contains metadata about the image, such as the author, the version, the
-  description, etc.
+
+A container image is an executable package that contains everything needed to
+run an application. It contains the application and all its dependencies. It
+also contains metadata about the image, such as the author, the version, the
+description, etc.
 
 A container image is immutable. It cannot be modified. If you want to modify a
 container image, you need to create a new image.
@@ -517,7 +518,7 @@ Carefully read the README files to understand how to run them and what they do.
 - The Dockerfile specification defines a standard for building Docker images.
 - A Dockerfile is used to build a Docker image.
 - A Docker image is used to create a container.
-- A container is a runnable instance of an image.
+- A container is a running instance of an image.
 - A container is isolated from the rest of the computer.
 
 ### Cheatsheet

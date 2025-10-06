@@ -81,7 +81,7 @@ able to run some code examples along with the theory.
 These skills are essential to be able to process data from the network later on
 this course!
 
-In short, by the end of this course, you should be able to:
+In a nutshell, by the end of this course, you should be able to:
 
 - Differentiate the different types of data (binary vs. text).
 - Understand the abstract notion of sources, streams and sinks.

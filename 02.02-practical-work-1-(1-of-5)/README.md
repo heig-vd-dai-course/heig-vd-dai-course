@@ -25,7 +25,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 The teaching and learning methods used to facilitate the course are as follows:
 
-- Masterful presentation.
+- Lecture.
 - Group discussions.
 - Team work.
 

@@ -24,7 +24,7 @@ By the end of this course, students should be able to:
 
 The teaching and learning methods used to facilitate the course are as follows:
 
-- Masterful presentation.
+- Lecture.
 - Group discussions.
 
 ## Evaluation methods

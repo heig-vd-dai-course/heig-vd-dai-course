@@ -117,7 +117,7 @@ other resources and alternatives as well.
 ### OCI, images, containers, and registries
 
 - Image: read-only template for container creation.
-- Container: runnable instance of an image.
+- Container: running instance of an image.
 - Registry: service storing images.
 
 ![bg right contain](./images/oci-specification.png)
@@ -161,7 +161,7 @@ other resources and alternatives as well.
 - Build a Docker image.
 - Based on an existing image.
 - Defines a set of instructions to build the image.
-- Written in plain text with a few keywords to define the instructions.
+- Written in plain text.
 
 ![bg right contain](./images/dockerfile-specification.png)
 

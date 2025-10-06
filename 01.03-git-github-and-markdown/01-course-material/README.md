@@ -174,7 +174,7 @@ of the course organization will also allow you to be notified by the teachers
 when something important happens through the use of GitHub Teams and GitHub
 Discussions.
 
-In short, by the end of this course, you will be able to:
+In a nutshell, by the end of this course, you will be able to:
 
 - Understand how to use Git, GitHub and Markdown.
 - Create and manage repositories on GitHub.
