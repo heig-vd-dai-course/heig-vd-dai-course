@@ -1,33 +1,32 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/06-docker-and-docker-compose/06-docker-and-docker-compose-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/113
-[illustration]: ./images/main-illustration.jpg
-
 # Docker and Docker Compose
 
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/04.01-docker-and-docker-compose-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
+- Solution: [Link to content](../03-solution/)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
   - [Install Docker and Docker Compose](#install-docker-and-docker-compose)
   - [Alternatives](#alternatives)
-  - [Resources](#resources)
+  - [Resources](#resources-1)
   - [Check and run the code examples](#check-and-run-the-code-examples)
 - [Bare metal, virtualization and containerization](#bare-metal-virtualization-and-containerization)
   - [Bare metal](#bare-metal)
@@ -37,19 +36,20 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Docker Hub](#docker-hub)
   - [GitHub Container Registry](#github-container-registry)
   - [Alternatives](#alternatives-1)
-  - [Resources](#resources-1)
+  - [Resources](#resources-2)
 - [Docker](#docker)
   - [Dockerfile specification](#dockerfile-specification)
   - [Summary](#summary)
   - [Cheatsheet](#cheatsheet)
   - [Alternatives](#alternatives-2)
-  - [Resources](#resources-2)
+  - [Resources](#resources-3)
 - [Docker Compose](#docker-compose)
   - [Docker Compose specification](#docker-compose-specification)
+  - [Docker Compose v1 vs. Docker Compose v2](#docker-compose-v1-vs-docker-compose-v2)
   - [Summary](#summary-1)
   - [Cheatsheet](#cheatsheet-1)
   - [Alternatives](#alternatives-3)
-  - [Resources](#resources-3)
+  - [Resources](#resources-4)
 - [Make containers communicate with each other using Docker networks](#make-containers-communicate-with-each-other-using-docker-networks)
 - [Practical content](#practical-content)
   - [Package your own applications with Docker](#package-your-own-applications-with-docker)
@@ -61,11 +61,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-- [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
 - [Solution](#solution)
 - [Optional content](#optional-content)
-  - [Docker Compose v1 vs. Docker Compose v2](#docker-compose-v1-vs-docker-compose-v2)
   - [Security considerations](#security-considerations)
   - [Free some space](#free-some-space)
   - [Ignore files](#ignore-files)
@@ -86,6 +84,13 @@ You will then use Docker and Docker Compose to build, publish, and run
 applications in containers so you can run them and share them with others
 without the need to install anything else than Docker and Docker Compose on the
 target machine.
+
+In a nutshell, by the end of this course, you should be able to:
+
+- Learn the differences between bare metal, virtualization and containerization.
+- Learn how the OCI specification defines images, containers, and registries.
+- Learn how to use Docker and Docker Compose to build, publish, and run
+  applications in containers.
 
 As this chapter is quite abstract, you will first setup your environment to be
 able to run some code examples along with the theory.
@@ -152,8 +157,8 @@ Ensure that the Docker daemon is running if you have any issue.
 
 _Alternatives are here for general knowledge. No need to learn them._
 
-- [OrbStack](<https://orbstack.dev/) (macOS)
-- [Colima](<https://github.com/abiosoft/colima) (macOS)
+- [OrbStack](https://orbstack.dev/) (macOS)
+- [Colima](https://github.com/abiosoft/colima) (macOS)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -170,21 +175,44 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 In this section, you will clone the code examples repository to check and run
 the code examples along with the theory.
 
-#### Clone the repository
+#### Clone or fetch latest changes from the main repository to get the code examples
 
-Clone the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository to get the code examples.
+Clone or fetch latest changes from the
+[`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+repository to get the code examples:
+
+```sh
+# Clone the repository if you have not done it yet
+git clone git@github.com:heig-vd-dai-course/heig-vd-dai-course.git
+```
+
+or fetch latest changes if you have already cloned it:
+
+```sh
+# Navigate to the cloned repository
+cd heig-vd-dai-course
+
+# Checkout to the main branch
+git checkout main
+
+# Pull latest changes
+git pull
+```
+
+#### Open the repository in your IDE
+
+Open the `heig-vd-dai-course` repository in your favorite IDE.
 
 #### Access the code examples in your terminal
 
-Open a terminal and navigate to the `heig-vd-dai-course-code-examples`
-directory.
+Open a terminal and navigate to the
+`heig-vd-dai-course/04.01-docker-and-docker-compose/02-code-examples` directory.
 
 #### Explore and run the code examples
 
-In the `06-docker-and-docker-compose` directory, check out the `README.md` file
-to learn how to run the code examples.
+Check out the
+`heig-vd-dai-course/04.01-docker-and-docker-compose/02-code-examples/README.md`
+file to learn how to run the code examples.
 
 You now have everything you need to run the code examples. Let's dive into the
 theory!
@@ -219,9 +247,9 @@ computer/server. The virtual machine is isolated from the rest of the
 computer/server. This is a good way to run software when you want to isolate the
 software from the rest of the computer/server.
 
-Virtualization starts full operating systems. This is quite heavy. It takes time
-to start a virtual machine. It also takes a lot of space and/or ressources on
-the computer/server.
+Virtualization starts full operating systems. This is quite heavy and not very
+efficient (takes time to start, takes a lot of space and/or ressources on the
+computer/server, etc.).
 
 ### Containerization
 
@@ -243,13 +271,13 @@ specification is implemented by Docker, but also by other container engines.
 
 The OCI specification defines the following terms (among others):
 
-- Image: a read-only template with instructions for creating a container
-- Container: a runnable instance of an image
-- Registry: a service that stores images
+- Image: a read-only template with instructions for creating a container.
+- Container: a running instance of an image.
+- Registry: a service that stores images.
 
-A container image is a package that contains everything needed to run an
-application. It contains the application and all its dependencies. It also
-contains metadata about the image, such as the author, the version, the
+A container image is an executable package that contains everything needed to
+run an application. It contains the application and all its dependencies. It
+also contains metadata about the image, such as the author, the version, the
 description, etc.
 
 A container image is immutable. It cannot be modified. If you want to modify a
@@ -320,8 +348,8 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 Docker is composed of two parts:
 
-- The Docker daemon: a background service that manages containers
-- The Docker CLI: a command-line interface to interact with the Docker daemon
+- The Docker daemon: a background service that manages containers.
+- The Docker CLI: a command-line interface to interact with the Docker daemon.
 
 On Linux, the Docker daemon runs natively. The Docker CLI communicates with the
 Docker daemon through a socket.
@@ -434,9 +462,10 @@ engines.
 
 The Dockerfile specification defines the following terms (among others):
 
-- Dockerfile: a text file that contains instructions for building a Docker image
+- Dockerfile: a text file that contains instructions for building a Docker
+  image.
 - Build context: a directory that contains the files needed to build a Docker
-  image
+  image.
 
 The Dockerfile specification defines a set of instructions. Each instruction
 corresponds to a command that can be run in a shell. The instructions are
@@ -444,16 +473,16 @@ executed in order. Each instruction creates a new layer in the image.
 
 The Dockerfile specification defines the following instructions (among others):
 
-- `FROM`: specifies the base image
-- `ARG`: specifies an argument to be passed to the build command
-- `RUN`: runs a command in the container
-- `COPY`: copies files from the build context to the container
-- `CMD`: specifies the command to run when the container starts
-- `ENTRYPOINT`: specifies the entry point of the container
-- `ENV`: specifies an environment variable
-- `EXPOSE`: specifies the port to expose
-- `WORKDIR`: specifies the working directory
-- `VOLUME`: specifies a volume
+- `FROM`: specifies the base image.
+- `ARG`: specifies an argument to be passed to the build command.
+- `RUN`: runs a command in the container.
+- `COPY`: copies files from the build context to the container.
+- `CMD`: specifies the command to run when the container starts.
+- `ENTRYPOINT`: specifies the entry point of the container.
+- `ENV`: specifies an environment variable.
+- `EXPOSE`: specifies the port to expose.
+- `WORKDIR`: specifies the working directory.
+- `VOLUME`: specifies a volume.
 
 A Dockerfile is then used to build a Docker image. The Dockerfile is passed to
 the `docker build` command. The `docker build` command builds the image from the
@@ -470,27 +499,27 @@ Windows (with the help of the Linux virtual machine).
 More information about the Dockerfile specification can be found in the official
 documentation: <https://docs.docker.com/engine/reference/builder/>.
 
-Check the code examples in the `heig-vd-dai-course-code-examples` Git
-repository:
+Check the code examples in the
+`heig-vd-dai-course/04.01-docker-and-docker-compose/02-code-examples` directory:
 
-- Basic Dockerfile
-- Dockerfile with command
-- Dockerfile with entrypoint and command
-- Dockerfile with run and copy commands
-- Dockerfile with build arguments
+- Basic Dockerfile.
+- Dockerfile with command.
+- Dockerfile with entrypoint and command.
+- Dockerfile with run and copy commands.
+- Docker run with ports.
 
 Carefully read the README files to understand how to run them and what they do.
 
 ### Summary
 
 - Docker is a container engine composed of two parts: the Docker daemon and the
-  Docker CLI:
-- The Docker CLI is used to manage containers and images
-- The Dockerfile specification defines a standard for building Docker images
-- A Dockerfile is used to build a Docker image
-- A Docker image is used to create a container
-- A container is a runnable instance of an image
-- A container is isolated from the rest of the computer
+  Docker CLI.
+- The Docker CLI is used to manage containers and images.
+- The Dockerfile specification defines a standard for building Docker images.
+- A Dockerfile is used to build a Docker image.
+- A Docker image is used to create a container.
+- A container is a running instance of an image.
+- A container is isolated from the rest of the computer.
 
 ### Cheatsheet
 
@@ -553,10 +582,10 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 >
 > <https://docs.docker.com/compose/>
 
-Docker Compose is a tool that is used to run multiple containers. It is used to
-run multiple containers that are related to each other. It is used to run
-multiple containers that are part of the same application (a backend and its
-database for example).
+Docker Compose is a tool that is used to run multiple containers (called a
+_"stack"_). It is used to run multiple containers that are related to each
+other. It is used to run multiple containers that are part of the same
+application (a backend and its database for example).
 
 ### Docker Compose specification
 
@@ -566,58 +595,76 @@ implemented by Docker, but also by other tools.
 
 The Docker Compose specification defines the following terms (among others):
 
-- Service: a container that is part of a multi-container Docker application
-- Volume: a directory that is shared between the container and the host
-- Network: a network that is shared between containers
+- Service: a container that is part of a multi-container Docker application.
+- Volume: a directory that is shared between the container and the host.
+- Network: a network that is shared between containers.
 
 Docker Compose allows to define a multi-container Docker application in a Docker
 Compose file. It is easier to use than plain Docker commands and can be
 versioned with the application.
 
 The format of the Docker Compose file is [YAML](https://yaml.org/). The Docker
-Compose file is named `docker-compose.yml` by convention.
+Compose file is named `compose.yml` (new standard) or `docker-compose.yml` (old
+standard) by convention.
 
 More information about the Docker Compose specification can be found in the
 official documentation: <https://docs.docker.com/compose/compose-file/>.
 
-Check the code examples in the `heig-vd-dai-course-code-examples` Git
-repository:
+Check the code examples in the
+`heig-vd-dai-course/04.01-docker-and-docker-compose/02-code-examples` directory:
 
-- Basic Docker Compose
-- Docker Compose with ports
-- Docker Compose with volumes
-- Docker Compose with environment variables
+- Basic Docker Compose.
+- Docker Compose with ports.
+- Docker Compose with volumes.
+- Docker Compose with environment variables.
 
 Carefully read the README files to understand how to run them and what they do.
+
+### Docker Compose v1 vs. Docker Compose v2
+
+Please be aware that there are two versions of Docker Compose: Docker Compose v1
+and Docker Compose v2.
+
+Docker Compose v1 is the original version of Docker Compose. It was built with
+Python and is now deprecated. It is still available but it is not recommended to
+use it. The command to use Docker Compose v1 was `docker-compose`.
+
+Docker Compose v2 is the new version of Docker Compose. It is built with Go and
+it is the recommended version to use. The new command to use Docker Compose v2
+is `docker compose`.
+
+You will find some old code examples on the Internet using Docker Compose v1.
+You can run them by replacing `docker-compose` with `docker compose`.
 
 ### Summary
 
 - Docker Compose allows to define a multi-container Docker application in a
-  Docker Compose file
+  Docker Compose file.
 - A Docker Compose file can consist of a set of services, volumes and networks
-- A Docker Compose file (`docker-compose.yml`) can be easily shared and
-  versioned with the application
-- Docker Compose v2 is the recommended version to use
+  called a _"stack"_.
+- A Docker Compose file (`compose.yml`) can be easily shared and versioned with
+  the application.
+- Docker Compose v2 is the recommended version to use.
 
 ### Cheatsheet
 
 ```sh
-# Start all services defined in the docker-compose.yml file
+# Start all services defined in the compose.yaml file
 docker compose up
 
-# Start all services defined in the docker-compose.yml file in background
+# Start all services defined in the compose.yaml file in background
 docker compose up -d
 
 # Display all running services
 docker compose ps
 
-# Stop all services defined in the docker-compose.yml file
+# Stop all services defined in the compose.yaml file
 docker compose down
 
 # Check the logs of a service
 docker compose logs <service-name>
 
-# Check the logs of all services defined in the docker-compose.yml file
+# Check the logs of all services defined in the compose.yaml file
 docker compose logs
 
 # Follow the logs of a service
@@ -680,14 +727,11 @@ network.
 Docker Compose allows to create networks and connect containers to them in a
 Docker Compose file.
 
-Check the code examples to see how to create a network and connect containers to
-it.
+Check the code examples in the
+`heig-vd-dai-course/04.01-docker-and-docker-compose/02-code-examples` directory:
 
-Check the code examples in the `heig-vd-dai-course-code-examples` Git
-repository:
-
-- Make two containers communicate with each other with Docker
-- Make two containers communicate with each other with Docker Compose
+- Make two containers communicate with each other with Docker.
+- Make two containers communicate with each other with Docker Compose.
 
 Carefully read the README files to understand how to run them and what they do.
 
@@ -697,7 +741,7 @@ In this practical content, you will learn how to package, publish and run your
 own applications with Docker and Docker Compose.
 
 You will need the output (the JAR file) of the practical content from chapter
-[Java IOs](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios).
+[Java IOs](../../02.01-java-ios/).
 
 If you do not have the output of the practical content from chapter Java IOs,
 you can use the solution mentioned in the Java IOs chapter. Clone and compile
@@ -707,7 +751,7 @@ the solution to have the output for this practical content.
 
 In this section, you will package your own applications with Docker.
 
-You will write a Dockerfile, build it with a tag and run it with Docker.
+You will write a Dockerfile, build it specifying its tag and run it with Docker.
 
 Using all the elements you have learned so far, create a Dockerfile that will
 run the JAR file you have from the Java IOs chapter.
@@ -726,6 +770,9 @@ FROM eclipse-temurin:21-jre
 The base image is the `eclipse-temurin:21-jre` image. It is an image that
 contains the Java 21 Runtime Environment (JRE) to run Java applications with the
 help of the `java` command.
+
+You must now write the rest of the Dockerfile to copy the JAR file in the image
+and run it using the code examples you have seen so far.
 
 > [!NOTE]
 >
@@ -1007,14 +1054,14 @@ This is an optional section. Feel free to skip it if you do not have time.
   specify the implementation to use and the size of the file to write? As it
   requires a few tricks, here are some tips:
   - You need to define a new entrypoint to use a shell (like `/bin/bash`) to run
-    the Java application with the environment variables
+    the Java application with the environment variables.
   - You need to define a new command in order to invoke the Java application
     with the environment variables with the `-c` option of the shell (to run a
-    command in the shell)
+    command in the shell).
   - In order to escape the environment variables in the command, you can use the
-    `$$` syntax
+    `$$` syntax.
   - You need to define the environment variables in the Docker Compose file with
-    the `environment` instruction
+    the `environment` instruction.
 
 ## Conclusion
 
@@ -1053,11 +1100,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-We are arriving at the end of the first part of the course. An evaluation will
-be done to check your understanding of all the content seen in this first part.
-
 ## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
@@ -1069,8 +1111,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
-repository.
+[`solution`](../03-solution/) repository.
 
 If you have any questions about the solution, feel free to open an issue to
 discuss it!
@@ -1079,19 +1120,6 @@ discuss it!
 
 The following content is optional. It is here to help you and for your general
 knowledge.
-
-### Docker Compose v1 vs. Docker Compose v2
-
-Please be aware that there are two versions of Docker Compose: Docker Compose v1
-and Docker Compose v2.
-
-Docker Compose v1 is the original version of Docker Compose. It was built with
-Python and is now deprecated. It is still available but it is not recommended to
-use it. The command to use Docker Compose v1 was `docker-compose`.
-
-Docker Compose v2 is the new version of Docker Compose. It is built with Go and
-it is the recommended version to use. The new command to use Docker Compose v2
-is `docker compose`.
 
 ### Security considerations
 
@@ -1233,3 +1261,7 @@ information about multi-architecture builds in the official documentation:
 
 - Main illustration by [CHUTTERSNAP](https://unsplash.com/@chuttersnap) on
   [Unsplash](https://unsplash.com/photos/xewrfLD8emE)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/113

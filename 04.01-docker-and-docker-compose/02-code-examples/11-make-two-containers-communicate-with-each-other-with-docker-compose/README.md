@@ -11,8 +11,8 @@ directory.
 
 ## Run the Docker Compose services
 
-Explore the `docker-compose.yaml` file in this directory. Take some time to
-understand what it does.
+Explore the `compose.yaml` file in this directory. Take some time to understand
+what it does.
 
 ### Run the first service
 
@@ -24,7 +24,7 @@ docker compose run --rm ncat-server
 ```
 
 This command runs the `ncat-server` Docker Compose service defined in the
-`docker-compose.yaml` file.
+`compose.yaml` file.
 
 Once you have run the command, you should see no output. The container is now
 listening for incoming connections on port `1234`.
@@ -39,7 +39,7 @@ docker compose run --rm ncat-client
 ```
 
 This command runs the `ncat-client` Docker Compose service defined in the
-`docker-compose.yaml` file.
+`compose.yaml` file.
 
 Once you have run the command, you should see no output as well. However, if no
 errors are displayed, the second container has connected to the first container.

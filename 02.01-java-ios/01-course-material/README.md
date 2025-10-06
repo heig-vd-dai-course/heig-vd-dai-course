@@ -26,7 +26,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Prepare and setup your environment](#prepare-and-setup-your-environment)
-  - [Clone the main repository](#clone-the-main-repository)
+  - [Clone or fetch latest changes from the main repository to get the code examples](#clone-or-fetch-latest-changes-from-the-main-repository-to-get-the-code-examples)
   - [Open the repository in your IDE](#open-the-repository-in-your-ide)
   - [Check and run the code examples](#check-and-run-the-code-examples)
 - [Sources, streams and sinks of data](#sources-streams-and-sinks-of-data)
@@ -81,7 +81,7 @@ able to run some code examples along with the theory.
 These skills are essential to be able to process data from the network later on
 this course!
 
-In short, by the end of this course, you should be able to:
+In a nutshell, by the end of this course, you should be able to:
 
 - Differentiate the different types of data (binary vs. text).
 - Understand the abstract notion of sources, streams and sinks.
@@ -92,22 +92,43 @@ Let's get started!
 
 ## Prepare and setup your environment
 
-### Clone the main repository
+### Clone or fetch latest changes from the main repository to get the code examples
 
-Clone the
+Clone or fetch latest changes from the
 [`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
-repository if you have not done it yet. This repository contains all the course
-material, including the code examples and the practical content.
+repository to get the code examples:
+
+```sh
+# Clone the repository if you have not done it yet
+git clone git@github.com:heig-vd-dai-course/heig-vd-dai-course.git
+```
+
+or fetch latest changes if you have already cloned it:
+
+```sh
+# Navigate to the cloned repository
+cd heig-vd-dai-course
+
+# Checkout to the main branch
+git checkout main
+
+# Pull latest changes
+git pull
+```
 
 ### Open the repository in your IDE
 
 Open the `heig-vd-dai-course` repository in your favorite IDE.
 
-### Check and run the code examples
+### Access the code examples in your terminal
 
-Check out the `README.md` file to learn how to run the code examples. Open a
-terminal and navigate to the
-`heig-vd-dai-course/02.01-java-ios/02-code-examples` directory.
+Open a terminal and navigate to the
+`heig-vd-dai-course/02.01-java-ios/02-code-examples/` directory.
+
+### Explore and run the code examples
+
+Check out the `heig-vd-dai-course/02.01-java-ios/02-code-examples/README.md`
+file to learn how to run the code examples.
 
 > [!TIP]
 >

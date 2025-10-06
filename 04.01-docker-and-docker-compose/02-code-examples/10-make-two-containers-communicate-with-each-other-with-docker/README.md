@@ -20,8 +20,7 @@ This will create a Docker image based on Ubuntu named `ncat` that contains the
 connections using the TCP or UDP protocol.
 
 If you have not heard of `ncat` before, you will learn to use it the
-[SMTP and ncat](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15-smtp-and-ncat)
-chapter.
+[SMTP and ncat](../../../05.03-smtp-and-ncat/) course.
 
 ## Run the Docker container
 
