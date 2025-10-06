@@ -260,9 +260,9 @@ computer. You will have access to a video projector.
 
 The presentation order is random and is stated in the next tables:
 
-- [DAI-TIC-C (Wednesday mornings)](#dai-tic-c-wednesday-mornings)
-- [DAI-TIC-B (Wednesday afternoons)](#dai-tic-b-wednesday-afternoons)
-- [DAI-TIC-A (Thursdays)](#dai-tic-a-thursdays)
+- [DAI-TIC-C (Wednesday mornings)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02.02-practical-work-1-(1-of-5)/01-course-material/README.md#dai-tic-c-wednesday-mornings>)
+- [DAI-TIC-B (Wednesday afternoons)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02.02-practical-work-1-(1-of-5)/01-course-material/README.md#dai-tic-b-wednesday-afternoons>)
+- [DAI-TIC-A (Thursdays)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02.02-practical-work-1-(1-of-5)/01-course-material/README.md#dai-tic-a-thursdays>)
 
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
