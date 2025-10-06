@@ -108,8 +108,8 @@ information:
 
 > [!CAUTION]
 >
-> **You must do it before next week**, even if you do not have a clear idea yet
-> as it will help us to plan the practical work presentations.
+> **You must do it before the next course**, even if you do not have a clear
+> idea yet as it will help us to plan the practical work presentations.
 >
 > Please refer to the [Constraints](#constraints) section to know what is
 > expected from you.
