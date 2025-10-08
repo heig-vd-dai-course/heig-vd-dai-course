@@ -93,6 +93,6 @@ without changing the application's code.
 To stop and remove the Docker Compose stack, run the following command:
 
 ```sh
-# Stop and remove the Docker Compose stack 
+# Stop and remove the Docker Compose stack
 docker compose down
 ```

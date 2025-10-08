@@ -649,7 +649,7 @@ You can run them by replacing `docker-compose` with `docker compose`.
 ### Cheatsheet
 
 ```sh
-# Start all services defined in the compose.yaml file 
+# Start all services defined in the compose.yaml file
 # This will also create the containers and other resources if they do not exist
 docker compose up
 
@@ -659,15 +659,15 @@ docker compose up -d
 # Display all running services
 docker compose ps
 
-# Stop all services defined in the compose.yaml file 
+# Stop all services defined in the compose.yaml file
 # This will also remove all created resources (containers, networks, ...)
 docker compose down
 
-# Stop all services defined in the compose.yaml file 
+# Stop all services defined in the compose.yaml file
 # This will not remove any created resources (containers, ...)
 docker compose stop
 
-# Start all services defined in the compose.yaml file 
+# Start all services defined in the compose.yaml file
 # This can be used to restart services that were previously stopped using the stop comamnd
 docker compose start
 

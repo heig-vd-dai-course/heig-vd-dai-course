@@ -229,12 +229,12 @@ Replace `CONTAINER_ID` with the container ID of the nginx service.
 
 ## Stop the Docker Compose in the background
 
-To stop and remove the Docker Compose stack running in the background, 
-i.e. remove all the created resources: containers, networks, etc..., 
-run the following command:
+To stop and remove the Docker Compose stack running in the background, i.e.
+remove all the created resources: containers, networks, etc..., run the
+following command:
 
 ```sh
-# Stop and remove the Docker Compose stack running in the background 
+# Stop and remove the Docker Compose stack running in the background
 docker compose down
 ```
 
@@ -242,6 +242,6 @@ The output should be similar to the following:
 
 ```text
 [+] Running 2/2
- ✔ Container 07-docker-compose-with-ports-nginx-1  Removed                                                                                                                                                             0.2s 
+ ✔ Container 07-docker-compose-with-ports-nginx-1  Removed
  ✔ Network 07-docker-compose-with-ports_default    Removed
 ```
