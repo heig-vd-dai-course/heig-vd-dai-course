@@ -650,6 +650,7 @@ You can run them by replacing `docker-compose` with `docker compose`.
 
 ```sh
 # Start all services defined in the compose.yaml file
+# This will also create the containers and other resources if they do not exist
 docker compose up
 
 # Start all services defined in the compose.yaml file in background
@@ -659,7 +660,16 @@ docker compose up -d
 docker compose ps
 
 # Stop all services defined in the compose.yaml file
+# This will also remove all created resources (containers, networks, ...)
 docker compose down
+
+# Stop all services defined in the compose.yaml file
+# This will not remove any created resources (containers, ...)
+docker compose stop
+
+# Start all services defined in the compose.yaml file
+# This can be used to restart services that were previously stopped using the stop comamnd
+docker compose start
 
 # Check the logs of a service
 docker compose logs <service-name>
@@ -726,6 +736,8 @@ network.
 
 Docker Compose allows to create networks and connect containers to them in a
 Docker Compose file.
+
+Custom networks can be used to communicate between containers and/or stacks.
 
 Check the code examples in the
 `heig-vd-dai-course/04.01-docker-and-docker-compose/02-code-examples` directory:

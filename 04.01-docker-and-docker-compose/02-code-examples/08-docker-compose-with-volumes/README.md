@@ -37,9 +37,9 @@ Access the container on <http://localhost:8080> to see the custom message.
 
 ## Stop the Docker Compose
 
-To stop the Docker Compose, run the following command:
+To stop and remove the Docker Compose stack, run the following command:
 
 ```sh
-# Stop the Docker Compose
+# Stop and remove the Docker Compose stack 
 docker compose down
 ```
