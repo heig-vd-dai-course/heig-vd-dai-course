@@ -241,19 +241,30 @@ More details for this section in the [course material][course].
 
 The practical work presentations will take place on:
 
-- DAI-TIC-C: **Wednesday 15.10.25** in room **C37**
-- DAI-TIC-B: **Wednesday 15.10.25** in room **J04**
-- DAI-TIC-A: **Thursday 16.10.25** in room **K01**
+- DAI-TIC-C (Wednesday mornings): **Wednesday 15.10.25** starting at **10:30**
+  in room **B51a** (the room next to the stairs).
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 15.10.25** starting at **14:45**
+  in room **J04**
+- DAI-TIC-A (Thursdays): **Thursday 16.10.25** starting at **15:30** in room
+  **B51a** (the room next to the stairs).
 
 The exact schedule will be communicated once the groups are known.
 
+<!-- (Un)comment the following lines to hide/show the note about the presentations -->
+
 ### Presentations (2/2)
 
-We only have **TBD minutes per group**. You decide what you want to show us and
-how you want to present it.
+We only have **8 minutes per group**. You decide what you want to show us and
+how you want to present it. **Come 5 minutes before your time slot** with your
+computer. You will have access to a video projector.
 
-**Come 5 minutes before your time slot** with your computer. You will have
-access to a video projector.
+The presentation order is random and is stated in the next tables:
+
+- [DAI-TIC-C (Wednesday mornings)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02.02-practical-work-1-(1-of-5)/01-course-material/README.md#dai-tic-c-wednesday-mornings>)
+- [DAI-TIC-B (Wednesday afternoons)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02.02-practical-work-1-(1-of-5)/01-course-material/README.md#dai-tic-b-wednesday-afternoons>)
+- [DAI-TIC-A (Thursdays)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/02.02-practical-work-1-(1-of-5)/01-course-material/README.md#dai-tic-a-thursdays>)
+
+<!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
 ## Grades and feedback
 
