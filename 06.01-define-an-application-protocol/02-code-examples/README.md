@@ -1,4 +1,22 @@
-# The Short Message Service (SMS) protocol
+# Define an application protocol - Code examples
+
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
+
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/06.01-define-an-application-protocol-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
+- Solution: [Link to content](../03-solution/)
+
+## The Short Message Service (SMS) protocol
 
 You are working for a startup that wants to create a new communication app.
 
@@ -174,3 +192,6 @@ None.
 ### Send a message that is too long
 
 ![Send a message that is too long example](./images/sms-protocol-example-4-send-a-message-that-is-too-long.png)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
