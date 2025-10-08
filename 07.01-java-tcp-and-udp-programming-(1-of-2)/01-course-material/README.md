@@ -737,10 +737,6 @@ together without passing by the host.
 Compare your solution with the official one stated in the [Solution](#solution)
 section.
 
-If you have any questions about the solution, feel free to ask as described in
-the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-section.
-
 #### Go one step further
 
 - Can you update the network application to allow the client to specify the
@@ -812,10 +808,6 @@ together without passing by the host.
 #### Compare your solution with the official one
 
 Compare your solution with the official one stated in the [Solution](#solution)
-section.
-
-If you have any questions about the solution, feel free to ask as described in
-the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 section.
 
 #### Go one step further
@@ -895,11 +887,11 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
-repository.
+[`solution`](../03-solution/) directory.
 
-If you have any questions about the solution, feel free to open an issue to
-discuss it!
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ## Optional content
 
