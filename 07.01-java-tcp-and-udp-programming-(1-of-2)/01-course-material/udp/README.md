@@ -90,20 +90,6 @@ You can use the following theoretical content to help you.
 Return to the code examples and take some time to execute them, understand them
 and see the results.
 
-### Try to emit from multiple emitters at the same time
-
-Try to emit from multiple emitters at the same time (start the emitter multiple
-times). You will see that the server will receive all messages from the
-emitters.
-
-Do you have any idea why? How does it compare to the TCP examples you have seen
-in the
-[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13-java-udp-programming)
-chapter?
-
-You will find the answer in a future chapter but you can try to find it by
-yourself now. Discuss with your peers if needed to share your findings.
-
 ### Update your application protocol
 
 Now that you have gained new knowledge regarding UDP, update the application
@@ -270,13 +256,6 @@ programming.
 ### Test your knowledge
 
 At this point, you should be able to answer the following questions:
-
-- What are the differences between UDP and TCP?
-- Why is UDP unreliable? How to mitigate this?
-- What is a datagram? How can a datagram be sent without a server listening?
-- What are the differences between unicast, broadcast and multicast?
-- What are the messaging protocols and their differences?
-- What are the service discovery protocols? How do they compare to each other?
 
 ## Finished? Was it easy? Was it hard?
 
