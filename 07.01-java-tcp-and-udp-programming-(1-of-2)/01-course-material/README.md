@@ -29,13 +29,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Explore the code examples](#explore-the-code-examples)
   - [TCP](#tcp)
   - [UDP](#udp)
-  - [Summary of differences between TCP and UDP](#summary-of-differences-between-tcp-and-udp)
   - [Practical content](#practical-content)
+  - [Explore the Java UDP programming template](#explore-the-java-udp-programming-template)
 - [Part 2/2](#part-22)
   - [Unicast, broadcast and multicast](#unicast-broadcast-and-multicast)
   - [Messaging patterns](#messaging-patterns)
   - [Service discovery protocols](#service-discovery-protocols)
   - [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
+  - [Summary of differences between TCP and UDP](#summary-of-differences-between-tcp-and-udp)
   - [Practical content](#practical-content-1)
 - [Go further](#go-further)
   - [Implement the _"Guess the number"_ game](#implement-the-guess-the-number-game)
@@ -62,6 +63,9 @@ This will allow you to create your own network applications, such as a chat
 server, a file server, a web server, etc.
 
 ## Part 1/2
+
+In this first part, you will learn the basics of TCP and UDP programming in
+Java.
 
 ### Explore the code examples
 
@@ -111,9 +115,10 @@ TCP segments are encapsulated in IP packets, called payloads.
 Thanks to the sequence numbers, TCP is able to reassemble the segments in the
 correct order. If a segment is lost, TCP will retransmit it.
 
-#### The Socket API
+#### TCP in the Socket API
 
 The Socket API is a Java API that allows you to create TCP clients and servers.
+
 It is described in the
 [`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
 in the
@@ -280,75 +285,6 @@ If the payload is too large, the datagram will be fragmented. It means that the
 payload will be split into multiple datagrams. The receiver will have to
 reassemble the datagrams to get the original payload.
 
-#### UDP in the Socket API
-
-As seen with TCP, the Socket API is a Java API that allows you to create servers
-and clients. The Socket API also allows you to create UDP emitters
-(clients)/listeners (servers).
-
-The Socket API is described in the
-[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
-in the
-[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
-
-In the UDP world, the `Socket` class is replaced by the `DatagramSocket` class.
-
-The `DatagramSocket` class is used to create UDP clients and servers. It is used
-to send and receive UDP datagrams.
-
-A datagram is created with the `DatagramPacket` class. It is used to create a
-datagram with a payload and a destination address.
-
-A multicast socket is created with the `MulticastSocket` class. It is used to
-create a multicast datagram with a payload and a multicast address, allowing
-multiple hosts to receive the datagram.
-
-UDP can be used to create a client-server architecture. However, it is not
-required. It is possible to create a peer-to-peer architecture with UDP.
-
-### Summary of differences between TCP and UDP
-
-The following table summarizes the differences between TCP and UDP.
-
-| TCP                                 | UDP                                        |
-| ----------------------------------- | ------------------------------------------ |
-| Connection-oriented                 | Connectionless                             |
-| Reliable                            | Unreliable                                 |
-| Stream protocol                     | Datagram protocol                          |
-| Unicast                             | Unicast, broadcast and multicast           |
-| Request-response                    | Fire-and-forget, request-response (manual) |
-| -                                   | Service discovery protocols                |
-| Used for FTP, HTTP, SMTP, SSH, etc. | Used for DNS, streaming, gaming, etc.      |
-
-### Practical content
-
-#### TCP & UDP - Execute the code examples
-
-Return to the code examples and take some time to execute them, understand them
-and see the results.
-
-#### Explore the Java TCP programming template
-
-In this section, you will explore the Java TCP programming template.
-
-This is a simple template that you can use to create your own TCP clients and
-servers in Java.
-
-The template is located in the
-[`heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-template`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content-template).
-
-Take some time to explore the template. Then, try to answer the following
-questions:
-
-- How would you use it to create your own TCP clients and servers?
-- What are the main takeaways of the template?
-- How you would you implement a TCP network application using the template and
-  the provided code examples?
-
-You can use the template to create your own TCP network applications.
-
-## Part 2/2
-
 #### Reliability
 
 As UDP does not provide any reliability mechanism, it is up to the application
@@ -356,7 +292,8 @@ to implement it. For example, the application can implement a mechanism to
 acknowledge the reception of a datagram and retransmit it if it was not
 received.
 
-What is offered by TCP has to be implemented by the application with UDP.
+What is offered by default with TCP has to be implemented by the application
+with UDP.
 
 In certain cases, reliability is not required. Some applications are tolerant to
 data loss.
@@ -377,7 +314,7 @@ help of [WebRTC](https://webrtc.org/). However, even these applications might
 prefer to make usage of the TCP protocol to guarantee the reliability of their
 services.
 
-The game [Factorio](https://www.factorio.com/) (a game where you build and
+The game [Factorio](https://www.factorio.com/) (a video game where you build and
 manage factories) is another good example of an application that make usage of
 the UDP protocol when playing on a multiplayer server:
 
@@ -427,6 +364,210 @@ If you are interested, you can have a look at the
 [Automatic Repeat reQuest (ARQ)](https://en.wikipedia.org/wiki/Automatic_repeat_request)
 protocol. It is a mechanism used to detect and retransmit lost datagrams.
 
+#### UDP in the Socket API
+
+As seen with TCP, the Socket API is a Java API that allows you to create servers
+and clients. The Socket API also allows you to create UDP emitters
+(clients)/receivers (servers).
+
+The Socket API is described in the
+[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
+in the
+[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
+
+In the UDP world, the `Socket` class is replaced by the
+[`DatagramSocket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/DatagramSocket.html)
+class.
+
+The `DatagramSocket` class is used to create UDP clients and servers. It is used
+to send and receive UDP datagrams.
+
+A datagram is created with the
+[`DatagramPacket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/DatagramPacket.html)
+class. It is used to create a datagram with a payload and a destination address.
+
+A multicast socket is created with the
+[`MulticastSocket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/MulticastSocket.html)
+class. It is used to create a multicast datagram with a payload and a multicast
+address, allowing multiple hosts to receive the datagram, just like a message
+sent to a group of people.
+
+UDP can be used to create a client-server architecture. However, it is not
+required. It is possible to create a peer-to-peer architecture with UDP.
+
+The following schema shows the workflow of a UDP emitter/receiver application:
+
+![UDP emitter/receiver workflow](./images/udp-emitter-receiver-workflow.png)
+
+#### Receiver structure and methods
+
+In order to create a receiver, the following workflow is followed:
+
+> 1. Create a socket (class `DatagramSocket`)
+> 2. Bind the socket to an IP address and a port number
+> 3. Loop
+>    1. Create a datagram (class `DatagramPacket`) to receive data
+>    2. Receive a datagram
+>    3. Process the datagram
+> 4. Close the socket (`DatagramSocket`)
+
+The available methods are the following:
+
+| Operation      | Description                                       |
+| -------------- | ------------------------------------------------- |
+| `bind()`       | Binds a socket to an IP address and a port number |
+| `receive()`    | Receives a datagram                               |
+| `getPort()`    | Gets the port number of a datagram                |
+| `getAddress()` | Gets the IP address of a datagram                 |
+| `getData()`    | Gets the payload of a datagram                    |
+| `getLength()`  | Gets the length of the payload of a datagram      |
+
+#### Emitter workflow and methods
+
+In order to create an emitter, the following workflow is followed:
+
+> 1. Create a socket (class `DatagramSocket`)
+> 2. Create a datagram (class `DatagramPacket`) with a payload and a destination
+>    address
+> 3. Send the datagram
+> 4. Close the socket (`DatagramSocket`)
+
+The available methods are the following:
+
+| Operation      | Description                                  |
+| -------------- | -------------------------------------------- |
+| `send()`       | Sends a datagram                             |
+| `getPort()`    | Gets the port number of a datagram           |
+| `getAddress()` | Gets the IP address of a datagram            |
+| `getData()`    | Gets the payload of a datagram               |
+| `getLength()`  | Gets the length of the payload of a datagram |
+
+#### Receiver/emitter common methods
+
+| Operation           | Description                            |
+| ------------------- | -------------------------------------- |
+| `socket()`          | Creates a new socket                   |
+| `close()`           | Closes a socket                        |
+| `getLocalPort()`    | Gets the local port number of a socket |
+| `getLocalAddress()` | Gets the local IP address of a socket  |
+
+#### Processing data from datagrams
+
+A datagram contains a payload. The payload is a byte array. You can convert it
+to a string or any other data type.
+
+You can create a datagram with a byte array as payload:
+
+```java
+// Create a datagram with a payload and a destination address
+byte[] buffer = "Hello, World!".getBytes(StandardCharsets.UTF_8);
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length, InetAddress.getByName("localhost"), 1234);
+```
+
+You can get the payload of a received datagram as a byte array:
+
+```java
+// Create a datagram to receive data
+byte[] buffer = new byte[1024];
+DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+
+// Receive a datagram
+socket.receive(packet);
+
+// Get the payload of the datagram
+byte[] data = packet.getData();
+int length = packet.getLength();
+String message = new String(data, 0, length, StandardCharsets.UTF_8);
+```
+
+### Practical content
+
+#### Learn to use the debugger
+
+Every decent IDE has a debugger. The debugger is a tool that allows you to
+inspect the state of your program at runtime.
+
+The debugger allows you to:
+
+- Set breakpoints: a breakpoint is a point in your code where the program will
+  stop when it is reached.
+- Step through your code: you can step through your code line by line to see
+  what is happening.
+- Inspect variables and expressions: you can inspect the value of variables and
+  expressions at runtime.
+
+The debugger is a powerful tool to understand what is happening in your program.
+
+In IntelliJ IDEA, set a breakpoint by clicking on the left side of the line
+number, as shown in the following screenshot:
+
+![IntelliJ IDEA - Set a breakpoint](images/intellij-idea-set-a-breakpoint.png)
+
+Then, run the program in debug mode by clicking on the bug icon, as shown in the
+following screenshot:
+
+![IntelliJ IDEA - Run the program in debug mode](images/intellij-idea-run-debug-mode.png)
+
+The program will stop at the breakpoint. You can then use the debugger to step
+through the code, inspect variables and expressions, etc., as shown in the
+following screenshot:
+
+![IntelliJ IDEA - Debugger](images/intellij-idea-debugger.png)
+
+Take some time to learn how to use the debugger in your favorite IDE, this is a
+very useful tool.
+
+#### TCP & UDP - Execute the code examples
+
+Return to the code examples and take some time to execute them, understand them
+and see the results. Use the debugger to step through the code and see what is
+happening.
+
+#### Explore the Java TCP programming template
+
+In this section, you will explore the Java TCP programming template.
+
+This is a simple template that you can use to create your own TCP clients and
+servers in Java.
+
+The template is located in the
+[`heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-template`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content-template).
+
+Take some time to explore the template. Then, try to answer the following
+questions:
+
+- How would you use it to create your own TCP clients and servers?
+- What are the main takeaways of the template?
+- How you would you implement a TCP network application using the template and
+  the provided code examples?
+
+You can use the template to create your own TCP network applications.
+
+### Explore the Java UDP programming template
+
+In this section, you will explore the Java UDP programming template.
+
+This is a simple template that you can use to create your own UDP
+emitters/clients and receivers/servers in Java.
+
+The template is located in the
+[`heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-template`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content-template).
+
+Take some time to explore the template. Then, try to answer the following
+questions:
+
+- How would you use it to create your own UDP emitters/clients and
+  receivers/servers?
+- What are the main takeaways of the template?
+- How you would you implement a UDP network application using the template and
+  the provided code examples?
+
+You can use the template to create your own UDP network applications.
+
+## Part 2/2
+
+In this second part, you will learn more about UDP and some of its features.
+
 ### Unicast, broadcast and multicast
 
 Unlike TCP, UDP supports three types of communication: unicast, broadcast and
@@ -441,8 +582,8 @@ just like TCP.
 Think of it as a private conversation between two people.
 
 To send a unicast datagram, the sender must know the IP address and port of the
-receiver. It is mostly the same as TCP, without all the features provided by TCP
-but all the performance of UDP.
+receiver. It is mostly the same as TCP, without all the reliability features
+provided by TCP but with all the performance of UDP.
 
 #### Broadcast
 
@@ -633,6 +774,20 @@ to the server until they decide to close the connection.
 
 Both the client and the server can close the connection at any time. It is up to
 the developer to decide when and who manage to close the connection.
+
+### Summary of differences between TCP and UDP
+
+The following table summarizes the differences between TCP and UDP.
+
+| TCP                                 | UDP                                        |
+| ----------------------------------- | ------------------------------------------ |
+| Connection-oriented                 | Connectionless                             |
+| Reliable                            | Unreliable                                 |
+| Stream protocol                     | Datagram protocol                          |
+| Unicast                             | Unicast, broadcast and multicast           |
+| Request-response                    | Fire-and-forget, request-response (manual) |
+| -                                   | Service discovery protocols                |
+| Used for FTP, HTTP, SMTP, SSH, etc. | Used for DNS, streaming, gaming, etc.      |
 
 ### Practical content
 
