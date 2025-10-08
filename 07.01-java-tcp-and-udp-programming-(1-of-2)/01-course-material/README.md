@@ -25,28 +25,29 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
-- [Part 1](#part-1)
+- [Part 1/2](#part-12)
   - [Explore the code examples](#explore-the-code-examples)
   - [TCP](#tcp)
   - [UDP](#udp)
-- [Part 2](#part-2)
+  - [Summary of differences between TCP and UDP](#summary-of-differences-between-tcp-and-udp)
+  - [Practical content](#practical-content)
+- [Part 2/2](#part-22)
   - [Unicast, broadcast and multicast](#unicast-broadcast-and-multicast)
   - [Messaging patterns](#messaging-patterns)
   - [Service discovery protocols](#service-discovery-protocols)
   - [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
-  - [Variable length data](#variable-length-data)
-- [Practical content](#practical-content)
-  - [Execute the code examples](#execute-the-code-examples)
-  - [Try to access the server from multiple clients at the same time](#try-to-access-the-server-from-multiple-clients-at-the-same-time)
-  - [Update your application protocol](#update-your-application-protocol)
-  - [Explore the Java TCP programming template](#explore-the-java-tcp-programming-template)
-  - [Go further](#go-further)
+  - [Practical content](#practical-content-1)
+- [Go further](#go-further)
+  - [Implement the _"Guess the number"_ game](#implement-the-guess-the-number-game)
+  - [Implement the _"Temperature monitoring"_ application](#implement-the-temperature-monitoring-application)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [Additional resources](#additional-resources)
 - [Solution](#solution)
+- [Optional content](#optional-content)
+  - [Variable length data](#variable-length-data)
 - [Sources](#sources)
 
 ## Objectives
@@ -60,16 +61,17 @@ in Java.
 This will allow you to create your own network applications, such as a chat
 server, a file server, a web server, etc.
 
-## Part 1
+## Part 1/2
 
 ### Explore the code examples
 
-Individually, or in pair/group, **take 10 minutes to explore and discuss the
+Individually, or in pair/group, **take 15 minutes to explore and discuss the
 code examples** provided in the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository. Clone it or pull the latest changes to get the code examples.
+[`heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples`](../02-code-examples/)
+directory.
 
-The code examples are located in the `12-java-tcp-programming` directory.
+Do not forget to clone the repository or pull the latest changes to get the code
+examples.
 
 Try to answer the following questions:
 
@@ -87,11 +89,12 @@ applications.
 TCP is a connection-oriented protocol: a connection must be established between
 the two applications before data can be exchanged in a bidirectional way.
 
-TCP can only do unicast: one application can only communicate with one other
-application at the same time.
+TCP can only do unicast: one client can communicate with one other server at the
+same time. One client cannot communicate with multiple servers at the same time.
 
-It is considered as a reliable protocol as data sent is guaranteed to be
-received by the other application.
+TCP is considered as a reliable protocol as data sent is guaranteed to be
+received by the other side. If data is lost (for example due to network issues),
+it will be retransmitted until it is received.
 
 A good analogy is to think of TCP as a phone call: you must first establish a
 connection with the other person before you can talk to them. Once the
@@ -123,7 +126,7 @@ on many platform and languages.
 To make it simple, a socket is just like a file that you can open, read from,
 write to and close. To exchange data, sockets on both sides must be connected.
 The processing is the same as with files, seen in the
-[Java IOs chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios).
+[Java IOs](../../02.01-java-ios/) course.
 
 A socket is identified by an IP address and a port number.
 
@@ -136,31 +139,7 @@ A socket can act as a client or as a server:
 
 The following schema shows the workflow of a client/server application:
 
-![Client/server application workflow](./images/client-server-workflow.png)
-
-##### Client/server common methods
-
-| Operation           | Description                        |
-| ------------------- | ---------------------------------- |
-| `socket()`          | Creates a new socket               |
-| `getInputStream()`  | Gets the input stream of a socket  |
-| `getOutputStream()` | Gets the output stream of a socket |
-| `close()`           | Closes a socket                    |
-
-##### Client workflow and methods
-
-In order to create a client, the following workflow is followed:
-
-> 1. Create a socket (class `Socket`)
-> 2. Connect the socket to an IP address and a port number
-> 3. Read and write data from/to the socket
-> 4. Flush and close the socket
-
-The available methods are the following:
-
-| Operation   | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| `connect()` | Connects a socket to an IP address and a port number |
+![TCP client/server workflow](./images/tcp-client-server-workflow.png)
 
 #### Server structure and methods
 
@@ -184,12 +163,36 @@ The available methods are the following:
 | `listen()` | Listens for incoming connections                  |
 | `accept()` | Accepts an incoming connection                    |
 
+##### Client workflow and methods
+
+In order to create a client, the following workflow is followed:
+
+> 1. Create a socket (class `Socket`)
+> 2. Connect the socket to an IP address and a port number
+> 3. Read and write data from/to the socket
+> 4. Flush and close the socket
+
+The available methods are the following:
+
+| Operation   | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| `connect()` | Connects a socket to an IP address and a port number |
+
+##### Client/server common methods
+
+| Operation           | Description                        |
+| ------------------- | ---------------------------------- |
+| `socket()`          | Creates a new socket               |
+| `getInputStream()`  | Gets the input stream of a socket  |
+| `getOutputStream()` | Gets the output stream of a socket |
+| `close()`           | Closes a socket                    |
+
 #### Processing data from streams
 
 Sockets use data streams to send and receive data, just like files.
 
 You get an input stream to read data from a socket and an output stream to write
-data to a socket.
+data to a socket:
 
 ```java
 // Get input stream
@@ -200,7 +203,7 @@ output = socket.getOutputStream();
 ```
 
 You can then decorate the input and output streams with other streams to process
-the data, just as with IOs.
+the data, just as with IOs:
 
 ```java
 // Get input stream as text
@@ -230,8 +233,8 @@ output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
 > ```
 >
 > Also, do not forget all the good practices seen in the
-> [Java IOs chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05-java-ios)
-> (encoding, buffering, etc.). They must be applied here too!
+> [Java IOs](../../02.01-java-ios/) course (encoding, buffering, etc.). They
+> must be applied here too!
 
 ### UDP
 
@@ -247,25 +250,11 @@ in the same order as it was sent.
 
 A good analogy is to think of UDP as the postal service with postcards: you
 write multiple postcards and send them to someone. You do not know if the
-postcards will be received nor if they arrive in the same order as they were
-sent. You do not know if the postcards will be received at all if the postal
-service loses them.
+postcards will be received nor if they will arrive in the same order as they
+were sent. You do not know if the postcards will be received at all if the
+postal service loses them.
 
 Just as with postcards, UDP is used when reliability is not required.
-
-#### Differences between TCP and UDP
-
-The following table summarizes the differences between TCP and UDP.
-
-| TCP                                 | UDP                                        |
-| ----------------------------------- | ------------------------------------------ |
-| Connection-oriented                 | Connectionless                             |
-| Reliable                            | Unreliable                                 |
-| Stream protocol                     | Datagram protocol                          |
-| Unicast                             | Unicast, broadcast and multicast           |
-| Request-response                    | Fire-and-forget, request-response (manual) |
-| -                                   | Service discovery protocols                |
-| Used for FTP, HTTP, SMTP, SSH, etc. | Used for DNS, streaming, gaming, etc.      |
 
 #### UDP datagrams
 
@@ -290,6 +279,75 @@ response, etc. It is up to the application to define the payload format.
 If the payload is too large, the datagram will be fragmented. It means that the
 payload will be split into multiple datagrams. The receiver will have to
 reassemble the datagrams to get the original payload.
+
+#### UDP in the Socket API
+
+As seen with TCP, the Socket API is a Java API that allows you to create servers
+and clients. The Socket API also allows you to create UDP emitters
+(clients)/listeners (servers).
+
+The Socket API is described in the
+[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
+in the
+[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
+
+In the UDP world, the `Socket` class is replaced by the `DatagramSocket` class.
+
+The `DatagramSocket` class is used to create UDP clients and servers. It is used
+to send and receive UDP datagrams.
+
+A datagram is created with the `DatagramPacket` class. It is used to create a
+datagram with a payload and a destination address.
+
+A multicast socket is created with the `MulticastSocket` class. It is used to
+create a multicast datagram with a payload and a multicast address, allowing
+multiple hosts to receive the datagram.
+
+UDP can be used to create a client-server architecture. However, it is not
+required. It is possible to create a peer-to-peer architecture with UDP.
+
+### Summary of differences between TCP and UDP
+
+The following table summarizes the differences between TCP and UDP.
+
+| TCP                                 | UDP                                        |
+| ----------------------------------- | ------------------------------------------ |
+| Connection-oriented                 | Connectionless                             |
+| Reliable                            | Unreliable                                 |
+| Stream protocol                     | Datagram protocol                          |
+| Unicast                             | Unicast, broadcast and multicast           |
+| Request-response                    | Fire-and-forget, request-response (manual) |
+| -                                   | Service discovery protocols                |
+| Used for FTP, HTTP, SMTP, SSH, etc. | Used for DNS, streaming, gaming, etc.      |
+
+### Practical content
+
+#### TCP & UDP - Execute the code examples
+
+Return to the code examples and take some time to execute them, understand them
+and see the results.
+
+#### Explore the Java TCP programming template
+
+In this section, you will explore the Java TCP programming template.
+
+This is a simple template that you can use to create your own TCP clients and
+servers in Java.
+
+The template is located in the
+[`heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-template`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content-template).
+
+Take some time to explore the template. Then, try to answer the following
+questions:
+
+- How would you use it to create your own TCP clients and servers?
+- What are the main takeaways of the template?
+- How you would you implement a TCP network application using the template and
+  the provided code examples?
+
+You can use the template to create your own TCP network applications.
+
+## Part 2/2
 
 #### Reliability
 
@@ -368,33 +426,6 @@ the reliability mechanism(s).
 If you are interested, you can have a look at the
 [Automatic Repeat reQuest (ARQ)](https://en.wikipedia.org/wiki/Automatic_repeat_request)
 protocol. It is a mechanism used to detect and retransmit lost datagrams.
-
-#### UDP in the Socket API
-
-As seen in the
-[Java TCP programming](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/12-java-tcp-programming)
-chapter, the Socket API is a Java API that allows you to create TCP/UDP clients
-and servers. It is described in the
-[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
-in the
-[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
-
-In the UDP world, the `Socket` class is replaced by the `DatagramSocket` class.
-
-The `DatagramSocket` class is used to create UDP clients and servers. It is used
-to send and receive UDP datagrams.
-
-A datagram is created with the `DatagramPacket` class. It is used to create a
-datagram with a payload and a destination address.
-
-A multicast socket is created with the `MulticastSocket` class. It is used to
-create a multicast datagram with a payload and a multicast address, allowing
-multiple hosts to receive the datagram.
-
-UDP can be used to create a client-server architecture. However, it is not
-required. It is possible to create a peer-to-peer architecture with UDP.
-
-## Part 2
 
 ### Unicast, broadcast and multicast
 
@@ -603,113 +634,52 @@ to the server until they decide to close the connection.
 Both the client and the server can close the connection at any time. It is up to
 the developer to decide when and who manage to close the connection.
 
----
+### Practical content
 
-### Variable length data
+#### Update your application protocols
 
-Depending on the application protocol, the data sent can have a variable length.
+Now that you have gained new knowledge regarding TCP and UDP, update the
+application protocols you have created for the _"Guess the number"_ game and the
+_"Temperature monitoring"_ application seen in the
+[Define an application protocol](../../06.01-define-an-application-protocol/)
+course.
 
-There are two ways to handle variable length data:
+You can check the official solutions in the
+[Define an application protocol](../../06.01-define-an-application-protocol/)
+course.
 
-- Use a delimiter
-- Use a fixed length
+#### TCP - Try to access the TCP server from multiple TCP clients at the same time
 
-If the data has a delimiter, you can use a buffered reader to read the data
-until the delimiter is found.
-
-```java
-// End of transmission character
-String EOT = "\u0004";
-
-// Read data until the delimiter is found
-String line;
-while ((line = in.readLine()) != null && !line.equals(EOT)) {
-  System.out.println(
-    "[Server] received data from client: " + line
-  );
-}
-```
-
-If the data has a fixed length, you must send the length of the data before
-sending the data itself.
-
-```java
-// Send the length of the data
-out.write("DATA_LENGTH " + data.length() + "\n");
-
-// Send the data
-out.write(data);
-```
-
-```java
-// Read the length of the data
-String[] parts = in.readLine().split(" ");
-int dataLength = Integer.parseInt(parts[1]);
-
-// Read the data
-for (int i = 0; i < dataLength; i++) {
-  System.out.print((char) in.read());
-}
-```
-
----
-
-## Practical content
-
-### Execute the code examples
-
-Return to the code examples and take some time to execute them, understand them
-and see the results.
-
-### Try to access the server from multiple clients at the same time
-
-Try to access the server from multiple clients at the same time (start the
-client multiple times). You will see that the server can only handle one client
-at a time.
+Try to access the TCP server from multiple TCP clients at the same time (start
+the client multiple times). You will see that the server can only handle one
+client at a time.
 
 Do you have any idea why? You will find the answer in a future chapter but you
 can try to find it by yourself now. Discuss with your peers if needed to share
 your findings.
 
-### Update your application protocol
+#### UDP - Try to emit from multiple UDP emitters at the same time
 
-Now that you have gained new knowledge regarding TCP, update the application
-protocol you have created for the _"Guess the number"_ game in the
-[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-chapter to reflect the usage of the TCP protocol.
+Try to emit from multiple UDP emitters at the same time (start the emitter
+multiple times). You will see that the server will receive all messages from the
+emitters.
 
-You can check the official solution in the
-[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
+Do you have any idea why? How does it compare to the TCP examples you just have
+seen?
 
-### Explore the Java TCP programming template
+You will find the answer in a future chapter but you can try to find it by
+yourself now. Discuss with your peers if needed to share your findings.
 
-In this section, you will explore the Java TCP programming template.
-
-This is a simple template that you can use to create your own TCP clients and
-servers in Java.
-
-The template is located in the
-[`heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-template`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-java-tcp-programming-practical-content-template).
-
-Take some time to explore the template. Then, try to answer the following
-questions:
-
-- How would you use it to create your own TCP clients and servers?
-- What are the main takeaways of the template?
-- How you would you implement a TCP network application using the template and
-  the provided code examples?
-
-You can use the template to create your own TCP network applications.
-
-### Go further
+## Go further
 
 This is an optional section. Feel free to skip it if you do not have time.
 
-#### Implement the _"Guess the number"_ game
+### Implement the _"Guess the number"_ game
 
 Implement the _"Guess the number"_ game using the application protocol you have
 made from the
-[Define an application protocol chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol).
+[Define an application protocol](../../06.01-define-an-application-protocol/)
+course.
 
 You can use the application protocol you have made or the one provided in the
 solution if you have not done it.
@@ -729,7 +699,7 @@ template.
 #### Dockerize the application
 
 Using the Docker knowledge you have acquired in the
-[Docker and Docker Compose chapter](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose),
+[Docker and Docker Compose](../../04.01-docker-and-docker-compose/) course,
 dockerize the application.
 
 The steps to dockerize the application are the following:
@@ -777,6 +747,86 @@ section.
   range of the number to guess before starting the game?
 - Can you implement the "_Temperature monitoring_" application with TCP?
 
+### Implement the _"Temperature monitoring"_ application
+
+Implement the _"Temperature monitoring"_ game using the application protocol you
+have made from the
+[Define an application protocol](../../06.01-define-an-application-protocol/)
+course.
+
+You can use the application protocol you have made or the one provided in the
+solution if you have not done it.
+
+Use the template and the code examples you just explored to help you implement
+the game.
+
+When you create a new repository, you can choose to use a template. Select the
+`heig-vd-dai-course/heig-vd-dai-course-java-udp-programming-practical-content`
+template.
+
+> [!WARNING]
+>
+> Please make sure that the repository owner is your personal GitHub account and
+> not the `heig-vd-dai-course` organization.
+
+#### Dockerize the application
+
+Using the Docker knowledge you have acquired in the
+[Docker and Docker Compose](../../04.01-docker-and-docker-compose/) course,
+dockerize the application.
+
+The steps to dockerize the application are the following:
+
+- Create a `Dockerfile` for the application
+- Publish the application to GitHub Container Registry
+
+You should then be able to run the emitter, the receiver and the operator in
+Docker containers and access the receiver from the operator using the following
+commands:
+
+```sh
+# Start the emitter
+docker run --rm -it <docker-image-tag> emitter
+
+# Start the receiver
+docker run --rm -it --name the-receiver <docker-image-tag> receiver --network-interface eth0
+
+# Start the operator and access the receiver container
+docker run --rm -it <docker-image-tag> operator --host the-receiver
+```
+
+> [!NOTE]
+>
+> I (Ludovic) was not able to test these commands thoroughly. You might need to
+> adapt them to make them work. If something does not work, feel free to tell me
+> so I can update the commands.
+
+The `--name` sets the name of the container as well as the hostname of the
+container. This allows to access the receiver container using its hostname from
+the operator.
+
+You might notice that no ports are published to the host. As both container run
+on Docker, they share the same network bridge. They can thus communicate
+together without passing by the host.
+
+#### Compare your solution with the official one
+
+Compare your solution with the official one stated in the [Solution](#solution)
+section.
+
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
+
+#### Go one step further
+
+- Can you update the application protocol to allow the operator to have the
+  latest temperature for a given room or the average temperature of that room?
+  - **Tip**: this will require to store all the temperatures received for a
+    given room and to calculate the average temperature instead of storing only
+    the latest temperature.
+- Can you implement the "_Guess the number_" game with UDP?
+
 ## Conclusion
 
 ### What did you do and learn?
@@ -784,13 +834,19 @@ section.
 In this chapter, you have learned how to use the Socket API to create your own
 TCP clients and servers in Java.
 
+You have also learned how to use the UDP protocol to build different kind of
+network applications and the differences between TCP and UDP.
+
 Congratulations! It is a big step forward!
 
 You are now able to create your own network applications, such as a chat server,
 a file server, a web server, etc.
 
-As for now, only one client can access the server at the same time. You will see
-in a future chapter how to manage multiple clients at the same time!
+Using Java and Docker and Docker Compose, you were able to containerize your
+network application to use it anywhere.
+
+As for now, only one TCP client can access the TCP server at the same time. You
+will see in a future course how to manage multiple clients at the same time!
 
 ### Test your knowledge
 
@@ -800,6 +856,12 @@ At this point, you should be able to answer the following questions:
 - What is the difference between a server socket and a client socket?
 - How do sockets compare to files?
 - Why is TCP considered as a reliable protocol?
+- What are the differences between UDP and TCP?
+- Why is UDP unreliable? How to mitigate this?
+- What is a datagram? How can a datagram be sent without a server listening?
+- What are the differences between unicast, broadcast and multicast?
+- What are the messaging protocols and their differences?
+- What are the service discovery protocols? How do they compare to each other?
 
 ## Finished? Was it easy? Was it hard?
 
@@ -838,6 +900,58 @@ repository.
 
 If you have any questions about the solution, feel free to open an issue to
 discuss it!
+
+## Optional content
+
+The following content is optional. It is here to help you and for your general
+knowledge.
+
+### Variable length data
+
+Depending on the application protocol, the data sent can have a variable length.
+
+There are two ways to handle variable length data:
+
+- Use a delimiter
+- Use a fixed length
+
+If the data has a delimiter, you can use a buffered reader to read the data
+until the delimiter is found.
+
+```java
+// End of transmission character
+String EOT = "\u0004";
+
+// Read data until the delimiter is found
+String line;
+while ((line = in.readLine()) != null && !line.equals(EOT)) {
+  System.out.println(
+    "[Server] received data from client: " + line
+  );
+}
+```
+
+If the data has a fixed length, you must send the length of the data before
+sending the data itself.
+
+```java
+// Send the length of the data
+out.write("DATA_LENGTH " + data.length() + "\n");
+
+// Send the data
+out.write(data);
+```
+
+```java
+// Read the length of the data
+String[] parts = in.readLine().split(" ");
+int dataLength = Integer.parseInt(parts[1]);
+
+// Read the data
+for (int i = 0; i < dataLength; i++) {
+  System.out.print((char) in.read());
+}
+```
 
 ## Sources
 

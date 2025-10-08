@@ -1,0 +1,30 @@
+@startuml tcp-client-server-workflow
+skinparam boxPadding 100
+skinparam maxMessageSize 250
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!pragma teoz true
+
+title "TCP - Client/server workflow"
+
+participant "TCP Client\n(192.168.1.23)" as client
+participant "TCP Server\n(192.168.1.25)" as server
+
+server -> server : **Create** a socket (class ""ServerSocket"")
+
+server -> server : **Bind** the socket to an IP address (e.g. ""192.168.1.25"") and a port (e.g. ""1234"")
+
+loop Server listens for incoming connections
+    client -> client : **Create** a socket (class ""Socket"")
+    client -> server : **Connect** to the server using the server's IP ""192.168.1.25"" and port ""1234""
+    server -> client : **Accept** the connection and create a new client socket on a random port (e.g. ""34642"")
+    server <-> client : **Read and write** data from/to the socket
+    ...
+    client -> server : **Close** the connection
+end
+
+server -> server : **Close** the socket
+@enduml
