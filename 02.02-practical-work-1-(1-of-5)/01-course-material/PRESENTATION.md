@@ -244,7 +244,7 @@ The practical work presentations will take place on:
 - DAI-TIC-C (Wednesday mornings): **Wednesday 15.10.25** starting at **10:30**
   in room **B51a** (the room next to the stairs).
 - DAI-TIC-B (Wednesday afternoons): **Wednesday 15.10.25** starting at **14:45**
-  in room **J04**
+  in room **B38**
 - DAI-TIC-A (Thursdays): **Thursday 16.10.25** starting at **15:30** in room
   **B51a** (the room next to the stairs).
 
