@@ -121,16 +121,16 @@ error message to the operator.
 
 ### Functional example
 
-![Functional example](./images/example-1-functional-example.png)
+![Functional example](./images/temperature-monitoring-application-protocol-example-1-functional-example.png)
 
 ### Invalid temperature example
 
-![Invalid temperature example](./images/example-2-invalid-temperature.png)
+![Invalid temperature example](./images/temperature-monitoring-application-protocol-example-2-invalid-temperature.png)
 
 ### Request unknown room temperature example
 
-![Request temperature errors example](./images/example-3-request-unkown-room-temperature.png)
+![Request temperature errors example](./images/temperature-monitoring-application-protocol-example-3-request-unknown-room-temperature.png)
 
 ### Invalid command example
 
-![Invalid command example](./images/example-4-invalid-command.png)
+![Invalid command example](./images/temperature-monitoring-application-protocol-example-4-invalid-command.png)

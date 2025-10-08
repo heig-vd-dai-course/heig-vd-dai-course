@@ -143,16 +143,16 @@ client.
 
 ### Functional example
 
-![Functional example](./images/example-1-functional-example.png)
+![Functional example](./images/guess-the-number-game-protocol-example-1-functional-example.png)
 
 ### Invalid guess example
 
-![Invalid guess example](./images/example-2-invalid-guess.png)
+![Invalid guess example](./images/guess-the-number-game-protocol-example-2-invalid-guess.png)
 
 ### Invalid restart example
 
-![Invalid restart example](./images/example-3-invalid-restart.png)
+![Invalid restart example](./images/guess-the-number-game-protocol-example-3-invalid-restart.png)
 
 ### Invalid command example
 
-![Invalid command example](./images/example-4-invalid-command.png)
+![Invalid command example](./images/guess-the-number-game-protocol-example-4-invalid-command.png)

@@ -14,9 +14,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - Objectives, teaching and learning methods, and evaluation methods:
   [Link to content](..)
 - Course material: [Link to content](../01-course-material/README.md) ·
-  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/index.html)
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/04.01-docker-and-docker-compose/01-course-material/04.01-docker-and-docker-compose-presentation.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/06.01-define-an-application-protocol-presentation.pdf)
 - Code examples: [Link to content](../02-code-examples/)
 - Solution: [Link to content](../03-solution/)
 
@@ -52,10 +52,17 @@ An application protocol is a document that is used to define how applications
 exchange information between them (usually between a client and a server). It is
 defined by a set of rules that each party must follow to communicate.
 
-In this chapter, you will have a refresh about networking and you will learn
+In this course, you will have a refresh about networking and you will learn
 where to find information about application protocols, how is defined an
 application protocol and how to define your own application protocol. In future
-chapters, you will learn how to interact with well known application protocols.
+courses, you will learn how to interact with well known application protocols.
+
+In a nutshell, by the end of this course, you should be able to:
+
+- Learn where to find information about application protocols.
+- Understand application protocol.
+- Define application protocols.
+- How to use an application protocol.
 
 > [!IMPORTANT]
 >
@@ -418,11 +425,11 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
-repository.
+[`solution`](../03-solution/) directory.
 
-If you have any questions about the solution, feel free to open an issue to
-discuss it!
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ## Sources
 
