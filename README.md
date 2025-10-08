@@ -101,7 +101,6 @@ and answering your questions. Thanks!
 - Maxime Regenass [@maxregenassPro](https://github.com/maxregenassPro)
 - Santiago Sugrañes [@santettebtw](https://github.com/santettebtw)
 
-
 </details>
 
 <details>
@@ -211,8 +210,8 @@ Dates are taken from the
 |    [04](#-course-04) | 06.10. - 12.10.25         | Docker and Docker Compose                | Practical work 1 (4/5)                       | 🟢 Ready        |
 | 🚨 [05](#-course-05) | 13.10. - 19.10.25         | SMTP and ncat                            | Practical work 1 (5/5) - Presentations       | 🟢 Ready        |
 |                    - | 20.10. - 26.10.25         | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | -               |
-|    [06](#-course-06) | 27.10. - 02.11.25         | Define an application protocol           | Practical work 2 (1/6)                       | 🟡 In progress  |
-|    [07](#-course-07) | 03.11. - 09.11.25         | Java TCP and UDP programming (1/2)       | Practical work 2 (2/6)                       | 🔴 To do        |
+|    [06](#-course-06) | 27.10. - 02.11.25         | Define an application protocol           | Practical work 2 (1/6)                       | 🟢 Ready        |
+|    [07](#-course-07) | 03.11. - 09.11.25         | Java TCP and UDP programming (1/2)       | Practical work 2 (2/6)                       | 🟡 In progress  |
 |    [08](#-course-08) | 10.11. - 16.11.25         | Java TCP and UDP programming (2/2)       | Practical work 2 (3/6)                       | 🔴 To do        |
 |    [09](#-course-09) | 17.11. - 23.11.25         | Java network concurrency                 | Practical work 2 (4/6)                       | 🔴 To do        |
 | 🚨 [10](#-course-10) | 24.11. - 30.11.25         | Evaluation 1                             | Practical work 2 (5/6)                       | 🔴 To do        |

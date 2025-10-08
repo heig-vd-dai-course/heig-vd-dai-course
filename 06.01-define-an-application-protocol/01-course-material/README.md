@@ -59,9 +59,9 @@ chapters, you will learn how to interact with well known application protocols.
 
 > [!IMPORTANT]
 >
-> While quite short, this chapter is one of the most important in the course. It
-> will help you to understand how applications communicate with each other and
-> how to define your own application protocol for others to use.
+> While quite short, this chapter is one of the most important in the teaching
+> unit. It will help you to understand how applications communicate with each
+> other and how to define your own application protocol for others to use.
 
 ## What is an application protocol
 
@@ -226,8 +226,8 @@ the reader to understand the protocol using sequence or state diagrams.
 > clients and the server.
 
 Check the complete example in the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository.
+[`heig-vd-dai-course/06.01-define-an-application-protocol/02-code-examples`](../02-code-examples/)
+directory.
 
 ## Practical content
 
@@ -294,7 +294,8 @@ temperature of its buildings. The company wants to create a new application
 called _"Temperature monitoring"_.
 
 The application is simple: each room (customizable) has a temperature sensor (an
-emitter) that emits its own temperature to a receiver (a server).
+emitter) that emits its own temperature to a receiver (a server) on a regular
+basis (e.g. every 10 minutes).
 
 The server will store the latest temperature of each room.
 

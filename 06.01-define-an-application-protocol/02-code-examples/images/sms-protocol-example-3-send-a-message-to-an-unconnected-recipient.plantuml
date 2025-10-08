@@ -1,6 +1,14 @@
-@startuml send-a-message-to-an-unconnected-recipient-example
+@startuml sms-protocol-example-3-send-a-message-to-an-unconnected-recipient
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
 
-title "Send a message to an unconnected recipient example"
+!pragma teoz true
+
+title "SMS Protocol - Example 3 - Send a message to an unconnected recipient"
 
 participant "Client 1" as c1
 participant "Server" as s

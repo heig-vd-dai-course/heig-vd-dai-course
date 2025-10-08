@@ -161,16 +161,16 @@ None.
 
 ### Functional example
 
-![Functional example](./images/example-1-functional-example.png)
+![Functional example](./images/sms-protocol-example-1-functional-example.png)
 
 ### Join the server with a duplicate client name
 
-![CJoin the server with a duplicate client name example](./images/example-2-join-the-server-with-a-duplicate-client-name.png)
+![CJoin the server with a duplicate client name example](./images/sms-protocol-example-2-join-the-server-with-a-duplicate-client-name.png)
 
 ### Send a message to an unconnected recipient
 
-![Send a message to an unconnected recipient example](./images/example-3-send-a-message-to-an-unconnected-recipient.png)
+![Send a message to an unconnected recipient example](./images/sms-protocol-example-3-send-a-message-to-an-unconnected-recipient.png)
 
 ### Send a message that is too long
 
-![Send a message that is too long example](./images/example-4-send-a-message-that-is-too-long.png)
+![Send a message that is too long example](./images/sms-protocol-example-4-send-a-message-that-is-too-long.png)
