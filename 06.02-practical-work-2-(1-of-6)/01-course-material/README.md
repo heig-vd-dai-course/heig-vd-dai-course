@@ -360,7 +360,8 @@ Maximum grade: 25 points \* 0.2 + 1 = 6
 > While the grading criteria might not be as detailed as in the previous
 > practical work(s) for each section, you **must** continue to apply all the
 > good practices you have learned so far (Git, GitHub and Markdown, Java,
-> IntelliJ IDEA and Maven, Java IOs, etc.).
+> IntelliJ IDEA and Maven, Java IOs, etc.). **You might be penalized if you do
+> not follow these practices.**
 >
 > Check the [Constraints](#constraints) section for more information and
 > remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
@@ -374,21 +375,21 @@ repository!
 | --: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
 |   1 | The network application is packaged with Docker using a Dockerfile                                                                                                                                                                                                             |    0.2 |
 |   2 | The network application is published to GitHub Container Registry                                                                                                                                                                                                              |    0.2 |
-|   3 | The README describes explicit commands[^explicit-commands] to build and publish your network application with Docker to GitHub Container Registry so contributors to your project know who to publish your application with Docker                                             |    0.2 |
+|   3 | The README describes explicit commands[^explicit-commands] to build and publish your network application with Docker to GitHub Container Registry so contributors to your project know how to publish your application with Docker                                             |    0.2 |
 |   4 | The README describes explicit commands[^explicit-commands] to use your network application with Docker so new users can use it without installing anything other than Docker on their computer (`docker run` is enough for this practical work, no need to use Docker Compose) |    0.2 |
 
 ### Category 2 - Define an application protocol
 
-|   # | Criterion                                                                                                     | Points |
-| --: | :------------------------------------------------------------------------------------------------------------ | -----: |
-|   5 | The repository contains the application protocol that describes your network application                      |    0.2 |
-|   6 | The application protocol defines the overview of the network application                                      |    0.2 |
-|   7 | The application protocol defines the transport protocol(s) the network application uses                       |    0.2 |
-|   8 | The application protocol defines the port(s) the network application uses                                     |    0.2 |
-|   9 | The application protocol defines the available messages/actions/commands for the client/server to communicate |    0.2 |
-|  10 | The application protocol defines the success/error codes and their explanations                               |    0.2 |
-|  11 | The application protocol is described using at least one successful communication example diagram             |    0.2 |
-|  12 | The application protocol is described using at least one unsuccessful/error communication example diagram     |    0.2 |
+|   # | Criterion                                                                                                                  | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   5 | The README contains the application protocol or a link to the application protocol that describes your network application |    0.2 |
+|   6 | The application protocol defines the overview of the network application                                                   |    0.2 |
+|   7 | The application protocol defines the transport protocol(s) the network application uses                                    |    0.2 |
+|   8 | The application protocol defines the port(s) the network application uses                                                  |    0.2 |
+|   9 | The application protocol defines the available messages/actions/commands for the client/server to communicate              |    0.2 |
+|  10 | The application protocol defines the success/error codes and their explanations                                            |    0.2 |
+|  11 | The application protocol is described using at least one successful communication example diagram                          |    0.2 |
+|  12 | The application protocol is described using at least one unsuccessful/error communication example diagram                  |    0.2 |
 
 ### Category 3 - Java TCP/UDP programming
 
@@ -398,8 +399,8 @@ repository!
 |  14 | The client accesses the server on a given host (you must be able to change it via picocli if needed)                                     |    0.2 |
 |  15 | The client accesses the server on the defined port(s) by default (you must be able to change it via picocli if needed)                   |    0.2 |
 |  16 | A REPL (Read-Eval-Print Loop) is implemented on the client side to interact with the server without ever leaving the network application |    0.2 |
-|  17 | The client and server correctly process the messages/actions/commands                                                                    |    0.2 |
-|  18 | The client and server are compatible across operating systems/languages                                                                  |    0.2 |
+|  17 | The server correctly processes the messages/actions/commands                                                                             |    0.2 |
+|  18 | The server correctly processes the messages/actions/commands                                                                             |    0.2 |
 |  19 | The client and server correctly manage resources in case a problem occurs or when one decides to close the connection                    |    0.2 |
 |  20 | Explicit errors messages[^explicit-error-messages] are displayed on invalid/missing inputs and/or network errors.                        |    0.2 |
 

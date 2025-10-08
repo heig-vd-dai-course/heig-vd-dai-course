@@ -18,7 +18,7 @@ interface "Thermometer 2" as therm2
 interface "Humidity 1" as hum1
 interface "Pressure 1" as press1
 
-component WeatherStation as ws {
+component "WeatherStation\n(Server)" as ws {
     portin 9876
     portout 1234
 

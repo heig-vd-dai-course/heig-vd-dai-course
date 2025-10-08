@@ -17,7 +17,7 @@ interface "file1.txt" as file1
 interface "file2.mp3" as file2
 interface "file3.mp4" as file3
 
-component DaiProtocol as dp {
+component "DaiFileTransfert\n(Server)" as dp {
     portin 12345
     portout " " as internal
 }
