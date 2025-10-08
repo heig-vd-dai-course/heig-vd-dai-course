@@ -255,8 +255,8 @@ other resources and alternatives as well.
 
 - Containers are isolated by default.
 - When defined in a Docker Compose file, containers are connected to a default
-  network.
-- Containers can communicate with other containers by defining custom networks.
+  network, allowing them to communicate with each other.
+- It is possible to define custom networks that can be shared across stacks.
 - Docker networks can be defined with `docker network` command and/or in a
   Docker Compose file and shared between services.
 - Each container connected to a network can be reached by its name.
