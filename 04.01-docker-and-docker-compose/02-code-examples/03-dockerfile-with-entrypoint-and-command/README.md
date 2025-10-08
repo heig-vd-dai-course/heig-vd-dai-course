@@ -59,7 +59,7 @@ To override the default command, you need to pass the `--entrypoint` flag to the
 
 ```sh
 # Run the Docker container with a custom entrypoint
-docker run --rm --entrypoint /bin/bash -it dockerfile-with-entrypoint-and-command /bin/bash
+docker run --rm --entrypoint /bin/bash -it dockerfile-with-entrypoint-and-command
 ```
 
 Other examples will help you understand the difference between `ENTRYPOINT` and
