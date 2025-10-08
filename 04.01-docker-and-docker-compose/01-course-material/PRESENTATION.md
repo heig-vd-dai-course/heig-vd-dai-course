@@ -165,6 +165,16 @@ other resources and alternatives as well.
 
 ![bg right contain](./images/dockerfile-specification.png)
 
+### Code examples
+
+Check the code examples in the [`02-code-examples`][code-examples] directory:
+
+- Basic Dockerfile.
+- Dockerfile with command.
+- Dockerfile with entrypoint and command.
+- Dockerfile with run and copy commands.
+- Docker run with ports.
+
 ### Summary
 
 - Docker is a container engine composed of two parts: the Docker daemon and the
@@ -210,16 +220,15 @@ other resources and alternatives as well.
 
 ### Docker Compose v1 vs. Docker Compose v2
 
-- Docker Compose v1 written in Python (`docker-compose`)
-- Docker Compose v2 written in Go (`docker compose`)
-- Docker Compose v1 is deprecated
+- Docker Compose v1 written in Python (`docker-compose`).
+- Docker Compose v2 written in Go (`docker compose`).
+- Docker Compose v1 is deprecated.
 
 ![bg right contain](./images/docker-compose-v1-vs-v2.png)
 
 ### Code examples
 
-Check the code examples in the
-[`heig-vd-dai-course-code-examples`][code-examples] Git repository:
+Check the code examples in the [`02-code-examples`][code-examples] directory:
 
 - Basic Docker Compose.
 - Docker Compose with ports.
@@ -235,6 +244,30 @@ Check the code examples in the
 - A Docker Compose file (`compose.yaml`) can be easily shared and versioned with
   the application.
 
+## Make containers communicate with each other using Docker networks
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
+
+### Make containers communicate with each other using Docker networks
+
+- Containers are isolated by default.
+- When defined in a Docker Compose file, containers are connected to a default
+  network.
+- Containers can communicate with other containers by defining custom networks.
+- Docker networks can be defined with `docker network` command and/or in a
+  Docker Compose file and shared between services.
+- Each container connected to a network can be reached by its name.
+
+### Code examples
+
+Check the code examples in the [`02-code-examples`][code-examples] directory:
+
+- Make two containers communicate with each other with Docker.
+- Make two containers communicate with each other with Docker Compose.
+
 ## Questions
 
 <!-- _class: lead -->
@@ -249,9 +282,9 @@ Do you have any questions?
 
 Containerize the previous Java IOs project:
 
-- Create the Dockerfile and Docker Compose files
-- Publish on GitHub Container Registry
-- Run it on any Docker host
+- Create the Dockerfile and Docker Compose files.
+- Publish on GitHub Container Registry.
+- Run it on any Docker host.
 
 ![bg right w:80%](./images/what-will-you-do.png)
 
@@ -301,4 +334,4 @@ You can use reactions to express your opinion on a comment!
 [course-qr-code]:
 	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06-docker-and-docker-compose/COURSE_MATERIAL.md
 [code-examples]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples/tree/main
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04.01-docker-and-docker-compose/02-code-examples
