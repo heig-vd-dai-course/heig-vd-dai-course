@@ -737,6 +737,8 @@ network.
 Docker Compose allows to create networks and connect containers to them in a
 Docker Compose file.
 
+Custom networks can be used to communicate between containers and/or stacks.
+
 Check the code examples in the
 `heig-vd-dai-course/04.01-docker-and-docker-compose/02-code-examples` directory:
 
