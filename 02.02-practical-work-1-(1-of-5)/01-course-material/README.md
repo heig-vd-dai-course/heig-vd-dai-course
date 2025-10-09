@@ -353,30 +353,30 @@ The presentation order is random and is stated in the next tables:
 
 ### DAI-TIC-B (Wednesday afternoons)
 
-| # | Group                                 | Passage     |
-|---|---------------------------------------|-------------|
-| 1 | Maxime Regenass and Santiago Sugrañes | 14:45-14:53 |
-| 2 | Marc Ischi and Arnaut Leyre           | 14:55-15:03 |
-| 3 | Louis Garcia and Tiago Ferreira       | 15:05-15:13 |
-| 4 | Arnaud Bersier and Jonathan Nicolet   | 15:15-15:23 |
-| 5 | Julien Gorgerat and Audrey Mauroux    | 15:25-15:33 |
-| 6 | Yuuta Jorand and Agron Markaj         | 15:35-15:43 |
-| 7 | Samuel dos Santos and Fabien Léger    | 15:45-15:53 |
-| 8 | Pierre Gellet and Mirco Profico       | 15:55-16:03 |
+| #   | Group                                 | Passage     |
+| --- | ------------------------------------- | ----------- |
+| 1   | Maxime Regenass and Santiago Sugrañes | 14:45-14:53 |
+| 2   | Marc Ischi and Arnaut Leyre           | 14:55-15:03 |
+| 3   | Louis Garcia and Tiago Ferreira       | 15:05-15:13 |
+| 4   | Arnaud Bersier and Jonathan Nicolet   | 15:15-15:23 |
+| 5   | Julien Gorgerat and Audrey Mauroux    | 15:25-15:33 |
+| 6   | Yuuta Jorand and Agron Markaj         | 15:35-15:43 |
+| 7   | Samuel dos Santos and Fabien Léger    | 15:45-15:53 |
+| 8   | Pierre Gellet and Mirco Profico       | 15:55-16:03 |
 
 ### DAI-TIC-A (Thursdays)
 
 | #   | Group                                                        | Passage     |
 | --- | ------------------------------------------------------------ | ----------- |
-| 1   | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 14:45-14:53 |
-| 2   | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 14:55-15:03 |
-| 3   | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 15:05-15:13 |
-| 4   | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 15:15-15:23 |
-| 5   | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 15:25-15:33 |
-| 6   | Colin Stefani and Simão Romano Schindler                     | 15:35-15:43 |
-| 7   | Gianni Bee and Quentin Michon                                | 15:45-15:53 |
-| 8   | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 15:55-16:03 |
-| 9   | Kym Bolomey Kim and Robiel Tesfazghi                         | 16:05-16:13 |
+| 1   | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 16:30-16:38 |
+| 2   | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 16:40-16:48 |
+| 3   | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 16:50-16:58 |
+| 4   | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 17:00-17:08 |
+| 5   | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 17:10-17:18 |
+| 6   | Colin Stefani and Simão Romano Schindler                     | 17:20-17:28 |
+| 7   | Gianni Bee and Quentin Michon                                | 17:30-17:38 |
+| 8   | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 17:40-17:48 |
+| 9   | Kym Bolomey Kim and Robiel Tesfazghi                         | 17:50-17:58 |
 
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
