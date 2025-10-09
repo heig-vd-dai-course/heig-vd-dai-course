@@ -32,6 +32,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Practical content](#practical-content)
   - [Explore the Java UDP programming template](#explore-the-java-udp-programming-template)
 - [Part 2/2](#part-22)
+  - [Explore the code examples](#explore-the-code-examples-1)
   - [Unicast, broadcast and multicast](#unicast-broadcast-and-multicast)
   - [Messaging patterns](#messaging-patterns)
   - [Service discovery protocols](#service-discovery-protocols)
@@ -70,7 +71,7 @@ Java.
 ### Explore the code examples
 
 Individually, or in pair/group, **take 15 minutes to explore and discuss the
-code examples** provided in the
+code examples (part 1/2)** provided in the
 [`heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples`](../02-code-examples/)
 directory.
 
@@ -243,15 +244,15 @@ output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
 
 ### UDP
 
-UDP is a transport layer protocol, like TCP. It is used to send data over the
-network. However, there are numerous differences between TCP and UDP.
+UDP is a transport layer protocol, just like TCP. It is used to send data over
+the network. However, there are numerous differences between TCP and UDP.
 
 UDP is a connectionless protocol, which means that it does not require to
 establish a connection before sending data.
 
-UDP does not provide any reliability mechanism. It does not guarantee that the
-data will be received by the receiver at all, nor that the data will be received
-in the same order as it was sent.
+UDP does not provide any reliability mechanism, meaning it does not guarantee
+that the data will be received by the receiver at all, nor that the data will be
+received in the same order as it was sent.
 
 A good analogy is to think of UDP as the postal service with postcards: you
 write multiple postcards and send them to someone. You do not know if the
@@ -264,12 +265,12 @@ Just as with postcards, UDP is used when reliability is not required.
 #### UDP datagrams
 
 Unlike TCP, UDP is not a stream protocol. It is a datagram protocol. It means
-that UDP sends data in discrete chunks called datagrams.
+that UDP sends data in discrete chunks called _"datagrams"_.
 
 Datagrams are like the postcards in the previous analogy. They are sent
-independently from each other. They are not related to each other. They contain
-a destination address, a payload and the sender address. If you need to, you can
-use the sender address to reply to the sender.
+independently from each other and they are not related to each other. They
+contain a destination address, a payload and the sender address. If you need to,
+you can use the sender address to reply to the sender.
 
 UDP datagrams are composed of a header and a payload. The header contains
 information about the datagram, such as the source and destination port. The
@@ -289,8 +290,8 @@ reassemble the datagrams to get the original payload.
 
 As UDP does not provide any reliability mechanism, it is up to the application
 to implement it. For example, the application can implement a mechanism to
-acknowledge the reception of a datagram and retransmit it if it was not
-received.
+acknowledge the reception of a datagram and ask for retransmission if some parts
+of the data was not received.
 
 What is offered by default with TCP has to be implemented by the application
 with UDP.
@@ -345,9 +346,9 @@ However, we know one of the datagrams could be lost. If the server receives 9
 Both parties (the client and the server) could implement a reliability mechanism
 to solve this issue.
 
-The server could implement a reliability mechanism to acknowledge the reception
-of a datagram. If a client does not receive an acknowledgement _within a
-specific period_, it should retransmit the datagram.
+This mechanism could acknowledge the reception of a datagram. If a client does
+not receive an acknowledgement _within a specific period_, it should retransmit
+the datagram.
 
 However, even the acknowledgement could be lost. The client could retransmit the
 datagram multiple times and the server could receive it multiple times.
@@ -356,9 +357,9 @@ The server could implement a mechanism to detect duplicate datagrams and ignore
 them. It could also implement a mechanism to detect out-of-order datagrams and
 reorder them.
 
-Handling reliability is quite challenging. In the context of this course,
-reliability is not required. We will focus on the UDP protocol itself and not on
-the reliability mechanism(s).
+Handling reliability is quite challenging. In the context of this teaching unit,
+reliability is not required. We can assume the network will never fail. We will
+focus on the UDP protocol itself and not on the reliability mechanism(s).
 
 If you are interested, you can have a look at the
 [Automatic Repeat reQuest (ARQ)](https://en.wikipedia.org/wiki/Automatic_repeat_request)
@@ -367,8 +368,8 @@ protocol. It is a mechanism used to detect and retransmit lost datagrams.
 #### UDP in the Socket API
 
 As seen with TCP, the Socket API is a Java API that allows you to create servers
-and clients. The Socket API also allows you to create UDP emitters
-(clients)/receivers (servers).
+and clients. The Socket API also allows you to create UDP emitters (clients) and
+receivers (servers).
 
 The Socket API is described in the
 [`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
@@ -398,58 +399,6 @@ required. It is possible to create a peer-to-peer architecture with UDP.
 The following schema shows the workflow of a UDP emitter/receiver application:
 
 ![UDP emitter/receiver workflow](./images/udp-emitter-receiver-workflow.png)
-
-#### Receiver structure and methods
-
-In order to create a receiver, the following workflow is followed:
-
-> 1. Create a socket (class `DatagramSocket`)
-> 2. Bind the socket to an IP address and a port number
-> 3. Loop
->    1. Create a datagram (class `DatagramPacket`) to receive data
->    2. Receive a datagram
->    3. Process the datagram
-> 4. Close the socket (`DatagramSocket`)
-
-The available methods are the following:
-
-| Operation      | Description                                       |
-| -------------- | ------------------------------------------------- |
-| `bind()`       | Binds a socket to an IP address and a port number |
-| `receive()`    | Receives a datagram                               |
-| `getPort()`    | Gets the port number of a datagram                |
-| `getAddress()` | Gets the IP address of a datagram                 |
-| `getData()`    | Gets the payload of a datagram                    |
-| `getLength()`  | Gets the length of the payload of a datagram      |
-
-#### Emitter workflow and methods
-
-In order to create an emitter, the following workflow is followed:
-
-> 1. Create a socket (class `DatagramSocket`)
-> 2. Create a datagram (class `DatagramPacket`) with a payload and a destination
->    address
-> 3. Send the datagram
-> 4. Close the socket (`DatagramSocket`)
-
-The available methods are the following:
-
-| Operation      | Description                                  |
-| -------------- | -------------------------------------------- |
-| `send()`       | Sends a datagram                             |
-| `getPort()`    | Gets the port number of a datagram           |
-| `getAddress()` | Gets the IP address of a datagram            |
-| `getData()`    | Gets the payload of a datagram               |
-| `getLength()`  | Gets the length of the payload of a datagram |
-
-#### Receiver/emitter common methods
-
-| Operation           | Description                            |
-| ------------------- | -------------------------------------- |
-| `socket()`          | Creates a new socket                   |
-| `close()`           | Closes a socket                        |
-| `getLocalPort()`    | Gets the local port number of a socket |
-| `getLocalAddress()` | Gets the local IP address of a socket  |
 
 #### Processing data from datagrams
 
@@ -567,6 +516,24 @@ You can use the template to create your own UDP network applications.
 ## Part 2/2
 
 In this second part, you will learn more about UDP and some of its features.
+
+### Explore the code examples
+
+Individually, or in pair/group, **take 15 minutes to explore and discuss the
+code examples (part 2/2)** provided in the
+[`heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples`](../02-code-examples/)
+directory.
+
+Do not forget to clone the repository or pull the latest changes to get the code
+examples.
+
+Try to answer the following questions:
+
+- How do the code examples work?
+- What are the main takeaways of the code examples?
+- What are the main differences between the code examples?
+
+You can use the following theoretical content to help you.
 
 ### Unicast, broadcast and multicast
 
@@ -806,8 +773,8 @@ course.
 #### TCP - Try to access the TCP server from multiple TCP clients at the same time
 
 Try to access the TCP server from multiple TCP clients at the same time (start
-the client multiple times). You will see that the server can only handle one
-client at a time.
+the client multiple times from the example _"TCP REPL client/server example"_).
+You will see that the server can only handle one client at a time.
 
 Do you have any idea why? You will find the answer in a future chapter but you
 can try to find it by yourself now. Discuss with your peers if needed to share
@@ -816,7 +783,8 @@ your findings.
 #### UDP - Try to emit from multiple UDP emitters at the same time
 
 Try to emit from multiple UDP emitters at the same time (start the emitter
-multiple times). You will see that the server will receive all messages from the
+multiple times from the example _"UDP fire-and-forget messaging pattern
+example"_). You will see that the server will receive all messages from the
 emitters.
 
 Do you have any idea why? How does it compare to the TCP examples you just have

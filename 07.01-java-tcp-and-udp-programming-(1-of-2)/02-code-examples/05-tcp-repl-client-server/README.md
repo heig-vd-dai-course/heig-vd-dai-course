@@ -1,6 +1,6 @@
-# REPL client/server example
+# TCP REPL client/server example
 
-A quite simple example of a
+An example of a
 [Read-Eval-Print Loop (REPL)](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
 client/server application.
 

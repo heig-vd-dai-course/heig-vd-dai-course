@@ -5,6 +5,7 @@ import java.nio.charset.StandardCharsets;
 
 class TcpTextualServerExample {
 
+  // Port to listen to
   private static final int PORT = 1234;
 
   // Message to send to the client
@@ -17,7 +18,7 @@ class TcpTextualServerExample {
     try (ServerSocket serverSocket = new ServerSocket(PORT)) {
       System.out.println("[Server] Listening on port " + PORT);
 
-      while (true) {
+      while (!serverSocket.isClosed()) {
         try (Socket socket = serverSocket.accept();
             Reader reader = new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8);
             BufferedReader in = new BufferedReader(reader);

@@ -14,7 +14,7 @@ class TcpBinaryServerExample {
       System.out.println("[Server] Listening on port " + PORT);
 
       // Infinite loop to accept client connections
-      while (true) {
+      while (!serverSocket.isClosed()) {
         // Open output file and input socket
         // The `serverSocket.accept()` method blocks until a client connects
         try (OutputStream fos = new FileOutputStream(FILENAME);

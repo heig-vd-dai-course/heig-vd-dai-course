@@ -10,9 +10,13 @@ import java.util.Date;
  * datagram socket and waits for requests to arrive. When a request arrives, the server processes it
  * and sends a response back to the client. The response is sent as a datagram packet.
  */
-public class UnicastServerExample {
-  // Port to use
+public class UdpUnicastServerExample {
+
+  // Port to listen to
   private static final int PORT = 4445;
+
+  // Message to send to the client
+  private static final String MESSAGE = "Hello, client! I'm the server. 👻";
 
   public static void main(String[] args) {
     try (DatagramSocket socket = new DatagramSocket(PORT)) {
@@ -38,11 +42,8 @@ public class UnicastServerExample {
 
         System.out.println("[Server] Request received (at " + new Date() + "): " + request);
 
-        // Prepare the response
-        String response = "Hello, client! I'm the server. 👻";
-
         // Transform the message into a byte array - always specify the encoding
-        byte[] responseBuffer = response.getBytes(StandardCharsets.UTF_8);
+        byte[] responseBuffer = MESSAGE.getBytes(StandardCharsets.UTF_8);
 
         // Create a packet with the message, the client address and the client port
         DatagramPacket responsePacket =
@@ -55,7 +56,7 @@ public class UnicastServerExample {
         // Send the packet
         socket.send(responsePacket);
 
-        System.out.println("[Server] Response sent (at " + new Date() + "): " + response);
+        System.out.println("[Server] Response sent (at " + new Date() + "): " + MESSAGE);
       }
     } catch (Exception e) {
       System.err.println("[Server] An error occurred: " + e.getMessage());
