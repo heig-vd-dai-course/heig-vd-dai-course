@@ -11,14 +11,15 @@ import java.nio.charset.StandardCharsets;
  * request is sent as a datagram packet. The client then waits for a response from the server. When
  * a response arrives, the client processes it and prints it to the console.
  */
-public class UnicastClientExample {
+public class UdpUnicastClientExample {
+
   // Host to access
   private static final String HOST = "localhost";
 
   // Port to use
   private static final int PORT = 4445;
 
-  // Message to send
+  // Message to send to the server
   private static final String MESSAGE = "Hello, I'm the client! 🦇";
 
   public static void main(String[] args) {

@@ -1,6 +1,6 @@
-# Fire-and-forget messaging pattern
+# UDP fire-and-forget messaging pattern example
 
-A very simple fire-and-forget messaging pattern example using UDP.
+An example of a UDP fire-and-forget messaging pattern.
 
 > [!WARNING]
 >
@@ -15,3 +15,7 @@ A very simple fire-and-forget messaging pattern example using UDP.
 >
 > Then, you can set the network interface to the one you want to use in the
 > code.
+
+Try to start one emitter and one receiver. What can you notice?
+
+Then, start a new receiver. What can you notice?

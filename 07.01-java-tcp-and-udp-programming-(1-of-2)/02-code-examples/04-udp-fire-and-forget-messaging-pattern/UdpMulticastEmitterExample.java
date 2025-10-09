@@ -15,7 +15,7 @@ import java.util.Date;
  * reserved for multicast communication. The port must be in the range `1024` to `65535`. This range
  * is reserved for user applications.
  */
-public class MulticastEmitterExample {
+public class UdpMulticastEmitterExample {
   // Multicast address on which the emitter sends messages
   private static final String MULTICAST_ADDRESS = "239.0.0.0";
 
@@ -51,7 +51,7 @@ public class MulticastEmitterExample {
         // Print the message
         System.out.println("[Emitter] Message sent: " + messageWithDate);
 
-        // Wait for the next message
+        // Wait for a bit before sending the next message
         Thread.sleep(FREQUENCY);
       } catch (Exception e) {
         System.err.println("[Emitter] An error occurred: " + e.getMessage());

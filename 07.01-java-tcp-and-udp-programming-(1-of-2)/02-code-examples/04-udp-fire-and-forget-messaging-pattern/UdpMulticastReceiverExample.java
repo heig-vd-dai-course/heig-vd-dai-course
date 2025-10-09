@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets;
  * method. The network interface must be specified as a string. To get the network interface, use
  * the `ip` command on Unix systems or the `ipconfig` command on Windows systems.
  */
-public class MulticastReceiverExample {
+public class UdpMulticastReceiverExample {
   // Multicast address on which the receiver listens for messages
   private static final String MULTICAST_ADDRESS = "239.0.0.0";
 
@@ -29,8 +29,7 @@ public class MulticastReceiverExample {
   public static void main(String[] args) {
     try (MulticastSocket socket = new MulticastSocket(PORT)) {
       // Join the multicast group
-      InetAddress multicastAddress = InetAddress.getByName(MULTICAST_ADDRESS);
-      InetSocketAddress multicastGroup = new InetSocketAddress(multicastAddress, PORT);
+      InetSocketAddress multicastGroup = new InetSocketAddress(MULTICAST_ADDRESS, PORT);
       NetworkInterface networkInterface = NetworkInterface.getByName(NETWORK_INTERFACE);
       socket.joinGroup(multicastGroup, networkInterface);
 

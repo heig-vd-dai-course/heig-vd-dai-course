@@ -4,7 +4,10 @@ import java.nio.charset.StandardCharsets;
 
 class TcpTextualClientExample {
 
+  // Host to access
   private static final String HOST = "localhost";
+
+  // Port to use
   private static final int PORT = 1234;
 
   // Message to send to the server
