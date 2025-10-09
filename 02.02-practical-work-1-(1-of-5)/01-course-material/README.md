@@ -290,9 +290,9 @@ The practical work must comply with the following rules:
 
 Your work is due as follows:
 
-- DAI-TIC-C (Wednesday mornings): **Tuesday 14.10.25 at 23h59**
-- DAI-TIC-B (Wednesday afternoons): **Tuesday 14.10.25 at 23h59**
-- DAI-TIC-A (Thursdays): **Wednesday 15.10.25 at 23h59**
+- DAI-TIC-C (Wednesday mornings): **Tuesday 14.10.25 at 23:59**
+- DAI-TIC-B (Wednesday afternoons): **Tuesday 14.10.25 at 23:59**
+- DAI-TIC-A (Thursdays): **Wednesday 15.10.25 at 23:59**
 
 > [!CAUTION]
 >
@@ -342,8 +342,8 @@ The presentation order is random and is stated in the next tables:
 
 | #   | Group                                                           | Passage     |
 | --- | --------------------------------------------------------------- | ----------- |
-| 1   | Nolan Evard, Maikol Correia Da Silva and Alberto De Sousa Lopes | 10:30-10:38 |
-| 2   | Sofian Ethenoz, François de Courville and Mouhamed Sakho        | 10:40-10:48 |
+| 1   | Sofian Ethenoz, François de Courville and Mouhamed Sakho        | 10:10-10:18 |
+| 2   | Nolan Evard, Maikol Correia Da Silva and Alberto De Sousa Lopes | 10:30-10:38 |
 | 3   | Romain Durussel and Abram Zweifel                               | 10:50-10:58 |
 | 4   | Léo Bernard and Yann Mermoud                                    | 11:00-11:08 |
 | 5   | Pierre Thiébaud and Victor Giordani                             | 11:10-11:18 |
@@ -368,15 +368,15 @@ The presentation order is random and is stated in the next tables:
 
 | #   | Group                                                        | Passage     |
 | --- | ------------------------------------------------------------ | ----------- |
-| 1   | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 16:30-16:38 |
-| 2   | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 16:40-16:48 |
-| 3   | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 16:50-16:58 |
-| 4   | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 17:00-17:08 |
+| 1   | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 16:20-16:28 |
+| 2   | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 16:30-16:38 |
+| 3   | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 16:40-16:48 |
+| 4   | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 16:50-16:58 |
 | 5   | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 17:10-17:18 |
 | 6   | Colin Stefani and Simão Romano Schindler                     | 17:20-17:28 |
 | 7   | Gianni Bee and Quentin Michon                                | 17:30-17:38 |
 | 8   | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 17:40-17:48 |
-| 9   | Kym Bolomey Kim and Robiel Tesfazghi                         | 17:50-17:58 |
+| 9   | Kym Bolomey, Reynard Paul and Robiel Tesfazghi               | 17:50-17:58 |
 
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
