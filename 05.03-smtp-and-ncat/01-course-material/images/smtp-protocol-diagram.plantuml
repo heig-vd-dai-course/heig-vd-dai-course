@@ -1,0 +1,49 @@
+@startuml smtp-protocol-diagram
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+hide footbox
+
+!pragma teoz true
+
+title "SMTP Protocol"
+
+participant "Sender mail client (MUA) \n e.g. Outlook" as ClientApp1
+Database "Sender SMTP Server (MTA) \n e.g. MS Exchange" as SMTPServer1
+Database "Recipient SMTP Server (MTA) \n e.g. Gmail" as SMTPServer2
+participant "Recipient mail client (MUA) \n e.g. Thunderbird" as ClientApp2
+
+autonumber stop
+
+ClientApp1 <-[#red]-> SMTPServer1: **SMTP**
+& SMTPServer1 <-[#red]-> SMTPServer2: **SMTP**
+& SMTPServer2 <-[#red]-> ClientApp2: **IMAP / POP3**
+
+autonumber resume
+
+...
+
+ClientApp1 -> SMTPServer1: Connect to SMTP Server
+ClientApp1 -> SMTPServer1: EHLO
+ClientApp1 -> SMTPServer1: MAIL FROM
+ClientApp1 -> SMTPServer1: RCPT TO
+ClientApp1 -> SMTPServer1: DATA
+ClientApp1 -> SMTPServer1: QUIT
+
+SMTPServer1 -> SMTPServer1: Store mail
+
+SMTPServer1 -> SMTPServer2: Connect to SMTP Server
+SMTPServer1 -> SMTPServer2: EHLO
+SMTPServer1 -> SMTPServer2: MAIL FROM
+SMTPServer1 -> SMTPServer2: RCPT TO
+SMTPServer1 -> SMTPServer2: DATA
+SMTPServer1 -> SMTPServer2: QUIT
+
+SMTPServer2 -> SMTPServer2: Store mail
+
+ClientApp2 <-> SMTPServer2: Fetch mails
+
+@enduml

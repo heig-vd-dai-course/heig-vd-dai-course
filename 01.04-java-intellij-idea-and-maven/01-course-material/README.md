@@ -59,7 +59,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-- [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
 - [Solution](#solution)
 - [Sources](#sources)
@@ -1851,14 +1850,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- How to read and write files?
-- Why is encoding important?
-- How to deal with exceptions?
-
 ## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
@@ -1873,10 +1864,11 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`solution`](../02-solution/) directory of this repository.
+[`solution`](../02-solution/) directory.
 
-If you have any questions about the solution, feel free to open an issue to
-discuss it!
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ## Sources
 
