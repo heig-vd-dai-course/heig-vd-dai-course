@@ -221,9 +221,9 @@ More details for this section in the [course material][course].
 
 Your work is due as follows:
 
-- DAI-TIC-C: **Tuesday 14.10.25 at 23h59**
-- DAI-TIC-B: **Tuesday 14.10.25 at 23h59**
-- DAI-TIC-A: **Wednesday 15.10.25 at 23h59**
+- DAI-TIC-C: **Tuesday 14.10.25 at 23:59**
+- DAI-TIC-B: **Tuesday 14.10.25 at 23:59**
+- DAI-TIC-A: **Wednesday 15.10.25 at 23:59**
 
 Update the GitHub Discussion with the link to your repository as mentioned in
 the [course material][course].
@@ -245,7 +245,7 @@ The practical work presentations will take place on:
   in room **B51a** (the room next to the stairs).
 - DAI-TIC-B (Wednesday afternoons): **Wednesday 15.10.25** starting at **14:45**
   in room **B38**
-- DAI-TIC-A (Thursdays): **Thursday 16.10.25** starting at **15:30** in room
+- DAI-TIC-A (Thursdays): **Thursday 16.10.25** starting at **16:30** in room
   **B51a** (the room next to the stairs).
 
 The exact schedule will be communicated once the groups are known.
