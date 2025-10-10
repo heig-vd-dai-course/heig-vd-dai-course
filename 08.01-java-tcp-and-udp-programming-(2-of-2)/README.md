@@ -1,4 +1,4 @@
-# Java TCP and UDP programming (1/2)
+# Java TCP and UDP programming (2/2)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).

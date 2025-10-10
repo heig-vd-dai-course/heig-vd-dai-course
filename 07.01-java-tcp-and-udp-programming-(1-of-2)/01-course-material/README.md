@@ -695,7 +695,7 @@ following:
   If a service consumer is interested by the service provider announcement, it
   can manifest its interest.
 
-  ![UDP - Service discovery protocols - Advertisement pattern](images/service-discovery-protocols-advertisement.png)
+  ![UDP - Service discovery protocols - Advertisement pattern](images/udp-service-discovery-protocols-advertisement-pattern.png)
 
 - Query - An active discovery protocol pattern: a client (called a service
   consumer) queries the network to find a service. The client sends a unicast
@@ -706,7 +706,7 @@ following:
   information to connect to the service, just as seen with the request-response
   messaging pattern.
 
-  ![Service discovery protocols - Query pattern](images/service-discovery-protocols-query.png)
+  ![Service discovery protocols - Query pattern](images/udp-service-discovery-protocols-query-pattern.png)
 
 These patterns can still be used with other protocols such as TCP.
 
