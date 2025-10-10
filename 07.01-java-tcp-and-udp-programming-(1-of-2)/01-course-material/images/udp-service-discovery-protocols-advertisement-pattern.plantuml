@@ -1,0 +1,56 @@
+@startuml udp-service-discovery-protocols-advertisement-pattern
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!pragma teoz true
+
+title "UDP - Service discovery protocols - Advertisement pattern (passive pattern)"
+
+box "Service provider" #LightBlue
+  participant "Server" as server
+end box
+
+box "Service consumers" #LightPink
+  participant "Client 1" as client1
+  participant "Client 2" as client2
+end box
+
+note over server
+A server (called a service provider) announces its presence periodically on the network.
+end note
+
+/ note over client1, client2
+The clients (called service consumers) listen the network to discover available services.
+end note
+
+... <&clock> <i>30 seconds...</i> ...
+
+server -> client1: <i>Hello strangers, I provide this service if interested.</i>
+autonumber stop
+& server -> client2
+autonumber resume
+
+... <&clock> <i>30 seconds...</i> ...
+
+server -> client1: <i>Hello strangers, I provide this service if interested.</i>
+autonumber stop
+& server -> client2
+autonumber resume
+
+... <&clock> <i>30 seconds...</i> ...
+
+server -> client1: <i>Hello strangers, I provide this service if interested.</i>
+autonumber stop
+& server -> client2
+autonumber resume
+
+note over client1
+A service consumer could manifest its interest for a given service.
+end note
+
+client1 -> server: <i>Hello. I request the use of your service.</i>
+@enduml
