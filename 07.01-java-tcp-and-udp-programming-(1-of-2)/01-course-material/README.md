@@ -27,10 +27,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Objectives](#objectives)
 - [Part 1/2](#part-12)
   - [Explore the code examples](#explore-the-code-examples)
+  - [The Socket API](#the-socket-api)
   - [TCP](#tcp)
   - [UDP](#udp)
   - [Practical content](#practical-content)
-  - [Explore the Java UDP programming template](#explore-the-java-udp-programming-template)
 - [Part 2/2](#part-22)
   - [Explore the code examples](#explore-the-code-examples-1)
   - [Unicast, broadcast and multicast](#unicast-broadcast-and-multicast)
@@ -54,14 +54,25 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-As you have seen in previous chapters, applications communicate with each other
+As you have seen in previous courses, applications communicate with each other
 using application protocols.
 
-In this chapter, you will learn how to program your own TCP clients and servers
-in Java.
+In this course, you will learn how to program your own TCP and UDP clients and
+servers/emitters and receivers in Java.
 
 This will allow you to create your own network applications, such as a chat
-server, a file server, a web server, etc.
+server, a file server, a web server, a real-time multiplayer game server, etc.
+
+In a nutshell, at the end of this course, you will be able to:
+
+- Program your own TCP client/server applications in Java with the Socket API.
+- Process data from TCP streams.
+- Program your own UDP emitter/receiver applications in Java with the Socket
+  API.
+- Process data from UDP datagrams.
+- Learn the different ways to send a UDP datagram to one or multiple clients.
+- How UDP can be used for service discovery.
+- Make usage of a REPL.
 
 ## Part 1/2
 
@@ -85,6 +96,22 @@ Try to answer the following questions:
 - What are the main differences between the code examples?
 
 You can use the following theoretical content to help you.
+
+### The Socket API
+
+The Socket API is a Java API that allows you to create TCP and UDP network
+applications.
+
+It is described in the
+[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
+in the
+[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
+
+It has originally been developed in C in the context of the Unix operating
+system by Berkeley University. It has been ported to Java and is now available
+on many platform and languages.
+
+The Socket API provides a simple API to create TCP and UDP network applications.
 
 ### TCP
 
@@ -118,80 +145,25 @@ correct order. If a segment is lost, TCP will retransmit it.
 
 #### TCP in the Socket API
 
-The Socket API is a Java API that allows you to create TCP clients and servers.
+The Socket API provides classes to create TCP sockets.
 
-It is described in the
-[`java.net` package](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/package-summary.html)
-in the
-[`java.base` module](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/module-summary.html).
-
-It has originally been developed in C in the context of the Unix operating
-system by Berkeley University. It has been ported to Java and is now available
-on many platform and languages.
-
-To make it simple, a socket is just like a file that you can open, read from,
-write to and close. To exchange data, sockets on both sides must be connected.
-The processing is the same as with files, seen in the
+To make it simple, a TCP socket is just like a file that you can open, read
+from, write to and close. To exchange data, TCP sockets on both sides must be
+connected. The processing is the same as with files, seen in the
 [Java IOs](../../02.01-java-ios/) course.
 
-A socket is identified by an IP address and a port number.
+A TCP socket is identified by an IP address and a port number.
 
-A socket can act as a client or as a server:
+A TCP socket can act as a client or as a server:
 
-- A socket accepting connections is called a server socket (class
+- A TCP socket accepting connections is called a server socket (class
   [`ServerSocket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/ServerSocket.html)).
-- A socket initiating a connection is called a client socket (class
+- A TCP socket initiating a connection is called a client socket (class
   [`Socket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/Socket.html)).
 
-The following schema shows the workflow of a client/server application:
+The following schema shows the workflow of a TCP client/server application:
 
 ![TCP client/server workflow](./images/tcp-client-server-workflow.png)
-
-#### Server structure and methods
-
-In order to create a server, the following workflow is followed:
-
-> 1. Create a socket (class `ServerSocket`)
-> 2. Bind the socket to an IP address and a port number
-> 3. Listen for incoming connections
-> 4. Loop
->    1. Accept an incoming connection - creates a new socket (class `Socket`) on
->       a random port number
->    2. Read and write data from/to the socket
->    3. Flush and close the socket
-> 5. Close the socket (`ServerSocket`)
-
-The available methods are the following:
-
-| Operation  | Description                                       |
-| ---------- | ------------------------------------------------- |
-| `bind()`   | Binds a socket to an IP address and a port number |
-| `listen()` | Listens for incoming connections                  |
-| `accept()` | Accepts an incoming connection                    |
-
-##### Client workflow and methods
-
-In order to create a client, the following workflow is followed:
-
-> 1. Create a socket (class `Socket`)
-> 2. Connect the socket to an IP address and a port number
-> 3. Read and write data from/to the socket
-> 4. Flush and close the socket
-
-The available methods are the following:
-
-| Operation   | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| `connect()` | Connects a socket to an IP address and a port number |
-
-##### Client/server common methods
-
-| Operation           | Description                        |
-| ------------------- | ---------------------------------- |
-| `socket()`          | Creates a new socket               |
-| `getInputStream()`  | Gets the input stream of a socket  |
-| `getOutputStream()` | Gets the output stream of a socket |
-| `close()`           | Closes a socket                    |
 
 #### Processing data from streams
 
@@ -396,9 +368,10 @@ sent to a group of people.
 UDP can be used to create a client-server architecture. However, it is not
 required. It is possible to create a peer-to-peer architecture with UDP.
 
-The following schema shows the workflow of a UDP emitter/receiver application:
+The following schema shows the workflow of a UDP unicast (client/server)
+application:
 
-![UDP emitter/receiver workflow](./images/udp-emitter-receiver-workflow.png)
+![UDP unicast (client/server) workflow](./images/udp-unicast-client-server-workflow.png)
 
 #### Processing data from datagrams
 
@@ -492,7 +465,7 @@ questions:
 
 You can use the template to create your own TCP network applications.
 
-### Explore the Java UDP programming template
+#### Explore the Java UDP programming template
 
 In this section, you will explore the Java UDP programming template.
 
@@ -515,7 +488,8 @@ You can use the template to create your own UDP network applications.
 
 ## Part 2/2
 
-In this second part, you will learn more about UDP and some of its features.
+In this second part, you will learn more about UDP and some of its unique
+features compared to TCP.
 
 ### Explore the code examples
 
@@ -546,16 +520,22 @@ Unicast is the most common type of communication. It is a one-to-one
 communication. It means that a datagram is sent from one host to another host,
 just like TCP.
 
+![Unicast connection](https://upload.wikimedia.org/wikipedia/commons/7/75/Unicast.svg)
+
 Think of it as a private conversation between two people.
 
 To send a unicast datagram, the sender must know the IP address and port of the
 receiver. It is mostly the same as TCP, without all the reliability features
 provided by TCP but with all the performance of UDP.
 
+![UDP unicast (client/server) workflow](./images/udp-unicast-client-server-workflow.png)
+
 #### Broadcast
 
 Broadcast is a one-to-all communication. It means that a datagram is sent from
 one host to all hosts on the network.
+
+![Broadcast connection](https://upload.wikimedia.org/wikipedia/commons/d/dc/Broadcast.svg)
 
 Think of it as a public announcement.
 
@@ -586,10 +566,14 @@ use the `255.255.255.255` broadcast address.
 > example, broadcast is limited to the local network but can still be blocked by
 > a firewall and/or a router.
 
+![UDP broadcast (emitter/receiver) workflow](./images/udp-broadcast-emitter-receiver-workflow.png)
+
 #### Multicast
 
 Multicast is a one-to-many communication. It means that a datagram is sent from
 one host to multiple hosts.
+
+![Multicast connection](https://upload.wikimedia.org/wikipedia/commons/3/30/Multicast.svg)
 
 Think of it as a group conversation.
 
@@ -618,19 +602,24 @@ Just as for broadcast, the sender must know the multicast address to send a
 datagram to a multicast group. Just as for broadcast as well, there can be
 restrictions on the use of multicast.
 
+![UDP multicast (emitter/receiver) workflow](./images/udp-multicast-emitter-receiver-workflow.png)
+
 Multicast is quite guaranteed **not** to work on the public Internet. It is only
 guaranteed to work on a local network. If you need to use multicast between
 multiple networks, you must use a tunnel such as a virtual private network (VPN)
 to bypass this restriction.
 
-Multicast is presented in this course because it is an important concept in
-service discovery protocols. However, you must be aware that it is quite not
+Multicast is presented in this teaching unit because it is an important concept
+in service discovery protocols. However, you must be aware that it is quite not
 possible to use multicast on the public Internet, thus it greatly limits its
 usage.
 
-Also, Multicast is a complex topic. It is not covered in depth in this course.
-For a deeper understanding of possible usages of multicast on the Internet, you
-can read the following resources:
+In this teaching unit, if you decide to use multicast, we assume you will use it
+on a (reliable) local network.
+
+Also, Multicast is a complex topic. It is not covered in depth in this teaching
+unit. For a deeper understanding of possible usages of multicast on the
+Internet, you can read the following resources:
 
 - [IP multicast](https://en.wikipedia.org/wiki/IP_multicast)
 - [Internet Group Management Protocol](https://en.wikipedia.org/wiki/Internet_Group_Management_Protocol)
@@ -706,7 +695,7 @@ following:
   If a service consumer is interested by the service provider announcement, it
   can manifest its interest.
 
-  ![Service discovery protocols - Advertisement pattern](images/service-discovery-protocols-advertisement.png)
+  ![UDP - Service discovery protocols - Advertisement pattern](images/service-discovery-protocols-advertisement.png)
 
 - Query - An active discovery protocol pattern: a client (called a service
   consumer) queries the network to find a service. The client sends a unicast
@@ -757,6 +746,12 @@ The following table summarizes the differences between TCP and UDP.
 | Used for FTP, HTTP, SMTP, SSH, etc. | Used for DNS, streaming, gaming, etc.      |
 
 ### Practical content
+
+#### TCP & UDP - Execute the code examples
+
+Return to the code examples and take some time to execute them, understand them
+and see the results. Use the debugger to step through the code and see what is
+happening.
 
 #### Update your application protocols
 
@@ -1027,8 +1022,8 @@ Depending on the application protocol, the data sent can have a variable length.
 
 There are two ways to handle variable length data:
 
-- Use a delimiter
-- Use a fixed length
+1. Use a delimiter.
+2. Use a fixed length.
 
 If the data has a delimiter, you can use a buffered reader to read the data
 until the delimiter is found.
@@ -1073,11 +1068,6 @@ for (int i = 0; i < dataLength; i++) {
 - Main illustration by [Carl Nenzen Loven](https://unsplash.com/@archduk3) on
   [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
 
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12-java-tcp-programming/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/12-java-tcp-programming/12-java-tcp-programming-course-material.pdf
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/116
-[illustration]: ./images/main-illustration.jpg
