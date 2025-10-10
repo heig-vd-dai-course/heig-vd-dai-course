@@ -31,12 +31,15 @@ They are ordered by complexity. You should explore them in the following order:
 
 1. [TCP binary client/server](./01-tcp-binary-client-server).
 2. [TCP textual client/server example](./02-tcp-textual-client-server/).
-3. [UDP request-response messaging pattern example](./03-udp-request-response-messaging-pattern/).
+3. [UDP unicast client/server example](./03-udp-unicast-client-server/).
 
 ### Part (2/2)
 
-1. [UDP fire-and-forget messaging pattern example](./04-udp-fire-and-forget-messaging-pattern/)
-2. [TCP REPL client/server example](./05-tcp-repl-client-server/)
+1. [UDP broadcast emitter/receiver example](./04-udp-broadcast-emitter-receiver/).
+2. [UDP multicast emitter/receiver example](./05-udp-multicast-emitter-receiver/).
+3. [UDP request-response messaging pattern example](./06-udp-request-response-messaging-pattern/).
+4. [UDP fire-and-forget messaging pattern example](./07-udp-fire-and-forget-messaging-pattern/)
+5. [TCP REPL client/server example](./08-tcp-repl-client-server/)
 
 ## Usage
 

@@ -1,0 +1,120 @@
+@startuml udp-multicast-emitter-receiver-workflow
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!pragma teoz true
+
+!$TITLE = "UDP - Multicast workflow"
+!$MULTIPAGE = 0
+
+!if ($MULTIPAGE)
+    right footer $TITLE (%page%/%lastpage%)
+    !pragma teoz false
+!else
+    ignore newpage
+!endif
+
+title $TITLE
+
+participant "Emitter\n(192.168.1.25)" as emitter
+participant "Node 1\n(192.168.1.23)" as node1
+participant "Node 2\n(192.168.1.24)" as node2
+
+== Create the receiver sockets ==
+
+node1 -> node1 : **Create** a socket and **bind** it to a port (e.g. ""4445""")\n(class ""MulticastSocket"")
+
+node1 -> node1 : **Join** the multicast group on a given network interface (e.g. ""239.0.0.0"" and ""eth0"")\n(method ""socket.joinGroup(multicastGroup, networkInterface)"")
+
+note over node1
+    At this point, the network is notified that //Node 1// would like to receive data that are sent to the multicast group ""239.0.0.0"".
+
+    Routers, switchs, etc. will know that if a datagram is sent on the multicast address, it will forward it to //Node 1//.
+
+    This is one of the reason why multicast can only work in a local network and can hardly work on the Internet.
+endnote
+
+note right node2
+    You might notice that //Node 2// has not created a socket/decided to receive any datagram on the node.
+
+    However, the node is on the same network as the others.
+endnote
+
+newpage $TITLE
+
+== Create the emitter socket and datagram ==
+
+emitter -> emitter : **Create** a socket\n(class ""DatagramSocket"")
+
+emitter -> emitter : **Get/transform** the data to send as an array of bytes\n(method depending on the type of data)
+
+emitter -> emitter : **Create** a datagram packet using the multicast group address and port (e.g. ""239.0.0.1"" and ""4445"")\n(class ""DatagramPacket"")
+
+newpage $TITLE
+
+== Send and receive datagrams ==
+
+loop Receiver side: loop until socket is closed
+
+    node1 -> node1 : **Wait to receive** a datagram packet on the given socket\n(method ""socket.receive()"")
+
+    note over emitter, node1
+        At this point, the socket will wait for a datagram to arrive on the given port.
+    endnote
+
+    ...
+
+    note over emitter, node1
+        At any time, the emitter can decide to send the datagram packet.
+
+        The datagram packet will be forwarded to the multicast network using the information contained in the datagram header (multicast's network, sender's IP, etc.).
+    endnote
+
+    note over emitter, node2
+        At this point, the datagram will be sent to all nodes on the network that have subscribed to the multicast address. Other nodes will not be affected.
+    endnote
+
+    emitter -> node1 : **Send** the datagram on the network\n(method ""socket.send(packet)"")
+
+    emitter -> emitter : **Close** the connection\n(method ""socket.close()"")
+
+    node1 -> node1 : **Receive** the datagram packet\n(method ""socket.receive()"")
+
+    / note right node2
+        You might notice //Node 2// did not receive the datagram on its network interface, as it has not subscribed for it.
+    endnote
+
+    node1 -> node1 : **Get/transform** the datagram packet payload\n(method depending on the type of data)
+
+    note over emitter, node1
+        The receiver will loop back to receive another datagram.
+    endnote
+
+end
+
+newpage $TITLE
+
+...
+
+== Receiver shutdown ==
+
+note over emitter, node1
+    On shutdown, the receiver can leave the multicast group and close its multicast socket
+endnote
+
+node1 -> node1 : **Leave** the multicast group\n(method ""socket.leaveGroup(multicastGroup, networkInterface)"")
+
+note over node1
+    At this point, the network is notified that //Node 1// is not interested to receive data that are sent to the multicast group ""239.0.0.0"" anymore.
+
+    Routers, switchs, etc. will know that if a datagram is sent on the multicast address, it will not forward it to //Node 1//.
+
+    This is one of the reason why multicast can only work in a local network and can hardly work on the Internet.
+endnote
+
+node1 -> node1 : **Close** the connection\n(method ""socket.close()"")
+@enduml
