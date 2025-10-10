@@ -1,0 +1,31 @@
+@startuml guess-the-number-game-protocol-example-2-invalid-guess
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!pragma teoz true
+
+title "Guess the number game protocol - Example 2 - Invalid guess example"
+
+participant "Client" as c
+participant "Server" as s
+
+== Setup ==
+
+c->s : Establish connection
+s->s: Generate a random number between 1 and 100 (incl.). Let's assume 28.
+c<-->s : Connection established
+
+== Invalid guess example (out of bounds) ==
+
+c->s: GUESS -3
+s->c: ERROR 1
+
+== Invalid guess example (not a number) ==
+
+c->s: GUESS a
+s->c: ERROR 2
+@enduml

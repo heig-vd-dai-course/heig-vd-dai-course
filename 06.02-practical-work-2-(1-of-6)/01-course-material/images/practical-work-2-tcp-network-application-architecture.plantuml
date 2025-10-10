@@ -1,0 +1,43 @@
+@startuml "practical-work-2-tcp-network-application-architecture"
+left to right direction
+
+skinparam boxPadding 20
+skinparam componentPadding 10
+skinparam componentStyle rectangle
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+
+!pragma teoz true
+
+title "Practical Work 2 - TCP network application - Architecture"
+
+interface "file1.txt" as file1
+interface "file2.mp3" as file2
+interface "file3.mp4" as file3
+
+component "DaiFileTransfert\n(Server)" as dp {
+    portin 12345
+    portout " " as internal
+}
+
+component "Client 1" as client1
+component "Client 2" as client2
+
+client1 <-[#red]-> 12345 : localhost
+client2 <-[#red]-> 12345 : 192.168.1.26
+
+
+file1 <-up[#blue]-> internal
+file2 <-up[#blue]-> internal
+file3 <-up[#blue]-> internal
+
+legend right
+**Legend**
+
+|Color| Access | Origin |
+|<#red>| External | LAN/WAN |
+|<#blue>| Internal | Filesystem |
+endlegend
+@enduml

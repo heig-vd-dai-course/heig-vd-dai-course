@@ -1,6 +1,14 @@
-@startuml request-unkown-room-temperature
+@startuml temperature-monitoring-application-protocol-example-4-invalid-command
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
 
-title "Request unkown room temperature example"
+!pragma teoz true
+
+title "Temperature monitoring application protocol - Example 4 - Invalid command"
 
 participant "Emitter 1" as e1
 participant "Emitter 2" as e2
@@ -13,10 +21,15 @@ e1 --> e1: <&clock> ... <&clock> ... <&clock> ...
 e1 -[#red]> s: TEMP Kitchen 21.2
 s -> s: Store the room's temperature
 
-== Request temperature of an unknown room ==
+...
 
-o -[#blue]> s: REQ_TEMP Garage
-s -[#blue]> o: ERROR 1
+== Request temperature ==
+
+o -[#blue]> s: REQ_TEMP Kitchen
+s -[#blue]> o: TEMP 21.2
+
+o -[#blue]> s: REQ Kitchen
+s -[#blue]> o: ERROR -1
 
 legend
 **Legend**

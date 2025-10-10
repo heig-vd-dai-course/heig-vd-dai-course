@@ -1,6 +1,14 @@
-@startuml functional-example
+@startuml sms-protocol-example-1-functional-example
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
 
-title "Functional example"
+!pragma teoz true
+
+title "SMS Protocol - Example 1 - Functional example"
 
 participant "Client 1" as c1
 participant "Server" as s

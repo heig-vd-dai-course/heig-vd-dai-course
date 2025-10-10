@@ -32,11 +32,10 @@ _paginate: false
 
 ## Objectives
 
-- Refresh on networking
-- Learn where to find information about application protocols
-- Understand application protocol
-- Define application protocols
-- How to use an application protocol
+- Learn where to find information about application protocols.
+- Understand application protocol.
+- Define application protocols.
+- How to use an application protocol.
 - **While quite short, one of the most important chapters of the course!**
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
@@ -50,10 +49,10 @@ other resources and alternatives as well.
 
 ### What is an application protocol
 
-- Defines application communication
+- Defines application communication.
 - RFCs on the IETF website:
-  - Relies on transport and network protocols
-  - Multiple revisions exist
+  - Relies on transport and network protocols.
+  - Multiple revisions exist.
 
 ![bg right contain](./images/what-is-an-application-protocol.png)
 
@@ -66,11 +65,11 @@ other resources and alternatives as well.
 
 ### How is structured an application protocol
 
-- Defined by a set of rules to follow in a RFC
+- Defined by a set of rules to follow in a RFC.
 - Rules define:
-  - Transport protocol
-  - Messages order
-  - Examples and errors
+  - Transport protocol.
+  - Messages order.
+  - Examples and errors.
 
 ![bg right contain](./images/how-is-structured-an-application-protocol.png)
 
@@ -83,20 +82,20 @@ other resources and alternatives as well.
 
 ### How to define an application protocol
 
-- Lot of work and thinking
-- A protocol is never perfect
+- Lot of work and thinking.
+- A protocol is never perfect.
 - The more you take your time to think and design it, the less you will have to
-  change it later
+  change it later.
 
 ![bg right contain](./images/how-to-define-an-application-protocol.png)
 
 ---
 
-- Simplified structure for this course:
-  - Section 1 - Overview
-  - Section 2 - Transport protocol
-  - Section 3 - Messages
-  - Section 4 - Examples
+- Simplified structure for this teaching unit:
+  1. Section 1 - Overview.
+  2. Section 2 - Transport protocol.
+  3. Section 3 - Messages.
+  4. Section 4 - Examples.
 
 ![bg right contain](./images/how-to-define-an-application-protocol.png)
 
@@ -174,8 +173,8 @@ Do you have any questions?
 ### What will you do?
 
 - Define two custom application protocols:
-  - _"Guess the number"_ game
-  - _"Temperature monitoring"_ application
+  - _"Guess the number"_ game.
+  - _"Temperature monitoring"_ application.
 
 These application protocols will be used in the next chapters to implement them!
 

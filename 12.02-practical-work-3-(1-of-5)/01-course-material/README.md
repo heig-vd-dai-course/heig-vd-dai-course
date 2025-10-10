@@ -97,7 +97,7 @@ To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: [DAI 2025-2026 Class \<class ID \>] Practical work 3 - \<first name
+- **Title**: [DAI 2025-2026 Class \<class ID\>] Practical work 3 - \<first name
   member 1\> \<last name member 1\>, \<first name member 2\> \<last name member
   2\> and \<first name member 3\> \<last name member 3\> (if applicable)
   (replace `<class ID>`, `<first name>` and `<last name>` with your information,
@@ -108,8 +108,8 @@ information:
 
 > [!CAUTION]
 >
-> **You must do it before next week**, even if you do not have a clear idea yet
-> as it will help us to plan the practical work presentations.
+> **You must do it before the next course**, even if you do not have a clear
+> idea yet as it will help us to plan the practical work presentations.
 >
 > Please refer to the [Constraints](#constraints) section to know what is
 > expected from you.
