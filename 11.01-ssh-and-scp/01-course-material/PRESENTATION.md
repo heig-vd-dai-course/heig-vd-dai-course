@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - SSH and SCP
+# SSH and SCP
 
 <!--
 _class: lead
@@ -160,15 +160,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Learn how to use HTTP, a high-level protocol for the web
-- Create your own simple web API with CRUD operations with Java
-
-![bg right:40%](https://images.unsplash.com/photo-1446770145316-10a05382c470?fit=crop&h=720)
 
 ## Sources
 

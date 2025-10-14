@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - HTTP and curl
+# HTTP and curl
 
 <!--
 _class: lead
@@ -564,17 +564,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Web infrastructures
-  - How to run and maintain web applications on the Internet?
-  - How to scale web applications?
-  - How to secure web applications?
-
-![bg right:40%](https://images.unsplash.com/photo-1492515114975-b062d1a270ae?fit=crop&h=720)
 
 ## Sources
 

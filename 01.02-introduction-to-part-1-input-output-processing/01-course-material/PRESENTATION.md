@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - Introduction to part 1: Input/output processing
+# Introduction to part 1: Input/output processing
 
 <!--
 _class: lead
@@ -36,12 +36,12 @@ _paginate: false
 
 ## What happens when you browse the Web
 
-1. You request a resource (e.g. a file) from a web server
-2. The web server opens the file
-3. The web server reads the file
-4. The web server sends the file to you
-5. Your web browser receives the file
-6. Your web browser displays the file
+1. You request a resource (e.g. a file) from a web server.
+2. The web server opens the file.
+3. The web server reads the file.
+4. The web server sends the file to you.
+5. Your web browser receives the file.
+6. Your web browser displays the file.
 
 The whole process uses **input/output** (IO) operations!
 
@@ -55,21 +55,21 @@ But for this, you will need some tools and some knowledge.
 
 ## What will you learn?
 
-- How to use Git, GitHub and Markdown (professionally)
-- How to create a Java project with Maven and external dependencies
+- How to use Git, GitHub and Markdown (professionally).
+- How to create a Java project with Maven and external dependencies.
 - How to use the Java IO API to read/write files with different formats and
-  encodings
-- How to run your Java application in a Docker container
+  encodings.
+- How to run your Java application in a Docker container.
 
 ![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
 ## What will you accomplish?
 
-- Have a presence on GitHub
-- Use a professional Git workflow
-- Collaborate with your team on GitHub
-- Create a CLI to process files
-- Display your work and skills on GitHub
+- Have a presence on GitHub.
+- Use a professional Git workflow.
+- Collaborate with your team on GitHub.
+- Create a CLI to process files.
+- Display your work and skills on GitHub.
 
 ![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 

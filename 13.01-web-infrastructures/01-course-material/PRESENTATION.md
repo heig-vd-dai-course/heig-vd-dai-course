@@ -345,12 +345,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-<!-- _class: lead -->
-
-You will start the practical work!
-
 ## Sources
 
 - Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on

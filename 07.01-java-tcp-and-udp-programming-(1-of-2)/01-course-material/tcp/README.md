@@ -37,15 +37,14 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Read-eval-print loop (REPL)](#read-eval-print-loop-repl)
 - [Practical content](#practical-content)
   - [Execute the code examples](#execute-the-code-examples)
-  - [Update your application protocol](#update-your-application-protocol)
   - [Try to access the server from multiple clients at the same time](#try-to-access-the-server-from-multiple-clients-at-the-same-time)
+  - [Update your application protocol](#update-your-application-protocol)
   - [Explore the Java TCP programming template](#explore-the-java-tcp-programming-template)
   - [Go further](#go-further)
 - [Conclusion](#conclusion)
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-- [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
 - [Solution](#solution)
 - [Sources](#sources)
@@ -467,15 +466,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Java UDP programming
-  - How does it compare to TCP?
-  - How to create efficient UDP network applications
-  - Implement the _"Temperature monitoring"_ application using UDP (optional)
 
 ## Additional resources
 

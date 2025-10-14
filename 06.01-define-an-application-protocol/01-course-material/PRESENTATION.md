@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - Define an application protocol
+# Define an application protocol
 
 <!--
 _class: lead
@@ -40,52 +40,6 @@ _paginate: false
 - **While quite short, one of the most important chapters of the course!**
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
-
-## A quick reminder about networking
-
-<!-- _class: lead -->
-
-More details for this section in the [course material][course]. You can find
-other resources and alternatives as well.
-
-### The Internet Protocol (IP)
-
-- Each computer has a unique IP address
-- IPv4 addresses are limited; NAT routers share IP addresses
-- IPv6 fixes this issue
-- IP addresses are used to route packets
-
-![bg right contain](./images/the-internet-protocol-ip.png)
-
-### The Domain Name System (DNS)
-
-- DNS maps domain names to IP addresses
-- Example: `heig-vd.ch` → `193.134.223.20`
-- dig and nslookup are useful tools to query DNS servers
-
-![bg right contain](./images/the-domain-name-system-dns.png)
-
-### Common DNS records
-
-Records map a domain name to an IP address.
-
-- `NS`: Name Server
-- `CNAME`: Alias
-- `A`: IPv4 address
-- `AAAA`: IPv6 address
-
-![bg right contain](./images/common-dns-records.png)
-
-### Reserved ports
-
-- Ports identify processes or services
-- Analogy: an IP address is like a street address, a port is like an apartment
-  number
-- Ports are 16-bit unsigned numbers, maximum 65535
-- Reserved ports: 0-1023
-- Other ports: far west
-
-![bg right contain](./images/reserved-ports.png)
 
 ## What is an application protocol
 
@@ -250,17 +204,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Java TCP programming
-  - How to create a TCP server
-  - How to create a TCP client
-  - Implement the _"Guess the number"_ game using TCP (optional)
-
-![bg right:40%](https://images.unsplash.com/photo-1554960750-9468c5d9e239?fit=crop&h=720)
 
 ## Sources
 

@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - Java network concurrency
+# Java network concurrency
 
 <!--
 _class: lead
@@ -347,16 +347,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-- Learn about electronic mail protocols
-- Experiment with the SMTP protocol
-  - Start a local SMTP server for testing
-  - Send an email using ncat
-  - Send an email using a SMTP client written in Java
-
-![bg right:40%](https://images.unsplash.com/photo-1526554850534-7c78330d5f90?fit=crop&h=720)
-
 ## Sources
 
 - Main illustration by [Brent Olson](https://unsplash.com/@helixgames) on
@@ -402,11 +392,6 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/a-rack-filled-with-lots-of-yellow-hard-hats-wp81DxKUd1E)
 - Illustration by [Kateryna Miller](https://unsplash.com/@sammountain) on
   [Unsplash](https://unsplash.com/photos/black-white-and-green-hanging-decors-mkll7wvtv_o)
-
----
-
-- Illustration by [MChe Lee](https://unsplash.com/@mclee) on
-  [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
 
 [course]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09.01-java-network-concurrency

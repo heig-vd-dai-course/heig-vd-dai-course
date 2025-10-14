@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - Java, IntelliJ IDEA and Maven
+# Java, IntelliJ IDEA and Maven
 
 <!--
 _class: lead
@@ -308,17 +308,6 @@ we notice some difficulties, we will come back to you to help you.
 ➡️ [GitHub Discussions][discussions]
 
 You can use reactions to express your opinion on a comment!
-
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Java IOs: input/output processing
-  - How to read and write files?
-  - Why is encoding important?
-  - How to deal with exceptions?
-
-![bg right:40%](https://images.unsplash.com/photo-1549319114-d67887c51aed?fit=crop&h=720)
 
 ## Sources
 

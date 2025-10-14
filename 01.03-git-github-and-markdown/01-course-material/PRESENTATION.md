@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - Git, GitHub and Markdown
+# Git, GitHub and Markdown
 
 <!--
 _class: lead
@@ -279,16 +279,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-In the next chapter, you will learn the following topics:
-
-- Java: why is Java a popular programming language?
-- IntelliJ IDEA: tips and tricks for a better (collaborative) experience.
-- Maven: Java project structure, dependencies and build tool.
-
-![bg right:40%](https://images.unsplash.com/photo-1497935586351-b67a49e012bf?fit=crop&h=720)
-
 ## Sources
 
 - Main illustration by [Roman Synkevych](https://unsplash.com/@synkevych) on
@@ -302,8 +292,6 @@ In the next chapter, you will learn the following topics:
   [3](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow),
   [4](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 - Git strip by [xkcd](https://xkcd.com/1597/)
-- Illustration by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on
-  [Unsplash](https://unsplash.com/photos/KixfBEdyp64)
 
 [course]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.03-git-github-and-markdown

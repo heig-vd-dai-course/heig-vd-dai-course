@@ -1,17 +1,6 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/15-smtp-and-ncat/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/15-smtp-and-ncat/15-smtp-and-ncat-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/114
-[illustration]: ./images/main-illustration.jpg
+# SMTP and ncat
 
-# SMTP and ncat - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
@@ -20,12 +9,26 @@ Based on the original course by O. Liechti and J. Ehrensberger.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/05.03-smtp-and-ncat/01-course-material/05.03-smtp-and-ncat-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
+- [A quick reminder about networking](#a-quick-reminder-about-networking)
+  - [The Internet Protocol (IP)](#the-internet-protocol-ip)
+  - [The Domain Name System (DNS)](#the-domain-name-system-dns)
+  - [Common DNS records](#common-dns-records)
+  - [Reserved ports](#reserved-ports)
 - [Electronic messaging protocols: SMTP, POP3 and IMAP](#electronic-messaging-protocols-smtp-pop3-and-imap)
   - [SMTP](#smtp)
   - [POP3](#pop3)
@@ -35,7 +38,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [A focus on the SMTP protocol](#a-focus-on-the-smtp-protocol)
 - [ncat](#ncat)
   - [Alternatives](#alternatives)
-  - [Resources](#resources)
+  - [Resources](#resources-1)
 - [Practical content](#practical-content)
   - [Install and configure ncat](#install-and-configure-ncat)
   - [Start Mailpit](#start-mailpit)
@@ -47,28 +50,155 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [What did you do and learn?](#what-did-you-do-and-learn)
   - [Test your knowledge](#test-your-knowledge)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-- [What will you do next?](#what-will-you-do-next)
 - [Additional resources](#additional-resources)
 - [Sources](#sources)
 
 ## Objectives
 
-In this chapter, you will learn about the different electronic messaging
-protocols with a focus on the SMTP protocol. You will also learn how to use the
-SMTP protocol to send an email to an SMTP server using ncat and a Java client.
+In this course, you will have a refresher on networking concepts.
+
+Then, you will learn about the different electronic messaging protocols with a
+focus on the SMTP protocol. You will also learn how to use the SMTP protocol to
+send an email to an SMTP server using ncat and a Java client.
+
+In short, by the end of this course, you should be able to:
+
+- Refresher on networking concepts.
+- Learn electronic messaging protocols:
+  - SMTP.
+  - POP3.
+  - IMAP.
+- Focus on the SMTP protocol.
+- Learn how to use ncat and Java to send an email to an SMTP server.
+
+## A quick reminder about networking
+
+### The Internet Protocol (IP)
+
+Each computer connected to the Internet has an
+[IP (Internet Protocol) address](https://en.wikipedia.org/wiki/IP_address). This
+IP address is used to identify the computer on the Internet. It is a unique
+address. As [IPv4](https://en.wikipedia.org/wiki/Internet_Protocol_version_4)
+addresses are limited, there are
+[NAT (Network Address Translation)](https://en.wikipedia.org/wiki/Network_address_translation)
+routers that allow to share a single IP address between multiple computers. This
+is why [IPv6](https://en.wikipedia.org/wiki/IPv6) was created.
+
+### The Domain Name System (DNS)
+
+The [Domain Name System (DNS)](https://en.wikipedia.org/wiki/Domain_Name_System)
+is a system that allows to map a domain name to an IP address. For example, the
+domain name `heig-vd.ch` is mapped to the IP address `193.134.223.20`.
+
+You can check this by running the following command with
+[nslookup](https://en.wikipedia.org/wiki/Nslookup):
+
+```sh
+nslookup heig-vd.ch
+```
+
+The output should be similar to the following:
+
+```text
+Server:         8.8.8.8
+Address:        8.8.8.8#53
+
+Non-authoritative answer:
+Name:   heig-vd.ch
+Address: 193.134.223.20
+```
+
+Note the `Address` line. It is the IP mapping the DNS record.
+
+The current DNS server used to resolve the DNS query is `8.8.8.8`.
+
+When you browse the web, your browser will use the DNS to find the IP address of
+the web server. Then, it will use the IP address to request the content of the
+web page on the web server.
+
+### Common DNS records
+
+The DNS holds what are called DNS records. These records are used to map a
+domain name to an IP address. There are many types of DNS records. The most
+common ones are:
+
+- `NS`: This record specifies the name servers for a given domain name.
+- `CNAME`: This record specifies an alias for a given domain name.
+- `A`: This record specifies the IP address of a given domain name (IPv4).
+- `AAAA`: This record specifies the IP address of a given domain name (IPv6).
+
+Some of these records will be used later in this teaching unit.
+
+### Reserved ports
+
+In computer networking, a port is a communication endpoint. At the software
+level, within an operating system, a port is a logical construct that identifies
+a specific process or a type of network service. Ports are identified for each
+protocol and address combination by 16-bit unsigned numbers, commonly known as
+the port number.
+
+A possible analogy is this: an IP address is like a street address, and a port
+is like an apartment number. The IP address identifies the computer, and the
+port number identifies the specific process running on that computer.
+
+Using 16-bit unsigned numbers, the maximum number of ports is 65536 (from 0 to
+65535). However, not all ports can be used by anyone. Some ports are reserved
+for specific protocols.
+
+The first 0 to 1023 ports are called _"well-known ports"_. These ports are
+reserved for specific protocols. Using these ports might require special
+privileges on Unix systems.
+
+Here is a list of examples for common well-known ports:
+
+- `20` and `21`: FTP
+- `22`: SSH
+- `23`: Telnet
+- `25`, `465` and `587`: SMTP
+- `53`: DNS
+- `80` and `443`: HTTP/HTTPS
+- `110` and `995`: POP3
+- `123`: NTP
+- `143` and `993`: IMAP
+
+The next 1024 to 49151 ports are called _"registered ports"_. Some ports are
+officially registered by the IANA (Internet Assigned Numbers Authority) and some
+are not. They can be used by anyone.
+
+Here is a list of examples for common registered ports:
+
+- `3306`: MySQL
+- `5000–5500`: League of Legends
+- `5432`: PostgreSQL
+- `6379`: Redis
+- `8080`: HTTP alternative port
+- `25565`: Minecraft
+- `27017`: MongoDB
+
+The last 49152 to 65535 ports are called _"dynamic ports"_. They are usually
+used for private, customized services, or for temporary purposes. These ports
+cannot be registered and can be used by anyone.
+
+Here is a list of examples for common dynamic ports:
+
+- `51820`: WireGuard
+- `64738`: Mumble
+
+Wikipedia has a
+[list of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+that you can use to find the port number of a specific protocol.
 
 ## Electronic messaging protocols: SMTP, POP3 and IMAP
 
 There are three main protocols used for electronic messaging:
 
-- SMTP (Simple Mail Transfer Protocol)
-- POP3 (Post Office Protocol)
-- IMAP (Internet Message Access Protocol)
+- SMTP (Simple Mail Transfer Protocol).
+- POP3 (Post Office Protocol).
+- IMAP (Internet Message Access Protocol).
 
-You could use any email clients (called **Mail User Agents (MUA)** in the RFCs)
-such as Thunderbird, Gmail or Outlook to use these protocols. They will send and
-receive emails from an email server (called **Mail Transfer Agent (MTA)** in the
-RFCs).
+You could use any email clients (called _"Mail User Agents (MUA)"_) such as
+Thunderbird, GMail or Outlook to use these protocols. They will send and receive
+emails from an email server (called _"Mail Transfer Agent (MTA)"_).
 
 ### SMTP
 
@@ -167,7 +297,6 @@ heig-vd.ch.             21600   IN      TXT     "v=spf1 ip4:193.134.218.124 ip4:
 ;; SERVER: 8.8.8.8#53(8.8.8.8)
 ;; WHEN: Tue Oct 17 10:50:46 CEST 2023
 ;; MSG SIZE  rcvd: 1209
-
 ```
 
 The output is more verbose than with `nslookup`, but it contains the same
@@ -184,12 +313,12 @@ the first place.
 
 If we look at the SMTP protocol, we can see that:
 
-- SMTP does not require authentication
-- SMTP does not require encryption
-- SMTP does not require the sender address to be valid
+- SMTP does not require authentication.
+- SMTP does not require encryption.
+- SMTP does not require the sender address to be valid.
 - SMTP does not require the sender address to be the same as the email address
-  used to authenticate
-- And many other issues
+  used to authenticate.
+- And many other issues.
 
 Because of this, SMTP is often used by spammers to send spam emails. To prevent
 this, there are many denylists that contain IP addresses of known spammers. If
@@ -244,7 +373,7 @@ QUIT
 
 The following diagram shows the sequence of commands to send an email:
 
-![Sequence diagram of the SMTP protocol](./images/a-focus-on-the-smtp-protocol-2.png)
+![Sequence diagram of the SMTP protocol](./images/smtp-protocol-diagram.png)
 
 ## ncat
 
@@ -290,6 +419,13 @@ systems.
 
 Install ncat using the package manager of your operating system:
 
+> [!NOTE]
+>
+> Remember: if you use WSL, you need to install ncat in your WSL distribution.
+> You can use any Linux distribution you want. The commands below are for
+> Ubuntu. If you use another distribution, please adapt the commands
+> accordingly.
+
 ```sh
 # Install ncat on Ubuntu
 sudo apt install ncat
@@ -312,15 +448,49 @@ Ncat: Version 7.94SVN ( https://nmap.org/ncat )
 
 ### Start Mailpit
 
-Pull the latest changes from the previously cloned
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository or clone it if you have not done it yet.
+In this section, you will start Mailpit using Docker Compose.
 
-Explore the `15-smtp-and-ncat` directory containing the Mailpit example with
-Docker Compose. Make sure to show hidden files and directories to see the `.env`
-file.
+#### Clone or fetch latest changes from the main repository to get the code examples
 
-In the `15-smtp-and-ncat` directory, run the following command:
+Clone or fetch latest changes from the
+[`heig-vd-dai-course/heig-vd-dai-course`](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+repository to get the code examples:
+
+```sh
+# Clone the repository if you have not done it yet
+git clone git@github.com:heig-vd-dai-course/heig-vd-dai-course.git
+```
+
+or fetch latest changes if you have already cloned it:
+
+```sh
+# Navigate to the cloned repository
+cd heig-vd-dai-course
+
+# Checkout to the main branch
+git checkout main
+
+# Pull latest changes
+git pull
+```
+
+#### Open the repository in your IDE
+
+Open the `heig-vd-dai-course` repository in your favorite IDE.
+
+#### Access the code examples in your terminal
+
+Open a terminal and navigate to the
+`heig-vd-dai-course/05.03-smtp-and-ncat/02-code-examples` directory.
+
+#### Start Mailpit with Docker Compose
+
+Explore the directory containing the Mailpit example with Docker Compose.
+
+Take some time to read the `compose.yaml` file. It contains the configuration to
+start Mailpit with Docker Compose.
+
+Run the following command to start Mailpit:
 
 ```sh
 # Start Mailpit in background
@@ -367,7 +537,7 @@ In this section, you will send an email with ncat to the Mailpit SMTP server.
 
 #### Connect to the SMTP server
 
-Now that Mailpit is running, you can send an email with Telnet.
+Now that Mailpit is running, you can send an email with ncat.
 
 Open a new terminal and run the following command:
 
@@ -486,9 +656,8 @@ As you can see, the commands used to prepare and send the email are quite
 simple. However, the email content is not. This is why we use email clients
 instead of ncat to send emails.
 
-These commands follow the SMTP protocol, just as any other application protocols
-such as the ones you created in a previous chapter and the ones you will create
-in the future.
+These commands follow the SMTP protocol. In the next course, you will learn more
+about application protocols and how to use them.
 
 To quit the SMTP session, run the following command:
 
@@ -510,10 +679,15 @@ In this section, you will send an email with Java to the Mailpit SMTP server.
 
 #### Explore the Java client
 
-Explore the `SmtpClientExample.java` file in the `15-smtp-and-ncat` directory.
+Take some time to explore the Java client located in the
+`SmtpClientExample.java` file. It is a simple Java client that sends an email to
+the Mailpit SMTP server.
 
 The Java client uses the `java.net.Socket` class to connect to the Mailpit SMTP
 server and send an email.
+
+What can you say about the code? Do you understand how it works? How does it
+compare to the ncat commands and the Java IOs we studied in previous courses?
 
 #### Run the Java client
 
@@ -536,11 +710,15 @@ java SmtpClientExample
 The email should be sent to the Mailpit SMTP server. You can check it in the
 Mailpit web interface at <http://localhost:8025>.
 
+Using the Java Socket IO, you have sent an email to the Mailpit SMTP server,
+congratulations!
+
 ### Stop Mailpit
 
 To stop Mailpit, run the following command:
 
 ```sh
+# Stop Mailpit
 docker compose down
 ```
 
@@ -559,15 +737,15 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have had a refresh about networking with IP adresses and
-DNS records. You have also learned about the SMTP protocol and how to use ncat
-to send an email to an SMTP server.
+In this course, you have had a refresh about networking with IP adresses and DNS
+records. You have also learned about the SMTP protocol and how to use ncat to
+send an email to an SMTP server.
 
 Based on the official RFC, you have learned that SMTP is a simple text-based
 protocol to send emails with rather simple commands.
 
 With the help of Mailpit and Docker, you have now a way to test your emails with
-a fake SMTP server (called a _mock server_) for all your other applications!
+a fake SMTP server (called a _"mock server"_) for all your other applications!
 
 ### Test your knowledge
 
@@ -601,11 +779,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-We are arriving at the end of the second part of the course. An evaluation will
-be done to check your understanding of all the content seen in this second part.
-
 ## Additional resources
 
 _Resources are here to help you. They are not mandatory to read._
@@ -618,3 +791,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 - Main illustration by [Joanna Kosinska](https://unsplash.com/@joannakosinska)
   on [Unsplash](https://unsplash.com/photos/uGcDWKN91Fs)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/114

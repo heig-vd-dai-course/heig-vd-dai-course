@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - Caching and performance
+# Caching and performance
 
 <!--
 _class: lead
@@ -283,17 +283,6 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## What will you do next?
-
-We are arriving at the end of the third part of the course.
-
-An evaluation will be done to check your understanding of all the content seen
-in this third part.
-
-More details will be given in the next chapter.
-
-![bg right:40%](https://images.unsplash.com/photo-1604134967494-8a9ed3adea0d?fit=crop&h=720)
-
 ## Sources
 
 - Main illustration by [Richard Horne](https://unsplash.com/@richardhorne) on
@@ -308,8 +297,6 @@ More details will be given in the next chapter.
   [Unsplash](https://unsplash.com/photos/pocket-watch-at-355-0rTCXZM7Xfo)
 - Illustration by [Karen Grigorean](https://unsplash.com/@karengrigorean) on
   [Unsplash](https://unsplash.com/photos/a-person-pointing-at-a-large-display-of-pictures-9D6UlCW38Ss)
-- Illustration by [MChe Lee](https://unsplash.com/@mclee) on
-  [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
 
 [course]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/14.01-caching-and-performance
