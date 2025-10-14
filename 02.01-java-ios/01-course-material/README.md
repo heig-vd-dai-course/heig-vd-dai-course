@@ -65,7 +65,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-This chapter will help you understand why IOs are important in network
+This course will help you understand why IOs are important in network
 programming and how to use them in Java.
 
 Network programming is about reading and writing data (= files) from and to the
@@ -75,7 +75,7 @@ without the hassle of network programming.
 You might need to use different types of IOs depending on the type of data you
 want to process. You will learn how to use the right IOs for the right data.
 
-As this chapter is quite abstract, you will first setup your environment to be
+As this course is quite abstract, you will first setup your environment to be
 able to run some code examples along with the theory.
 
 These skills are essential to be able to process data from the network later on
@@ -784,7 +784,7 @@ The common exceptions you might encounter are:
 The `FileNotFoundException` and `UnsupportedEncodingException` exceptions are
 inherited from the `IOException` exception.
 
-The same applies when you will use the network in future chapters: the network
+The same applies when you will use the network in future courses: the network
 might be down, the connection might be lost, etc.
 
 You will have to manage these errors when you will work with the network.
@@ -888,7 +888,7 @@ to remember to close the resources in the `finally` block).
 In order for a class to be used in a `try-with-resources` block, it must
 implement the
 [`AutoCloseable`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html)
-interface. All the classes presented in this chapter implement the
+interface. All the classes presented in this course implement the
 `AutoCloseable` interface, whatever you are dealing with binary or text data.
 
 We highly recommend you to use the `try-with-resources` block as it is the
@@ -935,7 +935,7 @@ program.
 ## Practical content
 
 In this practical content, you will use all the knowledge you have learned in
-this chapter to benchmark the different types of streams.
+this course to benchmark the different types of streams.
 
 You will learn how to read and write data from and to different sources and
 sinks of data using different types of streams and benchmark the different types
@@ -1028,7 +1028,7 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have learned how to read and write data from and to
+In this course, you have learned how to read and write data from and to
 different sources and sinks of data using different types of streams, more
 specifically binary and text data.
 
@@ -1057,7 +1057,7 @@ At this point, you should be able to answer the following questions:
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

@@ -472,7 +472,7 @@ PDF, PNG, SVG, etc. are all accepted formats in your repository.
 
 The Short Message Service (SMS) protocol presented in the
 [_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-chapter (accessible in the
+course (accessible in the
 [examples repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
 repository) defines the following message:
 
