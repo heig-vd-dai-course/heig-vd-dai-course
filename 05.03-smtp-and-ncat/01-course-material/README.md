@@ -333,7 +333,7 @@ third-party email services such as Google or Microsoft 365.
 >
 > Considering these security flaws, please be aware that spoofing an email
 > address is really not that hard. However, the HEIG-VD has a strict policy
-> regarding the use of their email addresses.
+> regarding the use of its email addresses.
 >
 > If you are caught spoofing an email address, you could get in trouble. Please
 > use the Mailpit SMTP server for your tests to avoid any issues.

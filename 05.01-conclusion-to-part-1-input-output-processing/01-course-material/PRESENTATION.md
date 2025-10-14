@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - Conclusion to part 1: Input/output processing
+# Conclusion to part 1: Input/output processing
 
 <!--
 _class: lead

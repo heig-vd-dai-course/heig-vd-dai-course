@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - Introduction to part 2: Network programming with TCP and UDP
+# Introduction to part 2: Network programming with TCP and UDP
 
 <!--
 _class: lead

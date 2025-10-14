@@ -14,7 +14,7 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-# HEIG-VD DAI - SMTP and ncat
+# SMTP and ncat
 
 <!--
 _class: lead
