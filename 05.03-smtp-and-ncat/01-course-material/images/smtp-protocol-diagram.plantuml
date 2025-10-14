@@ -1,70 +1,49 @@
-@startuml sms-protocol-example-1-functional-example
-
+@startuml smtp-protocol-diagram
 skinparam boxPadding 100
 skinparam maxMessageSize 150
 skinparam noteTextAlignment center
 skinparam sequenceMessageAlign direction
 skinparam wrapWidth 250
 autonumber
+hide footbox
 
 !pragma teoz true
 
-title "SMS Protocol - Functional example"
+title "SMTP Protocol"
 
-participant "Client 1" as c1
-participant "Server" as s
-participant "Client 2" as c2
+participant "Sender mail client (MUA) \n e.g. Outlook" as ClientApp1
+Database "Sender SMTP Server (MTA) \n e.g. MS Exchange" as SMTPServer1
+Database "Recipient SMTP Server (MTA) \n e.g. Gmail" as SMTPServer2
+participant "Recipient mail client (MUA) \n e.g. Thunderbird" as ClientApp2
 
-== Join the server ==
+autonumber stop
 
-note over c1, c2
-The socket is instanciated and the connection is
-automatically established.
-end note
+ClientApp1 <-[#red]-> SMTPServer1: **SMTP**
+& SMTPServer1 <-[#red]-> SMTPServer2: **SMTP**
+& SMTPServer2 <-[#red]-> ClientApp2: **IMAP / POP3**
 
-c1->s : Establish connection
-c1<-->s : Connection established
+autonumber resume
 
-c1->s: JOIN alice
-s->c1: OK
+...
 
-c2->s : Establish connection
-c2<-->s : Connection established
+ClientApp1 -> SMTPServer1: Connect to SMTP Server
+ClientApp1 -> SMTPServer1: EHLO
+ClientApp1 -> SMTPServer1: MAIL FROM
+ClientApp1 -> SMTPServer1: RCPT TO
+ClientApp1 -> SMTPServer1: DATA
+ClientApp1 -> SMTPServer1: QUIT
 
-c2->s: JOIN bob
-s->c2: OK
+SMTPServer1 -> SMTPServer1: Store mail
 
-== List connected clients ==
+SMTPServer1 -> SMTPServer2: Connect to SMTP Server
+SMTPServer1 -> SMTPServer2: EHLO
+SMTPServer1 -> SMTPServer2: MAIL FROM
+SMTPServer1 -> SMTPServer2: RCPT TO
+SMTPServer1 -> SMTPServer2: DATA
+SMTPServer1 -> SMTPServer2: QUIT
 
-c1->s: LIST
-s->c1: CLIENTS alice bob
+SMTPServer2 -> SMTPServer2: Store mail
 
-== Send a message ==
+ClientApp2 <-> SMTPServer2: Fetch mails
 
-c1->s: SEND bob Hello Bob!
-s->c1: OK
-
-== Receive a message ==
-
-s->c2: RECEIVE Hello Bob! alice
-
-== Quit ==
-
-note over c1, c2
-Just as for the connection establishment, no
-formal message is sent to the server when
-disconnecting.
-
-The socket is closed by the client and the
-connection is automatically closed.
-end note
-
-c1->c1: Close the connection
-c1<-->s: The connection is closed
-s->s: Remove Alice from users
-
-c2->c2: Close the connection
-c2<-->s: The connection is closed
-s->s: Remove Bob from users
 @enduml
-
