@@ -36,7 +36,7 @@ _paginate: false
 - Understand application protocol.
 - Define application protocols.
 - How to use an application protocol.
-- **While quite short, one of the most important chapters of the course!**
+- **While quite short, one of the most important course of the teaching unit!**
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -176,7 +176,7 @@ Do you have any questions?
   - _"Guess the number"_ game.
   - _"Temperature monitoring"_ application.
 
-These application protocols will be used in the next chapters to implement them!
+These application protocols will be used in the next courses to implement them!
 
 ![bg right:40%](https://images.unsplash.com/photo-1535905557558-afc4877a26fc?fit=crop&h=720)
 
@@ -195,7 +195,7 @@ These application protocols will be used in the next chapters to implement them!
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

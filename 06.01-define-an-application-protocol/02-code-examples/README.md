@@ -183,7 +183,7 @@ None.
 
 ### Join the server with a duplicate client name
 
-![CJoin the server with a duplicate client name example](./images/sms-protocol-example-2-join-the-server-with-a-duplicate-client-name.png)
+![Join the server with a duplicate client name example](./images/sms-protocol-example-2-join-the-server-with-a-duplicate-client-name.png)
 
 ### Send a message to an unconnected recipient
 

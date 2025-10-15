@@ -78,13 +78,13 @@ Each of the courses of this teaching unit will follow quite the same structure:
 - A quick feedback section to let us know if it was easy or hard and how we can
   improve;
 - Additional resources to go further as well as the sources used to create the
-  chapter.
+  course.
 
 This allows you to start with whatever works better for you: the theoretical
 followed by the practical, or the practical followed with the theoretical part
 in parallel.
 
-While reading the chapters, you might find what is called _"admonitions"_ or
+While reading the courses, you might find what is called _"admonitions"_ or
 _"alerts"_.
 
 They look like this:
@@ -142,7 +142,7 @@ However, if _anything_ is unclear, does not work or needs an improvement, do not
 hesitate to ask questions or give feedback in the GitHub Discussions as
 described in the
 [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
-section. Since this is the first chapter, do not hesitate to do so.
+section. Since this is the first course, do not hesitate to do so.
 
 The teaching staff considers that there is no stupid question. You are here to
 learn and we are here to help you! Let's work as a team so that you can succeed!
@@ -156,9 +156,9 @@ Let's get started!
 
 ## Objectives
 
-This chapter will help you to understand how Git and GitHub work, how you can
-use Markdown to write various documents from documentation to profiles, and how
-to use some of the features of Git/GitHub such as GitHub Discussions, the main
+This course will help you to understand how Git and GitHub work, how you can use
+Markdown to write various documents from documentation to profiles, and how to
+use some of the features of Git/GitHub such as GitHub Discussions, the main
 place to ask questions in this course.
 
 These skills are essential for the rest of the course (and your future!), as you
@@ -929,9 +929,9 @@ git config --global user.email "Your Email"
 
 SSH is a secure protocol to communicate with a server. It is used to
 authenticate users on GitHub. You will learn a bit more about SSH in a future
-chapter. For the time being, using SSH with Git will enable you not have to
-input your username and password each time you want to push or pull changes from
-a repository, contrary to HTTPS.
+course. For the time being, using SSH with Git will enable you not have to input
+your username and password each time you want to push or pull changes from a
+repository, contrary to HTTPS.
 
 In this section you will enable SSH authentication on your GitHub account.
 
@@ -2000,7 +2000,7 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have installed and configured Git properly. You have also
+In this course, you have installed and configured Git properly. You have also
 created your own GitHub account and profile README for your future social
 profile as a computer scientist engineer.
 
@@ -2036,7 +2036,7 @@ At this point, you should be able to answer the following questions:
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

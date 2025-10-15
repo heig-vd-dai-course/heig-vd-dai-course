@@ -65,7 +65,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-This chapter will help you understand how Java can run on all platforms, how to
+This course will help you understand how Java can run on all platforms, how to
 install and switch between different versions of Java, how to use IntelliJ IDEA
 to develop Java applications, how to use Maven to manage dependencies and build
 Java applications.
@@ -1814,8 +1814,8 @@ It will format your Java files as well as your `pom.xml` file automatically.
 
 ### What did you do and learn?
 
-In this chapter, you have installed and configured Java, IntelliJ IDEA and
-Maven. You have created a Java project with Maven, added a dependency (such as
+In this course, you have installed and configured Java, IntelliJ IDEA and Maven.
+You have created a Java project with Maven, added a dependency (such as
 [picocli](https://picocli.info/)) to a Maven project, and built a JAR that you
 can execute everywhere. You have learned how these tools can help you to develop
 Java applications and share them with other developers.
@@ -1841,7 +1841,7 @@ At this point, you should be able to answer the following questions:
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

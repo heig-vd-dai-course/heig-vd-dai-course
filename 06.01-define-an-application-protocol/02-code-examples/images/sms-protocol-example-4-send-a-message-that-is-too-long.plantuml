@@ -8,7 +8,7 @@ autonumber
 
 !pragma teoz true
 
-title "SMS Protocol - Example 4 - Send a message to an unconnected recipient"
+title "SMS Protocol - Example 4 - Send a message that is too long"
 
 participant "Client 1" as c1
 participant "Server" as s

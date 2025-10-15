@@ -52,10 +52,10 @@ An application protocol is a document that is used to define how applications
 exchange information between them (usually between a client and a server). It is
 defined by a set of rules that each party must follow to communicate.
 
-In this course, you will have a refresh about networking and you will learn
-where to find information about application protocols, how is defined an
-application protocol and how to define your own application protocol. In future
-courses, you will learn how to interact with well known application protocols.
+In this course, you will learn where to find information about application
+protocols, how is defined an application protocol and how to define your own
+application protocol. In future courses, you will learn how to interact with
+well known application protocols.
 
 In a nutshell, by the end of this course, you should be able to:
 
@@ -66,7 +66,7 @@ In a nutshell, by the end of this course, you should be able to:
 
 > [!IMPORTANT]
 >
-> While quite short, this chapter is one of the most important in the teaching
+> While quite short, this course is one of the most important in the teaching
 > unit. It will help you to understand how applications communicate with each
 > other and how to define your own application protocol for others to use.
 
@@ -128,8 +128,7 @@ MAIL FROM:<sender>
 ```
 
 The `MAIL` message is used to specify the sender of the message. The sender is
-specified after the `MAIL FROM:` keyword. You will learn more about the SMTP
-protocol in a future chapter to illustrate this example.
+specified after the `MAIL FROM:` keyword.
 
 A RFC also defines the order in which messages can be or must be exchanged.
 
@@ -278,7 +277,7 @@ You can represent your application protocol using a sequence diagram.
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
 any other tools you want to create your diagrams (even a simple pen and paper!).
 
-This protocol will be used in a future chapter to implement the game.
+This protocol will be used in a future course to implement the game.
 
 > [!IMPORTANT]
 >
@@ -287,7 +286,7 @@ This protocol will be used in a future chapter to implement the game.
 > empty or if you do not have all the information to fill them (such as the
 > transport protocols).
 >
-> You will go back to this protocol in a future chapter to complete it.
+> You will go back to this protocol in a future course to complete it.
 
 ### Define the application protocol for the _"Temperature monitoring"_ application
 
@@ -329,7 +328,7 @@ You can represent your application protocol using a sequence diagram.
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
 any other tools you want to create your diagrams (even a simple pen and paper!).
 
-This protocol will be used in a future chapter to implement the application.
+This protocol will be used in a future course to implement the application.
 
 > [!IMPORTANT]
 >
@@ -338,7 +337,7 @@ This protocol will be used in a future chapter to implement the application.
 > empty or if you do not have all the information to fill them (such as the
 > transport protocols).
 >
-> You will go back to this protocol in a future chapter to complete it.
+> You will go back to this protocol in a future course to complete it.
 
 ### Compare your application protocols with the official ones
 
@@ -370,7 +369,7 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have learned how an application protocol is defined using
+In this course, you have learned how an application protocol is defined using
 RFCs.
 
 You are able to understand an existing application protocol and define your own
@@ -396,7 +395,7 @@ At this point, you should be able to answer the following questions:
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

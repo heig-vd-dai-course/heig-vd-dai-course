@@ -400,7 +400,7 @@ repository!
 |  15 | The client accesses the server on the defined port(s) by default (you must be able to change it via picocli if needed)                   |    0.2 |
 |  16 | A REPL (Read-Eval-Print Loop) is implemented on the client side to interact with the server without ever leaving the network application |    0.2 |
 |  17 | The server correctly processes the messages/actions/commands                                                                             |    0.2 |
-|  18 | The server correctly processes the messages/actions/commands                                                                             |    0.2 |
+|  18 | The client correctly processes the messages/actions/commands                                                                             |    0.2 |
 |  19 | The client and server correctly manage resources in case a problem occurs or when one decides to close the connection                    |    0.2 |
 |  20 | Explicit errors messages[^explicit-error-messages] are displayed on invalid/missing inputs and/or network errors.                        |    0.2 |
 
