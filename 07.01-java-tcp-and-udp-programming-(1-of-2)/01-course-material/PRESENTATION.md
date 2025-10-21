@@ -454,8 +454,8 @@ other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the . You can find other resources and
-alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Read-Eval-Print Loop (REPL)
 

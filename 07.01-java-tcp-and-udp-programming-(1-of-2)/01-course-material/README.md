@@ -57,11 +57,15 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 As you have seen in previous courses, applications communicate with each other
 using application protocols.
 
-In this course, you will learn how to program your own TCP and UDP clients and
-servers/emitters and receivers in Java.
+In this course, you will learn how to implement such communication by
+programming your own TCP and UDP clients and servers (or emitters and receivers)
+in Java.
 
 This will allow you to create your own network applications, such as a chat
 server, a file server, a web server, a real-time multiplayer game server, etc.
+
+In other words, now that you understand how application protocols work, you will
+learn how to put them into practice using TCP and UDP in Java.
 
 In a nutshell, at the end of this course, you will be able to:
 
