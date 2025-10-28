@@ -94,11 +94,11 @@ revision is defined by a different RFC and has different features.
 
 Here are some examples of application protocols:
 
-- [Official RFC for the SMTP protocol](https://tools.ietf.org/html/rfc5321):
+- [Official RFC for the SMTP protocol](https://tools.ietf.org/html/rfc5321)
 - [Official RFC for the POP3 protocol](https://datatracker.ietf.org/doc/html/rfc1939)
 - [Official RFC for the IMAP protocol](https://datatracker.ietf.org/doc/html/rfc3501)
 - [Official RFC for the SSH protocol](https://datatracker.ietf.org/doc/html/rfc4253)
-- [Official RFC for the HTTP/3 protocol](https://datatracker.ietf.org/doc/html/rfc9113):
+- [Official RFC for the HTTP/3 protocol](https://datatracker.ietf.org/doc/html/rfc9113)
 
 ## How is structured an application protocol
 
@@ -112,13 +112,13 @@ can be exchanged.
 
 For example, the SMTP protocol defines the following messages (among others):
 
-- `HELO`: used to initiate a connection with the server
+- `HELO`: used to initiate a connection with the server.
 - `EHLO`: used to initiate a connection with the server (extended version of
-  `HELO`)
-- `MAIL`: used to specify the sender of the message
-- `RCPT`: used to specify the recipient of the message
-- `DATA`: used to send the content of the message
-- `RSET`: used to reset the connection
+  `HELO`).
+- `MAIL`: used to specify the sender of the message.
+- `RCPT`: used to specify the recipient of the message.
+- `DATA`: used to send the content of the message.
+- `RSET`: used to reset the connection.
 
 Each message has a specific format. For example, the `MAIL` message has the
 following format:
