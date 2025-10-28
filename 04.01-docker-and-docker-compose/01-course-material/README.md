@@ -74,7 +74,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-In this chapter, you will learn about the differences between bare metal,
+In this course, you will learn about the differences between bare metal,
 virtualization and containerization.
 
 You will learn what the OCI specification is and how it defines images,
@@ -92,7 +92,7 @@ In a nutshell, by the end of this course, you should be able to:
 - Learn how to use Docker and Docker Compose to build, publish, and run
   applications in containers.
 
-As this chapter is quite abstract, you will first setup your environment to be
+As this course is quite abstract, you will first setup your environment to be
 able to run some code examples along with the theory.
 
 ## Prepare and setup your environment
@@ -752,12 +752,12 @@ Carefully read the README files to understand how to run them and what they do.
 In this practical content, you will learn how to package, publish and run your
 own applications with Docker and Docker Compose.
 
-You will need the output (the JAR file) of the practical content from chapter
+You will need the output (the JAR file) of the practical content from course
 [Java IOs](../../02.01-java-ios/).
 
-If you do not have the output of the practical content from chapter Java IOs,
-you can use the solution mentioned in the Java IOs chapter. Clone and compile
-the solution to have the output for this practical content.
+If you do not have the output of the practical content from course Java IOs, you
+can use the solution mentioned in the Java IOs course. Clone and compile the
+solution to have the output for this practical content.
 
 ### Package your own applications with Docker
 
@@ -766,7 +766,7 @@ In this section, you will package your own applications with Docker.
 You will write a Dockerfile, build it specifying its tag and run it with Docker.
 
 Using all the elements you have learned so far, create a Dockerfile that will
-run the JAR file you have from the Java IOs chapter.
+run the JAR file you have from the Java IOs course.
 
 You can create a new file named `Dockerfile` (without any extension) at the root
 level of the Java IOs project.
@@ -1079,7 +1079,7 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have installed Docker and Docker Compose. You have learned
+In this course, you have installed Docker and Docker Compose. You have learned
 the basics of Docker and Docker Compose and you have used them to build,
 publish, and run a Docker image.
 
@@ -1103,7 +1103,7 @@ At this point, you should be able to answer the following questions:
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

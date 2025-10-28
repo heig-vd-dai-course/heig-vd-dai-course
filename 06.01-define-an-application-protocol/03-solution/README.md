@@ -1,10 +1,34 @@
-# Define an application protocol
+# Define an application protocol - Solution
 
-This directory contains the solution to the
-[Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-practical content.
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
+
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/06.01-define-an-application-protocol-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
+- Solution: [Link to content](../03-solution/)
+
+## Solution
+
+This directory contains the solution to the practical content of the course.
 
 It contains the solution to the following application protocols:
 
 - [_"Guess the number"_ game](./01-guess-the-number-game/README.md)
 - [_"Temperature monitoring"_ application](./02-temperature-monitoring-application/README.md)
+
+If you have any questions or need further assistance, please don't hesitate to
+ask for help in the [GitHub Discussions][discussions] or by opening an issue or
+creating a pull request (PR) on the course repository.
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/95

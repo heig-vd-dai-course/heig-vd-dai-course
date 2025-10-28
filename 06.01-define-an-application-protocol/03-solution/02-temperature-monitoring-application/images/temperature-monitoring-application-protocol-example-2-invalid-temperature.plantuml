@@ -1,6 +1,14 @@
-@startuml invalid-temperature-example
+@startuml temperature-monitoring-application-protocol-example-2-invalid-temperature
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
 
-title "Invalid temperature example"
+!pragma teoz true
+
+title "Temperature monitoring application protocol - Example 2 - Invalid temperature"
 
 participant "Emitter 1" as e1
 participant "Emitter 2" as e2

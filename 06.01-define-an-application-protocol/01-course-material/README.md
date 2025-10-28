@@ -1,27 +1,28 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11-define-an-application-protocol/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/11-define-an-application-protocol/11-define-an-application-protocol-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/95
-[illustration]: ./images/main-illustration.jpg
+# Define an application protocol
 
-# Define an application protocol - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
 
+Based on the original course by O. Liechti and J. Ehrensberger.
+
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/06.01-define-an-application-protocol/01-course-material/06.01-define-an-application-protocol-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
+- Solution: [Link to content](../03-solution/)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [What is an application protocol](#what-is-an-application-protocol)
@@ -51,16 +52,23 @@ An application protocol is a document that is used to define how applications
 exchange information between them (usually between a client and a server). It is
 defined by a set of rules that each party must follow to communicate.
 
-In this chapter, you will have a refresh about networking and you will learn
-where to find information about application protocols, how is defined an
-application protocol and how to define your own application protocol. In future
-chapters, you will learn how to interact with well known application protocols.
+In this course, you will learn where to find information about application
+protocols, how is defined an application protocol and how to define your own
+application protocol. In future courses, you will learn how to interact with
+well known application protocols.
+
+In a nutshell, by the end of this course, you should be able to:
+
+- Learn where to find information about application protocols.
+- Understand application protocol.
+- Define application protocols.
+- How to use an application protocol.
 
 > [!IMPORTANT]
 >
-> While quite short, this chapter is one of the most important in the course. It
-> will help you to understand how applications communicate with each other and
-> how to define your own application protocol for others to use.
+> While quite short, this course is one of the most important in the teaching
+> unit. It will help you to understand how applications communicate with each
+> other and how to define your own application protocol for others to use.
 
 ## What is an application protocol
 
@@ -120,8 +128,7 @@ MAIL FROM:<sender>
 ```
 
 The `MAIL` message is used to specify the sender of the message. The sender is
-specified after the `MAIL FROM:` keyword. You will learn more about the SMTP
-protocol in a future chapter to illustrate this example.
+specified after the `MAIL FROM:` keyword.
 
 A RFC also defines the order in which messages can be or must be exchanged.
 
@@ -225,8 +232,8 @@ the reader to understand the protocol using sequence or state diagrams.
 > clients and the server.
 
 Check the complete example in the
-[`heig-vd-dai-course/heig-vd-dai-course-code-examples`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository.
+[`heig-vd-dai-course/06.01-define-an-application-protocol/02-code-examples`](../02-code-examples/)
+directory.
 
 ## Practical content
 
@@ -243,8 +250,8 @@ _"Guess the number"_.
 The game is simple: the server generates a random number between 1 and 100
 (inclusive).
 
-The client has to guess the number. The server will respond with with a message
-to indicate if the number is higher, lower or correct than the number guessed by
+The client has to guess the number. The server will respond with a message to
+indicate if the number is higher, lower or correct than the number guessed by
 the client.
 
 Once the client has guessed the number, the client can ask the server to restart
@@ -270,7 +277,7 @@ You can represent your application protocol using a sequence diagram.
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
 any other tools you want to create your diagrams (even a simple pen and paper!).
 
-This protocol will be used in a future chapter to implement the game.
+This protocol will be used in a future course to implement the game.
 
 > [!IMPORTANT]
 >
@@ -279,7 +286,7 @@ This protocol will be used in a future chapter to implement the game.
 > empty or if you do not have all the information to fill them (such as the
 > transport protocols).
 >
-> You will go back to this protocol in a future chapter to complete it.
+> You will go back to this protocol in a future course to complete it.
 
 ### Define the application protocol for the _"Temperature monitoring"_ application
 
@@ -293,7 +300,8 @@ temperature of its buildings. The company wants to create a new application
 called _"Temperature monitoring"_.
 
 The application is simple: each room (customizable) has a temperature sensor (an
-emitter) that emits its own temperature to a receiver (a server).
+emitter) that emits its own temperature to a receiver (a server) on a regular
+basis (e.g. every 10 minutes).
 
 The server will store the latest temperature of each room.
 
@@ -320,7 +328,7 @@ You can represent your application protocol using a sequence diagram.
 You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
 any other tools you want to create your diagrams (even a simple pen and paper!).
 
-This protocol will be used in a future chapter to implement the application.
+This protocol will be used in a future course to implement the application.
 
 > [!IMPORTANT]
 >
@@ -329,7 +337,7 @@ This protocol will be used in a future chapter to implement the application.
 > empty or if you do not have all the information to fill them (such as the
 > transport protocols).
 >
-> You will go back to this protocol in a future chapter to complete it.
+> You will go back to this protocol in a future course to complete it.
 
 ### Compare your application protocols with the official ones
 
@@ -361,7 +369,7 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have learned how an application protocol is defined using
+In this course, you have learned how an application protocol is defined using
 RFCs.
 
 You are able to understand an existing application protocol and define your own
@@ -387,7 +395,7 @@ At this point, you should be able to answer the following questions:
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
@@ -416,13 +424,17 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 ## Solution
 
 You can find the solution to the practical content in the
-[`heig-vd-dai-course/heig-vd-dai-course-solutions`](https://github.com/heig-vd-dai-course/heig-vd-dai-course-solutions)
-repository.
+[`solution`](../03-solution/) directory.
 
-If you have any questions about the solution, feel free to open an issue to
-discuss it!
+If you have any questions about the solution, feel free to ask as described in
+the [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
+section.
 
 ## Sources
 
 - Main illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
   [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/95

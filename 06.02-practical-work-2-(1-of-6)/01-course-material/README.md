@@ -1,49 +1,46 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/16-practical-work-2/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/16-practical-work-2/16-practical-work-2-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/117
-[illustration]: ./images/main-illustration.jpg
-
 # Practical work 2
 
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/02.02-practical-work-1-(1-of-5)/01-course-material/02.02-practical-work-1-(1-of-5)-presentation.pdf>)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
+- [Demo](#demo)
+  - [Demo 1](#demo-1)
+  - [Demo 2](#demo-2)
+- [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
-  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
-  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
-  - [Category 3 - Docker and Docker Compose](#category-3---docker-and-docker-compose)
-  - [Category 4 - Define an application protocol](#category-4---define-an-application-protocol)
-  - [Category 5 - Java TCP/UDP programming](#category-5---java-tcpudp-programming)
-  - [Category 6 - Java network concurrency](#category-6---java-network-concurrency)
-  - [Category 7 - Presentation and questions](#category-7---presentation-and-questions)
+  - [Category 1 - Docker and Docker Compose](#category-1---docker-and-docker-compose)
+  - [Category 2 - Define an application protocol](#category-2---define-an-application-protocol)
+  - [Category 3 - Java TCP/UDP programming](#category-3---java-tcpudp-programming)
+  - [Category 4 - Java network concurrency](#category-4---java-network-concurrency)
+  - [Category 5 - Presentation and questions](#category-5---presentation-and-questions)
 - [Constraints](#constraints)
+- [Submission](#submission)
+- [Presentations](#presentations)
+- [Grades and feedback](#grades-and-feedback)
 - [Tips](#tips)
   - [Create diagrams](#create-diagrams)
   - [Extract the command and parameters from the message](#extract-the-command-and-parameters-from-the-message)
   - [The POSIX standard](#the-posix-standard)
-- [Submission](#submission)
-- [Presentations](#presentations)
-  - [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
-  - [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
-- [Grades and feedback](#grades-and-feedback)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [Sources](#sources)
 
@@ -73,19 +70,253 @@ so.
 
 ## Objectives
 
-- Define a network application protocol
-- Implement a network application that can be used by multiple clients at the
-  same time using the TCP and/or UDP protocol(s)
-- Package, publish and run a network application with Docker
+- Define a network application protocol.
+- Implement the application protocol as a network application using the TCP
+  and/or UDP protocol(s).
+- Package, publish and run a network application with Docker.
 
-You will work in groups of two or three students. You can choose your
+## Demo
+
+### Demo 1
+
+A simple file transfer application made with TCP.
+
+![TCP network application architecture](./images/practical-work-2-tcp-network-application-architecture.png)
+
+Compile the project:
+
+```sh
+./mvnw clean package
+```
+
+Run the CLI without any arguments:
+
+```sh
+java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar
+```
+
+```text
+Missing required subcommand
+Usage: DaiFileTransfer [COMMAND]
+A simple file transfer application
+Commands:
+  server  Start a TCP server to serve files
+  client  Start a client to download files from a server
+```
+
+Start the server:
+
+```sh
+java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar server -p 12345 -t 4
+```
+
+Start the client:
+
+```sh
+java -jar target/practical-work-2-demo-1-1.0-SNAPSHOT.jar client -p 12345
+```
+
+```text
+  _____          _____   _____           _                  _
+ |  __ \   /\   |_   _| |  __ \         | |                | |
+ | |  | | /  \    | |   | |__) | __ ___ | |_ ___   ___ ___ | |
+ | |  | |/ /\ \   | |   |  ___/ '__/ _ \| __/ _ \ / __/ _ \| |
+ | |__| / ____ \ _| |_  | |   | | | (_) | || (_) | (_| (_) | |
+ |_____/_/    \_\_____| |_|   |_|  \___/ \__\___/ \___\___/|_|
+
+You are connected to server on port 12345 with IP address localhost.
+
+Available commands:
+LS - list available files on server
+GET <file> - get file from server
+QUIT - quit the client
+>
+```
+
+List available files:
+
+```text
+> ls
+Available files on server:
+demo.txt
+my-passwords-in-clear.txt
+rzr-sc2.exe
+```
+
+Get one of the available files:
+
+```text
+> GET my-passwords-in-clear.txt
+Downloading file from server...
+File saved to my-passwords-in-clear.txt
+```
+
+Get a file that does not exist:
+
+```text
+> GET not-found.txt
+The specified file was not found on the server.
+```
+
+Quit:
+
+```text
+> QUIT
+Bye.
+```
+
+If a client tries to connect to the server when no thread is available, the
+client has to wait to be served.
+
+### Demo 2
+
+A weather station application made with UDP.
+
+![UDP network application architecture](./images/practical-work-2-udp-network-application-architecture.png)
+
+Compile the project:
+
+```sh
+./mvnw clean package
+```
+
+Run the CLI without any arguments:
+
+```sh
+java -jar target/practical-work-2-demo-2-1.0-SNAPSHOT.jar
+```
+
+```text
+Missing required subcommand
+Usage: practical-work-2-demo-2-1.0-SNAPSHOT.jar [-hV] [COMMAND]
+DAI Weather Station
+  -h, --help      Show this help message and exit.
+  -V, --version   Print version information and exit.
+Commands:
+  thermometer-emitter      Emits temperature values.
+  pressure-emitter         Emits pressure values.
+  humidity-emitter         Emits humidity values.
+  weather-station          Start an UDP multicast receiver.
+  weather-client           Start an UDP weather client.
+  list-network-interfaces  List all available network interfaces.
+```
+
+Start the weather station:
+
+```sh
+java -jar target/practical-work-2-demo-2-1.0-SNAPSHOT.jar weather-station \
+  -i eth0 \
+  --port 9876 \
+  --server-port 1234
+```
+
+Output:
+
+```text
+Multicast receiver started (10.11.12.25:9876)
+Unicast receiver started (10.11.12.25:1234)
+```
+
+Start the emitters:
+
+```sh
+java -jar target/practical-work-2-demo-2-1.0-SNAPSHOT.jar thermometer-emitter \
+  --delay=0 \
+  --frequency 10000 \
+  -i eth0 \
+  -p 9876
+
+java -jar target/practical-work-2-demo-2-1.0-SNAPSHOT.jar pressure-emitter \
+  --delay=0 \
+  --frequency 10000 \
+  -i eth0 \
+  -p 9876
+```
+
+Output:
+
+```text
+Emitter of type thermometer started (10.11.12.25:9876).
+Multicasting measure : 30.0 to 239.0.0.1:9876 on interface eth0
+Multicasting measure : 23.0 to 239.0.0.1:9876 on interface eth0
+Multicasting measure : 28.0 to 239.0.0.1:9876 on interface eth0
+Multicasting measure : 19.0 to 239.0.0.1:9876 on interface eth0
+Multicasting measure : 15.0 to 239.0.0.1:9876 on interface eth0
+```
+
+```text
+Emitter of type pressure started (10.11.12.25:9876).
+Multicasting measure : 982.0 to 239.0.0.2:9876 on interface eth0
+Multicasting measure : 1027.0 to 239.0.0.2:9876 on interface eth0
+Multicasting measure : 970.0 to 239.0.0.2:9876 on interface eth0
+Multicasting measure : 996.0 to 239.0.0.2:9876 on interface eth0
+Multicasting measure : 982.0 to 239.0.0.2:9876 on interface eth0
+```
+
+Start the weather client:
+
+```sh
+java -jar practical-work-2-demo-2-1.0-SNAPSHOT.jar weather-client
+```
+
+Output:
+
+```text
+Welcome to the weather client!
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+>
+```
+
+You can then select the measures you want to get.
+
+```text
+> 1
+List all measures (1) or only the average? (2)
+> 1
+----------------------------------------
+Received measures: [30.0, 23.0, 28.0, 19.0, 15.0]
+----------------------------------------
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+>
+```
+
+The client will then display all the measures received from the weather station.
+
+```text
+> 3
+List all measures (1) or only the average? (2)
+> 2
+----------------------------------------
+Received average: 991.11
+----------------------------------------
+Please enter the measures you want to get
+1. Temperature
+2. Humidity
+3. Pressure
+4. Quit
+> 4
+```
+
+The client can then quit the application.
+
+## Group composition
+
+You will work in groups of two (2) to three (3) students. You can choose your
 partner(s). If you do not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
 <https://github.com/orgs/heig-vd-dai-course/discussions> with the following
 information:
 
-- **Title**: [DAI 2025-2026 Class \<class ID \>] Practical work 2 - \<first name
+- **Title**: [DAI 2025-2026 Class \<class ID\>] Practical work 2 - \<first name
   member 1\> \<last name member 1\>, \<first name member 2\> \<last name member
   2\> and \<first name member 3\> \<last name member 3\> (if applicable)
   (replace `<class ID>`, `<first name>` and `<last name>` with your information,
@@ -96,8 +327,8 @@ information:
 
 > [!CAUTION]
 >
-> **You must do it before next week**, even if you do not have a clear idea yet
-> as it will help us to plan the practical work presentations.
+> **You must do it before the next course**, even if you do not have a clear
+> idea yet as it will help us to plan the practical work presentations.
 >
 > Please refer to the [Constraints](#constraints) section to know what is
 > expected from you.
@@ -115,108 +346,252 @@ ideas.
 
 ## Grading criteria
 
-- 0 points - The work is missing, off-topic, or shows a very limited
+- **0 point** - The work is missing, off-topic, or shows a very limited
   understanding of the subject.
-- 0.1 point - The work shows partial understanding: some key elements are
-  missing, unclear, or poorly developed.
-- 0.2 points - The work is complete, accurate, and shows a clear and thorough
+- **0.1 point** - The work shows partial understanding: some key elements are
+  missing, unclear, or poorly implemented.
+- **0.2 point** - The work is complete, accurate, and shows a clear and thorough
   understanding of the subject.
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
 > While the grading criteria might not be as detailed as in the previous
-> practical works for each section, you **must** continue to apply all the good
-> practices you have learned so far.
+> practical work(s) for each section, you **must** continue to apply all the
+> good practices you have learned so far (Git, GitHub and Markdown, Java,
+> IntelliJ IDEA and Maven, Java IOs, etc.). **You might be penalized if you do
+> not follow these practices.**
 >
-> If elements that are supposed to be acquired through the course or previous
-> practical works are omitted, forgotten or poorly implemented, we might
-> penalize you.
->
-> Remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
-
-### Category 1 - Git, GitHub and Markdown
+> Check the [Constraints](#constraints) section for more information and
+> remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
 
 If your repository is private, you must add us as collaborators to your
 repository!
 
-| #   | Criterion                                                                                                                                                                                       | Points |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 1   | The README is well structured and explains the purpose of your application with the authors' names so new users can understand it and know who is behind the application                        |    0.2 |
-| 2   | The README explains how to use your network application with **explicit examples** and outputs so a new user/developer can understand your network application without having to run it locally |    0.2 |
-| 3   | The README describes **explicit commands** to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer            |    0.2 |
+### Category 1 - Docker and Docker Compose
 
-### Category 2 - Java, IntelliJ IDEA and Maven
+|   # | Criterion                                                                                                                                                                                                                                                                      | Points |
+| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   1 | The network application is packaged with Docker using a Dockerfile                                                                                                                                                                                                             |    0.2 |
+|   2 | The network application is published to GitHub Container Registry                                                                                                                                                                                                              |    0.2 |
+|   3 | The README describes explicit commands[^explicit-commands] to build and publish your network application with Docker to GitHub Container Registry so contributors to your project know how to publish your application with Docker                                             |    0.2 |
+|   4 | The README describes explicit commands[^explicit-commands] to use your network application with Docker so new users can use it without installing anything other than Docker on their computer (`docker run` is enough for this practical work, no need to use Docker Compose) |    0.2 |
 
-| #   | Criterion                                                                                                                                       | Points |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 4   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase |    0.2 |
+### Category 2 - Define an application protocol
 
-### Category 3 - Docker and Docker Compose
+|   # | Criterion                                                                                                                  | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   5 | The README contains the application protocol or a link to the application protocol that describes your network application |    0.2 |
+|   6 | The application protocol defines the overview of the network application                                                   |    0.2 |
+|   7 | The application protocol defines the transport protocol(s) the network application uses                                    |    0.2 |
+|   8 | The application protocol defines the port(s) the network application uses                                                  |    0.2 |
+|   9 | The application protocol defines the available messages/actions/commands for the client/server to communicate              |    0.2 |
+|  10 | The application protocol defines the success/error codes and their explanations                                            |    0.2 |
+|  11 | The application protocol is described using at least one successful communication example diagram                          |    0.2 |
+|  12 | The application protocol is described using at least one unsuccessful/error communication example diagram                  |    0.2 |
 
-| #   | Criterion                                                                                                                                               | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 5   | The network application is packaged and published to GitHub Container Registry with Docker so other people can use your network application with Docker |    0.2 |
-| 6   | The README describes explicit commands to build and publish your network application with Docker                                                        |    0.2 |
-| 7   | The README explains how to use your network application with Docker (`docker run` is enough for this practical work, no need to use Docker Compose)     |    0.2 |
+### Category 3 - Java TCP/UDP programming
 
-### Category 4 - Define an application protocol
+|   # | Criterion                                                                                                                                | Points |
+| --: | :--------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|  13 | The server starts/listens on the defined port(s) by default (you must be able to change it via picocli if needed)                        |    0.2 |
+|  14 | The client accesses the server on a given host (you must be able to change it via picocli if needed)                                     |    0.2 |
+|  15 | The client accesses the server on the defined port(s) by default (you must be able to change it via picocli if needed)                   |    0.2 |
+|  16 | A REPL (Read-Eval-Print Loop) is implemented on the client side to interact with the server without ever leaving the network application |    0.2 |
+|  17 | The server correctly processes the messages/actions/commands                                                                             |    0.2 |
+|  18 | The client correctly processes the messages/actions/commands                                                                             |    0.2 |
+|  19 | The client and server correctly manage resources in case a problem occurs or when one decides to close the connection                    |    0.2 |
+|  20 | Explicit errors messages[^explicit-error-messages] are displayed on invalid/missing inputs and/or network errors.                        |    0.2 |
 
-| #   | Criterion                                                                                                      | Points |
-| --- | -------------------------------------------------------------------------------------------------------------- | -----: |
-| 8   | The repository contains the application protocol that describes your network application                       |    0.2 |
-| 9   | The application protocol defines the overview of the network application                                       |    0.2 |
-| 10  | The application protocol defines the transport protocol(s) the network application uses                        |    0.2 |
-| 11  | The application protocol defines the available messages/actions/commands for the client/server to communicate  |    0.2 |
-| 12  | The application protocol defines the success/error codes and their explanations                                |    0.2 |
-| 13  | The application protocol is described using successful and unsuccessful examples with one or multiple diagrams |    0.2 |
+### Category 4 - Java network concurrency
 
-### Category 5 - Java TCP/UDP programming
+|   # | Criterion                                                                                | Points |
+| --: | :--------------------------------------------------------------------------------------- | -----: |
+|  21 | The network application accepts connections from multiple clients at the same time       |    0.2 |
+|  22 | The data structures used in the network application are resilient to concurrent accesses |    0.2 |
 
-| #   | Criterion                                                                                                                | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------ | -----: |
-| 14  | The server starts/listens on the defined port(s) by default (you must be able to change it if needed)                    |    0.2 |
-| 15  | The client accesses the server on a given host (you must be able to change it)                                           |    0.2 |
-| 16  | The client accesses the server on the defined port(s) by default (you must be able to change it if needed)               |    0.2 |
-| 17  | The client and server exchange messages/actions/commands to interact with each other                                     |    0.2 |
-| 18  | The client and server correctly process the messages/actions/commands and with their edge-cases in case a problem occurs |    0.2 |
-| 19  | The client and server are compatible across operating systems/languages                                                  |    0.2 |
-| 20  | The client and server correctly manage resources in case a problem occurs                                                |    0.2 |
+### Category 5 - Presentation and questions
 
-### Category 6 - Java network concurrency
-
-| #   | Criterion                                                                                | Points |
-| --- | ---------------------------------------------------------------------------------------- | -----: |
-| 21  | The network application accepts connections from multiple clients at the same time       |    0.2 |
-| 22  | The data structures used in the network application are resilient to concurrent accesses |    0.2 |
-
-### Category 7 - Presentation and questions
-
-| #   | Criterion                                                                                                                                                      | Points |
-| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 23  | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created and for which purpose |    0.2 |
-| 24  | A meaningful demo of the application is made to illustrate how the application works                                                                           |    0.2 |
-| 25  | The presentation is clear and well prepared, within the time limit, and everyone speaks during the presentation                                                |    0.2 |
+|   # | Criterion                                                                                                                                              | Points |
+| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|  23 | The presentation is clear and well prepared.                                                                                                           |    0.2 |
+|  24 | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how. |    0.2 |
+|  25 | Everyone speaks during the presentation.                                                                                                               |    0.2 |
 
 ## Constraints
 
-- The application must be written in Java, compatible with Java 21
-- The application must be built using Maven with the `maven-shade-plugin` plugin
-- The application must use the picocli dependency
+- The whole team must contribute to the project and all members must be able to
+  explain it in details if asked.
+- A GitHub Discussion must be opened during the first week of the project to
+  explain the idea of the project so the teachers can validate the idea.
+- The GitHub Discussion must be updated with the link to the repository and a
+  related commit hash before the deadline - every 24 hours after the deadline
+  will result in a -1 point penalty on the final grade.
 - You can only use the Java classes seen in the course to implement the network
   application (you can use any other libraries for other aspects of the
   application, such as UI, etc.)
-- Your application must be slightly more complex and slightly different than the
-  examples presented during the course (we emphasize the word **slightly**, no
-  need to shoot for the moon!)
+- The application must be slightly more complex and slightly different than the
+  examples presented during the course (we emphasize the word _slightly_, no
+  need to shoot for the moon).
+- You must state your sources if you have used elements that you are not the
+  author (code from the Internet, code generated from AI tools, etc.). You must
+  also state for which usage you did use the source(s)/tool(s) in your README.
+  If you plagiarize the code of another group, all groups involved will receive
+  a grade of 1.
+- Elements that are supposed to be acquired through the teaching unit or
+  previous practical work(s) must not be omitted, forgotten or poorly
+  implemented (you must continue to use the Git/GitHub workflow, allow users to
+  understand your application, etc.).
+
+> [!CAUTION]
+>
+> Failure to comply with these constraints may result in serious penalties, up
+> to -1 point penalty on the final grade _**for each criterion not met**_.
+
+## Submission
+
+Your work is due as follows:
+
+- DAI-TIC-C (Wednesday mornings): **Tuesday 02.12.25 at 23:59**.
+- DAI-TIC-B (Wednesday afternoons): **Tuesday 02.12.25 at 23:59**.
+- DAI-TIC-A (Thursdays): **Wednesday 03.12.25 at 23:59**.
+
+> [!CAUTION]
+>
+> Each day of delay will result in a penalty of -1 point on the final grade.
+
+You must update the GitHub Discussion you created previously with the following
+information:
+
+- **Description**: The link to your repository as well as the commit hash you
+  want to submit
+
+> [!CAUTION]
+>
+> If you do not update the GitHub Discussion with the link to your repository
+> and the commit hash before the deadline, it is considered as a late submission
+> and you will be penalized.
+
+## Presentations
+
+- DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10h30**
+  in room **TBD**
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14h45**
+  in room **TBD**
+- DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **15h30** in room
+  **TBD**
+
+The exact schedule will be communicated once the groups are known.
+
+<!-- (Un)comment the following lines to hide/show the note about the presentations -->
+
+<!--
+
+We only have **8 minutes per group**. You decide what you want to show us and
+how you want to present it.
+
+**Come 5 minutes before your time slot** with your computer. You will have
+access to a video projector.
+
+The presentation order is random and is stated in the next tables:
+
+- [DAI-TIC-C (Wednesday mornings)](#dai-tic-c-wednesday-mornings)
+- [DAI-TIC-B (Wednesday afternoons)](#dai-tic-b-wednesday-afternoons)
+- [DAI-TIC-A (Thursdays)](#dai-tic-a-thursdays)
+
+### DAI-TIC-C (Wednesday mornings)
+
+| #   | Group                                                           | Passage     |
+| --- | --------------------------------------------------------------- | ----------- |
+| 1   | Nolan Evard, Maikol Correia Da Silva and Alberto De Sousa Lopes | 10:30-10:38 |
+| 2   | Sofian Ethenoz, François de Courville and Mouhamed Sakho        | 10:40-10:48 |
+| 3   | Romain Durussel and Abram Zweifel                               | 10:50-10:58 |
+| 4   | Léo Bernard and Yann Mermoud                                    | 11:00-11:08 |
+| 5   | Pierre Thiébaud and Victor Giordani                             | 11:10-11:18 |
+| 6   | Koray Akgul and Nathan Stampfli                                 | 11:20-11:28 |
+| 7   | Theo Bensaci and Yasser Gasmi                                   | 11:30-11:38 |
+| 8   | Gabriel Bader and Mauro Santos                                  | 11:40-11:48 |
+
+### DAI-TIC-B (Wednesday afternoons)
+
+| #   | Group | Passage |
+| --- | ----- | ------- |
+| 1   | TBD   | TDB     |
+| 2   | TBD   | TDB     |
+| 3   | TBD   | TDB     |
+| 4   | TBD   | TDB     |
+| 5   | TBD   | TDB     |
+| 6   | TBD   | TDB     |
+| 7   | TBD   | TDB     |
+| 8   | TBD   | TDB     |
+| 9   | TBD   | TDB     |
+| 10  | TBD   | TDB     |
+| 11  | TBD   | TDB     |
+| 12  | TBD   | TDB     |
+| 13  | TBD   | TDB     |
+| 14  | TBD   | TDB     |
+| 15  | TBD   | TDB     |
+| 16  | TBD   | TDB     |
+
+### DAI-TIC-A (Thursdays)
+
+| #   | Group                                                        | Passage     |
+| --- | ------------------------------------------------------------ | ----------- |
+| 1   | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 14:45-14:53 |
+| 2   | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 14:55-15:03 |
+| 3   | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 15:05-15:13 |
+| 4   | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 15:15-15:23 |
+| 5   | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 15:25-15:33 |
+| 6   | Colin Stefani and Simão Romano Schindler                     | 15:35-15:43 |
+| 7   | Gianni Bee and Quentin Michon                                | 15:45-15:53 |
+| 8   | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 15:55-16:03 |
+| 9   | Kym Bolomey Kim and Robiel Tesfazghi                         | 16:05-16:13 |
+
+-->
+
+<!-- (Un)comment the following lines to hide/show the note about the presentations -->
+
+## Grades and feedback
+
+Grades will be entered into GAPS, followed by an email with the feedback.
+
+The evaluation will use exactly the same grading grid as shown in the course
+material.
+
+Each criterion will be accompanied by a comment explaining the points obtained,
+a general comment on your work and the final grade.
+
+If you have any questions about the evaluation, you can contact us!
+
+<details>
+<summary>Email template for the teaching staff</summary>
+
+```text
+[DAI 202X-202Y] Retours sur le travail pratique Z
+
+Bonjour,
+
+Vous trouverez en pièce jointe les retours que nous vous avons faits pour le
+travail pratique.
+
+La note a été saisie dans GAPS également.
+
+Nous restons à votre disposition pour toute question.
+
+Cordialement,
+[Le personnel enseignant]
+```
+
+</details>
 
 ## Tips
 
 ### Create diagrams
 
-You can use [PlantUML](https://plantuml.com/), [draw.io](https://draw.io/),
-scans paper diagrams or any other tools you want to create your diagrams.
+You can use [PlantUML](https://plantuml.com/), [draw.io](https://draw.io/), pen
+and paper as scanned diagrams or any other tools you want to create your
+diagrams.
 
 PDF, PNG, SVG, etc. are all accepted formats in your repository.
 
@@ -224,7 +599,7 @@ PDF, PNG, SVG, etc. are all accepted formats in your repository.
 
 The Short Message Service (SMS) protocol presented in the
 [_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-chapter (accessible in the
+course (accessible in the
 [examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
 repository) defines the following message:
 
@@ -287,6 +662,7 @@ switch (command) {
 
     // Do something with the message and the user
     System.out.printf("Message from %s: %s\n", user, message);
+    break;
   }
   // Other cases can be defined here...
 }
@@ -306,119 +682,6 @@ switch (command) {
 Not all programs are/can be POSIX compliant. But if you try to comply with the
 POSIX standard, you will be able to run your program on various operating
 systems without any issues.
-
-## Submission
-
-Your work is due as follows:
-
-- DAI-TIC-C (Friday mornings): **05.12.2024 23:59**
-- DAI-TIC-B (Monday mornings): **08.12.2024 23:59**
-
-> [!CAUTION]
->
-> Each day of delay will result in a penalty of -1 point on the final grade.
-
-You must update the GitHub Discussion you created previously with the following
-information:
-
-- **Description**: The link to your repository as well as the commit hash you
-  want to submit
-
-> [!CAUTION]
->
-> If you do not update the GitHub Discussion with the link to your repository
-> and the commit hash before the deadline, it is considered as a late submission
-> and you will be penalized.
-
-## Presentations
-
-The practical work presentations will take place in **room B38** on:
-
-- DAI-TIC-C (Friday mornings): **06.12.2024**
-- DAI-TIC-B (Monday mornings): **09.12.2024**
-
-We only have **10 minutes per group**. You decide what you want to show us and
-how you want to present it.
-
-**Come 5 minutes before your time slot** with your computer. You will have
-access to a video projector.
-
-The order of presentation is random and is stated in the next tables:
-
-- [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
-- [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
-
-### DAI-TIC-B (Monday mornings)
-
-| #   | Group                                                    | Passage     |
-| --- | -------------------------------------------------------- | ----------- |
-| 1   | Berberat Alex and Gorgerat Lisa                          | 09:00-09:10 |
-| 2   | Tristan Baud, Mathieu Emery and Arno Tribolet            | 09:12-09:22 |
-| 3   | Victor Nicolet, Pierric Ripoll and Colin Moschard        | 09:24-09:34 |
-| 4   | Carbonara Nicolas and Surbeck Léon                       | 09:36-09:46 |
-| 5   | Gruber Adam and Pittet Axel                              | 09:48-09:58 |
-| 6   | Drin Racaj, Nils Donatantonio and Esteban Giorgis        | 10:00-10:10 |
-| 7   | David Schildböck, Maxime Lestiboudois and Nathan Parisod | 10:12-10:22 |
-| 8   | Thiébaud Jonathan and Rothen Evan                        | 10:24-10:34 |
-| 9   | Kury Dorian and Buxtorf Basile                           | 10:36-10:46 |
-| 10  | Aude Laydu and Leonard Cseres                            | 10:48-10:58 |
-| 11  | Mathéo Lopez, Emily Baquerizo and Kimberly Beyeler       | 11:00-11:10 |
-| 12  | Antoine Leresche and Robin Forestier                     | 11:12-11:22 |
-| 13  | Wulliamoz Nathan and Kocher Benjamin                     | 11:24-11:34 |
-| 14  | Kénan Augsburger and Mário Ferreira                      | 11:36-11:46 |
-| 15  | Florian Choller and Alexandre Delétraz                   | 11:48-11:58 |
-
-### DAI-TIC-C (Friday mornings)
-
-| #   | Group                                               | Passage     |
-| --- | --------------------------------------------------- | ----------- |
-| 1   | Sara Camassa and David Berger                       | 09:00-09:10 |
-| 2   | Urs Behrmann and Rodrigo Lopes dos santos           | 09:12-09:22 |
-| 3   | Antoine Aubry, Louis Haye and Zaïd Schouwey         | 09:24-09:34 |
-| 4   | Dylan Langumier and Raphael Perret                  | 09:36-09:46 |
-| 5   | Kilian Froidevaux and Nicolas Bovard                | 09:48-09:58 |
-| 6   | Aladin Iseni and Arthur Jacobs                      | 10:00-10:10 |
-| 7   | Yoann Changanaqui and Camille Theubet               | 10:12-10:22 |
-| 8   | Ali Zoubir and Léonard Jouve                        | 10:24-10:34 |
-| 9   | Mathieu Rabot and Florian Duruz                     | 10:36-10:46 |
-| 10  | Thirusan Rajadurai and Thomas Stäheli               | 10:48-10:58 |
-| 11  | Dani Tiago Faria dos Santos and Nicolas Duprat      | 11:00-11:10 |
-| 12  | Guillaume Fragnière and Killian Viquerat            | 11:12-11:22 |
-| 13  | Pedro Alves da Silva and Gonçalo Carvalheiro Heleno | 11:24-11:34 |
-| 14  | Gianni Cecchetto and Nathan Tschantz                | 11:36-11:46 |
-
-## Grades and feedback
-
-Grades will be entered into GAPS, followed by an email with the feedback.
-
-The evaluation will use exactly the same grading grid as shown in the course
-material.
-
-Each criterion will be accompanied by a comment explaining the points obtained,
-a general comment on your work and the final grade.
-
-If you have any questions about the evaluation, you can contact us!
-
-<details>
-<summary>Grading grid template for the teaching staff</summary>
-
-```text
-[DAI 202X-202Y] Retours sur le travail pratique Z
-
-Bonjour,
-
-Vous trouverez en pièce jointe les retours que nous vous avons faits pour le
-travail pratique.
-
-La note a été saisie dans GAPS également.
-
-Nous restons à votre disposition pour toute question.
-
-Cordialement,
-[Le personnel enseignant]
-```
-
-</details>
 
 ## Finished? Was it easy? Was it hard?
 
@@ -448,3 +711,17 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/chess-pieces-on-chess-board-rCxTJlaU5Yc)
   and [Jorge Ramirez](https://unsplash.com/@jorgedevs) on
   [Unsplash](https://unsplash.com/photos/a-cell-phone-tower-in-a-park-with-a-lake-in-the-background-0vmMg1r7FRU)
+
+[^explicit-commands]:
+    Explicit commands are commands that can be run in a terminal to clone and
+    build your application. It has to be working commands that can be run by a
+    new user/developer without any additional information.
+
+[^explicit-error-messages]:
+    Explicit error messages are error messages that clearly explain what went
+    wrong and how to fix it. They should be user-friendly and easy to
+    understand.
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/5

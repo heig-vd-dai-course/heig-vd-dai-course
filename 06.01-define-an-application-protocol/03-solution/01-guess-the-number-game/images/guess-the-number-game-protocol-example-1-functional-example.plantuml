@@ -1,6 +1,14 @@
-@startuml functional-example
+@startuml guess-the-number-game-protocol-example-1-functional-example
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
 
-title "Functional example"
+!pragma teoz true
+
+title "Guess the number game protocol - Example 1 - Functional example"
 
 participant "Client" as c
 participant "Server" as s
@@ -8,7 +16,7 @@ participant "Server" as s
 == Setup ==
 
 c->s : Establish connection
-s->s: Generate a random number\nbetween 1 and 100 (incl.).\nLet's assume 28.
+s->s: Generate a random number between 1 and 100 (incl.). Let's assume 28.
 c<-->s : Connection established
 
 == Guess the number ==
@@ -25,7 +33,7 @@ s->c: CORRECT
 == Restart the game ==
 
 c->s: RESTART
-s->s: Generate a random number\nbetween 1 and 100 (incl.).
+s->s: Generate a random number between 1 and 100 (incl.).
 s->c: OK
 
 == Quit the game ==

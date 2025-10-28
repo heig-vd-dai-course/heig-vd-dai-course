@@ -34,8 +34,8 @@ find . -mindepth 3 -maxdepth 3 -type f -name "PRESENTATION.html" -exec sh -c '
 echo "Renaming presentation files to match parent directory..."
 find . -mindepth 3 -maxdepth 3 -type f -name "PRESENTATION.pdf" -exec sh -c '
     for file; do
-        chapter_name=$(basename "$(dirname "$(dirname "$file")")")
-        mv -f "$file" "$(dirname "$file")/$chapter_name-presentation.pdf"
+        course_name=$(basename "$(dirname "$(dirname "$file")")")
+        mv -f "$file" "$(dirname "$file")/$course_name-presentation.pdf"
     done
 ' sh {} +
 

@@ -1,6 +1,14 @@
-@startuml join-the-server-with-a-duplicate-client-name-example
+@startuml sms-protocol-example-2-join-the-server-with-a-duplicate-client-name
+skinparam boxPadding 100
+skinparam maxMessageSize 150
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
 
-title "Join the server with a duplicate client name"
+!pragma teoz true
+
+title "SMS Protocol - Example 2 - Functional example - Join the server with a duplicate client name"
 
 participant "Client 1" as c1
 participant "Server" as s
