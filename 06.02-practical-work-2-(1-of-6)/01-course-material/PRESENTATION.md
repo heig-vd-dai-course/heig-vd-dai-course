@@ -371,13 +371,34 @@ More details for this section in the [course material][course].
 
 ### Constraints (1/3)
 
-- The application must be written in Java, compatible with Java 21
-- The application must be built using Maven with the `maven-shade-plugin` plugin
-- The application must use the picocli dependency
-- You can only use the Java classes seen in the course
-- Your application must be slightly more complex and slightly different than the
-  examples presented during the course (we emphasize the word **slightly**, no
-  need to shoot for the moon!)
+- The whole team must contribute to the project and all members must be able to
+  explain it in details if asked.
+- A GitHub Discussion must be opened during the first week of the project to
+  explain the idea of the project so the teachers can validate the idea.
+- The GitHub Discussion must be updated with the link to the repository and a
+  related commit hash before the deadline - every 24 hours after the deadline
+  will result in a -1 point penalty on the final grade.
+
+### Constraints (2/3)
+
+- You can only use the Java classes seen in the course to implement the network
+  application (you can use any other libraries for other aspects of the
+  application, such as UI, etc.)
+- The application must be slightly more complex and slightly different than the
+  examples presented during the course (we emphasize the word _slightly_, no
+  need to shoot for the moon).
+
+### Constraints (3/3)
+
+- You must state your sources if you have used elements that you are not the
+  author (code from the Internet, code generated from AI tools, etc.). You must
+  also state for which usage you did use the source(s)/tool(s) in your README.
+  If you plagiarize the code of another group, all groups involved will receive
+  a grade of 1.
+- Elements that are supposed to be acquired through the teaching unit or
+  previous practical work(s) must not be omitted, forgotten or poorly
+  implemented (you must continue to use the Git/GitHub workflow, allow users to
+  understand your application, etc.).
 
 ## Submission
 
@@ -409,11 +430,11 @@ More details for this section in the [course material][course].
 
 The practical work presentations will take place on:
 
-- DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10h30**
+- DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10:30**
   in room **TBD**
-- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14h45**
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14:45**
   in room **TBD**
-- DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **15h30** in room
+- DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **16:30** in room
   **TBD**
 
 The exact schedule will be communicated once the groups are known.
@@ -459,10 +480,10 @@ More details for this section in the [course material][course].
 ### Create diagrams
 
 - You can use any tools you want to create your diagrams:
-  - [PlantUML](https://plantuml.com/)
-  - [draw.io](https://draw.io/)
-  - Scans from paper diagrams
-  - Any other tools you want
+  - [PlantUML](https://plantuml.com/).
+  - [draw.io](https://draw.io/).
+  - Scans from paper diagrams.
+  - Any other tools you want.
 
 PDF, PNG, SVG, etc. are all accepted formats in your repository.
 
@@ -471,10 +492,8 @@ PDF, PNG, SVG, etc. are all accepted formats in your repository.
 ### Extract the command and parameters from the message
 
 The Short Message Service (SMS) protocol presented in the
-[_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-course (accessible in the
-[examples repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository) defines the following message:
+[_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06.01-define-an-application-protocol)
+course defines the following message:
 
 ```text
 RECEIVE <message> <username>

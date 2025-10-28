@@ -598,10 +598,8 @@ PDF, PNG, SVG, etc. are all accepted formats in your repository.
 ### Extract the command and parameters from the message
 
 The Short Message Service (SMS) protocol presented in the
-[_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-course (accessible in the
-[examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)
-repository) defines the following message:
+[_"Define an application protocol"_](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06.01-define-an-application-protocol)
+course defines the following message:
 
 ```text
 RECEIVE <message> <username>
