@@ -250,8 +250,8 @@ _"Guess the number"_.
 The game is simple: the server generates a random number between 1 and 100
 (inclusive).
 
-The client has to guess the number. The server will respond with with a message
-to indicate if the number is higher, lower or correct than the number guessed by
+The client has to guess the number. The server will respond with a message to
+indicate if the number is higher, lower or correct than the number guessed by
 the client.
 
 Once the client has guessed the number, the client can ask the server to restart
