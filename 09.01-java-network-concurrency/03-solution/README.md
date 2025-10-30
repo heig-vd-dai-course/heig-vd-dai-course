@@ -1,9 +1,28 @@
-# Java network concurrency
+# Java network concurrency - Solution
+
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
+
+Based on the original course by O. Liechti and J. Ehrensberger.
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
+
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.01-java-network-concurrency/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/09.01-java-network-concurrency/01-course-material/09.01-java-network-concurrency-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
+- Solution: [Link to content](../03-solution/)
 
 This directory contains the solution to the
 [Java network concurrency](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/14-java-network-concurrency)
 practical content.
 
+- [Resources](#resources)
 - [Explain the differences between the following different implementations](#explain-the-differences-between-the-following-different-implementations)
   - [`TcpServerSimpleExample`](#tcpserversimpleexample)
   - [`TcpServerSingleThreadExample`](#tcpserversinglethreadexample)
@@ -11,8 +30,8 @@ practical content.
   - [`TcpServerCachedThreadPoolExample`](#tcpservercachedthreadpoolexample)
   - [`TcpServerFixedThreadPoolExample`](#tcpserverfixedthreadpoolexample)
   - [`TcpServerVirtualThreadExample`](#tcpservervirtualthreadexample)
-- [When and why should you use one or the other?](#when-and-why-should-you-use-one-or-the-other)
 - [What is the difference between a thread and a virtual thread?](#what-is-the-difference-between-a-thread-and-a-virtual-thread)
+- [When and why should you use one or the other?](#when-and-why-should-you-use-one-or-the-other)
 - [Are you able to explain why the `TcpServerSingleThreadExample` does not work as expected?](#are-you-able-to-explain-why-the-tcpserversinglethreadexample-does-not-work-as-expected)
 
 ## Explain the differences between the following different implementations
@@ -102,8 +121,26 @@ threads that are scheduled by the Java virtual machine (JVM) rather than by the
 operating system. This is only available since Java 21.
 
 This solution is very similar to the previous one but it uses virtual threads
-instead of native threads. It is one of the best solutions to handle multiple
-clients at the same time as it is very lightweight.
+instead of native threads. It will create as many virtual threads as needed to
+handle the clients but consume very few resources.
+
+It is one of the best solutions to handle multiple clients at the same time as
+it is very lightweight.
+
+## What is the difference between a thread and a virtual thread?
+
+A thread is managed by the operating system. A virtual thread is managed by the
+Java virtual machine (JVM).
+
+Virtual threads are more lightweight than operating system threads and are
+scheduled by the JVM rather than by the operating system.
+
+Virtual threads are only available since Java 21 and are suitable for
+applications that require a large number of threads, specifically for blocking
+I/O operations (reading from a file, reading from a socket, etc.).
+
+You can read all the details about virtual threads in the
+[Java documentation](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html).
 
 ## When and why should you use one or the other?
 
@@ -129,24 +166,12 @@ A rule of thumb is to use the `TcpServerFixedThreadPoolExample` solution if you
 are using Java 17 or less and the `TcpServerVirtualThreadExample` solution if
 you are using Java 21 or more.
 
-## What is the difference between a thread and a virtual thread?
-
-A thread is managed by the operating system. A virtual thread is managed by the
-Java virtual machine (JVM).
-
-Virtual threads are more lightweight than operating system threads and are
-scheduled by the JVM rather than by the operating system.
-
-Virtual threads are only available since Java 21 and are suitable for
-applications that require a large number of threads, specifically for blocking
-I/O operations (reading from a file, reading from a socket, etc.).
-
-You can read all the details about virtual threads in the
-[Java documentation](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html).
-
 ## Are you able to explain why the `TcpServerSingleThreadExample` does not work as expected?
 
 This is because we use a Unicode character with an `US_ASCII` encoding.
 
 This is why encoding and decoding charsets are important. If you use the wrong
 encoding, you will not be able to decode the message correctly.
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md

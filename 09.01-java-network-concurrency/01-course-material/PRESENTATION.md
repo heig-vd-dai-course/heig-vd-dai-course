@@ -34,12 +34,12 @@ _paginate: false
 
 ## Objectives
 
-- Learn what is concurrency
+- Learn what is concurrency.
 - Learn the different ways to handle multiple clients at the same time:
-  - Multi-processing
-  - Multi-threading
-  - Asynchronous programming
-- Learn how to implement and manage concurrency in Java network applications
+  - Multi-processing.
+  - Multi-threading.
+  - Asynchronous programming.
+- Learn how to implement and manage concurrency in Java network applications.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -47,16 +47,16 @@ _paginate: false
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Disclaimer
 
-- **This is not a course on concurrency**
-- Many many things are not covered
-- Focus on concurrency for network applications
+- **This is not a course on concurrency**.
+- Many many things are not covered.
+- Focus on concurrency for network applications.
 - Other ways and mechanisms to handle concurrency will be covered in other
-  courses
+  teaching units.
 
 ![bg right:40%](https://images.unsplash.com/photo-1520414283774-cd4cb599a987?fit=crop&h=720)
 
@@ -64,13 +64,13 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Explore the code examples
 
-Individually, or in pair/group, **take 10 minutes to explore and discuss the
-[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**.
+Individually, or in pair/group, **take 15 minutes to explore and discuss the
+[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09.01-java-network-concurrency/02-code-examples)**.
 
 Answer the questions available in the course material:
 
@@ -84,52 +84,53 @@ If needed, use the theoretical content to help you.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Concurrency: an introduction
 
-- Ability to handle multiple tasks at the same time
-- Differs from parallelism, the ability to execute multiple tasks simultaneously
+- Ability to handle multiple tasks at the same time.
+- Differs from parallelism, the ability to execute multiple tasks
+  simultaneously.
 - Before we dive into concurrency, let's take a step back and remember what a
-  processor is
+  processor is.
 
 ![bg right:40%](https://images.unsplash.com/photo-1554564200-198b0cd87cf5?fit=crop&h=720)
 
 ### What is a processor?
 
-- Piece of hardware that executes millions of instructions every second
-- Gives the illusion of executing multiple tasks at the same time
-- However, it can execute only one instruction at a time
-- When managing multiple tasks, the processor switches between tasks
+- Piece of hardware that executes millions of instructions every second.
+- Gives the illusion of executing multiple tasks at the same time.
+- However, it can execute only one instruction at a time (simplified).
+- When managing multiple tasks, the processor switches between tasks.
 
 ![bg right:40%](https://images.unsplash.com/photo-1698440050363-1697e5f0277c?fit=crop&h=720)
 
 ### What is a core?
 
 - A physical unit inside a processor that executes instructions (always one at a
-  time)
-- A processor can have multiple cores, called multi-core processors
+  time).
+- A processor can have multiple cores, called multi-core processors.
 - Cores can execute multiple instructions at the same time (parallelism) - not
-  covered in this course
+  covered in this teaching unit.
 
 ![bg right:40%](https://images.unsplash.com/photo-1716772911614-7e830fb35765?fit=crop&h=720)
 
 ### What is a process?
 
-- A process is an instance of a program that is being executed
-- A process can have multiple threads (such as picocli)
-- Processes are isolated from each other and have their own memory space
-- Heavier than threads: expensive to create and manage
+- A process is an instance of a program that is being executed.
+- A process can have multiple threads (such as picocli).
+- Processes are isolated from each other and have their own memory space.
+- Heavier than threads: expensive to create and manage.
 
 ![bg right:40%](https://images.unsplash.com/photo-1718154621829-881f65a74a8c?fit=crop&h=720)
 
 ### What is a thread?
 
-- A thread is a sequence of instructions that can be executed by a core
-- A core can manage multiple threads at the same time
-- The main thread is the thread that starts when the application starts
-- More lightweight than processes and share the same memory space
+- A thread is a sequence of instructions that can be executed by a core.
+- A core can manage multiple threads at the same time.
+- The main thread is the thread that starts when the application starts.
+- More lightweight than processes.
 
 ![bg right:40%](https://images.unsplash.com/photo-1717444309226-c0809d4b5bde?fit=crop&h=720)
 
@@ -144,9 +145,9 @@ find other resources and alternatives as well.
 
 ### What happens when multiple threads access the same resource?
 
-- The processor has to switch between threads
-- The order in which the threads are executed is not guaranteed
-- The threads can access the same resource at the same time
+- The processor has to switch between threads.
+- The order in which the threads are executed is not guaranteed.
+- The threads can access the same resource at the same time.
 
 ![bg right:40%](https://images.unsplash.com/photo-1506951796365-405279289a75?fit=crop&h=720)
 
@@ -154,16 +155,16 @@ find other resources and alternatives as well.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Handling one client at a time
 
-1. Create a socket to listen to incoming connections
-2. Create a new socket for the client
-3. Handle the connection
+1. Create a socket to listen to incoming connections.
+2. Create a new socket for the client.
+3. Handle the connection.
 
-Analogy: a restaurant with one table
+Analogy: a restaurant with one table.
 
 ➡️ Simple but quite useless...
 
@@ -173,8 +174,8 @@ Analogy: a restaurant with one table
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Handling multiple clients at the same time
 
@@ -182,17 +183,17 @@ Handling multiple clients at the same time is called concurrency.
 
 Concurrency can be achieved with:
 
-- Multi-processing
-- Multi-threading
-- Asynchronous programming
+- Multi-processing.
+- Multi-threading.
+- Asynchronous programming.
 
 ![bg right:40%](https://images.unsplash.com/photo-1559329007-40df8a9345d8?fit=crop&h=720)
 
 ### Multi-processing
 
-- Create an entirely new process for each client
-- Heavyweight and slow
-- Not recommended
+- Create an entirely new process for each client.
+- Heavyweight and slow.
+- Not recommended.
 - Analogy: a new restaurant for each customer, including the kitchen, waiters,
   etc.
 
@@ -200,21 +201,21 @@ Concurrency can be achieved with:
 
 ### Multi-threading
 
-- Create a new thread for each client
-- More lightweight and faster than multi-processing
-- Recommended with thread pool to limit resource usage
-- Not enough or too many threads can slow down the system
-- Analogy: a new or limited number of tables for each customer
+- Create a new thread for each client.
+- More lightweight and faster than multi-processing.
+- Recommended with thread pool to limit resource usage.
+- Not enough or too many threads can slow down the system.
+- Analogy: a new or limited number of tables for each customer.
 
 ![bg right:40%](https://images.unsplash.com/photo-1559674437-65de136f4a05?fit=crop&h=720)
 
 ### Asynchronous programming
 
-- Handle multiple clients with a single thread
+- Handle multiple clients with a single thread.
 - Very performant!
-- Analogy: a food truck - you get a ticket, wait, get your food and leave
-- Out of scope for this course but interesting to know! Node.js is a good
-  example for this approach
+- Analogy: a food truck - you get a ticket, wait for the food to be prepared,
+  get your food and leave.
+- Out of scope but interesting to know! Node.js is a good example.
 
 ![bg right:40%](https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?fit=crop&h=720)
 
@@ -222,19 +223,19 @@ Concurrency can be achieved with:
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Handling multiple threads in Java
 
 - Java provides the
   [`ExecutorService`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/ExecutorService.html)
-  interface to manage threads
+  interface to manage threads.
 - It uses different
   [`Executors`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/Executors.html)
-  implementations
-- Each implementation has its own pros and cons
-- You have used threads with picocli (each sub-command is a thread)
+  implementations.
+- Each implementation has its own pros and cons.
+- You have used threads with picocli (each command is a thread).
 
 ![bg right:40%](https://images.unsplash.com/photo-1529133396358-0f5f0c4a1c8a?fit=crop&h=720)
 
@@ -269,37 +270,37 @@ public Integer operatorsWorker() {
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material]. You can
-find other resources and alternatives as well.
+More details for this section in the [course material][course]. You can find
+other resources and alternatives as well.
 
 ### Concurrent safe variable types and data structures in Java
 
 - A thread-safe variable type and/or data structure is a variable type/data
-  structure that can be accessed by multiple threads at the same time
-- Java provides several thread-safe variable types and data structures
+  structure that can be accessed by multiple threads at the same time.
+- Java provides several thread-safe variable types and data structures.
 
 ![bg right:40%](https://images.unsplash.com/photo-1552879890-3a06dd3a06c2?fit=crop&h=720)
 
 ---
 
 - **Variables types**:
-  - `AtomicBoolean` instead of `boolean`/`Boolean`
-  - `AtomicInteger` instead of `int`/`Integer`
-  - `AtomicLong` instead of `long`/`Long`
+  - `AtomicBoolean` instead of `boolean`/`Boolean`.
+  - `AtomicInteger` instead of `int`/`Integer`.
+  - `AtomicLong` instead of `long`/`Long`.
 - **Data structures**:
-  - `ConcurrentHashMap` instead of `HashMap`
-  - `ConcurrentLinkedQueue` instead of `LinkedList`
-  - `CopyOnWriteArrayList` instead of `ArrayList`
-  - `CopyOnWriteArraySet` instead of `HashSet`
+  - `ConcurrentHashMap` instead of `HashMap`.
+  - `ConcurrentLinkedQueue` instead of `LinkedList`.
+  - `CopyOnWriteArrayList` instead of `ArrayList`.
+  - `CopyOnWriteArraySet` instead of `HashSet`.
 
 ---
 
-- Multiple concurrent variable types and/or data structures can be co-dependent
+- Multiple concurrent variable types and/or data structures can be co-dependent.
 - You must use them together with locks (the equivalent to mutexes and
-  semaphores in C/C++) to avoid inconsistencies
+  semaphores in C/C++) to avoid inconsistencies.
 
-Locks will not be covered (and not expected to be used) in this course but you
-can find additional information in the [course material][course-material].
+Locks will not be covered (and not expected to be used) in this teaching unit
+but you can find additional information in the [course material][course].
 
 ![bg right:40%](https://images.unsplash.com/photo-1627832703630-22c0798ae17e?q=80&w=2487?fit=crop&h=720)
 
@@ -316,9 +317,9 @@ Do you have any questions?
 ### What will you do?
 
 - Run full client/server examples and understand how concurrent clients are
-  handled
-- Explore and answer questions about some concurrent strategies
-- Update previous game/application to handle multiple clients (optional)
+  handled.
+- Explore and answer questions about some concurrent strategies.
+- Update previous game/application to handle multiple clients (optional).
 
 ![bg right contain](./images/what-will-you-do-server.png)
 ![bg right vertical contain](./images/what-will-you-do-client.png)
@@ -399,7 +400,5 @@ You can use reactions to express your opinion on a comment!
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/453
 [illustration]: ./images/main-illustration.jpg
-[course-material]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14-java-network-concurrency/COURSE_MATERIAL.md
 [course-qr-code]:
 	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09.01-java-network-concurrency
