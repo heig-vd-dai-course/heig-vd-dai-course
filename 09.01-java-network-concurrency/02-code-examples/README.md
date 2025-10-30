@@ -37,6 +37,7 @@ They are ordered by complexity. You should explore them in the following order:
 5. [`TcpServerCachedThreadPoolExample`](./05-tcp-server-cached-thread-pool-example/)
 6. [`TcpServerFixedThreadPoolExample`](./06-tcp-server-fixed-thread-pool-example/)
 7. [`TcpServerVirtualThreadExample`](./07-tcp-server-virtual-thread-example/)
+8. [`TcpServerWithConcurrentDataStructuresExample`](./08-tcp-server-with-concurrent-data-structures-example/)
 
 ## Usage
 

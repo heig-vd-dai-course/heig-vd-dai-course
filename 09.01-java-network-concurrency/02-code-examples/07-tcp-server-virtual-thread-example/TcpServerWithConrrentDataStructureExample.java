@@ -4,16 +4,15 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class TcpServerFixedThreadPoolExample {
+public class TcpServerWithConrrentDataStructureExample {
 
   private static final int PORT = 1234;
   private static final int SERVER_ID = (int) (Math.random() * 1000000);
-  private static final int NUMBER_OF_THREADS = 2;
   private static final String TEXTUAL_DATA = "👋 from Server " + SERVER_ID;
 
   public static void main(String[] args) {
     try (ServerSocket serverSocket = new ServerSocket(PORT);
-        ExecutorService executor = Executors.newFixedThreadPool(NUMBER_OF_THREADS); ) {
+        ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor(); ) {
       System.out.println("[Server " + SERVER_ID + "] starting with id " + SERVER_ID);
       System.out.println("[Server " + SERVER_ID + "] listening on port " + PORT);
 

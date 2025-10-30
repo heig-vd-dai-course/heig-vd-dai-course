@@ -505,6 +505,9 @@ can you answer these questions?
 - When and why should you use one or the other?
 - Are you able to explain why the `TcpServerSingleThreadExample` does not work
   as expected?
+- Check the `TcpServerWithConcurrentDataStructuresExample` code example. Can you
+  explain why the `AtomicInteger` and `ConcurrentHashMap` are used instead of
+  standard `Integer` and `HashMap`?
 
 ### Compare your solution with the official one
 
