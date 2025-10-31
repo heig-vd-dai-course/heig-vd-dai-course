@@ -1,6 +1,0 @@
-allowLocalFiles: true
-html: true
-jpegQuality: 100
-options:
-  markdown:
-    breaks: false
