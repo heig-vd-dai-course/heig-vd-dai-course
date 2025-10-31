@@ -9,6 +9,7 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI - Practical work 3
 description: Practical work 3 for the DAI course at HEIG-VD, Switzerland
+header: '[**Practical work 3**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/12.02-practical-work-3-(1-of-5))'
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
