@@ -1,0 +1,9 @@
+ch/heigvd/dai/Main.class
+ch/heigvd/dai/commands/Receiver$Message.class
+ch/heigvd/dai/commands/Receiver.class
+ch/heigvd/dai/commands/Emitter.class
+ch/heigvd/dai/commands/ListNetworkInterfaces.class
+ch/heigvd/dai/commands/Operator.class
+ch/heigvd/dai/commands/Root.class
+ch/heigvd/dai/commands/Operator$Message.class
+ch/heigvd/dai/commands/Emitter$Message.class
