@@ -1,6 +1,19 @@
 # Evaluation 1
 
-- Time in class: 2 periods ·
-  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-evaluation-1/)
+L. Delafontaine and H. Louis, with the help of
+[GitHub Copilot](https://github.com/features/copilot).
+
+This work is licensed under the [CC BY-SA 4.0][license] license.
+
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.01-evaluation-1/01-course-material/index.html)
   ·
-  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/08-evaluation-1/08-evaluation-1.pdf)
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/10.01-evaluation-1/01-course-material/10.01-evaluation-1-presentation.pdf)
+- Archives: [Link to content](../02-archives/)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
