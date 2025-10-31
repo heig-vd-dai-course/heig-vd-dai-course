@@ -9,6 +9,7 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI - Semester review and exam preparation
 description: Semester review and exam preparation for the DAI course at HEIG-VD, Switzerland
+header: '[**Semester review and exam preparation**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/16.03-semester-review-and-exam-preparation)'
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
