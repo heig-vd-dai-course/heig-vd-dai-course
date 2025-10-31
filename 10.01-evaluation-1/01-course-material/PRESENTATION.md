@@ -62,6 +62,8 @@ The following courses will be evaluated:
 <div class="two-columns">
 <div>
 
+**Part 1 - Input/output processing**
+
 - [Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.03-git-github-and-markdown)
 - [Java, IntelliJ IDEA and Maven](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.04-java-intellij-idea-and-maven)
 - [Java IOs](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/02.01-java-ios)
@@ -71,11 +73,12 @@ The following courses will be evaluated:
 </div>
 <div>
 
+**Part 2 - Network programming with TCP and UDP**
+
 - [SMTP and ncat](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05.03-smtp-and-ncat)
 - [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06.01-define-an-application-protocol)
 - [Java TCP and UDP programming](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/07.01-java-tcp-and-udp-programming-(1-of-2)>)
 - [Java network concurrency](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09.01-java-network-concurrency)
-- [Practical work 2](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06.02-practical-work-2-(1-of-6)>)
 
 </div>
 <div>
@@ -83,7 +86,7 @@ The following courses will be evaluated:
 ## Evaluation content
 
 You might be asked questions about the theoretical content and the practical
-content of each course.
+content of each course (including the code examples).
 
 You might be asked about elements seen in the practical work(s).
 
@@ -118,7 +121,8 @@ for the evaluation.**
 
 ## How to prepare
 
-All typical questions are at the end of each course you studied.
+Some typical questions are at the end of each course you studied. Questions
+about the practical contents of each course can also be asked.
 
 All previous evaluations are available in the
 [`10.01-evaluation-1/02-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10.01-evaluation-1/02-archives)

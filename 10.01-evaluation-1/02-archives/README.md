@@ -22,8 +22,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 This directory contains archives related to evaluation 1.
 
 These evaluations were used in previous years and are provided for reference
-purposes only. They may not reflect the current course content or evaluation
-methods.
+purposes only. They may not reflect the current course content or current
+evaluation methods.
 
 Please note that these archives are provided "as is" without any guarantees or
 warranties.
@@ -41,7 +41,7 @@ Ce dossier contient des archives relatives à l'évaluation 1.
 
 Ces évaluations ont été utilisées les années précédentes et sont fournies à
 titre de référence uniquement. Elles peuvent ne pas refléter le contenu actuel
-du cours ou les méthodes d'évaluation.
+du cours ou les méthodes d'évaluation actuelles.
 
 Veuillez noter que ces archives sont fournies "telles quelles", sans aucune
 garantie.
