@@ -104,7 +104,10 @@ server:
 ## SSH
 
 SSH is a protocol that allows you to connect to a remote machine. It is a
-replacement for the Telnet protocol.
+replacement for the Telnet protocol as Telnet is an old and non-secure protocol.
+
+Relying on the public/private key mechanism, SSH ensures the confidentiality and
+integrity of the data exchanged between the client and the server.
 
 The SSH protocol is described in many RFCs:
 
@@ -150,6 +153,15 @@ The fingerprint is used to verify that the public key is the same as the one
 used to connect to the remote machine.
 
 This can help detect man-in-the-middle attacks.
+
+> [!TIP]
+>
+> A man-in-the-middle attack is an attack where an attacker intercepts the
+> communication between two parties and can read, modify, or inject messages.
+>
+> Using the SSH key fingerprint, the client can verify that the public key
+> presented by the server is the same as the one stored in the client's
+> known_hosts file.
 
 Known hosts (hosts that you have allowed to connect to) are stored in the
 `~/.ssh/known_hosts` file. The file contains the fingerprint of the public key
