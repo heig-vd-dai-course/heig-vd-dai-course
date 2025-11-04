@@ -702,8 +702,8 @@ following:
   ![UDP - Service discovery protocols - Advertisement pattern](images/udp-service-discovery-protocols-advertisement-pattern.png)
 
 - Query - An active discovery protocol pattern: a client (called a service
-  consumer) queries the network to find a service. The client sends a unicast
-  datagram on the network to request information about a service.
+  consumer) queries the network to find a service. The client sends a multicast
+  or broadcast datagram on the network to request information about a service.
 
   If a service that provides the requested service (called a service provider)
   is available, it replies with a unicast datagram containing the requested
