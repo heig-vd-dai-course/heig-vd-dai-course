@@ -1,27 +1,24 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/20-ssh-and-scp/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/20-ssh-and-scp/20-ssh-and-scp-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/115
-[illustration]: ./images/main-illustration.jpg
+# SSH and SCP
 
-# SSH and SCP - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.03-ssh-and-scp/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/11.03-ssh-and-scp/01-course-material/11.03-ssh-and-scp-presentation.pdf)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [A quick reminder about security](#a-quick-reminder-about-security)
@@ -30,10 +27,10 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [SSH key fingerprint](#ssh-key-fingerprint)
   - [SSH key generation](#ssh-key-generation)
   - [Alternatives](#alternatives)
-  - [Resources](#resources)
+  - [Resources](#resources-1)
 - [SCP](#scp)
   - [Alternatives](#alternatives-1)
-  - [Resources](#resources-1)
+  - [Resources](#resources-2)
 - [Practical content](#practical-content)
   - [Install and configure SSH (and SCP)](#install-and-configure-ssh-and-scp)
   - [Acquire a virtual machine on a cloud provider](#acquire-a-virtual-machine-on-a-cloud-provider)
@@ -51,7 +48,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-In this chapter, you will have a refresh about security and learn how to use the
+In this course, you will have a refresh about security and learn how to use the
 Secure Shell (SSH) protocol to connect to a remote machine. You will also learn
 how to transfer files from/to a remote machine with Secure Copy (SCP).
 
@@ -67,7 +64,7 @@ encrypted, ensuring the confidentiality and the integrity of the data.
 Most secure protocols rely on cryptography to encrypt the data. The data is
 encrypted with an encryption key.
 
-It is not possible to read the data without the encryption key.
+Without the encryption key, it is not possible to read the data.
 
 Most secure protocols rely on a key pair to authenticate the client (SSH, GPG
 etc.). The key pair is composed of a public key and a private key.
@@ -78,10 +75,10 @@ If Alice wants to send a message to Bob, Alice encrypts the message with Bob's
 public key. Bob decrypts the message with his private key.
 
 If Bob wants to send a message to Alice, Bob encrypts the message with Alice's
-public key. Alice decrypts the message with their private key.
+public key. Alice decrypts the message with her private key.
 
 If Bob wants to send a message to the rest of the world proving that only Bob
-was the author of the message, Bob encrypts the message with their private key.
+was the author of the message, Bob encrypts the message with his private key.
 Bob can then send the message to whom suites best. The receipts can then decrypt
 the message with Bob's public key. If the message can be decrypted, it means
 that Bob is the author of the message.
@@ -127,16 +124,16 @@ files from/to a remote machine with SCP.
 SSH is also the name of the software that implements the SSH protocol. It is
 available on most operating systems and is considered as a standard.
 
-![Sequence diagram of the SSH authentication](./images/ssh-2.png)
+![Sequence diagram of the SSH authentication](./images/ssh-authentication-process.png)
 
 ### SSH key algorithms
 
 SSH supports different key algorithms. The most common are:
 
-- RSA
-- DSA
-- ECDSA
-- Ed25519
+- RSA.
+- DSA.
+- ECDSA.
+- Ed25519.
 
 Out of the four algorithms, Ed25519 and ECDSA are the most recent and are
 considered as more secure than RSA and DSA.
@@ -154,8 +151,9 @@ used to connect to the remote machine.
 
 This can help detect man-in-the-middle attacks.
 
-Public keys are stored in the `~/.ssh/known_hosts` file. The file contains the
-fingerprint of the public key and the hostname of the remote machine.
+Known hosts (hosts that you have allowed to connect to) are stored in the
+`~/.ssh/known_hosts` file. The file contains the fingerprint of the public key
+and the hostname of the remote machine.
 
 ### SSH key generation
 
@@ -203,8 +201,8 @@ SCP is an illustration of the client/server architecture using the SSH protocol.
 
 _Alternatives are here for general knowledge. No need to learn them._
 
-- [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 - [rsync](https://rsync.samba.org)
+- [SFTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
@@ -228,9 +226,7 @@ This will automatically install SCP as well.
 The SSH client is available on most operating systems.
 
 You certainly already have it installed on your operating system as you used it
-in the
-[Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/03-git-github-and-markdown)
-chapter.
+in the [Git, GitHub and Markdown](../../01.03-git-github-and-markdown/) couse.
 
 If not, follow the instructions below to install it:
 
@@ -248,6 +244,8 @@ The output should be similar to this:
 ```text
 OpenSSH_9.6p1 Ubuntu-3ubuntu13.5, OpenSSL 3.0.13 30 Jan 2024
 ```
+
+This output means that the SSH client is installed.
 
 ### Acquire a virtual machine on a cloud provider
 
@@ -318,15 +316,14 @@ Select a virtual machine with the following characteristics:
 > [!NOTE]
 >
 > You can use the same public key you used to sign your commits if Git as seen
-> in the
-> [Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/03-git-github-and-markdown)
-> chapter or you can generate a new one with the `ssh-keygen` command for the
-> purpose of this chapter.
+> in the [Git, GitHub and Markdown](../../01.03-git-github-and-markdown/) course
+> or you can generate a new one with the `ssh-keygen` command for the purpose of
+> this course.
 
 Although the `Standard_B1s` size is one of the
 [cheapest](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/)
-and least powerful option, it will be enough for this course. It will allow you
-to use your remaining credits for other services.
+and least powerful option, it will be enough for this teaching unit. It will
+allow you to use your remaining credits for other services.
 
 Click on the `Review + create` button.
 
@@ -439,8 +436,8 @@ see an error message warning you that the fingerprint has changed.
 > `message` field with the one displayed when you connect to the virtual for the
 > first time.
 >
-> These instructions are highly inspired by the following resource, a course
-> made for the COMEM+ students:
+> These instructions are highly inspired by the following resource, a teaching
+> unit made for the COMEM+ students:
 > <https://github.com/MediaComem/comem-archidep/blob/main/ex/azure-setup.md#question-optionally-get-your-machines-public-ssh-key>.
 
 #### Update and secure the virtual machine
@@ -482,12 +479,12 @@ machine:
 #### Install and configure Docker and Docker Compose
 
 Install and configure Docker and Docker Compose on the virtual machine as seen
-in the
-[Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06-docker-and-docker-compose)
-chapter. You will need Docker and Docker Compose for the rest of the course.
+in the [Docker and Docker Compose](../../04.01-docker-and-docker-compose/)
+course. You will need Docker and Docker Compose for the rest of the teaching
+unit.
 
 Congratulations! You have now an up-to-date and configured virtual machine to
-use for the rest of the course.
+use for the rest of the teaching unit.
 
 ### Copy files with SCP
 
@@ -537,7 +534,7 @@ scp local.txt <username>@<vm public ip>:~/local.txt
 The syntax is similar to the `cp` command:
 
 ```text
-[username@source-ip:]source [username@destination-ip:]destination
+[username@source-ip:]/path/from/the/source [username@destination-ip:]/path/to/the/destination
 ```
 
 The first `local.txt` is the file to copy from the local machine. The second
@@ -559,6 +556,10 @@ home directory of the user with its content:
 # Display the content of the local.txt file
 cat local.txt
 ```
+
+> [!IMPORTANT]
+>
+> This command is to be run on the remote machine.
 
 #### Copy a file from the remote machine to the local machine
 
@@ -588,6 +589,10 @@ You should see the `remote.txt` file in the current directory with its content:
 # Display the content of the remote.txt file
 cat remote.txt
 ```
+
+> [!IMPORTANT]
+>
+> This command is to be run on the local machine.
 
 ### Add the teaching staff's public key to the virtual machine
 
@@ -676,13 +681,13 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have had a refresh about security and learned how to use
-SSH to connect to a remote machine. You have also learned how to copy files
-from/to a remote machine with SCP.
+In this course, you have had a refresh about security and learned how to use SSH
+to connect to a remote machine. You have also learned how to copy files from/to
+a remote machine with SCP.
 
 SSH and SCP are very useful tools to connect to a remote machine and copy files
 from/to a remote machine. They are widely used in the industry and you will use
-it for the practical work in the next chapters.
+them for the practical work in the next courses.
 
 ### Test your knowledge
 
@@ -727,3 +732,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 - Main illustration by [Mathew Schwartz](https://unsplash.com/@cadop) on
   [Unsplash](https://unsplash.com/photos/sb7RUrRMaC4)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/115

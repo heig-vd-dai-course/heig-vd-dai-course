@@ -1,5 +1,14 @@
 @startuml a-quick-reminder-about-security
-skinparam sequenceMessageAlign center
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!pragma teoz true
+
+title "A quick reminder about security"
 
 actor "Alice" as alice
 actor "Bob" as bob
