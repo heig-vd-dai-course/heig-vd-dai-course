@@ -1,0 +1,92 @@
+@startuml udp-unicast-client-server-workflow
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!$TITLE = "UDP - Unicast (client/server) workflow"
+!$MULTIPAGE = 0
+
+!if ($MULTIPAGE)
+  right footer $TITLE (%page%/%lastpage%)
+!else
+  ignore newpage
+!endif
+
+title $TITLE
+
+participant "UDP Client\n(192.168.1.23)" as client
+participant "UDP Server\n(192.168.1.25)" as server
+
+== Create the server socket ==
+
+server -> server : **Create** a socket and **bind** it to a port (e.g. ""4445"")\n(class ""DatagramSocket"")
+
+newpage $TITLE
+
+== Create the client socket and datagram ==
+
+client -> client : **Create** a socket\n(class ""DatagramSocket"")
+
+client -> client : **Get/transform** the data to send as an array of bytes\n(method depending on the type of data)
+
+client -> client : **Create** a datagram packet using the server's IP and port\n(class ""DatagramPacket"")
+
+note over client, server
+    At this point, the datagram packet does not need to wait/confirm that the server is online/accessible.
+
+    The datagram packet has all the required information needed in its header and the client can send it through the socket whenever they want.
+endnote
+
+newpage $TITLE
+
+== Send and receive datagrams ==
+
+loop Server side: loop until socket is closed
+
+    server -> server : **Wait to receive** a datagram packet on the given socket\n(method ""socket.receive()"")
+
+    note over client, server
+        At this point, the socket will wait for a datagram to arrive on the given port.
+    endnote
+
+    ...
+
+    note over client, server
+        At any time, the client can decide to send the datagram packet.
+
+        The datagram packet will be forwarded to the server using the information contained in the datagram header (server's IP, sender's IP, etc.).
+    endnote
+
+    client -> server : **Send** the datagram on the network\n(method ""socket.send(packet)"")
+
+    note over client, server
+        As the client does not need to wait/acknowledge that the server has received the datagram packet successfully, it can close the connection immediately.
+    endnote
+
+    client -> server : **Close** the connection\n(method ""socket.close()"")
+
+    server -> server : **Receive** the datagram packet\n(method ""socket.receive()"")
+
+    server -> server : **Get/transform** the datagram packet payload\n(method depending on the type of data)
+
+    note over client, server
+        The server will loop back to receive another datagram.
+    endnote
+
+end
+
+newpage $TITLE
+
+...
+
+== Server shutdown ==
+
+note over client, server
+    On shutdown, the server can close its datagram socket.
+endnote
+
+server -> server : **Close** the connection\n(method ""socket.close()"")
+@enduml
