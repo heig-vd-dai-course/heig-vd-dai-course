@@ -122,7 +122,8 @@ TCP is a transport protocol that is similar to a phone call:
     (server side).
   - [`Socket`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/Socket.html)
     (client side).
-- A TCP socket is a connection between two parties using a host and a port.
+- A TCP socket is a connection endpoint between two parties using a host and a
+  port.
 - A server socket listens for incoming connections on a specific port.
 - A client socket connects to a server socket using the server's host and port.
 - Once connected, data can be exchanged between the two sockets.
