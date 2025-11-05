@@ -184,10 +184,10 @@ Improve performance with a buffer (with a binary stream):
 
 ```java
 // Get input stream as binary with buffer
-input = new BufferedReader(new InputStreamReader(socket.getInputStream());
+input = new BufferedInputStream(socket.getInputStream());
 
 // Get output stream as binary with buffer
-output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
+output = new BufferedOutputStream(socket.getOutputStream());
 ```
 
 **Everything you have learned about Java IOs applies here!**

@@ -126,7 +126,8 @@ TCP is a connection-oriented protocol: a connection must be established between
 the two applications before data can be exchanged in a bidirectional way.
 
 TCP can only do unicast: one client can communicate with one other server at the
-same time. One client cannot communicate with multiple servers at the same time.
+same time. To communicate with multiple servers a client has to establish a 
+separate TCP connection with each server.
 
 TCP is considered as a reliable protocol as data sent is guaranteed to be
 received by the other side. If data is lost (for example due to network issues),
@@ -199,10 +200,10 @@ Use buffered streams to improve performance:
 
 ```java
 // Get input stream as binary with buffer
-input = new BufferedReader(new InputStreamReader(socket.getInputStream());
+input = new BufferedInputStream(socket.getInputStream());
 
 // Get output stream as binary with buffer
-output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream());
+output = new BufferedOutputStream(socket.getOutputStream());
 ```
 
 > [!IMPORTANT]
@@ -292,7 +293,7 @@ prefer to make usage of the TCP protocol to guarantee the reliability of their
 services.
 
 The game [Factorio](https://www.factorio.com/) (a video game where you build and
-manage factories) is another good example of an application that make usage of
+manage factories) is another good example of an application that makes use of
 the UDP protocol when playing on a multiplayer server:
 
 > Factorio uses UDP only. The game builds its own "reliable delivery" layer

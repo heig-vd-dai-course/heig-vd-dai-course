@@ -454,7 +454,7 @@ repository!
 Your work is due as follows:
 
 - DAI-TIC-C (Wednesday mornings): **Tuesday 02.12.25 at 23:59**.
-- DAI-TIC-B (Wednesday afternoons): **Tuesday 02.12.25 at 23:59**.
+- DAI-TIC-B (Wednesday afternoons): **Tuesday 03.12.25 at 11:59**.
 - DAI-TIC-A (Thursdays): **Wednesday 03.12.25 at 23:59**.
 
 > [!CAUTION]
@@ -478,7 +478,7 @@ information:
 - DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10h30**
   in room **TBD**
 - DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14h45**
-  in room **TBD**
+  in room **B38**
 - DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **15h30** in room
   **TBD**
 
