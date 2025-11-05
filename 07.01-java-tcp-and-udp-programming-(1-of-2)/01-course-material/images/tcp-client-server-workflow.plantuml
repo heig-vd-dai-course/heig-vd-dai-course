@@ -1,0 +1,98 @@
+@startuml tcp-client-server-workflow
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!$TITLE = "TCP - Client/server workflow"
+!$MULTIPAGE = 0
+
+!if ($MULTIPAGE)
+    right footer $TITLE (%page%/%lastpage%)
+!else
+    ignore newpage
+!endif
+
+title $TITLE
+
+participant "TCP Client\n(192.168.1.23)" as client
+participant "TCP Server\n(192.168.1.25)" as server
+
+== Create the server socket ==
+
+server -> server : **Create** a socket and **bind** it to a port (e.g. ""1234"")\n(class ""ServerSocket"")
+
+newpage $TITLE
+
+== Accept connections ==
+
+loop Server side: loop until socket is closed
+
+    server -> server : **Accept** new connections\n(method ""serverSocket.accept()"")
+
+    note over client, server
+        At this point, the socket will wait for a client to connect on the given port.
+    endnote
+
+    ...
+
+    newpage $TITLE
+
+    == Create the client socket ==
+
+    client -> server : **Create** a socket using the server's IP and port (e.g. ""192.168.1.25"" and ""1234"")\n(class ""Socket"")
+
+    note over client, server
+        At this point, the socket will try to connect to the server.
+    endnote
+
+    alt Successful connection
+
+        server -> server : **Accept** the connection and create a new client socket on a random port (e.g. ""34642"")
+
+        client <--> server : Connection established
+
+        note over client, server
+            In this case, the connection is established. Data can flow from one side or the other.
+        endnote
+
+        server <-> client : **Read and write** data from/to the socket
+
+    else Unsuccessful connection
+
+        note over client, server
+            In this case, the connection was unsuccessful. It can mean the server is unreachable or already busy with another client.
+
+            If the server is reachable but busy with another client, the connection will wait until the server is able to accept the connection.
+        endnote
+
+    end
+
+    newpage $TITLE
+
+    ...
+
+    note over client, server
+        Both the client or the server can decide to close the connection. In this example, the client decides to close it.
+
+        The server will then loop back to accept another client.
+    endnote
+
+    client -> server : **Close** the connection\n(method ""socket.close()"")
+
+end
+
+newpage $TITLE
+
+...
+
+== Server shutdown ==
+
+note over client, server
+    On shutdown, the server can close its server socket. It will disconnect all connected users.
+endnote
+
+server -> server : **Close** the connection\n(method ""serverSocket.close()"")
+@enduml

@@ -211,9 +211,9 @@ Dates are taken from the
 | 🚨 [05](#-course-05) | 13.10. - 19.10.25         | SMTP and ncat                            | Practical work 1 (5/5) - Presentations       | 🟢 Ready        |
 |                    - | 20.10. - 26.10.25         | _No course: interdisciplinary week_      | _No course: interdisciplinary week_          | -               |
 |    [06](#-course-06) | 27.10. - 02.11.25         | Define an application protocol           | Practical work 2 (1/6)                       | 🟢 Ready        |
-|    [07](#-course-07) | 03.11. - 09.11.25         | Java TCP and UDP programming (1/2)       | Practical work 2 (2/6)                       | 🟡 In progress  |
-|    [08](#-course-08) | 10.11. - 16.11.25         | Java TCP and UDP programming (2/2)       | Practical work 2 (3/6)                       | 🔴 To do        |
-|    [09](#-course-09) | 17.11. - 23.11.25         | Java network concurrency                 | Practical work 2 (4/6)                       | 🔴 To do        |
+|    [07](#-course-07) | 03.11. - 09.11.25         | Java TCP and UDP programming (1/2)       | Practical work 2 (2/6)                       | 🟢 Ready        |
+|    [08](#-course-08) | 10.11. - 16.11.25         | Java TCP and UDP programming (2/2)       | Practical work 2 (3/6)                       | 🟢 Ready        |
+|    [09](#-course-09) | 17.11. - 23.11.25         | Java network concurrency                 | Practical work 2 (4/6)                       | 🟡 In progress  |
 | 🚨 [10](#-course-10) | 24.11. - 30.11.25         | Evaluation 1                             | Practical work 2 (5/6)                       | 🟢 Ready        |
 | 🚨 [11](#-course-11) | 01.12. - 07.12.25         | SSH and SCP                              | Practical work 2 (6/6) - Presentations       | 🔴 To do        |
 |    [12](#-course-12) | 08.12. - 14.12.25         | HTTP and curl                            | Practical work 3 (1/5)                       | 🔴 To do        |
@@ -478,7 +478,7 @@ Dates are taken from the
 
 ## 🕖 Course 07
 
-### Java TCP and UDP programming
+### Java TCP and UDP programming (1/2)
 
 - Objectives, teaching and learning methods, and evaluation methods:
   [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/>)
@@ -510,20 +510,20 @@ Dates are taken from the
 
 ## 🕗 Course 08
 
-### Java TCP and UDP programming
+### Java TCP and UDP programming (2/2)
 
 - Objectives, teaching and learning methods, and evaluation methods:
-  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/>)
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/>)
 - Course material:
-  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/README.md>)
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/README.md>)
   ·
-  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/index.html>)
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/index.html#part-22>)
   ·
-  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/08.01-java-tcp-and-udp-programming-(2-of-2)/01-course-material/08.01-java-tcp-and-udp-programming-(2-of-2)-presentation.pdf>)
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/07.01-java-tcp-and-udp-programming-(1-of-2)/01-course-material/07.01-java-tcp-and-udp-programming-(1-of-2)-presentation.pdf>)
 - Code examples:
-  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/02-code-examples/README.md>)
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/02-code-examples/>)
 - Solution:
-  [Link to content](<./08.01-java-tcp-and-udp-programming-(2-of-2)/03-solution/>)
+  [Link to content](<./07.01-java-tcp-and-udp-programming-(1-of-2)/03-solution/>)
 
 [Jump back to Program](#-program)
 

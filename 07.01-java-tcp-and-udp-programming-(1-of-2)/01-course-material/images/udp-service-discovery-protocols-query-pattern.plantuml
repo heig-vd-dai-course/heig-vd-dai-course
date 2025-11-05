@@ -1,0 +1,42 @@
+@startuml udp-service-discovery-protocols-query-pattern
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!pragma teoz true
+
+title "UDP - Service discovery protocols - Query pattern (active pattern)"
+
+box "Service providers" #LightBlue
+  participant "Server 1" as server1
+  participant "Server 2" as server2
+end box
+
+box "Service consumer" #LightPink
+  participant "Client" as client
+end box
+
+note over server1, server2
+Some servers (called service providers) listen the network to reply to service consumers requests/queries.
+end note
+
+/ note over client
+The client (called service consumer) queries the network for a given service.
+end note
+
+client -> server1: <i>Hello strangers, I am looking for someone who could provide <b>this</b> service.</i>
+autonumber stop
+& client -> server2
+autonumber resume
+
+|||
+
+server2 -> client: <i>I offer the service you are looking for. You can reach me at this address.</i>
+
+|||
+
+client -> server2: <i>Hello. I request the use of your service.</i>
+@enduml
