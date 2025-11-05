@@ -21,6 +21,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 This directory contains the solution to the practical content of the course.
 
 It contains an implementation of the following application protocols:
+
 - [_"Guess the number"_ game](../../06.01-define-an-application-protocol/03-solution/01-guess-the-number-game/README.md)
 - [_"Temperature monitoring"_ application](../../06.01-define-an-application-protocol/03-solution/02-temperature-monitoring-application/README.md)
 
