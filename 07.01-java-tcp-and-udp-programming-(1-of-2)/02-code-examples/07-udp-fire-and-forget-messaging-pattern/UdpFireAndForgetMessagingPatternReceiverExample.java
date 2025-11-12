@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets;
  * method. The network interface must be specified as a string. To get the network interface, use
  * the `ip` command on Unix systems or the `ipconfig` command on Windows systems.
  */
-public class UdpMulticastReceiverExample {
+public class UdpFireAndForgetMessagingPatternReceiverExample {
   // Multicast address on which the receiver listens for messages
   private static final String MULTICAST_ADDRESS = "239.0.0.0";
 

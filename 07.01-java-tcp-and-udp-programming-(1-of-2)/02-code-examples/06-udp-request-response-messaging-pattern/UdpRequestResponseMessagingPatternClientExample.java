@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
  * request is sent as a datagram packet. The client then waits for a response from the server. When
  * a response arrives, the client processes it and prints it to the console.
  */
-public class UdpUnicastClientExample {
+public class UdpRequestResponseMessagingPatternClientExample {
 
   // Host to access
   private static final String HOST = "localhost";

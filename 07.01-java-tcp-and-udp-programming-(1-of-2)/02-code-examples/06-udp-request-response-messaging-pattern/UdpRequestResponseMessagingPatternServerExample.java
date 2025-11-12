@@ -10,7 +10,7 @@ import java.util.Date;
  * datagram socket and waits for requests to arrive. When a request arrives, the server processes it
  * and sends a response back to the client. The response is sent as a datagram packet.
  */
-public class UdpUnicastServerExample {
+public class UdpRequestResponseMessagingPatternServerExample {
 
   // Port to listen to
   private static final int PORT = 4445;
