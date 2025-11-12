@@ -57,6 +57,11 @@ même contenu.
 
 ### Dummy evaluation
 
+> [!IMPORTANT]
+>
+> You must be connected to the _**HEIG-VD**_ network or connected to the VPN to
+> access the evaluation platform.
+
 You can find a dummy evaluation here for testing purposes:
 <https://eval.iict-heig-vd.in/users/evaluations/cmhvq62jr01kv13wyxy19fsv5>.
 
