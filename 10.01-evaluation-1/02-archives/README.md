@@ -55,6 +55,16 @@ D'autres classes peuvent avoir des évaluations différentes qui ne sont pas
 listées ici, car elles n'ont pas été enseignées dans le même format ou avec le
 même contenu.
 
+### Dummy evaluation
+
+> [!IMPORTANT]
+>
+> You must be connected to the _**HEIG-VD**_ network or connected to the VPN to
+> access the evaluation platform.
+
+You can find a dummy evaluation here for testing purposes:
+<https://eval.iict-heig-vd.in/users/evaluations/cmhvq62jr01kv13wyxy19fsv5>.
+
 ### 2024-2025
 
 - [Evaluation 1 - Class B](./2024-2025-evaluation-1-dai-tic-b/)
