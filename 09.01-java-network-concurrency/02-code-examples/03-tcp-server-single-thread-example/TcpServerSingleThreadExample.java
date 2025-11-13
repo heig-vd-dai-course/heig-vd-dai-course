@@ -35,7 +35,7 @@ public class TcpServerSingleThreadExample {
 
     @Override
     public void run() {
-      try (socket; // This allow to use try-with-resources with the socket
+      try (socket; // This allows to use try-with-resources with the socket
           BufferedReader in =
               new BufferedReader(
                   new InputStreamReader(socket.getInputStream(), StandardCharsets.US_ASCII));

@@ -1,22 +1,24 @@
 import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class TcpServerMultiThreadExample {
+public class TcpServerCachedThreadPoolExample {
 
   private static final int PORT = 1234;
   private static final int SERVER_ID = (int) (Math.random() * 1000000);
   private static final String TEXTUAL_DATA = "👋 from Server " + SERVER_ID;
 
   public static void main(String[] args) {
-    try (ServerSocket serverSocket = new ServerSocket(PORT); ) {
+    try (ServerSocket serverSocket = new ServerSocket(PORT);
+        ExecutorService executor = Executors.newCachedThreadPool(); ) {
       System.out.println("[Server " + SERVER_ID + "] starting with id " + SERVER_ID);
       System.out.println("[Server " + SERVER_ID + "] listening on port " + PORT);
 
       while (!serverSocket.isClosed()) {
         Socket clientSocket = serverSocket.accept();
-        Thread clientThread = new Thread(new ClientHandler(clientSocket));
-        clientThread.start();
+        executor.submit(new ClientHandler(clientSocket));
       }
     } catch (IOException e) {
       System.out.println("[Server " + SERVER_ID + "] exception: " + e);
@@ -33,7 +35,7 @@ public class TcpServerMultiThreadExample {
 
     @Override
     public void run() {
-      try (socket; // This allow to use try-with-resources with the socket
+      try (socket; // This allows to use try-with-resources with the socket
           BufferedReader in =
               new BufferedReader(
                   new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
