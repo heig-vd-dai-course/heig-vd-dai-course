@@ -100,39 +100,59 @@ other resources and alternatives as well.
 ### What is a processor?
 
 - Piece of hardware that executes millions of instructions every second.
-- Gives the illusion of executing multiple tasks at the same time.
-- However, it can execute only one instruction at a time (simplified).
-- When managing multiple tasks, the processor switches between tasks.
+- Also called CPU (Central Processing Unit).
+- Processors can have one or multiple cores (called single-core or multi-core
+  processors).
 
 ![bg right:40%](https://images.unsplash.com/photo-1698440050363-1697e5f0277c?fit=crop&h=720)
 
 ### What is a core?
 
-- A physical unit inside a processor that executes instructions (always one at a
-  time).
-- A processor can have multiple cores, called multi-core processors.
-- Cores can execute multiple instructions at the same time (parallelism) - not
-  covered in this teaching unit.
+- A physical unit inside a processor that executes instructions.
+- Each core can only process one instruction at a time.
+- When multiple processors and/or multiple cores are present, they can execute
+  multiple instructions at the same time between them.
 
 ![bg right:40%](https://images.unsplash.com/photo-1716772911614-7e830fb35765?fit=crop&h=720)
 
 ### What is a process?
 
 - A process is an instance of a program that is being executed.
-- A process can have multiple threads (such as picocli).
 - Processes are isolated from each other and have their own memory space.
-- Heavier than threads: expensive to create and manage.
+- Expensive to create and manage.
+- Processes communicate between each other using Inter-Process Communication
+  (IPC) mechanisms.
 
 ![bg right:40%](https://images.unsplash.com/photo-1718154621829-881f65a74a8c?fit=crop&h=720)
 
-### What is a thread?
+### What is a thread? (1/3)
+
+- By default, a process is executed by a single processor/core, executing one
+  instruction at a time.
+- As processors/cores are super fast, it _appears_ instructions are executed
+  simultaneously.
+- Under the hood, the processor/core switches between instructions very quickly.
+
+![bg right:40%](https://images.unsplash.com/photo-1718154621829-881f65a74a8c?fit=crop&h=720)
+
+### What is a thread? (2/3)
 
 - A thread is a sequence of instructions that can be executed by a core.
-- A core can manage multiple threads at the same time.
+- A core can manage multiple threads by switching between them.
 - The main thread is the thread that starts when the application starts.
-- More lightweight than processes.
+- More threads can be created to handle different tasks concurrently.
 
 ![bg right:40%](https://images.unsplash.com/photo-1717444309226-c0809d4b5bde?fit=crop&h=720)
+
+### What is a thread? (3/3)
+
+- You have already used threads with picocli (each command is ran on a separate
+  thread).
+- Using threads, a server can manage multiple clients by switching between them:
+  each client is handled by a separate thread.
+- More lightweight than processes.
+
+![bg right:40%](https://images.unsplash.com/photo-1718154621829-881f65a74a8c?fit=crop&h=720)
 
 ### What problems can concurrency cause?
 

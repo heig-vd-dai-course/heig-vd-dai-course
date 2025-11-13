@@ -127,37 +127,27 @@ processor is.
 
 ### What is a processor?
 
-A processor is a piece of hardware that executes instructions. It can execute
-only one instruction at a time.
+A processor is a piece of hardware that executes instructions.
+
+Most computers have one processor (also called CPU for Central Processing Unit),
+but some computers have multiple processors.
 
 A processor can execute instructions very quickly (millions of instructions per
-second). It therefore gives the impression that it can execute multiple
-instructions at the same time.
+second).
 
-However, most computers and servers only have one processor. They can only
-execute one instruction at a time (modern processors can execute multiple
-instructions at the same time using techniques such as pipelining and
-superscalar architecture, but for the sake of simplicity, we will consider that
-a processor can only execute one instruction at a time).
-
-When a processor manage multiple tasks at a given time, it is called concurrency
-and makes use of threads by switching between tasks very quickly.
+A processor can have one or more cores, called a multi-core processor.
 
 ### What is a core?
 
-A core is a part of a processor that can execute instructions. A processor can
-have multiple cores. It is called a multi-core processor.
+A core is physical unit inside a processor that executes instructions.
+
+Each core can only execute one instruction at a time (modern processors can
+execute multiple instructions at the same time using techniques such as
+pipelining and superscalar architecture, but for the sake of simplicity, we will
+consider that a processor/core can only execute one instruction at a time).
 
 When multiple processors and/or multiple cores are present, they can execute
-multiple instructions at the same time. When an application make usage of this
-feature for one common goal, this is called parallelism or
-[parallel computing](https://en.wikipedia.org/wiki/Parallel_computing).
-
-Parallel computing is quite complex to implement. It is therefore not covered in
-this course.
-
-In this course, we will focus on concurrency to manage multiple clients at a
-given time, even on a single-core processor.
+multiple instructions at the same time between them.
 
 ### What is a process?
 
@@ -173,15 +163,29 @@ Processes can communicate with each other using inter-process communication
 
 ### What is a thread?
 
-A processor (or core) can manage multiple threads at the same time. A thread is
-a sequence of instructions that can be managed independently of the main thread.
+By default, a process is executed by a single processor/core, executing one
+instruction at a time.
 
-The main thread is the thread that is created when the application starts.
+However, as processors/cores are super fast, it can _appear_ that a single
+processor/core executes multiple instructions simultaneously.
 
-It can create other threads to handle other tasks.
+Under the hood, the processor/core switches between multiple tasks very quickly,
+giving this impression that multiple tasks are executed at the same time. This
+is called called
+[scheduling](<https://en.wikipedia.org/wiki/Scheduling_(computing)>).
 
-Think of a thread as a sub-task that can be executed independently of the main
-program.
+A thread is a sequence of instructions that can be executed independently of the
+main process.
+
+When a process is executed by a single processor/core, it is called
+single-threaded. It means that the process can only execute one instruction at a
+time on one given processor/core, as seen previously.
+
+The main thread is the thread that is created when the application starts. It
+can then create other threads to handle other tasks.
+
+A process creating multiple threads to handle multiple tasks on the same
+processor/core is called concurrency.
 
 A thread is quite similar to a process, except that it shares the same memory
 space as the other threads. It is therefore much cheaper to create and destroy
@@ -196,9 +200,19 @@ You have already used threads in this teaching unit while using picocli, maybe
 without knowing it: each command is executed in a separate thread and is marked
 with the interface `Runnable` or `Callable` to accomplish this.
 
-Using threads, a server can manage multiple clients at the same time: each
-client is handled by a separate thread and the server can switch between
+Using threads, a server can manage multiple clients by switching between them:
+each client is handled by a separate thread and the server can switch between
 threads.
+
+When an application make usage of multiple processors/cores _at the same time
+for one common goal_, this is called parallelism or
+[parallel computing](https://en.wikipedia.org/wiki/Parallel_computing).
+
+Parallel computing is quite complex to implement. It is therefore not covered in
+this teaching unit.
+
+In this teaching unit, we will focus on concurrency to manage multiple clients
+at a given time, even on a single-core processor.
 
 ### What problems can concurrency cause?
 
