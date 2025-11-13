@@ -15,24 +15,20 @@ public class TcpServerConcurrentDataStructuresExample {
   private static final String TEXTUAL_DATA = "👋 from Server " + SERVER_ID;
 
   // Total number of clients connected so far
-  private final AtomicInteger totalNumberOfClients = new AtomicInteger(0);
+  private static final AtomicInteger totalNumberOfClients = new AtomicInteger(0);
 
   // Clients last connection time
-  private final Map<String, Date> clientConnections = new ConcurrentHashMap<>();
+  private static final Map<String, Date> clientConnections = new ConcurrentHashMap<>();
 
   public static void main(String[] args) {
-    new TcpServerConcurrentDataStructuresExample().start();
-  }
-
-  private void start() {
     try (ServerSocket serverSocket = new ServerSocket(PORT);
-         ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+        ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor(); ) {
       System.out.println("[Server " + SERVER_ID + "] starting with id " + SERVER_ID);
       System.out.println("[Server " + SERVER_ID + "] listening on port " + PORT);
 
       while (!serverSocket.isClosed()) {
         Socket clientSocket = serverSocket.accept();
-        executor.submit(new ClientHandler(clientSocket, totalNumberOfClients, clientConnections));
+        executor.submit(new ClientHandler(clientSocket));
       }
     } catch (IOException e) {
       System.out.println("[Server " + SERVER_ID + "] exception: " + e);
@@ -42,24 +38,20 @@ public class TcpServerConcurrentDataStructuresExample {
   static class ClientHandler implements Runnable {
 
     private final Socket socket;
-    private final AtomicInteger totalNumberOfClients;
-    private final Map<String, Date> clientConnections;
 
-    public ClientHandler(Socket socket, AtomicInteger totalNumberOfClients, Map<String, Date> clientConnections) {
+    public ClientHandler(Socket socket) {
       this.socket = socket;
-      this.totalNumberOfClients = totalNumberOfClients;
-      this.clientConnections = clientConnections;
     }
 
     @Override
     public void run() {
       try (socket; // This allows to use try-with-resources with the socket
-           BufferedReader in =
-               new BufferedReader(
-                   new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
-           BufferedWriter out =
-               new BufferedWriter(
-                   new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8))) {
+          BufferedReader in =
+              new BufferedReader(
+                  new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
+          BufferedWriter out =
+              new BufferedWriter(
+                  new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8))) {
 
         String clientHostname = socket.getInetAddress().getHostName();
         int clientPort = socket.getPort();
