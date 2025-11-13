@@ -20,38 +20,46 @@ public class TcpServerConcurrentDataStructuresExample {
   // Clients last connection time
   private final Map<String, Date> clientConnections = new ConcurrentHashMap<>();
 
-  public void main(String[] args) {
+  public static void main(String[] args) {
+    new TcpServerConcurrentDataStructuresExample().start();
+  }
+
+  private void start() {
     try (ServerSocket serverSocket = new ServerSocket(PORT);
-        ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor(); ) {
+         ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
       System.out.println("[Server " + SERVER_ID + "] starting with id " + SERVER_ID);
       System.out.println("[Server " + SERVER_ID + "] listening on port " + PORT);
 
       while (!serverSocket.isClosed()) {
         Socket clientSocket = serverSocket.accept();
-        executor.submit(new ClientHandler(clientSocket));
+        executor.submit(new ClientHandler(clientSocket, totalNumberOfClients, clientConnections));
       }
     } catch (IOException e) {
       System.out.println("[Server " + SERVER_ID + "] exception: " + e);
     }
   }
 
-  class ClientHandler implements Runnable {
+  static class ClientHandler implements Runnable {
 
     private final Socket socket;
+    private final AtomicInteger totalNumberOfClients;
+    private final Map<String, Date> clientConnections;
 
-    public ClientHandler(Socket socket) {
+    public ClientHandler(Socket socket, AtomicInteger totalNumberOfClients, Map<String, Date> clientConnections) {
       this.socket = socket;
+      this.totalNumberOfClients = totalNumberOfClients;
+      this.clientConnections = clientConnections;
     }
 
     @Override
     public void run() {
       try (socket; // This allows to use try-with-resources with the socket
-          BufferedReader in =
-              new BufferedReader(
-                  new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
-          BufferedWriter out =
-              new BufferedWriter(
-                  new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8))) {
+           BufferedReader in =
+               new BufferedReader(
+                   new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
+           BufferedWriter out =
+               new BufferedWriter(
+                   new OutputStreamWriter(socket.getOutputStream(), StandardCharsets.UTF_8))) {
 
         String clientHostname = socket.getInetAddress().getHostName();
         int clientPort = socket.getPort();
