@@ -213,10 +213,10 @@ Dates are taken from the
 |    [06](#-course-06) | 27.10. - 02.11.25         | Define an application protocol           | Practical work 2 (1/6)                       | 🟢 Ready        |
 |    [07](#-course-07) | 03.11. - 09.11.25         | Java TCP and UDP programming (1/2)       | Practical work 2 (2/6)                       | 🟢 Ready        |
 |    [08](#-course-08) | 10.11. - 16.11.25         | Java TCP and UDP programming (2/2)       | Practical work 2 (3/6)                       | 🟢 Ready        |
-|    [09](#-course-09) | 17.11. - 23.11.25         | Java network concurrency                 | Practical work 2 (4/6)                       | 🟡 In progress  |
+|    [09](#-course-09) | 17.11. - 23.11.25         | Java network concurrency                 | Practical work 2 (4/6)                       | 🟢 Ready        |
 | 🚨 [10](#-course-10) | 24.11. - 30.11.25         | Evaluation 1                             | Practical work 2 (5/6)                       | 🟢 Ready        |
-| 🚨 [11](#-course-11) | 01.12. - 07.12.25         | SSH and SCP                              | Practical work 2 (6/6) - Presentations       | 🔴 To do        |
-|    [12](#-course-12) | 08.12. - 14.12.25         | HTTP and curl                            | Practical work 3 (1/5)                       | 🔴 To do        |
+| 🚨 [11](#-course-11) | 01.12. - 07.12.25         | SSH and SCP                              | Practical work 2 (6/6) - Presentations       | 🟢 Ready        |
+|    [12](#-course-12) | 08.12. - 14.12.25         | HTTP and curl                            | Practical work 3 (1/5)                       | 🟡 In progress  |
 |    [13](#-course-13) | 15.12. - 21.12.25         | Web infrastructures                      | Practical work 3 (2/5)                       | 🔴 To do        |
 |                    - | 22.12. - 28.12.25         | _No course: holidays_                    | _No course: holidays_                        | -               |
 |                    - | 29.12. - 04.01.26         | _No course: holidays_                    | _No course: holidays_                        | -               |
@@ -849,4 +849,4 @@ directory. These can help you to prepare the teaching unit.
 [^status]:
     🟢 Ready: the course is complete and ready for use. 🟡 In progress: the
     course is being written/updated. 🔴 To do: the course needs to be
-    written/updated
+    written/updated.

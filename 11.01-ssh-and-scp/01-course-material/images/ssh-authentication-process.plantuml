@@ -1,0 +1,35 @@
+@startuml ssh-authentication-process
+
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!pragma teoz true
+
+title "SSH authentication process"
+
+actor "User" as user
+participant "SSH Client" as client
+participant "SSH Server" as server
+
+user -> client: Start SSH Session
+user -> client: Provide Credentials
+client -> server: Open SSH Connection
+server --> client: SSH server Banner
+client -> server: Authenticate (Public Key)
+server --> client: Request Public Key
+client --> server: Send Public Key
+server --> client: Public Key Accepted
+client -> server: Authenticate (Private Key)
+server --> client: Request Challenge
+client --> server: Sign Challenge
+server --> client: Challenge Response
+server --> client: Authentication Successful
+user -> client: Execute SSH Commands
+client -> server: Send SSH Commands
+server -> client: Execute Commands
+client --> user: Display Output
+@enduml
