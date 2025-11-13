@@ -34,12 +34,12 @@ _paginate: false
 
 ## Objectives
 
-- Learn what is concurrency.
-- Learn the different ways to handle multiple clients at the same time:
-  - Multi-processing.
-  - Multi-threading.
+- Define what concurrency is.
+- Define the different ways to handle multiple clients at the same time:
+  - Multiprocessing.
+  - Multithreading.
   - Asynchronous programming.
-- Learn how to implement and manage concurrency in Java network applications.
+- Implement and manage concurrency in Java network applications.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -89,7 +89,7 @@ other resources and alternatives as well.
 
 ### Concurrency: an introduction
 
-- Ability to handle multiple tasks at the same time.
+- The ability to manage multiple tasks running at the same time.
 - Differs from parallelism, the ability to execute multiple tasks
   simultaneously.
 - Before we dive into concurrency, let's take a step back and remember what a
@@ -129,9 +129,10 @@ other resources and alternatives as well.
 
 - By default, a process is executed by a single processor/core, executing one
   instruction at a time.
-- As processors/cores are super fast, it _appears_ instructions are executed
-  simultaneously.
-- Under the hood, the processor/core switches between instructions very quickly.
+- As processors/cores are super fast, it _appears_ processes/threads are
+  executed simultaneously.
+- Under the hood, the processor/core switches between processes/threads very
+  quickly.
 
 ![bg right:40%](https://images.unsplash.com/photo-1718154621829-881f65a74a8c?fit=crop&h=720)
 
@@ -150,7 +151,7 @@ other resources and alternatives as well.
   thread).
 - Using threads, a server can manage multiple clients by switching between them:
   each client is handled by a separate thread.
-- More lightweight than processes.
+- Threads are more lightweight than processes.
 
 ![bg right:40%](https://images.unsplash.com/photo-1718154621829-881f65a74a8c?fit=crop&h=720)
 
@@ -165,9 +166,9 @@ other resources and alternatives as well.
 
 ### What happens when multiple threads access the same resource?
 
-- The processor has to switch between threads.
+- The processor can switch between threads at any time.
 - The order in which the threads are executed is not guaranteed.
-- The threads can access the same resource at the same time.
+- Threads can access the same resource at the same time.
 
 ![bg right:40%](https://images.unsplash.com/photo-1506951796365-405279289a75?fit=crop&h=720)
 
@@ -203,27 +204,27 @@ Handling multiple clients at the same time is called concurrency.
 
 Concurrency can be achieved with:
 
-- Multi-processing.
-- Multi-threading.
+- Multiprocessing.
+- Multithreading.
 - Asynchronous programming.
 
 ![bg right:40%](https://images.unsplash.com/photo-1559329007-40df8a9345d8?fit=crop&h=720)
 
-### Multi-processing
+### Multiprocessing
 
 - Create an entirely new process for each client.
-- Heavyweight and slow.
+- Heavy and slow.
 - Not recommended.
 - Analogy: a new restaurant for each customer, including the kitchen, waiters,
   etc.
 
 ![bg right:40%](https://images.unsplash.com/photo-1562835155-1fa627c69744?fit=crop&h=720)
 
-### Multi-threading
+### Multithreading
 
 - Create a new thread for each client.
-- More lightweight and faster than multi-processing.
-- Recommended with thread pool to limit resource usage.
+- More lightweight and faster than multiprocessing.
+- Recommended with a thread pool to limit resource usage.
 - Not enough or too many threads can slow down the system.
 - Analogy: a new or limited number of tables for each customer.
 
@@ -286,14 +287,14 @@ public Integer operatorsWorker() {
 }
 ```
 
-## Concurrent safe variable types and data structures in Java
+## Thread safe variable types and data structures in Java
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course]. You can find
 other resources and alternatives as well.
 
-### Concurrent safe variable types and data structures in Java
+### Thread safe variable types and data structures in Java
 
 - A thread-safe variable type and/or data structure is a variable type/data
   structure that can be accessed by multiple threads at the same time.
@@ -315,9 +316,10 @@ other resources and alternatives as well.
 
 ---
 
-- Multiple concurrent variable types and/or data structures can be co-dependent.
-- You must use them together with locks (the equivalent to mutexes and
-  semaphores in C/C++) to avoid inconsistencies.
+- Multiple concurrent variable types and/or data structures can be updated
+  together atomically.
+- You must use locks (the equivalent to mutexes and semaphores in C/C++) to
+  avoid inconsistencies.
 
 Locks will not be covered (and not expected to be used) in this teaching unit
 but you can find additional information in the [course material][course].

@@ -2,6 +2,7 @@ import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,13 +15,12 @@ public class TcpServerConcurrentDataStructuresExample {
   private static final String TEXTUAL_DATA = "👋 from Server " + SERVER_ID;
 
   // Total number of clients connected so far
-  private static final AtomicInteger totalNumberOfClients = new AtomicInteger(0);
+  private final AtomicInteger totalNumberOfClients = new AtomicInteger(0);
 
   // Clients last connection time
-  private static final ConcurrentHashMap<String, Date> clientConnections =
-      new ConcurrentHashMap<>();
+  private final Map<String, Date> clientConnections = new ConcurrentHashMap<>();
 
-  public static void main(String[] args) {
+  public void main(String[] args) {
     try (ServerSocket serverSocket = new ServerSocket(PORT);
         ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor(); ) {
       System.out.println("[Server " + SERVER_ID + "] starting with id " + SERVER_ID);
@@ -35,7 +35,7 @@ public class TcpServerConcurrentDataStructuresExample {
     }
   }
 
-  static class ClientHandler implements Runnable {
+  class ClientHandler implements Runnable {
 
     private final Socket socket;
 

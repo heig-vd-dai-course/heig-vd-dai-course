@@ -36,11 +36,11 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [What happens when multiple threads access the same resource?](#what-happens-when-multiple-threads-access-the-same-resource)
 - [Handling one client at a time](#handling-one-client-at-a-time)
 - [Handling multiple clients with concurrency](#handling-multiple-clients-with-concurrency)
-  - [Multi-processing](#multi-processing)
-  - [Multi-threading](#multi-threading)
+  - [Multiprocessing](#multiprocessing)
+  - [Multithreading](#multithreading)
   - [Asynchronous programming](#asynchronous-programming)
 - [Handling multiple threads in Java](#handling-multiple-threads-in-java)
-- [Concurrent safe variable types and data structures in Java](#concurrent-safe-variable-types-and-data-structures-in-java)
+- [Thread safe variable types and data structures in Java](#thread-safe-variable-types-and-data-structures-in-java)
 - [Practical content](#practical-content)
   - [Execute the code examples](#execute-the-code-examples)
   - [Answer the following questions](#answer-the-following-questions)
@@ -56,7 +56,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-You might have notice in previous courses that your network applications could
+You might have noticed in previous courses that your network applications could
 only handle one client at a time. This is not very useful in a production
 environment.
 
@@ -68,12 +68,12 @@ applications to allow the handling of multiple clients at the same time.
 
 In a nutshell, by the end of this course, you should be able to:
 
-- Learn what is concurrency.
-- Learn the different ways to handle multiple clients at the same time:
-  - Multi-processing.
-  - Multi-threading.
+- Define what concurrency is.
+- Define the different ways to handle multiple clients at the same time:
+  - Multiprocessing.
+  - Multithreading.
   - Asynchronous programming.
-- Learn how to implement and manage concurrency in Java network applications.
+- Implement and manage concurrency in Java network applications.
 
 ## Disclaimer
 
@@ -156,7 +156,7 @@ A process is a program in execution. It is identified by a process ID.
 Each process has its own memory space. It cannot access the memory space of
 another process.
 
-A process is a heavy-weight object. It is quite expensive to create and destroy.
+A process is resource heavy. It is quite expensive to create and destroy.
 
 Processes can communicate with each other using inter-process communication
 (IPC) but it is quite complex to implement.
@@ -175,7 +175,8 @@ is called called
 [scheduling](<https://en.wikipedia.org/wiki/Scheduling_(computing)>).
 
 A thread is a sequence of instructions that can be executed independently of the
-main process.
+main process. A thread is always created by a process and is executed by a
+processor/core.
 
 When a process is executed by a single processor/core, it is called
 single-threaded. It means that the process can only execute one instruction at a
@@ -185,7 +186,8 @@ The main thread is the thread that is created when the application starts. It
 can then create other threads to handle other tasks.
 
 A process creating multiple threads to handle multiple tasks on the same
-processor/core is called concurrency.
+processor/core is called concurrency. Concurrency is the ability to switch
+between multiple processes/threads for execution on the processor/core.
 
 A thread is quite similar to a process, except that it shares the same memory
 space as the other threads. It is therefore much cheaper to create and destroy
@@ -279,20 +281,20 @@ same time.
 There are multiple ways to handle multiple clients with concurrency (among
 others):
 
-- Multi-processing.
-- Multi-threading.
+- Multiprocessing.
+- Multithreading.
 - Asynchronous programming.
 
 Java has a package for concurrency called
 [`java.util.concurrent`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/package-summary.html).
 
-In this teaching unit, we will focus on multi-threading but the other methods
-are equally valid and interesting to learn.
+In this teaching unit, we will focus on multithreading but the other methods are
+equally valid and interesting to learn.
 
-### Multi-processing
+### Multiprocessing
 
-Multi-processing is the ability of an application to handle multiple processes
-at the same time.
+Multiprocessing is the ability of an application to handle multiple processes at
+the same time.
 
 A process is a program in execution. It is identified by a process ID.
 
@@ -303,8 +305,8 @@ The main process is the process that is created when the application starts.
 
 It can create other processes to handle multiple clients by forking itself.
 
-However, a process is a heavy-weight object. It is expensive to create and
-destroy as it is a copy of the main process.
+However, a process is resource heavy. It is expensive to create and destroy as
+it is a copy of the main process.
 
 Processes can communicate with each other using inter-process communication
 (IPC) but it is quite complex to implement.
@@ -312,12 +314,12 @@ Processes can communicate with each other using inter-process communication
 An analogy is to think of a process as restaurant chain with multiple
 restaurants. Each restaurant has only one table and can handle one customer. If
 a customer is already sitting at a table of a given restaurant, another customer
-must wait until the first customer leaves or can sit at a table at another
+must wait until the first customer leaves or can sit at a table in another
 restaurant.
 
-### Multi-threading
+### Multithreading
 
-Multi-threading is the ability of an application to handle multiple threads at
+Multithreading is the ability of an application to handle multiple threads at
 the same time.
 
 A thread is a sequence of instructions that can be executed independently of the
@@ -349,8 +351,8 @@ Using this approach, the more customers arrive, the more tables are added. What
 happens if too many customers arrive? The restaurant will run out of space and
 resources, exhausting the restaurant manager (the operating system).
 
-This approach is not suitable for production as space and resources are limited
-on a given system.
+This approach is not suitable for use in a production (customer facing)
+environment as space and resources are limited on a given system.
 
 When discussing the thread pool approach, an analogy is to think of a restaurant
 with a limited number of tables. When a new customer arrives, the restaurant
@@ -435,7 +437,7 @@ public Integer operatorsWorker() {
 }
 ```
 
-## Concurrent safe variable types and data structures in Java
+## Thread safe variable types and data structures in Java
 
 When multiple threads access the same resource (= the same variable), it is
 important to use concurrency safe variables types and/or data structures.
@@ -486,9 +488,11 @@ threads and must be used instead of the standard collections (`HashMap`,
 `ArrayList`, `HashSet`, `LinkedList`, etc.) when multiple threads access the
 same resource.
 
-When multiple concurrent variable types and/or data structures are co-dependent,
-it is important to use them together with locks to avoid inconsistencies (the
-same as mutexes and semaphores in C/C++).
+When multiple concurrent variable types and/or data structures must be updated
+together atomically (for example, when an `AtomicInteger` and a
+`ConcurrentHashMap` must be updated at the same time), it is important to use
+them together with locks to avoid inconsistencies (the same as mutexes and
+semaphores in C/C++).
 
 Locks will not be covered (and not expected to be used) in this teaching unit
 but you can find additional information in the

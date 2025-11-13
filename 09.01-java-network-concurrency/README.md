@@ -20,12 +20,12 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 By the end of this course, students should be able to:
 
-- Learn what is concurrency.
-- Learn the different ways to handle multiple clients at the same time:
-  - Multi-processing.
-  - Multi-threading.
+- Define what concurrency is.
+- Define the different ways to handle multiple clients at the same time:
+  - Multiprocessing.
+  - Multithreading.
   - Asynchronous programming.
-- Learn how to implement and manage concurrency in Java network applications.
+- Implement and manage concurrency in Java network applications.
 
 ## Teaching and learning methods
 

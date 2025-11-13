@@ -4,7 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class TcpServerWithConrrentDataStructureExample {
+public class TcpServerVirtualThreadExample {
 
   private static final int PORT = 1234;
   private static final int SERVER_ID = (int) (Math.random() * 1000000);
