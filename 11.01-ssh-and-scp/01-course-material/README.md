@@ -99,23 +99,23 @@ private key, this person can impersonate the client.
 The following diagram illustrates the communication between the client and the
 server:
 
-![Sequence diagram of the public/private keys communication](./images/a-quick-reminder-about-security.png)
+![Sequence diagram of the public/private keys communication mechanism](./images/sequence-diagram-of-the-public-private-keys-communication-mechanism.png)
 
 ## SSH
 
 SSH is a protocol that allows you to connect to a remote machine. It is a
-replacement for the Telnet protocol as Telnet is an old and non-secure protocol.
+replacement for the Telnet protocol as Telnet is an old and unsecure protocol.
 
 Relying on the public/private key mechanism, SSH ensures the confidentiality and
 integrity of the data exchanged between the client and the server.
 
 The SSH protocol is described in many RFCs:
 
-- [RFC 4250](https://datatracker.ietf.org/doc/html/rfc4250)
-- [RFC 4251](https://datatracker.ietf.org/doc/html/rfc4251)
-- [RFC 4252](https://datatracker.ietf.org/doc/html/rfc4252)
+- [RFC 4250](https://datatracker.ietf.org/doc/html/rfc4250).
+- [RFC 4251](https://datatracker.ietf.org/doc/html/rfc4251).
+- [RFC 4252](https://datatracker.ietf.org/doc/html/rfc4252).
 - [RFC 4253](https://datatracker.ietf.org/doc/html/rfc4253).
-- [RFC 4254](https://datatracker.ietf.org/doc/html/rfc4254)
+- [RFC 4254](https://datatracker.ietf.org/doc/html/rfc4254).
 
 The SSH protocol uses the TCP protocol on port 22. It uses public/private keys
 to authenticate the client. It is also possible to use a password to

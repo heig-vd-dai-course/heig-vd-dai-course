@@ -1,4 +1,4 @@
-@startuml a-quick-reminder-about-security
+@startuml sequence-diagram-of-the-public-private-keys-communication-mechanism
 skinparam boxPadding 100
 skinparam maxMessageSize 300
 skinparam noteTextAlignment center
@@ -8,7 +8,7 @@ autonumber
 
 !pragma teoz true
 
-title "A quick reminder about security"
+title "Sequence diagram of the public/private keys communication mechanism"
 
 actor "Alice" as alice
 actor "Bob" as bob

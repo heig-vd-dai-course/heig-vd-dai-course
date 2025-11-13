@@ -53,7 +53,7 @@ other resources and alternatives as well.
 - Most secure protocols rely on cryptography.
 - Cryptography is based on algorithms and keys.
 
-![bg right h:90%](./images/a-quick-reminder-about-security.png)
+![bg right h:90%](./images/sequence-diagram-of-the-public-private-keys-communication-mechanism.png)
 
 ## SSH
 
