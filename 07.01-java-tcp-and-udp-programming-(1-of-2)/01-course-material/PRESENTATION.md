@@ -254,7 +254,7 @@ other resources and alternatives as well.
 
 ![bg h:80%](./images/udp-unicast-client-server-workflow-part-4.png)
 
-#### Processing data from datagrams
+#### Processing data from datagrams (1/2)
 
 A datagram contains a payload as a byte array.
 
@@ -271,7 +271,7 @@ DatagramPacket packet = new DatagramPacket(
 );
 ```
 
----
+#### Processing data from datagrams (2/2)
 
 You can get the payload of a received datagram as a byte array:
 
@@ -384,7 +384,7 @@ Think of it as a public announcement.
 
 ![bg right:40% contain](https://upload.wikimedia.org/wikipedia/commons/d/dc/Broadcast.svg)
 
-### Multicast
+### Multicast (1/2)
 
 - One-to-many communication.
 - One sender and some receivers.
@@ -396,14 +396,13 @@ Think of it as a group conversation.
 
 ![bg right:40% contain](https://upload.wikimedia.org/wikipedia/commons/3/30/Multicast.svg)
 
----
+### Multicast (2/2)
 
 - Just as with broadcast, it can be blocked by routers.
 - Broadcast/multicast are quite guaranteed **not** to work on the public
   Internet.
 - Made for the local network.
-- Multicast is a complex topic, not covered in depth in this course.
-- The course material contains some resources.
+- Multicast is a complex topic, not covered in depth in this teaching unit.
 
 ![bg right w:90%](./images/multicast-meme.jpg)
 
@@ -471,33 +470,24 @@ the connection.
 
 Useful to keep a connection open and send multiple commands!
 
-### Differences between TCP and UDP
+### Summary of differences between TCP and UDP
 
 <!-- _class: lead -->
 
 More details for this section in the [course material][course]. You can find
 other resources and alternatives as well.
 
-### Summary of differences between TCP and UDP
-
-- **TCP:**
-  - Connection-oriented.
-  - Reliable.
-  - Stream protocol.
-  - Unicast.
-  - Request-response.
-  - Used for FTP, HTTP, SMTP, SSH, etc.
-
 ---
 
-- **UDP:**
-  - Connectionless.
-  - Unreliable.
-  - Datagram protocol.
-  - Unicast, broadcast and multicast.
-  - Fire-and-forget, request-response (manual).
-  - Service discovery protocols.
-  - Used for DNS, streaming, gaming, etc.
+| TCP                                 | UDP                                   |
+| :---------------------------------- | :------------------------------------ |
+| Connection-oriented                 | Connectionless                        |
+| Reliable                            | Unreliable                            |
+| Stream protocol                     | Datagram protocol                     |
+| Unicast                             | Unicast, broadcast and multicast      |
+| Request-response                    | Fire-and-forget, request-response     |
+| -                                   | Service discovery protocols           |
+| Used for FTP, HTTP, SMTP, SSH, etc. | Used for DNS, streaming, gaming, etc. |
 
 ### Questions
 
@@ -518,6 +508,18 @@ Do you have any questions?
 - UDP - Try to emit from multiple UDP emitters at the same time.
 - Implement and Dockerize the _"Guess the number"_ game (optional).
 - Implement and Dockerize the _"Temperature monitoring"_ application (optional).
+
+### Now it's your turn!
+
+- Read the course material.
+- Do the practical content.
+- Ask questions if you have any.
+
+➡️ [Find the course on GitHub][course].
+
+**Do not hesitate to help each other! There's no need to rush!**
+
+![bg right w:75%][course-qr-code]
 
 ## Finished? Was it easy? Was it hard?
 

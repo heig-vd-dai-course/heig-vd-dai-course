@@ -4,15 +4,16 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class TcpServerCachedThreadPoolExample {
+public class TcpServerFixedThreadPoolExample {
 
   private static final int PORT = 1234;
   private static final int SERVER_ID = (int) (Math.random() * 1000000);
+  private static final int NUMBER_OF_THREADS = 2;
   private static final String TEXTUAL_DATA = "👋 from Server " + SERVER_ID;
 
   public static void main(String[] args) {
     try (ServerSocket serverSocket = new ServerSocket(PORT);
-        ExecutorService executor = Executors.newCachedThreadPool(); ) {
+        ExecutorService executor = Executors.newFixedThreadPool(NUMBER_OF_THREADS); ) {
       System.out.println("[Server " + SERVER_ID + "] starting with id " + SERVER_ID);
       System.out.println("[Server " + SERVER_ID + "] listening on port " + PORT);
 
@@ -35,7 +36,7 @@ public class TcpServerCachedThreadPoolExample {
 
     @Override
     public void run() {
-      try (socket; // This allow to use try-with-resources with the socket
+      try (socket; // This allows to use try-with-resources with the socket
           BufferedReader in =
               new BufferedReader(
                   new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
