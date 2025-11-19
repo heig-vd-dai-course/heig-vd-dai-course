@@ -170,6 +170,44 @@ The following schema shows the workflow of a TCP client/server application:
 
 ![TCP client/server workflow](./images/tcp-client-server-workflow.png)
 
+**Note on socket connection behavior**
+
+Under the hood, as soon as the `ServerSocket` is created, it starts listening 
+for incoming connection requests.
+
+When a client creates a `new Socket(HOST, PORT);`, it will attempt to establish 
+a TCP connection with the server. It is a blocking call.
+
+However, by default, the operating system on the server side accepts the
+incoming TCP connection request and puts it in a queue. So from the client's
+perspective, the TCP connection request is accepted and the socket is created 
+(on the client side) even though the server may not yet have called the 
+`ServerSocket.accept()` method.
+
+However, at this point, any data sent to the server is cached by its OS and not 
+received by the server application (the TCP connection is established, but the 
+client is on hold). 
+
+When the server eventually calls the `accept()` method, a new `Socket` is 
+created on the server side and bound to the (first) pending TCP connection from 
+the queue. The server and client can now communicate with each other.
+
+This behavior explains why a client can successfully connect to a server even if
+the server has not yet called `accept()`. The connection request is queued by 
+the server's operating system until the server is ready to accept it.
+
+The number of pending connections that can be queued is limited and can be 
+configured when creating the `ServerSocket` using the `backlog` parameter, and
+its behaviour is platform dependent (the parameter can be ignored by the OS, as 
+stated in the [javadoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/ServerSocket.html#%3Cinit%3E(int,int))).
+
+We mention this behavior here to clarify why a client can connect to a server
+even if the server has not yet called `accept()`, e.g. because it is busy
+processing requests for a client.
+
+In the concurrency course we will see how to properly handle multiple clients on
+the server side.
+
 #### Processing data from streams
 
 Sockets use data streams to send and receive data, just like files.
