@@ -180,9 +180,9 @@ a TCP connection with the server. It is a blocking call.
 
 However, by default, the operating system on the server side accepts the
 incoming TCP connection request and puts it in a queue. So from the client's
-perspective, the TCP connection request is accepted and the socket is created
-even though the server may not yet have called the `ServerSocket.accept()`
-method.
+perspective, the TCP connection request is accepted and the socket is created 
+(on the client side) even though the server may not yet have called the 
+`ServerSocket.accept()` method.
 
 However, at this point, any data sent to the server is cached by the OS and not 
 received by the server (the TCP connection is established, but the client is on 
