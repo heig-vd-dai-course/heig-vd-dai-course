@@ -184,9 +184,13 @@ perspective, the TCP connection request is accepted and the socket is created
 even though the server may not yet have called the `ServerSocket.accept()`
 method.
 
-When the server eventually calls the `accept()` method, it retrieves the next
-pending TCP connection from the queue and binds it to a new `Socket` instance to
-handle communication with the client.
+However, at this point, any data sent to the server is cached by the OS and not 
+received by the server (the TCP connection is established, but the client is on 
+hold). 
+
+When the server eventually calls the `accept()` method, a new `Socket` is 
+created on the server side and bound to the (first) pending TCP connection from 
+the queue. The server and client can now communicate with each other.
 
 This behavior explains why a client can successfully connect to a server even if
 the server has not yet called `accept()`. The connection request is queued by 
