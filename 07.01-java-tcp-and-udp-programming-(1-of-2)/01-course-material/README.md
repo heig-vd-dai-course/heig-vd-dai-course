@@ -184,9 +184,9 @@ perspective, the TCP connection request is accepted and the socket is created
 (on the client side) even though the server may not yet have called the 
 `ServerSocket.accept()` method.
 
-However, at this point, any data sent to the server is cached by the OS and not 
-received by the server (the TCP connection is established, but the client is on 
-hold). 
+However, at this point, any data sent to the server is cached by its OS and not 
+received by the server application (the TCP connection is established, but the 
+client is on hold). 
 
 When the server eventually calls the `accept()` method, a new `Socket` is 
 created on the server side and bound to the (first) pending TCP connection from 
