@@ -36,6 +36,9 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - [Constraints](#constraints)
 - [Submission](#submission)
 - [Presentations](#presentations)
+  - [DAI-TIC-C (Wednesday mornings)](#dai-tic-c-wednesday-mornings)
+  - [DAI-TIC-B (Wednesday afternoons)](#dai-tic-b-wednesday-afternoons)
+  - [DAI-TIC-A (Thursdays)](#dai-tic-a-thursdays)
 - [Grades and feedback](#grades-and-feedback)
 - [Tips](#tips)
   - [Create diagrams](#create-diagrams)
@@ -475,18 +478,16 @@ information:
 
 ## Presentations
 
-- DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10h30**
-  in room **TBD**
-- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14h45**
+- DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10:30**
+  in room **B51a**
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14:45**
   in room **B38**
-- DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **15h30** in room
-  **TBD**
+- DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **16:30** in room
+  **B51a**
 
 The exact schedule will be communicated once the groups are known.
 
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
-
-<!--
 
 We only have **8 minutes per group**. You decide what you want to show us and
 how you want to present it.
@@ -502,53 +503,51 @@ The presentation order is random and is stated in the next tables:
 
 ### DAI-TIC-C (Wednesday mornings)
 
-| #   | Group                                                           | Passage     |
-| --- | --------------------------------------------------------------- | ----------- |
-| 1   | Nolan Evard, Maikol Correia Da Silva and Alberto De Sousa Lopes | 10:30-10:38 |
-| 2   | Sofian Ethenoz, François de Courville and Mouhamed Sakho        | 10:40-10:48 |
-| 3   | Romain Durussel and Abram Zweifel                               | 10:50-10:58 |
-| 4   | Léo Bernard and Yann Mermoud                                    | 11:00-11:08 |
-| 5   | Pierre Thiébaud and Victor Giordani                             | 11:10-11:18 |
-| 6   | Koray Akgul and Nathan Stampfli                                 | 11:20-11:28 |
-| 7   | Theo Bensaci and Yasser Gasmi                                   | 11:30-11:38 |
-| 8   | Gabriel Bader and Mauro Santos                                  | 11:40-11:48 |
+|   # | Group                                                           | Passage     |
+| --: | :-------------------------------------------------------------- | :---------- |
+|   1 | Gabriel Bader and Mauro Santos                                  | 10:30-10:48 |
+|   2 | Theo Bensaci and Yasser Gasmi                                   | 10:40-10:48 |
+|   3 | Pierre Thiébaud and Victor Giordani                             | 10:50-10:58 |
+|   4 | Koray Akgul and Nathan Stampfli                                 | 11:00-11:08 |
+|   5 | Romain Durussel and Abram Zweifel                               | 11:10-11:18 |
+|   6 | Léo Bernard and Yann Mermoud                                    | 11:20-11:28 |
+|   7 | Sofian Ethenoz, François de Courville and Mouhamed Sakho        | 11:30-11:38 |
+|   8 | Nolan Evard, Maikol Correia Da Silva and Alberto De Sousa Lopes | 11:40-11:48 |
 
 ### DAI-TIC-B (Wednesday afternoons)
 
-| #   | Group | Passage |
-| --- | ----- | ------- |
-| 1   | TBD   | TDB     |
-| 2   | TBD   | TDB     |
-| 3   | TBD   | TDB     |
-| 4   | TBD   | TDB     |
-| 5   | TBD   | TDB     |
-| 6   | TBD   | TDB     |
-| 7   | TBD   | TDB     |
-| 8   | TBD   | TDB     |
-| 9   | TBD   | TDB     |
-| 10  | TBD   | TDB     |
-| 11  | TBD   | TDB     |
-| 12  | TBD   | TDB     |
-| 13  | TBD   | TDB     |
-| 14  | TBD   | TDB     |
-| 15  | TBD   | TDB     |
-| 16  | TBD   | TDB     |
+|   # | Group | Passage |
+| --: | :---- | :------ |
+|   1 | TBD   | TDB     |
+|   2 | TBD   | TDB     |
+|   3 | TBD   | TDB     |
+|   4 | TBD   | TDB     |
+|   5 | TBD   | TDB     |
+|   6 | TBD   | TDB     |
+|   7 | TBD   | TDB     |
+|   8 | TBD   | TDB     |
+|   9 | TBD   | TDB     |
+|  10 | TBD   | TDB     |
+|  11 | TBD   | TDB     |
+|  12 | TBD   | TDB     |
+|  13 | TBD   | TDB     |
+|  14 | TBD   | TDB     |
+|  15 | TBD   | TDB     |
+|  16 | TBD   | TDB     |
 
 ### DAI-TIC-A (Thursdays)
 
-| #   | Group                                                        | Passage     |
-| --- | ------------------------------------------------------------ | ----------- |
-| 1   | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 14:45-14:53 |
-| 2   | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 14:55-15:03 |
-| 3   | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 15:05-15:13 |
-| 4   | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 15:15-15:23 |
-| 5   | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 15:25-15:33 |
-| 6   | Colin Stefani and Simão Romano Schindler                     | 15:35-15:43 |
-| 7   | Gianni Bee and Quentin Michon                                | 15:45-15:53 |
-| 8   | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 15:55-16:03 |
-| 9   | Kym Bolomey Kim and Robiel Tesfazghi                         | 16:05-16:13 |
-
--->
+|   # | Group                                                        | Passage     |
+| --: | :----------------------------------------------------------- | :---------- |
+|   1 | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 10:05-10:13 |
+|   2 | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 12:10-12:18 |
+|   3 | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 12:20-12:28 |
+|   4 | Kym Bolomey, Paul Reynard and Robiel Tesfazghi               | 12:40-12:48 |
+|   5 | Gianni Bee and Quentin Michon                                | 16:30-16:38 |
+|   6 | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 16:40-16:48 |
+|   7 | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 16:50-16:58 |
+|   8 | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 17:00-17:08 |
+|   9 | Colin Stefani and Simão Romano Schindler                     | 17:10-17:18 |
 
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
