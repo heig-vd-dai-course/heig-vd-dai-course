@@ -539,15 +539,15 @@ The presentation order is random and is stated in the next tables:
 
 |   # | Group                                                        | Passage     |
 | --: | :----------------------------------------------------------- | :---------- |
-|   1 | Kym Bolomey Kim and Robiel Tesfazghi                         | 16:30-16:38 |
-|   2 | Gianni Bee and Quentin Michon                                | 16:40-16:48 |
-|   3 | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 16:50-16:58 |
-|   4 | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 16:00-17:08 |
-|   5 | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 17:10-17:18 |
-|   6 | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 17:20-17:28 |
-|   7 | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 17:30-17:38 |
-|   8 | Colin Stefani and Simão Romano Schindler                     | 17:40-17:48 |
-|   9 | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 17:50-17:58 |
+|   1 | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 10:05-10:13 |
+|   2 | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 12:10-12:18 |
+|   3 | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 12:20-12:28 |
+|   4 | Kym Bolomey, Paul Reynard and Robiel Tesfazghi               | 12:40-12:48 |
+|   5 | Gianni Bee and Quentin Michon                                | 16:30-16:38 |
+|   6 | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 16:40-16:48 |
+|   7 | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 16:50-16:58 |
+|   8 | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 17:00-17:08 |
+|   9 | Colin Stefani and Simão Romano Schindler                     | 17:10-17:18 |
 
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
