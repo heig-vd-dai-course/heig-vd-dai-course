@@ -453,6 +453,7 @@ _Alternatives are here for general knowledge. No need to learn them._
   upcoming support of [forge federations](https://forgefed.org/) (see more with
   the [ForgeFriends project](https://forgefriends.org/)).
 - [Gogs](https://gogs.io/)
+- [Codeberg](https://codeberg.org) - Based on Forgejo (apparently)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
