@@ -505,7 +505,7 @@ The presentation order is random and is stated in the next tables:
 
 |   # | Group                                                           | Passage     |
 | --: | :-------------------------------------------------------------- | :---------- |
-|   1 | Gabriel Bader and Mauro Santos                                  | 10:30-10:48 |
+|   1 | Gabriel Bader and Mauro Santos                                  | 10:30-10:38 |
 |   2 | Theo Bensaci and Yasser Gasmi                                   | 10:40-10:48 |
 |   3 | Pierre Thiébaud and Victor Giordani                             | 10:50-10:58 |
 |   4 | Koray Akgul and Nathan Stampfli                                 | 11:00-11:08 |
