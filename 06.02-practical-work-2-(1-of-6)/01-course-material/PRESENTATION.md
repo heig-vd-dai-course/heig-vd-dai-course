@@ -412,7 +412,7 @@ More details for this section in the [course material][course].
 Your work is due as follows:
 
 - DAI-TIC-C (Wednesday mornings): **Tuesday 02.12.25 at 23:59**.
-- DAI-TIC-B (Wednesday afternoons): **Tuesday 03.12.25 at 11:59**.
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25 at 11:59**.
 - DAI-TIC-A (Thursdays): **Wednesday 03.12.25 at 23:59**.
 
 Update the GitHub Discussion with the link to your repository as mentioned in

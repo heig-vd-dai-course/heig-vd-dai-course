@@ -457,7 +457,7 @@ repository!
 Your work is due as follows:
 
 - DAI-TIC-C (Wednesday mornings): **Tuesday 02.12.25 at 23:59**.
-- DAI-TIC-B (Wednesday afternoons): **Tuesday 03.12.25 at 11:59**.
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25 at 11:59**.
 - DAI-TIC-A (Thursdays): **Wednesday 03.12.25 at 23:59**.
 
 > [!CAUTION]
@@ -516,24 +516,16 @@ The presentation order is random and is stated in the next tables:
 
 ### DAI-TIC-B (Wednesday afternoons)
 
-|   # | Group | Passage |
-| --: | :---- | :------ |
-|   1 | TBD   | TDB     |
-|   2 | TBD   | TDB     |
-|   3 | TBD   | TDB     |
-|   4 | TBD   | TDB     |
-|   5 | TBD   | TDB     |
-|   6 | TBD   | TDB     |
-|   7 | TBD   | TDB     |
-|   8 | TBD   | TDB     |
-|   9 | TBD   | TDB     |
-|  10 | TBD   | TDB     |
-|  11 | TBD   | TDB     |
-|  12 | TBD   | TDB     |
-|  13 | TBD   | TDB     |
-|  14 | TBD   | TDB     |
-|  15 | TBD   | TDB     |
-|  16 | TBD   | TDB     |
+| # | Group                                 | Passage     |
+|--:|:--------------------------------------|:------------|
+| 1 | Pierre Gellet and Mirco Profico       | 14:45-14:53 |
+| 2 | Yuuta Jorand and Agron Markaj         | 14:55-15:03 |
+| 3 | Samuel dos Santos and Fabien Léger    | 15:05-15:13 |
+| 4 | Arnaud Bersier and Jonathan Nicolet   | 15:15-15:23 |
+| 5 | Marc Ischi and Arnaut Leyre           | 15:25-15:33 |
+| 6 | Julien Gorgerat and Audrey Mauroux    | 15:35-15:43 |
+| 7 | Louis Garcia and Tiago Ferreira       | 15:45-15:53 |
+| 8 | Maxime Regenass and Santiago Sugrañes | 15:55-16:03 |
 
 ### DAI-TIC-A (Thursdays)
 
