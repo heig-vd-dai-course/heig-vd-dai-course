@@ -51,12 +51,12 @@ other resources and alternatives as well.
 
 ### Disclaimer
 
-- **This is not a course on web development**
-- Many many things are not covered
-- Focus on HTTP version 1.1
-- [Javalin](https://javalin.io/) used for learning purposes
+- **This is not a course on web development**.
+- Many many things are not covered.
+- Focus on HTTP version 1.1.
+- [Javalin](https://javalin.io/) used for learning purposes.
 - For production, use a framework like [Quarkus](https://quarkus.io/) or
-  [Spring Boot](https://spring.io/projects/spring-boot)
+  [Spring Boot](https://spring.io/projects/spring-boot).
 
 ![bg right:40%](https://images.unsplash.com/photo-1520414283774-cd4cb599a987?fit=crop&h=720)
 
@@ -69,20 +69,20 @@ other resources and alternatives as well.
 
 ### curl
 
-- An open source command-line tool
-- Used to transfer data using various protocols
-  - HTTP/HTTPS
-  - FTP
+- An open source command-line tool.
+- Used to transfer data using various protocols:
+  - HTTP/HTTPS.
+  - FTP.
   - etc.
-- Used to test APIs
+- Used to test APIs.
 
 ![bg right w:90%](https://upload.wikimedia.org/wikipedia/commons/8/8a/Curl-logo.svg)
 
 ### Javalin
 
-- A lightweight web framework for Java and Kotlin
-- Easy to learn and use: perfect for learning purposes
-- Production ready but not as powerful as Quarkus or Spring Boot
+- A lightweight web framework for Java and Kotlin.
+- Easy to learn and use: perfect for learning purposes.
+- Production ready but not as powerful as Quarkus or Spring Boot.
 
 ![bg right w:80%](https://javalin.io/img/logo.svg)
 
@@ -93,105 +93,103 @@ other resources and alternatives as well.
 More details for this section in the [course material][course]. You can find
 other resources and alternatives as well.
 
-### HTTP
+### HTTP (1/2)
 
-- Initiated by Tim Berners-Lee at CERN in 1989
-- First release in 1990 to transfer HyperText Markup Language (HTML) documents
-- Built on top of TCP (HTTP/1.0, HTTP/1.1 and HTTP/2.0) or UDP/QUIC (HTTP/3)
-- Ports **80** (HTTP) or **443** (HTTPS)
+- HTTP stands for HyperText Transfer Protocol.
+- Initiated by Tim Berners-Lee at CERN in 1989.
+- First release in 1990 to transfer HyperText Markup Language (HTML) documents.
+- Built on top of:
+  - TCP (HTTP/1.0, HTTP/1.1 and HTTP/2.0)
+  - UDP/QUIC (HTTP/3).
+- Uses ports **80** (HTTP) or **443** (HTTPS).
 
-![bg right:40%](https://upload.wikimedia.org/wikipedia/commons/d/d1/First_Web_Server.jpg)
+### HTTP (2/2)
 
----
-
-- Hyper Text Transfer Protocol (HTTP) based on TCP
-- Application layer protocol with many features
-- Used to transfer data between a client (an **user agent**) and a server
+- Application layer protocol with many features.
+- Used to transfer data between a client (an **user agent**) and a server.
 - A client can be a web browser, a mobile application, a command-line tool,
   household appliance, etc.
-- The client requests a **resource** from the server
+- The client requests a **resource** from the server.
 
-![bg right:40%](https://images.unsplash.com/photo-1601225998165-be1f75bfc94b?fit=crop&h=720)
+![bg right:40%](https://upload.wikimedia.org/wikipedia/commons/d/d1/First_Web_Server.jpg)
 
 ### HTTP versions
 
 Multiple versions exist:
 
-- HTTP/1.0 (1996)
-- HTTP/1.1 (1997)
-- HTTP/2 (2015)
-- HTTP/3 (2022)
+- HTTP/1.0 (1996).
+- HTTP/1.1 (1997).
+- HTTP/2 (2015).
+- HTTP/3 (2022).
 
 The most used version is HTTP/1.1. Each version is to improve performance.
 
 ![bg right w:90%](https://upload.wikimedia.org/wikipedia/commons/0/09/HTTP-1.1_vs._HTTP-2_vs._HTTP-3_Protocol_Stack.svg)
 
-### HTTP resources
+### HTTP resources (1/2)
 
-- A resource is identified by a Uniform Resource Locator (URL)
+- A resource is identified by a Uniform Resource Locator (URL).
 - A resource can be a file, a document, a video, etc.
-- Sometimes called an **endpoint** or a **route**
+- Sometimes called an **endpoint** or a **route**.
 
 ![bg right contain](./images/http-resources.png)
 
----
+### HTTP resources (2/2)
 
-An example of a URL is the following:
+An example of a URL is the following. It returns a HTML document.
 
 ```text
 https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573
 ```
 
-- Protocol: `http://` or `https://`
-- Host: `gaps.heig-vd.ch`
-- Port: `:80` or `:443` (optional)
-- Path: `/consultation/fiches/uv/uv.php`
-- Query parameters: `?id=6573`
-
-This resource returns a HTML document.
+- Protocol: `http://` or `https://`.
+- Host: `gaps.heig-vd.ch`.
+- Port: `:80` or `:443` (optional).
+- Path: `/consultation/fiches/uv/uv.php`.
+- Query parameters: `?id=6573`.
 
 ### URL encoding
 
-- URLs can only contain a limited set of characters
-- Some characters are reserved for special purposes
-- Some characters must be encoded: (Space -> `%20`)
-- For example, `Hello world` becomes `Hello%20world`
+- URLs can only contain a limited set of characters.
+- Some characters are reserved for special purposes.
+- Some characters must be encoded: (Space -> `%20`).
+- For example, `Hello world` becomes `Hello%20world`.
 
 ![bg right contain](./images/url-encoding.png)
 
 ### HTTP request methods
 
-- `GET` - Get a resource
-- `POST` - Create a resource
-- `PATCH`/`PUT` - Update a resource
-- `DELETE` - Delete a resource
+- `GET` - Get a resource.
+- `POST` - Create a resource.
+- `PATCH`/`PUT` - Update a resource.
+- `DELETE` - Delete a resource.
 
 A browser does `GET` methods by default.
 
 ![bg right contain](./images/http-request-methods.png)
 
-### HTTP request and response format
+### HTTP request and response format (1/4)
 
-- To request a resource, a client sends a HTTP request to a server
-- The server processes the request and sends back a HTTP response
+- To request a resource, a client sends a HTTP request to a server.
+- The server processes the request and sends back a HTTP response.
 
 HTTP is based on a **request-response** model.
 
 ![bg right:40%](https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?fit=crop&h=720)
 
----
+### HTTP request and response format (2/4)
 
 The HTTP request and response are composed of:
 
 - A **start line** with:
-  - The **method**
-  - The **URL**
-  - The **version**
-- **Headers** with metadata
-- An **empty line**
-- An optional **body** with data
+  - The **method**.
+  - The **URL**.
+  - The **version**.
+- **Headers** with metadata.
+- An **empty line**.
+- An optional **body** with data.
 
----
+### HTTP request and response format (3/4)
 
 Structure of a HTTP request:
 
@@ -202,6 +200,15 @@ Structure of a HTTP request:
 <HTTP body (optional)>
 ```
 
+```text
+GET / HTTP/1
+Host: gaps.heig-vd.ch
+User-Agent: curl/8.1.2
+Accept: */*
+```
+
+### HTTP request and response format (4/4)
+
 Structure of a HTTP response:
 
 ```text
@@ -210,19 +217,6 @@ HTTP/<HTTP version> <HTTP status code> <HTTP status message>
 <Empty line if there is a body>
 <HTTP body>
 ```
-
----
-
-A HTTP request example:
-
-```text
-GET / HTTP/1
-Host: gaps.heig-vd.ch
-User-Agent: curl/8.1.2
-Accept: */*
-```
-
-A HTTP response example:
 
 ```text
 HTTP/1.1 200 OK
@@ -237,11 +231,11 @@ Content-Length: 6111
 
 Grouped by categories:
 
-- 1xx: Informational
-- 2xx: Success
-- 3xx: Redirection
-- 4xx: Client error
-- 5xx: Server error
+- 1xx: Informational.
+- 2xx: Success.
+- 3xx: Redirection.
+- 4xx: Client error.
+- 5xx: Server error.
 
 ![bg right contain](./images/http-response-status-codes.png)
 
@@ -300,25 +294,25 @@ Content-Length: 6111
 
 HTTP headers are used to pass metadata to/from the server.
 
-- `Accept` - The media types accepted by the client
-- `Content-Type` - The media type of the body
-- `Content-Length` - The length of the body
-- `User-Agent` - The user agent of the client
-- `Host`- The host of the server
-- `Set-Cookie` - The cookies set by the server
+- `Accept` - The media types accepted by the client.
+- `Content-Type` - The media type of the body.
+- `Content-Length` - The length of the body.
+- `User-Agent` - The user agent of the client.
+- `Host`- The host of the server.
+- `Set-Cookie` - The cookies set by the server.
 
 ### HTTP content negotiation
 
 The `Accept` header is used to negotiate the content type between the client and
 the server. These are based on the MIME types:
 
-- `Accept: text/html` - HTML
-- `Accept: application/json` - JSON
+- `Accept: text/html` - HTML.
+- `Accept: application/json` - JSON.
 - etc.
 
 The same URL can return different content types based on the `Accept` header.
 
-### HTTP sessions
+### HTTP sessions (1/2)
 
 As HTTP is based on the request-response model, each request is independent of
 the others. This is called a stateless protocol.
@@ -326,22 +320,20 @@ the others. This is called a stateless protocol.
 This means that the server cannot know/identify who is the author of each
 request without additional information. Let's take an example:
 
-1. A first user access the homepage of a website
-2. A second user access the homepage of the same website
+1. A first user accesses the homepage of a website.
+2. A second user accesses the homepage of the same website.
 
 Who is the author of each request?
 
----
+### HTTP sessions (2/2)
 
 Why does the server not know who you are?
 
 It is because you have not stated who you are. In other words, you do not have a
 session with the server.
 
-They are two ways to maintain a session:
-
-- Using a query parameter
-- Using cookies
+They are two ways to maintain a session: (1) using a query parameter. (2) using
+cookies.
 
 ![bg right:40%](https://images.unsplash.com/photo-1580065632882-3d6d4ca954ff?fit=crop&h=720)
 
@@ -375,15 +367,15 @@ Advantages: The token is not visible in the URL (more secure).
 
 Disadvantages: A bit more complex to implement.
 
-### Do all websites use sessions?
+### Do all websites use sessions? (1/2)
 
 Not all applications need a session.
 
 For example, a calculator application that waits for a calculation and directly
 sends the result does not need to keep track of the client:
 
-- Each request is independent of the others
-- The server can directly respond to each request
+- Each request is independent of the others.
+- The server can directly respond to each request.
 
 The server does not have to know who is the author of the request: it can send
 the result directly to the client.
@@ -391,14 +383,13 @@ the result directly to the client.
 In this case, the server does not need to use HTTP sessions and is, therefore,
 stateless.
 
----
+### Do all websites use sessions? (2/2)
 
 On the other hand, an e-commerce application where the user can add items to a
 shopping cart needs to keep track of the client:
 
-- The user can add items to the shopping cart
-- The user can remove items from the shopping cart
-- The user can buy the items in the shopping cart
+- The user can add/remove items to the shopping cart.
+- The user can buy the items in the shopping cart.
 
 The server must know who is the author of each request in order to maintain the
 shopping cart.
@@ -412,7 +403,7 @@ In this case, the server must use HTTP sessions and is, therefore, stateful.
 More details for this section in the [course material][course]. You can find
 other resources and alternatives as well.
 
-### API design
+### API design (1/2)
 
 Developing a web application is not easy.
 
@@ -425,10 +416,9 @@ documented.**
 Most APIs are based on HTTP and exchange data in JSON format, the most used
 format for APIs.
 
----
+### API design (2/2)
 
-JSON is an easy to read and write format for humans. It is also easy to parse
-for computers.
+JSON is an easy to read and write format for humans and to parse for computers.
 
 Example of a JSON document:
 
@@ -442,7 +432,7 @@ Example of a JSON document:
 
 ![bg right contain](./images/api-design-json.png)
 
-### Simple APIs with CRUD operations
+### Simple APIs with CRUD operations (1/2)
 
 CRUD stands for:
 
@@ -453,12 +443,12 @@ CRUD stands for:
 
 CRUD APIs are used to manage data.
 
-![bg](https://fakeimg.pl/800x600/0288d1/fff/?text=C)
-![bg](https://fakeimg.pl/800x600/02669d/fff/?text=R)
-![bg](https://fakeimg.pl/800x600/67b8e3/fff/?text=U)
-![bg vertical right:40%](https://fakeimg.pl/800x600/37123c/fff/?text=D)
+![bg](https://images.placeholders.dev/?width=800&height=600&text=C&bgColor=%2349cc90&textColor=%23fff)
+![bg](https://images.placeholders.dev/?width=800&height=600&text=R&bgColor=%2361affe&textColor=%23fff)
+![bg](https://images.placeholders.dev/?width=800&height=600&text=U&bgColor=%23fca130&textColor=%23fff)
+![bg vertical right:40%](https://images.placeholders.dev/?width=800&height=600&text=D&bgColor=%23f93e3e&textColor=%23fff)
 
----
+### Simple APIs with CRUD operations (2/2)
 
 A simple API with CRUD operations to manage users will expose the following
 endpoints:
@@ -470,12 +460,6 @@ endpoints:
 - `PATCH /users/{id}` - Partially update a user
 - `DELETE /users/{id}` - Delete a user
 
-![bg](https://fakeimg.pl/800x600/49cc90/fff/?text=POST%20)
-![bg](https://fakeimg.pl/800x600/61affe/fff/?text=GET)
-![bg](https://fakeimg.pl/800x600/fca130/fff/?text=PUT)
-![bg vertical right:40%](https://fakeimg.pl/800x600/50e3c2/fff/?text=PATCH)
-![bg vertical right:40%](https://fakeimg.pl/800x600/f93e3e/fff/?text=DELETE)
-
 ### REST APIs
 
 A REST API is a set of (strict) rules to design APIs.
@@ -486,37 +470,38 @@ Is is an improvement over CRUD APIs.
 
 Not all APIs are REST APIs but all REST APIs are APIs.
 
-REST APIs are hard to implement correctly. In this course, we will stay with
-CRUD APIs. We mention REST APIs for completeness.
+REST APIs are hard to implement correctly. In this teaching unit, we will stay
+with CRUD APIs. We mention REST APIs for completeness.
 
 ### How to document an API
 
-- Documentation is important for developers as well as users
-- An API exposes the features of an application to the outside world
+- Documentation is important for developers as well as users.
+- An API exposes the features of an application to the outside world.
 - There exist many tools to document APIs such as
-  [OpenAPI](https://www.openapis.org/)
-- As these tools are complex, we will use a simple solution: a text file
-  [#Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
+  [OpenAPI](https://www.openapis.org/).
+- As these tools are complex, we will use a simple solution: a text file.
+  [#Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06.01-define-an-application-protocol)
 
 ![bg right:40%](https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fit=crop&h=720)
 
 ### How to persist data
 
-- In the course material, we store data in memory
-- Data can be (and should be!) stored in a database
-- Out of scope for this course but you can find resources in the course material
+- In the course material, we store data in memory.
+- Data can be (and should be!) stored in a database.
+- Out of scope for this teaching unit but you can find resources in the course
+  material.
 
 ![bg right:40%](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720)
 
 ### How to secure an API
 
-- Not all APIs are public
-- Some APIs are private and require authentication
-- Out of scope for this course but you can find resources in the course
+- Not all APIs are public.
+- Some APIs are private and require authentication.
+- Out of scope for this teaching unit but you can find resources in the course
   material.
 
-It is more important to understand the basics of how to design, how to develop
-and how to document an API.
+It is more important to understand the basics of how to design, develop and
+document an API.
 
 ![bg right:40%](https://images.unsplash.com/photo-1609770231080-e321deccc34c?fit=crop&h=720)
 
@@ -533,10 +518,10 @@ Do you have any questions?
 ### What will you do?
 
 - Try out all the main concepts of HTTP (methods, status codes, headers, JSON,
-  etc.)
-- Learn how to use curl
-- Build a simple web application to manage users
-- Learn how to design and document a simple API
+  etc.).
+- Learn how to use curl.
+- Build a simple web application to manage users.
+- Learn how to design and document a simple API.
 
 ![bg right contain](./images/what-will-you-do.png)
 
@@ -564,7 +549,7 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## Sources
+## Sources (1/2)
 
 - Main illustration by [Ashley Knedler](https://unsplash.com/@ashkned) on
   [Unsplash](https://unsplash.com/photos/KvD36NRFjl4)
@@ -572,21 +557,19 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/j6brni7fpvs)
 - Illustration by [Bernard Hermant](https://unsplash.com/@bernardhermant) on
   [Unsplash](https://unsplash.com/photos/white-and-black-signage-mountain-on-wall--iVnye8VaHY)
-- Illustration by [Walling](https://unsplash.com/@walling) on
-  [Unsplash](https://unsplash.com/photos/silver-iphone-6-beside-macbook-pro-h91bpI4c8I0)
 - Illustration by [Pavan Trikutam](https://unsplash.com/@ptrikutam) on
   [Unsplash](https://unsplash.com/photos/minimalist-photography-of-three-crank-phones-71CjSSB83Wo)
 - Illustration by [Chien Nguyen Minh](https://unsplash.com/@wru_fightming) on
   [Unsplash](https://unsplash.com/photos/man-in-white-dress-shirt-holding-yellow-balloon-sY6zEnUM0Cw)
 - Illustration by [Iñaki del Olmo](https://unsplash.com/@inakihxz) on
   [Unsplash](https://unsplash.com/photos/NIJuEQw0RKg)
-
----
-
 - Illustration by [Jan Antonin Kolar](https://unsplash.com/@jankolar) on
   [Unsplash](https://unsplash.com/photos/brown-wooden-drawer-lRoX0shwjUQ)
 - Illustration by [Amol Tyagi](https://unsplash.com/@amoltyagi2) on
   [Unsplash](https://unsplash.com/photos/silver-skeleton-key-on-black-surface-0juktkOTkpU)
+
+## Sources (2/2)
+
 - Illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
   [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
 
