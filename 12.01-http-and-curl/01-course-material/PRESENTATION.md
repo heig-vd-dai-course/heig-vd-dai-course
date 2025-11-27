@@ -34,12 +34,11 @@ _paginate: false
 
 ## Objectives
 
-- Understand the basics of HTTP
-- Understand the basics of APIs
-- Learn how to use curl
-- Learn how to design and document a simple API
-- Learn how to develop a simple API
-- Learn how to use a simple API
+- Apply the basic concepts of HTTP.
+- Apply the basic concepts of APIs.
+- Use curl to test APIs.
+- Design, document and develop a simple API.
+- Interact with a simple CRUD API.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -556,7 +555,7 @@ Do you have any questions?
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
