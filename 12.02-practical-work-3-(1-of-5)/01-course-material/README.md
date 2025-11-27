@@ -1,49 +1,43 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/24-practical-work-3/24-practical-work-3-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
-[illustration]: ./images/main-illustration.jpg
-
 # Practical work 3
 
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/index.html>)
+  ·
+  [Presentation (PDF)](<https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.02-practical-work-3-(1-of-5)/01-course-material/12.02-practical-work-3-(1-of-5)-presentation.pdf>)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Objectives](#objectives)
+- [Demo](#demo)
 - [Group composition](#group-composition)
 - [Idea validation](#idea-validation)
 - [Grading criteria](#grading-criteria)
-  - [Category 1 - Git, GitHub and Markdown](#category-1---git-github-and-markdown)
-  - [Category 2 - Java, IntelliJ IDEA and Maven](#category-2---java-intellij-idea-and-maven)
-  - [Category 3 - Docker and Docker Compose](#category-3---docker-and-docker-compose)
+  - [Category 1 - SSH and SCP](#category-1---ssh-and-scp)
+  - [Category 2 - Docker and Docker Compose](#category-2---docker-and-docker-compose)
+  - [Category 3 - HTTP and curl](#category-3---http-and-curl)
   - [Category 4 - Java network concurrency](#category-4---java-network-concurrency)
-  - [Category 5 - SSH and SCP](#category-5---ssh-and-scp)
-  - [Category 6 - HTTP and curl](#category-6---http-and-curl)
-  - [Category 7 - Web infrastructures](#category-7---web-infrastructures)
-  - [Category 8 - Caching and performance](#category-8---caching-and-performance)
-  - [Category 9 - Presentation and questions](#category-9---presentation-and-questions)
+  - [Category 5 - Web infrastructures](#category-5---web-infrastructures)
+  - [Category 6 - Caching and performance](#category-6---caching-and-performance)
+  - [Category 7 - Presentation and questions](#category-7---presentation-and-questions)
 - [Constraints](#constraints)
-- [Tips](#tips)
 - [Submission](#submission)
 - [Presentations](#presentations)
-  - [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
-  - [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
 - [Grades and feedback](#grades-and-feedback)
+- [Tips](#tips)
 - [Finished? Was it easy? Was it hard?](#finished-was-it-easy-was-it-hard)
 - [Sources](#sources)
 
@@ -65,13 +59,11 @@ and/or a command line tool such as curl.
 
 The API will be defined by you.
 
-Feel free to be creative and to create a web application that you would like to
-use. It can be a web application that you would like to use in your daily life
-or a web application that you would like to use for your studies. For example,
-you can choose to create a web application that allows you to manage your
-shopping list, a web application that allows you to manage your tasks, a web
-application that allows you to manage your notes, etc. If you do not have any
-idea, come to see us and we can give you.
+Feel free to be creative! For example, you can choose to create a web
+application that allows you to manage your shopping list, a web application that
+allows you to manage your tasks, a web application that allows you to manage
+your notes, etc. If you do not have any idea, come to see us and we can give
+you.
 
 Multiple groups can choose the same processing and you can share your
 methodology and take inspiration from/help each other. However, you are not
@@ -80,17 +72,202 @@ so.
 
 ## Objectives
 
-- Obtain a virtual machine on a cloud provider
-- Access the virtual machine with SSH
-- Install Docker and Docker Compose on the virtual machine
+- Obtain a virtual machine on a cloud provider.
+- Access the virtual machine with SSH.
+- Install Docker and Docker Compose on the virtual machine.
 - Define some Docker Compose files to run the web application with a reverse
-  proxy (Traefik)
-- Deploy the simple CRUD API on the virtual machine
-- Access the CRUD API from a domain name with HTTPS (Let's encrypt)
+  proxy (Traefik).
+- Deploy the simple CRUD API on the virtual machine.
+- Access the CRUD API from a domain name with HTTPS (Let's encrypt).
+
+## Demo
+
+The API for the demonstration is accessible at  
+<https://heig-vd-dai-course.duckdns.org>.
+
+Locally - Compile the project:
+
+```sh
+./mvnw clean package
+```
+
+Locally - Build the Docker image with Docker Compose:
+
+```sh
+docker build -t <docker tag> .
+```
+
+Locally - Publish the Docker image to the container registry:
+
+```sh
+docker push <docker tag>
+```
+
+On the server - Pull the Docker image from the container registry:
+
+```sh
+docker compose pull
+```
+
+On the server - Start Traefik (the reverse proxy):
+
+```sh
+docker compose -f traefik/docker-compose.yaml up -d
+```
+
+On the server - Start the CRUD API:
+
+```sh
+docker compose -f api/docker-compose.yaml up -d
+```
+
+Create a few drinks:
+
+```sh
+# Hot wine
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Hot wine","description":"Hot wine with spices","price":3.0}' \
+  https://heig-vd-dai-course.duckdns.org/drinks
+
+# Christmas tea
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Christmas tea","description":"Warm tea","price":2.0}' \
+  https://heig-vd-dai-course.duckdns.org/drinks
+```
+
+Get the list of drinks:
+
+```sh
+curl https://heig-vd-dai-course.duckdns.org/drinks
+```
+
+Output:
+
+```json
+[
+	{
+		"id": 1,
+		"name": "Hot wine",
+		"description": "Hot wine with spices",
+		"price": 3.0
+	}
+	// All the other drinks
+]
+```
+
+Filter the drinks with a price equal to 2.0 CHF:
+
+```sh
+curl https://heig-vd-dai-course.duckdns.org/drinks?price=2.0
+```
+
+Output:
+
+```json
+[
+	{
+		"id": 2,
+		"name": "Christmas tea",
+		"description": "Warm tea",
+		"price": 2.0
+	}
+]
+```
+
+Get a specific drink:
+
+```sh
+curl https://heig-vd-dai-course.duckdns.org/drinks/1
+```
+
+Output:
+
+```json
+{
+	"id": 1,
+	"name": "Hot wine",
+	"description": "Hot wine with spices",
+	"price": 3.0
+}
+```
+
+Update a drink:
+
+```sh
+curl -X PUT \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Hot wine","description":"Nice hot wine","price":3.0}' \
+  https://heig-vd-dai-course.duckdns.org/drinks/1
+```
+
+Output:
+
+```json
+{
+	"id": 1,
+	"name": "Hot wine",
+	"description": "Nice hot wine",
+	"price": 3.0
+}
+```
+
+Delete a drink:
+
+```sh
+curl -X DELETE -i https://heig-vd-dai-course.duckdns.org/drinks/1
+```
+
+Output:
+
+```text
+HTTP/2 204
+content-type: text/plain
+date: Sat, 16 Dec 2023 13:31:56 GMT
+
+```
+
+No content as we return a `204` (No Content) status code!
+
+Adding another drink with the same name:
+
+```sh
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Christmas tea","description":"Another tea","price":2.0}' \
+  https://heig-vd-dai-course.duckdns.org/drinks
+```
+
+Output:
+
+```text
+Conflict
+```
+
+Leads to a `409` (Conflict) status code as we want to keep the names unique.
+
+Get the schedules of the Baleinev hot wine week:
+
+```sh
+curl https://heig-vd-dai-course.duckdns.org/schedules
+```
+
+Output:
+
+```json
+[
+	{ "id": 0, "day": "MONDAY", "start": [10, 0], "end": [18, 0] },
+	{ "id": 1, "day": "TUESDAY", "start": [10, 0], "end": [18, 0] },
+	{ "id": 2, "day": "WEDNESDAY", "start": [10, 0], "end": [18, 0] },
+	{ "id": 3, "day": "THURSDAY", "start": [10, 0], "end": [22, 0] },
+	{ "id": 4, "day": "FRIDAY", "start": [10, 0], "end": [18, 0] }
+]
+```
 
 ## Group composition
 
-You will work in groups of two or three students. You can choose your
+You will work in groups of two (2) to three (3) students. You can choose your
 partner(s). If you do not have a partner, we will assign you one.
 
 To announce your group, create a new GitHub Discussion at
@@ -127,125 +304,126 @@ ideas.
 
 ## Grading criteria
 
-- 0 point - The work is insufficient
-- 0.1 point - The work is done
-- 0.2 point - The work is well done (without the need of being perfect)
+- **0 point** - The work is missing, off-topic, or shows a very limited
+  understanding of the subject.
+- **0.1 point** - The work shows partial understanding: some key elements are
+  missing, unclear, or poorly implemented.
+- **0.2 point** - The work is complete, accurate, and shows a clear and thorough
+  understanding of the subject.
 
 Maximum grade: 25 points \* 0.2 + 1 = 6
 
-> [!IMPORTANT]
+> [!CAUTION]
 >
 > While the grading criteria might not be as detailed as in the previous
-> practical works for each section, you **must** continue to apply all the good
-> practices you have learned so far.
+> practical work(s) for each section, you **must** continue to apply all the
+> good practices you have learned so far (Git, GitHub and Markdown, Java,
+> IntelliJ IDEA and Maven, Define an application protocol, Java network
+> concurrency, etc.). **You might be penalized if you do not follow these
+> practices.**
 >
-> If elements that are supposed to be acquired through the course or previous
-> practical works are omitted, forgotten or poorly implemented, we might
-> penalize you.
->
-> Remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
-
-### Category 1 - Git, GitHub and Markdown
+> Check the [Constraints](#constraints) section for more information and
+> remember the UNIX philosophy and the KISS principle: _Keep it simple, silly!_
 
 If your repository is private, you must add us as collaborators to your
 repository!
 
-| #   | Criterion                                                                                                                                                        | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 1   | The README is well structured and explains the purpose of your web with the authors' names so new users can understand it and know who is behind the application |    0.2 |
+### Category 1 - SSH and SCP
 
-### Category 2 - Java, IntelliJ IDEA and Maven
+|   # | Criterion                                                                                    | Points |
+| --: | :------------------------------------------------------------------------------------------- | -----: |
+|   1 | You and the teaching staff can access the virtual machine without a password using a SSH key |    0.2 |
+|   2 | The Git repository is cloned on the virtual machine (HTTPS is fine)                          |    0.2 |
 
-| #   | Criterion                                                                                                                                                                            | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
-| 2   | The README describes **explicit commands** to clone and build your network application with Git and Maven so new developers can start and develop your project on their own computer |    0.2 |
-| 3   | The codebase is well structured, easy to access, easy to understand and is documented so it is easier for new comers to understand the codebase                                      |    0.2 |
+### Category 2 - Docker and Docker Compose
 
-### Category 3 - Docker and Docker Compose
+|   # | Criterion                                                                                                            | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------- | -----: |
+|   3 | Docker and Docker Compose are correctly installed on the virtual machine (version 2+ using the right APT repository) |    0.2 |
+|   4 | Docker can be ran without the need to use `sudo`                                                                     |    0.2 |
+|   5 | The Docker applications (Traefik and your web application) are split into multiple directories                       |    0.2 |
+|   6 | The Docker applications (Traefik and your web application) share a common network                                    |    0.2 |
+|   7 | The Docker Compose files are correctly defined to run Traefik and your web application                               |    0.2 |
 
-| #   | Criterion                                                                                                                                               | Points |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 4   | The network application is packaged and published to GitHub Container Registry with Docker so other people can use your network application with Docker |    0.2 |
-| 5   | The README describes **explicit commands** to build and publish your network application with Docker                                                    |    0.2 |
-| 6   | The README describes **explicit commands** to use your network application with Docker Compose so other people can easily use it                        |    0.2 |
-| 7   | The Docker applications (Traefik and your web application) are split into multiple directories and make usage of networks to communicate together       |    0.2 |
+### Category 3 - HTTP and curl
+
+|   # | Criterion                                                                                                                                                                                    | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   8 | The README (or repository) contains the application protocol interface (API) that describes the web application                                                                              |    0.2 |
+|   9 | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                                                            |    0.2 |
+|  10 | The web application return status codes must be consistent and reflect the HTTP methods                                                                                                      |    0.2 |
+|  11 | The web application offers at least two resources (= domains) on which to operate CRUD operations (e.g. `/users` and `/products`)                                                            |    0.2 |
+|  12 | The README explains how to use your web application with **explicit examples using curl** with outputs to demonstrate how to interact with your web application **deployed on the Internet** |    0.2 |
 
 ### Category 4 - Java network concurrency
 
-| #   | Criterion                                                                                | Points |
-| --- | ---------------------------------------------------------------------------------------- | -----: |
-| 8   | The data structures used in the network application are resilient to concurrent accesses |    0.2 |
+|   # | Criterion                                                                                | Points |
+| --: | :--------------------------------------------------------------------------------------- | -----: |
+|  13 | The data structures used in the network application are resilient to concurrent accesses |    0.2 |
 
-### Category 5 - SSH and SCP
+### Category 5 - Web infrastructures
 
-| #   | Criterion                                                                                    | Points |
-| --- | -------------------------------------------------------------------------------------------- | -----: |
-| 9   | You and the teaching staff can access the virtual machine without a password using a SSH key |    0.2 |
+|   # | Criterion                                                                                                                                | Points |
+| --: | :--------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|  14 | The README (or repository) contains instructions how to install and configure the virtual machine                                        |    0.2 |
+|  15 | The README (or repository) contains instructions how to configure the DNS zone to access your web application                            |    0.2 |
+|  16 | The README (or repository) displays the domain names configuration in the DNS zone to validate everything is set up right                |    0.2 |
+|  17 | The README (or repository) contains instructions how to deploy, run and access the web applications with Docker Compose                  |    0.2 |
+|  18 | At least Traefik and your web application are deployed on the virtual machine                                                            |    0.2 |
+|  19 | The web applications (the Traefik dashboard and your own application) are accessible using a domain name and/or subdomain names          |    0.2 |
+|  20 | The web applications (the Traefik dashboard and your own application) use automatic HTTPS/TLS certificate generations with Let's Encrypt |    0.2 |
 
-### Category 6 - HTTP and curl
+### Category 6 - Caching and performance
 
-| #   | Criterion                                                                                                                                                                                    | Points |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 10  | The README (or repository) contains the application protocol interface (API) that describes the web application                                                                              |    0.2 |
-| 11  | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                                                            |    0.2 |
-| 12  | The web application return status codes must be consistent and reflect the HTTP methods                                                                                                      |    0.2 |
-| 13  | The web application offers at least two resources (= domains) on which to operate CRUD operations                                                                                            |    0.2 |
-| 14  | The README explains how to use your web application with **explicit examples using curl** with outputs to demonstrate how to interact with your web application **deployed on the Internet** |    0.2 |
+|   # | Criterion                                                             | Points |
+| --: | :-------------------------------------------------------------------- | -----: |
+|  21 | The requests are cached to improve performance until the data changes |    0.2 |
+|  22 | The caching strategy is explained in the README (or repository)       |    0.2 |
 
-### Category 7 - Web infrastructures
+### Category 7 - Presentation and questions
 
-| #   | Criterion                                                                                                                                | Points |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 15  | The README (or repository) contains instructions how to install and configure the virtual machine with each step                         |    0.2 |
-| 16  | The README (or repository) contains explains how to configure the DNS zone to access your web application                                |    0.2 |
-| 17  | The README (or repository) contains instructions how to deploy, run and access the web applications with Docker Compose                  |    0.2 |
-| 18  | At least Traefik and your web application are deployed on the virtual machine                                                            |    0.2 |
-| 19  | The README displays the domain names configuration in the DNS zone to validate everything is set up right                                |    0.2 |
-| 20  | The web applications (the Traefik dashboard and your own application) are accessible using a domain name and/or subdomain names          |    0.2 |
-| 21  | The web applications (the Traefik dashboard and your own application) use automatic HTTPS/TLS certificate generations with Let's Encrypt |    0.2 |
-
-### Category 8 - Caching and performance
-
-| #   | Criterion                                                             | Points |
-| --- | --------------------------------------------------------------------- | -----: |
-| 22  | The requests are cached to improve performance until the data changes |    0.2 |
-
-### Category 9 - Presentation and questions
-
-| #   | Criterion                                                                                                                                                      | Points |
-| :-- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-| 23  | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created and for which purpose |    0.2 |
-| 24  | A meaningful demo of the application is made to illustrate how the application works                                                                           |    0.2 |
-| 25  | The presentation is clear and well prepared, within the time limit, and everyone speaks during the presentation                                                |    0.2 |
+|   # | Criterion                                                                                                                                              | Points |
+| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|  23 | The presentation is clear and well prepared.                                                                                                           |    0.2 |
+|  24 | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how. |    0.2 |
+|  25 | Everyone speaks during the presentation.                                                                                                               |    0.2 |
 
 ## Constraints
 
-- The application must be written in Java, compatible with Java 21
-- The application must be built using Maven with the `maven-shade-plugin` plugin
-- The application must use the Javalin dependency
-- You can only use the Java classes seen in the course to implement the network
-  application (you can use any other libraries for other aspects of the
-  application, such as UI, etc.)
-- Your application must be slightly more complex and slightly different than the
-  examples presented during the course (we emphasize the word **slightly**, no
-  need to shoot for the moon!)
-- The web application can only use the HTTP/HTTPS protocols
+- The whole team must contribute to the project and all members must be able to
+  explain it in details if asked.
+- A GitHub Discussion must be opened during the first week of the project to
+  explain the idea of the project so the teachers can validate the idea.
+- The GitHub Discussion must be updated with the link to the repository and a
+  related commit hash before the deadline - every 24 hours after the deadline
+  will result in a -1 point penalty on the final grade.
+- The web application can only use the HTTP/HTTPS protocols.
+- The application must use the Javalin dependency for the web server.
+- The application must be slightly more complex and slightly different than the
+  examples presented during the course (we emphasize the word _slightly_, no
+  need to shoot for the moon).
+- You must state your sources if you have used elements that you are not the
+  author (code from the Internet, code generated from AI tools, etc.). You must
+  also state for which usage you did use the source(s)/tool(s) in your README.
+  If you plagiarize the code of another group, all groups involved will receive
+  a grade of 1.
+- Elements that are supposed to be acquired through the teaching unit or
+  previous practical work(s) must not be omitted, forgotten or poorly
+  implemented (you must continue to use the Git/GitHub workflow, allow users to
+  understand your application, etc.).
 
-## Tips
-
-You are allowed to reuse your Bases de données relationnelles (BDR) project for
-this practical work.
-
-You can decide to merge the two projects into one if you want or keep the idea
-and implement it in a different way (in memory as you will see in the course
-materials).
+> [!CAUTION]
+>
+> Failure to comply with these constraints may result in serious penalties, up
+> to -1 point penalty on the final grade _**for each criterion not met**_.
 
 ## Submission
 
 Your work is due as follows:
 
-- DAI-TIC-B (Monday mornings): **19.01.2025 23:59**
-- DAI-TIC-C (Friday mornings): **23.01.2025 23:59**
+- DAI-TIC-C (Wednesday mornings): **Tuesday 02.12.25 at 23:59**.
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25 at 11:59**.
+- DAI-TIC-A (Thursdays): **Wednesday 03.12.25 at 23:59**.
 
 > [!CAUTION]
 >
@@ -265,58 +443,74 @@ information:
 
 ## Presentations
 
-The practical work presentations will take place in **room B51a** (the same room
-as the first presentation) on:
+- DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10:30**
+  in room **B51a**
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14:45**
+  in room **B38**
+- DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **16:30** in room
+  **B51a**
 
-- DAI-TIC-B (Monday mornings): **20.01.2025**
-- DAI-TIC-C (Friday mornings): **24.01.2025**
+The exact schedule will be communicated once the groups are known.
 
-We only have **7 minutes per group**. You decide what you want to show us and
+<!-- (Un)comment the following lines to hide/show the note about the presentations -->
+
+<!--
+
+We only have **8 minutes per group**. You decide what you want to show us and
 how you want to present it.
 
 **Come 5 minutes before your time slot** with your computer. You will have
 access to a video projector.
 
-The order of presentation is random and is stated in the next tables:
+The presentation order is random and is stated in the next tables:
 
-- [DAI-TIC-B (Monday mornings)](#dai-tic-b-monday-mornings)
-- [DAI-TIC-C (Friday mornings)](#dai-tic-c-friday-mornings)
+- [DAI-TIC-C (Wednesday mornings)](#dai-tic-c-wednesday-mornings)
+- [DAI-TIC-B (Wednesday afternoons)](#dai-tic-b-wednesday-afternoons)
+- [DAI-TIC-A (Thursdays)](#dai-tic-a-thursdays)
 
-### DAI-TIC-B (Monday mornings)
+### DAI-TIC-C (Wednesday mornings)
 
-| #   | Group                                                | Passage       |
-| --- | ---------------------------------------------------- | ------------- |
-| 1   | Tristan Baud, Mario Ferreira and Mathieu Emery       | 08:19 - 08:26 |
-| 2   | Lestiboudois Maxime, Parisod Nathan and Surbeck Léon | 08:28 - 08:35 |
-| 3   | Gruber Adam - Pittet Axel                            | 08:37 - 08:44 |
-| 4   | Nathan Wulliamoz - Benjamin Kocher                   | 08:46 - 08:53 |
-| 5   | Rothen Evan, Thiébaud Jonathan                       | 08:55 - 09:02 |
-| 6   | Florian Chollet - Alexandre Delétraz                 | 09:04 - 09:11 |
-| 7   | Leonard Cseres, Aude Laydu                           | 09:13 - 09:20 |
-| 8   | Drin Racaj, Nils Donatantonio, Esteban Giorgis       | 09:22 - 09:29 |
-| 9   | David Schildböck, Kénan Augsburger and Arno Tribolet | 09:31 - 09:38 |
-| 10  | Alex Berberat, Lisa Gorgerat et Pierric Ripoll       | 09:40 - 09:47 |
-| 11  | Antoine Leresche & Robin Forestier                   | 09:49 - 09:56 |
-| 12  | Basile Buxtorf, Dorian Kury and Nicolas Carbonara    | 09:58 - 10:05 |
-| 13  | Mathéo Lopez, Emily Baquerizo, Kimberly Beyeler      | 10:07 - 10:14 |
-| 14  | Victor Nicolet, Colin Moschard                       | 10:16 - 10:23 |
+|   # | Group                                                           | Passage     |
+| --: | :-------------------------------------------------------------- | :---------- |
+|   1 | Gabriel Bader and Mauro Santos                                  | 10:30-10:38 |
+|   2 | Theo Bensaci and Yasser Gasmi                                   | 10:40-10:48 |
+|   3 | Pierre Thiébaud and Victor Giordani                             | 10:50-10:58 |
+|   4 | Koray Akgul and Nathan Stampfli                                 | 11:00-11:08 |
+|   5 | Romain Durussel and Abram Zweifel                               | 11:10-11:18 |
+|   6 | Léo Bernard and Yann Mermoud                                    | 11:20-11:28 |
+|   7 | Sofian Ethenoz, François de Courville and Mouhamed Sakho        | 11:30-11:38 |
+|   8 | Nolan Evard, Maikol Correia Da Silva and Alberto De Sousa Lopes | 11:40-11:48 |
 
-### DAI-TIC-C (Friday mornings)
+### DAI-TIC-B (Wednesday afternoons)
 
-| #   | Group                                                   | Passage       |
-| --- | ------------------------------------------------------- | ------------- |
-| 1   | Florian Duruz, Yoann Changanaqui                        | 08:30 - 08:37 |
-| 2   | Thomas Stäheli, Léonard Jouve and Ali Zoubir            | 08:39 - 08:46 |
-| 3   | Aladin Iseni, Arthur Jacobs                             | 08:48 - 08:55 |
-| 4   | Thirusan Rajadurai, Raphaël Perret                      | 08:57 - 09:04 |
-| 5   | Mathieu Rabot, Camille Theubet and Antoine Aubry        | 09:06 - 09:13 |
-| 6   | Bovard Nicolas - Froidevaux Kilian                      | 09:15 - 09:22 |
-| 7   | Urs Behrmann, Rodrigo Lopes dos santos                  | 09:24 - 09:31 |
-| 8   | Pedro Alves da Silva & Gonçalo Carvalheiro Heleno       | 09:33 - 09:40 |
-| 9   | David Berger, Sara Camassa                              | 09:42 - 09:49 |
-| 10  | Gianni Cecchetto, Nathan Tschantz and Zaïd Schouwey     | 09:51 - 09:58 |
-| 11  | Dani Tiago Faria dos Santos and Nicolas Duprat          | 10:00 - 10:07 |
-| 12  | Guillaume Fragnière, Dylan Langumier & Killian Viquerat | 10:09 - 10:16 |
+| # | Group                                 | Passage     |
+|--:|:--------------------------------------|:------------|
+| 1 | Pierre Gellet and Mirco Profico       | 14:45-14:53 |
+| 2 | Yuuta Jorand and Agron Markaj         | 14:55-15:03 |
+| 3 | Samuel dos Santos and Fabien Léger    | 15:05-15:13 |
+| 4 | Arnaud Bersier and Jonathan Nicolet   | 15:15-15:23 |
+| 5 | Marc Ischi and Arnaut Leyre           | 15:25-15:33 |
+| 6 | Julien Gorgerat and Audrey Mauroux    | 15:35-15:43 |
+| 7 | Louis Garcia and Tiago Ferreira       | 15:45-15:53 |
+| 8 | Maxime Regenass and Santiago Sugrañes | 15:55-16:03 |
+
+### DAI-TIC-A (Thursdays)
+
+|   # | Group                                                        | Passage     |
+| --: | :----------------------------------------------------------- | :---------- |
+|   1 | Thomas Boltshauser, Christopher Pardo and Charles Perfect    | 10:05-10:13 |
+|   2 | Sofia Garfo Henriques, Quentin Eschmann and Thibault Matthey | 12:10-12:18 |
+|   3 | Pei-Wen Liao, Maksym Makovskyi and Guo Yu Wu                 | 12:20-12:28 |
+|   4 | Kym Bolomey, Paul Reynard and Robiel Tesfazghi               | 12:40-12:48 |
+|   5 | Gianni Bee and Quentin Michon                                | 16:30-16:38 |
+|   6 | Aymeric Siegenthaler, Fateme Pirhayati and Luis Oswaldo      | 16:40-16:48 |
+|   7 | Louis Bindschedler, Benoît Essinger and Laszlo Meylan        | 16:50-16:58 |
+|   8 | Tadeusz Kondracki, Yanni Skawronski and Jules Rossier        | 17:00-17:08 |
+|   9 | Colin Stefani and Simão Romano Schindler                     | 17:10-17:18 |
+
+-->
+
+<!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
 ## Grades and feedback
 
@@ -351,6 +545,19 @@ Cordialement,
 
 </details>
 
+## Tips
+
+You are allowed to reuse your _"Bases de données relationnelles (BDR)"_ project
+for this practical work.
+
+You can decide to merge the two projects into one if you want or keep the idea
+and implement it in a different way (in memory as you will see in the course
+materials).
+
+However, you must ensure that you meet all the criteria of this practical work
+and that you respect all the constraints. In our experience, it might be easier
+to start from scratch with a new idea. But you are welcome to try!
+
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
@@ -376,3 +583,7 @@ You can use reactions to express your opinion on a comment!
 
 - Main illustration by [Lāsma Artmane](https://unsplash.com/@lasmaa) on
   [Unsplash](https://unsplash.com/photos/lighted-christmas-tree-surrounded-by-houses-5X8N9A2ruHM)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119

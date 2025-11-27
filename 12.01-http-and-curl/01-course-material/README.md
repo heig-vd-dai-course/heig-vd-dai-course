@@ -537,7 +537,9 @@ The request is defined by a method. The most used methods are:
 - `POST` - Create a new resource.
 - `PATCH` - Partially update a resource.
 - `PUT` - Update a resource if it exists or create it if it does not exist (this
-  is an [idempotent](https://en.wikipedia.org/wiki/Idempotence) method).
+  is an [idempotent](https://en.wikipedia.org/wiki/Idempotence) method - it
+  means that making multiple identical requests has the same effect as making a
+  single request).
 - `DELETE` - Delete a resource.
 
 Other methods exist but are out of the scope of this teaching unit.
@@ -1138,6 +1140,15 @@ Each query parameter is separated from each other by a `&` character.
 Let's update the `Main.java` file to demonstrate this by adding a new context
 with some query parameters:
 
+> [!TIP]
+>
+> The `BadRequestResponse` class is used to send a `400` (Bad Request) response.
+> It must be imported from the `io.javalin.http` package:
+>
+> ```java
+> import io.javalin.http.BadRequestResponse;
+> ```
+
 ```java
     app.get(
         "/query-parameters-demo",
@@ -1365,6 +1376,17 @@ representations:
 
 Let's update the `Main.java` file to demonstrate this:
 
+> [!TIP]
+>
+> The `BadRequestResponse` and `NotAcceptableResponse` classes are used to send
+> a `400` (Bad Request) and `406` (Not Acceptable) response respectively. They
+> must be imported from the `io.javalin.http` package:
+>
+> ```java
+> import io.javalin.http.BadRequestResponse;
+> import io.javalin.http.NotAcceptableResponse;
+> ```
+
 ```java
     app.get(
         "/content-negotiation-demo",
@@ -1496,8 +1518,8 @@ request without additional information.
 
 Let's take an example:
 
-1. A first user access the homepage of a website.
-2. A second user access the homepage of the same website.
+1. A first user accesses the homepage of a website.
+2. A second user accesses the homepage of the same website.
 
 For the time being, the server cannot know who is the author of each request.
 
@@ -1686,6 +1708,7 @@ shopping cart needs to keep track of the client:
 - The user can remove items from the shopping cart.
 - The user can see the shopping cart.
 - The user can buy the items in the shopping cart.
+- Etc.
 
 The server must know who is the author of each request in order to maintain the
 shopping cart.
@@ -2644,8 +2667,8 @@ In a production application, you would certainly use a database to store the
 users (PostgreSQL, MySQL, MongoDB, etc.).
 
 While it would be possible to use a database with Javalin, it is out of the
-scope of this teaching. You can check the [Go further](#go-further) section if
-you want to implement if yourself.
+scope of this teaching unit. You can check the [Go further](#go-further) section
+if you want to implement if yourself.
 
 As already mentioned, Javalin is perfect to create prototypes and proof of
 concepts but we would recommend you to use a web framework such as Quarkus or
@@ -2672,6 +2695,8 @@ develop and how to document an API.
 
 This is an optional section. Feel free to skip it if you do not have time.
 
+- Are you able to implement a simple CRUD API for another resource (e.g.,
+  products, orders, books, movies, etc.)?
 - Are you able to document the API you have just created using the OpenAPI
   Specification? You can use the official documentation to help you:
   <https://javalin.io/tutorials/openapi-example>.
