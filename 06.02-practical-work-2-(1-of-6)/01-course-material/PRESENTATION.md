@@ -427,7 +427,7 @@ the [course material][course].
 
 More details for this section in the [course material][course].
 
-### Presentations
+### Presentations (1/2)
 
 The practical work presentations will take place on:
 
@@ -442,8 +442,6 @@ The exact schedule will be communicated once the groups are known.
 
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
-<!--
-
 ### Presentations (2/2)
 
 We only have **8 minutes per group**. You decide what you want to show us and
@@ -455,8 +453,6 @@ The presentation order is random and is stated in the next tables:
 - [DAI-TIC-C (Wednesday mornings)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06.02-practical-work-2-(1-of-6)/01-course-material/README.md#dai-tic-c-wednesday-mornings>)
 - [DAI-TIC-B (Wednesday afternoons)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06.02-practical-work-2-(1-of-6)/01-course-material/README.md#dai-tic-b-wednesday-afternoons>)
 - [DAI-TIC-A (Thursdays)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06.02-practical-work-2-(1-of-6)/01-course-material/README.md#dai-tic-a-thursdays>)
-
--->
 
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
