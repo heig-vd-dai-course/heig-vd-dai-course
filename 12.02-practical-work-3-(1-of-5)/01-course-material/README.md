@@ -330,20 +330,20 @@ repository!
 
 ### Category 1 - SSH and SCP
 
-|   # | Criterion                                                                                    | Points |
-| --: | :------------------------------------------------------------------------------------------- | -----: |
-|   1 | You and the teaching staff can access the virtual machine without a password using a SSH key |    0.2 |
-|   2 | The Git repository is cloned on the virtual machine (HTTPS is fine)                          |    0.2 |
+|   # | Criterion                                                                                                               | Points |
+| --: | :---------------------------------------------------------------------------------------------------------------------- | -----: |
+|   1 | You and the teaching staff can access the virtual machine without a password using a SSH key                            |    0.2 |
+|   2 | The Git repository containing the Docker Compose files of your project is cloned on the virtual machine (HTTPS is fine) |    0.2 |
 
 ### Category 2 - Docker and Docker Compose
 
-|   # | Criterion                                                                                                            | Points |
-| --: | :------------------------------------------------------------------------------------------------------------------- | -----: |
-|   3 | Docker and Docker Compose are correctly installed on the virtual machine (version 2+ using the right APT repository) |    0.2 |
-|   4 | Docker can be ran without the need to use `sudo`                                                                     |    0.2 |
-|   5 | The Docker applications (Traefik and your web application) are split into multiple directories                       |    0.2 |
-|   6 | The Docker applications (Traefik and your web application) share a common network                                    |    0.2 |
-|   7 | The Docker Compose files are correctly defined to run Traefik and your web application                               |    0.2 |
+|   # | Criterion                                                                                                                 | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------------ | -----: |
+|   3 | Docker and Docker Compose are correctly installed on the virtual machine (version 2+ using the right APT repository)      |    0.2 |
+|   4 | Docker can be ran without the need to use `sudo`                                                                          |    0.2 |
+|   5 | The Docker applications (Traefik and your web application) are split into multiple directories and share a common network |    0.2 |
+|   6 | The web application is published to GitHub Container Registry                                                             |    0.2 |
+|   7 | The Docker Compose files are correctly defined to run Traefik and your web application                                    |    0.2 |
 
 ### Category 3 - HTTP and curl
 
@@ -398,7 +398,7 @@ repository!
   related commit hash before the deadline - every 24 hours after the deadline
   will result in a -1 point penalty on the final grade.
 - The web application can only use the HTTP/HTTPS protocols.
-- The application must use the Javalin dependency for the web server.
+- The web application must use the Javalin dependency for the web server.
 - The application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word _slightly_, no
   need to shoot for the moon).
