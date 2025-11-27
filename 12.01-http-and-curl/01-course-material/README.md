@@ -1,17 +1,6 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/21-http-and-curl/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/21-http-and-curl/21-http-and-curl-course-material.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
-[illustration]: ./images/main-illustration.jpg
+# HTTP and curl
 
-# HTTP and curl - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
@@ -20,10 +9,20 @@ Based on the original course by O. Liechti and J. Ehrensberger.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/12.01-http-and-curl-presentation.pdf)
+- Code examples: [Link to content](../02-code-examples/)
+- Solution: [Link to content](../03-solution/)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Disclaimer](#disclaimer)
@@ -59,8 +58,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-So far in the course, you have built network applications using the TCP and UDP
-protocols.
+So far in the teaching unit, you have built network applications using the TCP
+and UDP protocols.
 
 You have mastered these protocols and you are now able to build network
 applications using them.
@@ -79,13 +78,21 @@ applications using all the features offered by this protocol.
 This will allow you to build more complex network applications, built on top of
 a solid foundation: HTTP.
 
-As HTTP offers many features and is a very complex protocol, this chapter will
-be a mixed between theory and practice to introduce you to the most important
+As HTTP offers many features and is a very complex protocol, this course will be
+a mixed between theory and practice to introduce you to the most important
 concepts.
+
+In a nutshell, at the end of this course, you will be able to:
+
+- Apply the basic concepts of HTTP.
+- Apply the basic concepts of APIs.
+- Use curl to test APIs.
+- Design, document and develop a simple API.
+- Interact with a simple CRUD API.
 
 ## Disclaimer
 
-In this chapter, you will learn and experiment with the HTTP protocol. We will
+In this course, you will learn and experiment with the HTTP protocol. We will
 focus on the version 1.1 of the protocol as it is the most used version today
 and is supported by all browsers. Other versions of the protocol will be
 mentioned but will not be covered in details.
@@ -97,22 +104,22 @@ Javalin is a lightweight web framework for Java and Kotlin. It is built on top
 of [Jetty](https://eclipse.dev/jetty/).
 
 Even though you will have a good understanding of HTTP at the end of this
-chapter, **this is not a web course**.
+course, **this is not a web teaching unit**.
 
 The web is a complex ecosystem with many different technologies. HTTP is only
-one of them. You will see other technologies in future courses.
+one of them. You will see other technologies in future teaching units.
 
 Javalin is the perfect tool to learn and experiment with HTTP. However, it is
-not a production-ready library. It is only meant to be used for learning
-purposes and for prototyping.
+not meant to be used in a production environnement. It is only meant to be used
+for learning purposes and for prototyping.
 
 If you want to develop a network application using HTTP that you want to use in
 production, you will have to use a third-party library such as
 [Quarkus](https://quarkus.io/) or
 [Spring Boot](https://spring.io/projects/spring-boot).
 
-As these libraries are out of the scope of this course (and mostly because you
-will see them in details in future courses), we will not use them.
+As these frameworks are out of the scope of this course (and mostly because you
+will see them in details in future teaching units), we will not use them.
 
 ## Prepare and setup your environment
 
@@ -163,8 +170,8 @@ of [Jetty](https://eclipse.dev/jetty/).
 #### Create and configure a new IntelliJ IDEA project
 
 Create a new IntelliJ IDEA project as seen in the
-[Java, IntelliJ IDEA and Maven](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04-java-intellij-idea-and-maven)
-chapter.
+[Java, IntelliJ IDEA and Maven](../../01.04-java-intellij-idea-and-maven/)
+course.
 
 #### Add Javalin to the project
 
@@ -177,7 +184,7 @@ seen in previous chapters:
     <dependency>
       <groupId>io.javalin</groupId>
       <artifactId>javalin-bundle</artifactId>
-      <version>6.3.0</version>
+      <version>6.7.0</version>
     </dependency>
 ```
 
@@ -195,7 +202,7 @@ content:
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.5.0</version>
+        <version>3.6.0</version>
         <executions>
           <execution>
             <goals>
@@ -238,7 +245,7 @@ section. This section is required to correctly use the Maven shade with Javalin.
 Update the `Main.java` file with the following code:
 
 ```java
-package ch.heigvd.dai;
+package ch.heigvd;
 
 import io.javalin.Javalin;
 
@@ -261,6 +268,9 @@ see the following:
 ```text
 Hello, world!
 ```
+
+This output shows that the server is running and responding to requests with the
+text "Hello, world!".
 
 Using curl, you can also access the server:
 
@@ -314,7 +324,7 @@ This line will start the server on the port `8080`. You might have noticed that
 no concurrency is specified. This is because Javalin uses good defaults that
 they describe in their
 [documentation](https://javalin.io/documentation#concurrency). You will not have
-to worry about concurrency in this chapter as Javalin will handle it for you.
+to worry about concurrency in this course as Javalin will handle it for you.
 
 You now have a basic HTTP server running on your computer. It is time to learn
 more about HTTP!
@@ -372,11 +382,11 @@ Each version of HTTP saw the introduction of many features over the years.
 
 The different versions are:
 
-- HTTP/0.9 (1989)
-- HTTP/1.0 (1996)
-- HTTP/1.1 (1997)
-- HTTP/2 (2015)
-- HTTP/3 (2022)
+- HTTP/0.9 (1989).
+- HTTP/1.0 (1996).
+- HTTP/1.1 (1997).
+- HTTP/2 (2015).
+- HTTP/3 (2022).
 
 Most features are retro-compatible. This means that a client using HTTP/1.1 can
 communicate with a server using HTTP/2.
@@ -395,10 +405,10 @@ only meant to transfer HTML documents.
 HTTP/1.0 was released in 1996. It introduced many features that are still used
 today (among others):
 
-- HTTP headers
-- HTTP status codes
-- HTTP methods
-- Documents other than HTML (images, videos, etc.) are supported
+- HTTP headers.
+- HTTP status codes.
+- HTTP methods.
+- Documents other than HTML (images, videos, etc.) are supported.
 
 #### HTTP/1.1
 
@@ -410,9 +420,9 @@ introduced many features that are still used today (among others):
   requests over the same connection. Which is more efficient.
 - Additional cache control features
 - Content negotiation - The client can ask for a specific version of a resource
-  (HTML, CSS, etc.)
+  (HTML, CSS, etc.).
 - Thanks to the `Host` header, it is possible to host multiple websites on the
-  same server
+  same server. You will learn more about this in the next course.
 
 #### HTTP/2
 
@@ -429,7 +439,7 @@ the QUIC protocol instead of TCP. QUIC is based on the UDP protocol, making it
 more efficient.
 
 The main point of HTTP/3 is to make the web faster and more secure, using a more
-efficient protocol based on UDP.
+efficient protocol based on top of UDP.
 
 ### HTTP resources
 
@@ -444,30 +454,30 @@ generated by a server (data returned in JSON or YAML format - more on this
 later).
 
 Let's take a look at the following URL (the _"Fiche d'unité"_ of the current
-course in GAPS):
+teaching unit in GAPS):
 
 <https://gaps.heig-vd.ch/consultation/fiches/uv/uv.php?id=6573>
 
 The URL is composed of the following parts:
 
-- The protocol (`http` or `https`)
-- The host (e.g. `gaps.heig-vd.ch`)
-- The port number (optional, e.g. `:80` for HTTP or `:443` for HTTPS)
-- The path to the resource (e.g. `/consultation/fiches/uv/uv.php`)
-- The query parameters (optional, e.g. `?id=6573`)
+- The protocol (`http` or `https`).
+- The host (e.g. `gaps.heig-vd.ch`).
+- The port number (optional, e.g. `:80` for HTTP or `:443` for HTTPS`).
+- The path to the resource (e.g. `/consultation/fiches/uv/uv.php`).
+- The query parameters (optional, e.g. `?id=6573`).
 
 The URL can also contain the following parts:
 
 - The path parameters (optional, e.g. `/users/{user-id}/view`, where `{user-id}`
-  is a path parameter)
-- A subdomain (optional, e.g. `gaps` in `gaps.heig-vd.ch`)
+  is a path parameter).
+- A subdomain (optional, e.g. `gaps` in `gaps.heig-vd.ch`).
 
 The **host** is sometimes called the **domain name** or the **fully qualified
 domain name (FQDN)**. It is composed of the following parts:
 
-- The subdomain (optional, e.g. `gaps` in `gaps.heig-vd.ch`)
-- The domain name (e.g. `heig-vd`)
-- The top-level domain (e.g. `ch`)
+- The subdomain (optional, e.g. `gaps` in `gaps.heig-vd.ch`).
+- The domain name (e.g. `heig-vd`).
+- The top-level domain (e.g. `ch`).
 
 This resource is a web page that returns a HTML document. The server will
 process the request and send the HTML of the web page to the client.
@@ -523,18 +533,19 @@ server.
 The request is defined by a method. The most used methods are:
 
 - `GET` - Get a resource (default method - a browser always requests a resource
-  using the HTTP method `GET` by default)
-- `POST` - Create a new resource
-- `PATCH` - Partially update a resource
-- `PUT` - Update a resource (replace the resource - idempotent)
-- `DELETE` - Delete a resource
+  using the HTTP method `GET` by default).
+- `POST` - Create a new resource.
+- `PATCH` - Partially update a resource.
+- `PUT` - Update a resource if it exists or create it if it does not exist (this
+  is an [idempotent](https://en.wikipedia.org/wiki/Idempotence) method).
+- `DELETE` - Delete a resource.
 
-Other methods exist but are out of the scope of this course.
+Other methods exist but are out of the scope of this teaching unit.
 
 Let's update the `Main.java` file to demonstrate this:
 
 ```java
-package ch.heigvd.dai;
+package ch.heigvd;
 
 import io.javalin.Javalin;
 
@@ -556,7 +567,8 @@ public class Main {
 
 We have added a new context for each HTTP method. Each context will respond to
 the corresponding HTTP method. You might have noticed that we have used the same
-context for each method. This is because the HTTP method is part of the request.
+context (= the same `/` path) for each method. This is because same path can be
+used for different methods.
 
 Run the application and open your browser at <http://localhost:8080>. You should
 see the following:
@@ -564,6 +576,8 @@ see the following:
 ```text
 Hello, world from a GET request method!
 ```
+
+This output shows that the server is responding to `GET` requests.
 
 Now, let's try to send a `POST` request to the server using curl:
 
@@ -580,6 +594,8 @@ You should see the following:
 Hello, world from a POST request method!
 ```
 
+This output shows that the server is responding to `POST` requests.
+
 Try the other methods using curl:
 
 ```sh
@@ -590,7 +606,7 @@ curl -X PATCH http://localhost:8080
 curl -X DELETE http://localhost:8080
 ```
 
-You should see the different responses.
+You should see the different responses from the related methods.
 
 These methods are used to interact with resources on the server. For example, if
 you want to create a new user, you will send a `POST` request to the server. If
@@ -604,26 +620,26 @@ As seen in the previous section, in order to get a resource from a server, the
 client must send a request to the server. The request contains the following
 information:
 
-- The HTTP method
-- The URL of the resource
-- The supported HTTP version
-- Some HTTP headers
-- The HTTP body (optional)
-- The query parameters (optional)
-- The cookies (optional)
-- The content type (optional)
+- The HTTP method.
+- The URL of the resource.
+- The supported HTTP version.
+- Some HTTP headers.
+- The HTTP body (optional).
+- The query parameters (optional).
+- The cookies (optional).
+- The content type (optional).
 
 The server processes the request and sends a response to the client. The
 response contains the following information:
 
-- The HTTP version
-- The HTTP status code
-- The HTTP headers
-- The HTTP body (optional)
-- The cookies (optional)
-- The content type (optional)
-- The content length (in HTTP/1.1)
-- The content encoding (optional)
+- The HTTP version.
+- The HTTP status code.
+- The HTTP headers.
+- The HTTP body (optional).
+- The cookies (optional).
+- The content type (optional).
+- The content length (in HTTP/1.1).
+- The content encoding (optional).
 
 You will learn more in details about these elements in the next sections but it
 is important to understand the structure of a HTTP request and response.
@@ -658,10 +674,10 @@ using the HTTP method `GET`.
 
 Some headers as set in the request as well:
 
-- `Host` - The host of the server (gaps.heig-vd.ch in this case)
-- `User-Agent` - The user agent that sent the request (curl in this case)
+- `Host` - The host of the server (gaps.heig-vd.ch in this case).
+- `User-Agent` - The user agent that sent the request (curl in this case).
 - `Accept` - The content types accepted by the user agent (any type in this
-  case)
+  case).
 
 You can reproduce this request using curl:
 
@@ -790,8 +806,8 @@ code `200` (OK).
 Some headers as set in the request as well:
 
 - `Content-Length` - The length of the content in bytes (6111 bytes in this
-  case)
-- `Content-Type` - The content type of the resource (text/html in this case)
+  case).
+- `Content-Type` - The content type of the resource (`text/html` in this case).
 
 The server also sends the content of the resource (the HTML) in the body of the
 response, separated from the headers by an empty line.
@@ -833,62 +849,62 @@ sends a response to the client.
 The response is defined by a status code. Status codes are grouped into five
 categories:
 
-- `1xx` - Informational responses
+- **`1xx` - Informational responses**
 
   The most common informational response are:
 
-  - `101` - Switching Protocols (the server switches to a different protocol)
-  - `102` - Processing (the server is processing the request)
+  - `101` - Switching Protocols (the server switches to a different protocol).
+  - `102` - Processing (the server is processing the request).
 
-- `2xx` - Successful responses
+- **`2xx` - Successful responses**
 
   The most common successful responses are:
 
-  - `200` - OK (the request was successful)
-  - `201` - Created (the request was successful and a new resource was created)
-  - `202` - Accepted (the request was accepted but not yet processed)
+  - `200` - OK (the request was successful).
+  - `201` - Created (the request was successful and a new resource was created).
+  - `202` - Accepted (the request was accepted but not yet processed).
   - `204` - No Content (the request was successful but the server does not send
-    any content)
+    any content).
 
-- `3xx` - Redirection messages
+- **`3xx` - Redirection messages**
 
   The most common redirection messages are:
 
   - `301` - Moved Permanently (the resource has been moved permanently to a new
-    URL)
-  - `302` - Found (the resource has been moved temporarily to a new URL)
+    URL).
+  - `302` - Found (the resource has been moved temporarily to a new URL).
   - `304` - Not Modified (the resource has not been modified since the last
-    request)
+    request).
 
-- `4xx` - Client error responses
+- **`4xx` - Client error responses**
 
   The most common client error responses are:
 
-  - `400` - Bad Request (the request is malformed)
-  - `401` - Unauthorized (the request requires authentication)
-  - `403` - Forbidden (the request is forbidden)
-  - `404` - Not Found (the resource does not exist)
+  - `400` - Bad Request (the request is malformed).
+  - `401` - Unauthorized (the request requires authentication).
+  - `403` - Forbidden (the request is forbidden).
+  - `404` - Not Found (the resource does not exist).
   - `405` - Method Not Allowed (the HTTP method is not allowed for this
-    resource)
-  - `409` - Conflict (the request could not be processed because of a conflict)
-  - `410` - Gone (the resource is no longer available and has been removed)
+    resource).
+  - `409` - Conflict (the request could not be processed because of a conflict).
+  - `410` - Gone (the resource is no longer available and has been removed).
   - `429` - Too Many Requests (the client has sent too many requests in a given
-    amount of time)
+    amount of time).
 
-- `5xx` - Server error responses
+- **`5xx` - Server error responses**
 
   The most common server error responses are:
 
   - `500` - Internal Server Error (the server encountered an unexpected
-    condition that prevented it from fulfilling the request)
+    condition that prevented it from fulfilling the request).
   - `501` - Not Implemented (the server does not support the functionality
     required to fulfill the request)
   - `502` - Bad Gateway (the server received an invalid response from an
-    upstream server)
+    upstream server).
   - `503` - Service Unavailable (the server is currently unable to handle the
-    request due to a temporary overload or scheduled maintenance)
+    request due to a temporary overload or scheduled maintenance).
   - `504` - Gateway Timeout (the server did not receive a timely response from
-    an upstream server)
+    an upstream server).
 
 The default status code is `200` (OK). This means that you can omit the status
 code.
@@ -896,7 +912,7 @@ code.
 Let's update the `Main.java` file to demonstrate this:
 
 ```java
-package ch.heigvd.dai;
+package ch.heigvd;
 
 import io.javalin.Javalin;
 import io.javalin.http.HttpStatus;
@@ -1044,6 +1060,15 @@ server will then respond with a `200` (OK) status code and a message.
 Run the application and open your browser at
 <http://localhost:8080/path-parameter-demo/Hello%20world>.
 
+You should see the following:
+
+```text
+You just called `/path-parameter-demo` with path parameter 'Hello world'!
+```
+
+It means that the server is responding to `GET` requests with the path parameter
+`Hello world`.
+
 Let's try to send a `GET` request to the server using curl:
 
 ```sh
@@ -1057,9 +1082,9 @@ The output should be similar to the following:
 You just called `/path-parameter-demo` with path parameter 'Hello world'!
 ```
 
-You can notice the URL encoding in the URL (`Hello%20world`).
+You can notice the URL encoding in the URL (`Hello%20world`), as seen earlier.
 
-Try to access another URL such as
+Try to access another (inexistent) URL such as
 <http://localhost:8080/path-parameter-demo/path-parameter/not-found>.
 
 The output should be similar to the following:
@@ -1106,8 +1131,9 @@ An example of some query parameters is the following:
 In this example, the query parameters are `firstName` and `lastName`. The server
 will replace the query parameters with the actual values of the parameters.
 
-The query parameters are separated from the path by a `?` character. The query
-parameters are separated from each other by a `&` character.
+The query parameters are separated from the path by a `?` character.
+
+Each query parameter is separated from each other by a `&` character.
 
 Let's update the `Main.java` file to demonstrate this by adding a new context
 with some query parameters:
@@ -1307,7 +1333,7 @@ Here is a list of the most common HTTP headers:
 ### HTTP content negotiation
 
 Thanks to the `Accept` header, the client can ask for a specific version of a
-resource (HTML, CSS, etc.).
+resource (HTML, XML, JSON, etc.).
 
 The `Accept` header is used to specify the media types accepted by the client.
 
@@ -1470,8 +1496,8 @@ request without additional information.
 
 Let's take an example:
 
-1. A first user access the homepage of a website
-2. A second user access the homepage of the same website
+1. A first user access the homepage of a website.
+2. A second user access the homepage of the same website.
 
 For the time being, the server cannot know who is the author of each request.
 
@@ -1480,19 +1506,19 @@ to identify them. This is called a stateful protocol.
 
 Let's take an example:
 
-1. One of the users wants to access their profile page
-2. The profile page is protected and only accessible to logged in users
+1. One of the users wants to access their profile page.
+2. The profile page is protected and only accessible to logged in users.
 3. In order to access the profile page, the user must tell the server who they
-   are using a login form
-4. Using the login form, the user sends their credentials to the server
+   are using a login form.
+4. Using the login form, the user sends their credentials to the server.
 5. The server will validate the credentials and send a response to the user with
    a token. Otherwise it will send an error message to the user (such as a
-   `401 Unauthorized` status code)
-6. The user will send the token to the server with each future request
+   `401 Unauthorized` status code).
+6. The user will send the token to the server with each future request.
 7. The server will check if the token is valid and retrieve the user from the
-   database using the token
+   database using the token.
 8. The server will then send the profile page to the user if it can identify
-   them, otherwise it will send an error message
+   them, otherwise it will send an error message.
 
 Thanks to the token, the server can identify the user and send them the profile
 page.
@@ -1506,8 +1532,8 @@ valid. As each token is unique, the server can identify the user.
 With HTTP, the clients and servers can use HTTP sessions. There are many ways to
 implement HTTP sessions. Here are two of them:
 
-- Using a query parameter
-- Using a cookie
+1. Using a query parameter.
+2. Using a cookie.
 
 #### HTTP sessions using a query parameter
 
@@ -1614,15 +1640,15 @@ Now, refresh the page. You should see the following:
 You just called `/cookie-demo` with a cookie. Its value is 'cookie-demo'!
 ```
 
-The browser has sent the cookie with the name `cookie` and the value to the
-server.
+The browser has sent the cookie with the name `cookie` and its value to the
+server! The server has retrieved the cookie and sent its value in the response.
 
 You can access the cookies in your browser using the developer tools:
 
-- Firefox: <https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector>
+- Firefox: <https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector>.
 - Chromium-based browsers (Chrome, Edge, etc.):
-  <https://developer.chrome.com/docs/devtools/application/cookies>
-- Safari: <https://developer.apple.com/safari/tools/>
+  <https://developer.chrome.com/docs/devtools/application/cookies>.
+- Safari: <https://developer.apple.com/safari/tools/>.
 
 Try to update the value of the cookie and refresh the page. You should see the
 new value of the cookie.
@@ -1644,8 +1670,8 @@ necessary as not all applications need to keep track of the client.
 For example, a calculator application that waits for a calculation and directly
 sends the result does not need to keep track of the client:
 
-- Each request is independent of the others
-- The server can directly respond to each request
+- Each request is independent of the others.
+- The server can directly respond to each request.
 
 The server does not have to know who is the author of the request: it can send
 the result directly to the client.
@@ -1656,10 +1682,10 @@ stateless.
 On the other hand, an e-commerce application where the user can add items to a
 shopping cart needs to keep track of the client:
 
-- The user can add items to the shopping cart
-- The user can remove items from the shopping cart
-- The user can see the shopping cart
-- The user can buy the items in the shopping cart
+- The user can add items to the shopping cart.
+- The user can remove items from the shopping cart.
+- The user can see the shopping cart.
+- The user can buy the items in the shopping cart.
 
 The server must know who is the author of each request in order to maintain the
 shopping cart.
@@ -1678,15 +1704,17 @@ In order to make it easier to develop web applications, developers have
 developed some patterns to follow.
 
 An Application Protocol Interface (API) is a set of functions and procedures
-that allow the creation of applications that access the features or data of an
-operating system, application or other service.
+that allow the creation of applications that expose features or data to external
+services. APIs allow different software applications to communicate with each
+other and share data and functionality.
 
 An API is a contract between the client and the server. It defines how the
 client and the server should interact with each other.
 
 Using an API, the client can send requests to the server and get responses from
-the server. This allow to use many different clients (web browsers, mobile
-applications, desktop applications, etc.) with the same server.
+the server. This allows many different clients (web browsers, mobile
+applications, desktop applications, etc.) to interact with the same API and
+share the same data and functionality.
 
 Most APIs are based on the HTTP protocol. This means that they use the HTTP
 methods (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`, etc.) to define the operations
@@ -1708,15 +1736,15 @@ you can transform a Java Object to JSON and vice versa.
 Designing an API is not a trivial task. Most of the time, APIs are designed
 around the CRUD pattern.
 
-CRUD stands for Create, Read, Update and Delete. It is a pattern that is used to
-design APIs.
+CRUD stands for _"Create"_, _"Read"_, _"Update"_ and _"Delete"_. It is a pattern
+that is used to design APIs.
 
 The CRUD pattern is based on the four basic operations of persistent storage:
 
-- Create - Create a new resource
-- Read - Read a resource
-- Update - Update a resource
-- Delete - Delete a resource
+- **Create** - Create a new resource.
+- **Read** - Read a resource.
+- **Update** - Update a resource.
+- **Delete** - Delete a resource.
 
 The CRUD pattern is very simple and easy to understand. It is very useful to
 design APIs.
@@ -1730,8 +1758,8 @@ complex to design than simple CRUD APIs.
 
 The REST pattern is based on the six following principles:
 
-1. Client / server architecture: client and server are completely separated and
-   only interact through the API
+1. Client/server architecture: client and server are completely separated and
+   only interact through the API.
 2. Stateless: the server does not retain any session information. Requests from
    the client must include all the information necessary to process it.
 3. Cache-ability: a REST API should support caching of responses by the client
@@ -1739,19 +1767,20 @@ The REST pattern is based on the six following principles:
 4. Layered system: it should be able to add intermediate systems (cache, load
    balancer, security gateway) without any impact for the client
 5. Uniform interface:
-   - Use URIs/URLs to identify resources
+   - Use URIs/URLs to identify resources.
    - Server responses use a standard format that includes all information
      required by the client to process the data (modify or delete the resource’s
-     state)
+     state).
    - Server responses include links that allow the client to discover how to
-     interact with a resource
+     interact with a resource.
 6. Code on demand (optional): responses may include executable code to customize
-   functionality of the client
+   functionality of the client.
 
 All REST APIs are APIs but not all APIs are REST APIs.
 
-REST APIs are hard to implement correctly. In this course, we will stay with
-CRUD APIs. We mention REST APIs for completeness.
+REST APIs are hard to implement correctly. In this teaching, we will focus on
+CRUD APIs. We mention REST APIs for completeness and you will learn more about
+them in future teaching units.
 
 ### Simple API with CRUD operations example
 
@@ -1761,47 +1790,47 @@ We will architecture the application using the
 [Domain Driven Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design)
 approach with two domains:
 
-- The `users` domain that contains the user resource
-- The `auth` domain that contains the authentication logic
+- The `users` domain that contains the user resource.
+- The `auth` domain that contains the authentication logic.
 
 The user resource has the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 The user resource has the following operations:
 
-- Create a new user
-- Get many users that you can filter by first name and/or last name
-- Get one user by its ID
-- Update a user
-- Delete a user
+- Create a new user.
+- Get many users that you can filter by first name and/or last name.
+- Get one user by its ID.
+- Update a user.
+- Delete a user.
 
 The user resource has the following endpoints:
 
-- `POST /users` (or `PUT /users`) - Create a new user
-- `GET /users` - List all users
+- `POST /users` (or `PUT /users`) - Create a new user.
+- `GET /users` - List all users.
 - `GET /users?firstName={firstName}&lastName={lastName}` - Search users by first
-  name and/or last name
-- `GET /users/{id}` - Read a user
-- `PUT /users/{id}` (or `PATCH /users/{id}`) - Update a user
-- `DELETE /users/{id}` - Delete a user
+  name and/or last name.
+- `GET /users/{id}` - Read a user.
+- `PUT /users/{id}` (or `PATCH /users/{id}`) - Update a user.
+- `DELETE /users/{id}` - Delete a user.
 
 In order to demonstrate the previous example of a stateful/stateless
 application, the auth domain will contain the following operations:
 
-- Login a user
-- Logout a user
-- Get the current user (the user that is logged in)
+- Login a user.
+- Logout a user.
+- Get the current user (the user that is logged in).
 
 The auth domain has the following endpoints:
 
-- `POST /login` - Login a user
-- `POST /logout` - Logout a user
-- `GET /profile` - Get the current user
+- `POST /login` - Login a user.
+- `POST /logout` - Logout a user.
+- `GET /profile` - Get the current user.
 
 Let's implement this API using Javalin.
 
@@ -1809,81 +1838,87 @@ Start by creating a new directory `src/main/java/ch/heigvd/users` and a new file
 `User.java`:
 
 ```java
-package ch.heigvd.dai.users;
+package ch.heigvd.users;
 
-public class User {
-
-  public Integer id;
-  public String firstName;
-  public String lastName;
-  public String email;
-  public String password;
-
-  public User() {
-    // Empty constructor for serialization/deserialization
-  }
-}
+public record User(Integer id, String firstName, String lastName, String email, String password) {}
 ```
 
-This class represents a user. It has the following properties:
+This is a Java record that represents the user resource. It has five fields:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
-It has one constructor to allow the serialization and deserialization of the
-user. In a production application, you would certainly make all fields private
-and use getters and setters. For the sake of simplicity, we will use public
-fields.
+A Java record is a special type of class that is used to represent immutable
+data carriers (= objects that only contain data and cannot be modified without
+creating a new object). It is a concise way to define a class that only contains
+data.
+
+To access the fields of a record, you can use the accessor methods that are
+automatically generated by the compiler. For example, to access the `firstName`
+field, you can use the `firstName()` method.
+
+To update a field of a record, you must create a new object with the updated
+field. For example, to update the `firstName` field, you can create a new object
+with the new `firstName` value:
+
+```java
+User user = new User(1, "John", "Doe", "john.doe@example.com", "password123");
+User updatedUser = new User(user.id(), "Jane", user.lastName(), user.email(), user.password());
+```
+
+Records are immutable by default. This means that once a record is created, its
+fields cannot be modified. This is a good practice as it prevents accidental
+modifications of the data.
 
 Now, let's create a new class `UsersController.java` in the same directory:
 
 ```java
-package ch.heigvd.dai.users;
+package ch.heigvd.users;
 
 import io.javalin.http.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UsersController {
-  private final ConcurrentHashMap<Integer, User> users;
-  private final AtomicInteger userId = new AtomicInteger(1);
+  private final Map<Integer, User> users;
+  private final AtomicInteger uniqueId = new AtomicInteger(1);
 
-  public UsersController(ConcurrentHashMap<Integer, User> users) {
+  public UsersController(Map<Integer, User> users) {
     this.users = users;
   }
 
   public void create(Context ctx) {
     User newUser =
         ctx.bodyValidator(User.class)
-            .check(obj -> obj.firstName != null, "Missing first name")
-            .check(obj -> obj.lastName != null, "Missing last name")
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
+            .check(obj -> obj.firstName() != null, "Missing first name")
+            .check(obj -> obj.lastName() != null, "Missing last name")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
             .get();
 
     for (User user : users.values()) {
-      if (user.email.equalsIgnoreCase(newUser.email)) {
+      if (newUser.email().equalsIgnoreCase(user.email())) {
         throw new ConflictResponse();
       }
     }
 
-    User user = new User();
+    newUser =
+        new User(
+            uniqueId.getAndIncrement(),
+            newUser.firstName(),
+            newUser.lastName(),
+            newUser.email(),
+            newUser.password());
 
-    user.id = userId.getAndIncrement();
-    user.firstName = newUser.firstName;
-    user.lastName = newUser.lastName;
-    user.email = newUser.email;
-    user.password = newUser.password;
-
-    users.put(user.id, user);
+    users.put(newUser.id(), newUser);
 
     ctx.status(HttpStatus.CREATED);
-    ctx.json(user);
+    ctx.json(newUser);
   }
 
   public void getOne(Context ctx) {
@@ -1905,11 +1940,11 @@ public class UsersController {
     List<User> users = new ArrayList<>();
 
     for (User user : this.users.values()) {
-      if (firstName != null && !user.firstName.equalsIgnoreCase(firstName)) {
+      if (firstName != null && !user.firstName().equalsIgnoreCase(firstName)) {
         continue;
       }
 
-      if (lastName != null && !user.lastName.equalsIgnoreCase(lastName)) {
+      if (lastName != null && !user.lastName().equalsIgnoreCase(lastName)) {
         continue;
       }
 
@@ -1922,28 +1957,27 @@ public class UsersController {
   public void update(Context ctx) {
     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
 
-    User updateUser =
-        ctx.bodyValidator(User.class)
-            .check(obj -> obj.firstName != null, "Missing first name")
-            .check(obj -> obj.lastName != null, "Missing last name")
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
-            .get();
-
-    User user = users.get(id);
-
-    if (user == null) {
+    if (!users.containsKey(id)) {
       throw new NotFoundResponse();
     }
 
-    user.firstName = updateUser.firstName;
-    user.lastName = updateUser.lastName;
-    user.email = updateUser.email;
-    user.password = updateUser.password;
+    User updateUser =
+        ctx.bodyValidator(User.class)
+            .check(obj -> obj.firstName() != null, "Missing first name")
+            .check(obj -> obj.lastName() != null, "Missing last name")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
+            .get();
 
-    users.put(id, user);
+    for (User user : users.values()) {
+      if (updateUser.email().equalsIgnoreCase(user.email())) {
+        throw new ConflictResponse();
+      }
+    }
 
-    ctx.json(user);
+    users.put(id, updateUser);
+
+    ctx.json(updateUser);
   }
 
   public void delete(Context ctx) {
@@ -1965,11 +1999,11 @@ This class represents the controller of the users resource. It has a
 
 It has the following methods:
 
-- `create` - Create a new user
-- `getOne` - Get one user by its ID
-- `getMany` - Get many users that you can filter by first name and/or last name
-- `update` - Update a user
-- `delete` - Delete a user
+- `create` - Create a new user.
+- `getOne` - Get one user by its ID.
+- `getMany` - Get many users that you can filter by first name and/or last name.
+- `update` - Update a user.
+- `delete` - Delete a user.
 
 Using a bit more advanced features of Javalin, we can validate the request body
 and the path parameters to ensure that the request is valid with the help of the
@@ -1990,30 +2024,30 @@ Now let's implement the auth domain. Start by creating a new directory
 `src/main/java/ch/heigvd/auth` and a new file `AuthController.java`:
 
 ```java
-package ch.heigvd.dai.auth;
+package ch.heigvd.auth;
 
-import ch.heigvd.dai.users.User;
+import ch.heigvd.users.User;
 import io.javalin.http.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 
 public class AuthController {
-  private final ConcurrentHashMap<Integer, User> users;
+  private final Map<Integer, User> users;
 
-  public AuthController(ConcurrentHashMap<Integer, User> users) {
+  public AuthController(Map<Integer, User> users) {
     this.users = users;
   }
 
   public void login(Context ctx) {
     User loginUser =
         ctx.bodyValidator(User.class)
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
             .get();
 
     for (User user : users.values()) {
-      if (user.email.equalsIgnoreCase(loginUser.email)
-          && user.password.equals(loginUser.password)) {
-        ctx.cookie("user", String.valueOf(user.id));
+      if (user.email().equalsIgnoreCase(loginUser.email())
+          && user.password().equals(loginUser.password())) {
+        ctx.cookie("user", String.valueOf(user.id()));
         ctx.status(HttpStatus.NO_CONTENT);
         return;
       }
@@ -2052,9 +2086,9 @@ This class represents the controller of the auth domain. It has a
 
 It has the following methods:
 
-- `login` - Login a user
-- `logout` - Logout a user
-- `profile` - Get the current user (the user that is logged in)
+- `login` - Login a user.
+- `logout` - Logout a user.
+- `profile` - Get the current user (the user that is logged in).
 
 The `profile` method will respond with a `401` (Unauthorized) status code if the
 user is not logged in. If logged in, the method will respond with a `200` (OK)
@@ -2064,12 +2098,13 @@ The final step is to update the `Main.java` file to define the endpoints/routes
 that will be used by the API using the same controllers we have just created:
 
 ```java
-package ch.heigvd.dai;
+package ch.heigvd;
 
-import ch.heigvd.dai.auth.AuthController;
-import ch.heigvd.dai.users.User;
-import ch.heigvd.dai.users.UsersController;
+import ch.heigvd.auth.AuthController;
+import ch.heigvd.users.User;
+import ch.heigvd.users.UsersController;
 import io.javalin.Javalin;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Main {
@@ -2079,7 +2114,7 @@ public class Main {
     Javalin app = Javalin.create();
 
     // This will serve as our database
-    ConcurrentHashMap<Integer, User> users = new ConcurrentHashMap<>();
+    Map<Integer, User> users = new ConcurrentHashMap<>();
 
     // Controllers
     AuthController authController = new AuthController(users);
@@ -2354,8 +2389,8 @@ code `204` (No Content).
 ### How to document an API
 
 As seen in the
-[Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11-define-an-application-protocol)
-chapter, it is important to document a protocol to allow other developers to
+[Define an application protocol](../../06.01-define-an-application-protocol/)
+course, it is important to document a protocol to allow other developers to
 understand how to use it.
 
 Documenting an API is thus very important as well: as an API exposes the
@@ -2365,13 +2400,13 @@ properly for other developers to understand how to use it.
 There are many ways to document an API. The most common way is one of the
 following:
 
-- Using the [OpenAPI Specification](https://www.openapis.org/)
-- Describe the API using a simple text file
+- Using the [OpenAPI Specification](https://www.openapis.org/).
+- Describe the API using a simple text file.
 
 OpenAPI is a very useful and powerful specification to document an API. It is,
-however, a bit complex to use in the context of this course with the time
+however, a bit complex to use in the context of this teaching unit with the time
 allowed (you can check the [Go further](#go-further) section if you want to
-implement if yourself).
+implement if yourself) so we will use a simple text file to document our API.
 
 Let's use a simple text file to document the API we have just created.
 
@@ -2388,11 +2423,11 @@ format.
 
 The API is based on the CRUD pattern. It has the following operations:
 
-- Create a new user
-- Get many users that you can filter by first name and/or last name
-- Get one user by its ID
-- Update a user
-- Delete a user
+- Create a new user.
+- Get many users that you can filter by first name and/or last name.
+- Get one user by its ID.
+- Update a user.
+- Delete a user.
 
 Users are also able to login and logout. They can also access their profile to
 validate their information using a cookie.
@@ -2409,26 +2444,26 @@ Create a new user.
 
 The request body must contain a JSON object with the following properties:
 
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Response
 
 The response body contains a JSON object with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
-- `201` (Created) - The user has been successfully created
-- `400` (Bad Request) - The request body is invalid
-- `409` (Conflict) - The user already exists
+- `201` (Created) - The user has been successfully created.
+- `400` (Bad Request) - The request body is invalid.
+- `409` (Conflict) - The user already exists.
 
 ### Get many users
 
@@ -2440,18 +2475,18 @@ Get many users.
 
 The request can contain the following query parameters:
 
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
 
 #### Response
 
 The response body contains a JSON array with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
@@ -2471,16 +2506,16 @@ The request path must contain the ID of the user.
 
 The response body contains a JSON object with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
-- `200` (OK) - The user has been successfully retrieved
-- `404` (Not Found) - The user does not exist
+- `200` (OK) - The user has been successfully retrieved.
+- `404` (Not Found) - The user does not exist.
 
 ### Update a user
 
@@ -2494,26 +2529,26 @@ The request path must contain the ID of the user.
 
 The request body must contain a JSON object with the following properties:
 
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Response
 
 The response body contains a JSON object with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
-- `200` (OK) - The user has been successfully updated
-- `400` (Bad Request) - The request body is invalid
-- `404` (Not Found) - The user does not exist
+- `200` (OK) - The user has been successfully updated.
+- `400` (Bad Request) - The request body is invalid.
+- `404` (Not Found) - The user does not exist.
 
 ### Delete a user
 
@@ -2531,8 +2566,8 @@ The response body is empty.
 
 #### Status codes
 
-- `204` (No Content) - The user has been successfully deleted
-- `404` (Not Found) - The user does not exist
+- `204` (No Content) - The user has been successfully deleted.
+- `404` (Not Found) - The user does not exist.
 
 ### Login
 
@@ -2544,8 +2579,8 @@ Login a user.
 
 The request body must contain a JSON object with the following properties:
 
-- `email` - The email address of the user
-- `password` - The password of the user
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Response
 
@@ -2553,9 +2588,9 @@ The response body is empty. A `user` cookie is set with the ID of the user.
 
 #### Status codes
 
-- `204` (No Content) - The user has been successfully logged in
-- `400` (Bad Request) - The request body is invalid
-- `401` (Unauthorized) - The user does not exist or the password is incorrect
+- `204` (No Content) - The user has been successfully logged in.
+- `400` (Bad Request) - The request body is invalid.
+- `401` (Unauthorized) - The user does not exist or the password is incorrect.
 
 ### Logout
 
@@ -2573,7 +2608,7 @@ The response body is empty. The `user` cookie is removed.
 
 #### Status codes
 
-- `204` (No Content) - The user has been successfully logged out
+- `204` (No Content) - The user has been successfully logged out.
 
 ### Profile
 
@@ -2589,16 +2624,16 @@ The request body is empty.
 
 The response body contains a JSON object with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
-- `200` (OK) - The user has been successfully retrieved
-- `401` (Unauthorized) - The user is not logged in
+- `200` (OK) - The user has been successfully retrieved.
+- `401` (Unauthorized) - The user is not logged in.
 ```
 
 ### How to persist data
@@ -2609,8 +2644,8 @@ In a production application, you would certainly use a database to store the
 users (PostgreSQL, MySQL, MongoDB, etc.).
 
 While it would be possible to use a database with Javalin, it is out of the
-scope of this course. You can check the [Go further](#go-further) section if you
-want to implement if yourself.
+scope of this teaching. You can check the [Go further](#go-further) section if
+you want to implement if yourself.
 
 As already mentioned, Javalin is perfect to create prototypes and proof of
 concepts but we would recommend you to use a web framework such as Quarkus or
@@ -2618,19 +2653,20 @@ Spring Boot to create a production application.
 
 ### How to secure an API
 
-You might have noticed that the API we have just created is not very secure: we
-do not want to allow anyone to create, read, update or delete users.
+You might have noticed that the API we have just created is not very secure: for
+the time being, everyone can create, read, update or delete our users.
 
 Some APIs are public and do not require any authentication. However, most APIs
 are private and require authentication.
 
-Securing an API is not an easy task and is out of the scope of this course (you
-can check the [Go further](#go-further) section if you want to implement if
-yourself). You will learn how to secure a web application in future courses.
+Securing an API is not an easy task and is out of the scope of this teaching
+unit (you can check the [Go further](#go-further) section if you want to
+implement if yourself). You will learn how to secure a web application in future
+teaching units.
 
-In the context of this course, it is not important that the API is secure. It is
-more important to understand the basics of how to design, how to develop and how
-to document an API.
+In the context of this teaching unit, it is not important that the API is
+secure. It is more important to understand the basics of how to design, how to
+develop and how to document an API.
 
 ## Go further
 
@@ -2649,7 +2685,7 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have learned about the extended features of HTTP.
+In this course, you have learned about the extended features of HTTP.
 
 You have learned how endpoints/routes are defined with their methods and status
 codes.
@@ -2676,7 +2712,7 @@ At this point, you should be able to answer the following questions:
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.
@@ -2715,3 +2751,7 @@ section.
 
 - Main illustration by [Ashley Knedler](https://unsplash.com/@ashkned) on
   [Unsplash](https://unsplash.com/photos/KvD36NRFjl4)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/121
