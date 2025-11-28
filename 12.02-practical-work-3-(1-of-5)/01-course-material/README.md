@@ -330,20 +330,20 @@ repository!
 
 ### Category 1 - SSH and SCP
 
-|   # | Criterion                                                                                                               | Points |
-| --: | :---------------------------------------------------------------------------------------------------------------------- | -----: |
-|   1 | You and the teaching staff can access the virtual machine without a password using a SSH key                            |    0.2 |
-|   2 | The Git repository containing the Docker Compose files of your project is cloned on the virtual machine (HTTPS is fine) |    0.2 |
+|   # | Criterion                                                                                                                | Points |
+| --: | :----------------------------------------------------------------------------------------------------------------------- | -----: |
+|   1 | You and the teaching staff can access the virtual machine without a password using a SSH key[^cannot-access-vm-with-ssh] |    0.2 |
+|   2 | The Git repository containing the Docker Compose files of your project is cloned on the virtual machine (HTTPS is fine)  |    0.2 |
 
 ### Category 2 - Docker and Docker Compose
 
-|   # | Criterion                                                                                                                 | Points |
-| --: | :------------------------------------------------------------------------------------------------------------------------ | -----: |
-|   3 | Docker and Docker Compose are correctly installed on the virtual machine (version 2+ using the right APT repository)      |    0.2 |
-|   4 | Docker can be ran without the need to use `sudo`                                                                          |    0.2 |
-|   5 | The Docker applications (Traefik and your web application) are split into multiple directories and share a common network |    0.2 |
-|   6 | The web application is published to GitHub Container Registry                                                             |    0.2 |
-|   7 | The Docker Compose files are correctly defined to run Traefik and your web application                                    |    0.2 |
+|   # | Criterion                                                                                                                                 | Points |
+| --: | :---------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   3 | Docker and Docker Compose are correctly installed on the virtual machine (version 2+ using the right APT repository)                      |    0.2 |
+|   4 | Docker can be ran without the need to use `sudo`                                                                                          |    0.2 |
+|   5 | The Docker applications (Traefik and your web application) are split into multiple directories and share a common network                 |    0.2 |
+|   6 | The web application is published to GitHub Container Registry                                                                             |    0.2 |
+|   7 | The Docker Compose files are correctly defined to run Traefik and your web application using the image from the GitHub Container Registry |    0.2 |
 
 ### Category 3 - HTTP and curl
 
@@ -367,7 +367,7 @@ repository!
 | --: | :--------------------------------------------------------------------------------------------------------------------------------------- | -----: |
 |  14 | The README (or repository) contains instructions how to install and configure the virtual machine                                        |    0.2 |
 |  15 | The README (or repository) contains instructions how to configure the DNS zone to access your web application                            |    0.2 |
-|  16 | The README (or repository) displays the domain names configuration in the DNS zone to validate everything is set up right                |    0.2 |
+|  16 | The README (or repository) contains a list of your DNS records (screenshot or text) for validation purposes                              |    0.2 |
 |  17 | The README (or repository) contains instructions how to deploy, run and access the web applications with Docker Compose                  |    0.2 |
 |  18 | At least Traefik and your web application are deployed on the virtual machine                                                            |    0.2 |
 |  19 | The web applications (the Traefik dashboard and your own application) are accessible using a domain name and/or subdomain names          |    0.2 |
@@ -398,7 +398,7 @@ repository!
   related commit hash before the deadline - every 24 hours after the deadline
   will result in a -1 point penalty on the final grade.
 - The web application can only use the HTTP/HTTPS protocols.
-- The web application must use the Javalin dependency for the web server.
+- The web application must use the Javalin dependency for the web application.
 - The application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word _slightly_, no
   need to shoot for the moon).
@@ -583,6 +583,11 @@ You can use reactions to express your opinion on a comment!
 
 - Main illustration by [Lāsma Artmane](https://unsplash.com/@lasmaa) on
   [Unsplash](https://unsplash.com/photos/lighted-christmas-tree-surrounded-by-houses-5X8N9A2ruHM)
+
+[^cannot-access-vm-with-ssh]:
+    If the teaching staff cannot access your virtual machine, some other
+    criteria of the grading grid might not be graded as we will not be able to
+    check them.
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
