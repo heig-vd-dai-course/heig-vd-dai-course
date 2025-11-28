@@ -18,9 +18,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 - Code examples: [Link to content](../02-code-examples/)
 - Solution: [Link to content](../03-solution/)
 
-This directory contains the solution to the
-[Java network concurrency](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/14-java-network-concurrency)
-practical content.
+This directory contains the solution to the practical content of the course.
 
 - [Resources](#resources)
 - [Explain the differences between the following different implementations](#explain-the-differences-between-the-following-different-implementations)

@@ -1,9 +1,10 @@
-package ch.heigvd.dai;
+package ch.heigvd;
 
-import ch.heigvd.dai.auth.AuthController;
-import ch.heigvd.dai.users.User;
-import ch.heigvd.dai.users.UsersController;
+import ch.heigvd.auth.AuthController;
+import ch.heigvd.users.User;
+import ch.heigvd.users.UsersController;
 import io.javalin.Javalin;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Main {
@@ -13,7 +14,7 @@ public class Main {
     Javalin app = Javalin.create();
 
     // This will serve as our database
-    ConcurrentHashMap<Integer, User> users = new ConcurrentHashMap<>();
+    Map<Integer, User> users = new ConcurrentHashMap<>();
 
     // Controllers
     AuthController authController = new AuthController(users);
