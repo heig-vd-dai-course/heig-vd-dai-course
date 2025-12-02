@@ -41,9 +41,9 @@ _paginate: false
 
 ## What have you accomplished?
 
-- You have acquired and set up a server on a cloud provider.
+- You have obtained and set up a server on a cloud provider.
 - You have created a simple web API to deploy on your server.
-- You have acquired and configured a domain name to use for yourself.
+- You have obtained and configured a domain name to use for yourself.
 - You have deployed your API on your server.
 
 ![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)

@@ -18,8 +18,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 By the end of this course, students should be able to:
 
-- Get a refresh on security.
-- Acquire a virtual machine (= a server) on the cloud.
+- Get a refresher on security.
+- Obtain a virtual machine (= a server) on the cloud.
 - Install and configure the virtual machine/server.
 - Learn how to use the SSH protocol to connect to a remote server.
 - Learn how to use the SCP protocol to transfer files to a remote server.

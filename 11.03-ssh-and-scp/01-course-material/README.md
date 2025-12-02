@@ -33,7 +33,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   - [Resources](#resources-2)
 - [Practical content](#practical-content)
   - [Install and configure SSH (and SCP)](#install-and-configure-ssh-and-scp)
-  - [Acquire a virtual machine on a cloud provider](#acquire-a-virtual-machine-on-a-cloud-provider)
+  - [Obtain a virtual machine on a cloud provider](#obtain-a-virtual-machine-on-a-cloud-provider)
   - [Access and configure the virtual machine](#access-and-configure-the-virtual-machine)
   - [Copy files with SCP](#copy-files-with-scp)
   - [Add the teaching staff's public key to the virtual machine](#add-the-teaching-staffs-public-key-to-the-virtual-machine)
@@ -48,13 +48,21 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-In this course, you will have a refresh about security and learn how to use the
+In this course, you will have a refresher on security and learn how to use the
 Secure Shell (SSH) protocol to connect to a remote machine. You will also learn
 how to transfer files from/to a remote machine with Secure Copy (SCP).
 
-For this, you will acquire a virtual machine on a cloud provider and configure
+For this, you will obtain a virtual machine on a cloud provider and configure
 it. You will then connect to the virtual machine with SSH and copy files from/to
 the virtual machine with SCP.
+
+In a nutshell, at the end of this course, you will be able to:
+
+- Get a refresher on security.
+- Obtain a virtual machine (= a server) on the cloud.
+- Install and configure the virtual machine/server.
+- Learn how to use the SSH protocol to connect to a remote server.
+- Learn how to use the SCP protocol to transfer files to a remote server.
 
 ## A quick reminder about security
 
@@ -77,11 +85,11 @@ public key. Bob decrypts the message with his private key.
 If Bob wants to send a message to Alice, Bob encrypts the message with Alice's
 public key. Alice decrypts the message with her private key.
 
-If Bob wants to send a message to the rest of the world proving that only Bob
-was the author of the message, Bob encrypts the message with his private key.
-Bob can then send the message to whom suites best. The receipts can then decrypt
-the message with Bob's public key. If the message can be decrypted, it means
-that Bob is the author of the message.
+Bob can also digitally sign his messages to unequivocally prove that he is the
+author. He can do that by encrypting the message he wishes to sign with his
+private key. The recipients can then use Bob's public key to decrypt the
+message, proving that only Bob (or someone who has access to his private key)
+has written the message.
 
 In the case of SSH and GPG, the public key is used to encrypt the data and the
 private key is used to decrypt the data.
@@ -238,7 +246,7 @@ This will automatically install SCP as well.
 The SSH client is available on most operating systems.
 
 You certainly already have it installed on your operating system as you used it
-in the [Git, GitHub and Markdown](../../01.03-git-github-and-markdown/) couse.
+in the [Git, GitHub and Markdown](../../01.03-git-github-and-markdown/) course.
 
 If not, follow the instructions below to install it:
 
@@ -259,9 +267,9 @@ OpenSSH_9.6p1 Ubuntu-3ubuntu13.5, OpenSSL 3.0.13 30 Jan 2024
 
 This output means that the SSH client is installed.
 
-### Acquire a virtual machine on a cloud provider
+### Obtain a virtual machine on a cloud provider
 
-In this section, you will acquire a virtual machine on a cloud provider.
+In this section, you will obtain a virtual machine on a cloud provider.
 
 Many other cloud providers exist and offer free tiers (= free resources for a
 limited time). You can check the following Git repository for a list of cloud
@@ -334,7 +342,7 @@ Select a virtual machine with the following characteristics:
 
 Although the `Standard_B1s` size is one of the
 [cheapest](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/)
-and least powerful option, it will be enough for this teaching unit. It will
+and least powerful options, it will be enough for this teaching unit. It will
 allow you to use your remaining credits for other services.
 
 Click on the `Review + create` button.
@@ -693,9 +701,9 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this course, you have had a refresh about security and learned how to use SSH
-to connect to a remote machine. You have also learned how to copy files from/to
-a remote machine with SCP.
+In this course, you had a refresher on security and learned how to use SSH to
+connect to a remote machine. You have also learned how to copy files from/to a
+remote machine with SCP.
 
 SSH and SCP are very useful tools to connect to a remote machine and copy files
 from/to a remote machine. They are widely used in the industry and you will use

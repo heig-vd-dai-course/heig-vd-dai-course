@@ -33,12 +33,12 @@ bob -> bob: Only Bob can read the message sent by Alice
 
 ...
 
-note over alice, bob: Bob sends a message publicly.\nEveryone can attest Bob is the author.
+note over alice, bob: Bob digitally signs a message.\nEveryone can attest Bob is the author.
 
 bob -> bob: Encrypt a message using Bob's private key
 bob -> alice: Send the encrypted message to Alice
 alice -> bob: Request Bob's public key
 bob --> alice: Get Bob's public key
 alice -> alice: Decrypt the message using Bob's public key
-alice -> alice: Everyone can attest the message was sent by Bob
+alice -> alice: Alice can verify the message was authored by Bob
 @enduml

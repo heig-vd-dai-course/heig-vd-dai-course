@@ -32,8 +32,8 @@ _paginate: false
 
 ## Objectives
 
-- Get a refresh on security.
-- Acquire a virtual machine (= a server) on the cloud.
+- Get a refresher on security.
+- Obtain a virtual machine (= a server) on the cloud.
 - Install and configure the virtual machine/server.
 - Learn how to use the SSH protocol to connect to a remote server.
 - Learn how to use the SCP protocol to transfer files to a remote server.
@@ -131,7 +131,7 @@ Do you have any questions?
 
 ### What will you do?
 
-- Acquire a virtual machine (= a server) on the cloud.
+- Obtain a virtual machine (= a server) on the cloud.
 - Install and configure the virtual machine (SSH, Docker and Docker Compose).
 - Transfer files to/from the virtual machine with SCP.
 
