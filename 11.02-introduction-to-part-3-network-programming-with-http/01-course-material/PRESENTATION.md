@@ -36,7 +36,8 @@ _paginate: false
 
 These protocols are the foundation of the Internet and network communications.
 
-Today, you will learn about a higher-level protocol: HTTP.
+In this final part of the teaching unit, you will learn about a higher-level
+protocol: HTTP.
 
 ## What will you learn?
 
@@ -62,8 +63,8 @@ Today, you will learn about a higher-level protocol: HTTP.
 
 <!-- _class: lead -->
 
-This part will be the last one of the course. This is the last step to close the
-loop (from code to production).
+This part will be the last one of the teaching unit. This is the last step to
+close the loop (from code to production).
 
 ## Sources
 

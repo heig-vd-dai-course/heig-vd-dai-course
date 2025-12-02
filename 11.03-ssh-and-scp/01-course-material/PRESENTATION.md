@@ -9,7 +9,7 @@ paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
 title: HEIG-VD DAI - SSH and SCP
 description: SSH and SCP for the DAI course at HEIG-VD, Switzerland
-header: '[**SSH and SCP**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11.01-ssh-and-scp)'
+header: '[**SSH and SCP**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11.03-ssh-and-scp)'
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
@@ -173,10 +173,10 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/N8GdKC4Rcvs)
 
 [course]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11.01-ssh-and-scp
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11.03-ssh-and-scp
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/115
 [illustration]: ./images/main-illustration.jpg
 [course-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11.01-ssh-and-scp
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11.03-ssh-and-scp
