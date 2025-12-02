@@ -14,14 +14,6 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-3/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/19-introduction-to-part-3/19-introduction-to-part-3-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[illustration]: ./images/main-illustration.jpg
-
 # Introduction to part 3: Network programming with HTTP
 
 <!--
@@ -29,9 +21,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
-
-[Web][web] · [PDF][pdf]
+[Link to the course][course]
 
 <small>L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -46,25 +36,26 @@ _paginate: false
 
 These protocols are the foundation of the Internet and network communications.
 
-Today, you will learn about a higher-level protocol: HTTP.
+In this final part of the teaching unit, you will learn about a higher-level
+protocol: HTTP.
 
 ## What will you learn?
 
-- Learn **how** and **why HTTP is used widely** to **build web applications**
-- Learn how to use **HTTP in Java** to build simple (CRUD) **APIs**
+- Learn **how** and **why HTTP is used widely** to **build web applications**.
+- Learn how to use **HTTP in Java** to build simple (CRUD) **APIs**.
 - Learn how to **set up a web infrastructure** to host web applications:
-  - **Reverse proxy**
-  - **Load balancer**
+  - **Reverse proxy**.
+  - **Load balancer**.
 
 ![bg right:40%](https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fit=crop&h=720)
 
 ## What will you accomplish?
 
-- Build **a simple web API** in Java
-- **Acquire**, **configure** and **set up a server**
-- **Acquire** a (free) **domain name**
-- **Deploy** a web application on the server with a **reverse proxy**
-- **Access** the web application from the **Internet**
+- Build **a simple web API** in Java.
+- **Acquire**, **configure** and **set up a server**.
+- **Acquire** a (free) **domain name**.
+- **Deploy** a web application on the server with a **reverse proxy**.
+- **Access** the web application from the **Internet**.
 
 ![bg right:40%](https://images.unsplash.com/photo-1433878455169-4698e60005b1?fit=crop&h=720)
 
@@ -72,8 +63,8 @@ Today, you will learn about a higher-level protocol: HTTP.
 
 <!-- _class: lead -->
 
-This part will be the last one of the course. This is the last step to close the
-loop (from code to production).
+This part will be the last one of the teaching unit. This is the last step to
+close the loop (from code to production).
 
 ## Sources
 
@@ -83,3 +74,9 @@ loop (from code to production).
   [Unsplash](https://unsplash.com/photos/s9CC2SKySJM)
 - Illustration by [Jared Erondu](https://unsplash.com/@erondu) on
   [Unsplash](https://unsplash.com/photos/j4PaE7E2_Ws)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11.02-introduction-to-part-3-network-programming-with-http
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[illustration]: ./images/main-illustration.jpg

@@ -14,17 +14,6 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-conclusion-to-part-2/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/18-conclusion-to-part-2/18-conclusion-to-part-2-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]: https://framaforms.org/dai-2025-2026-feedback-2-1725286004
-[feedback-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2025-2026-feedback-2-1725286004
-[illustration]: ./images/main-illustration.jpg
-
 # Conclusion to part 2: Network programming with TCP and UDP
 
 <!--
@@ -32,9 +21,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
-
-[Web][web] · [PDF][pdf]
+[Link to the course][course]
 
 <small>L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -45,11 +32,11 @@ _paginate: false
 
 ## What have you learned?
 
-- How to read, write and implement an application protocol
+- How to read, write and implement an application protocol.
 - The basics of network programming with TCP and UDP to communicate over the
-  network
-- Manage multiple clients at the same time
-- How close the sockets and files are
+  network.
+- Manage multiple clients at the same time.
+- How close the sockets and files are.
 
 ![bg right:40%](https://images.unsplash.com/photo-1549228581-cdbdb7430548?fit=crop&h=720)
 
@@ -57,7 +44,7 @@ _paginate: false
 
 - You have implemented an entire network application in Java; an application
   that can communicate over the network!
-- You have packaged and shared your own network application in a Docker image
+- You have packaged and shared your own network application in a Docker image.
 - With all the best practices!
 
 ![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
@@ -80,3 +67,12 @@ it][feedback]. **Thank you!**
   [Unsplash](https://unsplash.com/photos/neUbjUnjXNk)
 - Illustration by [Samantha Fortney](https://unsplash.com/@goldencoastgrams) on
   [Unsplash](https://unsplash.com/photos/OGDyzpsTjyA)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/11.01-conclusion-to-part-2-network-programming-with-tcp-and-udp
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[feedback]: https://framaforms.org/dai-2025-2026-feedback-2-1764690415
+[feedback-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2025-2026-feedback-2-1764690415
+[illustration]: ./images/main-illustration.jpg

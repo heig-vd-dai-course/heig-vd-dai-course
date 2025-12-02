@@ -14,17 +14,6 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/26-conclusion-to-part-3/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/26-conclusion-to-part-3/26-conclusion-to-part-3-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]: https://framaforms.org/dai-2025-2026-feedback-3-1725286022
-[feedback-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2025-2026-feedback-3-1725286022
-[illustration]: ./images/main-illustration.jpg
-
 # Conclusion to part 3: Network programming with HTTP
 
 <!--
@@ -32,9 +21,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
-
-[Web][web] · [PDF][pdf]
+[Link to the course][course]
 
 <small>L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -54,10 +41,10 @@ _paginate: false
 
 ## What have you accomplished?
 
-- You have acquired and set up a server on a cloud provider
-- You have created a simple web API to deploy on your server
-- You have acquired and configured a domain name to use for yourself
-- You have deployed your API on your server
+- You have obtained and set up a server on a cloud provider.
+- You have created a simple web API to deploy on your server.
+- You have obtained and configured a domain name to use for yourself.
+- You have deployed your API on your server.
 
 ![bg right:40%](https://images.unsplash.com/photo-1608613304810-2d4dd52511a2?fit=crop&h=720)
 
@@ -86,3 +73,12 @@ it][feedback]. **Thank you!**
   [Unsplash](https://unsplash.com/photos/neUbjUnjXNk)
 - Illustration by [Samantha Fortney](https://unsplash.com/@goldencoastgrams) on
   [Unsplash](https://unsplash.com/photos/OGDyzpsTjyA)
+
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/16.02-conclusion-to-part-3-network-programming-with-http
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[feedback]: https://framaforms.org/dai-2025-2026-feedback-3-1725286022
+[feedback-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2025-2026-feedback-3-1725286022
+[illustration]: ./images/main-illustration.jpg
