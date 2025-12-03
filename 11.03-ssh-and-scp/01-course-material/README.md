@@ -320,8 +320,8 @@ Select a virtual machine with the following characteristics:
   - **Security type**: Trusted launch virtual machines (the default)
   - **Image**: Ubuntu Server 24.04 LTS - x64 Gen2 (the default)
   - **VM architecture**: x64
-  - **Size**: `Standard_B1s` - you might need to click _"See all sizes"_ to see
-    this option
+  - **Size**: `B2ts_v2` - you might need to click _"See all sizes"_ to see this
+    option
 - **Administrator account**
   - **Authentication type**: SSH public key
   - **Username**: `ubuntu` - please use this username so the teaching staff can
@@ -340,7 +340,7 @@ Select a virtual machine with the following characteristics:
 > or you can generate a new one with the `ssh-keygen` command for the purpose of
 > this course.
 
-Although the `Standard_B1s` size is one of the
+Although the `B2ts_v2` size is one of the
 [cheapest](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/)
 and least powerful options, it will be enough for this teaching unit. It will
 allow you to use your remaining credits for other services.

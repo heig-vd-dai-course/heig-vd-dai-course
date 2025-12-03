@@ -52,8 +52,8 @@ protocol: HTTP.
 ## What will you accomplish?
 
 - Build **a simple web API** in Java.
-- **Acquire**, **configure** and **set up a server**.
-- **Acquire** a (free) **domain name**.
+- **Obtain**, **configure** and **set up a server**.
+- **Obtain** a (free) **domain name**.
 - **Deploy** a web application on the server with a **reverse proxy**.
 - **Access** the web application from the **Internet**.
 
