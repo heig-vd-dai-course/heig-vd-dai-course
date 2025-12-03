@@ -342,16 +342,16 @@ repository!
 |   3 | Docker and Docker Compose are correctly installed on the virtual machine (version 2+ using the right APT repository)                      |    0.2 |
 |   4 | Docker can be ran without the need to use `sudo`                                                                                          |    0.2 |
 |   5 | The Docker applications (Traefik and your web application) are split into multiple directories and share a common network                 |    0.2 |
-|   6 | The web application is published to GitHub Container Registry                                                                             |    0.2 |
-|   7 | The Docker Compose files are correctly defined to run Traefik and your web application using the image from the GitHub Container Registry |    0.2 |
+|   6 | The Docker Compose files are correctly defined to run Traefik and your web application using the image from the GitHub Container Registry |    0.2 |
 
 ### Category 3 - HTTP and curl
 
 |   # | Criterion                                                                                                                                                                                    | Points |
 | --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|   8 | The README (or repository) contains the application protocol interface (API) that describes the web application                                                                              |    0.2 |
-|   9 | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                                                            |    0.2 |
-|  10 | The web application return status codes must be consistent and reflect the HTTP methods                                                                                                      |    0.2 |
+|   7 | The README (or repository) contains the application protocol interface (API) that describes the web application                                                                              |    0.2 |
+|   8 | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                                                            |    0.2 |
+|   9 | The web application return status codes must be consistent and reflect the HTTP methods                                                                                                      |    0.2 |
+|  10 | The web application makes usage of at least one query parameter                                                                                                                              |    0.2 |
 |  11 | The web application offers at least two resources (= domains) on which to operate CRUD operations (e.g. `/users` and `/products`)                                                            |    0.2 |
 |  12 | The README explains how to use your web application with **explicit examples using curl** with outputs to demonstrate how to interact with your web application **deployed on the Internet** |    0.2 |
 
@@ -448,7 +448,7 @@ information:
 - DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14:45**
   in room **TBD**.
 - DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **16:30** in room
-  **TBD**
+  **TBD**.
 
 The exact schedule will be communicated once the groups are known.
 
