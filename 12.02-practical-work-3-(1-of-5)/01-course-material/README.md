@@ -444,11 +444,11 @@ information:
 ## Presentations
 
 - DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10:30**
-  in room **B51a**
+  in room **TBD**.
 - DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14:45**
-  in room **B38**
+  in room **TBD**.
 - DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **16:30** in room
-  **B51a**
+  **TBD**
 
 The exact schedule will be communicated once the groups are known.
 
@@ -555,8 +555,10 @@ and implement it in a different way (in memory as you will see in the course
 materials).
 
 However, you must ensure that you meet all the criteria of this practical work
-and that you respect all the constraints. In our experience, it might be easier
-to start from scratch with a new idea. But you are welcome to try!
+and that you respect all the constraints.
+
+In our experience, it might be easier to start from scratch with a new idea. But
+you are welcome to try!
 
 ## Finished? Was it easy? Was it hard?
 
