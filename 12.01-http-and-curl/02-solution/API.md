@@ -1,18 +1,15 @@
 # Users API
 
-The users API allows to manage users. It uses the HTTP protocol on port `8080`.
-
-The JSON format is used to exchange data. The `Content-Type` header must be set
-to `application/json` when sending data to the API. The `Accept` header must be
-set to `application/json` when receiving data from the API.
+The users API allows to manage users. It uses the HTTP protocol and the JSON
+format.
 
 The API is based on the CRUD pattern. It has the following operations:
 
-- Create a new user
-- Get many users that you can filter by first name and/or last name
-- Get one user by its ID
-- Update a user
-- Delete a user
+- Create a new user.
+- Get many users that you can filter by first name and/or last name.
+- Get one user by its ID.
+- Update a user.
+- Delete a user.
 
 Users are also able to login and logout. They can also access their profile to
 validate their information using a cookie.
@@ -29,26 +26,26 @@ Create a new user.
 
 The request body must contain a JSON object with the following properties:
 
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Response
 
 The response body contains a JSON object with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
-- `201` (Created) - The user has been successfully created
-- `400` (Bad Request) - The request body is invalid
-- `409` (Conflict) - The user already exists
+- `201` (Created) - The user has been successfully created.
+- `400` (Bad Request) - The request body is invalid.
+- `409` (Conflict) - The user already exists.
 
 ### Get many users
 
@@ -60,18 +57,18 @@ Get many users.
 
 The request can contain the following query parameters:
 
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
 
 #### Response
 
 The response body contains a JSON array with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
@@ -91,16 +88,16 @@ The request path must contain the ID of the user.
 
 The response body contains a JSON object with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
-- `200` (OK) - The user has been successfully retrieved
-- `404` (Not Found) - The user does not exist
+- `200` (OK) - The user has been successfully retrieved.
+- `404` (Not Found) - The user does not exist.
 
 ### Update a user
 
@@ -114,26 +111,26 @@ The request path must contain the ID of the user.
 
 The request body must contain a JSON object with the following properties:
 
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Response
 
 The response body contains a JSON object with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
-- `200` (OK) - The user has been successfully updated
-- `400` (Bad Request) - The request body is invalid
-- `404` (Not Found) - The user does not exist
+- `200` (OK) - The user has been successfully updated.
+- `400` (Bad Request) - The request body is invalid.
+- `404` (Not Found) - The user does not exist.
 
 ### Delete a user
 
@@ -151,8 +148,8 @@ The response body is empty.
 
 #### Status codes
 
-- `204` (No Content) - The user has been successfully deleted
-- `404` (Not Found) - The user does not exist
+- `204` (No Content) - The user has been successfully deleted.
+- `404` (Not Found) - The user does not exist.
 
 ### Login
 
@@ -164,8 +161,8 @@ Login a user.
 
 The request body must contain a JSON object with the following properties:
 
-- `email` - The email address of the user
-- `password` - The password of the user
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Response
 
@@ -173,9 +170,9 @@ The response body is empty. A `user` cookie is set with the ID of the user.
 
 #### Status codes
 
-- `204` (No Content) - The user has been successfully logged in
-- `400` (Bad Request) - The request body is invalid
-- `401` (Unauthorized) - The user does not exist or the password is incorrect
+- `204` (No Content) - The user has been successfully logged in.
+- `400` (Bad Request) - The request body is invalid.
+- `401` (Unauthorized) - The user does not exist or the password is incorrect.
 
 ### Logout
 
@@ -193,7 +190,7 @@ The response body is empty. The `user` cookie is removed.
 
 #### Status codes
 
-- `204` (No Content) - The user has been successfully logged out
+- `204` (No Content) - The user has been successfully logged out.
 
 ### Profile
 
@@ -209,13 +206,13 @@ The request body is empty.
 
 The response body contains a JSON object with the following properties:
 
-- `id` - The unique identifier of the user
-- `firstName` - The first name of the user
-- `lastName` - The last name of the user
-- `email` - The email address of the user
-- `password` - The password of the user
+- `id` - The unique identifier of the user.
+- `firstName` - The first name of the user.
+- `lastName` - The last name of the user.
+- `email` - The email address of the user.
+- `password` - The password of the user.
 
 #### Status codes
 
-- `200` (OK) - The user has been successfully retrieved
-- `401` (Unauthorized) - The user is not logged in
+- `200` (OK) - The user has been successfully retrieved.
+- `401` (Unauthorized) - The user is not logged in.
