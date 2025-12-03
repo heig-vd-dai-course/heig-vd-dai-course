@@ -468,7 +468,7 @@ topic.
 
 ##### Key points to remember for this chapter
 
-- Acquire a real remote server on a cloud provider (Azure)
+- Obtain a real remote server on a cloud provider (Azure)
 - SSH keys and how to clone/sign commits using Git
 - SSH keys and how to connect to a remote server
 - SCP and how to copy files to a remote server
@@ -571,7 +571,7 @@ _paginate: false
 
 ##### What you were ask to do
 
-- Acquire and configure a virtual machine on the cloud
+- Obtain and configure a virtual machine on the cloud
 - Install Docker and Docker Compose on the virtual machine
 - Develop a simple CRUD API to manage resources
 - Deploy the applications (reverse proxy + CRUD API)

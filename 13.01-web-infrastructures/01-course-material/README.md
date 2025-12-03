@@ -119,7 +119,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Obtain a domain name
 
-In this section, you will acquire a domain name.
+In this section, you will obtain a domain name.
 
 A domain name is a human-readable name that is used to identify a website on the
 Internet.
@@ -127,14 +127,14 @@ Internet.
 If you already own a domain name, you can use it for the purpose of this course.
 
 If you do not have a domain or you do not want to use your own domain, you will
-acquire a free domain name for the purpose of this course.
+obtain a free domain name for the purpose of this course.
 
 Access <http://www.duckdns.org/> and log in with your GitHub account.
 
 > [!NOTE]
 >
 > Even though this DNS provider seem fishy and old-fashioned, it is reliable and
-> well-known in the free domain name community. You can use it to acquire a free
+> well-known in the free domain name community. You can use it to obtain a free
 > domain name that you can use for the purpose of this course.
 
 Click on the `Add Domain` button and choose a domain name.
@@ -155,7 +155,7 @@ _Alternatives are here for general knowledge. No need to learn them._
 >
 > Even though most of these providers seem fishy and old-fashioned, they are
 > reliable and well-known in the free domain name community. You can use any of
-> them to acquire a free domain name that you can use for the purpose of this
+> them to obtain a free domain name that you can use for the purpose of this
 > course.
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
@@ -166,7 +166,7 @@ In this section, you will add the required DNS records to the DNS zone of your
 domain name provider.
 
 This will allow you to access the services hosted on the virtual machine using
-the domain name and its subdomains you acquired.
+the domain name and its subdomains you obtained.
 
 #### Add the DNS records
 
@@ -231,8 +231,8 @@ DNS record to be propagated and get a successful response.
 Do the same for the wildcard DNS record (`*.heig-vd-dai-course.duckdns.org`).
 
 You should now be able to access the virtual machine from the Internet using the
-domain name and its subdomains you acquired. Try to access the whoami service
-using the domain name and its subdomains you acquired. Any subdomain should work
+domain name and its subdomains you obtained. Try to access the whoami service
+using the domain name and its subdomains you obtained. Any subdomain should work
 such as `whoami.heig-vd-dai-course.duckdns.org`.
 
 You should see the whoami service running on ports 80 and 443.
@@ -241,7 +241,7 @@ If you do not get the expected results, your domain name provider might not have
 propagated the DNS records yet. Wait a few minutes and try again.
 
 Once you have confirmed that you can access the virtual machine from the
-Internet using the domain name and its subdomains you acquired, you can stop the
+Internet using the domain name and its subdomains you obtained, you can stop the
 whoami service:
 
 ```sh

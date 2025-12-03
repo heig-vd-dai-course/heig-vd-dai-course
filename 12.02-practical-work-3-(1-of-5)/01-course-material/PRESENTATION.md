@@ -47,7 +47,7 @@ _paginate: false
 
 ## Objectives
 
-- Acquire a virtual machine from a cloud provider
+- Obtain a virtual machine from a cloud provider
 - Access the virtual machine (SSH)
 - Install Docker and Docker Compose
 - Develop a simple CRUD API
