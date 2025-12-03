@@ -308,6 +308,16 @@ You should now have access to the Azure portal with free credits.
 Return to the Azure portal and create a new virtual machine from the dashboard
 in section `Create a resource`.
 
+> [!IMPORTANT]
+>
+> If you encounter any issues while creating the virtual machine, try to log out
+> and log back in to the Azure portal and try again.
+>
+> Other people past years have encountered issues as well. Logging out and
+> logging back in solved the issues for them (typical Microsoft behavior...).
+>
+> If the issue persists, please contact the teaching staff.
+
 Select a virtual machine with the following characteristics:
 
 - **Project details**
@@ -315,7 +325,7 @@ Select a virtual machine with the following characteristics:
   - **Resource group**: Create new with the name `heig-vd-dai-course`
 - **Instance details**
   - **Virtual machine name**: `heig-vd-dai-course-vm`
-  - **Region**: (Europe) West Europe
+  - **Region**: (Europe) West Europe _or_ (Europe) Switzerland North
   - **Availability options**: No infrastructure redundancy required
   - **Security type**: Trusted launch virtual machines (the default)
   - **Image**: Ubuntu Server 24.04 LTS - x64 Gen2 (the default)
