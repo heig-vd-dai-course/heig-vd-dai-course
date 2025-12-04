@@ -50,9 +50,9 @@ mobile application or even a command line tool.
 In this practical work, you will create a web application that uses the HTTP
 protocol.
 
-The web application will be defined by an application protocol interface (API)
-and will be deployed on a virtual machine (a server). The application will be
-accessible from the Internet using a domain name.
+The web application will be defined by an application programming interface
+(API) and will be deployed on a virtual machine (a server). The application will
+be accessible from the Internet using a domain name.
 
 You will be able to interact with the web application using your web browser
 and/or a command line tool such as curl.

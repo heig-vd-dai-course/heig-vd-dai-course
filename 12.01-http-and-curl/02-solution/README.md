@@ -20,8 +20,8 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 This directory contains the solution to the practical content of the course.
 
-You can check the Application Protocol Interface (API) in the [API.md](./API.md)
-file.
+You can check the application programming interface (API) in the
+[API.md](./API.md) file.
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
