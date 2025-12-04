@@ -1726,7 +1726,7 @@ architecture of the application, the database, the security, etc.
 In order to make it easier to develop web applications, developers have
 developed some patterns to follow.
 
-An Application Protocol Interface (API) is a set of functions and procedures
+An application programming interface (API) is a set of functions and procedures
 that allow the creation of applications that expose features or data to external
 services. APIs allow different software applications to communicate with each
 other and share data and functionality.
