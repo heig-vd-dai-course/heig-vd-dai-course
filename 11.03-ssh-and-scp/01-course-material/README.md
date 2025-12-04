@@ -308,24 +308,57 @@ You should now have access to the Azure portal with free credits.
 Return to the Azure portal and create a new virtual machine from the dashboard
 in section `Create a resource`.
 
-> [!IMPORTANT]
+> [!TIP]
 >
-> If you encounter any issues while creating the virtual machine, try to log out
-> and log back in to the Azure portal and try again.
+> **Optional content - Terraform and Ansible guide**
 >
-> Other people past years have encountered issues as well. Logging out and
-> logging back in solved the issues for them (typical Microsoft behavior...).
+> A previous student, [@lentidas](https://github.com/lentidas), has set up a
+> guide to create a virtual machine on Azure for this teaching unit using
+> [Terraform](https://www.terraform.io/) and
+> [Ansible](https://www.ansible.com/). You can find it here:
+> <https://github.com/lentidas/heig-vd-dai-azure-vm>.
 >
-> If the issue persists, please contact the teaching staff.
+> Thanks a lot to [@lentidas](https://github.com/lentidas) for sharing this
+> resource with us!
+>
+> This is an external resource not maintained by the DAI teaching staff but
+> presented here for your convenience. Feel free to use it if you want to
+> explore more on this topic or follow the instructions below.
 
 Select a virtual machine with the following characteristics:
+
+> [!WARNING]
+>
+> **Feedback from previous years**
+>
+> You might encounter issues while creating the virtual machine. This guide
+> works for most people, but sometimes, it does not work for some others. Even
+> if we have tested it multiple times and it always succeeds for us, issues
+> might still occur (typical Microsoft behavior...).
+>
+> If you try to create the virtual machine and a validation error occurs (an
+> error regarding disabled resources by Azure), please try the following:
+>
+> - Try to log out and log back in to your Azure account. Try in a private
+>   browsing window if needed.
+> - Clear your browser cache and cookies.
+> - Try to create the virtual machine again in a different region (anywhere in
+>   Europe is fine, such as (Europe) West Europe, (Europe) Central France, etc.
+>   Some people had to create their virtual machine in Norway for this to
+>   succeed).
+>
+> As long as you get a virtual machine, it is fine for the purpose of this
+> teaching unit.
+>
+> If the issue persists, please contact the teaching staff.
 
 - **Project details**
   - **Subscription**: Azure for Students
   - **Resource group**: Create new with the name `heig-vd-dai-course`
 - **Instance details**
   - **Virtual machine name**: `heig-vd-dai-course-vm`
-  - **Region**: (Europe) West Europe _or_ (Europe) Switzerland North
+  - **Region**: (Europe) Switzerland North (see warning above if you encounter
+    issues)
   - **Availability options**: No infrastructure redundancy required
   - **Security type**: Trusted launch virtual machines (the default)
   - **Image**: Ubuntu Server 24.04 LTS - x64 Gen2 (the default)
@@ -346,9 +379,10 @@ Select a virtual machine with the following characteristics:
 > [!NOTE]
 >
 > You can use the same public key you used to sign your commits if Git as seen
-> in the [Git, GitHub and Markdown](../../01.03-git-github-and-markdown/) course
-> or you can generate a new one with the `ssh-keygen` command for the purpose of
-> this course.
+> in the
+> [Git, GitHub and Markdown](../../01.03-git-github-and-markdown/README.md)
+> course or you can generate a new one with the `ssh-keygen` command for the
+> purpose of this course.
 
 Although the `B2ts_v2` size is one of the
 [cheapest](https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/)
@@ -413,6 +447,8 @@ SSH login), you will not be able to connect to the virtual machine and you will
 see an error message warning you that the fingerprint has changed.
 
 > [!TIP]
+>
+> **Optional content**
 >
 > To validate the fingerprint, you have to compare it with the one stored on the
 > server. The keys are stored in the `/etc/ssh` directory. You can use the
