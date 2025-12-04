@@ -319,7 +319,8 @@ in section `Create a resource`.
 > <https://github.com/lentidas/heig-vd-dai-azure-vm>.
 >
 > Thanks a lot to [@lentidas](https://github.com/lentidas) for sharing this
-> resource with us!
+> resource with us! You can find the initial GitHub Discussion made for this
+> here: <https://github.com/orgs/heig-vd-dai-course/discussions/607>.
 >
 > This is an external resource not maintained by the DAI teaching staff but
 > presented here for your convenience. Feel free to use it if you want to
