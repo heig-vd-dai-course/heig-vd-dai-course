@@ -284,6 +284,24 @@ Using your HES-SO email address, you can apply for the
 [Azure for Students](https://azure.microsoft.com/en-us/free/students/) offer to
 get free credits without the need for a credit card.
 
+> [!TIP]
+>
+> **Optional content - Terraform and Ansible guide**
+>
+> A previous student, [@lentidas](https://github.com/lentidas), has set up a
+> guide to create a virtual machine on Azure for this teaching unit using
+> [Terraform](https://www.terraform.io/) and
+> [Ansible](https://www.ansible.com/). You can find it here:
+> <https://github.com/lentidas/heig-vd-dai-azure-vm>.
+>
+> Thanks a lot to [@lentidas](https://github.com/lentidas) for sharing this
+> resource with us. You can find the initial GitHub Discussion made for this
+> here: <https://github.com/orgs/heig-vd-dai-course/discussions/607>.
+>
+> This is an external resource not maintained by the DAI teaching staff but
+> presented here for your convenience. Feel free to use it if you want to
+> explore more on this topic.
+
 #### Access Microsoft Azure
 
 Access the Azure portal with the following link: <https://portal.azure.com>.
@@ -308,25 +326,7 @@ You should now have access to the Azure portal with free credits.
 Return to the Azure portal and create a new virtual machine from the dashboard
 in section `Create a resource`.
 
-> [!TIP]
->
-> **Optional content - Terraform and Ansible guide**
->
-> A previous student, [@lentidas](https://github.com/lentidas), has set up a
-> guide to create a virtual machine on Azure for this teaching unit using
-> [Terraform](https://www.terraform.io/) and
-> [Ansible](https://www.ansible.com/). You can find it here:
-> <https://github.com/lentidas/heig-vd-dai-azure-vm>.
->
-> Thanks a lot to [@lentidas](https://github.com/lentidas) for sharing this
-> resource with us! You can find the initial GitHub Discussion made for this
-> here: <https://github.com/orgs/heig-vd-dai-course/discussions/607>.
->
-> This is an external resource not maintained by the DAI teaching staff but
-> presented here for your convenience. Feel free to use it if you want to
-> explore more on this topic or follow the instructions below.
-
-Select a virtual machine with the following characteristics:
+Create a virtual machine with the following characteristics:
 
 > [!WARNING]
 >
