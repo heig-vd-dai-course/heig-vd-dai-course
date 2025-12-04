@@ -330,26 +330,26 @@ repository!
 
 ### Category 1 - SSH and SCP
 
-|   # | Criterion                                                                                                                | Points |
-| --: | :----------------------------------------------------------------------------------------------------------------------- | -----: |
-|   1 | You and the teaching staff can access the virtual machine without a password using a SSH key[^cannot-access-vm-with-ssh] |    0.2 |
-|   2 | The Git repository containing the Docker Compose files of your project is cloned on the virtual machine (HTTPS is fine)  |    0.2 |
+|   # | Criterion                                                                                                                                                          | Points |
+| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   1 | You and the teaching staff can access the virtual machine without a password using a SSH key[^cannot-access-vm-with-ssh]                                           |    0.2 |
+|   2 | The virtual machine has the Docker Compose files of your project to be able to run it (via SCP or a cloned repository (HTTPS) is fine)[^cannot-access-vm-with-ssh] |    0.2 |
 
 ### Category 2 - Docker and Docker Compose
 
-|   # | Criterion                                                                                                                                 | Points |
-| --: | :---------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|   3 | Docker and Docker Compose are correctly installed on the virtual machine (version 2+ using the right APT repository)                      |    0.2 |
-|   4 | Docker can be ran without the need to use `sudo`                                                                                          |    0.2 |
-|   5 | The Docker applications (Traefik and your web application) are split into multiple directories and share a common network                 |    0.2 |
-|   6 | The Docker Compose files are correctly defined to run Traefik and your web application using the image from the GitHub Container Registry |    0.2 |
+|   # | Criterion                                                                                                                                        | Points |
+| --: | :----------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
+|   3 | Docker and Docker Compose are correctly installed on the virtual machine (version 2+ using the right APT repository)[^cannot-access-vm-with-ssh] |    0.2 |
+|   4 | Docker can be ran without the need to use `sudo`[^cannot-access-vm-with-ssh]                                                                     |    0.2 |
+|   5 | The Docker applications (Traefik and your web application) are split into multiple directories and share a common network                        |    0.2 |
+|   6 | The Docker Compose files are correctly defined to run Traefik and your web application using the image from the GitHub Container Registry        |    0.2 |
 
 ### Category 3 - HTTP and curl
 
 |   # | Criterion                                                                                                                                                                                    | Points |
 | --: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|   7 | The README (or repository) contains the application protocol interface (API) that describes the web application                                                                              |    0.2 |
-|   8 | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` and `DELETE`                                                                            |    0.2 |
+|   7 | The README (or repository) contains the application programming interface (API) that describes the web application                                                                           |    0.2 |
+|   8 | The web application makes usage of at least the following HTTP methods: `GET`, `POST`, `PATCH`/`PUT` (chose one between the two) and `DELETE`                                                |    0.2 |
 |   9 | The web application return status codes must be consistent and reflect the HTTP methods                                                                                                      |    0.2 |
 |  10 | The web application makes usage of at least one query parameter                                                                                                                              |    0.2 |
 |  11 | The web application offers at least two resources (= domains) on which to operate CRUD operations (e.g. `/users` and `/products`)                                                            |    0.2 |
@@ -382,14 +382,16 @@ repository!
 
 ### Category 7 - Presentation and questions
 
-|   # | Criterion                                                                                                                                              | Points |
-| --: | :----------------------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|  23 | The presentation is clear and well prepared.                                                                                                           |    0.2 |
-|  24 | The application is presented as you would do it to a colleague/another team/boss/client/investor so they can understand what you created, why and how. |    0.2 |
-|  25 | Everyone speaks during the presentation.                                                                                                               |    0.2 |
+|   # | Criterion                                                                                       | Points |
+| --: | :---------------------------------------------------------------------------------------------- | -----: |
+|  23 | The presentation is clear and well prepared                                                     |    0.2 |
+|  24 | The application is presented so the teaching staff can understand what you created, why and how |    0.2 |
+|  25 | Everyone speaks during the presentation.                                                        |    0.2 |
 
 ## Constraints
 
+- **A demonstration of your web application is expected during the
+  presentation.**
 - The whole team must contribute to the project and all members must be able to
   explain it in details if asked.
 - A GitHub Discussion must be opened during the first week of the project to
