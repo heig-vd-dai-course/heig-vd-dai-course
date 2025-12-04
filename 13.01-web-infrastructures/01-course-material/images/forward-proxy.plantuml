@@ -1,6 +1,14 @@
-@startuml
+@startuml forward-proxy
+
 left to right direction
 skinparam packageStyle rectangle
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+
+!pragma teoz true
 
 title "Forward proxy"
 
@@ -8,7 +16,7 @@ actor "Server 1" as server1
 actor "Server 2" as server2
 actor "Server N" as serverN
 
-rectangle "Clients LAN" as clientLan {
+rectangle "Clients LAN" as clientsLan {
 
     actor "Client 1" as client1
     actor "Client 2" as client2

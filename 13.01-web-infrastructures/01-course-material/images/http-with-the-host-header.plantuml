@@ -1,12 +1,21 @@
-@startuml
+@startuml http-with-the-host-header
 
-title "HTTP with the Host header"
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+autonumber
+
+!pragma teoz true
+
+title "HTTP with the //Host// header"
 
 actor client
 participant "DNS server\n9.9.9.9" as dns
 participant "Reverse proxy\n185.144.38.57" as reverse_proxy
-participant "www.example.com" as web_server_1
-participant "www.github.com" as web_server_2
+participant "Web server 1\nwww.example.com" as web_server_1
+participant "Web server 2\nwww.github.com" as web_server_2
 
 client -> dns: IP for www.example.com?
 dns -> client: IP for www.example.com is 185.144.38.57
@@ -15,7 +24,7 @@ reverse_proxy -> web_server_1: GET / HTTP/1.1 Host: www.example.com
 web_server_1 -> reverse_proxy: HTTP 200 OK
 reverse_proxy -> client: HTTP 200 OK
 
-...
+... <&clock> Time flows... ...
 
 client -> dns: IP for www.github.com?
 dns -> client: IP for www.github.com is 185.144.38.57
