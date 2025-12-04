@@ -5,7 +5,10 @@ networks:
 secrets:
   # We create a Docker secret to store the BasicAuth users
   auth_users:
-    file: ./secrets/auth-users.txt
+    file: ./secrets/auth_users.txt
+  # We create a Docker secret to store the DuckDNS access token for the DNS challenge
+  duckdns_access_token:
+    file: ./secrets/duckdns_access_token.txt
 
 services:
   traefik:
@@ -19,17 +22,19 @@ services:
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
       ## Entrypoints
+      # Define an entrypoint for HTTP on port 80
       - --entrypoints.http.address=:80
+      # Define an entrypoint for HTTPS on port 443
+      - --entrypoints.https.address=:443
+      # We redirect all HTTP traffic to HTTPS
       - --entrypoints.http.http.redirections.entrypoint.to=https
       - --entrypoints.http.http.redirections.entrypoint.scheme=https
       - --entrypoints.http.http.redirections.entrypoint.permanent=true
-      - --entrypoints.https.address=:443
+      # We enable TLS for all HTTPS traffic
       - --entrypoints.https.http.tls=true
       - --entrypoints.https.http.tls.certresolver=letsencrypt
-      # We ask Let's Encrypt to generate certificates for our root domain and wildcard subdomains
-      - --entrypoints.https.http.tls.domains[0].main=${TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME}
-      - --entrypoints.https.http.tls.domains[0].sans=*.${TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME}
       ## Certificates
+      # We add Let's Encrypt as a default certificate resolver
       # Uncomment next line when testing
       # - --certificatesResolvers.letsencrypt.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
       - --certificatesresolvers.letsencrypt.acme.email=${TRAEFIK_ACME_EMAIL}
@@ -39,9 +44,8 @@ services:
       - --certificatesresolvers.letsencrypt.acme.dnschallenge.provider=${TRAEFIK_ACME_DNS_PROVIDER}
       - --certificatesresolvers.letsencrypt.acme.dnschallenge.delayBeforeCheck=30
     restart: unless-stopped
-    env_file:
-      # We load the environment variables from the .env file for the DNS challenge
-      - dns-challenge.env
+    environment:
+      - DUCKDNS_TOKEN_FILE=/run/secrets/duckdns_access_token
     networks:
       - traefik_network
     ports:
@@ -49,19 +53,20 @@ services:
       - 443:443
     secrets:
       - auth_users
+      - duckdns_access_token
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./letsencrypt:/letsencrypt
     labels:
-      ## Traefik
+      ### Traefik
       - traefik.enable=true
-      - traefik.docker.network=traefik_network
       ## Middlewares
       # This enables the BasicAuth middleware using the Docker secret
       - traefik.http.middlewares.basic-auth.basicauth.usersFile=/run/secrets/auth_users
-      ## Routers
-      - traefik.http.routers.traefik.entrypoints=https
-      - traefik.http.routers.traefik.rule=Host(`${TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME}`)
-      - traefik.http.routers.traefik.service=api@internal
+      ## Router
+      - traefik.http.routers.traefik.entryPoints=websecure
+      - traefik.http.routers.traefik.rule=Host(`${TRAEFIK_FQDN}`)
       # Enable the `basic-auth` middleware for this router
       - traefik.http.routers.traefik.middlewares=basic-auth
+      ## Service
+      - traefik.http.routers.traefik.service=api@internal
