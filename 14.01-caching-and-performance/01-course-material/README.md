@@ -1,17 +1,6 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-and-performance/23-caching-and-performance-practical-work.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
-[illustration]: ./images/main-illustration.jpg
+# Caching and performance
 
-# Caching and performance - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
@@ -20,10 +9,18 @@ Based on the original course by O. Liechti and J. Ehrensberger.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/14.01-caching-and-performance-presentation.pdf)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Caching](#caching)
@@ -52,12 +49,19 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-In this last and final chapter of this course, you will learn about caching and
-performance.
+In this last and final course of this teaching unit, you will learn about
+caching and performance.
 
 You will learn about caching, how it can be used to improve the performance of a
 system, where to cache, how you can manage cache with HTTP and how to implement
 it in your application.
+
+In a nutshell, at the end of this course, you will be able to:
+
+- Describe how caching can improve performance.
+- Identify where caching can be implemented in a web application architecture.
+- Describe different types of caching.
+- Implement the concepts of caching in web applications with HTTP.
 
 ## Caching
 
@@ -119,7 +123,7 @@ caches that are used by multiple clients.
 The best would be to cache at each level of the system to ensure the best
 performance. But it is not always possible or faisable.
 
-In the context of this course, we will focus on server-side caching.
+In the context of this teaching unit, we will focus on server-side caching.
 
 ## Managing cache with HTTP
 
@@ -134,9 +138,11 @@ There are two main caching models:
 Expiration and validation are two mechanisms that can be used to control
 caching.
 
-Expiration is the process of specifying how long a response can be cached.
+Expiration is the process of specifying how long a data is considered to be
+fresh.
 
-Validation is the process of checking if a cached response is still valid.
+Validation is the process of checking if a cached data is still valid or if it
+has been modified.
 
 Both can be used at the same time to improve the performance of the system.
 
@@ -157,9 +163,9 @@ Much more details about caching with HTTP can be found on MDN Web Docs:
 The expiration model is the simplest caching model. It is described in
 [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.2).
 
-The cache is invalidated after a certain amount of time. The cache can be
-invalidated after a certain amount of time because the data is not expected to
-change.
+The cache is invalidated after a certain amount of time. In other words, the
+data is considered fresh for a certain amount of time. After that time, the
+cache is considered stale.
 
 The expiration model can be used to cache static content (e.g. images, videos,
 etc.) or to cache responses from servers to improve the performance of the
@@ -174,8 +180,9 @@ The expiration model can be implemented with the following header:
 
 ### Validation model
 
-The validation model is more complex than the expiration model. It is described
-in [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
+The validation model is a bit more complex than the expiration model. It is
+described in
+[RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
 
 The cache is invalidated when the data is modified. The cache can be invalidated
 when the data is modified because the data is expected to change.
@@ -187,7 +194,7 @@ The main idea of the validation model is:
 
 1. Send a request to the server to check if the data has changed.
 2. If the data has not changed, the server can return a `304 Not Modified`
-   response to the client.
+   response to the client. The client can then use the cached data.
 3. If the data has changed, the server can return a `200 OK` response to the
    client with the new data.
 
@@ -222,9 +229,9 @@ There are two types of conditional requests:
 
 - **Based on the `Last-Modified` header**: allows a `304 Not Modified` to be
   returned if content is unchanged since the last time it was modified (= a
-  cache hit)
+  cache hit).
 - **Based on the `ETag` header**: allows a `304 Not Modified` to be returned if
-  content is unchanged for the version/hash of the given entity (= a cache hit)
+  content is unchanged for the version/hash of the given entity (= a cache hit).
 
 #### Based on the `Last-Modified` header
 
@@ -283,8 +290,8 @@ available as a middleware in their Enterprise version. You can learn more about
 it in their documentation at
 <https://doc.traefik.io/traefik-enterprise/middlewares/http-cache/>.
 
-As it is out of the scope/reach for this course, we will not go into details
-about how to configure Traefik to cache responses from servers. We will,
+As it is out of the scope/reach for this teaching unit, we will not go into
+details about how to configure Traefik to cache responses from servers. We will,
 however, implement it on the server side with Javalin.
 
 ## Managing cache with key-value stores
@@ -295,25 +302,25 @@ value pairs.
 A key-value store can be used to manage cache with HTTP. A key-value store can
 cache responses from clients/servers to improve the performance of the system.
 
-Redis, for example, can be used as a key-value store to cache responses from
-servers. You can learn more about it in their documentation at
-<https://redis.io/documentation>.
+Redis or Valkey, for example, can be used as a key-value store to cache
+responses from servers. You can learn more about it in their documentation at
+<https://redis.io/documentation> or <https://valkey.io/docs/>.
 
-As it is out of the scope/reach for this course, we will not go into details
-about how to configure Redis to cache responses from servers. We will, however,
-implement it on the server side with Javalin.
+As it is out of the scope/reach for this teaching unit, we will not go into
+details about how to configure Redis/Valkey to cache responses from servers. We
+will, however, implement it on the server side with Javalin.
 
 ## Practical content
 
 In this practical content, you will implement the validation model based on the
-`Last-Modified` header in your application.
+`Last-Modified` header in your own web application.
 
 You will need the results of the practical content from chapter
-[HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/23-caching-and-performance).
+[HTTP and curl](../../12.01-http-and-curl/README.md).
 
 If you do not have the results of the practical content from chapter HTTP and
-curl, you can use the solution mentioned in the HTTP and curl chapter. Clone the
-solution to have the project ready for this practical content.
+curl, you can use the solution mentioned in the HTTP and curl chapter. Clone and
+build the solution to have the project ready for this practical content.
 
 ### Update the `Main.java` class to cache the results
 
@@ -1079,3 +1086,8 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 - Main illustration by [Richard Horne](https://unsplash.com/@richardhorne) on
   [Unsplash](https://unsplash.com/photos/black-and-blue-train-running-near-the-tunnel-2PKKbKEkmQE)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
+[illustration]: ./images/main-illustration.jpg

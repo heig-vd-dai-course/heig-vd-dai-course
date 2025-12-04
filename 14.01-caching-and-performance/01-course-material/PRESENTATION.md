@@ -34,10 +34,10 @@ _paginate: false
 
 ## Objectives
 
-- Understand the concepts of caching
-- Understand how caching can improve performance
-- Understand how HTTP features can help to cache data
-- Implement caching in a web application
+- Describe how caching can improve performance.
+- Identify where caching can be implemented in a web application architecture.
+- Describe different types of caching.
+- Implement the concepts of caching in web applications with HTTP.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
