@@ -1,18 +1,16 @@
-package ch.heigvd.dai.auth;
+package ch.heigvd.auth;
 
-import ch.heigvd.dai.users.User;
+import ch.heigvd.users.User;
 import io.javalin.http.*;
 import java.time.LocalDateTime;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 
 public class AuthController {
-  private final ConcurrentHashMap<Integer, User> users;
+  private final Map<Integer, User> users;
 
-  private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
+  private final Map<Integer, LocalDateTime> usersCache;
 
-  public AuthController(
-      ConcurrentHashMap<Integer, User> users,
-      ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
+  public AuthController(Map<Integer, User> users, Map<Integer, LocalDateTime> usersCache) {
     this.users = users;
     this.usersCache = usersCache;
   }
@@ -20,14 +18,14 @@ public class AuthController {
   public void login(Context ctx) {
     User loginUser =
         ctx.bodyValidator(User.class)
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
             .get();
 
     for (User user : users.values()) {
-      if (user.email.equalsIgnoreCase(loginUser.email)
-          && user.password.equals(loginUser.password)) {
-        ctx.cookie("user", String.valueOf(user.id));
+      if (user.email().equalsIgnoreCase(loginUser.email())
+          && user.password().equals(loginUser.password())) {
+        ctx.cookie("user", String.valueOf(user.id()));
         ctx.status(HttpStatus.NO_CONTENT);
         return;
       }
@@ -66,17 +64,18 @@ public class AuthController {
     }
 
     LocalDateTime now;
-    if (usersCache.containsKey(user.id)) {
+    if (usersCache.containsKey(user.id())) {
       // If it is already in the cache, get the last modification date
-      now = usersCache.get(user.id);
+      now = usersCache.get(user.id());
     } else {
       // Otherwise, set to the current date
       now = LocalDateTime.now();
-      usersCache.put(user.id, now);
+      usersCache.put(user.id(), now);
     }
 
     // Add the last modification date to the response
     ctx.header("Last-Modified", String.valueOf(now));
+
     ctx.json(user);
   }
 }

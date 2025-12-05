@@ -45,7 +45,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>ch.heigvd.dai.Main</mainClass>
+                  <mainClass>ch.heigvd.Main</mainClass>
                 </transformer>
                 <transformer>
                   <resource>MANIFEST.MF</resource>

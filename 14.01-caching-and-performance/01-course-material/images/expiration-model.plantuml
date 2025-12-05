@@ -7,7 +7,7 @@ skinparam wrapWidth 250
 autonumber
 
 !$TITLE = "Expiration model"
-!$ONE_PAGE = 0
+!$ONE_PAGE = 1
 
 !if ($ONE_PAGE)
   ignore newpage
