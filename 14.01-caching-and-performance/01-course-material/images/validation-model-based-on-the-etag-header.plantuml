@@ -4,14 +4,25 @@ skinparam maxMessageSize 150
 skinparam noteTextAlignment center
 skinparam sequenceMessageAlign direction
 skinparam wrapWidth 250
+autonumber
 
-title "Validation model based on the ETag header"
+!$TITLE = "Validation model based on the //ETag// header"
+!$ONE_PAGE = 1
+
+!if ($ONE_PAGE)
+  ignore newpage
+!else
+  right footer $TITLE (%page%/%lastpage%) 
+!endif
+
+title $TITLE
 
 participant "Client 1" as client1
-participant "Server" as server
 participant "Client 2" as client2
+participant "Server" as server
+database "Database" as database
 
-== First requests ==
+== First request by client 1 ==
 
 note over client1, server
 GET /users/1 HTTP/1.1
@@ -22,7 +33,16 @@ client1 -> server: Initial request (at 22 Feb 2022, 22:22:00)
 
 |||
 
-server -> server: Check in cache...\nCache missed; need to store request in cache.
+server -> server: Check in cache...\nCache missed; need to get the data.
+
+note over server, database
+Getting the data from the database is much slower than getting it from the cache.
+end note
+
+server -> database: Get the data...
+database -> server: Return the data...
+
+server -> server:  Store data in cache for future requests.
 
 |||
 
@@ -35,7 +55,11 @@ ETag: 33a64df5
 end note
 server -> client1: Response
 
-...
+... <&clock> Time flows... ...
+
+newpage $TITLE
+
+== First request by client 2 ==
 
 note over server, client2
 GET /users/1 HTTP/1.1
@@ -46,7 +70,7 @@ server <- client2: Initial request (at 22 Feb 2022, 22:30:00)
 
 |||
 
-server -> server: Check in cache...\nCache hit; no need to store request in cache.
+server -> server: Check in cache...\nCache hit; data is available in the cache.
 
 |||
 
@@ -59,7 +83,9 @@ ETag: 33a64df5
 end note
 server -> client2: Response
 
-...
+... <&clock> Time flows... ...
+
+newpage $TITLE
 
 == Get data that have not been modified ==
 
@@ -75,7 +101,7 @@ client1 -> server: New request (at 22 Feb 2022, 23:05:00)
 
 |||
 
-server -> server: Check in cache...\nCache hit; no need to store request in cache.
+server -> server: Check in cache...\nCache hit; data is available in the cache.
 
 note over client1, server
 HTTP/1.1 304 Not Modified
@@ -83,7 +109,9 @@ Date: Tue, 22 Feb 2022 23:05:21 GMT
 end note
 server -> client1: The information has not changed
 
-...
+... <&clock> Time flows... ...
+
+newpage $TITLE
 
 == Update data with no mid-air collisions (no in-between editions) ==
 
@@ -97,7 +125,9 @@ client1 -> server: The email of the user is updated (at 22 Feb 2022, 23:15:00)
 
 |||
 
-server -> server: Check if no one has modified the user since Tue, 20 Feb 2022 22:00:00 GMT...\nNo modifications; the cache is updated.
+server -> server: Check if no one has modified the user since Tue, 20 Feb 2022 22:00:00 GMT...\nNo modifications; the data is updated.
+server -> database: Save the data...
+server -> server:  Store data in cache for future requests.
 
 |||
 
@@ -110,7 +140,9 @@ ETag: 84ab545e
 end note
 server -> client1: Response
 
-...
+... <&clock> Time flows... ...
+
+newpage $TITLE
 
 == Update data with mid-air collisions (in-between editions) ==
 
@@ -124,7 +156,7 @@ client2 -> server: The username of the user is updated (at 22 Feb 2022, 23:30:00
 
 |||
 
-server -> server: Check if no one has modified the user since Tue, 20 Feb 2022 22:00:00 GMT...\nModifications have occured; invalid request.
+server -> server: Check if no one has modified the user since Tue, 20 Feb 2022 22:00:00 GMT...\nModifications have occurred; invalid request.
 
 |||
 
@@ -134,4 +166,5 @@ Date: Tue, 22 Feb 2022 23:30:01 GMT
 end note
 server -> client2: Response
 
+... <&clock> Time flows... ...
 @enduml
