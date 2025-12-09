@@ -363,15 +363,15 @@ repository!
 
 ### Category 5 - Web infrastructures
 
-|   # | Criterion                                                                                                                                | Points |
-| --: | :--------------------------------------------------------------------------------------------------------------------------------------- | -----: |
-|  14 | The README (or repository) contains instructions how to install and configure the virtual machine                                        |    0.2 |
-|  15 | The README (or repository) contains instructions how to configure the DNS zone to access your web application                            |    0.2 |
-|  16 | The README (or repository) contains a list of your DNS records (screenshot or text) for validation purposes                              |    0.2 |
-|  17 | The README (or repository) contains instructions how to deploy, run and access the web applications with Docker Compose                  |    0.2 |
-|  18 | At least Traefik and your web application are deployed on the virtual machine                                                            |    0.2 |
-|  19 | The web applications (the Traefik dashboard and your own application) are accessible using a domain name and/or subdomain names          |    0.2 |
-|  20 | The web applications (the Traefik dashboard and your own application) use automatic HTTPS/TLS certificate generations with Let's Encrypt |    0.2 |
+|   # | Criterion                                                                                                                                   | Points |
+| --: | :------------------------------------------------------------------------------------------------------------------------------------------ | -----: |
+|  14 | The README (or repository) contains instructions or a link to the appropriate resources on how to install and configure the virtual machine |    0.2 |
+|  15 | The README (or repository) contains instructions how to configure the DNS zone to access your web application                               |    0.2 |
+|  16 | The README (or repository) contains a list of your DNS records (screenshot or text) for validation purposes                                 |    0.2 |
+|  17 | The README (or repository) contains instructions how to deploy, run and access the web applications with Docker Compose                     |    0.2 |
+|  18 | At least Traefik and your web application are deployed on the virtual machine                                                               |    0.2 |
+|  19 | The web applications (the Traefik dashboard and your own application) are accessible using a domain name and/or subdomain names             |    0.2 |
+|  20 | The web applications (the Traefik dashboard and your own application) use automatic HTTPS/TLS certificate generations with Let's Encrypt    |    0.2 |
 
 ### Category 6 - Caching and performance
 
@@ -400,7 +400,8 @@ repository!
   related commit hash before the deadline - every 24 hours after the deadline
   will result in a -1 point penalty on the final grade.
 - The web application can only use the HTTP/HTTPS protocols.
-- The web application must use the Javalin dependency for the web application.
+- The web application must use the Javalin dependency to create the web
+  application.
 - The application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word _slightly_, no
   need to shoot for the moon).
@@ -591,7 +592,8 @@ You can use reactions to express your opinion on a comment!
 [^cannot-access-vm-with-ssh]:
     If the teaching staff cannot access your virtual machine, some other
     criteria of the grading grid might not be graded as we will not be able to
-    check them.
+    check them. Feel free to ask us for testing the SSH access before the
+    deadline.
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
