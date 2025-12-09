@@ -105,7 +105,7 @@ other resources and alternatives as well.
 
 ### HTTP (2/2)
 
-- Application layer protocol with many features.
+- An application protocol with many features.
 - Used to transfer data between a client (an **user agent**) and a server.
 - A client can be a web browser, a mobile application, a command-line tool,
   household appliance, etc.
