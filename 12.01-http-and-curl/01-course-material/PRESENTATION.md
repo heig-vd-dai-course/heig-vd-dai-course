@@ -378,10 +378,7 @@ sends the result does not need to keep track of the client:
 - The server can directly respond to each request.
 
 The server does not have to know who is the author of the request: it can send
-the result directly to the client.
-
-In this case, the server does not need to use HTTP sessions and is, therefore,
-stateless.
+the result directly to the client. No session is needed (stateless).
 
 ### Do all websites use sessions? (2/2)
 
@@ -392,9 +389,7 @@ shopping cart needs to keep track of the client:
 - The user can buy the items in the shopping cart.
 
 The server must know who is the author of each request in order to maintain the
-shopping cart.
-
-In this case, the server must use HTTP sessions and is, therefore, stateful.
+shopping cart. Sessions are needed (stateful).
 
 ## API design
 
