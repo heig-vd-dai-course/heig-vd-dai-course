@@ -1,27 +1,27 @@
-package ch.heigvd.dai.auth;
+package ch.heigvd.auth;
 
-import ch.heigvd.dai.users.User;
+import ch.heigvd.users.User;
 import io.javalin.http.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 
 public class AuthController {
-  private final ConcurrentHashMap<Integer, User> users;
+  private final Map<Integer, User> users;
 
-  public AuthController(ConcurrentHashMap<Integer, User> users) {
+  public AuthController(Map<Integer, User> users) {
     this.users = users;
   }
 
   public void login(Context ctx) {
     User loginUser =
         ctx.bodyValidator(User.class)
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
             .get();
 
     for (User user : users.values()) {
-      if (user.email.equalsIgnoreCase(loginUser.email)
-          && user.password.equals(loginUser.password)) {
-        ctx.cookie("user", String.valueOf(user.id));
+      if (user.email().equalsIgnoreCase(loginUser.email())
+          && user.password().equals(loginUser.password())) {
+        ctx.cookie("user", String.valueOf(user.id()));
         ctx.status(HttpStatus.NO_CONTENT);
         return;
       }

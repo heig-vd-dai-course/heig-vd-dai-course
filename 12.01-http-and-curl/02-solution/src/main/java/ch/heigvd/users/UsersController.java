@@ -1,37 +1,43 @@
-package ch.heigvd.dai.users;
+package ch.heigvd.users;
 
 import io.javalin.http.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UsersController {
-  private final ConcurrentHashMap<Integer, User> users;
+  private final Map<Integer, User> users;
   private final AtomicInteger uniqueId = new AtomicInteger(1);
 
-  public UsersController(ConcurrentHashMap<Integer, User> users) {
+  public UsersController(Map<Integer, User> users) {
     this.users = users;
   }
 
   public void create(Context ctx) {
     User newUser =
         ctx.bodyValidator(User.class)
-            .check(obj -> obj.firstName != null, "Missing first name")
-            .check(obj -> obj.lastName != null, "Missing last name")
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
+            .check(obj -> obj.firstName() != null, "Missing first name")
+            .check(obj -> obj.lastName() != null, "Missing last name")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
             .get();
 
     for (User user : users.values()) {
-      if (newUser.email.equalsIgnoreCase(user.email)) {
+      if (newUser.email().equalsIgnoreCase(user.email())) {
         throw new ConflictResponse();
       }
     }
 
-    newUser.id = uniqueId.getAndIncrement();
+    newUser =
+        new User(
+            uniqueId.getAndIncrement(),
+            newUser.firstName(),
+            newUser.lastName(),
+            newUser.email(),
+            newUser.password());
 
-    users.put(newUser.id, newUser);
+    users.put(newUser.id(), newUser);
 
     ctx.status(HttpStatus.CREATED);
     ctx.json(newUser);
@@ -56,11 +62,11 @@ public class UsersController {
     List<User> users = new ArrayList<>();
 
     for (User user : this.users.values()) {
-      if (firstName != null && !user.firstName.equalsIgnoreCase(firstName)) {
+      if (firstName != null && !user.firstName().equalsIgnoreCase(firstName)) {
         continue;
       }
 
-      if (lastName != null && !user.lastName.equalsIgnoreCase(lastName)) {
+      if (lastName != null && !user.lastName().equalsIgnoreCase(lastName)) {
         continue;
       }
 
@@ -79,14 +85,14 @@ public class UsersController {
 
     User updateUser =
         ctx.bodyValidator(User.class)
-            .check(obj -> obj.firstName != null, "Missing first name")
-            .check(obj -> obj.lastName != null, "Missing last name")
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
+            .check(obj -> obj.firstName() != null, "Missing first name")
+            .check(obj -> obj.lastName() != null, "Missing last name")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
             .get();
 
     for (User user : users.values()) {
-      if (updateUser.email.equalsIgnoreCase(user.email)) {
+      if (updateUser.email().equalsIgnoreCase(user.email())) {
         throw new ConflictResponse();
       }
     }

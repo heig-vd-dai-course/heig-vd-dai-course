@@ -479,11 +479,11 @@ information:
 ## Presentations
 
 - DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10:30**
-  in room **B51a**
+  in room **B51a**.
 - DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14:45**
-  in room **B38**
+  in room **B38**.
 - DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **16:30** in room
-  **B51a**
+  **B51a**.
 
 The exact schedule will be communicated once the groups are known.
 
@@ -516,16 +516,16 @@ The presentation order is random and is stated in the next tables:
 
 ### DAI-TIC-B (Wednesday afternoons)
 
-| # | Group                                 | Passage     |
-|--:|:--------------------------------------|:------------|
-| 1 | Pierre Gellet and Mirco Profico       | 14:45-14:53 |
-| 2 | Yuuta Jorand and Agron Markaj         | 14:55-15:03 |
-| 3 | Samuel dos Santos and Fabien Léger    | 15:05-15:13 |
-| 4 | Arnaud Bersier and Jonathan Nicolet   | 15:15-15:23 |
-| 5 | Marc Ischi and Arnaut Leyre           | 15:25-15:33 |
-| 6 | Julien Gorgerat and Audrey Mauroux    | 15:35-15:43 |
-| 7 | Louis Garcia and Tiago Ferreira       | 15:45-15:53 |
-| 8 | Maxime Regenass and Santiago Sugrañes | 15:55-16:03 |
+|   # | Group                                 | Passage     |
+| --: | :------------------------------------ | :---------- |
+|   1 | Pierre Gellet and Mirco Profico       | 14:45-14:53 |
+|   2 | Yuuta Jorand and Agron Markaj         | 14:55-15:03 |
+|   3 | Samuel dos Santos and Fabien Léger    | 15:05-15:13 |
+|   4 | Arnaud Bersier and Jonathan Nicolet   | 15:15-15:23 |
+|   5 | Marc Ischi and Arnaut Leyre           | 15:25-15:33 |
+|   6 | Julien Gorgerat and Audrey Mauroux    | 15:35-15:43 |
+|   7 | Louis Garcia and Tiago Ferreira       | 15:45-15:53 |
+|   8 | Maxime Regenass and Santiago Sugrañes | 15:55-16:03 |
 
 ### DAI-TIC-A (Thursdays)
 

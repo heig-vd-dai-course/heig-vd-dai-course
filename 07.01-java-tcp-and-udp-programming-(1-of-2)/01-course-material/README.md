@@ -126,7 +126,7 @@ TCP is a connection-oriented protocol: a connection must be established between
 the two applications before data can be exchanged in a bidirectional way.
 
 TCP can only do unicast: one client can communicate with one other server at the
-same time. To communicate with multiple servers a client has to establish a 
+same time. To communicate with multiple servers a client has to establish a
 separate TCP connection with each server.
 
 TCP is considered as a reliable protocol as data sent is guaranteed to be
@@ -172,35 +172,36 @@ The following schema shows the workflow of a TCP client/server application:
 
 **Note on socket connection behavior**
 
-Under the hood, as soon as the `ServerSocket` is created, it starts listening 
+Under the hood, as soon as the `ServerSocket` is created, it starts listening
 for incoming connection requests.
 
-When a client creates a `new Socket(HOST, PORT);`, it will attempt to establish 
+When a client creates a `new Socket(HOST, PORT);`, it will attempt to establish
 a TCP connection with the server. It is a blocking call.
 
 However, by default, the operating system on the server side accepts the
 incoming TCP connection request and puts it in a queue. So from the client's
-perspective, the TCP connection request is accepted and the socket is created 
-(on the client side) even though the server may not yet have called the 
+perspective, the TCP connection request is accepted and the socket is created
+(on the client side) even though the server may not yet have called the
 `ServerSocket.accept()` method.
 
-At this point, the TCP connection is established, but the client is on hold. 
+At this point, the TCP connection is established, but the client is on hold.
 (Any data sent to the server is buffered by its OS until the server calls
-`accept()`). 
+`accept()`).
 
-When the server eventually calls the `accept()` method, a new `Socket` is 
-created on the server side and bound to the (first) pending TCP connection from 
-the queue and any buffered data is received by the server application. The 
+When the server eventually calls the `accept()` method, a new `Socket` is
+created on the server side and bound to the (first) pending TCP connection from
+the queue and any buffered data is received by the server application. The
 server and client can now communicate with each other.
 
 This behavior explains why a client can successfully connect to a server even if
-the server has not yet called `accept()`. The connection request is queued by 
+the server has not yet called `accept()`. The connection request is queued by
 the server's operating system until the server is ready to accept it.
 
-The number of pending connections that can be queued is limited and can be 
+The number of pending connections that can be queued is limited and can be
 configured when creating the `ServerSocket` using the `backlog` parameter, and
-its behaviour is platform dependent (the parameter can be ignored by the OS, as 
-stated in the [javadoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/ServerSocket.html#%3Cinit%3E(int,int))).
+its behaviour is platform dependent (the parameter can be ignored by the OS, as
+stated in the
+[javadoc](<https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/ServerSocket.html#%3Cinit%3E(int,int)>)).
 
 We mention this behavior here to clarify why a client can connect to a server
 even if the server has not yet called `accept()`, e.g. because it is busy
@@ -1020,7 +1021,7 @@ At this point, you should be able to answer the following questions:
 ## Finished? Was it easy? Was it hard?
 
 Can you let us know what was easy and what was difficult for you during this
-chapter?
+course?
 
 This will help us to improve the course and adapt the content to your needs. If
 we notice some difficulties, we will come back to you to help you.

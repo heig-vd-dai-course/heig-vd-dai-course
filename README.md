@@ -216,8 +216,8 @@ Dates are taken from the
 |    [09](#-course-09) | 17.11. - 23.11.25         | Java network concurrency                 | Practical work 2 (4/6)                       | 🟢 Ready        |
 | 🚨 [10](#-course-10) | 24.11. - 30.11.25         | Evaluation 1                             | Practical work 2 (5/6)                       | 🟢 Ready        |
 | 🚨 [11](#-course-11) | 01.12. - 07.12.25         | SSH and SCP                              | Practical work 2 (6/6) - Presentations       | 🟢 Ready        |
-|    [12](#-course-12) | 08.12. - 14.12.25         | HTTP and curl                            | Practical work 3 (1/5)                       | 🟡 In progress  |
-|    [13](#-course-13) | 15.12. - 21.12.25         | Web infrastructures                      | Practical work 3 (2/5)                       | 🔴 To do        |
+|    [12](#-course-12) | 08.12. - 14.12.25         | HTTP and curl                            | Practical work 3 (1/5)                       | 🟢 Ready        |
+|    [13](#-course-13) | 15.12. - 21.12.25         | Web infrastructures                      | Practical work 3 (2/5)                       | 🟡 In progress  |
 |                    - | 22.12. - 28.12.25         | _No course: holidays_                    | _No course: holidays_                        | -               |
 |                    - | 29.12. - 04.01.26         | _No course: holidays_                    | _No course: holidays_                        | -               |
 |    [14](#-course-14) | 05.01. - 11.01.26         | Caching and performance                  | Practical work 3 (3/5)                       | 🔴 To do        |

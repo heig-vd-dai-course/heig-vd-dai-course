@@ -14,19 +14,6 @@ footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/
 headingDivider: 6
 -->
 
-[web]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/24-practical-work-3/
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/24-practical-work-3/24-practical-work-3-presentation.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
-[illustration]: ./images/main-illustration.jpg
-[course-material]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
-[course-material-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
-
 # Practical work 3
 
 <!--
@@ -34,9 +21,7 @@ _class: lead
 _paginate: false
 -->
 
-<https://github.com/heig-vd-dai-course>
-
-[Web][web] · [PDF][pdf]
+[Link to the course][course]
 
 <small>L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).</small>
@@ -45,23 +30,29 @@ _paginate: false
 
 ![bg opacity:0.1][illustration]
 
-## Objectives
+## Objectives (1/3)
 
-- Obtain a virtual machine from a cloud provider
-- Access the virtual machine (SSH)
-- Install Docker and Docker Compose
-- Develop a simple CRUD API
-- Deploy the applications (reverse proxy + CRUD API)
-- Access the applications from a (free) domain name
+- Obtain a virtual machine on a cloud provider.
+- Access the virtual machine with SSH.
+- Install Docker and Docker Compose on the virtual machine.
+- Define some Docker Compose files to run the web application with a reverse
+  proxy (Traefik).
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
----
+## Objectives (2/3)
 
-- The CRUD API manages resources. You can choose what the CRUD API does/manages:
-  - Music
-  - Books
-  - Video games
+- Deploy the simple CRUD API on the virtual machine.
+- Access the CRUD API from a domain name with HTTPS (Let's encrypt).
+- The CRUD API manages resources.
+
+![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
+
+## Objectives (3/3)
+
+- You can choose what the CRUD API does/manages:
+  - A music/video games/movies collection
+  - A book library
   - A todo/groceries list
   - ...
 
@@ -280,7 +271,7 @@ Output:
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material].
+More details for this section in the [course material][course].
 
 ### Group composition
 
@@ -297,7 +288,7 @@ More details for this section in the [course material][course-material].
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material].
+More details for this section in the [course material][course].
 
 ### Idea validation
 
@@ -312,69 +303,73 @@ More details for this section in the [course material][course-material].
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material].
+More details for this section in the [course material][course].
 
 ### Grading criteria
 
-You can find all the grading criteria in the [course material][course-material]:
+Based on 25 criteria and a three-point scale:
 
-- 0 point - The work is insufficient
-- 0.1 point - The work is done
-- 0.2 point - The work is well done (without the need of being perfect)
+- **0 point** - The work is missing, off-topic, or shows a very limited
+  understanding of the subject.
+- **0.1 point** - The work shows partial understanding: some key elements are
+  missing, unclear, or poorly implemented.
+- **0.2 point** - The work is complete, accurate, and shows a clear and thorough
+  understanding of the subject.
 
-Maximum grade: 25 points \* 0.2 + 1 = 6
-
-![bg right:40%](https://images.unsplash.com/photo-1645500010250-01b5bc42239e?fit=crop&h=720)
+Maximum grade: 25 criteria \* 0.2 + 1 = 6.
 
 ## Constraints
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material].
+More details for this section in the [course material][course].
 
-### Constraints
+### Constraints (1/3)
 
-- The application must be written in Java, compatible with Java 21
-- The application must be built using Maven with the `maven-shade-plugin` plugin
-- The application must use the Javalin dependency
-- You can only use the Java classes seen in the course
-- Your application must be slightly more complex and slightly different than the
-  examples presented during the course (we emphasize the word **slightly**, no
-  need to shoot for the moon!)
-- The web application can only use the HTTP/HTTPS protocols
+- The whole team must contribute to the project and all members must be able to
+  explain it in details if asked.
+- A GitHub Discussion must be opened during the first week of the project to
+  explain the idea of the project so the teachers can validate the idea.
+- The GitHub Discussion must be updated with the link to the repository and a
+  related commit hash before the deadline - every 24 hours after the deadline
+  will result in a -1 point penalty on the final grade.
 
-## Tips
+### Constraints (2/3)
 
-<!-- _class: lead -->
+- The web application can only use the HTTP/HTTPS protocols.
+- The web application must use the Javalin dependency for the web application.
+- The application must be slightly more complex and slightly different than the
+  examples presented during the course (we emphasize the word _slightly_, no
+  need to shoot for the moon).
 
-More details for this section in the [course material][course-material].
+### Constraints (3/3)
 
-### Tips
-
-You are allowed to reuse your Bases de données relationnelles (BDR) project for
-this practical work.
-
-You can decide to merge the two projects into one if you want or keep the idea
-and implement it in a different way (in memory for example, as you will see in
-the course materials).
-
-![bg right:40%](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720)
+- You must state your sources if you have used elements that you are not the
+  author (code from the Internet, code generated from AI tools, etc.). You must
+  also state for which usage you did use the source(s)/tool(s) in your README.
+  If you plagiarize the code of another group, all groups involved will receive
+  a grade of 1.
+- Elements that are supposed to be acquired through the teaching unit or
+  previous practical work(s) must not be omitted, forgotten or poorly
+  implemented (you must continue to use the Git/GitHub workflow, allow users to
+  understand your application, etc.).
 
 ## Submission
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material].
+More details for this section in the [course material][course].
 
 ### Submission
 
 Your work is due as follows:
 
-- DAI-TIC-B (Monday mornings): **19.01.2025 23:59**
-- DAI-TIC-C (Friday mornings): **23.01.2025 23:59**
+- DAI-TIC-C (Wednesday mornings): **Tues. 20.01.26 at 23:59**.
+- DAI-TIC-B (Wednesday afternoons): **Wed. 21.01.26 at 11:59**.
+- DAI-TIC-A (Thursdays): **Wed. 21.01.26 at 23:59**.
 
 Update the GitHub Discussion with the link to your repository as mentioned in
-the course material.
+the [course material][course].
 
 **If you do not submit your work on time and/or correctly, you will be penalized
 (-1 point on the final grade for each day of delay).**
@@ -383,21 +378,40 @@ the course material.
 
 <!-- _class: lead -->
 
-More details for this section in the [course material][course-material].
+More details for this section in the [course material][course].
 
 ### Presentations
 
-The practical work presentations will take place in **room B51a** (the same room
-as the first presentation) on:
+The practical work presentations will take place on:
 
-- DAI-TIC-B (Monday mornings): **20.01.2025**
-- DAI-TIC-C (Friday mornings): **24.01.2025**
+- DAI-TIC-C (Wednesday mornings): **Wednesday 21.01.26** starting at **10:30**
+  in room **TBD**.
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 21.01.26** starting at **14:45**
+  in room **TBD**.
+- DAI-TIC-A (Thursdays): **Thursday 22.01.26** starting at **16:30** in room
+  **TBD**.
 
-We only have **7 minutes per group**. You decide what you want to show us and
-how you want to present it.
+The exact schedule will be communicated once the groups are known.
 
-**Come 5 minutes before your time slot** with your computer. You will have
-access to a video projector.
+<!-- (Un)comment the following lines to hide/show the note about the presentations -->
+
+<!--
+
+### Presentations (2/2)
+
+We only have **8 minutes per group**. You decide what you want to show us and
+how you want to present it. **Come 5 minutes before your time slot** with your
+computer. You will have access to a video projector.
+
+The presentation order is random and is stated in the next tables:
+
+- [DAI-TIC-C (Wednesday mornings)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06.02-practical-work-2-(1-of-6)/01-course-material/README.md#dai-tic-c-wednesday-mornings>)
+- [DAI-TIC-B (Wednesday afternoons)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06.02-practical-work-2-(1-of-6)/01-course-material/README.md#dai-tic-b-wednesday-afternoons>)
+- [DAI-TIC-A (Thursdays)](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/06.02-practical-work-2-(1-of-6)/01-course-material/README.md#dai-tic-a-thursdays>)
+
+-->
+
+<!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
 ## Grades and feedback
 
@@ -411,6 +425,33 @@ a general comment on your work and the final grade.
 
 If you have any questions about the evaluation, you can contact us!
 
+## Tips
+
+<!-- _class: lead -->
+
+More details for this section in the [course material][course].
+
+### Tips (1/2)
+
+You are allowed to reuse your Bases de données relationnelles (BDR) project for
+this practical work.
+
+You can decide to merge the two projects into one if you want or keep the idea
+and implement it in a different way (in memory for example, as you will see in
+the course materials).
+
+![bg right:40%](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720)
+
+## Tips (2/2)
+
+However, you must ensure that you meet all the criteria of this practical work
+and that you respect all the constraints.
+
+In our experience, it might be easier to start from scratch with a new idea. But
+you are welcome to try!
+
+![bg right:40%](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?fit=crop&h=720)
+
 ## Questions
 
 <!-- _class: lead -->
@@ -421,9 +462,9 @@ Do you have any questions?
 
 <!-- _class: lead -->
 
-You can find the practical work for this part on [GitHub][course-material].
+You can find the practical work for this part on [GitHub][course].
 
-[![bg right w:75%][course-material-qr-code]][course-material]
+[![bg right w:75%][course-qr-code]][course]
 
 ## Finished? Was it easy? Was it hard?
 
@@ -451,3 +492,12 @@ You can use reactions to express your opinion on a comment!
   [Unsplash](https://unsplash.com/photos/a-sign-that-is-on-a-tree-in-the-woods-dy1GA9Ow6JA)
 - Illustration by [Jan Antonin Kolar](https://unsplash.com/@jankolar) on
   [Unsplash](https://unsplash.com/photos/brown-wooden-drawer-lRoX0shwjUQ)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/119
+[illustration]: ./images/main-illustration.jpg
+[course]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
+[course-qr-code]:
+	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/24-practical-work-3/COURSE_MATERIAL.md
