@@ -13,6 +13,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.03-semester-review-and-exam-preparation/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/16.03-semester-review-and-exam-preparation/01-course-material/16.03-semester-review-and-exam-preparation-presentation.pdf)
+- Feedback (Framaforms + GAPS): [Link to content](./02-feedback/README.md)
 
 ## Objectives
 
