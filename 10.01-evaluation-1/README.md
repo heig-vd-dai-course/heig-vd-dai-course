@@ -17,9 +17,13 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
+By the end of this course, students should be able to:
+
 - Assess the skills acquired during the semester.
 
 ## Teaching and learning methods
+
+The teaching and learning methods used to facilitate the course are as follows:
 
 - Written evaluation.
 
@@ -35,7 +39,7 @@ Feedback is provided as follows:
 
 - Corrected evaluation with comments.
 
-🚨 **The evaluation results in a grade.** (50% of all evaluations grade).
+🚨 **The evaluation results in a grade.** (50% of all evaluation grades).
 
 ## To do before next course
 
