@@ -423,9 +423,9 @@ repository!
 
 Your work is due as follows:
 
-- DAI-TIC-C (Wednesday mornings): **Tuesday 02.12.25 at 23:59**.
-- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25 at 11:59**.
-- DAI-TIC-A (Thursdays): **Wednesday 03.12.25 at 23:59**.
+- DAI-TIC-C (Wednesday mornings): **Tues. 20.01.26 at 23:59**.
+- DAI-TIC-B (Wednesday afternoons): **Wed. 21.01.26 at 11:59**.
+- DAI-TIC-A (Thursdays): **Wed. 21.01.26 at 23:59**.
 
 > [!CAUTION]
 >
@@ -445,11 +445,11 @@ information:
 
 ## Presentations
 
-- DAI-TIC-C (Wednesday mornings): **Wednesday 03.12.25** starting at **10:30**
+- DAI-TIC-C (Wednesday mornings): **Wednesday 21.01.26** starting at **10:30**
   in room **TBD**.
-- DAI-TIC-B (Wednesday afternoons): **Wednesday 03.12.25** starting at **14:45**
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 21.01.26** starting at **14:45**
   in room **TBD**.
-- DAI-TIC-A (Thursdays): **Thursday 04.12.25** starting at **16:30** in room
+- DAI-TIC-A (Thursdays): **Thursday 22.01.26** starting at **16:30** in room
   **TBD**.
 
 The exact schedule will be communicated once the groups are known.
