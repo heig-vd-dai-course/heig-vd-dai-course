@@ -1,4 +1,4 @@
-# SSH and SCP
+# Web infrastructures
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
