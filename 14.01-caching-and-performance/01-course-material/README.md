@@ -328,7 +328,64 @@ Update your `Main.java` class to add a `Map` to cache results to your
 application:
 
 ```diff
-TODO
+diff --git a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/Main.java b/./src/main/java/ch/heigvd/Main.java
+index bb52fdb..e38ed57 100644
+--- a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/Main.java
++++ b/./src/main/java/ch/heigvd/Main.java
+@@ -1,37 +1,50 @@
+ package ch.heigvd;
+
+ import ch.heigvd.auth.AuthController;
+ import ch.heigvd.users.User;
+ import ch.heigvd.users.UsersController;
+ import io.javalin.Javalin;
++import java.time.LocalDateTime;
+ import java.util.Map;
+ import java.util.concurrent.ConcurrentHashMap;
+
+ public class Main {
+   public static final int PORT = 8080;
+
+   public static void main(String[] args) {
+-    Javalin app = Javalin.create();
++    Javalin app =
++        Javalin.create(
++            // Add custom configuration to Javalin
++            config -> {
++              // This will allow us to parse LocalDateTime
++              config.validation.register(LocalDateTime.class, LocalDateTime::parse);
++            });
+
+     // This will serve as our database
+     Map<Integer, User> users = new ConcurrentHashMap<>();
+
++    // This will serve as our cache
++    //
++    // The key is to identify the user(s)
++    // The value is the last modification time of the user(s)
++    ConcurrentHashMap<Integer, LocalDateTime> usersCache = new ConcurrentHashMap<>();
++
+     // Controllers
+-    AuthController authController = new AuthController(users);
+-    UsersController usersController = new UsersController(users);
++    AuthController authController = new AuthController(users, usersCache);
++    UsersController usersController = new UsersController(users, usersCache);
+
+     // Auth routes
+     app.post("/login", authController::login);
+     app.post("/logout", authController::logout);
+     app.get("/profile", authController::profile);
+
+     // Users routes
+     app.post("/users", usersController::create);
+     app.get("/users", usersController::getMany);
+     app.get("/users/{id}", usersController::getOne);
+     app.put("/users/{id}", usersController::update);
+     app.delete("/users/{id}", usersController::delete);
+
+     app.start(PORT);
+   }
+ }
 ```
 
 In this code snippet, we have added a `Map` to cache results to your
@@ -347,7 +404,93 @@ Update the `AuthController.java` to use the `Map` to cache results to your
 application:
 
 ```diff
-TODO
+diff --git a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/auth/AuthController.java b/./src/main/java/ch/heigvd/auth/AuthController.java
+index 881d962..ebaff38 100644
+--- a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/auth/AuthController.java
++++ b/./src/main/java/ch/heigvd/auth/AuthController.java
+@@ -1,55 +1,81 @@
+ package ch.heigvd.auth;
+
+ import ch.heigvd.users.User;
+ import io.javalin.http.*;
++import java.time.LocalDateTime;
+ import java.util.Map;
+
+ public class AuthController {
+   private final Map<Integer, User> users;
+
+-  public AuthController(Map<Integer, User> users) {
++  private final Map<Integer, LocalDateTime> usersCache;
++
++  public AuthController(Map<Integer, User> users, Map<Integer, LocalDateTime> usersCache) {
+     this.users = users;
++    this.usersCache = usersCache;
+   }
+
+   public void login(Context ctx) {
+     User loginUser =
+         ctx.bodyValidator(User.class)
+             .check(obj -> obj.email() != null, "Missing email")
+             .check(obj -> obj.password() != null, "Missing password")
+             .get();
+
+     for (User user : users.values()) {
+       if (user.email().equalsIgnoreCase(loginUser.email())
+           && user.password().equals(loginUser.password())) {
+         ctx.cookie("user", String.valueOf(user.id()));
+         ctx.status(HttpStatus.NO_CONTENT);
+         return;
+       }
+     }
+
+     throw new UnauthorizedResponse();
+   }
+
+   public void logout(Context ctx) {
+     ctx.removeCookie("user");
+     ctx.status(HttpStatus.NO_CONTENT);
+   }
+
+   public void profile(Context ctx) {
+     String userIdCookie = ctx.cookie("user");
+
+     if (userIdCookie == null) {
+       throw new UnauthorizedResponse();
+     }
+
+     Integer userId = Integer.parseInt(userIdCookie);
+
++    // Get the last known modification date of the user
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if the user has been modified since the last known modification date
++    if (lastKnownModification != null && usersCache.get(userId).equals(lastKnownModification)) {
++      throw new NotModifiedResponse();
++    }
++
+     User user = users.get(userId);
+
+     if (user == null) {
+       throw new UnauthorizedResponse();
+     }
+
++    LocalDateTime now;
++    if (usersCache.containsKey(user.id())) {
++      // If it is already in the cache, get the last modification date
++      now = usersCache.get(user.id());
++    } else {
++      // Otherwise, set to the current date
++      now = LocalDateTime.now();
++      usersCache.put(user.id(), now);
++    }
++
++    // Add the last modification date to the response
++    ctx.header("Last-Modified", String.valueOf(now));
++
+     ctx.json(user);
+   }
+ }
 ```
 
 In this code snippets, we have updated the `AuthController.java` to:
@@ -364,7 +507,225 @@ Update the `UsersController.java` to use the `Map` to cache the results to your
 application:
 
 ```diff
-TODO
+diff --git a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/users/UsersController.java b/./src/main/java/ch/heigvd/users/UsersController.java
+index 659e90a..c161f32 100644
+--- a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/users/UsersController.java
++++ b/./src/main/java/ch/heigvd/users/UsersController.java
+@@ -1,116 +1,213 @@
+ package ch.heigvd.users;
+
+ import io.javalin.http.*;
++import java.time.LocalDateTime;
+ import java.util.ArrayList;
+ import java.util.List;
+ import java.util.Map;
+ import java.util.concurrent.atomic.AtomicInteger;
+
+ public class UsersController {
+   private final Map<Integer, User> users;
++
+   private final AtomicInteger uniqueId = new AtomicInteger(1);
+
+-  public UsersController(Map<Integer, User> users) {
++  private final Map<Integer, LocalDateTime> usersCache;
++
++  // This is a magic number used to store the users' list last modification date
++  // As the ID for users starts from 1, it is safe to reserve the value -1 for all users
++  private final Integer RESERVED_ID_TO_IDENTIFY_ALL_USERS = -1;
++
++  public UsersController(Map<Integer, User> users, Map<Integer, LocalDateTime> usersCache) {
+     this.users = users;
++    this.usersCache = usersCache;
+   }
+
+   public void create(Context ctx) {
+     User newUser =
+         ctx.bodyValidator(User.class)
+             .check(obj -> obj.firstName() != null, "Missing first name")
+             .check(obj -> obj.lastName() != null, "Missing last name")
+             .check(obj -> obj.email() != null, "Missing email")
+             .check(obj -> obj.password() != null, "Missing password")
+             .get();
+
+     for (User user : users.values()) {
+       if (newUser.email().equalsIgnoreCase(user.email())) {
+         throw new ConflictResponse();
+       }
+     }
+
+     newUser =
+         new User(
+             uniqueId.getAndIncrement(),
+             newUser.firstName(),
+             newUser.lastName(),
+             newUser.email(),
+             newUser.password());
+
+     users.put(newUser.id(), newUser);
+
++    // Store the last modification date of the user
++    LocalDateTime now = LocalDateTime.now();
++    usersCache.put(newUser.id(), now);
++
++    // Invalidate the cache for all users
++    usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
++
+     ctx.status(HttpStatus.CREATED);
++
++    // Add the last modification date to the response
++    ctx.header("Last-Modified", String.valueOf(now));
++
+     ctx.json(newUser);
+   }
+
+   public void getOne(Context ctx) {
+     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
+
++    // Get the last known modification date of the user
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if the user has been modified since the last known modification date
++    if (lastKnownModification != null && usersCache.get(id).equals(lastKnownModification)) {
++      throw new NotModifiedResponse();
++    }
++
+     User user = users.get(id);
+
+     if (user == null) {
+       throw new NotFoundResponse();
+     }
+
++    LocalDateTime now;
++    if (usersCache.containsKey(user.id())) {
++      // If it is already in the cache, get the last modification date
++      now = usersCache.get(user.id());
++    } else {
++      // Otherwise, set to the current date
++      now = LocalDateTime.now();
++      usersCache.put(user.id(), now);
++    }
++
++    // Add the last modification date to the response
++    ctx.header("Last-Modified", String.valueOf(now));
+     ctx.json(user);
+   }
+
+   public void getMany(Context ctx) {
++    // Get the last known modification date of all users
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Modified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if all users have been modified since the last known modification date
++    if (lastKnownModification != null
++        && usersCache.containsKey(RESERVED_ID_TO_IDENTIFY_ALL_USERS)
++        && usersCache.get(RESERVED_ID_TO_IDENTIFY_ALL_USERS).equals(lastKnownModification)) {
++      throw new NotModifiedResponse();
++    }
++
+     String firstName = ctx.queryParam("firstName");
+     String lastName = ctx.queryParam("lastName");
+
+     List<User> users = new ArrayList<>();
+
+     for (User user : this.users.values()) {
+       if (firstName != null && !user.firstName().equalsIgnoreCase(firstName)) {
+         continue;
+       }
+
+       if (lastName != null && !user.lastName().equalsIgnoreCase(lastName)) {
+         continue;
+       }
+
+       users.add(user);
+     }
+
++    LocalDateTime now;
++    if (usersCache.containsKey(RESERVED_ID_TO_IDENTIFY_ALL_USERS)) {
++      // If it is already in the cache, get the last modification date
++      now = usersCache.get(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
++    } else {
++      // Otherwise, set to the current date
++      now = LocalDateTime.now();
++      usersCache.put(RESERVED_ID_TO_IDENTIFY_ALL_USERS, now);
++    }
++
++    // Add the last modification date to the response
++    ctx.header("Last-Modified", String.valueOf(now));
+     ctx.json(users);
+   }
+
+   public void update(Context ctx) {
+     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
+
++    // Get the last known modification date of the user
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Unmodified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if the user has been modified since the last known modification date
++    if (lastKnownModification != null && !usersCache.get(id).equals(lastKnownModification)) {
++      throw new PreconditionFailedResponse();
++    }
++
+     if (!users.containsKey(id)) {
+       throw new NotFoundResponse();
+     }
+
+     User updateUser =
+         ctx.bodyValidator(User.class)
+             .check(obj -> obj.firstName() != null, "Missing first name")
+             .check(obj -> obj.lastName() != null, "Missing last name")
+             .check(obj -> obj.email() != null, "Missing email")
+             .check(obj -> obj.password() != null, "Missing password")
+             .get();
+
+     for (User user : users.values()) {
+       if (updateUser.email().equalsIgnoreCase(user.email())) {
+         throw new ConflictResponse();
+       }
+     }
+
+     users.put(id, updateUser);
+
++    // Store the last modification date of the user
++    LocalDateTime now = LocalDateTime.now();
++    usersCache.put(updateUser.id(), now);
++
++    // Invalidate the cache for all users
++    usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
++
++    // Add the last modification date to the response
++    ctx.header("Last-Modified", String.valueOf(now));
+     ctx.json(updateUser);
+   }
+
+   public void delete(Context ctx) {
+     Integer id = ctx.pathParamAsClass("id", Integer.class).get();
+
++    // Get the last known modification date of the user
++    LocalDateTime lastKnownModification =
++        ctx.headerAsClass("If-Unmodified-Since", LocalDateTime.class).getOrDefault(null);
++
++    // Check if the user has been modified since the last known modification date
++    if (lastKnownModification != null && !usersCache.get(id).equals(lastKnownModification)) {
++      throw new PreconditionFailedResponse();
++    }
++
+     if (!users.containsKey(id)) {
+       throw new NotFoundResponse();
+     }
+
+     users.remove(id);
+
++    // Invalidate the cache for the user
++    usersCache.remove(id);
++
++    // Invalidate the cache for all users
++    usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
++
+     ctx.status(HttpStatus.NO_CONTENT);
+   }
+ }
 ```
 
 In this code snippets, we have updated the `UsersController.java` to:
