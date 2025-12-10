@@ -1792,7 +1792,7 @@ The REST pattern is based on the six following principles:
 5. Uniform interface:
    - Use URIs/URLs to identify resources.
    - Server responses use a standard format that includes all information
-     required by the client to process the data (modify or delete the resource’s
+     required by the client to process the data (modify or delete the resource's
      state).
    - Server responses include links that allow the client to discover how to
      interact with a resource.

@@ -1,4 +1,4 @@
-# Java HTTP and curl
+# HTTP and curl
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
