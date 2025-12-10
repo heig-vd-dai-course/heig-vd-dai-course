@@ -326,16 +326,18 @@ More details for this section in the [course material][course].
 
 ### Constraints (1/3)
 
+- **A demonstration of your web application is expected during the
+  presentation.**
 - The whole team must contribute to the project and all members must be able to
   explain it in details if asked.
 - A GitHub Discussion must be opened during the first week of the project to
   explain the idea of the project so the teachers can validate the idea.
-- The GitHub Discussion must be updated with the link to the repository and a
-  related commit hash before the deadline - every 24 hours after the deadline
-  will result in a -1 point penalty on the final grade.
 
 ### Constraints (2/3)
 
+- The GitHub Discussion must be updated with the link to the repository and a
+  related commit hash before the deadline - every 24 hours after the deadline
+  will result in a -1 point penalty on the final grade.
 - The web application can only use the HTTP/HTTPS protocols.
 - The web application must use the Javalin dependency to create the API.
 - The application must be slightly more complex and slightly different than the
