@@ -462,7 +462,7 @@ The URL is composed of the following parts:
 
 - The protocol (`http` or `https`).
 - The host (e.g. `gaps.heig-vd.ch`).
-- The port number (optional, e.g. `:80` for HTTP or `:443` for HTTPS`).
+- The port number (optional, e.g. `:80` for HTTP or `:443` for HTTPS).
 - The path to the resource (e.g. `/consultation/fiches/uv/uv.php`).
 - The query parameters (optional, e.g. `?id=6573`).
 

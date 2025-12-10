@@ -400,8 +400,7 @@ repository!
   related commit hash before the deadline - every 24 hours after the deadline
   will result in a -1 point penalty on the final grade.
 - The web application can only use the HTTP/HTTPS protocols.
-- The web application must use the Javalin dependency to create the web
-  application.
+- The web application must use the Javalin dependency to create the API.
 - The application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word _slightly_, no
   need to shoot for the moon).
