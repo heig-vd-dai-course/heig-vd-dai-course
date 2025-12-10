@@ -183,7 +183,7 @@ etc.)!
 
 ### Technologies
 
-You will learn the following technologies during this course:
+You will learn the following technologies during this teaching unit:
 
 - Git and GitHub.
 - Markdown.
@@ -196,16 +196,16 @@ You will learn the following technologies during this course:
 
 ## Why do you have this course
 
-This course defines the basics of network communication and how all these
-communications are programmed.
+This teaching course defines the basics of network communication and how all
+these communications are programmed.
 
-At the end of the course, you will know how to define, program and deploy
+At the end of the teaching unit, you will know how to define, program and deploy
 network applications, how to interact with them, and the different elements to
 pay attention to make robust applications.
 
 Whether you are in software, security, data science, embedded or network, you
-will have to deal with network applications (APIs, devices, etc.). This course
-will give you a solid grounding in this world.
+will have to deal with network applications (APIs, devices, etc.). This teaching
+unit will give you a solid grounding in this world.
 
 ## Program (1/2)
 
