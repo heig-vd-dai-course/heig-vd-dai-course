@@ -7,14 +7,14 @@ theme: custom-marp-theme
 size: 16:9
 paginate: true
 author: L. Delafontaine and H. Louis, with the help of GitHub Copilot
-title: HEIG-VD DAI - Evaluation 1
-description: Evaluation 1 for the DAI course at HEIG-VD, Switzerland
-header: '[**Evaluation 1**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10.01-evaluation-1)'
+title: HEIG-VD DAI - Evaluation 2
+description: Evaluation 2 for the DAI course at HEIG-VD, Switzerland
+header: '[**Evaluation 2**](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15.01-evaluation-2)'
 footer: '[**HEIG-VD**](https://heig-vd.ch) - [DAI 2025-2026](https://github.com/heig-vd-dai-course/heig-vd-dai-course) - [CC BY-SA 4.0](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md)'
 headingDivider: 6
 -->
 
-# Evaluation 1
+# Evaluation 2
 
 <!--
 _class: lead
@@ -51,37 +51,21 @@ can answer them in French or English.
 
 The evaluation dates will be as follows:
 
-- DAI-TIC-C (Wednesday mornings): **26.11.2025**
-- DAI-TIC-B (Wednesday afternoons): **26.11.2025**
-- DAI-TIC-A (Thursdays): **27.11.2025**
+- DAI-TIC-C (Wednesday mornings): **14.01.2026**
+- DAI-TIC-B (Wednesday afternoons): **14.01.2026**
+- DAI-TIC-A (Thursdays): **15.01.2026**
 
 ## Courses evaluated
 
 The following courses will be evaluated:
 
-<div class="two-columns">
-<div>
-
-**Part 1 - Input/output processing**
-
-- [Git, GitHub and Markdown](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.03-git-github-and-markdown)
-- [Java, IntelliJ IDEA and Maven](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/01.04-java-intellij-idea-and-maven)
-- [Java IOs](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/02.01-java-ios)
 - [Docker and Docker Compose](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/04.01-docker-and-docker-compose)
-- [Practical work 1](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/02.02-practical-work-1-(1-of-5)>)
+- [SSH and SCP](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/11.03-ssh-and-scp)
+- [HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/12.01-http-and-curl)
+- [Web infrastructures](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/13.01-web-infrastructures)
+- [Caching and performance](https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/14.01-caching-and-performance)
 
-</div>
-<div>
-
-**Part 2 - Network programming with TCP and UDP**
-
-- [SMTP and ncat](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/05.03-smtp-and-ncat)
-- [Define an application protocol](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/06.01-define-an-application-protocol)
-- [Java TCP and UDP programming](<https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/07.01-java-tcp-and-udp-programming-(1-of-2)>)
-- [Java network concurrency](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/09.01-java-network-concurrency)
-
-</div>
-<div>
+![bg right:40%][illustration]
 
 ## Evaluation content
 
@@ -125,7 +109,7 @@ Some typical questions are at the end of each course you studied. Questions
 about the practical contents of each course can also be asked.
 
 All previous evaluations are available in the
-[`10.01-evaluation-1/02-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10.01-evaluation-1/02-archives)
+[`15.01-evaluation-2/02-archives`](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15.01-evaluation-2/02-archives)
 directory of the GitHub repository.
 
 Check the README carefully for more details on these archives.
@@ -144,7 +128,7 @@ Do you have any questions?
   [Unsplash](https://unsplash.com/photos/PC91Jm1DlWA)
 
 [course]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/10.01-evaluation-1
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/15.01-evaluation-2
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
 [illustration]: ./images/main-illustration.jpg
