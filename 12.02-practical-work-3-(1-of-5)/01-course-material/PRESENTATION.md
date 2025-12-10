@@ -98,13 +98,13 @@ docker compose pull
 On the server - Start Traefik (the reverse proxy):
 
 ```sh
-docker compose -f traefik/docker-compose.yaml up -d
+docker compose -f traefik/compose.yaml up -d
 ```
 
 On the server - Start the CRUD API:
 
 ```sh
-docker compose -f api/docker-compose.yaml up -d
+docker compose -f api/compose.yaml up -d
 ```
 
 ---
@@ -337,7 +337,7 @@ More details for this section in the [course material][course].
 ### Constraints (2/3)
 
 - The web application can only use the HTTP/HTTPS protocols.
-- The web application must use the Javalin dependency for the web application.
+- The web application must use the Javalin dependency to create the API.
 - The application must be slightly more complex and slightly different than the
   examples presented during the course (we emphasize the word _slightly_, no
   need to shoot for the moon).
