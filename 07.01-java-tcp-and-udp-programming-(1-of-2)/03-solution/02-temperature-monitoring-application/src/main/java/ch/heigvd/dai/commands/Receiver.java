@@ -3,9 +3,9 @@ package ch.heigvd.dai.commands;
 import java.io.IOException;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
-import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import picocli.CommandLine;
@@ -21,7 +21,7 @@ public class Receiver implements Callable<Integer> {
   }
 
   // The rooms with their temperature
-  protected Map<String, Double> roomsTemperature = new ConcurrentHashMap<>();
+  protected ConcurrentMap<String, Double> roomsTemperature = new ConcurrentHashMap<>();
 
   @CommandLine.Option(
       names = {"-M", "--multicast-address"},
