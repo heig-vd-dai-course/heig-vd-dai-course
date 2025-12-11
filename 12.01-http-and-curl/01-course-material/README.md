@@ -1904,14 +1904,15 @@ package ch.heigvd.users;
 import io.javalin.http.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UsersController {
-  private final Map<Integer, User> users;
+  private final ConcurrentMap<Integer, User> users;
+
   private final AtomicInteger uniqueId = new AtomicInteger(1);
 
-  public UsersController(Map<Integer, User> users) {
+  public UsersController(ConcurrentMap<Integer, User> users) {
     this.users = users;
   }
 
@@ -2051,12 +2052,12 @@ package ch.heigvd.auth;
 
 import ch.heigvd.users.User;
 import io.javalin.http.*;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 
 public class AuthController {
-  private final Map<Integer, User> users;
+  private final ConcurrentMap<Integer, User> users;
 
-  public AuthController(Map<Integer, User> users) {
+  public AuthController(ConcurrentMap<Integer, User> users) {
     this.users = users;
   }
 
@@ -2127,7 +2128,7 @@ import ch.heigvd.auth.AuthController;
 import ch.heigvd.users.User;
 import ch.heigvd.users.UsersController;
 import io.javalin.Javalin;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Main {
@@ -2137,7 +2138,7 @@ public class Main {
     Javalin app = Javalin.create();
 
     // This will serve as our database
-    Map<Integer, User> users = new ConcurrentHashMap<>();
+    ConcurrentMap<Integer, User> users = new ConcurrentHashMap<>();
 
     // Controllers
     AuthController authController = new AuthController(users);

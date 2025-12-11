@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -18,8 +18,7 @@ public class TcpServerConcurrentDataStructuresExample {
   private static final AtomicInteger totalNumberOfClients = new AtomicInteger(0);
 
   // Clients last connection time
-  private static final Map<String, Date> clientConnections = new ConcurrentHashMap<>();
-
+  private static final ConcurrentMap<String, Date> clientConnections = new ConcurrentHashMap<>();
   public static void main(String[] args) {
     try (ServerSocket serverSocket = new ServerSocket(PORT);
         ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor(); ) {
