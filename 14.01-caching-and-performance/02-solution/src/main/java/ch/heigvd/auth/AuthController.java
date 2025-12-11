@@ -3,14 +3,14 @@ package ch.heigvd.auth;
 import ch.heigvd.users.User;
 import io.javalin.http.*;
 import java.time.LocalDateTime;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 
 public class AuthController {
-  private final Map<Integer, User> users;
+  private final ConcurrentMap<Integer, User> users;
 
-  private final Map<Integer, LocalDateTime> usersCache;
+  private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 
-  public AuthController(Map<Integer, User> users, Map<Integer, LocalDateTime> usersCache) {
+  public AuthController(ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
     this.users = users;
     this.usersCache = usersCache;
   }
