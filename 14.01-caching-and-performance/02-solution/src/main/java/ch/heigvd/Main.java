@@ -5,7 +5,7 @@ import ch.heigvd.users.User;
 import ch.heigvd.users.UsersController;
 import io.javalin.Javalin;
 import java.time.LocalDateTime;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Main {
@@ -21,7 +21,7 @@ public class Main {
             });
 
     // This will serve as our database
-    Map<Integer, User> users = new ConcurrentHashMap<>();
+    ConcurrentMap<Integer, User> users = new ConcurrentHashMap<>();
 
     // This will serve as our cache
     //

@@ -340,7 +340,7 @@ index bb52fdb..e38ed57 100644
  import ch.heigvd.users.UsersController;
  import io.javalin.Javalin;
 +import java.time.LocalDateTime;
- import java.util.Map;
+ import java.util.concurrent.ConcurrentMap;
  import java.util.concurrent.ConcurrentHashMap;
 
  public class Main {
@@ -357,7 +357,7 @@ index bb52fdb..e38ed57 100644
 +            });
 
      // This will serve as our database
-     Map<Integer, User> users = new ConcurrentHashMap<>();
+     ConcurrentMap<Integer, User> users = new ConcurrentHashMap<>();
 
 +    // This will serve as our cache
 +    //
@@ -414,15 +414,15 @@ index 881d962..ebaff38 100644
  import ch.heigvd.users.User;
  import io.javalin.http.*;
 +import java.time.LocalDateTime;
- import java.util.Map;
+ import java.util.concurrent.ConcurrentMap;
 
  public class AuthController {
-   private final Map<Integer, User> users;
+   private final ConcurrentMap<Integer, User> users;
 
 -  public AuthController(Map<Integer, User> users) {
-+  private final Map<Integer, LocalDateTime> usersCache;
++  private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 +
-+  public AuthController(Map<Integer, User> users, Map<Integer, LocalDateTime> usersCache) {
++  public AuthController(ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
      this.users = users;
 +    this.usersCache = usersCache;
    }
@@ -518,12 +518,12 @@ index 659e90a..c161f32 100644
 +import java.time.LocalDateTime;
  import java.util.ArrayList;
  import java.util.List;
- import java.util.Map;
+ import java.util.concurrent.ConcurrentMap;
  import java.util.concurrent.atomic.AtomicInteger;
 
  public class UsersController {
-   private final Map<Integer, User> users;
-+
+   private final ConcurrentMap<Integer, User> users;
+
    private final AtomicInteger uniqueId = new AtomicInteger(1);
 
 -  public UsersController(Map<Integer, User> users) {

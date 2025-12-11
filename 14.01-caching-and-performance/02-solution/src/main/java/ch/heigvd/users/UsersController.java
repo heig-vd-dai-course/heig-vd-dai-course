@@ -4,21 +4,20 @@ import io.javalin.http.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UsersController {
-  private final Map<Integer, User> users;
-
+  private final ConcurrentMap<Integer, User> users;
   private final AtomicInteger uniqueId = new AtomicInteger(1);
 
-  private final Map<Integer, LocalDateTime> usersCache;
+  private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 
   // This is a magic number used to store the users' list last modification date
   // As the ID for users starts from 1, it is safe to reserve the value -1 for all users
   private final Integer RESERVED_ID_TO_IDENTIFY_ALL_USERS = -1;
 
-  public UsersController(Map<Integer, User> users, Map<Integer, LocalDateTime> usersCache) {
+  public UsersController(ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
     this.users = users;
     this.usersCache = usersCache;
   }
