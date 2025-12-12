@@ -1,0 +1,6 @@
+## Java
+*.class
+
+# Binary files
+*.png
+*.png.bak
