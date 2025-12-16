@@ -21,6 +21,7 @@ services:
       ## Docker
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
+      - --providers.docker.network=traefik_network
       ## Entrypoints
       # Define an entrypoint for HTTP on port 80
       - --entrypoints.http.address=:80

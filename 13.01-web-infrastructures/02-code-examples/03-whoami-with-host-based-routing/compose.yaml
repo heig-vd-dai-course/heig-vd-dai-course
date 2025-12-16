@@ -5,7 +5,7 @@ networks:
 
 services:
   whoami-with-host-based-routing:
-    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
     networks:
       - traefik_network
     # By using the `expose` key, we expose the port 80 of the container to the
@@ -16,7 +16,6 @@ services:
     labels:
       ## Traefik
       - traefik.enable=true
-      - traefik.docker.network=traefik_network
       ## Routers
       # ATTENTION: each container must have different routers' names.
       # In this case, the routers' names for this service is `whoami-with-host-based-routing`.

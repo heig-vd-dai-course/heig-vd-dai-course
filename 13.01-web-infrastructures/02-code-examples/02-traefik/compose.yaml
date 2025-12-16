@@ -15,10 +15,10 @@ services:
       ## Docker
       # Use Docker as a provider
       - --providers.docker=true
-      # Help Traefik to find the right network
-      - --providers.docker.network=traefik_network
       # Do not expose containers by default
       - --providers.docker.exposedbydefault=false
+      # Help Traefik to find the right network
+      - --providers.docker.network=traefik_network
       ## Entrypoints
       # Define an entrypoint for HTTP on port 80
       - --entrypoints.http.address=:80
