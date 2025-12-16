@@ -5,6 +5,7 @@ networks:
 services:
   whoami-with-host-based-and-path-based-routing:
     image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
+    restart: unless-stopped
     networks:
       - traefik_network
     expose:

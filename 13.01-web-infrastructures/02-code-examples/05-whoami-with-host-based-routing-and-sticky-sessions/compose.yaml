@@ -5,6 +5,7 @@ networks:
 services:
   whoami-without-sticky-sessions:
     image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
+    restart: unless-stopped
     networks:
       - traefik_network
     expose:
@@ -18,6 +19,7 @@ services:
 
   whoami-with-sticky-sessions:
     image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
+    restart: unless-stopped
     networks:
       - traefik_network
     expose:

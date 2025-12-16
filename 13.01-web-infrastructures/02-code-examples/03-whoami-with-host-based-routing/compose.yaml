@@ -6,6 +6,7 @@ networks:
 services:
   whoami-with-host-based-routing:
     image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
+    restart: unless-stopped
     networks:
       - traefik_network
     # By using the `expose` key, we expose the port 80 of the container to the
