@@ -166,16 +166,15 @@ purposes in the future as well.
 
 _Alternatives are here for general knowledge. No need to learn them._
 
-- [No-IP](https://www.noip.com/)
-- [FreeDNS](https://freedns.afraid.org/)
-- [deSEC](https://desec.io/)
-
 > [!NOTE]
 >
 > Even though most of these providers seem fishy and old-fashioned, they are
 > reliable and well-known in the free domain name community. You can use any of
-> them to obtain a free domain name that you can use for the purpose of this
-> teaching unit.
+> them to obtain a free domain name.
+
+- [No-IP](https://www.noip.com/)
+- [FreeDNS](https://freedns.afraid.org/)
+- [deSEC](https://desec.io/)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
 

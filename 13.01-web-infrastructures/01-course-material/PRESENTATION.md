@@ -277,7 +277,7 @@ Out of scope for this course, but here are some tools you can use:
 More details for this section in the [course material][course]. You can find
 other resources and alternatives as well.
 
-### Load balancing (1/2)
+### Load balancing (1/3)
 
 Process of **distributing the load** between multiple servers.
 
@@ -290,7 +290,7 @@ Multiple strategies exists.
 
 ![bg right:40%](https://images.unsplash.com/photo-1600607384626-5c6fdea6e54c?fit=crop&h=720)
 
-### Load balancing (2/2)
+### Load balancing (2/3)
 
 1. **Round-robin**: each server in the pool in turn (covered in this teaching
    unit).
