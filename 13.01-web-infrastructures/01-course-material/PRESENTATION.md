@@ -115,7 +115,7 @@ Software and hardware components that are necessary to support:
 
 - the **development**,
 - the **deployment**,
-- and the **management**
+- and the **management**,
 
 of web applications.
 
@@ -227,9 +227,9 @@ other resources and alternatives as well.
 
 Adding more resources to a server:
 
-- More/better RAM
-- More/better CPU
-- More/better storage
+- More/better RAM.
+- More/better CPU.
+- More/better storage.
 - etc.
 
 Limited by the hardware: at a certain point, you cannot add more/better
@@ -243,8 +243,8 @@ Add more servers to a system and distribute the load between them.
 
 Limited by the software - your software must be able to run on multiple servers:
 
-- Backends/APIs accessing the same database(s)
-- Frontends accessing backends/API
+- Backends/APIs accessing the same database(s).
+- Frontends accessing backends/API.
 
 ![bg right:40%](https://images.unsplash.com/photo-1491723203629-ac87f78dc19b?fit=crop&h=720)
 
@@ -279,7 +279,7 @@ other resources and alternatives as well.
 
 ### Load balancing (1/3)
 
-Process of **distributing the load** between multiple servers.
+Process of **distributing the load** between multiple servers (scale out).
 
 This can work thanks to the **stateless** nature of HTTP and the `Host` header.
 
