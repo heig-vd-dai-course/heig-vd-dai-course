@@ -9,7 +9,7 @@ similar.
 Therefore, this example is **optional** to follow. It is here to show you how to
 use Traefik in a more advanced way and for your own culture.
 
-**I have not tested this configuration and documentation in depth.** It works
+**I have not tested this configuration and documentation in depth.**. It works
 for my personal use case, but it might not be suitable for production
 environments. Use it at your own risk.
 
