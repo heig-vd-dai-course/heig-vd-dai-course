@@ -3,14 +3,15 @@ package ch.heigvd.users;
 import io.javalin.http.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UsersController {
-  private final Map<Integer, User> users;
+  private final ConcurrentMap<Integer, User> users;
+
   private final AtomicInteger uniqueId = new AtomicInteger(1);
 
-  public UsersController(Map<Integer, User> users) {
+  public UsersController(ConcurrentMap<Integer, User> users) {
     this.users = users;
   }
 
