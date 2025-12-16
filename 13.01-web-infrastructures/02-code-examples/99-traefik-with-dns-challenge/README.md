@@ -9,6 +9,10 @@ similar.
 Therefore, this example is **optional** to follow. It is here to show you how to
 use Traefik in a more advanced way and for your own culture.
 
+**I have not tested this configuration and documentation in depth.**. It works
+for my personal use case, but it might not be suitable for production
+environments. Use it at your own risk.
+
 For more information about my modest setup, please refer to the
 [Personal notes](#personal-notes) section.
 
@@ -19,9 +23,9 @@ example. It adds the following features:
 
 - Make use of the
   [DNS challenge](https://doc.traefik.io/traefik/https/acme/#dnschallenge) to
-  generate HTTPS certificates, even if Traefik is not publicly accessible
-- Generate a common HTTPS certificate for all the services (wildcard
-  certificate)
+  generate HTTPS certificates, even if Traefik is not publicly accessible.
+- Make use of a Basic Authentication middleware to protect the Traefik dashboard
+  with a username and password.
 
 ## Prerequisites
 
@@ -37,34 +41,26 @@ You can find a list of supported DNS providers at
 For this example, we will use [Duck DNS](https://duckdns.org/) as our DNS
 provider.
 
-### Create the API key(s) for the DNS provider
+### Create/get the API key(s) for the DNS provider
 
-You must create the API key(s) for the DNS provider. For deSEC, you can follow
-the instructions at <https://desec.io/api/v1/docs/>.
+You must create/get the API key(s) for the DNS provider. For DuckDNS, the API
+token is displayed on your account page.
 
-### Update the `.env` and `dns-challenge.env` files
+### Create the token file
 
-Update the [`.env`](.env) file with your own values:
+Create a file named `duckdns_access_token.txt` in the `secrets` directory with
+the API token of your DuckDNS account.
 
-- `TRAEFIK_ACME_EMAIL`: your email address
-- `TRAEFIK_ACME_DNS_PROVIDER`: the name of your DNS provider - check the list of
-  supported DNS providers at
-  <https://doc.traefik.io/traefik/https/acme/#providers>
-- `TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME`: the root fully qualified domain
-  name to access all your services - for example, if you want to access your
-  services with the `https://whoami.my-domain-name.duckdns.org` URL, you must
-  set `TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME=my-domain-name.duckdns.org`
-- `TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME`: the fully qualified domain name to
-  access Traefik - by default, Traefik will be accessible at
-  `https://traefik.TRAEFIK_ROOT_FULLY_QUALIFIED_DOMAIN_NAME`
+```sh
+# Create the secrets directory
+mkdir -p secrets
 
-Update the [`dns-challenge.env`](./dns-challenge.env) file with the values
-needed by your DNS provider based on the
-[list of supported DNS providers](https://doc.traefik.io/traefik/https/acme/#providers).
+# Create the auth_users.txt file
+echo "YOUR_DUCKDNS_API_TOKEN" > secrets/duckdns_access_token.txt
+```
 
-For Duck DNS, you must set the following environment variables:
-
-- `DUCKDNS_TOKEN`: the token to access the Duck DNS API
+The `duckdns_access_token.txt` file must be created before starting the
+containers.
 
 ### Create the users file
 
@@ -72,35 +68,35 @@ The Traefik dashboard is protected with a
 [`BasicAuth`](https://doc.traefik.io/traefik/middlewares/http/basicauth/)
 middleware (more information about basic authentication on Wikipedia at
 <https://en.wikipedia.org/wiki/Basic_access_authentication>). You must create a
-`auth-users.txt` file with the username and password of the users allowed to
+`auth_users.txt` file with the username and password of the users allowed to
 access the Traefik dashboard.
 
 Docker Compose allows the use of
 [Docker Secrets](https://docs.docker.com/compose/use-secrets/) to pass sensitive
 information to a service.
 
-The [`docker-compose.yaml`](./docker-compose.yaml) file is already configured to
-use the `secrets/auth-users.txt` file as a Docker Secret. You must create the
-`auth-users.txt` file in the `secrets` directory.
+The [`compose.yaml`](./compose.yaml) file is already configured to use the
+`secrets/auth_users.txt` file as a Docker Secret. You must create the
+`auth_users.txt` file in the `secrets` directory.
 
-To create the `auth-users.txt` file, you can use the
+To create the `auth_users.txt` file, you can use the
 [`htpasswd`](https://httpd.apache.org/docs/2.4/programs/htpasswd.html) command
 line tool. For example, to create a user named `admin` with the password
 `admin`, you can run the following command:
 
 ```sh
 # Create the secrets directory
-mkdir secrets
+mkdir -p secrets
 
-# Create the auth-users.txt file
-htpasswd -c secrets/auth-users.txt admin
+# Create the auth_users.txt file
+htpasswd -c secrets/auth_users.txt admin
 ```
 
 `htpasswd` will ask you to enter the password for the user. You can add more
-users to the `auth-users.txt` file by running the same command without the `-c`
+users to the `auth_users.txt` file by running the same command without the `-c`
 option.
 
-The `auth-users.txt` file must be created before starting the containers.
+The `auth_users.txt` file must be created before starting the containers.
 
 ## Run the example
 
@@ -118,7 +114,7 @@ service you defined in the `.env` file with the `https` protocol, for example
 `https://TRAEFIK_FULLY_QUALIFIED_DOMAIN_NAME`.
 
 A username and password prompt should appear thanks to the `BasicAuth`
-middleware. Enter the username and password you defined in the `auth-users.txt`
+middleware. Enter the username and password you defined in the `auth_users.txt`
 file.
 
 You should now be able to access the Traefik dashboard with a valid HTTPS
@@ -146,7 +142,7 @@ information.
 
 My personal homelab consists of a NAS running
 [Proxmox VE](https://www.proxmox.com/en/proxmox-ve) with a few
-[LXC](https://linuxcontainers.org/lxc/) containers running under Debian 12.
+[LXC](https://linuxcontainers.org/lxc/) containers running under Debian 13.
 
 I do not expose all my services publicly. To access my private services, I use
 [WireGuard](https://www.wireguard.com/) to connect to my home network.
@@ -163,11 +159,11 @@ Using Traefik, I can access all my services with a common fully qualified domain
 name.
 
 In my DNS server, I have some DNS entries that points to the IP address of my
-homelab (`*.lan.ld0.ch`).
+homelab (`*.ld0.ch`).
 
 This allows me to access all my services with a subdomain such as
-`traefik.lan.ld0.ch` for when I am connected to my home network or
-`whoami.ld0.ch` for the public services.
+`traefik.ld0.ch` for when I am connected to my home network or `whoami.ld0.ch`
+for the public services.
 
 All this setup works quite well for me, but I was interested in having HTTPS
 certificates for all my services, even locally. I wanted to keep things simple

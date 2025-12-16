@@ -4,7 +4,8 @@ networks:
 
 services:
   whoami-without-sticky-sessions:
-    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
+    restart: unless-stopped
     networks:
       - traefik_network
     expose:
@@ -12,13 +13,13 @@ services:
     labels:
       ## Traefik
       - traefik.enable=true
-      - traefik.docker.network=traefik_network
       ## Routers
       - traefik.http.routers.whoami-without-sticky-sessions.entrypoints=https
       - traefik.http.routers.whoami-without-sticky-sessions.rule=Host(`${WHOAMI_1_FULLY_QUALIFIED_DOMAIN_NAME}`)
 
   whoami-with-sticky-sessions:
-    image: traefik/whoami:${WHOAMI_IMAGE_VERSION:-latest}
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
+    restart: unless-stopped
     networks:
       - traefik_network
     expose:
@@ -26,7 +27,6 @@ services:
     labels:
       ## Traefik
       - traefik.enable=true
-      - traefik.docker.network=traefik_network
       ## Routers
       - traefik.http.routers.whoami-with-sticky-sessions.entrypoints=https
       - traefik.http.routers.whoami-with-sticky-sessions.rule=Host(`${WHOAMI_2_FULLY_QUALIFIED_DOMAIN_NAME}`)

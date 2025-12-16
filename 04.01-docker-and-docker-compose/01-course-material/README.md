@@ -172,8 +172,8 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 ### Check and run the code examples
 
-In this section, you will clone the code examples repository to check and run
-the code examples along with the theory.
+In this section, you will clone the code examples to check and run the code
+examples along with the theory.
 
 #### Clone or fetch latest changes from the main repository to get the code examples
 

@@ -217,10 +217,10 @@ Dates are taken from the
 | 🚨 [10](#-course-10) | 24.11. - 30.11.25         | Evaluation 1                             | Practical work 2 (5/6)                       | 🟢 Ready        |
 | 🚨 [11](#-course-11) | 01.12. - 07.12.25         | SSH and SCP                              | Practical work 2 (6/6) - Presentations       | 🟢 Ready        |
 |    [12](#-course-12) | 08.12. - 14.12.25         | HTTP and curl                            | Practical work 3 (1/5)                       | 🟢 Ready        |
-|    [13](#-course-13) | 15.12. - 21.12.25         | Web infrastructures                      | Practical work 3 (2/5)                       | 🟡 In progress  |
+|    [13](#-course-13) | 15.12. - 21.12.25         | Web infrastructures                      | Practical work 3 (2/5)                       | 🟢 Ready        |
 |                    - | 22.12. - 28.12.25         | _No course: holidays_                    | _No course: holidays_                        | -               |
 |                    - | 29.12. - 04.01.26         | _No course: holidays_                    | _No course: holidays_                        | -               |
-|    [14](#-course-14) | 05.01. - 11.01.26         | Caching and performance                  | Practical work 3 (3/5)                       | 🔴 To do        |
+|    [14](#-course-14) | 05.01. - 11.01.26         | Caching and performance                  | Practical work 3 (3/5)                       | 🟡 In progress  |
 | 🚨 [15](#-course-15) | 12.01. - 18.01.26         | Evaluation 2                             | Practical work 3 (4/5)                       | 🔴 To do        |
 | 🚨 [16](#-course-16) | 19.01. - 25.01.26         | Practical work 3 (5/5) - Presentations   | Semester review and exam preparation         | 🔴 To do        |
 |                    - | 26.01. - 01.02.26         | _Exam preparation_                       | _Exam preparation_                           | -               |

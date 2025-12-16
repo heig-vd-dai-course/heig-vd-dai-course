@@ -1,6 +1,14 @@
-@startuml
+@startuml reverse-proxy
+
 left to right direction
 skinparam packageStyle rectangle
+skinparam boxPadding 100
+skinparam maxMessageSize 300
+skinparam noteTextAlignment center
+skinparam sequenceMessageAlign direction
+skinparam wrapWidth 250
+
+!pragma teoz true
 
 title "Reverse proxy"
 
@@ -14,7 +22,7 @@ cloud "Internet" as internet {
     (clientN) -- internet
 }
 
-rectangle "Servers LAN" as serverLan {
+rectangle "Servers LAN" as serversLan {
 
     actor "Server 1" as server1
     actor "Server 2" as server2

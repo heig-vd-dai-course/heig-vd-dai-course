@@ -34,10 +34,10 @@ _paginate: false
 
 ## Objectives
 
-- Understand the concepts of web infrastructures
-- Understand how HTTP features can help to build web infrastructures
-- Understand the concepts of a reverse proxy
-- Understand the concepts of load balancing
+- Describe the concepts of web infrastructures.
+- Build reliable web infrastructure using HTTP features.
+- Use a reverse proxy to host multiple web applications on the same server.
+- Use load balancing to distribute traffic across multiple servers.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -53,13 +53,13 @@ other resources and alternatives as well.
 **Take 20 minutes to set up your environment using the [course
 material][course]**:
 
-- Clone the code examples repository on the virtual machine
+- Clone the main repository on the virtual machine.
 - Validate you have access to the virtual machine from the Internet on ports 80
-  and 443
-- Obtain a domain name
-- Add the required DNS records to the DNS zone
+  and 443.
+- Obtain a domain name.
+- Add the required DNS records to the DNS zone.
 
-This will allow to run the examples along the theory in this chapter.
+This will allow to run the examples along the theory in this course.
 
 ## Functional and non-functional requirements
 
@@ -100,7 +100,7 @@ Examples of **non-functional requirements**:
   service
 - **Maintainability**: How easily the system can be managed
 - **Security**: Confidentiality, authentication, authorization, etc.
-- [...and many, many more](https://en.wikipedia.org/wiki/Non-functional_requirement)
+- [...and many, many, MANY more](https://en.wikipedia.org/wiki/Non-functional_requirement)
 
 ## Web infrastructure definition
 
@@ -113,9 +113,9 @@ other resources and alternatives as well.
 
 Software and hardware components that are necessary to support:
 
-- the **development**
-- the **deployment**
-- the **management**
+- the **development**,
+- the **deployment**,
+- and the **management**
 
 of web applications.
 
@@ -130,12 +130,12 @@ other resources and alternatives as well.
 
 ### The `Host` header
 
-- Part of the HTTP request
-- Used to specify the domain name of the server
+- Part of the HTTP request.
+- Used to specify the domain name of the server.
 - Can be used to **host multiple websites on the same server** using a reverse
-  proxy
+  proxy.
 - The reverse proxy will **route the request to the correct website** based on
-  the `Host` header
+  the `Host` header.
 
 ![bg right:40%](https://images.unsplash.com/photo-1579356687668-cbdd5a551c18?fit=crop&h=720)
 
@@ -158,8 +158,8 @@ other resources and alternatives as well.
 
 - Proxies are components that **intercept** requests and responses and
   **filter/forward/change** them to another component.
-- **Forward proxy**: used by a client to access external servers
-- **Reverse proxy**: used by an external server to access internal servers
+- **Forward proxy**: used by a client to access external servers.
+- **Reverse proxy**: used by an external server to access internal servers.
 
 ![bg right:40%](https://images.unsplash.com/photo-1586592707296-5608a546e9aa?fit=crop&h=720)
 
@@ -167,30 +167,30 @@ other resources and alternatives as well.
 
 - Operates between clients and external systems
 - Can be used to:
-  - Restrict access to external systems
-  - Regulate traffic
-  - Mask the identity of the client
-  - Enforce security policies
+  - Restrict access to external systems.
+  - Regulate traffic.
+  - Mask the identity of the client.
+  - Enforce security policies.
 
 ![bg right w:80%](./images/forward-proxy.png)
 
 ### Reverse proxy
 
-- Operates between external systems and internal systems
+- Operates between external systems and internal systems.
 - Can be used to:
-  - Restrict access
-  - Load balance requests to internal systems
-  - Cache responses from internal systems
+  - Restrict access.
+  - Load balance requests to internal systems.
+  - Cache responses from internal systems.
 
 ![bg right w:80%](./images/reverse-proxy.png)
 
 ### Traefik as a reverse proxy
 
-- Works well with Docker Compose and Kubernetes
+- Works well with Docker Compose and Kubernetes.
 - Issue and renew [Let's Encrypt](https://letsencrypt.org/) (HTTPS) certificates
-  automatically
+  automatically.
 - Easy to use with
-  [Docker Compose labels](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels)
+  [Docker Compose labels](https://docs.docker.com/compose/compose-file/compose-file-v3/#labels).
 
 ![bg right h:60%](https://upload.wikimedia.org/wikipedia/commons/1/1b/Traefik.logo.png)
 
@@ -198,12 +198,10 @@ other resources and alternatives as well.
 
 **Take 20 minutes to experiment with Traefik using the [course material][course]
 and the
-[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**:
+[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13.01-web-infrastructures/02-code-exampless)**:
 
-- Run the _"whoami with host-based routing"_ example
-- Run the _"whoami with host-based and path-based routing"_ example
-- Run the _"whoami with host-based, path-based routing and `StripPrefix`
-  middleware"_ example
+- Run the _"whoami with host-based routing"_ example.
+- Run the _"whoami with host-based and path-based routing"_ example.
 
 You should have a better understanding of how Traefik works.
 
@@ -219,9 +217,9 @@ other resources and alternatives as well.
 - Capacity of a system to handle a varying amount of work
 - Can be achieved by:
   - **Vertical scaling** (adding more hardware resources to a server, also known
-    as _scale up_)
+    as _scale up_).
   - **Horizontal scaling** (adding more servers to share the load, also known as
-    _scale out_)
+    _scale out_).
 
 ![bg right:40%](https://images.unsplash.com/photo-1588315028888-0e1da9fa090f?fit=crop&h=720)
 
@@ -252,11 +250,11 @@ Limited by the software - your software must be able to run on multiple servers:
 
 ### When to use scale up or scale out?
 
-- Determined by the **non-functional requirements** of the system
+- Determined by the **non-functional requirements** of the system.
 - You need metrics to determine when to scale up or scale out to identify
-  bottlenecks
+  bottlenecks.
 - Once the bottleneck is identified (from monitoring), you can decide to scale
-  up or scale out
+  up or scale out.
 
 ![bg](https://images.unsplash.com/photo-1591840018546-5b65c9fbce1e?fit=crop&h=720)
 ![bg right:40% vertical](https://images.unsplash.com/photo-1491723203629-ac87f78dc19b?fit=crop&h=720)
@@ -265,10 +263,10 @@ Limited by the software - your software must be able to run on multiple servers:
 
 Out of scope for this course, but here are some tools you can use:
 
-- [Prometheus](https://prometheus.io/)
-- [Grafana](https://grafana.com/)
-- [Sentry](https://sentry.io/)
-- [LibreNMS](https://www.librenms.org/)
+- [Prometheus](https://prometheus.io/).
+- [Grafana](https://grafana.com/).
+- [Sentry](https://sentry.io/).
+- [LibreNMS](https://www.librenms.org/).
 
 ![bg right:40%](https://images.unsplash.com/photo-1579719558505-ad4a5fee0847?fit=crop&h=720)
 
@@ -279,7 +277,7 @@ Out of scope for this course, but here are some tools you can use:
 More details for this section in the [course material][course]. You can find
 other resources and alternatives as well.
 
-### Load balancing
+### Load balancing (1/3)
 
 Process of **distributing the load** between multiple servers.
 
@@ -288,21 +286,21 @@ This can work thanks to the **stateless** nature of HTTP and the `Host` header.
 The load balancer must know the **pool of servers** it can forward the requests
 to.
 
+Multiple strategies exists.
+
 ![bg right:40%](https://images.unsplash.com/photo-1600607384626-5c6fdea6e54c?fit=crop&h=720)
 
----
+### Load balancing (2/3)
 
-Multiple strategies can be used to distribute the load:
-
-- **Round-robin**: each server in the pool in turn (covered in this course)
-- **Least connections**: least number of active connections
-- **Least response time**: least response time
-- **Hashing**: based on a hash of the request (e.g. the IP address of the
-  client, the URL of the request, etc.)
+1. **Round-robin**: each server in the pool in turn (covered in this teaching
+   unit).
+2. **Least connections**: least number of active connections (out of scope).
+3. **Least response time**: least response time (out of scope).
+4. **Hashing**: based on a hash of the request (out of scope).
 
 ![bg right:40%](https://images.unsplash.com/photo-1510380290144-9e40d2438af5?fit=crop&h=720)
 
----
+### Load balancing (3/3)
 
 An issue with load balancing is **session management**: the load balancer could
 forward requests from the same client to different servers, loosing their
@@ -314,11 +312,11 @@ help of a cookie.
 
 ![bg right:40%](https://images.unsplash.com/photo-1651581212768-4b39414c9b27?fit=crop&h=720)
 
----
+### Experiment with Traefik
 
 **Take 20 minutes to experiment with Traefik using the [course material][course]
 and the
-[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course-code-examples)**:
+[code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13.01-web-infrastructures/02-code-exampless)**:
 
 - Run the _"whoami with host-based routing and sticky sessions"_ example
 
@@ -345,7 +343,7 @@ we notice some difficulties, we will come back to you to help you.
 
 You can use reactions to express your opinion on a comment!
 
-## Sources
+## Sources (1/2)
 
 - Main illustration by [Nicolas Picard](https://unsplash.com/@artnok) on
   [Unsplash](https://unsplash.com/photos/-lp8sTmF9HA)
@@ -365,7 +363,7 @@ You can use reactions to express your opinion on a comment!
 - Illustration by [Mikhail Vasilyev](https://unsplash.com/@miklevasilyev) on
   [Unsplash](https://unsplash.com/photos/colony-of-fire-ant-Vf1JrKMUS0Q)
 
----
+## Sources (2/2)
 
 - Illustration by [Ibrahim Boran](https://unsplash.com/@ibrahimboran) on
   [Unsplash](https://unsplash.com/photos/black-flat-screen-tv-turned-on-near-black-and-gray-audio-component-iYkqHp5cGQ4)

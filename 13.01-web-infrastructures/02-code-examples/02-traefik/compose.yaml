@@ -1,21 +1,24 @@
 networks:
-  # We define a network for Traefik and all the services it will manage
+  # We define a network for Traefik to use - all the services managed by Traefik
+  # will have to be attached to this network
   traefik_network:
     name: traefik_network
 
 services:
   traefik:
-    image: traefik:${TRAEFIK_IMAGE_VERSION:-latest}
+    image: traefik:${TRAEFIK_IMAGE_VERSION}
     command:
       ## Global
       # Uncomment next line when testing
       # - --log.level=DEBUG
-      - --api.dashboard=${TRAEFIK_ENABLE_DASHBOARD:-false}
+      - --api.dashboard=${TRAEFIK_ENABLE_DASHBOARD}
       ## Docker
       # Use Docker as a provider
       - --providers.docker=true
       # Do not expose containers by default
       - --providers.docker.exposedbydefault=false
+      # Help Traefik to find the right network
+      - --providers.docker.network=traefik_network
       ## Entrypoints
       # Define an entrypoint for HTTP on port 80
       - --entrypoints.http.address=:80
@@ -37,7 +40,7 @@ services:
       - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
     restart: unless-stopped
     networks:
-      # Attach the Traefik container to the traefik network
+      # Attach the Traefik container to the dedicated network
       - traefik_network
     ports:
       # Expose port 80 on the host for all incoming HTTP traffic
@@ -46,19 +49,16 @@ services:
       - 443:443
     volumes:
       # This is needed for Traefik to be able to listen to the Docker events
-      # It allows Traefik to react almost immediately to changes in the
-      # containers it manages
+      # It allows Traefik to react when containers are started or stopped
       - /var/run/docker.sock:/var/run/docker.sock:ro
       # This is needed for Traefik to be able to store the Let's Encrypt certificates
       - ./letsencrypt:/letsencrypt
-    # Labels can be attached to containers for various customizations.
+    # Labels can be attached to containers for various customizations
     # In this case, the labels are to configure Traefik
     labels:
       ## Traefik
       # Enable Traefik for this container
       - traefik.enable=true
-      # Help Traefik find this container on the network
-      - traefik.docker.network=traefik_network
       ## Routers
       # The entrypoint of this container is HTTPS
       - traefik.http.routers.traefik.entrypoints=https

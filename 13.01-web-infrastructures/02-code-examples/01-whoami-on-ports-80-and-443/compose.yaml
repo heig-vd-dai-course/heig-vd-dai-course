@@ -1,0 +1,14 @@
+services:
+  whoami-on-port-80:
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
+    # Restart the container unless it is explicitly stopped (starts on boot automatically)
+    restart: unless-stopped
+    ports:
+      - 80:80
+
+  whoami-on-port-443:
+    image: traefik/whoami:${WHOAMI_IMAGE_VERSION}
+    # Restart the container unless it is explicitly stopped (starts on boot automatically)
+    restart: unless-stopped
+    ports:
+      - 443:80

@@ -29,9 +29,11 @@ You should now be able to access whoami on port 443.
 >
 > If you try to access the whoami server on port 443 with the `https` protocol,
 > you will get an error because the whoami server does not have a valid HTTPS
-> certificate.
+> certificate (your browser might completely block the access depending on your
+> browser's security settings). This is expected behavior since we have not set
+> up HTTPS for the whoami server in this example.
 >
-> For the time being, you can ignore this error and only valide the access on
+> For the time being, you can ignore this error and only validate the access on
 > port 80 and 443 with the `http` protocol.
 
 If you do not get the expected results, your virtual machine might not be
