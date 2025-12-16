@@ -15,6 +15,8 @@ services:
       ## Docker
       # Use Docker as a provider
       - --providers.docker=true
+      # Help Traefik to find the right network
+      - --providers.docker.network=traefik_network
       # Do not expose containers by default
       - --providers.docker.exposedbydefault=false
       ## Entrypoints
@@ -57,8 +59,6 @@ services:
       ## Traefik
       # Enable Traefik for this container
       - traefik.enable=true
-      # Help Traefik to find the right network
-      - traefik.docker.network=traefik_network
       ## Routers
       # The entrypoint of this container is HTTPS
       - traefik.http.routers.traefik.entrypoints=https
