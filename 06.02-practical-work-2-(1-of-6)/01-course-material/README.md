@@ -580,9 +580,9 @@ Cordialement,
 
 ### Create diagrams
 
-You can use [PlantUML](https://plantuml.com/), [draw.io](https://draw.io/), pen
-and paper as scanned diagrams or any other tools you want to create your
-diagrams.
+You can use [PlantUML](https://plantuml.com/),
+[Mermaid](https://mermaid.js.org/) [draw.io](https://draw.io/), pen and paper as
+scanned diagrams or any other tools you want to create your diagrams.
 
 PDF, PNG, SVG, etc. are all accepted formats in your repository.
 

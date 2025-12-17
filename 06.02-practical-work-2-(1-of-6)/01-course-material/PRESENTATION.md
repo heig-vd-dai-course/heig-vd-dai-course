@@ -477,7 +477,7 @@ More details for this section in the [course material][course].
 ### Create diagrams
 
 - You can use any tools you want to create your diagrams:
-  - [PlantUML](https://plantuml.com/).
+  - [PlantUML](https://plantuml.com/) / [Mermaid](https://mermaid.js.org/).
   - [draw.io](https://draw.io/).
   - Scans from paper diagrams.
   - Any other tools you want.
