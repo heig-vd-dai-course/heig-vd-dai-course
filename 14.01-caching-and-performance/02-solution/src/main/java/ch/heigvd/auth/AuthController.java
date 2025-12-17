@@ -10,7 +10,8 @@ public class AuthController {
 
   private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 
-  public AuthController(ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
+  public AuthController(
+      ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
     this.users = users;
     this.usersCache = usersCache;
   }

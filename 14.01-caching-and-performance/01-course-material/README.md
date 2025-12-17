@@ -328,10 +328,10 @@ Update your `Main.java` class to add a `Map` to cache results to your
 application:
 
 ```diff
-diff --git a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/Main.java b/./src/main/java/ch/heigvd/Main.java
-index bb52fdb..e38ed57 100644
---- a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/Main.java
-+++ b/./src/main/java/ch/heigvd/Main.java
+diff --git a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/Main.java b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/Main.java
+index 99dfbfa..3a5a55e 100644
+--- a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/Main.java
++++ b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/Main.java
 @@ -1,37 +1,50 @@
  package ch.heigvd;
 
@@ -340,8 +340,8 @@ index bb52fdb..e38ed57 100644
  import ch.heigvd.users.UsersController;
  import io.javalin.Javalin;
 +import java.time.LocalDateTime;
- import java.util.concurrent.ConcurrentMap;
  import java.util.concurrent.ConcurrentHashMap;
+ import java.util.concurrent.ConcurrentMap;
 
  public class Main {
    public static final int PORT = 8080;
@@ -404,11 +404,11 @@ Update the `AuthController.java` to use the `Map` to cache results to your
 application:
 
 ```diff
-diff --git a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/auth/AuthController.java b/./src/main/java/ch/heigvd/auth/AuthController.java
-index 881d962..ebaff38 100644
---- a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/auth/AuthController.java
-+++ b/./src/main/java/ch/heigvd/auth/AuthController.java
-@@ -1,55 +1,81 @@
+diff --git a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/auth/AuthController.java b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/auth/AuthController.java
+index 73f8dd1..ecb8ecf 100644
+--- a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/auth/AuthController.java
++++ b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/auth/AuthController.java
+@@ -1,55 +1,82 @@
  package ch.heigvd.auth;
 
  import ch.heigvd.users.User;
@@ -419,10 +419,11 @@ index 881d962..ebaff38 100644
  public class AuthController {
    private final ConcurrentMap<Integer, User> users;
 
--  public AuthController(Map<Integer, User> users) {
+-  public AuthController(ConcurrentMap<Integer, User> users) {
 +  private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 +
-+  public AuthController(ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
++  public AuthController(
++      ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
      this.users = users;
 +    this.usersCache = usersCache;
    }
@@ -507,11 +508,11 @@ Update the `UsersController.java` to use the `Map` to cache the results to your
 application:
 
 ```diff
-diff --git a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/users/UsersController.java b/./src/main/java/ch/heigvd/users/UsersController.java
-index 659e90a..c161f32 100644
---- a/../../12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/users/UsersController.java
-+++ b/./src/main/java/ch/heigvd/users/UsersController.java
-@@ -1,116 +1,213 @@
+diff --git a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/users/UsersController.java b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/users/UsersController.java
+index 7ea6824..9f75f50 100644
+--- a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/users/UsersController.java
++++ b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/users/UsersController.java
+@@ -1,117 +1,213 @@
  package ch.heigvd.users;
 
  import io.javalin.http.*;
@@ -526,14 +527,15 @@ index 659e90a..c161f32 100644
 
    private final AtomicInteger uniqueId = new AtomicInteger(1);
 
--  public UsersController(Map<Integer, User> users) {
-+  private final Map<Integer, LocalDateTime> usersCache;
+-  public UsersController(ConcurrentMap<Integer, User> users) {
++  private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 +
 +  // This is a magic number used to store the users' list last modification date
 +  // As the ID for users starts from 1, it is safe to reserve the value -1 for all users
 +  private final Integer RESERVED_ID_TO_IDENTIFY_ALL_USERS = -1;
 +
-+  public UsersController(Map<Integer, User> users, Map<Integer, LocalDateTime> usersCache) {
++  public UsersController(
++      ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
      this.users = users;
 +    this.usersCache = usersCache;
    }

@@ -5,8 +5,8 @@ import ch.heigvd.users.User;
 import ch.heigvd.users.UsersController;
 import io.javalin.Javalin;
 import java.time.LocalDateTime;
-import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 public class Main {
   public static final int PORT = 8080;

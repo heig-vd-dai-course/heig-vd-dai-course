@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class UsersController {
   private final ConcurrentMap<Integer, User> users;
+
   private final AtomicInteger uniqueId = new AtomicInteger(1);
 
   private final ConcurrentMap<Integer, LocalDateTime> usersCache;
@@ -17,7 +18,8 @@ public class UsersController {
   // As the ID for users starts from 1, it is safe to reserve the value -1 for all users
   private final Integer RESERVED_ID_TO_IDENTIFY_ALL_USERS = -1;
 
-  public UsersController(ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
+  public UsersController(
+      ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
     this.users = users;
     this.usersCache = usersCache;
   }
