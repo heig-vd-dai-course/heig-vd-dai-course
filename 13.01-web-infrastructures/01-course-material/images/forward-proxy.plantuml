@@ -17,10 +17,9 @@ actor "Server 2" as server2
 actor "Server N" as serverN
 
 rectangle "Clients LAN" as clientsLan {
-
-    actor "Client 1" as client1
-    actor "Client 2" as client2
     actor "Client N" as clientN
+    actor "Client 2" as client2
+    actor "Client 1" as client1
 
     rectangle "Forward proxy" as forwardProxy {
         client1 -- (Exit the LAN)

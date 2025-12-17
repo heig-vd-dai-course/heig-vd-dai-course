@@ -192,6 +192,8 @@ disposant d'une Java Virtual Machine (JVM). Cela signifie qu'un programme Java
 systèmes d'exploitation sans nécessiter de recompilation, offrant ainsi une
 grande portabilité.
 
+</details>
+
 ## Question 8 (2 points)
 
 Quel est le but d'un fichier `compose.yaml` ou `docker-compose.yaml` dans le

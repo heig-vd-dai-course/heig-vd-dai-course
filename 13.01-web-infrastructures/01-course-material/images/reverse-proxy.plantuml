@@ -23,10 +23,9 @@ cloud "Internet" as internet {
 }
 
 rectangle "Servers LAN" as serversLan {
-
-    actor "Server 1" as server1
-    actor "Server 2" as server2
     actor "Server N" as serverN
+    actor "Server 2" as server2
+    actor "Server 1" as server1
 
     rectangle "Reverse proxy" as reverseProxy {
         internet -- (Enter the LAN)
