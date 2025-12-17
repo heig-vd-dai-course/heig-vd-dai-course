@@ -93,14 +93,14 @@ Examples of **functional requirements**:
 
 Examples of **non-functional requirements**:
 
-- **Response time**: Time between a request and a response (end user)
-- **Throughput**: Number of requests/interval (service provider)
-- **Scalability**: Property of a system to handle a varying amount of work
+- **Response time**: Time between a request and a response (end user).
+- **Throughput**: Number of requests/interval (service provider).
+- **Scalability**: Property of a system to handle a varying amount of work.
 - **Availability**: Percentage of time that the system provides a satisfactory
-  service
-- **Maintainability**: How easily the system can be managed
+  service.
+- **Maintainability**: How easily the system can be managed.
 - **Security**: Confidentiality, authentication, authorization, etc.
-- [...and many, many, MANY more](https://en.wikipedia.org/wiki/Non-functional_requirement)
+- [...and many, many, MANY more](https://en.wikipedia.org/wiki/Non-functional_requirement).
 
 ## Web infrastructure definition
 
@@ -214,7 +214,7 @@ other resources and alternatives as well.
 
 ### System scalability
 
-- Capacity of a system to handle a varying amount of work
+- Capacity of a system to handle a varying amount of work.
 - Can be achieved by:
   - **Vertical scaling** (adding more hardware resources to a server, also known
     as _scale up_).
@@ -261,7 +261,7 @@ Limited by the software - your software must be able to run on multiple servers:
 
 ### How to monitor a system?
 
-Out of scope for this course, but here are some tools you can use:
+Out of scope for this teaching unit, but here are some tools you can use:
 
 - [Prometheus](https://prometheus.io/).
 - [Grafana](https://grafana.com/).
@@ -318,7 +318,7 @@ help of a cookie.
 and the
 [code examples](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/13.01-web-infrastructures/02-code-exampless)**:
 
-- Run the _"whoami with host-based routing and sticky sessions"_ example
+- Run the _"whoami with host-based routing and sticky sessions"_ example.
 
 You should have a better understanding of how sticky sessions work.
 

@@ -148,35 +148,42 @@ teaching unit.
 If you do not have a domain or you do not want to use your own domain, you will
 obtain a free domain name for the purpose of this teaching unit.
 
-Access <http://www.duckdns.org/> and log in with your GitHub account.
-
-> [!NOTE]
->
-> Even though this DNS provider seems fishy and old-fashioned, it is reliable
-> and well-known in the free domain name community. You can use it to obtain a
-> free domain name that you can use for the purpose of this teaching unit.
-
-Click on the `Add Domain` button and choose a domain name.
-
-The (free) domain name can be anything you want. It does not have to be related
-to the practical work nor this teaching unit and you can use it for other
-purposes in the future as well.
-
-#### Alternatives
-
-_Alternatives are here for general knowledge. No need to learn them._
+You can chose to use any domain name provider you want from the following list:
 
 > [!NOTE]
 >
 > Even though most of these providers seem fishy and old-fashioned, they are
 > reliable and well-known in the free domain name community. You can use any of
-> them to obtain a free domain name.
+> them to obtain a free domain name that you can use in this teaching unit.
 
+> [!NOTE]
+>
+> It seems DuckDNS has some issues recently. If you cannot get it to work
+> correctly, feel free to use another provider from the list.
+>
+> As long as you can access your virtual machine using a domain name, you are
+> good to go for the rest of the teaching unit.
+
+- [Duck DNS](https://www.duckdns.org/)
 - [No-IP](https://www.noip.com/)
 - [FreeDNS](https://freedns.afraid.org/)
 - [deSEC](https://desec.io/)
 
 _Missing item in the list? Feel free to open a pull request to add it! ✨_
+
+Follow the instructions of your chosen domain name provider to obtain a free
+domain name.
+
+> [!TIP]
+>
+> If you use Duck DNS, you can use your GitHub account to sign in quickly.
+
+The (free) domain name can be anything you want. It does not have to be related
+to the practical work nor this teaching unit and you can use it for other
+purposes in the future as well.
+
+Once you have obtained a domain name, you will add the required DNS records to
+the DNS zone of your domain name provider.
 
 ### Add the required DNS records to the DNS zone
 
@@ -193,8 +200,8 @@ IP address of the virtual machine.
 
 > [!TIP]
 >
-> On Duck DNS, the default are `A`/`AAAA` records. Add a record and it will be
-> of the right type.
+> If you use Duck DNS, the default are `A`/`AAAA` records. Add a record and it
+> will be of the right type.
 
 **Example**: if your domain name is `heig-vd-dai-course.duckdns.org` and your
 virtual machine IP address is `20.73.17.105`, you must add an `A` record for
@@ -208,8 +215,8 @@ name.
 
 > [!TIP]
 >
-> On Duck DNS, only the root domain name is required. The wildcard DNS record is
-> automatically added for you.
+> If you use Duck DNS, only the root domain name is required. The wildcard DNS
+> record is automatically added for you.
 
 **Example**: if your domain name is `heig-vd-dai-course.duckdns.org` and your
 virtual machine IP address is `20.73.17.105`, you must add a wildcard `A` record
@@ -223,17 +230,18 @@ the virtual machine.
 Test the DNS resolution of the DNS records you added from the virtual machine
 and from your local machine.
 
+> [!IMPORTANT]
+>
+> You might have to wait a few minutes (around 15 minutes in our experience) for
+> the DNS record to be propagated and get a successful response. You might need
+> to try on a different network/device as well.
+
 ```sh
 # Test the DNS resolution
 nslookup <domain name>
 ```
 
 On success, the output should be similar to the following:
-
-> [!IMPORTANT]
->
-> You might have to wait a few minutes (max 15 minutes in our experience) for
-> the DNS record to be propagated and get a successful response.
 
 ```text
 Server:   127.0.0.53
@@ -319,7 +327,7 @@ Some examples of non-functional requirements:
 - **Security**: Confidentiality, integrity, availability, authentication,
   authorization, etc.
 - ...and many, many, MANY more:
-  <https://en.wikipedia.org/wiki/Non-functional_requirement>
+  <https://en.wikipedia.org/wiki/Non-functional_requirement>.
 
 Functional and non-functional requirements are used to define the scope of a
 system and they strongly depend on/influence the architecture of a system.
