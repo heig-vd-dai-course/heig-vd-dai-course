@@ -176,8 +176,8 @@ course.
 #### Add Javalin to the project
 
 Add the latest **stable** version of Javalin available in the Maven repository:
-<https://mvnrepository.com/artifact/io.javalin/javalin> to the `pom.xml` file as
-seen in previous chapters:
+<https://mvnrepository.com/artifact/io.javalin/javalin-bundle> to the `pom.xml`
+file as seen in previous chapters:
 
 ```xml
     <!-- https://mvnrepository.com/artifact/io.javalin/javalin-bundle -->
