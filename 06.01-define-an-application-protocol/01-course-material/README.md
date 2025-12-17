@@ -274,8 +274,9 @@ Keep in mind the following points:
 
 You can represent your application protocol using a sequence diagram.
 
-You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
-any other tools you want to create your diagrams (even a simple pen and paper!).
+You can use [PlantUML](https://plantuml.com/),
+[Mermaid](https://mermaid.js.org/), [Draw.io](https://draw.io/) or any other
+tools you want to create your diagrams (even a simple pen and paper!).
 
 This protocol will be used in a future course to implement the game.
 
@@ -325,8 +326,9 @@ Keep in mind the following points:
 
 You can represent your application protocol using a sequence diagram.
 
-You can use [PlantUML](https://plantuml.com/), [Draw.io](https://draw.io/) or
-any other tools you want to create your diagrams (even a simple pen and paper!).
+You can use [PlantUML](https://plantuml.com/),
+[Mermaid](https://mermaid.js.org/), [Draw.io](https://draw.io/) or any other
+tools you want to create your diagrams (even a simple pen and paper!).
 
 This protocol will be used in a future course to implement the application.
 

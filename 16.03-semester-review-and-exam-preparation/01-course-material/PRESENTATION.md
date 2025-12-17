@@ -514,7 +514,11 @@ _paginate: false
 
 ##### Elements to improve for next year
 
-- Nothing much to improve in our opinion. Do you agree?
+- DuckDNS seems to have some issues this year. Maybe we should try another free
+  dynamic DNS provider next year.
+- Move the instructions to obtain a domain name to the SSH and SCP course to
+  allow to access the server using a domain name earlier.
+- Other than that, nothing much to improve in our opinion. Do you agree?
 
 #### Caching and performance
 
