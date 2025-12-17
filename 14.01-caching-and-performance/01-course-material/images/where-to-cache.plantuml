@@ -1,4 +1,5 @@
 @startuml where-to-cache
+
 left to right direction
 skinparam packageStyle rectangle
 skinparam boxPadding 100
@@ -9,7 +10,7 @@ skinparam wrapWidth 120
 
 title "Where to cache?"
 
-rectangle "Clients LAN" as clientLan {
+rectangle "Clients LAN" as clientsLan {
 
     actor "Client" as client
 
@@ -30,7 +31,7 @@ cloud "Internet" as internet {
     (Exit the LAN) -- internet
 }
 
-rectangle "Servers LAN" as serverLan {
+rectangle "Servers LAN" as serversLan {
 
     actor "Server" as server
 

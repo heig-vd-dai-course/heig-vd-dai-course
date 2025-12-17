@@ -1,5 +1,4 @@
 ## IntelliJ IDEA
-
 # General
 .idea/libraries/
 .idea/shelf/
@@ -19,12 +18,10 @@
 .idea/dataSources.local.xml
 
 ## Linux
-
 # Temporary files
 *~
 
 ## macOS
-
 # Files created by macOS Finder
 .DS_Store
 
@@ -33,7 +30,6 @@
 target/
 
 ## Windows
-
 # Windows thumbnail cache files
 Thumbs.db
 

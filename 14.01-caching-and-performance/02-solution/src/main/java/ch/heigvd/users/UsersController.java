@@ -1,25 +1,25 @@
-package ch.heigvd.dai.users;
+package ch.heigvd.users;
 
 import io.javalin.http.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class UsersController {
-  private final ConcurrentHashMap<Integer, User> users;
-  private final AtomicInteger userId = new AtomicInteger(1);
+  private final ConcurrentMap<Integer, User> users;
 
-  private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
+  private final AtomicInteger uniqueId = new AtomicInteger(1);
+
+  private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 
   // This is a magic number used to store the users' list last modification date
   // As the ID for users starts from 1, it is safe to reserve the value -1 for all users
   private final Integer RESERVED_ID_TO_IDENTIFY_ALL_USERS = -1;
 
   public UsersController(
-      ConcurrentHashMap<Integer, User> users,
-      ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
+      ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
     this.users = users;
     this.usersCache = usersCache;
   }
@@ -27,31 +27,31 @@ public class UsersController {
   public void create(Context ctx) {
     User newUser =
         ctx.bodyValidator(User.class)
-            .check(obj -> obj.firstName != null, "Missing first name")
-            .check(obj -> obj.lastName != null, "Missing last name")
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
+            .check(obj -> obj.firstName() != null, "Missing first name")
+            .check(obj -> obj.lastName() != null, "Missing last name")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
             .get();
 
     for (User user : users.values()) {
-      if (user.email.equalsIgnoreCase(newUser.email)) {
+      if (newUser.email().equalsIgnoreCase(user.email())) {
         throw new ConflictResponse();
       }
     }
 
-    User user = new User();
+    newUser =
+        new User(
+            uniqueId.getAndIncrement(),
+            newUser.firstName(),
+            newUser.lastName(),
+            newUser.email(),
+            newUser.password());
 
-    user.id = userId.getAndIncrement();
-    user.firstName = newUser.firstName;
-    user.lastName = newUser.lastName;
-    user.email = newUser.email;
-    user.password = newUser.password;
-
-    users.put(user.id, user);
+    users.put(newUser.id(), newUser);
 
     // Store the last modification date of the user
     LocalDateTime now = LocalDateTime.now();
-    usersCache.put(user.id, now);
+    usersCache.put(newUser.id(), now);
 
     // Invalidate the cache for all users
     usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
@@ -61,7 +61,7 @@ public class UsersController {
     // Add the last modification date to the response
     ctx.header("Last-Modified", String.valueOf(now));
 
-    ctx.json(user);
+    ctx.json(newUser);
   }
 
   public void getOne(Context ctx) {
@@ -83,13 +83,13 @@ public class UsersController {
     }
 
     LocalDateTime now;
-    if (usersCache.containsKey(user.id)) {
+    if (usersCache.containsKey(user.id())) {
       // If it is already in the cache, get the last modification date
-      now = usersCache.get(user.id);
+      now = usersCache.get(user.id());
     } else {
       // Otherwise, set to the current date
       now = LocalDateTime.now();
-      usersCache.put(user.id, now);
+      usersCache.put(user.id(), now);
     }
 
     // Add the last modification date to the response
@@ -115,11 +115,11 @@ public class UsersController {
     List<User> users = new ArrayList<>();
 
     for (User user : this.users.values()) {
-      if (firstName != null && !user.firstName.equalsIgnoreCase(firstName)) {
+      if (firstName != null && !user.firstName().equalsIgnoreCase(firstName)) {
         continue;
       }
 
-      if (lastName != null && !user.lastName.equalsIgnoreCase(lastName)) {
+      if (lastName != null && !user.lastName().equalsIgnoreCase(lastName)) {
         continue;
       }
 
@@ -153,43 +153,36 @@ public class UsersController {
       throw new PreconditionFailedResponse();
     }
 
-    User updateUser =
-        ctx.bodyValidator(User.class)
-            .check(obj -> obj.firstName != null, "Missing first name")
-            .check(obj -> obj.lastName != null, "Missing last name")
-            .check(obj -> obj.email != null, "Missing email")
-            .check(obj -> obj.password != null, "Missing password")
-            .get();
-
-    User user = users.get(id);
-
-    if (user == null) {
+    if (!users.containsKey(id)) {
       throw new NotFoundResponse();
     }
 
-    user.firstName = updateUser.firstName;
-    user.lastName = updateUser.lastName;
-    user.email = updateUser.email;
-    user.password = updateUser.password;
+    User updateUser =
+        ctx.bodyValidator(User.class)
+            .check(obj -> obj.firstName() != null, "Missing first name")
+            .check(obj -> obj.lastName() != null, "Missing last name")
+            .check(obj -> obj.email() != null, "Missing email")
+            .check(obj -> obj.password() != null, "Missing password")
+            .get();
 
-    users.put(id, user);
-
-    LocalDateTime now;
-    if (usersCache.containsKey(user.id)) {
-      // If it is already in the cache, get the last modification date
-      now = usersCache.get(user.id);
-    } else {
-      // Otherwise, set to the current date
-      now = LocalDateTime.now();
-      usersCache.put(user.id, now);
-
-      // Invalidate the cache for all users
-      usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
+    for (User user : users.values()) {
+      if (updateUser.email().equalsIgnoreCase(user.email())) {
+        throw new ConflictResponse();
+      }
     }
+
+    users.put(id, updateUser);
+
+    // Store the last modification date of the user
+    LocalDateTime now = LocalDateTime.now();
+    usersCache.put(updateUser.id(), now);
+
+    // Invalidate the cache for all users
+    usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
 
     // Add the last modification date to the response
     ctx.header("Last-Modified", String.valueOf(now));
-    ctx.json(user);
+    ctx.json(updateUser);
   }
 
   public void delete(Context ctx) {
