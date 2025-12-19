@@ -83,7 +83,7 @@ so.
 ## Demo
 
 The API for the demonstration is accessible at  
-<https://heig-vd-dai-course.duckdns.org>.
+<https://heig-vd-dai-course.freeddns.org>.
 
 Locally - Compile the project:
 
@@ -128,19 +128,19 @@ Create a few drinks:
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"name":"Hot wine","description":"Hot wine with spices","price":3.0}' \
-  https://heig-vd-dai-course.duckdns.org/drinks
+  https://heig-vd-dai-course.freeddns.org/drinks
 
 # Christmas tea
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"name":"Christmas tea","description":"Warm tea","price":2.0}' \
-  https://heig-vd-dai-course.duckdns.org/drinks
+  https://heig-vd-dai-course.freeddns.org/drinks
 ```
 
 Get the list of drinks:
 
 ```sh
-curl https://heig-vd-dai-course.duckdns.org/drinks
+curl https://heig-vd-dai-course.freeddns.org/drinks
 ```
 
 Output:
@@ -160,7 +160,7 @@ Output:
 Filter the drinks with a price equal to 2.0 CHF:
 
 ```sh
-curl https://heig-vd-dai-course.duckdns.org/drinks?price=2.0
+curl https://heig-vd-dai-course.freeddns.org/drinks?price=2.0
 ```
 
 Output:
@@ -179,7 +179,7 @@ Output:
 Get a specific drink:
 
 ```sh
-curl https://heig-vd-dai-course.duckdns.org/drinks/1
+curl https://heig-vd-dai-course.freeddns.org/drinks/1
 ```
 
 Output:
@@ -199,7 +199,7 @@ Update a drink:
 curl -X PUT \
   -H "Content-Type: application/json" \
   -d '{"name":"Hot wine","description":"Nice hot wine","price":3.0}' \
-  https://heig-vd-dai-course.duckdns.org/drinks/1
+  https://heig-vd-dai-course.freeddns.org/drinks/1
 ```
 
 Output:
@@ -216,7 +216,7 @@ Output:
 Delete a drink:
 
 ```sh
-curl -X DELETE -i https://heig-vd-dai-course.duckdns.org/drinks/1
+curl -X DELETE -i https://heig-vd-dai-course.freeddns.org/drinks/1
 ```
 
 Output:
@@ -236,7 +236,7 @@ Adding another drink with the same name:
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"name":"Christmas tea","description":"Another tea","price":2.0}' \
-  https://heig-vd-dai-course.duckdns.org/drinks
+  https://heig-vd-dai-course.freeddns.org/drinks
 ```
 
 Output:
@@ -250,7 +250,7 @@ Leads to a `409` (Conflict) status code as we want to keep the names unique.
 Get the schedules of the Baleinev hot wine week:
 
 ```sh
-curl https://heig-vd-dai-course.duckdns.org/schedules
+curl https://heig-vd-dai-course.freeddns.org/schedules
 ```
 
 Output:
@@ -527,7 +527,7 @@ a general comment on your work and the final grade.
 If you have any questions about the evaluation, you can contact us!
 
 <details>
-<summary>Grading grid template for the teaching staff</summary>
+<summary>Email template for the teaching staff</summary>
 
 ```text
 [DAI 202X-202Y] Retours sur le travail pratique Z

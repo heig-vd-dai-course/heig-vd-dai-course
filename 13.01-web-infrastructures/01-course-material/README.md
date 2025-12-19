@@ -158,14 +158,14 @@ You can chose to use any domain name provider you want from the following list:
 
 > [!NOTE]
 >
-> It seems DuckDNS has some issues recently. If you cannot get it to work
-> correctly, feel free to use another provider from the list.
+> As of December 2025, it seems DuckDNS has some issues recently. If you cannot
+> get it to work correctly, feel free to use another provider from the list.
 >
 > As long as you can access your virtual machine using a domain name, you are
 > good to go for the rest of the teaching unit.
 
+- [Dynu](https://www.dynu.com/)
 - [Duck DNS](https://www.duckdns.org/)
-- [No-IP](https://www.noip.com/)
 - [FreeDNS](https://freedns.afraid.org/)
 - [deSEC](https://desec.io/)
 
@@ -173,10 +173,6 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 Follow the instructions of your chosen domain name provider to obtain a free
 domain name.
-
-> [!TIP]
->
-> If you use Duck DNS, you can use your GitHub account to sign in quickly.
 
 The (free) domain name can be anything you want. It does not have to be related
 to the practical work nor this teaching unit and you can use it for other
@@ -200,12 +196,12 @@ IP address of the virtual machine.
 
 > [!TIP]
 >
-> If you use Duck DNS, the default are `A`/`AAAA` records. Add a record and it
-> will be of the right type.
+> If you use Dynu or Duck DNS, the default are `A`/`AAAA` records. Add a record
+> and it will be of the right type.
 
-**Example**: if your domain name is `heig-vd-dai-course.duckdns.org` and your
+**Example**: if your domain name is `heig-vd-dai-course.freeddns.org` and your
 virtual machine IP address is `20.73.17.105`, you must add an `A` record for
-`heig-vd-dai-course.duckdns.org` pointing to `20.73.17.105`.
+`heig-vd-dai-course.freeddns.org` pointing to `20.73.17.105`.
 
 Add a second wildcard `A` record to the DNS zone of your domain name provider to
 point to the IP address of the virtual machine. A wildcard record is a record
@@ -215,14 +211,37 @@ name.
 
 > [!TIP]
 >
-> If you use Duck DNS, only the root domain name is required. The wildcard DNS
-> record is automatically added for you.
+> _"What is a wildcard DNS record?"_
+>
+> A wildcard DNS record is a record that will match all subdomains of a domain
+> name using the `*` character. For example, a wildcard `A` record for
+> `*.example.com` will match `subdomain1.example.com`, `subdomain2.example.com`,
+> etc.
+>
+> This is useful when you want to host multiple services on the same domain name
+> using different subdomains without having to create a DNS record for each
+> subdomain.
+>
+> However, some domain name providers do not support wildcard DNS records in
+> their free plans.
+>
+> If your domain name provider does not support wildcard DNS records in their
+> free plan, you can individually create `A` records for each subdomain you want
+> to use. For example, you can create `A` records for `whoami1.example.com`,
+> `whoami2.example.com`, etc. pointing to the IP address of the virtual machine.
+>
+> This can be used on [FreeDNS](https://freedns.afraid.org/) for example.
 
-**Example**: if your domain name is `heig-vd-dai-course.duckdns.org` and your
+> [!TIP]
+>
+> If you use Dynu or Duck DNS, a wildcard record is automatically created when
+> you add an `A` record.
+
+**Example**: if your domain name is `heig-vd-dai-course.freeddns.org` and your
 virtual machine IP address is `20.73.17.105`, you must add a wildcard `A` record
-for `*.heig-vd-dai-course.duckdns.org` pointing to `20.73.17.105`. This will
-allow any subdomain such as `whoami1.heig-vd-dai-course.duckdns.org`,
-`whoami2.heig-vd-dai-course.duckdns.org`, etc. to resolve to the IP address of
+for `*.heig-vd-dai-course.freeddns.org` pointing to `20.73.17.105`. This will
+allow any subdomain such as `whoami1.heig-vd-dai-course.freeddns.org`,
+`whoami2.heig-vd-dai-course.freeddns.org`, etc. to resolve to the IP address of
 the virtual machine.
 
 #### Test the DNS resolution
@@ -248,7 +267,7 @@ Server:   127.0.0.53
 Address:  127.0.0.53#53
 
 Non-authoritative answer:
-Name: heig-vd-dai-course.duckdns.org
+Name: heig-vd-dai-course.freeddns.org
 Address: 20.73.17.105
 ```
 
@@ -261,15 +280,15 @@ On failure, the output should be similar to the following:
 Server:   127.0.0.53
 Address:  127.0.0.53#53
 
-** server can't find heig-vd-dai-course.duckdns.org: NXDOMAIN
+** server can't find heig-vd-dai-course.freeddns.org: NXDOMAIN
 ```
 
-Do the same for the wildcard DNS record (`*.heig-vd-dai-course.duckdns.org`).
+Do the same for the wildcard DNS record (`*.heig-vd-dai-course.freeddns.org`).
 
 You should now be able to access the virtual machine from the Internet using the
 domain name and its subdomains you obtained. Try to access the whoami service
 using the domain name and its subdomains you obtained. Any subdomain should work
-such as `whoami.heig-vd-dai-course.duckdns.org`.
+such as `whoami.heig-vd-dai-course.freeddns.org`.
 
 You should see the whoami service running on ports 80 and 443.
 
@@ -531,7 +550,7 @@ IP: ::1
 IP: 172.18.0.4
 RemoteAddr: 172.18.0.2:55832
 GET / HTTP/1.1
-Host: whoami1.heig-vd-dai-course.duckdns.org
+Host: whoami1.heig-vd-dai-course.freeddns.org
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip, deflate, br, zstd
@@ -546,7 +565,7 @@ Sec-Gpc: 1
 Te: trailers
 Upgrade-Insecure-Requests: 1
 X-Forwarded-For: 188.154.42.56
-X-Forwarded-Host: whoami1.heig-vd-dai-course.duckdns.org
+X-Forwarded-Host: whoami1.heig-vd-dai-course.freeddns.org
 X-Forwarded-Port: 443
 X-Forwarded-Proto: https
 X-Forwarded-Server: 5f59b99ca0e6
