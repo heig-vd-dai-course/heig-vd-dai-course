@@ -29,5 +29,5 @@ Start the containers:
 docker compose up
 ```
 
-Open your browser and go to
-`https://whoami.WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME/whoami` to access whoami.
+Open your browser and go to `https://WHOAMI_FULLY_QUALIFIED_DOMAIN_NAME/whoami`
+to access whoami.
