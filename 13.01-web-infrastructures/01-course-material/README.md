@@ -234,8 +234,11 @@ name.
 
 > [!TIP]
 >
-> If you use Dynu or Duck DNS, a wildcard record is automatically created when
-> you add an `A` record.
+> If you use Dynu, check the _Wildcard IPv4 Alias_ option when adding the `A`
+> record.
+>
+> If you use Duck DNS, a wildcard record is automatically created when you add
+> an `A` record.
 
 **Example**: if your domain name is `heig-vd-dai-course.freeddns.org` and your
 virtual machine IP address is `20.73.17.105`, you must add a wildcard `A` record
