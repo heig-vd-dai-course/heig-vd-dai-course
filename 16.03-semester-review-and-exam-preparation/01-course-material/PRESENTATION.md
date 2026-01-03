@@ -451,11 +451,14 @@ _paginate: false
 
 ##### Elements to improve for next year
 
-- Azure gave us some issues this year (mysterious validation errors that are
-  hard to debug and understand).
+- Azure seems to have some issues this year (mysterious validation errors that
+  are hard to debug and understand).
 - However, you have free credits to use it.
-- Maybe we could try another cloud provider next year (e.g. Exoscale, AWS, GCP,
-  DigitalOcean, etc.)?
+- We could consider using another cloud provider such as
+  [DigitalOcean](https://www.digitalocean.com) as we have
+  [free credits with GitHub Education Program](https://www.digitalocean.com/github-students),
+  but it requires a credit card...
+- We might switch to another provider next year.
 - Other than that, nothing much to improve in our opinion. Do you agree?
 
 #### HTTP and curl
@@ -514,8 +517,9 @@ _paginate: false
 
 ##### Elements to improve for next year
 
-- DuckDNS seems to have some issues this year. Maybe we should try another free
-  dynamic DNS provider next year.
+- DuckDNS seems to have some issues this year. We have updated the course
+  material to use [Dyno](https://dyno.com/) instead (see PR
+  [#976](https://github.com/heig-vd-dai-course/heig-vd-dai-course/pull/976)).
 - Move the instructions to obtain a domain name to the SSH and SCP course to
   allow to access the server using a domain name earlier.
 - Other than that, nothing much to improve in our opinion. Do you agree?
