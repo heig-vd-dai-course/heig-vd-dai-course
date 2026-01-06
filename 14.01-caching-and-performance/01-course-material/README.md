@@ -118,7 +118,7 @@ Caching can be done on the client-side, on the server-side, or on a CDN.
 Private caches are caches that are only used by one client. Public caches are
 caches that are used by multiple clients.
 
-![Where to cache](./images/where-to-cache.png)
+![Where to cache](./images/where-to-cache.svg)
 
 The best would be to cache at each level of the system to ensure the best
 performance. But it is not always possible or faisable.
@@ -176,7 +176,7 @@ The expiration model can be implemented with the following header:
 - `Cache-Control: max-age=<number of seconds>`: specifies the maximum amount of
   seconds a resource will be considered fresh. and responses.
 
-![Expiration model](./images/expiration-model.png)
+![Expiration model](./images/expiration-model.svg)
 
 ### Validation model
 
@@ -249,7 +249,7 @@ implemented with the following headers:
 The `Last-Modified` header is used to check if the data has changed since the
 last time it was modified.
 
-![Validation based on the Last-Modified header](./images/validation-model-based-on-the-last-modified-header.png)
+![Validation based on the Last-Modified header](./images/validation-model-based-on-the-last-modified-header.svg)
 
 #### Based on the `ETag` header
 
@@ -267,7 +267,7 @@ with the following headers:
 The `ETag` header is used to check if the data has changed since the last time
 it was modified.
 
-![Validation based on the ETag header](./images/validation-model-based-on-the-etag-header.png)
+![Validation based on the ETag header](./images/validation-model-based-on-the-etag-header.svg)
 
 ### Is it possible to use both models?
 
