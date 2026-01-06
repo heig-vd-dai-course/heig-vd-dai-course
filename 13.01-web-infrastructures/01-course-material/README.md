@@ -406,7 +406,7 @@ The following diagram shows how it worked:
 
 ![HTTP without the Host header](./images/http-without-the-host-header.png)
 
-The following PlantUML diagram shows how the `Host` header works:
+The following diagram shows how the `Host` header works:
 
 ![HTTP with the Host header](./images/http-with-the-host-header.png)
 

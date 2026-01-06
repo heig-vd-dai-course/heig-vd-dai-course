@@ -221,8 +221,8 @@ Dates are taken from the
 |                    - | 22.12. - 28.12.25         | _No course: holidays_                    | _No course: holidays_                        | -               |
 |                    - | 29.12. - 04.01.26         | _No course: holidays_                    | _No course: holidays_                        | -               |
 |    [14](#-course-14) | 05.01. - 11.01.26         | Caching and performance                  | Practical work 3 (3/5)                       | 🟢 Ready        |
-| 🚨 [15](#-course-15) | 12.01. - 18.01.26         | Evaluation 2                             | Practical work 3 (4/5)                       | 🟡 In progress  |
-| 🚨 [16](#-course-16) | 19.01. - 25.01.26         | Practical work 3 (5/5) - Presentations   | Semester review and exam preparation         | 🔴 To do        |
+| 🚨 [15](#-course-15) | 12.01. - 18.01.26         | Evaluation 2                             | Practical work 3 (4/5)                       | 🟢 Ready        |
+| 🚨 [16](#-course-16) | 19.01. - 25.01.26         | Practical work 3 (5/5) - Presentations   | Semester review and exam preparation         | 🟡 In progress  |
 |                    - | 26.01. - 01.02.26         | _Exam preparation_                       | _Exam preparation_                           | -               |
 |                    - | 02.02. - 08.02.26         | _Exam_                                   | _Exam_                                       | -               |
 
