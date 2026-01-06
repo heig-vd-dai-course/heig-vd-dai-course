@@ -1,11 +1,12 @@
-package ch.heigvd.dai;
+package ch.heigvd;
 
-import ch.heigvd.dai.auth.AuthController;
-import ch.heigvd.dai.users.User;
-import ch.heigvd.dai.users.UsersController;
+import ch.heigvd.auth.AuthController;
+import ch.heigvd.users.User;
+import ch.heigvd.users.UsersController;
 import io.javalin.Javalin;
 import java.time.LocalDateTime;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 public class Main {
   public static final int PORT = 8080;
@@ -20,7 +21,7 @@ public class Main {
             });
 
     // This will serve as our database
-    ConcurrentHashMap<Integer, User> users = new ConcurrentHashMap<>();
+    ConcurrentMap<Integer, User> users = new ConcurrentHashMap<>();
 
     // This will serve as our cache
     //

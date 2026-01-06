@@ -1,17 +1,6 @@
-[markdown]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/23-caching-and-performance/COURSE_MATERIAL.md
-[pdf]:
-	https://heig-vd-dai-course.github.io/heig-vd-dai-course/23-caching-and-performance/23-caching-and-performance-practical-work.pdf
-[license]:
-	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511
-[illustration]: ./images/main-illustration.jpg
+# Caching and performance
 
-# Caching and performance - Course material
-
-<https://github.com/heig-vd-dai-course>
-
-[Markdown][markdown] · [PDF][pdf]
+![Main illustration](./images/main-illustration.jpg)
 
 L. Delafontaine and H. Louis, with the help of
 [GitHub Copilot](https://github.com/features/copilot).
@@ -20,10 +9,18 @@ Based on the original course by O. Liechti and J. Ehrensberger.
 
 This work is licensed under the [CC BY-SA 4.0][license] license.
 
-![Main illustration][illustration]
+## Resources
+
+- Objectives, teaching and learning methods, and evaluation methods:
+  [Link to content](..)
+- Course material: [Link to content](../01-course-material/README.md) ·
+  [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/index.html)
+  ·
+  [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/14.01-caching-and-performance/01-course-material/14.01-caching-and-performance-presentation.pdf)
 
 ## Table of contents
 
+- [Resources](#resources)
 - [Table of contents](#table-of-contents)
 - [Objectives](#objectives)
 - [Caching](#caching)
@@ -52,12 +49,19 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
 
 ## Objectives
 
-In this last and final chapter of this course, you will learn about caching and
-performance.
+In this last and final course of this teaching unit, you will learn about
+caching and performance.
 
 You will learn about caching, how it can be used to improve the performance of a
 system, where to cache, how you can manage cache with HTTP and how to implement
 it in your application.
+
+In a nutshell, at the end of this course, you will be able to:
+
+- Describe how caching can improve performance.
+- Identify where caching can be implemented in a web application architecture.
+- Describe different types of caching.
+- Implement the concepts of caching in web applications with HTTP.
 
 ## Caching
 
@@ -119,7 +123,7 @@ caches that are used by multiple clients.
 The best would be to cache at each level of the system to ensure the best
 performance. But it is not always possible or faisable.
 
-In the context of this course, we will focus on server-side caching.
+In the context of this teaching unit, we will focus on server-side caching.
 
 ## Managing cache with HTTP
 
@@ -134,9 +138,11 @@ There are two main caching models:
 Expiration and validation are two mechanisms that can be used to control
 caching.
 
-Expiration is the process of specifying how long a response can be cached.
+Expiration is the process of specifying how long a data is considered to be
+fresh.
 
-Validation is the process of checking if a cached response is still valid.
+Validation is the process of checking if a cached data is still valid or if it
+has been modified.
 
 Both can be used at the same time to improve the performance of the system.
 
@@ -157,9 +163,9 @@ Much more details about caching with HTTP can be found on MDN Web Docs:
 The expiration model is the simplest caching model. It is described in
 [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.2).
 
-The cache is invalidated after a certain amount of time. The cache can be
-invalidated after a certain amount of time because the data is not expected to
-change.
+The cache is invalidated after a certain amount of time. In other words, the
+data is considered fresh for a certain amount of time. After that time, the
+cache is considered stale.
 
 The expiration model can be used to cache static content (e.g. images, videos,
 etc.) or to cache responses from servers to improve the performance of the
@@ -174,8 +180,9 @@ The expiration model can be implemented with the following header:
 
 ### Validation model
 
-The validation model is more complex than the expiration model. It is described
-in [RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
+The validation model is a bit more complex than the expiration model. It is
+described in
+[RFC 2616](https://datatracker.ietf.org/doc/html/rfc2616#section-13.3).
 
 The cache is invalidated when the data is modified. The cache can be invalidated
 when the data is modified because the data is expected to change.
@@ -187,7 +194,7 @@ The main idea of the validation model is:
 
 1. Send a request to the server to check if the data has changed.
 2. If the data has not changed, the server can return a `304 Not Modified`
-   response to the client.
+   response to the client. The client can then use the cached data.
 3. If the data has changed, the server can return a `200 OK` response to the
    client with the new data.
 
@@ -222,9 +229,9 @@ There are two types of conditional requests:
 
 - **Based on the `Last-Modified` header**: allows a `304 Not Modified` to be
   returned if content is unchanged since the last time it was modified (= a
-  cache hit)
+  cache hit).
 - **Based on the `ETag` header**: allows a `304 Not Modified` to be returned if
-  content is unchanged for the version/hash of the given entity (= a cache hit)
+  content is unchanged for the version/hash of the given entity (= a cache hit).
 
 #### Based on the `Last-Modified` header
 
@@ -283,8 +290,8 @@ available as a middleware in their Enterprise version. You can learn more about
 it in their documentation at
 <https://doc.traefik.io/traefik-enterprise/middlewares/http-cache/>.
 
-As it is out of the scope/reach for this course, we will not go into details
-about how to configure Traefik to cache responses from servers. We will,
+As it is out of the scope/reach for this teaching unit, we will not go into
+details about how to configure Traefik to cache responses from servers. We will,
 however, implement it on the server side with Javalin.
 
 ## Managing cache with key-value stores
@@ -295,25 +302,25 @@ value pairs.
 A key-value store can be used to manage cache with HTTP. A key-value store can
 cache responses from clients/servers to improve the performance of the system.
 
-Redis, for example, can be used as a key-value store to cache responses from
-servers. You can learn more about it in their documentation at
-<https://redis.io/documentation>.
+Redis or Valkey, for example, can be used as a key-value store to cache
+responses from servers. You can learn more about it in their documentation at
+<https://redis.io/documentation> or <https://valkey.io/docs/>.
 
-As it is out of the scope/reach for this course, we will not go into details
-about how to configure Redis to cache responses from servers. We will, however,
-implement it on the server side with Javalin.
+As it is out of the scope/reach for this teaching unit, we will not go into
+details about how to configure Redis/Valkey to cache responses from servers. We
+will, however, implement it on the server side with Javalin.
 
 ## Practical content
 
 In this practical content, you will implement the validation model based on the
-`Last-Modified` header in your application.
+`Last-Modified` header in your own web application.
 
 You will need the results of the practical content from chapter
-[HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/23-caching-and-performance).
+[HTTP and curl](../../12.01-http-and-curl/README.md).
 
 If you do not have the results of the practical content from chapter HTTP and
-curl, you can use the solution mentioned in the HTTP and curl chapter. Clone the
-solution to have the project ready for this practical content.
+curl, you can use the solution mentioned in the HTTP and curl chapter. Clone and
+build the solution to have the project ready for this practical content.
 
 ### Update the `Main.java` class to cache the results
 
@@ -321,19 +328,20 @@ Update your `Main.java` class to add a `Map` to cache results to your
 application:
 
 ```diff
-diff --git a/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java b/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java
-index d4aae20..cc64e48 100644
---- a/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java
-+++ b/23-caching-and-performance/src/main/java/ch/heigvd/dai/Main.java
-@@ -1,36 +1,49 @@
- package ch.heigvd.dai;
+diff --git a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/Main.java b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/Main.java
+index 99dfbfa..3a5a55e 100644
+--- a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/Main.java
++++ b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/Main.java
+@@ -1,37 +1,50 @@
+ package ch.heigvd;
 
- import ch.heigvd.dai.auth.AuthController;
- import ch.heigvd.dai.users.User;
- import ch.heigvd.dai.users.UsersController;
+ import ch.heigvd.auth.AuthController;
+ import ch.heigvd.users.User;
+ import ch.heigvd.users.UsersController;
  import io.javalin.Javalin;
 +import java.time.LocalDateTime;
  import java.util.concurrent.ConcurrentHashMap;
+ import java.util.concurrent.ConcurrentMap;
 
  public class Main {
    public static final int PORT = 8080;
@@ -341,15 +349,15 @@ index d4aae20..cc64e48 100644
    public static void main(String[] args) {
 -    Javalin app = Javalin.create();
 +    Javalin app =
-+            Javalin.create(
-+                    // Add custom configuration to Javalin
-+                    config -> {
-+                      // This will allow us to parse LocalDateTime
-+                      config.validation.register(LocalDateTime.class, LocalDateTime::parse);
-+                    });
++        Javalin.create(
++            // Add custom configuration to Javalin
++            config -> {
++              // This will allow us to parse LocalDateTime
++              config.validation.register(LocalDateTime.class, LocalDateTime::parse);
++            });
 
      // This will serve as our database
-     ConcurrentHashMap<Integer, User> users = new ConcurrentHashMap<>();
+     ConcurrentMap<Integer, User> users = new ConcurrentHashMap<>();
 
 +    // This will serve as our cache
 +    //
@@ -396,27 +404,26 @@ Update the `AuthController.java` to use the `Map` to cache results to your
 application:
 
 ```diff
-diff --git a/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java b/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
-index 08c8670..83db13b 100644
---- a/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
-+++ b/21-http-and-curl/src/main/java/ch/heigvd/dai/auth/AuthController.java
-@@ -1,55 +1,81 @@
- package ch.heigvd.dai.auth;
+diff --git a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/auth/AuthController.java b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/auth/AuthController.java
+index 73f8dd1..ecb8ecf 100644
+--- a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/auth/AuthController.java
++++ b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/auth/AuthController.java
+@@ -1,55 +1,82 @@
+ package ch.heigvd.auth;
 
- import ch.heigvd.dai.users.User;
+ import ch.heigvd.users.User;
  import io.javalin.http.*;
 +import java.time.LocalDateTime;
- import java.util.concurrent.ConcurrentHashMap;
+ import java.util.concurrent.ConcurrentMap;
 
  public class AuthController {
-   private final ConcurrentHashMap<Integer, User> users;
+   private final ConcurrentMap<Integer, User> users;
 
-+  private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
+-  public AuthController(ConcurrentMap<Integer, User> users) {
++  private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 +
--  public AuthController(ConcurrentHashMap<Integer, User> users) {
 +  public AuthController(
-+      ConcurrentHashMap<Integer, User> users,
-+      ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
++      ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
      this.users = users;
 +    this.usersCache = usersCache;
    }
@@ -424,14 +431,14 @@ index 08c8670..83db13b 100644
    public void login(Context ctx) {
      User loginUser =
          ctx.bodyValidator(User.class)
-             .check(obj -> obj.email != null, "Missing email")
-             .check(obj -> obj.password != null, "Missing password")
+             .check(obj -> obj.email() != null, "Missing email")
+             .check(obj -> obj.password() != null, "Missing password")
              .get();
 
      for (User user : users.values()) {
-       if (user.email.equalsIgnoreCase(loginUser.email)
-           && user.password.equals(loginUser.password)) {
-         ctx.cookie("user", String.valueOf(user.id));
+       if (user.email().equalsIgnoreCase(loginUser.email())
+           && user.password().equals(loginUser.password())) {
+         ctx.cookie("user", String.valueOf(user.id()));
          ctx.status(HttpStatus.NO_CONTENT);
          return;
        }
@@ -470,17 +477,18 @@ index 08c8670..83db13b 100644
      }
 
 +    LocalDateTime now;
-+    if (usersCache.containsKey(user.id)) {
++    if (usersCache.containsKey(user.id())) {
 +      // If it is already in the cache, get the last modification date
-+      now = usersCache.get(user.id);
++      now = usersCache.get(user.id());
 +    } else {
 +      // Otherwise, set to the current date
 +      now = LocalDateTime.now();
-+      usersCache.put(user.id, now);
++      usersCache.put(user.id(), now);
 +    }
 +
 +    // Add the last modification date to the response
 +    ctx.header("Last-Modified", String.valueOf(now));
++
      ctx.json(user);
    }
  }
@@ -488,11 +496,11 @@ index 08c8670..83db13b 100644
 
 In this code snippets, we have updated the `AuthController.java` to:
 
-1. Use the `Map` to cache the results of your application
-2. Store results in the cache
-3. Return the `Last-Modified` header
-4. Validate the cache with the `If-Modified-Since` header
-5. Validate the cache with the `If-Unmodified-Since` header
+1. Use the `Map` to cache the results of your application.
+2. Store results in the cache.
+3. Return the `Last-Modified` header.
+4. Validate the cache with the `If-Modified-Since` header.
+5. Validate the cache with the `If-Unmodified-Since` header.
 
 ### Update the `UsersController.java` to cache the results
 
@@ -500,34 +508,34 @@ Update the `UsersController.java` to use the `Map` to cache the results to your
 application:
 
 ```diff
-diff --git a/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java b/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
-index 76bca68..e66cc00 100644
---- a/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
-+++ b/21-http-and-curl/src/main/java/ch/heigvd/dai/users/UsersController.java
-@@ -1,117 +1,221 @@
- package ch.heigvd.dai.users;
+diff --git a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/users/UsersController.java b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/users/UsersController.java
+index 7ea6824..9f75f50 100644
+--- a/./12.01-http-and-curl/02-solution/src/main/java/ch/heigvd/users/UsersController.java
++++ b/./14.01-caching-and-performance/02-solution/src/main/java/ch/heigvd/users/UsersController.java
+@@ -1,117 +1,213 @@
+ package ch.heigvd.users;
 
  import io.javalin.http.*;
 +import java.time.LocalDateTime;
  import java.util.ArrayList;
  import java.util.List;
- import java.util.concurrent.ConcurrentHashMap;
+ import java.util.concurrent.ConcurrentMap;
  import java.util.concurrent.atomic.AtomicInteger;
 
  public class UsersController {
-   private final ConcurrentHashMap<Integer, User> users;
-   private final AtomicInteger userId = new AtomicInteger(1);
+   private final ConcurrentMap<Integer, User> users;
 
-+  private final ConcurrentHashMap<Integer, LocalDateTime> usersCache;
+   private final AtomicInteger uniqueId = new AtomicInteger(1);
+
+-  public UsersController(ConcurrentMap<Integer, User> users) {
++  private final ConcurrentMap<Integer, LocalDateTime> usersCache;
 +
 +  // This is a magic number used to store the users' list last modification date
 +  // As the ID for users starts from 1, it is safe to reserve the value -1 for all users
 +  private final Integer RESERVED_ID_TO_IDENTIFY_ALL_USERS = -1;
 +
--  public UsersController(ConcurrentHashMap<Integer, User> users) {
 +  public UsersController(
-+      ConcurrentHashMap<Integer, User> users,
-+      ConcurrentHashMap<Integer, LocalDateTime> usersCache) {
++      ConcurrentMap<Integer, User> users, ConcurrentMap<Integer, LocalDateTime> usersCache) {
      this.users = users;
 +    this.usersCache = usersCache;
    }
@@ -535,31 +543,31 @@ index 76bca68..e66cc00 100644
    public void create(Context ctx) {
      User newUser =
          ctx.bodyValidator(User.class)
-             .check(obj -> obj.firstName != null, "Missing first name")
-             .check(obj -> obj.lastName != null, "Missing last name")
-             .check(obj -> obj.email != null, "Missing email")
-             .check(obj -> obj.password != null, "Missing password")
+             .check(obj -> obj.firstName() != null, "Missing first name")
+             .check(obj -> obj.lastName() != null, "Missing last name")
+             .check(obj -> obj.email() != null, "Missing email")
+             .check(obj -> obj.password() != null, "Missing password")
              .get();
 
      for (User user : users.values()) {
-       if (user.email.equalsIgnoreCase(newUser.email)) {
+       if (newUser.email().equalsIgnoreCase(user.email())) {
          throw new ConflictResponse();
        }
      }
 
-     User user = new User();
+     newUser =
+         new User(
+             uniqueId.getAndIncrement(),
+             newUser.firstName(),
+             newUser.lastName(),
+             newUser.email(),
+             newUser.password());
 
-     user.id = userId.getAndIncrement();
-     user.firstName = newUser.firstName;
-     user.lastName = newUser.lastName;
-     user.email = newUser.email;
-     user.password = newUser.password;
-
-     users.put(user.id, user);
+     users.put(newUser.id(), newUser);
 
 +    // Store the last modification date of the user
 +    LocalDateTime now = LocalDateTime.now();
-+    usersCache.put(user.id, now);
++    usersCache.put(newUser.id(), now);
 +
 +    // Invalidate the cache for all users
 +    usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
@@ -569,7 +577,7 @@ index 76bca68..e66cc00 100644
 +    // Add the last modification date to the response
 +    ctx.header("Last-Modified", String.valueOf(now));
 +
-     ctx.json(user);
+     ctx.json(newUser);
    }
 
    public void getOne(Context ctx) {
@@ -591,13 +599,13 @@ index 76bca68..e66cc00 100644
      }
 
 +    LocalDateTime now;
-+    if (usersCache.containsKey(user.id)) {
++    if (usersCache.containsKey(user.id())) {
 +      // If it is already in the cache, get the last modification date
-+      now = usersCache.get(user.id);
++      now = usersCache.get(user.id());
 +    } else {
 +      // Otherwise, set to the current date
 +      now = LocalDateTime.now();
-+      usersCache.put(user.id, now);
++      usersCache.put(user.id(), now);
 +    }
 +
 +    // Add the last modification date to the response
@@ -623,11 +631,11 @@ index 76bca68..e66cc00 100644
      List<User> users = new ArrayList<>();
 
      for (User user : this.users.values()) {
-       if (firstName != null && !user.firstName.equalsIgnoreCase(firstName)) {
+       if (firstName != null && !user.firstName().equalsIgnoreCase(firstName)) {
          continue;
        }
 
-       if (lastName != null && !user.lastName.equalsIgnoreCase(lastName)) {
+       if (lastName != null && !user.lastName().equalsIgnoreCase(lastName)) {
          continue;
        }
 
@@ -661,43 +669,36 @@ index 76bca68..e66cc00 100644
 +      throw new PreconditionFailedResponse();
 +    }
 +
-     User updateUser =
-         ctx.bodyValidator(User.class)
-             .check(obj -> obj.firstName != null, "Missing first name")
-             .check(obj -> obj.lastName != null, "Missing last name")
-             .check(obj -> obj.email != null, "Missing email")
-             .check(obj -> obj.password != null, "Missing password")
-             .get();
-
-     User user = users.get(id);
-
-     if (user == null) {
+     if (!users.containsKey(id)) {
        throw new NotFoundResponse();
      }
 
-     user.firstName = updateUser.firstName;
-     user.lastName = updateUser.lastName;
-     user.email = updateUser.email;
-     user.password = updateUser.password;
+     User updateUser =
+         ctx.bodyValidator(User.class)
+             .check(obj -> obj.firstName() != null, "Missing first name")
+             .check(obj -> obj.lastName() != null, "Missing last name")
+             .check(obj -> obj.email() != null, "Missing email")
+             .check(obj -> obj.password() != null, "Missing password")
+             .get();
 
-     users.put(id, user);
+     for (User user : users.values()) {
+       if (updateUser.email().equalsIgnoreCase(user.email())) {
+         throw new ConflictResponse();
+       }
+     }
 
-+    LocalDateTime now;
-+    if (usersCache.containsKey(user.id)) {
-+      // If it is already in the cache, get the last modification date
-+      now = usersCache.get(user.id);
-+    } else {
-+      // Otherwise, set to the current date
-+      now = LocalDateTime.now();
-+      usersCache.put(user.id, now);
+     users.put(id, updateUser);
+
++    // Store the last modification date of the user
++    LocalDateTime now = LocalDateTime.now();
++    usersCache.put(updateUser.id(), now);
 +
-+      // Invalidate the cache for all users
-+      usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
-+    }
++    // Invalidate the cache for all users
++    usersCache.remove(RESERVED_ID_TO_IDENTIFY_ALL_USERS);
 +
 +    // Add the last modification date to the response
 +    ctx.header("Last-Modified", String.valueOf(now));
-     ctx.json(user);
+     ctx.json(updateUser);
    }
 
    public void delete(Context ctx) {
@@ -731,11 +732,11 @@ index 76bca68..e66cc00 100644
 
 In this code snippets, we have updated the `UsersController.java` to:
 
-1. Use the `Map` to cache the results of your application
-2. Store results in the cache
-3. Return the `Last-Modified` header
-4. Validate the cache with the `If-Modified-Since` header
-5. Validate the cache with the `If-Unmodified-Since` header
+1. Use the `Map` to cache the results of your application.
+2. Store results in the cache.
+3. Return the `Last-Modified` header.
+4. Validate the cache with the `If-Modified-Since` header.
+5. Validate the cache with the `If-Unmodified-Since` header.
 
 ### Test the caching system with curl
 
@@ -983,12 +984,12 @@ corresponding to the date and time at which the resource was last modified.
 You can also test the caching system with a browser to see if the cache is
 working as expected.
 
-We recommend creating the users with curl as it is easier than with a browser.
+We recommend creating the users with curl as it is easier than within a browser.
 Then, you can use the browser to test the caching system of the `GET` requests.
 
 To check if the cache is working as expected, open the developer tools of your
 browser and check the `Network` tab as seen in the chapter
-[HTTP and curl](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/23-caching-and-performance).
+[HTTP and curl](../../12.01-http-and-curl/README.md).
 
 You can use the same steps as with curl to test the caching system with a
 browser.
@@ -1008,7 +1009,7 @@ This is an optional section. Feel free to skip it if you do not have time.
 
 ### What did you do and learn?
 
-In this chapter, you have learned about caching mechanisms that are offered by
+In this course, you have learned about caching mechanisms that are offered by
 HTTP.
 
 You have discovered the expiration and validation caching models.
@@ -1026,12 +1027,12 @@ clients and see if the cache is working as expected:
 - If you run your application to create a new user, the application will create
   a new record in the cache, invalidate the `RESERVED_ID_TO_IDENTIFY_ALL_USERS`
   magic ID cache, and response with a `201 Created` status code including the
-  new `Last-Modified` header
+  new `Last-Modified` header.
 - If you run your application to update or delete a user with an old
   `If-Unmodified-Since` header, the application will check the check the cache
   and response with a `412 Precondition Failed` status code - the client cannot
   update or delete the resource because the resource has been modified since the
-  last time the client modified it
+  last time the client modified it.
 
 ### Test your knowledge
 
@@ -1079,3 +1080,7 @@ _Missing item in the list? Feel free to open a pull request to add it! ✨_
 
 - Main illustration by [Richard Horne](https://unsplash.com/@richardhorne) on
   [Unsplash](https://unsplash.com/photos/black-and-blue-train-running-near-the-tunnel-2PKKbKEkmQE)
+
+[license]:
+	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
+[discussions]: https://github.com/orgs/heig-vd-dai-course/discussions/511

@@ -34,10 +34,10 @@ _paginate: false
 
 ## Objectives
 
-- Understand the concepts of caching
-- Understand how caching can improve performance
-- Understand how HTTP features can help to cache data
-- Implement caching in a web application
+- Describe how caching can improve performance.
+- Identify where caching can be implemented in a web application architecture.
+- Describe different types of caching.
+- Implement the concepts of caching in web applications with HTTP.
 
 ![bg right:40%](https://images.unsplash.com/photo-1516389573391-5620a0263801?fit=crop&h=720)
 
@@ -172,6 +172,10 @@ Two main caching models:
 
 ![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-4.png)
 
+---
+
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-5.png)
+
 #### Based on the `ETag` header
 
 - `ETag`: provides the current entity tag for the selected representation. Think
@@ -197,6 +201,10 @@ Two main caching models:
 ---
 
 ![bg h:80%](./images/validation-model-based-on-the-etag-header-part-4.png)
+
+---
+
+![bg h:80%](./images/validation-model-based-on-the-etag-header-part-5.png)
 
 ### Is it possible to use both models?
 
@@ -235,11 +243,13 @@ other resources and alternatives as well.
 
 ### Managing cache with key-value stores
 
-Redis is a popular key-value store that can be used to store cache data.
+Redis or ValKey are popular key-value stores that can be used to store cache
+data.
 
 We will implement this manually in Javalin.
 
-![bg right h:20%](https://redis.io/wp-content/uploads/2024/04/Logotype.svg)
+![bg right h:30%](https://redis.io/wp-content/uploads/2024/04/Logotype.svg)
+![bg right h:35% vertical](https://valkey.io/img/valkey-horizontal.svg)
 
 ## Questions
 
@@ -255,7 +265,7 @@ Do you have any questions?
 
 - Implement and validate the validation model based on the `Last-Modified`
   header in your previous web application using curl and a web browser
-- This is your last practical content for this course..!
+- This is your last practical content for this teaching unit..!
 
 ![bg right w:90%](./images/what-will-you-do.png)
 
