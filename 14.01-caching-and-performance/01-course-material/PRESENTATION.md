@@ -85,16 +85,16 @@ closest server.
 The best would be to cache at each level of the system to ensure the best
 performance but it is not always possible or faisable:
 
-- **Client-side**: the cache is stored on the client
-- **Server-side**: the cache is stored on the server
-- **CDN**: the cache is stored on a CDN
+- **Client-side**: the cache is stored on the client.
+- **Server-side**: the cache is stored on the server.
+- **CDN**: the cache is stored on a CDN.
 
 Private caches are caches that are only used by one client. Public caches are
 caches that are used by multiple clients.
 
 ---
 
-![bg w:80%](./images/where-to-cache.png)
+![bg w:80%](./images/where-to-cache.svg)
 
 ## Managing cache with HTTP
 
@@ -111,37 +111,38 @@ the cache (the data can be stale (= outdated)).
 Two main caching models:
 
 - **Expiration model**: the cache is considered valid for a certain amount of
-  time
-- **Validation model**: the cache is considered valid until the data is modified
+  time.
+- **Validation model**: the cache is considered valid until the data is
+  modified.
 
 #### Expiration model
 
-- The cache is valid for a certain amount of time
-- If the cache is not expired, the cache is used
-- Uses the `Cache-Control: max-age=<secondes>` header
-- The cache is invalidated after the expiration time
+- The cache is valid for a certain amount of time.
+- If the cache is not expired, the cache is used.
+- Uses the `Cache-Control: max-age=<secondes>` header.
+- The cache is invalidated after the expiration time.
 
 ![bg right:40%](https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?fit=crop&h=720)
 
 ---
 
-![bg h:80%](./images/expiration-model-part-1.png)
+![bg h:80%](./images/expiration-model-01.svg)
 
 ---
 
-![bg h:80%](./images/expiration-model-part-2.png)
+![bg h:80%](./images/expiration-model-02.svg)
 
 ---
 
-![bg h:80%](./images/expiration-model-part-3.png)
+![bg h:80%](./images/expiration-model-03.svg)
 
 #### Validation model
 
-- The cache is valid until the data is modified
-- If the cache is not expired, the cache is used
+- The cache is valid until the data is modified.
+- If the cache is not expired, the cache is used.
 - Two ways to validate the cache:
-  - Based on the **`Last-Modified`** header
-  - Based on the **`ETag`** header
+  - Based on the **`Last-Modified`** header.
+  - Based on the **`ETag`** header.
 
 ![bg right:40%](https://images.unsplash.com/photo-1684862030284-6b24307ebd4a?fit=crop&h=720)
 
@@ -158,23 +159,23 @@ Two main caching models:
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-1.png)
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-01.svg)
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-2.png)
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-02.svg)
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-3.png)
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-03.svg)
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-4.png)
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-04.svg)
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-last-modified-header-part-5.png)
+![bg h:80%](./images/validation-model-based-on-the-last-modified-header-05.svg)
 
 #### Based on the `ETag` header
 
@@ -188,31 +189,31 @@ Two main caching models:
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-1.png)
+![bg h:80%](./images/validation-model-based-on-the-etag-header-01.svg)
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-2.png)
+![bg h:80%](./images/validation-model-based-on-the-etag-header-02.svg)
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-3.png)
+![bg h:80%](./images/validation-model-based-on-the-etag-header-03.svg)
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-4.png)
+![bg h:80%](./images/validation-model-based-on-the-etag-header-04.svg)
 
 ---
 
-![bg h:80%](./images/validation-model-based-on-the-etag-header-part-5.png)
+![bg h:80%](./images/validation-model-based-on-the-etag-header-05.svg)
 
 ### Is it possible to use both models?
 
 Yes, it is possible to use the expiration model and the validation model at the
 same time:
 
-- No request attempt at all if the cache is not expired
-- Validation model when the cache is expired
+- No request attempt at all if the cache is not expired.
+- Validation model when the cache is expired.
 
 ![bg right:40%](https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?fit=crop&h=720)
 ![bg right:40% vertical](https://images.unsplash.com/photo-1684862030284-6b24307ebd4a?fit=crop&h=720)
@@ -264,7 +265,7 @@ Do you have any questions?
 ### What will you do?
 
 - Implement and validate the validation model based on the `Last-Modified`
-  header in your previous web application using curl and a web browser
+  header in your previous web application using curl and a web browser.
 - This is your last practical content for this teaching unit..!
 
 ![bg right w:90%](./images/what-will-you-do.png)
