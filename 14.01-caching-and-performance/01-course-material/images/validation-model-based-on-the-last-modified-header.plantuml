@@ -40,6 +40,11 @@ Getting the data from the database is much slower than getting it from the cache
 end note
 
 server -> database: Get the data...
+
+note over database
+    The data has been updated on Tue, 20 Feb 2022 22:00:00 GM.
+end note
+
 database -> server: Return the data...
 
 server -> server:  Store data in cache for future requests.
@@ -54,6 +59,8 @@ Date: Tue, 22 Feb 2022 22:22:02 GMT
 Last-Modified: Tue, 20 Feb 2022 22:00:00 GMT
 end note
 server -> client1: Response
+
+client1 -> client1: Store in browser's cache.
 
 ... <&clock> Time flows... ...
 
@@ -83,6 +90,8 @@ Last-Modified: Tue, 20 Feb 2022 22:00:00 GMT
 end note
 server -> client2: Response
 
+client2 -> client2: Store in browser's cache.
+
 ... <&clock> Time flows... ...
 
 newpage $TITLE
@@ -108,6 +117,8 @@ HTTP/1.1 304 Not Modified
 Date: Tue, 22 Feb 2022 23:05:21 GMT
 end note
 server -> client1: The information has not changed
+
+client1 -> client1: Use data in browser's cache.
 
 ... <&clock> Time flows... ...
 
@@ -139,6 +150,8 @@ Date: Tue, 22 Feb 2022 23:15:01 GMT
 Last-Modified: Tue, 20 Feb 2022 23:15:00 GMT
 end note
 server -> client1: Response
+
+client1 -> client1: Store in browser's cache.
 
 ... <&clock> Time flows... ...
 
