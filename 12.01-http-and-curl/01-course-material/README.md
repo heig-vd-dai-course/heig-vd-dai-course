@@ -17,8 +17,7 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   [Presentation (web)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/index.html)
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/12.01-http-and-curl-presentation.pdf)
-- Code examples: [Link to content](../02-code-examples/)
-- Solution: [Link to content](../03-solution/)
+- Solution: [Link to content](../02-solution/)
 
 ## Table of contents
 

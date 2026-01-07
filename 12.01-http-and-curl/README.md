@@ -14,7 +14,6 @@ This work is licensed under the [CC BY-SA 4.0][license] license.
   ·
   [Presentation (PDF)](https://heig-vd-dai-course.github.io/heig-vd-dai-course/12.01-http-and-curl/01-course-material/12.01-http-and-curl-presentation.pdf)
 - Solution: [Link to content](./02-solution/)
-- Quiz: [Link to content](./03-quiz/)
 
 ## Objectives
 
