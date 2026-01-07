@@ -44,7 +44,7 @@ server -> client: Response
 
 newpage $TITLE
 
-== Requests before 22 Feb 2022, 23:22:00 ==
+== Requests before 22 Feb 2022, 23:22:22 ==
 
 note over client, server
 For one hour, the client will use the data that is in cache, regardless of the fact that the data might have changed on the server.
@@ -58,7 +58,7 @@ client -> client
 
 newpage $TITLE
 
-== Requests after 22 Feb 2022, 23:22:00 ==
+== Requests after 22 Feb 2022, 23:22:22 ==
 
 note over client, server
 GET /index.html HTTP/1.1
@@ -73,7 +73,7 @@ note over client, server
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1039
-Date: Tue, 22 Feb 2022 23:22:22 GMT
+Date: Tue, 22 Feb 2022 23:23:23 GMT
 Cache-Control: max-age=3600
 end note
 server -> client: Response
