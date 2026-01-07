@@ -244,7 +244,7 @@ other resources and alternatives as well.
 
 ### Managing cache with key-value stores
 
-Redis or ValKey are popular key-value stores that can be used to store cache
+Redis or Valkey are popular key-value stores that can be used to store cache
 data.
 
 We will implement this manually in Javalin.
