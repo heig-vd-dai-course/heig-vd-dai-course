@@ -168,32 +168,12 @@ INVALID_COMMAND
 
 Voici des diagrammes PlantUML pour illustrer les exemples de messages.
 
-#### Émettre une notification
-
-![example-1](./images/question_1_example_1.png)
-
-#### Visualiser les notifications
-
-![example-2](./images/question_1_example_2.png)
-
-#### Visualiser une notification
-
-![example-3](./images/question_1_example_3.png)
-
-#### Commande invalide
-
-![example-5](./images/question_1_example_5.png)
+![example-1](./images/question_1_example_1.svg)
 
 Voici des diagrammes PlantUML pour illustrer les exemples de messages lorsque
 des erreurs surviennent.
 
-#### Visualiser les notifications
-
-![example-error-1](./images/question_1_example_error_1.png)
-
-#### Visualiser une notification
-
-![example-error-2](./images/question_1_example_error_2.png)
+![example-error-1](./images/question_1_example_error_1.svg)
 
 </details>
 

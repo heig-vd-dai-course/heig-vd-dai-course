@@ -904,7 +904,7 @@ It can sometimes be overwhelming to know which IO to use for which use case.
 Here is a simple decision tree to help you choose the right IO for the right use
 case:
 
-![Decision tree to choose the right IO for the right use case](./images/when-to-use-which-io.png)
+![Decision tree to choose the right IO for the right use case](./images/java-ios-decision-tree.svg)
 
 ## Common pitfalls
 

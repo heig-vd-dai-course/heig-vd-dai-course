@@ -53,7 +53,7 @@ other resources and alternatives as well.
 - Most secure protocols rely on cryptography.
 - Cryptography is based on algorithms and keys.
 
-![bg right h:90%](./images/sequence-diagram-of-the-public-private-keys-communication-mechanism.png)
+![bg right h:90%](./images/sequence-diagram-of-the-public-private-keys-communication-mechanism.svg)
 
 ## SSH
 
@@ -83,7 +83,7 @@ The most common key algorithms are:
 
 Ed25519 and ECDSA are the recommended algorithms.
 
-![bg right:40% h:90%](./images/ssh-authentication-process.png)
+![bg right:40% h:90%](./images/ssh-authentication-process.svg)
 
 ### SSH key fingerprint
 

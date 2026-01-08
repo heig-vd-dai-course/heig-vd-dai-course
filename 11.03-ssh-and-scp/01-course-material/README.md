@@ -107,7 +107,7 @@ private key, this person can impersonate the client.
 The following diagram illustrates the communication between the client and the
 server:
 
-![Sequence diagram of the public/private keys communication mechanism](./images/sequence-diagram-of-the-public-private-keys-communication-mechanism.png)
+![Sequence diagram of the public/private keys communication mechanism](./images/sequence-diagram-of-the-public-private-keys-communication-mechanism.svg)
 
 ## SSH
 
@@ -135,7 +135,7 @@ files from/to a remote machine with SCP.
 SSH is also the name of the software that implements the SSH protocol. It is
 available on most operating systems and is considered as a standard.
 
-![Sequence diagram of the SSH authentication](./images/ssh-authentication-process.png)
+![Sequence diagram of the SSH authentication](./images/ssh-authentication-process.svg)
 
 ### SSH key algorithms
 

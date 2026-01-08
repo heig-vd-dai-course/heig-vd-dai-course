@@ -529,7 +529,7 @@ other resources and alternatives as well.
 
 ### When to use which IO?
 
-![bg w:85%](./images/when-to-use-which-io.png)
+![bg w:85%](./images/java-ios-decision-tree.svg)
 
 ## Common pitfalls
 

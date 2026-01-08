@@ -84,7 +84,7 @@ so.
 
 A simple file transfer application made with TCP.
 
-![TCP network application architecture](./images/practical-work-2-tcp-network-application-architecture.png)
+![TCP network application architecture](./images/practical-work-2-tcp-network-application-architecture.svg)
 
 Compile the project:
 
@@ -175,7 +175,7 @@ client has to wait to be served.
 
 A weather station application made with UDP.
 
-![UDP network application architecture](./images/practical-work-2-udp-network-application-architecture.png)
+![UDP network application architecture](./images/practical-work-2-udp-network-application-architecture.svg)
 
 Compile the project:
 

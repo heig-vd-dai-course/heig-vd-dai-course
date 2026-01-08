@@ -182,7 +182,7 @@ other resources and alternatives as well.
 
 ---
 
-![bg h:80%](./images/smtp-protocol-diagram.png)
+![bg h:80%](./images/smtp-protocol-diagram.svg)
 
 ## ncat
 

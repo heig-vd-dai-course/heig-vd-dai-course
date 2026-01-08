@@ -130,23 +130,23 @@ TCP is a transport protocol that is similar to a phone call:
 
 ---
 
-![bg w:80%](./images/tcp-client-server-workflow-part-1.png)
+![bg w:80%](./images/tcp-client-server-workflow-01.svg)
 
 ---
 
-![bg h:70%](./images/tcp-client-server-workflow-part-2.png)
+![bg h:70%](./images/tcp-client-server-workflow-02.svg)
 
 ---
 
-![bg h:80%](./images/tcp-client-server-workflow-part-3.png)
+![bg h:80%](./images/tcp-client-server-workflow-03.svg)
 
 ---
 
-![bg h:80%](./images/tcp-client-server-workflow-part-4.png)
+![bg h:80%](./images/tcp-client-server-workflow-04.svg)
 
 ---
 
-![bg h:80%](./images/tcp-client-server-workflow-part-5.png)
+![bg h:80%](./images/tcp-client-server-workflow-05.svg)
 
 #### Processing data from streams
 
@@ -240,19 +240,19 @@ other resources and alternatives as well.
 
 ---
 
-![bg w:80%](./images/udp-unicast-client-server-workflow-part-1.png)
+![bg w:80%](./images/udp-unicast-client-server-workflow-01.svg)
 
 ---
 
-![bg h:70%](./images/udp-unicast-client-server-workflow-part-2.png)
+![bg h:70%](./images/udp-unicast-client-server-workflow-02.svg)
 
 ---
 
-![bg h:80%](./images/udp-unicast-client-server-workflow-part-3.png)
+![bg h:80%](./images/udp-unicast-client-server-workflow-03.svg)
 
 ---
 
-![bg h:80%](./images/udp-unicast-client-server-workflow-part-4.png)
+![bg h:80%](./images/udp-unicast-client-server-workflow-04.svg)
 
 #### Processing data from datagrams (1/2)
 
@@ -444,11 +444,11 @@ other resources and alternatives as well.
 
 ---
 
-![bg h:80%](./images/udp-service-discovery-protocols-advertisement-pattern.png)
+![bg h:80%](./images/udp-service-discovery-protocols-advertisement-pattern.svg)
 
 ---
 
-![bg h:80%](./images/udp-service-discovery-protocols-query-pattern.png)
+![bg h:80%](./images/udp-service-discovery-protocols-query-pattern.svg)
 
 ## Read-Eval-Print Loop (REPL)
 

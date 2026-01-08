@@ -512,11 +512,11 @@ Si le serveur reçoit une commande inconnue, il répond par une erreur génériq
 
 ##### Functional example
 
-![Functional example](./images/example-1-functional.png)
+![Functional example](./images/example-1-functional.svg)
 
 ##### Non-functional example
 
-![Non-functional example](./images/example-2-non-functional.png)
+![Non-functional example](./images/example-2-non-functional.svg)
 
 <details>
 <summary>Afficher la réponse</summary>

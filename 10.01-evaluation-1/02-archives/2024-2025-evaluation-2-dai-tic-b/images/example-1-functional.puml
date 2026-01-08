@@ -1,0 +1,22 @@
+@startuml example-1-functional
+
+title "Functional example - Ping-Pong Protocol"
+
+participant "Client" as c
+participant "Server" as s
+
+== Establish connection ==
+
+c->s: Establish connection
+c<-->s: Connection established
+
+== Ping server ==
+
+c->s: PING
+s->c: PONG
+
+== Close connection ==
+
+c->c: Close the connection
+c<-->s: The connection is closed
+@enduml
