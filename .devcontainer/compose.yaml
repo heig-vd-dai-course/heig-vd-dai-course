@@ -7,8 +7,5 @@ services:
 
   plantuml:
     image: plantuml/plantuml-server:latest
-    # https://plantuml.com/security
-    environment:
-      - PLANTUML_SECURITY_PROFILE=UNSECURE
     ports:
       - 9090:8080
