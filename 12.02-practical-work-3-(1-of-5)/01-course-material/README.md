@@ -518,8 +518,6 @@ TBD
 |   8 | Colin Stefani and Simão Romano Schindler                     | 09:40-09:48 |
 |   9 | Gianni Bee and Quentin Michon                                | 09:50-09:58 |
 
--->
-
 <!-- (Un)comment the following lines to hide/show the note about the presentations -->
 
 ## Grades and feedback
