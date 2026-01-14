@@ -55,16 +55,6 @@ _paginate: false
 With this final part, you have closed the loop of the course. You can be proud
 of yourself!
 
-## Feedback
-
-Your feedback helps us know **what you liked and what you disliked** in your
-learning experience. **The feedback is anonymous**.
-
-We would be very grateful if you could [take a few minutes to fill
-it][feedback]. **Thank you!**
-
-[![bg right w:75%][feedback-qr-code]][feedback]
-
 ## Sources
 
 - Main illustration by [shawnanggg](https://unsplash.com/@shawnanggg) on
@@ -78,7 +68,4 @@ it][feedback]. **Thank you!**
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/16.02-conclusion-to-part-3-network-programming-with-http
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
-[feedback]: https://framaforms.org/dai-2025-2026-feedback-3-1725286022
-[feedback-qr-code]:
-	https://quickchart.io/qr?format=png&ecLevel=Q&size=400&margin=1&text=https://framaforms.org/dai-2025-2026-feedback-3-1725286022
 [illustration]: ./images/main-illustration.jpg
