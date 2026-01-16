@@ -286,7 +286,8 @@ _paginate: false
 - SMTP security concerns.
 - How is an email sent and received from one client to another through multiple
   SMTP servers.
-- Using a SMTP mock server to test your application.
+- Using a SMTP mock server to test your email invoices without sending real
+  emails.
 
 ##### Elements to improve for next year
 
@@ -385,9 +386,9 @@ _paginate: false
 - Java offers classes and data structures to manage concurrency.
 - Multiple strategies exist to manage concurrency, with different trade-offs:
   - Unlimited threads can use all the available resources.
-  - Threadpools can set the maximum number of threads but need to calculate the
+  - threadpools can set the maximum number of threads but need to calculate the
     right amount to use resources efficiently.
-  - Recommended: Threadpools for Java < 19 and VirtualThreads for Java > 19.
+  - Recommended: Threadpools for Java < 19 and virtual threads for Java > 19.
 
 ##### Elements to improve for next year
 
@@ -486,10 +487,10 @@ _paginate: false
 
 - Add a bit of content regarding HTML, JavaScript and CSS (optional content?).
 - Refer to official documentation to generate full web applications (UI + API)
-  (optional content?). using the official resources to help for the BDR + DAI
-  project:
+  using the official resources (optional content?):
   - <https://javalin.io/plugins/rendering>.
   - <https://javalin.io/tutorials/>.
+  - It might help for the BDR + DAI/personal projects.
 - We would love to go deeper on this topic but the time is limited. You will
   learn more about this topic in future teaching units.
 
@@ -548,7 +549,8 @@ _paginate: false
 
 ##### Elements to improve for next year
 
-- Nothing much to improve in our opinion. Do you agree?
+- Improve the diagrams for better comprehension.
+- Other than that, nothing much to improve in our opinion. Do you agree?
 
 #### Practical work 3
 
@@ -576,8 +578,9 @@ Do not hesitate to share your project and to continue to work on it!
 
 ##### Elements to improve for next year
 
-- Nothing else to improve in our opinion. We think it is the perfect practical
-  work to close the loop of the teaching unit. Do you agree?
+- Improve some criteria in the evaluation grid to make them clearer.
+- Other than that, nothing else to improve in our opinion. We think it is the
+  perfect practical work to close the loop of the teaching unit. Do you agree?
 
 ### Course materials
 
@@ -590,8 +593,10 @@ _paginate: false
 
 #### Elements to improve for next year
 
-- Make usage of a quiz application to kickoff each course session.
-- Use previous evaluation questions as discussion points during the course.
+- Make usage of a quiz application to kickoff each course session with content
+  from the previous session.
+- Use previous evaluation questions as discussion points during the teaching
+  unit.
 - Improve Git repository structure to make it easier to navigate (see
   [PR #886](https://github.com/heig-vd-dai-course/heig-vd-dai-course/pull/886)).
 
@@ -637,7 +642,6 @@ like your opinion on them. There will be no judgement and no consequences. I
 just want to understand your point of view.
 
 - Did you find the course too difficult or having too much content?
-- Did you feel the need to cheat during the semester?
 - Is there anything that you feel was not fair during the semester?
 - Do you have a remaining question you would like to ask?
 
@@ -677,7 +681,7 @@ You will be asked to read/write/understand some code.
 
 **Allowed resources?**
 
-Two double-sided sheets (so four single-sided sheets) of personal notes.
+Two (2) double-sided sheets (so four (4) single-sided sheets) of personal notes.
 
 **What to do during the exam?**
 
@@ -748,29 +752,37 @@ help you with content related to this teaching unit:
 <div class="two-columns">
 <div>
 
-- [GitHub](https://github.com/explore)
 - [Hacker News](https://news.ycombinator.com/)
-- [LinkedIn](https://www.linkedin.com/)
-- [Stack Overflow](https://stackoverflow.com/)
-- [Awesome Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
-- (Avoid AI...)
+- [Lobsters](https://lobste.rs/)
+- [Dev.to](https://dev.to/)
+- [GitHub](https://github.com/explore) -
+  [1](https://github.com/awesome-selfhosted/awesome-selfhosted),
+  [2](https://github.com/sindresorhus/awesome)
+- [Reddit](https://www.reddit.com/) - [1](https://www.reddit.com/r/java/),
+  [2](https://www.reddit.com/r/programming/),
+  [3](https://www.reddit.com/r/linux/),
+  [4](https://www.reddit.com/r/selfhosted/),
+  [5](https://www.reddit.com/r/docker/), [6](https://www.reddit.com/r/webdev/),
+  [7](https://www.reddit.com/r/networking/),
+  [8](https://www.reddit.com/r/sysadmin/),
+  [9](https://www.reddit.com/r/commandline/)
+- [ByteByteGo](https://bytebytego.com/)
 
 </div>
 <div>
 
-- [Reddit r/java](https://www.reddit.com/r/java/)
-- [Reddit r/programming](https://www.reddit.com/r/programming/)
-- [Reddit r/linux](https://www.reddit.com/r/linux/)
-- [Reddit r/selfhosted](https://www.reddit.com/r/selfhosted/)
-- [Reddit r/docker](https://www.reddit.com/r/docker/)
-- [Reddit r/webdev](https://www.reddit.com/r/webdev/)
+- [LinkedIn](https://www.linkedin.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Stack Exchange Network](https://stackexchange.com/sites)
+- [Medium](https://medium.com/)
+- (Avoid AI...)
 
 </div>
 
 ### Well, what now?
 
-You have gained significant knowledge during this course. Use this knowledge
-wisely. With great power comes great responsibility. You can now:
+You have gained significant knowledge during this teaching unit. Use this
+knowledge wisely. With great power comes great responsibility. You can now:
 
 - Go deeper in the web development world.
 - Enter the game of self-hosting.
@@ -794,7 +806,7 @@ My personal closing remarks are the following:
 
 Thank you **Olivier Tischauser** (2025-2026), **Hadrien Louis** (2023-2026),
 **Gaétan Zwick** (2025-2026), **Ylli Fazlija** (2025-2026), **Géraud Silvestri**
-(2024-2025) and **Camille Koestli** (2024-2025) for their help preparing this
+(2024-2025) and **Camille Koestli** (2024-2025) for helping preparing this
 teaching unit.
 
 Thank you **Olivier Tischauser** (2025-2026) and **Juergen Ehrensberger**
