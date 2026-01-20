@@ -792,7 +792,7 @@ Thrive to learn more, and do not hesitate to share your knowledge with others.
 
 ### Closing remarks
 
-My personal closing remarks are the following:
+Some closing remarks :
 
 - **Always ask yourself the right questions**: _Why?_ _How?_ _What?_ _Am I doing
   the right thing for the right cause?_ _Do I listen to myself?_
@@ -804,12 +804,12 @@ My personal closing remarks are the following:
 
 ### Acknowledgements
 
-Thank you **Olivier Tischauser** (2025-2026), **Hadrien Louis** (2023-2026),
+Thank you **Olivier Tischhauser** (2025-2026), **Hadrien Louis** (2023-2026),
 **Gaétan Zwick** (2025-2026), **Ylli Fazlija** (2025-2026), **Géraud Silvestri**
 (2024-2025) and **Camille Koestli** (2024-2025) for helping preparing this
 teaching unit.
 
-Thank you **Olivier Tischauser** (2025-2026) and **Juergen Ehrensberger**
+Thank you **Olivier Tischhauser** (2025-2026) and **Juergen Ehrensberger**
 (2023-2025) for sharing the teaching with the other classe(s).
 
 And of course, **you**, for your participation and your interest in this course!

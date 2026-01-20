@@ -388,8 +388,8 @@ The practical work presentations will take place on:
 
 - DAI-TIC-C (Wednesday mornings): **Wednesday 21.01.26** starting at **08:30**
   in room **B51a**.
-- DAI-TIC-B (Wednesday afternoons): **Wednesday 21.01.26** starting at **14:45**
-  in room **TBD**.
+- DAI-TIC-B (Wednesday afternoons): **Wednesday 21.01.26** starting at **13:00**
+  in room **B38**.
 - DAI-TIC-A (Thursdays): **Thursday 22.01.26** starting at **08:30** in room
   **B51a**.
 
