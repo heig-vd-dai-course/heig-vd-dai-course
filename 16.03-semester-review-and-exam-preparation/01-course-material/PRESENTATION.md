@@ -633,7 +633,7 @@ _paginate: false
 Let's check these _beautiful_ charts!
 
 <small>You can find all Framasoft and GAPS evaluations
-[on the repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/924-review-course-14/16.03-semester-review-and-exam-preparation).</small>
+[on the repository](https://github.com/heig-vd-dai-course/heig-vd-dai-course/tree/main/16.03-semester-review-and-exam-preparation).</small>
 
 ## Remaining questions
 
@@ -655,7 +655,7 @@ What you need to know for the exam
 
 **Where and when?**
 
-- **Date**: 31.01.2025 (Tuesday)
+- **Date**: 03.02.2026 (Tuesday)
 - **Time**: 13:30
 - **Duration**: 60 minutes
 - **Place(s)**: G01, G02 and G03
