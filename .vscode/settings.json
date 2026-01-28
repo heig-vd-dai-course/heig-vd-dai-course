@@ -28,5 +28,5 @@
 		"no-trailing-punctuation": false
 	},
 	"plantuml.render": "PlantUMLServer",
-	"plantuml.server": "http://localhost:9090"
+	"plantuml.server": "http://plantuml:8080"
 }

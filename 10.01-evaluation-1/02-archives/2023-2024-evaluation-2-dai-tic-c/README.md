@@ -169,38 +169,38 @@ Voici des diagrammes PlantUML pour illustrer les exemples de messages.
 
 ### Visualiser les catégories
 
-![example-1](./images/question_1_example_1.png)
+![example-1](./images/question_1_example_1.svg)
 
 ### Visualiser les produits
 
-![example-2](./images/question_1_example_2.png)
+![example-2](./images/question_1_example_2.svg)
 
 ### Visualiser un produit
 
-![example-3](./images/question_1_example_3.png)
+![example-3](./images/question_1_example_3.svg)
 
 ### Commander un produit
 
-![example-4](./images/question_1_example_4.png)
+![example-4](./images/question_1_example_4.svg)
 
 ### Commande invalide
 
-![example-5](./images/question_1_example_5.png)
+![example-5](./images/question_1_example_5.svg)
 
 Voici des diagrammes PlantUML pour illustrer les exemples de messages lorsque
 des erreurs surviennent.
 
 ### Erreur lors de la visualisation des produits
 
-![example-error-1](./images/question_1_example_error_1.png)
+![example-error-1](./images/question_1_example_error_1.svg)
 
 ### Erreur lors de la visualisation d'un produit
 
-![example-error-2](./images/question_1_example_error_2.png)
+![example-error-2](./images/question_1_example_error_2.svg)
 
 ### Erreur lors de la commande d'un produit
 
-![example-error-3](./images/question_1_example_error_3.png)
+![example-error-3](./images/question_1_example_error_3.svg)
 
 </details>
 
@@ -254,7 +254,7 @@ Indiquez au moins les acteurs et les protocoles impliqués dans ce scénario.
 <details>
 <summary>Afficher la réponse</summary>
 
-![answer-4](./images/question_4.png)
+![answer-4](./images/question_4.svg)
 
 </details>
 

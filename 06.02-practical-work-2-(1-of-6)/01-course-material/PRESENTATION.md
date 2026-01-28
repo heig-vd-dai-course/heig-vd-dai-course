@@ -55,7 +55,7 @@ A simple file transfer application made with TCP.
 
 ---
 
-![bg h:80%](./images/practical-work-2-tcp-network-application-architecture.png)
+![bg h:80%](./images/practical-work-2-tcp-network-application-architecture.svg)
 
 ---
 
@@ -162,7 +162,7 @@ A weather station application made with UDP.
 
 ---
 
-![bg h:80%](./images/practical-work-2-udp-network-application-architecture.png)
+![bg h:80%](./images/practical-work-2-udp-network-application-architecture.svg)
 
 ---
 

@@ -373,7 +373,7 @@ QUIT
 
 The following diagram shows the sequence of commands to send an email:
 
-![Sequence diagram of the SMTP protocol](./images/smtp-protocol-diagram.png)
+![Sequence diagram of the SMTP protocol](./images/smtp-protocol-diagram.svg)
 
 ## ncat
 

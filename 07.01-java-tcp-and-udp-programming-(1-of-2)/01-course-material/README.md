@@ -168,7 +168,7 @@ A TCP socket can act as a client or as a server:
 
 The following schema shows the workflow of a TCP client/server application:
 
-![TCP client/server workflow](./images/tcp-client-server-workflow.png)
+![TCP client/server workflow](./images/tcp-client-server-workflow.svg)
 
 **Note on socket connection behavior**
 
@@ -416,7 +416,7 @@ required. It is possible to create a peer-to-peer architecture with UDP.
 The following schema shows the workflow of a UDP unicast (client/server)
 application:
 
-![UDP unicast (client/server) workflow](./images/udp-unicast-client-server-workflow.png)
+![UDP unicast (client/server) workflow](./images/udp-unicast-client-server-workflow.svg)
 
 #### Processing data from datagrams
 
@@ -573,7 +573,7 @@ To send a unicast datagram, the sender must know the IP address and port of the
 receiver. It is mostly the same as TCP, without all the reliability features
 provided by TCP but with all the performance of UDP.
 
-![UDP unicast (client/server) workflow](./images/udp-unicast-client-server-workflow.png)
+![UDP unicast (client/server) workflow](./images/udp-unicast-client-server-workflow.svg)
 
 #### Broadcast
 
@@ -611,7 +611,7 @@ use the `255.255.255.255` broadcast address.
 > example, broadcast is limited to the local network but can still be blocked by
 > a firewall and/or a router.
 
-![UDP broadcast (emitter/receiver) workflow](./images/udp-broadcast-emitter-receiver-workflow.png)
+![UDP broadcast (emitter/receiver) workflow](./images/udp-broadcast-emitter-receiver-workflow.svg)
 
 #### Multicast
 
@@ -647,7 +647,7 @@ Just as for broadcast, the sender must know the multicast address to send a
 datagram to a multicast group. Just as for broadcast as well, there can be
 restrictions on the use of multicast.
 
-![UDP multicast (emitter/receiver) workflow](./images/udp-multicast-emitter-receiver-workflow.png)
+![UDP multicast (emitter/receiver) workflow](./images/udp-multicast-emitter-receiver-workflow.svg)
 
 Multicast is quite guaranteed **not** to work on the public Internet. It is only
 guaranteed to work on a local network. If you need to use multicast between
@@ -740,7 +740,7 @@ following:
   If a service consumer is interested by the service provider announcement, it
   can manifest its interest.
 
-  ![UDP - Service discovery protocols - Advertisement pattern](images/udp-service-discovery-protocols-advertisement-pattern.png)
+  ![UDP - Service discovery protocols - Advertisement pattern](images/udp-service-discovery-protocols-advertisement-pattern.svg)
 
 - Query - An active discovery protocol pattern: a client (called a service
   consumer) queries the network to find a service. The client sends a multicast
@@ -751,7 +751,7 @@ following:
   information to connect to the service, just as seen with the request-response
   messaging pattern.
 
-  ![Service discovery protocols - Query pattern](images/udp-service-discovery-protocols-query-pattern.png)
+  ![Service discovery protocols - Query pattern](images/udp-service-discovery-protocols-query-pattern.svg)
 
 These patterns can still be used with other protocols such as TCP.
 

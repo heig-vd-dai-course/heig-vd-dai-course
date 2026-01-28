@@ -404,11 +404,11 @@ with the help of a reverse proxy.
 Before the `Host` header, a server could only handle one domain per IP address.
 The following diagram shows how it worked:
 
-![HTTP without the Host header](./images/http-without-the-host-header.png)
+![HTTP without the Host header](./images/http-without-the-host-header.svg)
 
 The following diagram shows how the `Host` header works:
 
-![HTTP with the Host header](./images/http-with-the-host-header.png)
+![HTTP with the Host header](./images/http-with-the-host-header.svg)
 
 The reverse proxy receives the request from the client and forwards it to the
 right web server. The web server receives the request and sends a response to
@@ -443,7 +443,7 @@ Forward proxies are often used in corporate environments to enforce security
 policies (e.g., block access to certain websites, etc.) and reside in the LAN
 network.
 
-![Forward proxy](./images/forward-proxy.png)
+![Forward proxy](./images/forward-proxy.svg)
 
 ### Reverse proxy
 
@@ -462,7 +462,7 @@ client to a group of servers.
 Reverse proxies are often used in web infrastructures to serve multiple domains
 on the same IP address and to scale.
 
-![Reverse proxy](./images/reverse-proxy.png)
+![Reverse proxy](./images/reverse-proxy.svg)
 
 Reverse proxies are used in web infrastructures to serve multiple domains on the
 same IP address and to scale.

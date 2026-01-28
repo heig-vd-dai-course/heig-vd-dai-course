@@ -141,11 +141,11 @@ other resources and alternatives as well.
 
 ---
 
-![bg h:80%](./images/http-without-the-host-header.png)
+![bg h:80%](./images/http-without-the-host-header.svg)
 
 ---
 
-![bg h:80%](./images/http-with-the-host-header.png)
+![bg h:80%](./images/http-with-the-host-header.svg)
 
 ## Forward proxy and reverse proxy
 
@@ -172,7 +172,7 @@ other resources and alternatives as well.
   - Mask the identity of the client.
   - Enforce security policies.
 
-![bg right w:80%](./images/forward-proxy.png)
+![bg right w:80%](./images/forward-proxy.svg)
 
 ### Reverse proxy
 
@@ -182,7 +182,7 @@ other resources and alternatives as well.
   - Load balance requests to internal systems.
   - Cache responses from internal systems.
 
-![bg right w:80%](./images/reverse-proxy.png)
+![bg right w:80%](./images/reverse-proxy.svg)
 
 ### Traefik as a reverse proxy
 

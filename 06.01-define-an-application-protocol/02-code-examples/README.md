@@ -179,19 +179,19 @@ None.
 
 ### Functional example
 
-![Functional example](./images/sms-protocol-example-1-functional-example.png)
+![Functional example](./images/sms-protocol-example-1-functional-example.svg)
 
 ### Join the server with a duplicate client name
 
-![Join the server with a duplicate client name example](./images/sms-protocol-example-2-join-the-server-with-a-duplicate-client-name.png)
+![Join the server with a duplicate client name example](./images/sms-protocol-example-2-join-the-server-with-a-duplicate-client-name.svg)
 
 ### Send a message to an unconnected recipient
 
-![Send a message to an unconnected recipient example](./images/sms-protocol-example-3-send-a-message-to-an-unconnected-recipient.png)
+![Send a message to an unconnected recipient example](./images/sms-protocol-example-3-send-a-message-to-an-unconnected-recipient.svg)
 
 ### Send a message that is too long
 
-![Send a message that is too long example](./images/sms-protocol-example-4-send-a-message-that-is-too-long.png)
+![Send a message that is too long example](./images/sms-protocol-example-4-send-a-message-that-is-too-long.svg)
 
 [license]:
 	https://github.com/heig-vd-dai-course/heig-vd-dai-course/blob/main/LICENSE.md
